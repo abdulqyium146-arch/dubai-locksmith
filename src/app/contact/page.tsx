@@ -14,7 +14,6 @@ import {
 
 import { BreadcrumbNav } from '@/components/sections/BreadcrumbNav'
 import { TrustBar } from '@/components/sections/TrustBar'
-import { LocalBusinessSchema } from '@/components/schema/LocalBusinessSchema'
 import { JsonLd } from '@/components/schema/JsonLd'
 import { Button } from '@/components/ui/Button'
 
@@ -125,7 +124,6 @@ export default function ContactPage() {
   return (
     <>
       {/* Schemas */}
-      <LocalBusinessSchema />
       <JsonLd data={contactPageSchema} />
 
       {/* ── Page Header ─────────────────────────────────────────────────────── */}

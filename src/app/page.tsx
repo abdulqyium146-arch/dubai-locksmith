@@ -11,7 +11,6 @@ import { ServiceCard } from '@/components/sections/ServiceCard'
 import { LocationCard } from '@/components/sections/LocationCard'
 import { ReviewsSection } from '@/components/sections/ReviewsSection'
 import { CtaSection } from '@/components/sections/CtaSection'
-import { LocalBusinessSchema } from '@/components/schema/LocalBusinessSchema'
 import { JsonLd } from '@/components/schema/JsonLd'
 import { Button } from '@/components/ui/Button'
 
@@ -159,7 +158,6 @@ export default function HomePage() {
   return (
     <>
       {/* Structured data */}
-      <LocalBusinessSchema />
       <JsonLd data={websiteSchema} />
 
       {/* ── 1. Hero ─────────────────────────────────────────────────────────── */}

@@ -10,7 +10,6 @@ import {
   ADDRESS_STREET,
   ADDRESS_AREA,
   ADDRESS_CITY,
-  ADDRESS_COUNTRY,
   COORDINATES,
   GOOGLE_RATING,
   GOOGLE_MAPS_URL,
@@ -34,7 +33,7 @@ export function LocalBusinessSchema() {
       streetAddress: ADDRESS_STREET,
       addressLocality: ADDRESS_AREA,
       addressRegion: ADDRESS_CITY,
-      addressCountry: ADDRESS_COUNTRY,
+      addressCountry: 'AE',
     },
     geo: {
       '@type': 'GeoCoordinates',

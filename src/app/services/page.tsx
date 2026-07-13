@@ -8,7 +8,6 @@ import { ServiceCard } from '@/components/sections/ServiceCard'
 import { CtaSection } from '@/components/sections/CtaSection'
 import { BreadcrumbNav } from '@/components/sections/BreadcrumbNav'
 import { TrustBar } from '@/components/sections/TrustBar'
-import { LocalBusinessSchema } from '@/components/schema/LocalBusinessSchema'
 import { Button } from '@/components/ui/Button'
 
 import { services } from '@/data/services'
@@ -66,8 +65,6 @@ const emergencyServices = services.filter((s) => s.emergency)
 export default function ServicesPage() {
   return (
     <>
-      <LocalBusinessSchema />
-
       {/* ── Page Header ─────────────────────────────────────────────────────── */}
       <section
         aria-label="Services page header"

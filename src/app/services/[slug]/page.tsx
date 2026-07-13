@@ -21,7 +21,6 @@ import { FaqAccordion } from '@/components/sections/FaqAccordion'
 import { ReviewsSection } from '@/components/sections/ReviewsSection'
 import { CtaSection } from '@/components/sections/CtaSection'
 import { ServiceCard } from '@/components/sections/ServiceCard'
-import { LocalBusinessSchema } from '@/components/schema/LocalBusinessSchema'
 import { ServiceSchema } from '@/components/schema/ServiceSchema'
 import { Badge } from '@/components/ui/Badge'
 import { Button } from '@/components/ui/Button'
@@ -146,7 +145,6 @@ export default async function ServicePage({
   return (
     <>
       {/* Schemas */}
-      <LocalBusinessSchema />
       <ServiceSchema service={service} />
 
       {/* ── 1. Hero ─────────────────────────────────────────────────────────── */}

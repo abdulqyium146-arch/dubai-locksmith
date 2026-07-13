@@ -18,7 +18,6 @@ import {
 import { TrustBar } from '@/components/sections/TrustBar'
 import { CtaSection } from '@/components/sections/CtaSection'
 import { BreadcrumbNav } from '@/components/sections/BreadcrumbNav'
-import { LocalBusinessSchema } from '@/components/schema/LocalBusinessSchema'
 import { JsonLd } from '@/components/schema/JsonLd'
 import { Button } from '@/components/ui/Button'
 
@@ -152,7 +151,6 @@ export default function AboutPage() {
   return (
     <>
       {/* Schemas */}
-      <LocalBusinessSchema />
       <JsonLd data={aboutPageSchema} />
 
       {/* ── Page Header ─────────────────────────────────────────────────────── */}
