@@ -41,7 +41,7 @@ Copy `.env.example` to `.env.local` and fill in the following values before depl
 
 | Variable | Description |
 |---|---|
-| `NEXT_PUBLIC_SITE_URL` | Production URL, e.g. `https://www.carkeyservicedxb.com` |
+| `NEXT_PUBLIC_SITE_URL` | Production URL — `https://locksmith-dubai.com` |
 | `NEXT_PUBLIC_SITE_NAME` | Site name displayed in metadata |
 | `NEXT_PUBLIC_GOOGLE_MAPS_API_KEY` | Google Maps JavaScript API key (for map embeds) |
 | `GOOGLE_PLACES_API_KEY` | Server-side Google Places API key (for live reviews) |
@@ -79,13 +79,13 @@ Before going live, the following items require real business content or configur
 ### Integrations
 - [ ] Set `NEXT_PUBLIC_GOOGLE_MAPS_API_KEY` to a real Google Maps key and enable the embed
 - [ ] Set `NEXT_PUBLIC_GOOGLE_PLACE_ID` to the real Place ID for live Google reviews
-- [ ] Add **Google Search Console** verification code to `src/app/layout.tsx` (`verification.google`)
+- [x] Add **Google Search Console** verification code to `src/app/layout.tsx` ✓
 - [ ] Set up **Google Analytics 4** (`NEXT_PUBLIC_GA_MEASUREMENT_ID`)
 - [ ] Configure **Resend** for contact form email delivery (`RESEND_API_KEY`)
 
 ### SEO & Deployment
 - [ ] Update `NEXT_PUBLIC_SITE_URL` in `.env.local` and in `public/robots.txt`
-- [ ] Submit sitemap to Google Search Console: `https://www.carkeyservicedxb.com/sitemap.xml`
+- [ ] Submit sitemap to Google Search Console: `https://locksmith-dubai.com/sitemap.xml`
 - [ ] Set up **Vercel** project and connect GitHub repository
 - [ ] Configure custom domain on Vercel
 

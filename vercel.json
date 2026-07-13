@@ -38,6 +38,12 @@
       "source": "/home",
       "destination": "/",
       "permanent": true
+    },
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "www.locksmith-dubai.com" }],
+      "destination": "https://locksmith-dubai.com/:path*",
+      "permanent": true
     }
   ]
 }

@@ -101,8 +101,7 @@ export const metadata: Metadata = {
     canonical: SITE_URL,
   },
   verification: {
-    // Add Google Search Console verification code here when available
-    // google: 'YOUR_VERIFICATION_CODE',
+    google: 'MTOWRhySJi7QRv2vRvrdz58Tvfev6NJGN9ki4DEJEkg',
   },
   other: {
     'geo.region': 'AE-DU',

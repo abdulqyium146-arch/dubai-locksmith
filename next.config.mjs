@@ -53,9 +53,17 @@ const nextConfig = {
     ]
   },
 
-  // Redirects for common misspellings / old URL patterns
+  // Redirects
   async redirects() {
     return [
+      // Enforce non-www canonical
+      {
+        source: '/:path*',
+        has: [{ type: 'host', value: 'www.locksmith-dubai.com' }],
+        destination: 'https://locksmith-dubai.com/:path*',
+        permanent: true,
+      },
+      // Slug pattern fixes
       {
         source: '/service/:slug',
         destination: '/services/:slug',

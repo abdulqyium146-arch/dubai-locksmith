@@ -15,7 +15,7 @@ export const PHONE_DISPLAY = '+971 52 817 6909' as const
 export const PHONE_HREF = 'tel:+971528176909' as const
 export const WHATSAPP_NUMBER = '971528176909' as const
 export const WHATSAPP_HREF = `https://wa.me/${WHATSAPP_NUMBER}` as const
-export const EMAIL = 'info@carkeyservicedxb.com' as const
+export const EMAIL = 'info@locksmith-dubai.com' as const
 
 // ── Address ───────────────────────────────────────────────────────────────────
 
@@ -40,7 +40,7 @@ export const GOOGLE_MAPS_URL =
 // ── Site ──────────────────────────────────────────────────────────────────────
 
 export const SITE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL ?? 'https://www.carkeyservicedxb.com'
+  process.env.NEXT_PUBLIC_SITE_URL ?? 'https://locksmith-dubai.com'
 
 export const SITE_NAME = BUSINESS_NAME
 
