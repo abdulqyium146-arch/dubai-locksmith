@@ -1,0 +1,211 @@
+/* ─────────────────────────────────────────────────────────────────────────────
+   Car Key Service DXB — Global Styles
+   ───────────────────────────────────────────────────────────────────────────── */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── CSS Custom Properties — Light Mode ───────────────────────────────────── */
+
+@layer base {
+  :root {
+    /* Shadcn/Radix compatible design tokens */
+    --background: 0 0% 98%;
+    --foreground: 215 50% 12%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 215 50% 12%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 215 50% 12%;
+
+    /* Brand gold as primary */
+    --primary: 42 55% 54%;
+    --primary-foreground: 215 50% 8%;
+
+    --secondary: 215 50% 14%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 215 20% 94%;
+    --muted-foreground: 215 20% 45%;
+
+    --accent: 42 55% 54%;
+    --accent-foreground: 215 50% 8%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 215 20% 88%;
+    --input: 215 20% 88%;
+    --ring: 42 55% 54%;
+
+    --radius: 0.5rem;
+
+    /* Brand colours (raw values for direct use) */
+    --brand-gold: #C9A84C;
+    --brand-gold-light: #E8C96A;
+    --brand-gold-dark: #A8882E;
+    --brand-navy: #0B1F3A;
+    --brand-navy-light: #132840;
+    --brand-navy-dark: #071526;
+
+    /* Header height — used for scroll padding */
+    --header-height: 72px;
+  }
+
+  /* ── Dark Mode ────────────────────────────────────────────────────────────── */
+
+  .dark {
+    --background: 215 50% 7%;
+    --foreground: 0 0% 96%;
+
+    --card: 215 45% 10%;
+    --card-foreground: 0 0% 96%;
+
+    --popover: 215 45% 10%;
+    --popover-foreground: 0 0% 96%;
+
+    --primary: 42 55% 54%;
+    --primary-foreground: 215 50% 8%;
+
+    --secondary: 215 30% 18%;
+    --secondary-foreground: 0 0% 96%;
+
+    --muted: 215 30% 15%;
+    --muted-foreground: 215 20% 60%;
+
+    --accent: 42 55% 54%;
+    --accent-foreground: 215 50% 8%;
+
+    --destructive: 0 62% 45%;
+    --destructive-foreground: 0 0% 96%;
+
+    --border: 215 30% 18%;
+    --input: 215 30% 18%;
+    --ring: 42 55% 54%;
+  }
+}
+
+/* ── Base Resets & Typography ─────────────────────────────────────────────── */
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: var(--header-height);
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: 'kern' 1, 'liga' 1;
+  }
+
+  /* Heading font via CSS var set by next/font */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-heading), system-ui, sans-serif;
+    @apply font-bold tracking-tight;
+  }
+
+  /* Focus visible ring — WCAG 2.1 AA */
+  :focus-visible {
+    @apply outline-none ring-2 ring-ring ring-offset-2 ring-offset-background;
+  }
+
+  /* Skip to main link for screen readers */
+  .skip-link {
+    @apply absolute -top-full left-4 z-[200] rounded-md bg-brand-gold px-4 py-2 text-sm font-semibold text-brand-navy transition-all focus:top-4;
+  }
+
+  /* Smooth image rendering */
+  img,
+  video {
+    @apply max-w-full;
+  }
+
+  /* Phone links inherit colour by default */
+  a[href^="tel"],
+  a[href^="https://wa.me"] {
+    @apply no-underline;
+  }
+}
+
+/* ── Utility Classes ──────────────────────────────────────────────────────── */
+
+@layer utilities {
+  /* Gold gradient text */
+  .text-gold-gradient {
+    background: linear-gradient(135deg, #C9A84C 0%, #E8C96A 50%, #C9A84C 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Section spacing helper */
+  .section-padding {
+    @apply py-16 md:py-20 lg:py-24;
+  }
+
+  /* Container max width with horizontal padding */
+  .container-tight {
+    @apply mx-auto max-w-5xl px-4 sm:px-6 lg:px-8;
+  }
+
+  /* Visually hidden (accessible) */
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+  }
+
+  /* Floating CTA backdrop for mobile */
+  .floating-cta-safe {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+}
+
+/* ── Component Layer — Header Scroll State ────────────────────────────────── */
+
+@layer components {
+  .header-scrolled {
+    @apply border-b border-border bg-background/95 shadow-sm backdrop-blur-md;
+  }
+
+  /* Gold button pulse for emergency CTAs */
+  .btn-pulse {
+    animation: btn-pulse 2.5s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  @keyframes btn-pulse {
+    0%, 100% {
+      box-shadow: 0 0 0 0 rgba(201, 168, 76, 0.4);
+    }
+    50% {
+      box-shadow: 0 0 0 8px rgba(201, 168, 76, 0);
+    }
+  }
+
+  /* Card hover lift */
+  .card-hover {
+    @apply transition-all duration-300 hover:-translate-y-1 hover:shadow-gold;
+  }
+
+  /* Skeleton shimmer */
+  .skeleton {
+    @apply animate-pulse rounded-md bg-muted;
+  }
+}

@@ -1,0 +1,90 @@
+// ─────────────────────────────────────────────────────────────────────────────
+// Car Key Service DXB — LocalBusiness + AutomotiveBusiness Schema
+// ─────────────────────────────────────────────────────────────────────────────
+import { JsonLd } from './JsonLd'
+import {
+  BUSINESS_NAME,
+  BUSINESS_TAGLINE,
+  PHONE_RAW,
+  EMAIL,
+  ADDRESS_STREET,
+  ADDRESS_AREA,
+  ADDRESS_CITY,
+  ADDRESS_COUNTRY,
+  COORDINATES,
+  GOOGLE_RATING,
+  GOOGLE_MAPS_URL,
+  SITE_URL,
+  SCHEMA_ORG,
+  SOCIAL_LINKS,
+} from '@/lib/constants'
+
+export function LocalBusinessSchema() {
+  const schema = {
+    '@context': 'https://schema.org',
+    '@type': ['Locksmith', 'AutomotiveBusiness', 'LocalBusiness'],
+    '@id': `${SITE_URL}/#organization`,
+    name: BUSINESS_NAME,
+    description: BUSINESS_TAGLINE,
+    url: SITE_URL,
+    telephone: PHONE_RAW,
+    email: EMAIL,
+    address: {
+      '@type': 'PostalAddress',
+      streetAddress: ADDRESS_STREET,
+      addressLocality: ADDRESS_AREA,
+      addressRegion: ADDRESS_CITY,
+      addressCountry: ADDRESS_COUNTRY,
+    },
+    geo: {
+      '@type': 'GeoCoordinates',
+      latitude: COORDINATES.lat,
+      longitude: COORDINATES.lng,
+    },
+    hasMap: GOOGLE_MAPS_URL,
+    openingHoursSpecification: {
+      '@type': 'OpeningHoursSpecification',
+      dayOfWeek: [
+        'Monday',
+        'Tuesday',
+        'Wednesday',
+        'Thursday',
+        'Friday',
+        'Saturday',
+        'Sunday',
+      ],
+      opens: '00:00',
+      closes: '23:59',
+    },
+    priceRange: SCHEMA_ORG.priceRange,
+    currenciesAccepted: SCHEMA_ORG.currenciesAccepted,
+    paymentAccepted: SCHEMA_ORG.paymentAccepted,
+    areaServed: {
+      '@type': 'City',
+      name: SCHEMA_ORG.areaServed,
+    },
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: GOOGLE_RATING,
+      bestRating: 5,
+      worstRating: 1,
+      // TODO: Update reviewCount with actual verified Google review count
+      reviewCount: 120,
+    },
+    sameAs: [
+      SOCIAL_LINKS.facebook,
+      SOCIAL_LINKS.instagram,
+      SOCIAL_LINKS.twitter,
+      GOOGLE_MAPS_URL,
+    ],
+    logo: {
+      '@type': 'ImageObject',
+      url: `${SITE_URL}/images/logo.png`,
+      width: 200,
+      height: 60,
+    },
+    image: `${SITE_URL}/images/og-default.jpg`,
+  }
+
+  return <JsonLd data={schema} />
+}
