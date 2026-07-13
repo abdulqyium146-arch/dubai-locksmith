@@ -1,11 +1,6 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "framework": "nextjs",
-  "functions": {
-    "src/app/api/og/route.tsx": {
-      "runtime": "edge"
-    }
-  },
   "headers": [
     {
       "source": "/(.*)",
