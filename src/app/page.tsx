@@ -4,7 +4,7 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
-import { Phone, MessageCircle, CheckCircle2, ArrowRight, PhoneCall, Wrench, ThumbsUp } from 'lucide-react'
+import { Phone, MessageCircle, CheckCircle2, ArrowRight, PhoneCall, Wrench, ThumbsUp, MapPin, Clock } from 'lucide-react'
 
 import { HeroSection } from '@/components/sections/HeroSection'
 import { TrustBar } from '@/components/sections/TrustBar'
@@ -634,7 +634,101 @@ export default function HomePage() {
         </section>
       )}
 
-      {/* ── 7. Final CTA ────────────────────────────────────────────────────── */}
+      {/* ── 7. Find Us — Map Section ────────────────────────────────────────── */}
+      <section
+        aria-labelledby="map-heading"
+        className="py-16 sm:py-20 bg-muted/30 border-y border-border"
+      >
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="mb-10 text-center">
+            <span className="inline-flex items-center gap-1.5 rounded-full border border-brand-gold/30 bg-brand-gold/10 px-3 py-1 text-xs font-semibold text-brand-gold mb-4">
+              Visit Us
+            </span>
+            <h2
+              id="map-heading"
+              className="font-heading text-3xl font-bold tracking-tight text-foreground sm:text-4xl"
+            >
+              Find Us in Al Bada&apos;a, Dubai
+            </h2>
+            <p className="mt-4 text-base text-muted-foreground max-w-xl mx-auto">
+              Walk in for instant key cutting, or call for mobile locksmith service anywhere in Dubai.
+            </p>
+          </div>
+
+          <div className="grid gap-8 lg:grid-cols-[1fr_320px] items-start">
+            {/* Map iframe */}
+            <div className="overflow-hidden rounded-2xl border border-border shadow-md aspect-[16/9] lg:aspect-auto lg:h-[420px]">
+              <iframe
+                src="https://www.google.com/maps?q=25.23341473023507,55.275106874155064&z=17&output=embed"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Lock Repair Satwa location on Google Maps — D90, Al Bada'a, Dubai"
+              />
+            </div>
+
+            {/* Address + CTA card */}
+            <div className="rounded-2xl border border-border bg-background p-6 shadow-sm lg:sticky lg:top-24">
+              <h3 className="font-heading text-lg font-semibold text-foreground mb-5">
+                Our Location
+              </h3>
+              <address className="not-italic space-y-4 text-sm text-muted-foreground">
+                <p className="flex items-start gap-3">
+                  <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-brand-gold" aria-hidden="true" />
+                  <span>
+                    <strong className="block text-foreground mb-0.5">Lock Repair Satwa</strong>
+                    D90, Al Bada&apos;a<br />
+                    Dubai, UAE
+                  </span>
+                </p>
+                <p className="flex items-start gap-3">
+                  <Clock className="mt-0.5 h-4 w-4 shrink-0 text-brand-gold" aria-hidden="true" />
+                  <span>
+                    <strong className="block text-foreground mb-0.5">Hours</strong>
+                    Shop: 7:00 AM – 11:30 PM daily<br />
+                    <span className="text-green-600 dark:text-green-400 font-medium">
+                      Mobile service: 24/7
+                    </span>
+                  </span>
+                </p>
+              </address>
+
+              <div className="mt-6 flex flex-col gap-3">
+                <Button size="md" variant="primary" className="btn-pulse w-full" asChild>
+                  <a href={PHONE_HREF} aria-label={`Call Lock Repair Satwa: ${PHONE_DISPLAY}`}>
+                    <Phone className="h-4 w-4" aria-hidden="true" />
+                    Call {PHONE_DISPLAY}
+                  </a>
+                </Button>
+                <Button size="md" variant="whatsapp" className="w-full" asChild>
+                  <a
+                    href={WHATSAPP_HREF}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="WhatsApp Lock Repair Satwa"
+                  >
+                    <MessageCircle className="h-4 w-4" aria-hidden="true" />
+                    WhatsApp Us
+                  </a>
+                </Button>
+                <a
+                  href="https://maps.google.com/?q=Lock+Repair+Satwa+Al+Bada%27a+Dubai"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-center text-xs text-muted-foreground hover:text-brand-gold transition-colors underline underline-offset-2"
+                >
+                  Open in Google Maps →
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── 8. Final CTA ────────────────────────────────────────────────────── */}
       <CtaSection
         heading="Need a Locksmith or Spare Key? Call Now."
         subtext={`${BUSINESS_NAME} (D90, Al Bada'a, Dubai) is a professional locksmith serving all Dubai areas, open daily 24/7. We come to you — at home, the office, the mall or the roadside.`}
