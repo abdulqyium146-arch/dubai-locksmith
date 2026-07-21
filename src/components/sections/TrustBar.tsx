@@ -2,36 +2,9 @@
 // Lock Repair Satwa — Trust Bar
 // ─────────────────────────────────────────────────────────────────────────────
 import { Clock, Star, Zap, MapPin, DollarSign } from 'lucide-react'
+import { getTranslations } from 'next-intl/server'
 import { cn } from '@/lib/utils'
 import { GOOGLE_RATING } from '@/lib/constants'
-
-const TRUST_ITEMS = [
-  {
-    icon: Clock,
-    label: '24/7 Service',
-    sub: 'Always available',
-  },
-  {
-    icon: Star,
-    label: `${GOOGLE_RATING}★ Google Rated`,
-    sub: 'Verified reviews',
-  },
-  {
-    icon: Zap,
-    label: '20-Min Response',
-    sub: 'Central Dubai',
-  },
-  {
-    icon: MapPin,
-    label: 'All Dubai Covered',
-    sub: '15 key areas',
-  },
-  {
-    icon: DollarSign,
-    label: 'Upfront Pricing',
-    sub: 'No hidden fees',
-  },
-] as const
 
 interface TrustBarProps {
   /** Dark background variant (for use on light-bg pages) */
@@ -39,10 +12,40 @@ interface TrustBarProps {
   className?: string
 }
 
-export function TrustBar({ dark = false, className }: TrustBarProps) {
+export async function TrustBar({ dark = false, className }: TrustBarProps) {
+  const t = await getTranslations('trust')
+
+  const TRUST_ITEMS = [
+    {
+      icon: Clock,
+      label: t('service247'),
+      sub: t('service247Sub'),
+    },
+    {
+      icon: Star,
+      label: t('googleRated', { rating: GOOGLE_RATING }),
+      sub: t('googleRatedSub'),
+    },
+    {
+      icon: Zap,
+      label: t('response20Min'),
+      sub: t('response20MinSub'),
+    },
+    {
+      icon: MapPin,
+      label: t('allDubaiCovered'),
+      sub: t('allDubaiCoveredSub'),
+    },
+    {
+      icon: DollarSign,
+      label: t('upfrontPricing'),
+      sub: t('upfrontPricingSub'),
+    },
+  ]
+
   return (
     <section
-      aria-label="Trust signals"
+      aria-label={t('ariaLabel')}
       className={cn(
         'w-full py-6',
         dark

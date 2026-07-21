@@ -1,9 +1,11 @@
+import createNextIntlPlugin from 'next-intl/plugin'
+
+const withNextIntl = createNextIntlPlugin('./src/i18n/request.ts')
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // Enable React strict mode for better development warnings
   reactStrictMode: true,
 
-  // Image optimisation — allow external image domains if needed later
   images: {
     formats: ['image/avif', 'image/webp'],
     remotePatterns: [
@@ -22,48 +24,29 @@ const nextConfig = {
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
   },
 
-  // Security headers
   async headers() {
     return [
       {
         source: '/(.*)',
         headers: [
-          {
-            key: 'X-Frame-Options',
-            value: 'DENY',
-          },
-          {
-            key: 'X-Content-Type-Options',
-            value: 'nosniff',
-          },
-          {
-            key: 'Referrer-Policy',
-            value: 'strict-origin-when-cross-origin',
-          },
-          {
-            key: 'Permissions-Policy',
-            value: 'camera=(), microphone=(), geolocation=(self)',
-          },
-          {
-            key: 'X-DNS-Prefetch-Control',
-            value: 'on',
-          },
+          { key: 'X-Frame-Options', value: 'DENY' },
+          { key: 'X-Content-Type-Options', value: 'nosniff' },
+          { key: 'Referrer-Policy', value: 'strict-origin-when-cross-origin' },
+          { key: 'Permissions-Policy', value: 'camera=(), microphone=(), geolocation=(self)' },
+          { key: 'X-DNS-Prefetch-Control', value: 'on' },
         ],
       },
     ]
   },
 
-  // Redirects
   async redirects() {
     return [
-      // Enforce non-www canonical
       {
         source: '/:path*',
         has: [{ type: 'host', value: 'www.locksmith-dubai.com' }],
         destination: 'https://locksmith-dubai.com/:path*',
         permanent: true,
       },
-      // Slug pattern fixes
       {
         source: '/service/:slug',
         destination: '/services/:slug',
@@ -77,25 +60,17 @@ const nextConfig = {
     ]
   },
 
-  // Compiler options
   compiler: {
-    // Remove console.log in production
     removeConsole:
       process.env.NODE_ENV === 'production'
         ? { exclude: ['error', 'warn'] }
         : false,
   },
 
-  // Experimental features
   experimental: {
-    // Optimise package imports for common libraries
-    optimizePackageImports: [
-      'lucide-react',
-      'framer-motion',
-    ],
+    optimizePackageImports: ['lucide-react', 'framer-motion'],
   },
 
-  // Logging
   logging: {
     fetches: {
       fullUrl: process.env.NODE_ENV === 'development',
@@ -103,4 +78,4 @@ const nextConfig = {
   },
 }
 
-export default nextConfig
+export default withNextIntl(nextConfig)

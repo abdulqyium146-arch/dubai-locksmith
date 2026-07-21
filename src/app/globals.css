@@ -209,3 +209,63 @@
     @apply animate-pulse rounded-md bg-muted;
   }
 }
+
+/* ── RTL / Arabic Support ─────────────────────────────────────────────────── */
+
+/* Arabic font — Cairo via CSS variable set in locale layout */
+:root[lang='ar'],
+[lang='ar'] {
+  --font-sans: var(--font-cairo), var(--font-inter), system-ui, sans-serif;
+  --font-heading: var(--font-cairo), system-ui, sans-serif;
+  font-feature-settings: normal;
+}
+
+/* RTL base adjustments */
+[dir='rtl'] {
+  text-align: right;
+}
+
+/* RTL: reverse flex-row to maintain correct visual order */
+[dir='rtl'] .rtl-flip {
+  transform: scaleX(-1);
+}
+
+/* RTL: arrow icons that point right in LTR should point left in RTL */
+[dir='rtl'] .arrow-ltr {
+  transform: rotate(180deg);
+}
+
+/* Ensure Arabic numerals appear correctly in price displays */
+[lang='ar'] .price-display {
+  direction: ltr;
+  unicode-bidi: embed;
+}
+
+/* RTL: adjust skip-to-content link position */
+[dir='rtl'] .skip-link {
+  left: auto;
+  right: 1rem;
+}
+
+/* Spacing logical properties override for RTL */
+[dir='rtl'] .ml-auto {
+  margin-left: unset;
+  margin-right: auto;
+}
+
+[dir='rtl'] .mr-auto {
+  margin-right: unset;
+  margin-left: auto;
+}
+
+/* Mega-menu RTL positioning */
+[dir='rtl'] .mega-menu-inner {
+  left: auto;
+  right: 50%;
+  transform: translateX(50%);
+}
+
+/* Smooth language transition */
+html {
+  transition: direction 0s;
+}

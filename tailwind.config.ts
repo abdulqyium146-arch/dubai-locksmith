@@ -69,8 +69,9 @@ const config: Config = {
         sm: 'calc(var(--radius) - 4px)',
       },
       fontFamily: {
-        sans: ['var(--font-inter)', 'system-ui', 'sans-serif'],
-        heading: ['var(--font-poppins)', 'system-ui', 'sans-serif'],
+        sans: ['var(--font-sans, var(--font-inter))', 'system-ui', 'sans-serif'],
+        heading: ['var(--font-heading, var(--font-poppins))', 'system-ui', 'sans-serif'],
+        arabic: ['var(--font-cairo)', 'system-ui', 'sans-serif'],
       },
       keyframes: {
         'accordion-down': {

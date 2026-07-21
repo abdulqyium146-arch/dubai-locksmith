@@ -1,7 +1,8 @@
 // ─────────────────────────────────────────────────────────────────────────────
-// Lock Repair Satwa — Footer
+// Lock Repair Satwa — Footer (server component)
 // ─────────────────────────────────────────────────────────────────────────────
-import Link from 'next/link'
+import { getTranslations } from 'next-intl/server'
+import { Link } from '@/i18n/navigation'
 import {
   Phone,
   Mail,
@@ -17,7 +18,6 @@ import {
 } from 'lucide-react'
 import {
   BUSINESS_NAME,
-  BUSINESS_TAGLINE,
   PHONE_DISPLAY,
   PHONE_HREF,
   WHATSAPP_HREF,
@@ -42,32 +42,35 @@ const FOOTER_LOCATIONS = locations.slice(0, 8).map((l) => ({
   href: `/locations/${l.slug}`,
 }))
 
-const TRUST_BADGES = [
-  {
-    icon: Shield,
-    label: 'Licensed & Insured',
-    sub: 'Dubai Municipality Approved',
-  },
-  {
-    icon: Zap,
-    label: '20-Minute Response',
-    sub: 'Central Dubai Areas',
-  },
-  {
-    icon: Award,
-    label: `${GOOGLE_RATING}★ Google Rated`,
-    sub: 'Verified Customer Reviews',
-  },
-]
+export async function Footer() {
+  const t = await getTranslations('footer')
+  const tNav = await getTranslations('nav')
 
-export function Footer() {
+  const TRUST_BADGES = [
+    {
+      icon: Shield,
+      label: t('badge1Label'),
+      sub: t('badge1Sub'),
+    },
+    {
+      icon: Zap,
+      label: t('badge2Label'),
+      sub: t('badge2Sub'),
+    },
+    {
+      icon: Award,
+      label: t('badge3Label', { rating: GOOGLE_RATING }),
+      sub: t('badge3Sub'),
+    },
+  ]
+
   return (
     <footer
       className="bg-brand-navy text-white"
       aria-labelledby="footer-heading"
     >
       <h2 id="footer-heading" className="sr-only">
-        Footer
+        {t('footerLabel')}
       </h2>
 
       {/* ── Trust badges strip ───────────────────────────────────────────────── */}
@@ -126,8 +129,7 @@ export function Footer() {
             </Link>
 
             <p className="mt-4 text-sm leading-relaxed text-white/70">
-              {BUSINESS_TAGLINE}. Professional locksmith at D90, Al Bada&apos;a, Dubai,
-              serving all Dubai areas 24/7.
+              {t('taglineFull')}
             </p>
 
             {/* NAP */}
@@ -146,7 +148,7 @@ export function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-start gap-3 text-white/80 transition-colors hover:text-brand-gold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring rounded"
-                aria-label="Message us on WhatsApp"
+                aria-label={t('whatsappLabel')}
               >
                 {/* WhatsApp icon */}
                 <svg
@@ -157,7 +159,7 @@ export function Footer() {
                 >
                   <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
                 </svg>
-                <span>WhatsApp Us</span>
+                <span>{t('whatsappText')}</span>
               </a>
 
               <a
@@ -180,16 +182,16 @@ export function Footer() {
 
               <div className="flex items-start gap-3 text-white/80">
                 <Clock className="mt-0.5 h-4 w-4 shrink-0 text-brand-gold" aria-hidden="true" />
-                <span>Open 24/7 — All Dubai Areas</span>
+                <span>{t('hours')}</span>
               </div>
             </address>
 
             {/* Social links */}
             <div className="mt-6 flex gap-3">
               {[
-                { href: SOCIAL_LINKS.facebook, Icon: Facebook, label: 'Facebook' },
-                { href: SOCIAL_LINKS.instagram, Icon: Instagram, label: 'Instagram' },
-                { href: SOCIAL_LINKS.twitter, Icon: Twitter, label: 'Twitter / X' },
+                { href: SOCIAL_LINKS.facebook, Icon: Facebook, label: t('socialFacebook') },
+                { href: SOCIAL_LINKS.instagram, Icon: Instagram, label: t('socialInstagram') },
+                { href: SOCIAL_LINKS.twitter, Icon: Twitter, label: t('socialTwitter') },
               ].map(({ href, Icon, label }) => (
                 <a
                   key={label}
@@ -208,7 +210,7 @@ export function Footer() {
           {/* Column 2 — Services ─────────────────────────────────────────────── */}
           <div>
             <h3 className="font-heading text-sm font-semibold uppercase tracking-widest text-brand-gold">
-              Our Services
+              {t('ourServices')}
             </h3>
             <ul className="mt-4 space-y-2.5" role="list">
               {FOOTER_SERVICES.map(({ label, href }) => (
@@ -226,7 +228,7 @@ export function Footer() {
                   href="/services"
                   className="text-sm font-medium text-brand-gold hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring rounded"
                 >
-                  View all services →
+                  {t('viewAllServices')}
                 </Link>
               </li>
             </ul>
@@ -235,7 +237,7 @@ export function Footer() {
           {/* Column 3 — Locations ────────────────────────────────────────────── */}
           <div>
             <h3 className="font-heading text-sm font-semibold uppercase tracking-widest text-brand-gold">
-              Service Areas
+              {t('serviceAreas')}
             </h3>
             <ul className="mt-4 space-y-2.5" role="list">
               {FOOTER_LOCATIONS.map(({ label, href }) => (
@@ -253,7 +255,7 @@ export function Footer() {
                   href="/locations"
                   className="text-sm font-medium text-brand-gold hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring rounded"
                 >
-                  View all areas →
+                  {t('viewAllAreas')}
                 </Link>
               </li>
             </ul>
@@ -262,14 +264,14 @@ export function Footer() {
           {/* Column 4 — Company & Google Rating ─────────────────────────────── */}
           <div>
             <h3 className="font-heading text-sm font-semibold uppercase tracking-widest text-brand-gold">
-              Company
+              {t('company')}
             </h3>
             <ul className="mt-4 space-y-2.5" role="list">
               {[
-                { label: 'About Us', href: '/about' },
-                { label: 'Contact', href: '/contact' },
-                { label: 'Privacy Policy', href: '/privacy' },
-                { label: 'Terms of Service', href: '/terms' },
+                { label: t('aboutUs'), href: '/about' },
+                { label: tNav('contact'), href: '/contact' },
+                { label: t('privacyPolicy'), href: '/privacy' },
+                { label: t('termsOfService'), href: '/terms' },
               ].map(({ label, href }) => (
                 <li key={href}>
                   <Link
@@ -288,7 +290,7 @@ export function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               className="mt-8 flex w-full flex-col gap-2 rounded-xl border border-brand-gold/20 bg-brand-gold/10 p-4 transition-colors hover:border-brand-gold/40 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
-              aria-label={`${GOOGLE_RATING} stars on Google Reviews — View our reviews`}
+              aria-label={`${t('badge3Label', { rating: GOOGLE_RATING })} — View our reviews`}
             >
               <div className="flex items-center gap-2">
                 {/* Google G */}
@@ -315,7 +317,7 @@ export function Footer() {
                   />
                 </svg>
                 <span className="text-sm font-semibold text-white">
-                  Google Reviews
+                  {t('googleReviews')}
                 </span>
               </div>
               <div className="flex items-center gap-2">
@@ -341,7 +343,7 @@ export function Footer() {
                 <span className="text-xs text-white/50">/ 5</span>
               </div>
               <p className="text-xs text-white/50">
-                Tap to read reviews on Google Maps
+                {t('tapToRead')}
               </p>
             </a>
           </div>
@@ -352,13 +354,10 @@ export function Footer() {
       <div className="border-t border-white/10">
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-4 py-6 sm:flex-row sm:px-6 lg:px-8">
           <p className="text-center text-xs text-white/50 sm:text-left">
-            © {currentYear} {BUSINESS_NAME}. All rights reserved.
+            {t('copyright', { year: currentYear, name: BUSINESS_NAME })}
           </p>
           <p className="text-center text-xs text-white/40 sm:text-right">
-            Professional Locksmith · D90, Al Bada&apos;a, Dubai, UAE ·{' '}
-            <a href={PHONE_HREF} className="text-white/60 hover:text-brand-gold">
-              {PHONE_DISPLAY}
-            </a>
+            {t('footerMicroCopy', { phone: PHONE_DISPLAY })}
           </p>
         </div>
       </div>

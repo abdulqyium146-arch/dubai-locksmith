@@ -181,3 +181,54 @@ export interface PageMeta {
   ogImageUrl?: string
   noIndex?: boolean
 }
+
+// ── Locale types ──────────────────────────────────────────────────────────────
+
+export type Locale = 'en' | 'ar'
+
+/** Bilingual string pair — used for data objects that have Arabic variants */
+export interface LocaleContent {
+  title: string
+  metaTitle: string
+  metaDescription: string
+  directAnswerOpener: string
+  description: string
+  heroImageAlt?: string
+  benefits: Benefit[]
+  processSteps: ProcessStep[]
+  faqs: Faq[]
+  pricing: { note: string }
+}
+
+export interface LocationLocaleContent {
+  name: string
+  metaTitle: string
+  metaDescription: string
+  directAnswerOpener: string
+  description: string
+  landmarks: string[]
+  buildingTypes: string[]
+  faqs: Faq[]
+}
+
+export interface ProductLocaleContent {
+  title: string
+  metaTitle: string
+  metaDescription: string
+  description: string
+  features: string[]
+  faqs: Faq[]
+  pricing: { note: string }
+}
+
+/** Helper to resolve locale content with English fallback */
+export function resolveLocale<T>(
+  en: T,
+  ar: Partial<T> | undefined,
+  locale: Locale,
+): T {
+  if (locale === 'ar' && ar) {
+    return { ...en, ...ar }
+  }
+  return en
+}
