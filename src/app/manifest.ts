@@ -1,11 +1,3 @@
-// ─────────────────────────────────────────────────────────────────────────────
-// Lock Repair Satwa — Next.js Web App Manifest
-// Generates /manifest.webmanifest automatically
-//
-// TODO (business owner): Supply actual icon files before going live:
-//   public/icons/icon-192.png  (192×192 px PNG)
-//   public/icons/icon-512.png  (512×512 px PNG)
-// ─────────────────────────────────────────────────────────────────────────────
 import type { MetadataRoute } from 'next'
 
 export default function manifest(): MetadataRoute.Manifest {
@@ -19,16 +11,16 @@ export default function manifest(): MetadataRoute.Manifest {
     theme_color: '#0B1F3A',
     icons: [
       {
-        src: '/icons/icon-192.png',
+        src: '/android-chrome-192x192.png',
         sizes: '192x192',
         type: 'image/png',
-        // TODO: Replace with real icon file at public/icons/icon-192.png
+        purpose: 'any',
       },
       {
-        src: '/icons/icon-512.png',
+        src: '/android-chrome-512x512.png',
         sizes: '512x512',
         type: 'image/png',
-        // TODO: Replace with real icon file at public/icons/icon-512.png
+        purpose: 'maskable',
       },
     ],
   }

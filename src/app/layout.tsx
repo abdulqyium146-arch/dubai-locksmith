@@ -96,6 +96,16 @@ export const metadata: Metadata = {
     description: DEFAULT_META_DESCRIPTION,
     images: [DEFAULT_OG_IMAGE],
   },
+  icons: {
+    icon: [
+      { url: '/favicon.ico', sizes: 'any' },
+      { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
+      { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
+      { url: '/android-chrome-192x192.png', sizes: '192x192', type: 'image/png' },
+    ],
+    apple: [{ url: '/apple-touch-icon.png', type: 'image/png' }],
+    shortcut: '/favicon.ico',
+  },
   robots: {
     index: true,
     follow: true,
@@ -151,11 +161,6 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         {/* Telephone schema micro-data */}
         <meta name="telephone" content={PHONE_DISPLAY} />
-        {/* Favicon */}
-        <link rel="icon" href="/favicon.ico" sizes="any" />
-        <link rel="icon" href="/icon.svg" type="image/svg+xml" />
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-        <link rel="manifest" href="/manifest.webmanifest" />
       </head>
       <body className="min-h-screen bg-background font-sans text-foreground">
         {/* Accessibility: skip to main content */}
