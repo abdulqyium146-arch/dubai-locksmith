@@ -173,8 +173,8 @@ export function HeroSection({
               {/* Main image card */}
               <div className="relative overflow-hidden rounded-2xl shadow-[0_32px_80px_rgba(0,0,0,0.55)] ring-1 ring-white/10">
                 <Image
-                  src="/images/services/locksmith-tools-lock-cylinders-dubai.webp"
-                  alt="Professional locksmith tools, lock cylinders, keys and equipment — Lock Repair Satwa, Al Bada'a Dubai"
+                  src="/images/services/car-remote-key-blanks-locksmith-shop-dubai.webp"
+                  alt="Car remote key blanks and transponder keys on display at Lock Repair Satwa shop, Al Bada'a Dubai"
                   width={520}
                   height={380}
                   priority
