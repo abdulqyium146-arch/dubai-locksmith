@@ -321,6 +321,28 @@ export default function ContactPage() {
                   Open daily 24/7 including UAE public holidays.
                 </p>
               </div>
+
+              {/* GMB Workshop Video */}
+              <div className="rounded-xl border border-border bg-card overflow-hidden">
+                <div className="px-5 py-4 border-b border-border">
+                  <h3 className="font-heading text-base font-semibold text-foreground">
+                    See Our Workshop
+                  </h3>
+                  <p className="text-xs text-muted-foreground mt-0.5">
+                    Professional locksmith team — Al Bada&apos;a, Dubai
+                  </p>
+                </div>
+                <video
+                  src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWltHE0hQs14hXUSwhOqqGkXztZllu27k47AZowjW41jU26vvWBCJPVe5-uJLaZkYDBQN4CrB2W4Ax9ICo0-Pv0mRxTLKMi0BruM3EsaO5P18im2Ay8fffq8MR-kCpAZZcFIzTEwrw=m18"
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  controls
+                  className="w-full block"
+                  aria-label="Lock Repair Satwa — professional locksmith team at work in Dubai"
+                />
+              </div>
             </div>
           </div>
         </div>

@@ -80,6 +80,25 @@ const aboutPageSchema = {
   },
 }
 
+const GMB_VIDEO_URL =
+  'https://lh3.googleusercontent.com/gps-cs-s/AHRPTWltHE0hQs14hXUSwhOqqGkXztZllu27k47AZowjW41jU26vvWBCJPVe5-uJLaZkYDBQN4CrB2W4Ax9ICo0-Pv0mRxTLKMi0BruM3EsaO5P18im2Ay8fffq8MR-kCpAZZcFIzTEwrw=m18'
+
+const videoObjectSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'VideoObject',
+  name: 'Lock Repair Satwa — Professional Locksmith in Dubai',
+  description:
+    "Watch Lock Repair Satwa professionals at work — key duplication, car key programming, door lock repair and emergency locksmith services at D90, Al Bada'a, Dubai.",
+  contentUrl: GMB_VIDEO_URL,
+  thumbnailUrl: GMB_VIDEO_URL,
+  uploadDate: '2025-01-01',
+  publisher: {
+    '@type': 'Organization',
+    '@id': `${SITE_URL}/#lock-repair-satwa`,
+    name: BUSINESS_NAME,
+  },
+}
+
 // ── Breadcrumbs ───────────────────────────────────────────────────────────────
 
 const breadcrumbs = [
@@ -152,6 +171,7 @@ export default function AboutPage() {
     <>
       {/* Schemas */}
       <JsonLd data={aboutPageSchema} />
+      <JsonLd data={videoObjectSchema} />
 
       {/* ── Page Header ─────────────────────────────────────────────────────── */}
       <section aria-label="About page header" className="bg-hero-gradient pt-[72px]">
@@ -221,6 +241,45 @@ export default function AboutPage() {
               work to protect on every single call-out.
             </p>
           </div>
+        </div>
+      </section>
+
+      {/* ── GMB Video ─────────────────────────────────────────────────────────── */}
+      <section
+        aria-labelledby="video-heading"
+        className="py-16 sm:py-20 bg-muted/40 border-y border-border"
+      >
+        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-8">
+            <span className="inline-flex items-center gap-1.5 rounded-full border border-brand-gold/30 bg-brand-gold/10 px-3 py-1 text-xs font-semibold text-brand-gold mb-4">
+              See Us In Action
+            </span>
+            <h2
+              id="video-heading"
+              className="font-heading text-3xl font-bold tracking-tight text-foreground sm:text-4xl"
+            >
+              Watch Our Team at Work
+            </h2>
+            <p className="mt-4 text-base text-muted-foreground max-w-xl mx-auto">
+              Real professionals, real equipment, real results — from our workshop at D90,
+              Al Bada&apos;a, Dubai.
+            </p>
+          </div>
+          <div className="overflow-hidden rounded-2xl border border-border shadow-lg bg-black">
+            <video
+              src={GMB_VIDEO_URL}
+              autoPlay
+              muted
+              loop
+              playsInline
+              controls
+              className="w-full aspect-video block"
+              aria-label="Lock Repair Satwa — professional locksmith team in action at Al Bada'a Dubai"
+            />
+          </div>
+          <p className="mt-4 text-center text-sm text-muted-foreground">
+            Lock Repair Satwa · D90, Al Bada&apos;a, Dubai · Professional Locksmith Services
+          </p>
         </div>
       </section>
 
