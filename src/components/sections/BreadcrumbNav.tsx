@@ -2,7 +2,7 @@
 // Lock Repair Satwa — Breadcrumb Navigation
 // Renders visible breadcrumbs + inline BreadcrumbList JSON-LD
 // ─────────────────────────────────────────────────────────────────────────────
-import Link from 'next/link'
+import { Link } from '@/i18n/navigation'
 import { ChevronRight, Home } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import { BreadcrumbSchema } from '@/components/schema/BreadcrumbSchema'
