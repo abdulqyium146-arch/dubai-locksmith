@@ -2,6 +2,7 @@
 // Lock Repair Satwa — About Page (E-E-A-T Focused)
 // ─────────────────────────────────────────────────────────────────────────────
 import type { Metadata } from 'next'
+import Image from 'next/image'
 import Link from 'next/link'
 import {
   ArrowRight,
@@ -381,6 +382,69 @@ export default function AboutPage() {
                 <p className="font-heading text-3xl font-extrabold text-brand-gold">{value}</p>
                 <p className="mt-1 text-sm font-medium text-foreground">{label}</p>
               </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── Shop Photo Gallery ────────────────────────────────────────────────── */}
+      <section
+        aria-labelledby="gallery-heading"
+        className="py-16 sm:py-20 bg-background"
+      >
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="mb-10 text-center">
+            <span className="inline-flex items-center gap-1.5 rounded-full border border-brand-gold/30 bg-brand-gold/10 px-3 py-1 text-xs font-semibold text-brand-gold mb-4">
+              Our Shop &amp; Equipment
+            </span>
+            <h2
+              id="gallery-heading"
+              className="font-heading text-3xl font-bold tracking-tight text-foreground sm:text-4xl"
+            >
+              Inside Lock Repair Satwa — Al Bada&apos;a, Dubai
+            </h2>
+            <p className="mt-4 text-base text-muted-foreground max-w-xl mx-auto">
+              Real shop. Real stock. Real technicians. Based at D90, Al Bada&apos;a — serving all Dubai areas daily 24/7.
+            </p>
+          </div>
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            {[
+              {
+                src: '/images/shop/locksmith-shop-satwa-al-badaa-dubai.webp',
+                alt: 'Lock Repair Satwa shop exterior in Al Bada\'a Satwa area, Dubai — professional locksmith and key maker',
+                caption: 'Shop — Al Bada\'a, Satwa',
+              },
+              {
+                src: '/images/shop/padlock-collection-lock-shop-satwa-dubai.webp',
+                alt: 'Wall display of padlocks and door locks at Lock Repair Satwa shop in Satwa, Dubai',
+                caption: 'Padlocks & Locks Stock',
+              },
+              {
+                src: '/images/shop/door-lock-handles-repair-shop-satwa-dubai.webp',
+                alt: 'Door handles and lock hardware display at Lock Repair Satwa, Dubai — door lock repair and replacement',
+                caption: 'Door Handles & Hardware',
+              },
+              {
+                src: '/images/shop/key-duplication-shop-display-satwa-dubai.webp',
+                alt: 'Key duplication display stand at Lock Repair Satwa shop — duplicate keys for sale in Satwa Dubai',
+                caption: 'Key Duplication Display',
+              },
+            ].map(({ src, alt, caption }) => (
+              <figure key={src} className="group overflow-hidden rounded-xl border border-border shadow-sm">
+                <div className="overflow-hidden bg-muted aspect-[4/3]">
+                  <Image
+                    src={src}
+                    alt={alt}
+                    width={400}
+                    height={300}
+                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                    loading="lazy"
+                  />
+                </div>
+                <figcaption className="px-3 py-2 text-xs font-medium text-muted-foreground text-center border-t border-border">
+                  {caption}
+                </figcaption>
+              </figure>
             ))}
           </div>
         </div>

@@ -66,6 +66,10 @@ export interface Service {
   icon: string
   /** True if this service is available as a priority call-out during operating hours */
   emergency: boolean
+  /** Path to a contextual photo for this service (relative to /public), e.g. /images/services/... */
+  heroImage?: string
+  /** Alt text for the hero image — keyword-rich, describes the scene */
+  heroImageAlt?: string
 }
 
 // ── Location ──────────────────────────────────────────────────────────────────

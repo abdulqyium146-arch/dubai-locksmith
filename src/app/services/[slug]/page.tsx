@@ -15,6 +15,7 @@ import {
   Zap,
 } from 'lucide-react'
 
+import Image from 'next/image'
 import { BreadcrumbNav } from '@/components/sections/BreadcrumbNav'
 import { PricingTable } from '@/components/sections/PricingTable'
 import { FaqAccordion } from '@/components/sections/FaqAccordion'
@@ -59,6 +60,9 @@ export async function generateMetadata({
   if (!service) return {}
 
   const canonicalUrl = `${SITE_URL}/services/${service.slug}`
+  const ogImage = service.heroImage
+    ? `${SITE_URL}${service.heroImage}`
+    : DEFAULT_OG_IMAGE
 
   return {
     title: service.metaTitle,
@@ -75,10 +79,10 @@ export async function generateMetadata({
       description: service.metaDescription,
       images: [
         {
-          url: DEFAULT_OG_IMAGE,
-          width: 1200,
-          height: 630,
-          alt: `${service.title} in Dubai — ${BUSINESS_NAME}`,
+          url: ogImage,
+          width: 900,
+          height: 500,
+          alt: service.heroImageAlt ?? `${service.title} in Dubai — ${BUSINESS_NAME}`,
         },
       ],
     },
@@ -86,7 +90,7 @@ export async function generateMetadata({
       card: 'summary_large_image',
       title: service.metaTitle,
       description: service.metaDescription,
-      images: [DEFAULT_OG_IMAGE],
+      images: [ogImage],
     },
   }
 }
@@ -270,6 +274,24 @@ export default async function ServicePage({
           </div>
         </div>
       </section>
+
+      {/* ── 1b. Hero Image (services with a contextual photo) ───────────────── */}
+      {service.heroImage && (
+        <div className="bg-muted/40 border-b border-border">
+          <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-8">
+            <div className="overflow-hidden rounded-2xl border border-border shadow-md">
+              <Image
+                src={service.heroImage}
+                alt={service.heroImageAlt ?? `${service.title} in Dubai — Lock Repair Satwa`}
+                width={900}
+                height={500}
+                className="w-full object-cover"
+                priority
+              />
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* ── 2. What We Do ────────────────────────────────────────────────────── */}
       <section
