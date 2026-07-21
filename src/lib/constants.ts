@@ -27,8 +27,8 @@ export const ADDRESS_FULL =
   `${ADDRESS_STREET}, ${ADDRESS_AREA}, ${ADDRESS_CITY}, ${ADDRESS_COUNTRY}` as const
 
 export const COORDINATES = {
-  lat: 25.2092,
-  lng: 55.2597,
+  lat: 25.23341473023507,
+  lng: 55.275106874155064,
 } as const
 
 // ── Social & Reviews ──────────────────────────────────────────────────────────

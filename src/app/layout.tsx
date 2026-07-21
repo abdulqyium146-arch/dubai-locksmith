@@ -105,9 +105,9 @@ export const metadata: Metadata = {
   },
   other: {
     'geo.region': 'AE-DU',
-    'geo.placename': 'Dubai',
-    'geo.position': '25.2092;55.2597',
-    ICBM: '25.2092, 55.2597',
+    'geo.placename': 'Al Bada\'a, Dubai',
+    'geo.position': '25.23341473023507;55.275106874155064',
+    ICBM: '25.23341473023507, 55.275106874155064',
   },
 }
 

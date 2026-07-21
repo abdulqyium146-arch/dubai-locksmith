@@ -29,7 +29,6 @@ import {
   ADDRESS_AREA,
   ADDRESS_CITY,
   ADDRESS_COUNTRY,
-  COORDINATES,
   SITE_URL,
   DEFAULT_OG_IMAGE,
   GOOGLE_MAPS_URL,
@@ -84,8 +83,8 @@ const contactPageSchema = {
     },
     geo: {
       '@type': 'GeoCoordinates',
-      latitude: COORDINATES.lat,
-      longitude: COORDINATES.lng,
+      latitude: 25.23341473023507,
+      longitude: 55.275106874155064,
     },
     openingHoursSpecification: {
       '@type': 'OpeningHoursSpecification',
@@ -273,22 +272,29 @@ export default function ContactPage() {
                   </div>
                 </div>
 
-                {/* Google Maps Embed */}
-                {/* TODO: Replace this placeholder iframe src with a real Google Maps embed URL.
-                    Go to Google Maps > search for your business > Share > Embed a map > copy the src URL.
-                    The business owner must generate this embed URL from the verified Google Business Profile. */}
+                {/* Google Maps Embed — verified Place ID for Lock Repair Satwa */}
                 <div className="overflow-hidden rounded-lg border border-border">
                   <iframe
-                    src={`https://maps.google.com/maps?q=${COORDINATES.lat},${COORDINATES.lng}&z=15&output=embed`}
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3609.1042121159103!2d55.275106874155064!3d25.23341473023507!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f43ba64cf6469%3A0x6d2acd58680471f4!2sLock%20repair%20satwa!5e0!3m2!1sen!2s!4v1784627012430!5m2!1sen!2s"
                     width="100%"
-                    height="220"
+                    height="360"
                     loading="lazy"
-                    referrerPolicy="no-referrer-when-downgrade"
-                    title={`${BUSINESS_NAME} location on Google Maps`}
+                    referrerPolicy="strict-origin-when-cross-origin"
+                    allowFullScreen
+                    title="Lock Repair Satwa — D90, Al Bada'a, Dubai on Google Maps"
                     className="block w-full border-0"
-                    aria-label="Map showing Lock Repair Satwa location in Al Bada'a, Dubai"
+                    aria-label="Google Maps showing Lock Repair Satwa at D90, Al Bada'a, Dubai"
                   />
                 </div>
+                <a
+                  href={GOOGLE_MAPS_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-3 inline-flex items-center gap-1.5 text-xs font-semibold text-brand-gold hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring rounded"
+                >
+                  <MapPin className="h-3.5 w-3.5" aria-hidden="true" />
+                  Get Directions on Google Maps
+                </a>
               </div>
 
               {/* Business Hours */}
