@@ -1,5 +1,5 @@
 // ─────────────────────────────────────────────────────────────────────────────
-// Car Key Service DXB — Page Loading Skeleton
+// Lock Repair Satwa — Page Loading Skeleton
 // ─────────────────────────────────────────────────────────────────────────────
 
 export default function Loading() {

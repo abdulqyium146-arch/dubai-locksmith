@@ -1,5 +1,5 @@
 // ─────────────────────────────────────────────────────────────────────────────
-// Car Key Service DXB — About Page (E-E-A-T Focused)
+// Lock Repair Satwa — About Page (E-E-A-T Focused)
 // ─────────────────────────────────────────────────────────────────────────────
 import type { Metadata } from 'next'
 import Link from 'next/link'
@@ -39,9 +39,9 @@ import {
 // ── Metadata ──────────────────────────────────────────────────────────────────
 
 export const metadata: Metadata = {
-  title: `About Car Key Service DXB | Dubai's Trusted Automotive Locksmith`,
+  title: `About Lock Repair Satwa | Professional Locksmith in Dubai`,
   description:
-    `Learn about Car Key Service DXB — Dubai's specialist mobile automotive locksmith. Based in Al Bada'a, we provide 24/7 car key duplication, smart key programming and emergency locksmith services across all Dubai areas.`,
+    `Learn about Lock Repair Satwa — Dubai's professional locksmith based at D90, Al Bada'a. We provide lock repair, car key duplication, smart key programming and emergency locksmith services across all Dubai areas. Rated 4.7★ on Google.`,
   alternates: {
     canonical: `${SITE_URL}/about`,
   },
@@ -50,8 +50,8 @@ export const metadata: Metadata = {
     locale: 'en_AE',
     url: `${SITE_URL}/about`,
     siteName: BUSINESS_NAME,
-    title: `About ${BUSINESS_NAME} | Dubai's Trusted Automotive Locksmith`,
-    description: `${BUSINESS_NAME} — specialist mobile automotive locksmith based in Al Bada'a, Dubai. 24/7 service, 12 services, 15+ areas covered.`,
+    title: `About ${BUSINESS_NAME} | Professional Locksmith in Dubai`,
+    description: `${BUSINESS_NAME} — professional locksmith based at D90, Al Bada'a, Dubai. Open daily 7 AM–11:30 PM, 12 services, 15+ areas covered. Rated 4.7★ on Google.`,
     images: [{ url: DEFAULT_OG_IMAGE, width: 1200, height: 630, alt: `About ${BUSINESS_NAME}` }],
   },
 }
@@ -64,10 +64,10 @@ const aboutPageSchema = {
   '@id': `${SITE_URL}/about#about-page`,
   name: `About ${BUSINESS_NAME}`,
   url: `${SITE_URL}/about`,
-  description: `${BUSINESS_NAME} is a specialist mobile automotive locksmith based in Al Bada'a, Dubai. We provide 24/7 car key and locksmith services across all Dubai areas.`,
+  description: `${BUSINESS_NAME} is a professional locksmith based at D90, Al Bada'a, Dubai. We provide lock repair, car key duplication, and emergency locksmith services across all Dubai areas. Open daily 7 AM–11:30 PM.`,
   mainEntity: {
     '@type': 'Locksmith',
-    '@id': `${SITE_URL}/#organization`,
+    '@id': `${SITE_URL}/#lock-repair-satwa`,
     name: BUSINESS_NAME,
     description: BUSINESS_TAGLINE,
     address: {
@@ -92,9 +92,9 @@ const breadcrumbs = [
 const WHY_CHOOSE_US = [
   {
     icon: Clock,
-    title: '24/7 — Including Public Holidays',
+    title: 'Open Daily 7 AM – 11:30 PM',
     description:
-      'Lockouts and key emergencies happen at the worst possible times. We answer the phone at 3 AM on New Year\'s Day and Eid with the same professionalism as Monday morning.',
+      'We are open every day from 7:00 AM to 11:30 PM, including weekends and public holidays. Call us for lock repair, key duplication, or any locksmith need during our operating hours.',
   },
   {
     icon: Zap,
@@ -160,11 +160,11 @@ export default function AboutPage() {
           <div className="mt-6 max-w-3xl">
             <h1 className="font-heading text-4xl font-extrabold leading-tight tracking-tight text-white sm:text-5xl">
               About{' '}
-              <span className="text-gold-gradient">Car Key Service DXB</span>
+              <span className="text-gold-gradient">Lock Repair Satwa</span>
             </h1>
             <p className="mt-5 text-lg leading-relaxed text-white/75 max-w-2xl">
-              Dubai&apos;s specialist mobile automotive locksmith — based in Al Bada&apos;a,
-              serving the entire emirate 24 hours a day, 365 days a year.
+              Lock Repair Satwa is a professional locksmith based at D90, Al Bada&apos;a, Dubai —
+              serving all Dubai areas daily from 7 AM to 11:30 PM. Rated 4.7&#9733; on Google.
             </p>
           </div>
         </div>
@@ -185,7 +185,7 @@ export default function AboutPage() {
             id="story-heading"
             className="font-heading text-3xl font-bold tracking-tight text-foreground sm:text-4xl"
           >
-            Why We Started Car Key Service DXB
+            Why We Started Lock Repair Satwa
           </h2>
 
           <div className="mt-8 space-y-5 text-base leading-relaxed text-muted-foreground">
@@ -197,23 +197,23 @@ export default function AboutPage() {
                 - Specific certifications or training background
             */}
             <p>
-              Car Key Service DXB was founded by an automotive locksmith who had spent years
-              watching Dubai car owners face an unfair choice: either wait 3–7 days and pay
+              Lock Repair Satwa was founded by a professional locksmith who had spent years
+              watching Dubai residents face an unfair choice: either wait 3–7 days and pay
               AED&nbsp;800–1,500 at a franchised dealership, or rely on unlicensed roadside
               operators with no accountability, no insurance and no guarantee of quality work.
             </p>
             <p>
-              The solution was obvious: a fully mobile, fully certified service that brought
-              professional-grade key-cutting and programming equipment directly to customers
-              anywhere in Dubai — at transparent prices, at any hour. We built the business
-              around the three things Dubai car owners told us they valued most: <strong>speed</strong>,{' '}
+              The solution was obvious: a fully mobile, fully certified locksmith service that brought
+              professional-grade key-cutting, lock repair and programming equipment directly to customers
+              anywhere in Dubai — at transparent prices, during our daily operating hours. We built the business
+              around the three things Dubai residents told us they valued most: <strong>speed</strong>,{' '}
               <strong>reliability</strong> and <strong>honest pricing</strong>.
             </p>
             <p>
-              Today, Car Key Service DXB operates across all major Dubai areas from our
-              Al Bada&apos;a headquarters. Our technicians collectively cover thousands of
-              service calls per year — from basic key duplication for a Toyota Corolla to
-              complex smart key programming for a Range Rover Vogue, and everything in between.
+              Today, Lock Repair Satwa (D90, Al Bada&apos;a, Dubai) operates across all major Dubai
+              areas. Our technicians collectively cover thousands of service calls per year — from
+              basic key duplication for a Toyota Corolla to complex smart key programming for a
+              Range Rover Vogue, and everything in between. Call us on +971 52 642 6161.
             </p>
             <p>
               Every job we complete earns us the right to be called back the next time that
@@ -238,7 +238,7 @@ export default function AboutPage() {
               id="why-choose-us-heading"
               className="font-heading text-3xl font-bold tracking-tight text-foreground sm:text-4xl"
             >
-              What Makes Car Key Service DXB Different
+              What Makes Lock Repair Satwa Different
             </h2>
             <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
               These are the concrete, specific reasons our customers call us back — and refer their friends.
@@ -291,9 +291,9 @@ export default function AboutPage() {
                 - Years of experience per technician
             */}
             <p>
-              Every Car Key Service DXB technician undergoes training in automotive locksmithing
+              Every Lock Repair Satwa technician undergoes training in locksmithing
               before being deployed on customer calls. Our team covers a combined total of over
-              ten years of UAE-market automotive locksmith experience, including specific training
+              ten years of UAE-market locksmith experience, including specific training
               on the European, Japanese, American and Korean vehicle brands most common in Dubai.
             </p>
             <p>
@@ -313,7 +313,7 @@ export default function AboutPage() {
             {[
               { value: '10+', label: 'Years UAE Experience' },
               { value: '50+', label: 'Car Brands Covered' },
-              { value: '24/7', label: 'Service Availability' },
+              { value: '7AM–11:30PM', label: 'Daily Operating Hours' },
             ].map(({ value, label }) => (
               <div
                 key={label}
@@ -428,8 +428,8 @@ export default function AboutPage() {
 
       {/* ── CTA ───────────────────────────────────────────────────────────────── */}
       <CtaSection
-        heading="Ready to Work with Dubai's Best Car Key Service?"
-        subtext={`Call ${BUSINESS_NAME} now for an instant quote. No call-out fee, upfront pricing, certified technicians — 24/7 across all Dubai areas.`}
+        heading="Ready to Work with Dubai's Professional Locksmith?"
+        subtext={`Call ${BUSINESS_NAME} now for an instant quote. D90, Al Bada'a, Dubai. No call-out fee, upfront pricing, certified technicians — open daily 7 AM–11:30 PM across all Dubai areas.`}
       />
     </>
   )

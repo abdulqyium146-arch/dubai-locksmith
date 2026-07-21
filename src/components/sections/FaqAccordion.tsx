@@ -1,6 +1,6 @@
 'use client'
 // ─────────────────────────────────────────────────────────────────────────────
-// Car Key Service DXB — FAQ Accordion (Framer Motion animated)
+// Lock Repair Satwa — FAQ Accordion (Framer Motion animated)
 // ─────────────────────────────────────────────────────────────────────────────
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'

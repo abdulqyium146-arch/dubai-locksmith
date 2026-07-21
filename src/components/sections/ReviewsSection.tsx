@@ -1,5 +1,5 @@
 // ─────────────────────────────────────────────────────────────────────────────
-// Car Key Service DXB — Reviews Section
+// Lock Repair Satwa — Reviews Section
 //
 // TODO (business owner): Replace the placeholder reviews array below with
 // real, verbatim Google review content. Fabricating or paraphrasing reviews

@@ -1,5 +1,5 @@
 // ─────────────────────────────────────────────────────────────────────────────
-// Car Key Service DXB — Footer
+// Lock Repair Satwa — Footer
 // ─────────────────────────────────────────────────────────────────────────────
 import Link from 'next/link'
 import {
@@ -117,17 +117,17 @@ export function Footer() {
               </div>
               <div className="flex flex-col leading-tight">
                 <span className="font-heading text-base font-bold text-white">
-                  Car Key Service
+                  Lock Repair
                 </span>
                 <span className="font-heading text-xs font-semibold text-brand-gold">
-                  DXB
+                  Satwa
                 </span>
               </div>
             </Link>
 
             <p className="mt-4 text-sm leading-relaxed text-white/70">
-              {BUSINESS_TAGLINE}. Mobile automotive locksmith serving all Dubai
-              areas, 24 hours a day, 7 days a week.
+              {BUSINESS_TAGLINE}. Professional locksmith at D90, Al Bada&apos;a, Dubai,
+              serving all Dubai areas daily 7 AM–11:30 PM.
             </p>
 
             {/* NAP */}
@@ -180,7 +180,7 @@ export function Footer() {
 
               <div className="flex items-start gap-3 text-white/80">
                 <Clock className="mt-0.5 h-4 w-4 shrink-0 text-brand-gold" aria-hidden="true" />
-                <span>Open 24 Hours, 7 Days a Week</span>
+                <span>Open Daily 7:00 AM – 11:30 PM</span>
               </div>
             </address>
 
@@ -355,7 +355,7 @@ export function Footer() {
             © {currentYear} {BUSINESS_NAME}. All rights reserved.
           </p>
           <p className="text-center text-xs text-white/40 sm:text-right">
-            Professional Automotive Locksmith · Dubai, UAE ·{' '}
+            Professional Locksmith · D90, Al Bada&apos;a, Dubai, UAE ·{' '}
             <a href={PHONE_HREF} className="text-white/60 hover:text-brand-gold">
               {PHONE_DISPLAY}
             </a>

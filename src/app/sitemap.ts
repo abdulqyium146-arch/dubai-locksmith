@@ -1,5 +1,5 @@
 // ─────────────────────────────────────────────────────────────────────────────
-// Car Key Service DXB — Next.js Sitemap API Route
+// Lock Repair Satwa — Next.js Sitemap API Route
 // Generates /sitemap.xml automatically for all pages
 // ─────────────────────────────────────────────────────────────────────────────
 import type { MetadataRoute } from 'next'

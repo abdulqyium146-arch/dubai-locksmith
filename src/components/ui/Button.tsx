@@ -1,5 +1,5 @@
 // ─────────────────────────────────────────────────────────────────────────────
-// Car Key Service DXB — Button Primitive
+// Lock Repair Satwa — Button Primitive
 // ─────────────────────────────────────────────────────────────────────────────
 import * as React from 'react'
 import { Slot, Slottable } from '@radix-ui/react-slot'

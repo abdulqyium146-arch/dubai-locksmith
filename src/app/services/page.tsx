@@ -1,5 +1,5 @@
 // ─────────────────────────────────────────────────────────────────────────────
-// Car Key Service DXB — Services Index Page
+// Lock Repair Satwa — Services Index Page
 // ─────────────────────────────────────────────────────────────────────────────
 import type { Metadata } from 'next'
 import { Phone, MessageCircle, AlertTriangle } from 'lucide-react'
@@ -23,9 +23,9 @@ import {
 // ── Metadata ──────────────────────────────────────────────────────────────────
 
 export const metadata: Metadata = {
-  title: 'All Car Key & Locksmith Services in Dubai | Car Key Service DXB',
+  title: 'All Locksmith Services in Dubai | Lock Repair Satwa',
   description:
-    'Complete range of car key and automotive locksmith services in Dubai — key duplication, smart key programming, emergency unlock, transponder keys, car battery replacement and more. 24/7 mobile service.',
+    'Complete range of locksmith services in Dubai from Lock Repair Satwa — key duplication, door lock repair, smart key programming, emergency locksmith, transponder keys, car battery replacement and more. Open daily 7 AM–11:30 PM.',
   alternates: {
     canonical: `${SITE_URL}/services`,
   },
@@ -34,15 +34,15 @@ export const metadata: Metadata = {
     locale: 'en_AE',
     url: `${SITE_URL}/services`,
     siteName: BUSINESS_NAME,
-    title: 'All Car Key & Locksmith Services in Dubai | Car Key Service DXB',
+    title: 'All Locksmith Services in Dubai | Lock Repair Satwa',
     description:
-      'Complete range of car key and automotive locksmith services in Dubai — key duplication, smart key programming, emergency unlock, transponder keys, car battery replacement and more. 24/7 mobile service.',
+      'Complete range of locksmith services in Dubai from Lock Repair Satwa — key duplication, door lock repair, smart key programming, emergency locksmith, transponder keys and more. Open daily 7 AM–11:30 PM.',
     images: [{ url: DEFAULT_OG_IMAGE, width: 1200, height: 630, alt: `${BUSINESS_NAME} Services` }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'All Car Key & Locksmith Services in Dubai | Car Key Service DXB',
-    description: 'Complete car key and locksmith services in Dubai. Mobile, 24/7.',
+    title: 'All Locksmith Services in Dubai | Lock Repair Satwa',
+    description: 'Complete locksmith services in Dubai. Mobile, open daily 7 AM–11:30 PM.',
     images: [DEFAULT_OG_IMAGE],
   },
 }
@@ -82,12 +82,12 @@ export default function ServicesPage() {
             {/* Direct Answer Opener — 40–60 words, optimised for AI Overviews */}
             <div className="mt-6 rounded-xl border-l-4 border-brand-gold bg-white/10 p-5 backdrop-blur-sm">
               <p className="text-base leading-relaxed text-white/90">
-                Car Key Service DXB provides 12 automotive key and locksmith services across Dubai,
-                all delivered by mobile technicians who come directly to your location. Services
-                include car key duplication (AED&nbsp;150–350), smart key programming
-                (AED&nbsp;400–900), emergency car unlock (AED&nbsp;200–500), transponder key
-                programming, flip key replacement, car battery replacement and more — available
-                24/7 with no dealership visit required.
+                Lock Repair Satwa (D90, Al Bada&apos;a, Dubai) provides 12 locksmith and car key services
+                across Dubai, all delivered by mobile technicians who come directly to your location.
+                Services include car key duplication (AED&nbsp;150–350), smart key programming
+                (AED&nbsp;400–900), emergency car unlock (AED&nbsp;200–500), door lock repair,
+                transponder key programming, flip key replacement, car battery replacement and more —
+                open daily 7 AM–11:30 PM with no dealership visit required. Call +971 52 642 6161.
               </p>
             </div>
           </div>
@@ -142,14 +142,14 @@ export default function ServicesPage() {
                   id="emergency-callout-heading"
                   className="font-heading text-xl font-bold text-foreground"
                 >
-                  Emergency? We Respond 24/7
+                  Need a Locksmith? We Respond Daily 7 AM–11:30 PM
                 </h2>
                 <p className="mt-1 text-sm text-muted-foreground max-w-lg">
-                  The following services are available as 24/7 emergency call-outs:{' '}
+                  The following services are available as priority call-outs during our operating hours:{' '}
                   <strong className="text-foreground">
                     {emergencyServices.map((s) => s.title).join(', ')}
                   </strong>
-                  . We dispatch immediately — average arrival in 20–45 minutes.
+                  . We dispatch quickly — average arrival in 20–45 minutes.
                 </p>
               </div>
             </div>

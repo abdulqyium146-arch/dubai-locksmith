@@ -1,5 +1,5 @@
 // ─────────────────────────────────────────────────────────────────────────────
-// Car Key Service DXB — LocalBusiness + AutomotiveBusiness Schema
+// Lock Repair Satwa — LocalBusiness Schema
 // ─────────────────────────────────────────────────────────────────────────────
 import { JsonLd } from './JsonLd'
 import {
@@ -12,6 +12,7 @@ import {
   ADDRESS_CITY,
   COORDINATES,
   GOOGLE_RATING,
+  GOOGLE_REVIEW_COUNT,
   GOOGLE_MAPS_URL,
   SITE_URL,
   SCHEMA_ORG,
@@ -21,8 +22,8 @@ import {
 export function LocalBusinessSchema() {
   const schema = {
     '@context': 'https://schema.org',
-    '@type': ['Locksmith', 'AutomotiveBusiness', 'LocalBusiness'],
-    '@id': `${SITE_URL}/#organization`,
+    '@type': ['Locksmith', 'LocalBusiness'],
+    '@id': `${SITE_URL}/#lock-repair-satwa`,
     name: BUSINESS_NAME,
     description: BUSINESS_TAGLINE,
     url: SITE_URL,
@@ -52,8 +53,8 @@ export function LocalBusinessSchema() {
         'Saturday',
         'Sunday',
       ],
-      opens: '00:00',
-      closes: '23:59',
+      opens: '07:00',
+      closes: '23:30',
     },
     priceRange: SCHEMA_ORG.priceRange,
     currenciesAccepted: SCHEMA_ORG.currenciesAccepted,
@@ -67,8 +68,7 @@ export function LocalBusinessSchema() {
       ratingValue: GOOGLE_RATING,
       bestRating: 5,
       worstRating: 1,
-      // TODO: Update reviewCount with actual verified Google review count
-      reviewCount: 120,
+      reviewCount: GOOGLE_REVIEW_COUNT,
     },
     sameAs: [
       SOCIAL_LINKS.facebook,

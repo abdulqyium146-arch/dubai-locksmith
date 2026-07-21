@@ -1,5 +1,5 @@
 // ─────────────────────────────────────────────────────────────────────────────
-// Car Key Service DXB — Breadcrumb Navigation
+// Lock Repair Satwa — Breadcrumb Navigation
 // Renders visible breadcrumbs + inline BreadcrumbList JSON-LD
 // ─────────────────────────────────────────────────────────────────────────────
 import Link from 'next/link'

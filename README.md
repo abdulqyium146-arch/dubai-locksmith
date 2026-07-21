@@ -1,6 +1,6 @@
-# Car Key Service DXB — Next.js Website
+# Lock Repair Satwa — Next.js Website
 
-Dubai's Trusted 24/7 Automotive Locksmith — built with Next.js 14, TypeScript, Tailwind CSS.
+Dubai's Professional Locksmith at D90, Al Bada'a — built with Next.js 14, TypeScript, Tailwind CSS.
 
 ---
 
@@ -137,4 +137,4 @@ src/
 
 ---
 
-*Built for Car Key Service DXB — Al Bada'a, Dubai, UAE*
+*Built for Lock Repair Satwa — D90, Al Bada'a, Dubai, UAE | +971 52 642 6161 | info@locksmith-dubai.com*

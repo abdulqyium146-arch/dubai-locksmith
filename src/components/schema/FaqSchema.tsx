@@ -1,5 +1,5 @@
 // ─────────────────────────────────────────────────────────────────────────────
-// Car Key Service DXB — FAQPage Schema
+// Lock Repair Satwa — FAQPage Schema
 // ─────────────────────────────────────────────────────────────────────────────
 import { JsonLd } from './JsonLd'
 import type { Faq } from '@/types'

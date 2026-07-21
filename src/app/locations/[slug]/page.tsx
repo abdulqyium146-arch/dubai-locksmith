@@ -1,5 +1,5 @@
 // ─────────────────────────────────────────────────────────────────────────────
-// Car Key Service DXB — Dynamic Location Page
+// Lock Repair Satwa — Dynamic Location Page
 // /locations/[slug] — unique page for each of 15 Dubai service areas
 // All content pulled from data module — zero hardcoded area-specific content
 // ─────────────────────────────────────────────────────────────────────────────
@@ -129,7 +129,7 @@ function LocationPageSchema({
   // LocalBusiness schema scoped to this location
   const localBusinessSchema = {
     '@context': 'https://schema.org',
-    '@type': ['Locksmith', 'AutomotiveBusiness', 'LocalBusiness'],
+    '@type': ['Locksmith', 'LocalBusiness'],
     '@id': `${pageUrl}#localbusiness`,
     name: BUSINESS_NAME,
     url: pageUrl,
@@ -137,8 +137,8 @@ function LocationPageSchema({
     email: EMAIL,
     address: {
       '@type': 'PostalAddress',
-      streetAddress: 'Al Bada\'a',
-      addressLocality: 'Dubai',
+      streetAddress: 'D90',
+      addressLocality: 'Al Bada\'a',
       addressRegion: 'Dubai',
       addressCountry: 'AE',
     },
@@ -150,8 +150,8 @@ function LocationPageSchema({
     openingHoursSpecification: {
       '@type': 'OpeningHoursSpecification',
       dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
-      opens: '00:00',
-      closes: '23:59',
+      opens: '07:00',
+      closes: '23:30',
     },
     priceRange: SCHEMA_ORG.priceRange,
     currenciesAccepted: SCHEMA_ORG.currenciesAccepted,
@@ -161,7 +161,7 @@ function LocationPageSchema({
       ratingValue: GOOGLE_RATING,
       bestRating: 5,
       worstRating: 1,
-      reviewCount: 120,
+      reviewCount: 20,
     },
     areaServed: {
       '@type': 'Place',
@@ -197,7 +197,7 @@ function LocationPageSchema({
     '@context': 'https://schema.org',
     '@type': 'Service',
     name: `Car Key & Locksmith Service in ${locationName}`,
-    description: `Mobile automotive locksmith and car key services in ${locationName}, Dubai. Key duplication, emergency unlock, transponder programming, smart key replacement, car battery replacement — all available 24/7 at your location.`,
+    description: `Professional locksmith and car key services in ${locationName}, Dubai. Key duplication, lock repair, emergency unlock, transponder programming, smart key replacement, car battery replacement — available daily 7 AM–11:30 PM at your location.`,
     provider: {
       '@type': 'LocalBusiness',
       name: BUSINESS_NAME,
@@ -218,8 +218,8 @@ function LocationPageSchema({
         hoursAvailable: {
           '@type': 'OpeningHoursSpecification',
           dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
-          opens: '00:00',
-          closes: '23:59',
+          opens: '07:00',
+          closes: '23:30',
         },
       },
     },
@@ -341,7 +341,7 @@ export default async function LocationPage({
                 </div>
                 <div className="inline-flex items-center gap-1.5 rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-sm font-semibold text-white/90">
                   <Zap className="h-4 w-4 text-brand-gold" aria-hidden="true" />
-                  24/7 Available
+                  Open Daily 7AM–11:30PM
                 </div>
                 {responseTimeBadge.color === 'gold' && (
                   <Badge variant="gold" size="sm" dot>
@@ -370,7 +370,7 @@ export default async function LocationPage({
                 >
                   <a
                     href={PHONE_HREF}
-                    aria-label={`Call Car Key Service DXB for ${location.name}: ${PHONE_DISPLAY}`}
+                    aria-label={`Call Lock Repair Satwa for ${location.name}: ${PHONE_DISPLAY}`}
                   >
                     <Phone className="h-5 w-5" aria-hidden="true" />
                     Call Now — {PHONE_DISPLAY}
@@ -422,7 +422,7 @@ export default async function LocationPage({
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle2 className="h-4 w-4 text-brand-gold shrink-0 mt-0.5" aria-hidden="true" />
-                  <span className="text-sm text-white/80">Available 24 hours, 7 days including public holidays</span>
+                  <span className="text-sm text-white/80">Open daily 7 AM–11:30 PM including public holidays</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle2 className="h-4 w-4 text-brand-gold shrink-0 mt-0.5" aria-hidden="true" />
@@ -788,7 +788,7 @@ export default async function LocationPage({
                       Coordinates: {location.coordinates.lat}, {location.coordinates.lng}
                     </p>
                     <p className="text-xs text-muted-foreground">
-                      Our base: Al Bada&apos;a, Dubai (7C Street 56)
+                      Our base: D90, Al Bada&apos;a, Dubai
                     </p>
                   </div>
                 </div>
@@ -912,8 +912,8 @@ export default async function LocationPage({
       {/* ── 10. Final CTA ─────────────────────────────────────────────────── */}
       {/* CTA #3 — contained within CtaSection */}
       <CtaSection
-        heading={`Need Car Key Service in ${location.name}? Call Now.`}
-        subtext={`${BUSINESS_NAME} reaches ${location.name} in ${location.responseTime}. Upfront pricing, certified technician, all key types covered. Available 24/7 including UAE public holidays.`}
+        heading={`Need a Locksmith in ${location.name}? Call Now.`}
+        subtext={`${BUSINESS_NAME} reaches ${location.name} in ${location.responseTime}. Upfront pricing, certified technician, all key types and lock types covered. Open daily 7 AM–11:30 PM including UAE public holidays.`}
       />
     </>
   )

@@ -1,5 +1,5 @@
 // ─────────────────────────────────────────────────────────────────────────────
-// Car Key Service DXB — Shared Utility Functions
+// Lock Repair Satwa — Shared Utility Functions
 // ─────────────────────────────────────────────────────────────────────────────
 import { clsx, type ClassValue } from 'clsx'
 import { twMerge } from 'tailwind-merge'

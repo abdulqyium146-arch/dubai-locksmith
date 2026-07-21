@@ -1,6 +1,6 @@
 'use client'
 // ─────────────────────────────────────────────────────────────────────────────
-// Car Key Service DXB — Global Error Boundary
+// Lock Repair Satwa — Global Error Boundary
 // ─────────────────────────────────────────────────────────────────────────────
 import { useEffect } from 'react'
 import { RefreshCw, Phone } from 'lucide-react'
@@ -38,7 +38,7 @@ export default function GlobalError({ error, reset }: ErrorProps) {
         {/* Sub-text */}
         <p className="mt-4 text-lg text-muted-foreground">
           We encountered an unexpected error. Please try refreshing the page. If
-          the issue persists, call us directly — we&apos;re available 24/7.
+          the issue persists, call us directly — open daily 7 AM–11:30 PM.
         </p>
 
         {/* Error digest for support reference */}

@@ -1,5 +1,5 @@
 // ─────────────────────────────────────────────────────────────────────────────
-// Car Key Service DXB — Generic JSON-LD Component
+// Lock Repair Satwa — Generic JSON-LD Component
 // ─────────────────────────────────────────────────────────────────────────────
 
 interface JsonLdProps {

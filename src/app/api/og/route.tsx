@@ -1,5 +1,5 @@
 // ─────────────────────────────────────────────────────────────────────────────
-// Car Key Service DXB — Edge Runtime Open Graph Image Generator
+// Lock Repair Satwa — Edge Runtime Open Graph Image Generator
 // Route: GET /api/og?title=...&description=...
 // ─────────────────────────────────────────────────────────────────────────────
 import { ImageResponse } from 'next/og'
@@ -18,12 +18,12 @@ const GOLD_LIGHT = '#E8C96A'
 const WHITE = '#FFFFFF'
 const MUTED = '#94A3B8'
 
-const DEFAULT_TITLE = 'Car Key Service DXB | 24/7 Dubai Locksmith'
+const DEFAULT_TITLE = 'Lock Repair Satwa | Locksmith in Dubai — Al Bada\'a'
 const DEFAULT_DESCRIPTION =
-  'Professional automotive locksmith services across Dubai — car key duplication, smart key programming, emergency unlock and more.'
-const PHONE = '+971 52 817 6909'
+  'Professional locksmith services across Dubai — car key duplication, door lock repair, smart key programming, emergency locksmith and more. Open daily 7 AM–11:30 PM.'
+const PHONE = '+971 52 642 6161'
 const RATING = '4.7 ★'
-const TAGLINE = "Dubai's Trusted 24/7 Automotive Locksmith"
+const TAGLINE = "Dubai's Professional Locksmith — Satwa & Al Bada'a"
 
 export async function GET(request: NextRequest): Promise<ImageResponse> {
   const { searchParams } = new URL(request.url)
@@ -129,7 +129,7 @@ export async function GET(request: NextRequest): Promise<ImageResponse> {
                   letterSpacing: '-0.01em',
                 }}
               >
-                Car Key Service DXB
+                Lock Repair Satwa
               </span>
             </div>
 
@@ -225,7 +225,7 @@ export async function GET(request: NextRequest): Promise<ImageResponse> {
                   color: NAVY,
                 }}
               >
-                24/7 Service
+                Daily 7AM–11:30PM
               </span>
             </div>
 

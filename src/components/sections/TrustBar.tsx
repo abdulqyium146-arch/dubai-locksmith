@@ -1,5 +1,5 @@
 // ─────────────────────────────────────────────────────────────────────────────
-// Car Key Service DXB — Trust Bar
+// Lock Repair Satwa — Trust Bar
 // ─────────────────────────────────────────────────────────────────────────────
 import { Clock, Star, Zap, MapPin, DollarSign } from 'lucide-react'
 import { cn } from '@/lib/utils'
@@ -8,8 +8,8 @@ import { GOOGLE_RATING } from '@/lib/constants'
 const TRUST_ITEMS = [
   {
     icon: Clock,
-    label: '24/7 Emergency',
-    sub: 'Always available',
+    label: 'Daily 7AM–11:30PM',
+    sub: '7 days a week',
   },
   {
     icon: Star,

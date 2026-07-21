@@ -1,6 +1,6 @@
 'use client'
 // ─────────────────────────────────────────────────────────────────────────────
-// Car Key Service DXB — Sticky Header
+// Lock Repair Satwa — Sticky Header
 // ─────────────────────────────────────────────────────────────────────────────
 import { useState, useEffect, useRef } from 'react'
 import Link from 'next/link'
@@ -209,10 +209,10 @@ export function Header() {
                 scrolled ? 'text-foreground' : 'text-white',
               )}
             >
-              Car Key Service
+              Lock Repair
             </span>
             <span className="font-heading text-xs font-semibold text-brand-gold">
-              DXB
+              Satwa
             </span>
           </div>
         </Link>
@@ -265,7 +265,7 @@ export function Header() {
 
         {/* ── Right-side actions ────────────────────────────────────────────── */}
         <div className="flex items-center gap-3">
-          {/* 24/7 indicator — always visible */}
+          {/* Hours indicator — always visible */}
           <div
             className={cn(
               'hidden items-center gap-1.5 rounded-full border px-3 py-1 text-xs font-semibold sm:flex',
@@ -273,10 +273,10 @@ export function Header() {
                 ? 'border-brand-gold/30 bg-brand-gold/10 text-brand-gold'
                 : 'border-brand-gold/40 bg-brand-gold/15 text-brand-gold',
             )}
-            aria-label="Open 24 hours, 7 days a week"
+            aria-label="Open daily 7 AM to 11:30 PM"
           >
             <Clock className="h-3 w-3" aria-hidden="true" />
-            Open 24/7
+            Open Daily 7AM–11:30PM
           </div>
 
           {/* Click-to-call — always visible on desktop */}
@@ -339,7 +339,7 @@ export function Header() {
               </a>
               <div className="flex items-center justify-center gap-1.5 text-sm text-muted-foreground">
                 <Clock className="h-3.5 w-3.5 text-brand-gold" />
-                Available 24/7 — Emergency Service
+                Open Daily 7 AM – 11:30 PM
               </div>
             </div>
 

@@ -1,5 +1,5 @@
 // ─────────────────────────────────────────────────────────────────────────────
-// Car Key Service DXB — Shared Metadata Builder Utility
+// Lock Repair Satwa — Shared Metadata Builder Utility
 // Provides typed Next.js Metadata objects for service, location and generic pages.
 // ─────────────────────────────────────────────────────────────────────────────
 import type { Metadata } from 'next'

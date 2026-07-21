@@ -1,5 +1,5 @@
 // ─────────────────────────────────────────────────────────────────────────────
-// Car Key Service DXB — Full-width CTA Section
+// Lock Repair Satwa — Full-width CTA Section
 // ─────────────────────────────────────────────────────────────────────────────
 import { Phone, MessageCircle } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
@@ -22,8 +22,8 @@ interface CtaSectionProps {
 }
 
 export function CtaSection({
-  heading = 'Need a Car Key Specialist in Dubai?',
-  subtext = `${BUSINESS_NAME} is available 24/7 across all Dubai areas. Call or WhatsApp now for an instant quote — no call-out fee, upfront pricing.`,
+  heading = 'Need a Locksmith in Dubai?',
+  subtext = `${BUSINESS_NAME} is available daily 7 AM–11:30 PM across all Dubai areas. Call or WhatsApp now for an instant quote — no call-out fee, upfront pricing.`,
   dark = true,
   className,
 }: CtaSectionProps) {
@@ -58,7 +58,7 @@ export function CtaSection({
             className="h-1.5 w-1.5 animate-pulse rounded-full bg-brand-gold"
             aria-hidden="true"
           />
-          24/7 Emergency Available
+          Open Daily 7 AM – 11:30 PM
         </div>
 
         {/* Heading */}
@@ -90,7 +90,7 @@ export function CtaSection({
             className="btn-pulse w-full sm:w-auto"
             asChild
           >
-            <a href={PHONE_HREF} aria-label={`Call Car Key Service DXB: ${PHONE_DISPLAY}`}>
+            <a href={PHONE_HREF} aria-label={`Call Lock Repair Satwa: ${PHONE_DISPLAY}`}>
               <Phone className="h-5 w-5" aria-hidden="true" />
               Call Now — {PHONE_DISPLAY}
             </a>

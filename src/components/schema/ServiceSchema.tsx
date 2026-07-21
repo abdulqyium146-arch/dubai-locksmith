@@ -1,5 +1,5 @@
 // ─────────────────────────────────────────────────────────────────────────────
-// Car Key Service DXB — Service Schema
+// Lock Repair Satwa — Service Schema
 // ─────────────────────────────────────────────────────────────────────────────
 import { JsonLd } from './JsonLd'
 import type { Service } from '@/types'
@@ -21,7 +21,7 @@ export function ServiceSchema({ service }: ServiceSchemaProps) {
     url: serviceUrl,
     provider: {
       '@type': 'Locksmith',
-      '@id': `${SITE_URL}/#organization`,
+      '@id': `${SITE_URL}/#lock-repair-satwa`,
       name: BUSINESS_NAME,
       telephone: PHONE_RAW,
     },
@@ -44,7 +44,7 @@ export function ServiceSchema({ service }: ServiceSchemaProps) {
     ...(service.emergency && {
       serviceOutput: {
         '@type': 'Thing',
-        description: '24/7 emergency service available',
+        description: 'Priority locksmith service available daily 7 AM–11:30 PM',
       },
     }),
   }

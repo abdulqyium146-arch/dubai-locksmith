@@ -1,5 +1,5 @@
 // ─────────────────────────────────────────────────────────────────────────────
-// Car Key Service DXB — Shared TypeScript Types
+// Lock Repair Satwa — Shared TypeScript Types
 // ─────────────────────────────────────────────────────────────────────────────
 
 // ── Primitives ────────────────────────────────────────────────────────────────
@@ -64,7 +64,7 @@ export interface Service {
   supportedBrands: string[]
   /** Emoji or Lucide icon name string */
   icon: string
-  /** True if this service is available as a 24/7 emergency call-out */
+  /** True if this service is available as a priority call-out during operating hours */
   emergency: boolean
 }
 

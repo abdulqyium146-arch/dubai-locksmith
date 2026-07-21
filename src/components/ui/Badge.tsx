@@ -1,5 +1,5 @@
 // ─────────────────────────────────────────────────────────────────────────────
-// Car Key Service DXB — Badge Primitive
+// Lock Repair Satwa — Badge Primitive
 // ─────────────────────────────────────────────────────────────────────────────
 import * as React from 'react'
 import { cva, type VariantProps } from 'class-variance-authority'

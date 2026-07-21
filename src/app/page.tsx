@@ -1,5 +1,5 @@
 // ─────────────────────────────────────────────────────────────────────────────
-// Car Key Service DXB — Homepage
+// Lock Repair Satwa — Homepage
 // ─────────────────────────────────────────────────────────────────────────────
 import type { Metadata } from 'next'
 import Link from 'next/link'
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
         url: DEFAULT_OG_IMAGE,
         width: 1200,
         height: 630,
-        alt: `${BUSINESS_NAME} — Dubai's Trusted 24/7 Automotive Locksmith`,
+        alt: `${BUSINESS_NAME} — Dubai's Professional Locksmith in Al Bada'a`,
       },
     ],
   },
@@ -89,7 +89,7 @@ const HOW_IT_WORKS = [
     icon: PhoneCall,
     title: 'Call or WhatsApp Us',
     description:
-      'Call +971 52 817 6909 or send a WhatsApp message. Tell us your location, car make/model and the service you need. We confirm availability and give you an upfront price in under 2 minutes.',
+      'Call +971 52 642 6161 or send a WhatsApp message. Tell us your location, key type or lock issue and the service you need. We confirm availability and give you an upfront price in under 2 minutes.',
   },
   {
     step: 2,
@@ -125,8 +125,8 @@ const DIFFERENTIATORS = [
     description: 'Certified automotive locksmiths with over a decade of hands-on UAE market experience.',
   },
   {
-    title: '24/7 Emergency Service',
-    description: 'We answer the phone at 3 AM on public holidays — lockouts never keep business hours.',
+    title: 'Daily Service 7 AM – 11:30 PM, 7 Days a Week',
+    description: 'Open every day from 7:00 AM to 11:30 PM including weekends and public holidays.',
   },
   {
     title: '100% Mobile — We Come to You',
@@ -164,12 +164,12 @@ export default function HomePage() {
       <HeroSection
         title={
           <>
-            Dubai&apos;s 24/7 Car Key &amp;{' '}
-            <span className="text-gold-gradient">Locksmith</span> Experts
+            Dubai&apos;s Professional Locksmith —{' '}
+            <span className="text-gold-gradient">Lock Repair Satwa</span>
           </>
         }
-        subtitle="Mobile automotive locksmith service across all Dubai areas. Car key duplication, smart key programming, emergency car unlock and more — certified technician at your location in 20–45 minutes."
-        badge="24/7 Emergency Service — All Dubai Areas"
+        subtitle="Lock Repair Satwa, located at D90, Al Bada'a, Dubai, is a professional locksmith serving all Dubai areas. Car key duplication, door lock repair, smart key programming, emergency locksmith and more — certified technician at your location in 20–45 minutes."
+        badge="Serving All Dubai Areas | Rated 4.7★ on Google"
         ctaLabel="View All 12 Services"
         ctaHref="/services"
         showTrustBar={false}
@@ -283,7 +283,7 @@ export default function HomePage() {
           {/* Emergency CTA below steps */}
           <div className="mt-12 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
             <Button size="lg" variant="primary" className="btn-pulse w-full sm:w-auto" asChild>
-              <a href={PHONE_HREF} aria-label={`Call Car Key Service DXB: ${PHONE_DISPLAY}`}>
+              <a href={PHONE_HREF} aria-label={`Call Lock Repair Satwa: ${PHONE_DISPLAY}`}>
                 <Phone className="h-5 w-5" aria-hidden="true" />
                 Call Now — {PHONE_DISPLAY}
               </a>
@@ -293,7 +293,7 @@ export default function HomePage() {
                 href={WHATSAPP_HREF}
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="WhatsApp Car Key Service DXB"
+                aria-label="WhatsApp Lock Repair Satwa"
               >
                 <MessageCircle className="h-5 w-5" aria-hidden="true" />
                 WhatsApp Us
@@ -354,24 +354,24 @@ export default function HomePage() {
             {/* Left: copy */}
             <div>
               <span className="inline-flex items-center gap-1.5 rounded-full border border-brand-gold/30 bg-brand-gold/15 px-3 py-1 text-xs font-semibold text-brand-gold mb-5">
-                About Car Key Service DXB
+                About Lock Repair Satwa
               </span>
               <h2
                 id="about-heading"
                 className="font-heading text-3xl font-bold tracking-tight text-white sm:text-4xl"
               >
-                Dubai&apos;s Most Trusted Mobile Car Key Specialists
+                Dubai&apos;s Professional Locksmith — Satwa &amp; Al Bada&apos;a
               </h2>
               <p className="mt-5 text-base leading-relaxed text-white/75">
-                Car Key Service DXB is a specialist mobile automotive locksmith based in Al Bada&apos;a,
-                Dubai. We founded this business with a single mission: to provide the people and
-                businesses of Dubai with a fast, reliable and fairly priced car key service —
-                without the days of waiting and premium markup that franchised dealerships charge.
+                Lock Repair Satwa is a professional locksmith based at D90, Al Bada&apos;a, Dubai.
+                We serve all major Dubai areas with expert lock repair, car key duplication,
+                and security solutions — without the days of waiting and premium markup that
+                franchised dealerships charge. Rated 4.7&#9733; on Google by our customers.
               </p>
               <p className="mt-4 text-base leading-relaxed text-white/75">
                 Our certified technicians carry professional key-cutting machines, OBD programming
                 equipment and a comprehensive stock of key blanks for 50+ vehicle brands. We cover
-                every type of car key service — from a basic spare key to full smart key programming
+                every type of locksmith service — from a basic spare key to full smart key programming
                 for the latest European luxury vehicles — all performed at your location.
               </p>
 
@@ -450,7 +450,7 @@ export default function HomePage() {
               Customer reviews coming soon — rated{' '}
               <strong className="text-brand-gold">4.7★ on Google Maps</strong>.{' '}
               <a
-                href="https://maps.google.com/?q=Car+Key+Service+DXB+Al+Bada%27a+Dubai"
+                href="https://maps.google.com/?q=Lock+Repair+Satwa+Al+Bada%27a+Dubai"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="underline hover:text-brand-gold transition-colors"
@@ -464,8 +464,8 @@ export default function HomePage() {
 
       {/* ── 7. Final CTA ────────────────────────────────────────────────────── */}
       <CtaSection
-        heading="Locked Out or Need a Spare Key? Call Now."
-        subtext={`${BUSINESS_NAME} is Dubai's 24/7 mobile car key specialist. We come to you — at home, the office, the mall or the roadside — anywhere in Dubai, any time.`}
+        heading="Need a Locksmith or Spare Key? Call Now."
+        subtext={`${BUSINESS_NAME} (D90, Al Bada'a, Dubai) is a professional locksmith serving all Dubai areas, open daily 7 AM–11:30 PM. We come to you — at home, the office, the mall or the roadside.`}
       />
     </>
   )

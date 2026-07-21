@@ -1,5 +1,5 @@
 // ─────────────────────────────────────────────────────────────────────────────
-// Car Key Service DXB — Next.js Robots API Route
+// Lock Repair Satwa — Next.js Robots API Route
 // Generates /robots.txt automatically
 // ─────────────────────────────────────────────────────────────────────────────
 import type { MetadataRoute } from 'next'

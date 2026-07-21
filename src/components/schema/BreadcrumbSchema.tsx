@@ -1,5 +1,5 @@
 // ─────────────────────────────────────────────────────────────────────────────
-// Car Key Service DXB — BreadcrumbList Schema
+// Lock Repair Satwa — BreadcrumbList Schema
 // ─────────────────────────────────────────────────────────────────────────────
 import { JsonLd } from './JsonLd'
 import type { BreadcrumbItem } from '@/types'

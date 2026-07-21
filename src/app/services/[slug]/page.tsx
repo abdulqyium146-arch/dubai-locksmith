@@ -1,5 +1,5 @@
 // ─────────────────────────────────────────────────────────────────────────────
-// Car Key Service DXB — Dynamic Service Page Template
+// Lock Repair Satwa — Dynamic Service Page Template
 // Works for all 12 services purely from data module — no hardcoded content
 // ─────────────────────────────────────────────────────────────────────────────
 import type { Metadata } from 'next'
@@ -163,7 +163,7 @@ export default async function ServicePage({
               {service.emergency && (
                 <div className="mb-4 inline-flex items-center gap-1.5 rounded-full border border-red-400/40 bg-red-500/20 px-3 py-1 text-xs font-bold text-red-300 uppercase tracking-wide">
                   <AlertTriangle className="h-3.5 w-3.5" aria-hidden="true" />
-                  24/7 Emergency Service Available
+                  Priority Service — Daily 7 AM–11:30 PM
                 </div>
               )}
 
@@ -492,7 +492,7 @@ export default async function ServicePage({
               Rated{' '}
               <strong className="text-brand-gold">4.7★ on Google Maps</strong> by verified customers.{' '}
               <a
-                href="https://maps.google.com/?q=Car+Key+Service+DXB+Al+Bada%27a+Dubai"
+                href="https://maps.google.com/?q=Lock+Repair+Satwa+Al+Bada%27a+Dubai"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="underline hover:text-brand-gold transition-colors"
@@ -507,7 +507,7 @@ export default async function ServicePage({
       {/* ── 9. Final CTA ─────────────────────────────────────────────────────── */}
       <CtaSection
         heading={`Need ${service.title} in Dubai? Call Now.`}
-        subtext={`${BUSINESS_NAME} comes to you anywhere in Dubai. Upfront pricing, certified technicians, average arrival in 20–45 minutes. Available 24/7 including weekends and public holidays.`}
+        subtext={`${BUSINESS_NAME} (D90, Al Bada'a, Dubai) comes to you anywhere in Dubai. Upfront pricing, certified technicians, average arrival in 20–45 minutes. Open daily 7 AM–11:30 PM including weekends and public holidays.`}
       />
 
       {/* CTA #3 — embedded within the above CtaSection which contains Call Now button */}

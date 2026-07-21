@@ -1,5 +1,5 @@
 // ─────────────────────────────────────────────────────────────────────────────
-// Car Key Service DXB — Service Card
+// Lock Repair Satwa — Service Card
 // ─────────────────────────────────────────────────────────────────────────────
 import Link from 'next/link'
 import { ArrowRight, Clock } from 'lucide-react'

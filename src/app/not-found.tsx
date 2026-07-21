@@ -1,5 +1,5 @@
 // ─────────────────────────────────────────────────────────────────────────────
-// Car Key Service DXB — 404 Not Found Page
+// Lock Repair Satwa — 404 Not Found Page
 // ─────────────────────────────────────────────────────────────────────────────
 import type { Metadata } from 'next'
 import Link from 'next/link'
@@ -8,7 +8,7 @@ import { PHONE_DISPLAY, PHONE_HREF, WHATSAPP_HREF } from '@/lib/constants'
 
 export const metadata: Metadata = {
   title: '404 — Page Not Found',
-  description: 'The page you are looking for does not exist. Return to Car Key Service DXB home page.',
+  description: 'The page you are looking for does not exist. Return to Lock Repair Satwa home page.',
   robots: { index: false, follow: false },
 }
 

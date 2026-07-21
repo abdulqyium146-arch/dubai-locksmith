@@ -1,5 +1,5 @@
 // ─────────────────────────────────────────────────────────────────────────────
-// Car Key Service DXB — Pricing Table
+// Lock Repair Satwa — Pricing Table
 // ─────────────────────────────────────────────────────────────────────────────
 import { CheckCircle2, Info } from 'lucide-react'
 import { cn } from '@/lib/utils'

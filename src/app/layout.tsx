@@ -1,5 +1,5 @@
 // ─────────────────────────────────────────────────────────────────────────────
-// Car Key Service DXB — Root Layout
+// Lock Repair Satwa — Root Layout
 // ─────────────────────────────────────────────────────────────────────────────
 import type { ReactNode } from 'react'
 import type { Metadata, Viewport } from 'next'
@@ -45,16 +45,16 @@ export const metadata: Metadata = {
   },
   description: DEFAULT_META_DESCRIPTION,
   keywords: [
+    'locksmith Dubai',
+    'lock repair Satwa',
+    'lock repair Dubai',
     'car key Dubai',
-    'car key duplication Dubai',
-    'car key replacement Dubai',
-    'emergency car unlock Dubai',
-    'transponder key Dubai',
-    'smart key programming Dubai',
-    'automotive locksmith Dubai',
-    'mobile locksmith Dubai',
-    '24/7 locksmith Dubai',
-    'car key service',
+    'door lock repair Dubai',
+    'emergency locksmith Dubai',
+    "locksmith Al Bada'a",
+    'locksmith Satwa',
+    'key duplication Dubai',
+    'lock change Dubai',
   ],
   authors: [{ name: BUSINESS_NAME, url: SITE_URL }],
   creator: BUSINESS_NAME,
@@ -76,7 +76,7 @@ export const metadata: Metadata = {
         url: DEFAULT_OG_IMAGE,
         width: 1200,
         height: 630,
-        alt: `${BUSINESS_NAME} — Dubai's Trusted 24/7 Automotive Locksmith`,
+        alt: `${BUSINESS_NAME} — Dubai's Professional Locksmith in Al Bada'a`,
       },
     ],
   },

@@ -1,5 +1,5 @@
 // ─────────────────────────────────────────────────────────────────────────────
-// Car Key Service DXB — Hero Section
+// Lock Repair Satwa — Hero Section
 // ─────────────────────────────────────────────────────────────────────────────
 import type { ReactNode } from 'react'
 import Link from 'next/link'
@@ -35,18 +35,18 @@ export function HeroSection({
   ctaLabel,
   ctaHref,
   showTrustBar = true,
-  badge = '24/7 Emergency Service — Dubai',
+  badge = 'Open Daily 7AM–11:30PM — All Dubai Areas',
 }: HeroSectionProps) {
   const headlineDefault = (
     <>
-      Dubai&apos;s Trusted{' '}
-      <span className="text-gold-gradient">Car Key</span>{' '}
-      Specialists
+      Dubai&apos;s Professional{' '}
+      <span className="text-gold-gradient">Locksmith</span>{' '}
+      — Lock Repair Satwa
     </>
   )
 
   const subtitleDefault =
-    'Mobile automotive locksmith available around the clock. Car key duplication, smart key programming, emergency unlock and more — anywhere in Dubai in 20–45 minutes.'
+    "Lock Repair Satwa, located at D90, Al Bada'a, Dubai, is a professional locksmith serving all Dubai areas. Car key duplication, door lock repair, smart key programming and more — anywhere in Dubai in 20–45 minutes."
 
   return (
     <>

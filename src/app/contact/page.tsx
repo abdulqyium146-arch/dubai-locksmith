@@ -1,5 +1,5 @@
 // ─────────────────────────────────────────────────────────────────────────────
-// Car Key Service DXB — Contact Page (Conversion-Focused)
+// Lock Repair Satwa — Contact Page (Conversion-Focused)
 // ─────────────────────────────────────────────────────────────────────────────
 import type { Metadata } from 'next'
 import {
@@ -38,8 +38,8 @@ import {
 // ── Metadata ──────────────────────────────────────────────────────────────────
 
 export const metadata: Metadata = {
-  title: `Contact Car Key Service DXB | Call ${PHONE_DISPLAY}`,
-  description: `Contact ${BUSINESS_NAME} for 24/7 car key and locksmith services in Dubai. Call ${PHONE_DISPLAY} or WhatsApp for an instant quote. Based in Al Bada'a, serving all Dubai areas.`,
+  title: `Contact Lock Repair Satwa | Call ${PHONE_DISPLAY}`,
+  description: `Contact ${BUSINESS_NAME} for professional locksmith services in Dubai. Call ${PHONE_DISPLAY} or WhatsApp for an instant quote. Based at D90, Al Bada'a, open daily 7 AM–11:30 PM.`,
   alternates: {
     canonical: `${SITE_URL}/contact`,
   },
@@ -48,14 +48,14 @@ export const metadata: Metadata = {
     locale: 'en_AE',
     url: `${SITE_URL}/contact`,
     siteName: BUSINESS_NAME,
-    title: `Contact ${BUSINESS_NAME} | 24/7 Dubai Car Key Service`,
-    description: `Call or WhatsApp ${PHONE_DISPLAY} for immediate car key and locksmith service anywhere in Dubai. Available 24/7.`,
+    title: `Contact ${BUSINESS_NAME} | Locksmith in Dubai — Al Bada'a`,
+    description: `Call or WhatsApp ${PHONE_DISPLAY} for professional locksmith service anywhere in Dubai. Open daily 7 AM–11:30 PM.`,
     images: [{ url: DEFAULT_OG_IMAGE, width: 1200, height: 630, alt: `Contact ${BUSINESS_NAME}` }],
   },
   twitter: {
     card: 'summary_large_image',
     title: `Contact ${BUSINESS_NAME}`,
-    description: `24/7 car key service in Dubai. Call ${PHONE_DISPLAY}.`,
+    description: `Professional locksmith in Dubai. Call ${PHONE_DISPLAY}. Open daily 7 AM–11:30 PM.`,
     images: [DEFAULT_OG_IMAGE],
   },
 }
@@ -68,10 +68,10 @@ const contactPageSchema = {
   '@id': `${SITE_URL}/contact#contact-page`,
   name: `Contact ${BUSINESS_NAME}`,
   url: `${SITE_URL}/contact`,
-  description: `Contact page for ${BUSINESS_NAME} — Dubai's 24/7 mobile automotive locksmith.`,
+  description: `Contact page for ${BUSINESS_NAME} — Dubai's professional locksmith at D90, Al Bada'a. Open daily 7 AM–11:30 PM.`,
   mainEntity: {
     '@type': 'Locksmith',
-    '@id': `${SITE_URL}/#organization`,
+    '@id': `${SITE_URL}/#lock-repair-satwa`,
     name: BUSINESS_NAME,
     telephone: PHONE_RAW,
     email: EMAIL,
@@ -90,8 +90,8 @@ const contactPageSchema = {
     openingHoursSpecification: {
       '@type': 'OpeningHoursSpecification',
       dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
-      opens: '00:00',
-      closes: '23:59',
+      opens: '07:00',
+      closes: '23:30',
     },
     hasMap: GOOGLE_MAPS_URL,
   },
@@ -107,13 +107,13 @@ const breadcrumbs = [
 // ── Business hours display ────────────────────────────────────────────────────
 
 const BUSINESS_HOURS = [
-  { day: 'Monday', hours: '24 Hours' },
-  { day: 'Tuesday', hours: '24 Hours' },
-  { day: 'Wednesday', hours: '24 Hours' },
-  { day: 'Thursday', hours: '24 Hours' },
-  { day: 'Friday', hours: '24 Hours' },
-  { day: 'Saturday', hours: '24 Hours' },
-  { day: 'Sunday', hours: '24 Hours' },
+  { day: 'Monday', hours: '7:00 AM – 11:30 PM' },
+  { day: 'Tuesday', hours: '7:00 AM – 11:30 PM' },
+  { day: 'Wednesday', hours: '7:00 AM – 11:30 PM' },
+  { day: 'Thursday', hours: '7:00 AM – 11:30 PM' },
+  { day: 'Friday', hours: '7:00 AM – 11:30 PM' },
+  { day: 'Saturday', hours: '7:00 AM – 11:30 PM' },
+  { day: 'Sunday', hours: '7:00 AM – 11:30 PM' },
 ]
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -133,11 +133,11 @@ export default function ContactPage() {
           <div className="mt-6 max-w-2xl">
             <h1 className="font-heading text-4xl font-extrabold leading-tight tracking-tight text-white sm:text-5xl">
               Contact{' '}
-              <span className="text-gold-gradient">Car Key Service DXB</span>
+              <span className="text-gold-gradient">Lock Repair Satwa</span>
             </h1>
             <p className="mt-4 text-lg leading-relaxed text-white/75">
-              Available 24 hours a day, 7 days a week. For emergencies, call or WhatsApp
-              now — we dispatch immediately.
+              Open daily 7:00 AM – 11:30 PM, 7 days a week. Call or WhatsApp now
+              for an instant quote — we dispatch quickly across all Dubai areas.
             </p>
           </div>
         </div>
@@ -169,7 +169,7 @@ export default function ContactPage() {
               <div className="mt-8 flex flex-col gap-4">
                 <a
                   href={PHONE_HREF}
-                  aria-label={`Call Car Key Service DXB: ${PHONE_DISPLAY}`}
+                  aria-label={`Call Lock Repair Satwa: ${PHONE_DISPLAY}`}
                   className="group flex items-center gap-4 rounded-2xl border-2 border-brand-gold bg-brand-gold/10 p-5 transition-colors hover:bg-brand-gold/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
                 >
                   <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-brand-gold text-brand-navy shadow-md group-hover:shadow-lg transition-shadow">
@@ -177,7 +177,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <p className="text-xs font-semibold uppercase tracking-wide text-brand-gold">
-                      Call Now — 24/7
+                      Call Now — 7 AM–11:30 PM Daily
                     </p>
                     <p className="font-heading text-2xl font-extrabold text-foreground sm:text-3xl">
                       {PHONE_DISPLAY}
@@ -193,7 +193,7 @@ export default function ContactPage() {
                   href={`https://wa.me/${WHATSAPP_NUMBER}?text=Hi%2C%20I%20need%20help%20with%20my%20car%20key%20in%20Dubai.`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label="WhatsApp Car Key Service DXB"
+                  aria-label="WhatsApp Lock Repair Satwa"
                   className="group flex items-center gap-4 rounded-2xl border border-[#25D366]/30 bg-[#25D366]/10 p-5 transition-colors hover:bg-[#25D366]/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
                 >
                   <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-[#25D366] text-white shadow-md">
@@ -286,7 +286,7 @@ export default function ContactPage() {
                     referrerPolicy="no-referrer-when-downgrade"
                     title={`${BUSINESS_NAME} location on Google Maps`}
                     className="block w-full border-0"
-                    aria-label="Map showing Car Key Service DXB location in Al Bada'a, Dubai"
+                    aria-label="Map showing Lock Repair Satwa location in Al Bada'a, Dubai"
                   />
                 </div>
               </div>
@@ -312,7 +312,7 @@ export default function ContactPage() {
                   ))}
                 </dl>
                 <p className="mt-4 text-xs text-muted-foreground">
-                  24/7 service including UAE public holidays. Emergency calls answered at all hours.
+                  Open daily 7:00 AM – 11:30 PM including UAE public holidays.
                 </p>
               </div>
             </div>
@@ -435,7 +435,7 @@ export default function ContactPage() {
             </Button>
           </div>
           <p className="mt-5 text-sm text-white/40">
-            No call-out fee · Price confirmed before work starts · Available 24/7 including public holidays
+            No call-out fee · Price confirmed before work starts · Open daily 7 AM–11:30 PM
           </p>
         </div>
       </section>

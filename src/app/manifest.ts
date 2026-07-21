@@ -1,5 +1,5 @@
 // ─────────────────────────────────────────────────────────────────────────────
-// Car Key Service DXB — Next.js Web App Manifest
+// Lock Repair Satwa — Next.js Web App Manifest
 // Generates /manifest.webmanifest automatically
 //
 // TODO (business owner): Supply actual icon files before going live:
@@ -10,9 +10,9 @@ import type { MetadataRoute } from 'next'
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: 'Car Key Service DXB',
-    short_name: 'Car Key DXB',
-    description: '24/7 automotive locksmith in Dubai',
+    name: 'Lock Repair Satwa',
+    short_name: 'Lock Repair',
+    description: 'Professional locksmith in Dubai — open daily 7 AM–11:30 PM',
     start_url: '/',
     display: 'standalone',
     background_color: '#0B1F3A',
