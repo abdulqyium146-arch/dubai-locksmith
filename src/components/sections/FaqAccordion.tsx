@@ -1,9 +1,8 @@
 'use client'
 // ─────────────────────────────────────────────────────────────────────────────
-// Lock Repair Satwa — FAQ Accordion (Framer Motion animated)
+// Lock Repair Satwa — FAQ Accordion (CSS grid-row animation, no framer-motion)
 // ─────────────────────────────────────────────────────────────────────────────
 import { useState } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
 import { Plus, Minus } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import type { Faq } from '@/types'
@@ -11,9 +10,7 @@ import { FaqSchema } from '@/components/schema/FaqSchema'
 
 interface FaqAccordionProps {
   faqs: Faq[]
-  /** Optional heading above the accordion */
   heading?: string
-  /** Whether to emit FAQPage schema JSON-LD */
   withSchema?: boolean
   className?: string
 }
@@ -36,10 +33,8 @@ export function FaqAccordion({
       aria-label={heading ?? 'Frequently asked questions'}
       className={cn('w-full', className)}
     >
-      {/* Inline FAQPage schema */}
       {withSchema && <FaqSchema faqs={faqs} />}
 
-      {/* Optional heading */}
       {heading && (
         <h2 className="mb-8 font-heading text-3xl font-bold tracking-tight text-foreground">
           {heading}
@@ -54,7 +49,6 @@ export function FaqAccordion({
 
           return (
             <div key={i} className="bg-card">
-              {/* Question — button */}
               <dt>
                 <button
                   id={questionId}
@@ -88,28 +82,25 @@ export function FaqAccordion({
                 </button>
               </dt>
 
-              {/* Answer — animated */}
-              <AnimatePresence initial={false}>
-                {isOpen && (
-                  <motion.dd
-                    id={answerId}
-                    role="region"
-                    aria-labelledby={questionId}
-                    key="answer"
-                    initial={{ height: 0, opacity: 0 }}
-                    animate={{ height: 'auto', opacity: 1 }}
-                    exit={{ height: 0, opacity: 0 }}
-                    transition={{ duration: 0.25, ease: [0.4, 0, 0.2, 1] }}
-                    className="overflow-hidden"
-                  >
-                    <div className="border-t border-border bg-muted/20 px-5 pb-5 pt-4">
-                      <p className="text-sm leading-relaxed text-muted-foreground">
-                        {faq.answer}
-                      </p>
-                    </div>
-                  </motion.dd>
-                )}
-              </AnimatePresence>
+              {/* CSS grid-template-rows animation: 0fr ↔ 1fr, no JS height measurement */}
+              <dd
+                id={answerId}
+                role="region"
+                aria-labelledby={questionId}
+                className="grid"
+                style={{
+                  gridTemplateRows: isOpen ? '1fr' : '0fr',
+                  transition: 'grid-template-rows 250ms cubic-bezier(0.4, 0, 0.2, 1)',
+                }}
+              >
+                <div className="overflow-hidden">
+                  <div className="border-t border-border bg-muted/20 px-5 pb-5 pt-4">
+                    <p className="text-sm leading-relaxed text-muted-foreground">
+                      {faq.answer}
+                    </p>
+                  </div>
+                </div>
+              </dd>
             </div>
           )
         })}

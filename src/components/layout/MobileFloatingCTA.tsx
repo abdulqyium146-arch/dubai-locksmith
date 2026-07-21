@@ -4,7 +4,6 @@
 // Only shown on mobile (md:hidden)
 // ─────────────────────────────────────────────────────────────────────────────
 import { useEffect, useState } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
 import { Phone } from 'lucide-react'
 import { useTranslations } from 'next-intl'
 import { PHONE_DISPLAY, PHONE_HREF, WHATSAPP_HREF } from '@/lib/constants'
@@ -20,24 +19,20 @@ export function MobileFloatingCTA() {
   }, [])
 
   return (
-    <AnimatePresence>
-      {visible && (
-        <motion.div
-          initial={{ y: 100, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          exit={{ y: 100, opacity: 0 }}
-          transition={{ type: 'spring', stiffness: 260, damping: 24 }}
-          className="fixed bottom-0 inset-x-0 z-50 md:hidden floating-cta-safe"
-          aria-label={t('ariaLabel')}
-          role="complementary"
-        >
+    <div
+      className={`fixed bottom-0 inset-x-0 z-50 md:hidden floating-cta-safe will-change-transform transition-[transform,opacity] duration-500 ease-out ${
+        visible ? 'translate-y-0 opacity-100' : 'translate-y-full opacity-0 pointer-events-none'
+      }`}
+      aria-label={t('ariaLabel')}
+      role="complementary"
+    >
           {/* Gradient fade above the bar */}
           <div
             aria-hidden="true"
             className="pointer-events-none h-6 bg-gradient-to-t from-background/60 to-transparent"
           />
 
-          <div className="flex border-t border-border bg-background/95 backdrop-blur-md shadow-[0_-4px_24px_rgba(0,0,0,0.12)]">
+          <div className="flex border-t border-border bg-background/95 backdrop-blur-sm shadow-[0_-4px_24px_rgba(0,0,0,0.12)]">
             {/* Call button */}
             <a
               href={PHONE_HREF}
@@ -87,8 +82,6 @@ export function MobileFloatingCTA() {
               </span>
             </a>
           </div>
-        </motion.div>
-      )}
-    </AnimatePresence>
+    </div>
   )
 }

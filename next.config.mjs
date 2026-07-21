@@ -68,8 +68,11 @@ const nextConfig = {
   },
 
   experimental: {
-    optimizePackageImports: ['lucide-react', 'framer-motion'],
+    optimizePackageImports: ['lucide-react'],
   },
+
+  poweredByHeader: false,
+  compress: true,
 
   logging: {
     fetches: {

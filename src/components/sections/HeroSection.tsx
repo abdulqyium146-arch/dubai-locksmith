@@ -178,7 +178,7 @@ export async function HeroSection({
                   width={520}
                   height={380}
                   priority
-                  quality={88}
+                  quality={80}
                   sizes="(max-width: 640px) calc(100vw - 64px), (max-width: 768px) 448px, (max-width: 1024px) 400px, 520px"
                   className="w-full object-cover"
                 />

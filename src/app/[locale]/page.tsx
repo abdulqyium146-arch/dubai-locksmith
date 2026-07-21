@@ -369,7 +369,8 @@ export default async function HomePage({
                       alt={service.heroImageAlt ?? `${service.title} in Dubai — Lock Repair Satwa`}
                       width={400}
                       height={300}
-                      priority={index < 4}
+                      priority={index < 2}
+                      loading={index < 2 ? undefined : 'lazy'}
                       sizes="(max-width: 640px) calc(50vw - 24px), (max-width: 1024px) calc(50vw - 24px), calc(25vw - 24px)"
                       className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                     />

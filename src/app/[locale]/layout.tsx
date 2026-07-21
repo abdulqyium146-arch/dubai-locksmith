@@ -30,18 +30,20 @@ const inter = Inter({
   variable: '--font-inter',
 })
 
+// Headings only — 600 (semibold), 700 (bold), 800 (extrabold used in H1s)
 const poppins = Poppins({
   subsets: ['latin'],
-  weight: ['400', '500', '600', '700', '800'],
+  weight: ['600', '700', '800'],
   display: 'swap',
   variable: '--font-poppins',
 })
 
 // ── Arabic Font ───────────────────────────────────────────────────────────────
 
+// 400 for Arabic body, 700 for Arabic headings
 const cairo = Cairo({
-  subsets: ['arabic', 'latin'],
-  weight: ['400', '500', '600', '700', '800'],
+  subsets: ['arabic'],
+  weight: ['400', '700'],
   display: 'swap',
   variable: '--font-cairo',
 })
@@ -169,7 +171,9 @@ export default async function LocaleLayout({ children, params }: LocaleLayoutPro
     >
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
