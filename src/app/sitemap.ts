@@ -16,8 +16,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const entries: MetadataRoute.Sitemap = []
 
   for (const locale of LOCALES) {
-    const priority = locale === 'en' ? 1 : 0.7
-
     // ── Static pages ────────────────────────────────────────────────────────
     entries.push(
       {
