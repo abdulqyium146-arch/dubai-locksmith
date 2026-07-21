@@ -63,6 +63,30 @@ export function LocalBusinessSchema() {
       '@type': 'City',
       name: SCHEMA_ORG.areaServed,
     },
+    containedInPlace: {
+      '@type': 'Neighborhood',
+      name: 'Al Satwa, Dubai',
+      containedInPlace: {
+        '@type': 'City',
+        name: 'Dubai',
+        containedInPlace: {
+          '@type': 'Country',
+          name: 'United Arab Emirates',
+        },
+      },
+    },
+    hasOfferCatalog: {
+      '@type': 'OfferCatalog',
+      name: 'Locksmith Services',
+      itemListElement: [
+        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Key Duplication' }, price: '50', priceCurrency: 'AED' },
+        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Car Key Cutting' }, price: '150', priceCurrency: 'AED' },
+        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Car Key Programming' }, price: '300', priceCurrency: 'AED' },
+        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Door Lock Repair' }, price: '100', priceCurrency: 'AED' },
+        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Emergency Lockout' }, price: '200', priceCurrency: 'AED' },
+      ],
+    },
+    keywords: 'key maker, key duplication, key cutting, locksmith Dubai, نسخ مفاتيح, مفاتيح, اقفال ابواب, locksmith Satwa, key shop Satwa',
     aggregateRating: {
       '@type': 'AggregateRating',
       ratingValue: GOOGLE_RATING,

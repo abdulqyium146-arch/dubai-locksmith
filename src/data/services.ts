@@ -7,12 +7,12 @@ export const services: Service[] = [
   // ── 1. Car Key Duplication ─────────────────────────────────────────────────
   {
     slug: 'car-key-duplication',
-    title: 'Car Key Duplication',
-    metaTitle: 'Car Key Duplication Dubai | AED 150–350',
+    title: 'Key Duplication & Key Cutting',
+    metaTitle: 'Key Duplication & Key Cutting in Dubai | Lock Repair Satwa',
     metaDescription:
-      'Fast car key duplication in Dubai. We copy mechanical, transponder and remote keys for all makes. Mobile service across Dubai — call +971 52 642 6161.',
+      'Lock Repair Satwa provides key duplication and key cutting in Dubai from AED 50. Car keys, door keys, padlock keys, all types. Mobile service 24/7. Call +971 52 642 6161.',
     directAnswerOpener:
-      'Car key duplication in Dubai costs between AED 150 and AED 350 depending on key type. Lock Repair Satwa duplicates mechanical, transponder and remote car keys for all major brands. Our mobile technician arrives within 30 minutes and cuts your spare key on-site using professional key-cutting machines.',
+      'Lock Repair Satwa provides key duplication and key cutting in Dubai from AED 50 for door keys and AED 150–350 for car keys. Same-day service, all key types, 24/7 mobile across all Dubai areas. Call +971 52 642 6161.',
     description:
       'Having a spare car key is one of the simplest precautions a Dubai driver can take — yet most people wait until they\'ve locked themselves out or lost their only key before acting. Lock Repair Satwa provides on-site car key duplication across all of Dubai, cutting and programming a working copy of your existing key directly at your location.\n\nOur certified technicians carry professional key-cutting machines and a wide range of key blanks to cover virtually every make and model sold in the UAE market — from Toyota Land Cruisers and Nissan Patrols to BMW, Mercedes-Benz and Tesla. Whether you need a simple mechanical blade copy, a remote-equipped key, or a full transponder duplicate with chip programming, we handle it all in a single visit.\n\nThe process takes 15 to 45 minutes depending on key complexity. Standard mechanical keys are cut in as little as 15 minutes; transponder keys with chip cloning take 30–45 minutes. All duplicated keys are tested in the vehicle\'s ignition and doors before we leave.\n\nPricing starts at AED 150 for basic mechanical keys and goes up to AED 350 for keys that include remote buttons and a transponder chip. We recommend getting a spare key made before you ever need it — the cost of duplication is a fraction of the emergency call-out price for a replacement.',
     benefits: [

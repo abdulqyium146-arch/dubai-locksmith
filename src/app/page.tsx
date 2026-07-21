@@ -168,8 +168,8 @@ export default function HomePage() {
             <span className="text-gold-gradient">Lock Repair Satwa</span>
           </>
         }
-        subtitle="Lock Repair Satwa, located at D90, Al Bada'a, Dubai, is a professional locksmith serving all Dubai areas. Car key duplication, door lock repair, smart key programming, emergency locksmith and more — certified technician at your location in 20–45 minutes."
-        badge="Serving All Dubai Areas | Rated 4.7★ on Google"
+        subtitle="Dubai's most-searched key maker and locksmith, based in Al Satwa. Key duplication from AED 50, car key cutting and programming, door lock repair, and emergency locksmith — 24/7 across all Dubai areas."
+        badge="Key Maker Near Me in Dubai — Satwa & All Areas"
         ctaLabel="View All 12 Services"
         ctaHref="/services"
         showTrustBar={false}
@@ -303,6 +303,73 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* ── Satwa Key Shop Section ──────────────────────────────────────────── */}
+      <section
+        aria-labelledby="satwa-section-heading"
+        className="py-16 sm:py-20 bg-brand-navy text-white"
+      >
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="grid gap-12 lg:grid-cols-2 lg:gap-16 items-center">
+            <div>
+              <span className="inline-flex items-center gap-1.5 rounded-full border border-brand-gold/30 bg-brand-gold/15 px-3 py-1 text-xs font-semibold text-brand-gold mb-5">
+                Key Shop — Al Satwa, Dubai
+              </span>
+              <h2 id="satwa-section-heading" className="font-heading text-3xl font-bold tracking-tight text-white sm:text-4xl">
+                The Nearest Key Maker to Al Satwa
+              </h2>
+              <p className="mt-5 text-base leading-relaxed text-white/75">
+                Lock Repair Satwa at D90, Al Bada&apos;a is the closest key shop and locksmith to Al Satwa Road, Queen&apos;s Medical Centre, and Al Diyafa Street. Walk in for instant key duplication, or call for mobile service anywhere in Dubai.
+              </p>
+              <ul className="mt-6 space-y-3">
+                {[
+                  'Key duplication & key cutting from AED 50',
+                  'Car key maker — all brands, on-site programming',
+                  'Door lock body change from AED 250',
+                  'Wooden door latch (patti) repair from AED 150',
+                  'Smart lock installation & access cards',
+                  'Emergency lockout service — 5-10 min response in Satwa',
+                ].map((item) => (
+                  <li key={item} className="flex items-start gap-3 text-sm text-white/80">
+                    <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-brand-gold" aria-hidden="true" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+              <div className="mt-8 flex flex-wrap gap-4">
+                <Button variant="primary" size="lg" className="btn-pulse" asChild>
+                  <a href={PHONE_HREF}>
+                    <Phone className="h-5 w-5" aria-hidden="true" />
+                    Call Now — {PHONE_DISPLAY}
+                  </a>
+                </Button>
+                <Button variant="outline" size="lg" asChild>
+                  <Link href="/locations/al-satwa">
+                    Al Satwa Service Page
+                    <ArrowRight className="ml-2 h-4 w-4" aria-hidden="true" />
+                  </Link>
+                </Button>
+              </div>
+            </div>
+            <div className="grid grid-cols-2 gap-4">
+              {[
+                { label: 'Door Key Duplication', price: 'From AED 50', desc: 'All key types cut on-site' },
+                { label: 'Car Key Cutting', price: 'From AED 150', desc: 'Toyota, Nissan, BMW + more' },
+                { label: 'Door Lock Change', price: 'From AED 250', desc: 'Metal & wooden door locks' },
+                { label: 'Car Key Programming', price: 'From AED 300', desc: 'Transponder & smart keys' },
+                { label: 'Emergency Lockout', price: 'From AED 200', desc: 'Arrive in 15-20 min' },
+                { label: 'Smart Lock Install', price: 'From AED 350', desc: 'Digital & access card locks' },
+              ].map(({ label, price, desc }) => (
+                <div key={label} className="rounded-xl border border-white/10 bg-white/5 p-4">
+                  <p className="text-xs font-semibold text-brand-gold uppercase tracking-wide">{price}</p>
+                  <p className="mt-1 font-semibold text-white text-sm">{label}</p>
+                  <p className="mt-1 text-xs text-white/50">{desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* ── 4. Locations Section ────────────────────────────────────────────── */}
       <section
         aria-labelledby="locations-heading"
@@ -336,7 +403,7 @@ export default function HomePage() {
           <div className="mt-10 text-center">
             <Button variant="outline" size="lg" asChild>
               <Link href="/locations">
-                View All 15 Service Areas
+                View All 16 Service Areas
                 <ArrowRight className="ml-2 h-4 w-4" aria-hidden="true" />
               </Link>
             </Button>

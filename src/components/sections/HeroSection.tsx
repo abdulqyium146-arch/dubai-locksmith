@@ -35,7 +35,7 @@ export function HeroSection({
   ctaLabel,
   ctaHref,
   showTrustBar = true,
-  badge = 'open 24/7 — All Dubai Areas',
+  badge = 'Key Maker & Locksmith — Satwa & All Dubai Areas',
 }: HeroSectionProps) {
   const headlineDefault = (
     <>

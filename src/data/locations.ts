@@ -4,6 +4,70 @@
 import type { Location } from '@/types'
 
 export const locations: Location[] = [
+  // ── 0. Al Satwa (Highest Priority — GSC target) ───────────────────────────
+  {
+    slug: 'al-satwa',
+    name: 'Al Satwa',
+    metaTitle: 'Key Maker & Locksmith in Al Satwa Dubai | Lock Repair Satwa',
+    metaDescription:
+      "Lock Repair Satwa is the nearest key shop and locksmith in Al Satwa, Dubai. Key duplication from AED 50, car keys, door locks, 24/7. Call +971 52 642 6161.",
+    directAnswerOpener:
+      "Lock Repair Satwa at D90, Al Bada'a is the closest key maker and locksmith to Al Satwa, Dubai — 2 minutes from Al Satwa Road. Key duplication from AED 50, car key cutting from AED 150, door lock repair from AED 100. Open 24/7. Call +971 52 642 6161.",
+    description:
+      "Al Satwa (Satwa) is one of Dubai's oldest and most vibrant urban neighbourhoods, known for its traditional markets, workshops, and repair trade. Lock Repair Satwa is based at D90, Al Bada'a — immediately adjacent to Satwa — making us the closest professional key shop and locksmith for residents and businesses on Al Satwa Road, Al Diyafa Street, and the surrounding community. We offer walk-in key duplication, key cutting for all door and car keys, lock installation and repair, smart lock fitting, and 24/7 mobile emergency locksmith service throughout Satwa.",
+    landmarks: [
+      "Al Satwa Road",
+      "Queen's Medical Centre Al Satwa",
+      "Al Diyafa Street",
+      "Satwa Souq",
+      "Al Satwa Bus Station",
+      "Spinneys Satwa",
+      "Iranian Hospital Dubai",
+      "Al Bada'a Park",
+    ],
+    buildingTypes: [
+      'Low-rise apartment buildings',
+      'Commercial retail units',
+      'Traditional villa compounds',
+      'Mixed-use shop-houses',
+      'Residential towers',
+    ],
+    responseTime: '5-10 minutes',
+    faqs: [
+      {
+        question: 'Where is the nearest key shop in Al Satwa?',
+        answer:
+          "Lock Repair Satwa at D90, Al Bada'a is the closest key shop to Al Satwa — a 2-3 minute walk from Al Satwa Road. We offer walk-in key duplication and cutting starting from AED 50, plus 24/7 mobile service across Satwa. Call +971 52 642 6161.",
+      },
+      {
+        question: 'How much does key duplication cost near Satwa?',
+        answer:
+          'Standard door key duplication starts from AED 50-150. Car key duplication starts from AED 150-350. Car key programming ranges from AED 300-700. All prices confirmed before we start. Call +971 52 642 6161 for an instant quote.',
+      },
+      {
+        question: 'Is there a locksmith near Queens Medical Centre Al Satwa?',
+        answer:
+          "Yes — Lock Repair Satwa at D90, Al Bada'a is the closest locksmith to Queen's Medical Centre in Al Satwa. We can reach the area in under 10 minutes. Call +971 52 642 6161 for immediate assistance.",
+      },
+      {
+        question: 'Do you do key cutting in Al Satwa?',
+        answer:
+          "Yes. Lock Repair Satwa provides on-the-spot key cutting for door keys, padlock keys, car keys, and cabinet keys in and around the Satwa area. We use precision key-cutting machines for accurate duplicates. Walk in to D90, Al Bada'a or call for mobile service.",
+      },
+      {
+        question: 'Can you repair metal door locks and wooden door latches in Satwa?',
+        answer:
+          'Yes. We repair metal door lock bodies, wooden door patti (latch) mechanisms, padlocks, and all types of door hardware in Satwa. Metal door lock body change from AED 250, wooden door latch repair from AED 150. Call +971 52 642 6161 for a free quote.',
+      },
+      {
+        question: 'Do you make car keys in Satwa?',
+        answer:
+          "Lock Repair Satwa is the nearest car key maker to Al Satwa, Dubai. We cut and program car keys for Toyota, Nissan, BMW, Mercedes-Benz, and 50+ brands on-site. Car key duplication from AED 150. Located at D90, Al Bada'a — 2 minutes from Al Satwa Road. Call +971 52 642 6161.",
+      },
+    ],
+    coordinates: { lat: 25.23341473023507, lng: 55.275106874155064 },
+  },
+
   // ── 1. Al Bada'a (Home Base) ───────────────────────────────────────────────
   {
     slug: 'al-badaa',
