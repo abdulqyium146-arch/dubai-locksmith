@@ -3,7 +3,7 @@
 // Language Switcher — desktop + mobile variants
 // ─────────────────────────────────────────────────────────────────────────────
 import { useTransition } from 'react'
-import { useRouter, usePathname } from 'next/navigation'
+import { useRouter, usePathname } from '@/i18n/navigation'
 import { useLocale, useTranslations } from 'next-intl'
 import { cn } from '@/lib/utils'
 
@@ -21,12 +21,8 @@ export function LanguageSwitcher({ variant = 'full', scrolled = false }: Languag
   const [isPending, startTransition] = useTransition()
 
   function switchLocale(nextLocale: string) {
-    // Replace locale prefix in the current path
-    const segments = pathname.split('/')
-    segments[1] = nextLocale
-    const nextPath = segments.join('/') || `/${nextLocale}`
     startTransition(() => {
-      router.push(nextPath)
+      router.replace(pathname, { locale: nextLocale })
     })
   }
 
