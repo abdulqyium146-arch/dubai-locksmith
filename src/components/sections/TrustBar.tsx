@@ -8,8 +8,8 @@ import { GOOGLE_RATING } from '@/lib/constants'
 const TRUST_ITEMS = [
   {
     icon: Clock,
-    label: 'Daily 7AM–11:30PM',
-    sub: '7 days a week',
+    label: '24/7 Service',
+    sub: 'Always available',
   },
   {
     icon: Star,

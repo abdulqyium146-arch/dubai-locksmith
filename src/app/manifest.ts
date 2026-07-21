@@ -12,7 +12,7 @@ export default function manifest(): MetadataRoute.Manifest {
   return {
     name: 'Lock Repair Satwa',
     short_name: 'Lock Repair',
-    description: 'Professional locksmith in Dubai — open daily 7 AM–11:30 PM',
+    description: 'Professional locksmith in Dubai — open daily 24/7',
     start_url: '/',
     display: 'standalone',
     background_color: '#0B1F3A',

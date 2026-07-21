@@ -120,9 +120,9 @@ export const services: Service[] = [
     title: 'Car Key Replacement',
     metaTitle: 'Car Key Replacement Dubai | Lost Key Experts',
     metaDescription:
-      'Lost your only car key in Dubai? We replace car keys on-site without needing the original. All makes covered. mobile service, open daily 7 AM-11:30 PM — +971 52 642 6161.',
+      'Lost your only car key in Dubai? We replace car keys on-site without needing the original. All makes covered. mobile service, available 24/7 — +971 52 642 6161.',
     directAnswerOpener:
-      'Lock Repair Satwa replaces lost or damaged car keys in Dubai without requiring a dealership visit. Using OBD programming tools and VIN-based key cutting, we make a fully functional replacement key on-site. Pricing ranges from AED 300 to AED 900 depending on vehicle and key technology. Service available daily 7 AM-11:30 PM across all Dubai areas.',
+      'Lock Repair Satwa replaces lost or damaged car keys in Dubai without requiring a dealership visit. Using OBD programming tools and VIN-based key cutting, we make a fully functional replacement key on-site. Pricing ranges from AED 300 to AED 900 depending on vehicle and key technology. Service available 24/7 across all Dubai areas.',
     description:
       'Losing your only car key in Dubai is more than an inconvenience — it can strand you for days if you rely on the dealership. Lock Repair Satwa offers a fast, fully mobile car key replacement service that gets you back on the road without the long wait and premium dealership pricing.\n\nUnlike duplication (which needs your original key), replacement involves generating a new key from your vehicle\'s VIN (Vehicle Identification Number) and programming it directly to your car\'s ECU via OBD port. Our technicians carry the latest key generation software and a comprehensive library of key blanks, covering everything from basic mechanical vehicles to the latest proximity/smart keys.\n\nThe process starts with identity verification — we will ask for your Emirates ID, vehicle registration (Mulkiya) and a photograph of your driving licence. This is a legal requirement to prevent unauthorised key production. Once verified, the technician generates the key code from the VIN, cuts the blade, and programs the transponder/remote to your vehicle.\n\nReplacement takes 45 minutes to 1.5 hours on-site. All existing keys can be erased from the vehicle\'s memory on request, so a previously lost key can no longer be used to access your car. We cover all mainstream brands sold in the UAE and many European and American luxury marques.',
     benefits: [
@@ -144,7 +144,7 @@ export const services: Service[] = [
       {
         title: 'Same-Day Service Across Dubai',
         description:
-          'available daily 7 AM-11:30 PM. Most replacements are completed the same day you call, eliminating the 3–7 day dealership lead time.',
+          'available 24/7. Most replacements are completed the same day you call, eliminating the 3–7 day dealership lead time.',
       },
     ],
     processSteps: [
@@ -236,9 +236,9 @@ export const services: Service[] = [
     title: 'Remote & Smart Key Programming',
     metaTitle: 'Remote & Smart Key Programming Dubai | AED 400–900',
     metaDescription:
-      'Expert remote and smart key programming for all car brands in Dubai. Keyless entry, push-start, proximity keys. Mobile service daily, 7 AM-11:30 PM — +971 52 642 6161.',
+      'Expert remote and smart key programming for all car brands in Dubai. Keyless entry, push-start, proximity keys. Mobile service 24/7 — +971 52 642 6161.',
     directAnswerOpener:
-      'Remote and smart key programming in Dubai costs AED 400–900 depending on make and key technology. Lock Repair Satwa programs OEM and aftermarket remote keys, keyless entry fobs and proximity push-start keys using manufacturer-level OBD tools. Mobile service available daily 7 AM-11:30 PM; most programming jobs completed in 30–60 minutes at your location.',
+      'Remote and smart key programming in Dubai costs AED 400–900 depending on make and key technology. Lock Repair Satwa programs OEM and aftermarket remote keys, keyless entry fobs and proximity push-start keys using manufacturer-level OBD tools. Mobile service available 24/7; most programming jobs completed in 30–60 minutes at your location.',
     description:
       'Modern car keys do far more than simply cut an ignition — they communicate wirelessly with your car\'s security system via rolling-code encryption, proximity sensors and push-start electronics. When that communication breaks down — because of a dead remote, a replaced ECU, a new key purchase or a battery reset — Lock Repair Satwa provides expert reprogramming to restore full functionality.\n\nWe program remote keys, smart keys and proximity fobs for all major makes sold in Dubai. Our technicians use OEM-compatible programming tools (including Autel, Launch X431, Lonsdor K518 and brand-specific platforms) that access the vehicle\'s immobiliser, body control module and smart key ECU directly over the OBD port.\n\nCommon scenarios we handle include: adding a second remote key to your vehicle, reprogramming a remote that stopped working after a battery change, replacing a damaged smart key fob, and setting up a new proximity key after an ECU swap. We also handle keyless entry systems (one-touch lock/unlock) and remote start programming where factory-equipped.\n\nAll programming is non-destructive — your existing keys remain active unless you specifically request that old keys be erased. We provide a written confirmation of which keys are active in your vehicle\'s system at the end of every job.',
     benefits: [
@@ -451,16 +451,16 @@ export const services: Service[] = [
   {
     slug: 'emergency-car-unlock',
     title: 'Emergency Car Unlock',
-    metaTitle: 'Emergency Car Unlock Dubai | daily, 7 AM-11:30 PM — AED 200–500',
+    metaTitle: 'Emergency Car Unlock Dubai | 24/7 — AED 200–500',
     metaDescription:
-      'Locked out of your car in Dubai? Our mobile locksmith opens any vehicle in 20–45 minutes. daily 7 AM-11:30 PM service, no damage — +971 52 642 6161.',
+      'Locked out of your car in Dubai? Our mobile locksmith opens any vehicle in 20–45 minutes. 24/7 service, no damage — +971 52 642 6161.',
     directAnswerOpener:
-      'Lock Repair Satwa provides daily 7 AM-11:30 PM car unlock service across Dubai for AED 200–500. A certified mobile locksmith reaches most Dubai locations within 20–45 minutes and opens your vehicle using non-destructive lock-pick, wedge or OBD unlock methods. No damage to door seals, windows or lock cylinders guaranteed.',
+      'Lock Repair Satwa provides 24/7 car unlock service across Dubai for AED 200–500. A certified mobile locksmith reaches most Dubai locations within 20–45 minutes and opens your vehicle using non-destructive lock-pick, wedge or OBD unlock methods. No damage to door seals, windows or lock cylinders guaranteed.',
     description:
       'Being locked out of your car is one of the most stressful roadside situations in Dubai — especially in summer when cabin temperatures can exceed 60°C within minutes. If a child or pet is trapped inside, every second counts. Lock Repair Satwa operates daily from 7 AM to 11:30 PM, 365 days a year, with fast-response mobile locksmiths positioned across Dubai to reach you as quickly as possible.\n\nOur technicians are trained in non-destructive vehicle entry techniques: air wedge and long-reach tools for vehicles with manual door controls, and OBD-based electronic unlock for modern keyless vehicles. We never break windows unless you explicitly request it or an emergency involving a child or animal inside the car makes it absolutely necessary — in which case the fastest method takes priority.\n\nCommon scenarios we handle: keys locked inside the car, key broken in the door lock, remote key battery dead with no manual unlock option, electronic door failure due to a flat car battery, and smart key malfunction.\n\nWe cover all Dubai areas including Motor City, Dubai Hills, International City and other locations further from our Al Bada\'a base. Emergency unlocks at peak traffic times carry a small surcharge for travel. All pricing is confirmed before the technician departs.',
     benefits: [
       {
-        title: 'Open Daily 7 AM–11:30 PM Including Public Holidays',
+        title: 'Open Daily 24/7 Including Public Holidays',
         description:
           'We answer the phone at 3 AM on Eid just as readily as at noon on a Wednesday. Lockouts don\'t keep business hours, and neither do we.',
       },
@@ -564,9 +564,9 @@ export const services: Service[] = [
     title: 'Lost & Broken Car Key Service',
     metaTitle: 'Lost or Broken Car Key Dubai | Fast Replacement',
     metaDescription:
-      'Lost or snapped your car key in Dubai? We replace and extract broken keys on-site. daily, 7 AM-11:30 PM service for all makes. Call +971 52 642 6161.',
+      'Lost or snapped your car key in Dubai? We replace and extract broken keys on-site. 24/7 service for all makes. Call +971 52 642 6161.',
     directAnswerOpener:
-      'Lock Repair Satwa handles lost and broken car key situations across Dubai daily, 7 AM-11:30 PM. We extract broken key fragments from ignition barrels and door locks, then cut and program a full replacement key on-site. Service costs AED 200–700 depending on vehicle and key type. No tow truck or dealership visit required.',
+      'Lock Repair Satwa handles lost and broken car key situations across Dubai 24/7. We extract broken key fragments from ignition barrels and door locks, then cut and program a full replacement key on-site. Service costs AED 200–700 depending on vehicle and key type. No tow truck or dealership visit required.',
     description:
       'Dubai\'s extreme heat cycles cause car keys to become brittle over time — a key that snaps in the ignition or door lock is a surprisingly common call we receive. Equally, losing your only key in a mall, on the beach or at the airport leaves you completely stranded. Lock Repair Satwa handles both scenarios with a single mobile call-out.\n\nFor broken keys, our technicians use specialist extraction tools to remove key fragments from ignition barrels and door lock cylinders without damage to the lock mechanism. Once extracted, the broken blade is used as a template (where possible) to cut a new key. If the break makes the blade unusable, we cut from the VIN-based code.\n\nFor lost keys, the process is identical to our full car key replacement service: identity verification, VIN-based blade cutting, transponder chip programming and remote synchronisation. We also offer the option to erase the lost key from the immobiliser memory so it cannot be used if found by someone else.\n\nWe recommend that every Dubai driver has at least one spare key made before they need it — the cost of duplication (AED 150–350) is significantly lower than an emergency replacement call-out (AED 300–900).',
     benefits: [
@@ -586,9 +586,9 @@ export const services: Service[] = [
           'If your key is lost (not just broken), we erase it from the immobiliser so it is permanently deactivated, protecting your vehicle from unauthorised access.',
       },
       {
-        title: 'daily 7 AM-11:30 PM availability',
+        title: '24/7 availability',
         description:
-          'Broken keys don\'t happen at convenient times. We are available daily 7 AM–11:30 PM, including weekends and UAE public holidays.',
+          'Broken keys don\'t happen at convenient times. We are available daily 24/7, including weekends and UAE public holidays.',
       },
     ],
     processSteps: [
@@ -1139,9 +1139,9 @@ export const services: Service[] = [
     title: 'Car Battery Replacement Dubai',
     metaTitle: 'Car Battery Replacement Dubai | AED 250–600',
     metaDescription:
-      'Mobile car battery replacement in Dubai. We test, supply and fit batteries for all car makes. daily, 7 AM-11:30 PM service, no towing needed — +971 52 642 6161.',
+      'Mobile car battery replacement in Dubai. We test, supply and fit batteries for all car makes. 24/7 service, no towing needed — +971 52 642 6161.',
     directAnswerOpener:
-      'Lock Repair Satwa provides mobile car battery replacement across Dubai for AED 250–600, including the battery and fitting. We carry batteries for Japanese, European, American and Korean vehicles. A technician tests your current battery on-site using a digital load tester, then fits a new battery and resets any ECU memory codes. available daily 7 AM-11:30 PM.',
+      'Lock Repair Satwa provides mobile car battery replacement across Dubai for AED 250–600, including the battery and fitting. We carry batteries for Japanese, European, American and Korean vehicles. A technician tests your current battery on-site using a digital load tester, then fits a new battery and resets any ECU memory codes. available 24/7.',
     description:
       'Dubai\'s extreme summer heat is the number one killer of car batteries — the average battery life in UAE climates is 2–3 years, compared to 4–5 years in Europe. When your car refuses to start on a scorching Dubai morning, the battery is the most common culprit.\n\nLock Repair Satwa provides a complete mobile battery service: we come to you, test the existing battery with a professional digital load tester, confirm the diagnosis, and replace the battery with a correctly spec\'d replacement unit sourced from trusted brands (Varta, Bosch, ACDelco, Rocket, and Amaron).\n\nOur technicians carry the most common battery sizes for popular UAE vehicles — Toyota Land Cruisers, Nissan Patrols, Honda Accords, BMW 5 Series and many more. If your battery size is less common, we can source and deliver it within 2–4 hours.\n\nImportantly, we handle ECU memory reset after battery replacement on modern vehicles that require it (some BMWs, Mercedes and other European cars need battery registration to the BCM to ensure correct charging profile). We carry OBD tools to perform this step on-site, preventing erratic charging behaviour from a newly fitted battery.\n\nOld batteries are removed and disposed of responsibly through our recycling partner.',
     benefits: [

@@ -32,7 +32,7 @@ import {
 export const metadata: Metadata = {
   title: 'Locksmith Service Areas in Dubai | All 15 Locations — Lock Repair Satwa',
   description:
-    'Lock Repair Satwa covers all major Dubai areas — Jumeirah, Downtown, Dubai Marina, Business Bay, Dubai Hills, Palm Jumeirah and more. Professional mobile locksmith open daily 7 AM–11:30 PM. Call +971 52 642 6161.',
+    'Lock Repair Satwa covers all major Dubai areas — Jumeirah, Downtown, Dubai Marina, Business Bay, Dubai Hills, Palm Jumeirah and more. Professional mobile locksmith open daily 24/7. Call +971 52 642 6161.',
   alternates: {
     canonical: `${SITE_URL}/locations`,
   },
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     siteName: BUSINESS_NAME,
     title: 'Locksmith Service Areas in Dubai | All 15 Locations — Lock Repair Satwa',
     description:
-      'Lock Repair Satwa covers all major Dubai areas — Jumeirah, Downtown, Dubai Marina, Business Bay, Dubai Hills, Palm Jumeirah and more. Professional mobile locksmith, open daily 7 AM–11:30 PM.',
+      'Lock Repair Satwa covers all major Dubai areas — Jumeirah, Downtown, Dubai Marina, Business Bay, Dubai Hills, Palm Jumeirah and more. Professional mobile locksmith, open daily 24/7.',
     images: [
       {
         url: DEFAULT_OG_IMAGE,
@@ -56,7 +56,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Locksmith Service Areas in Dubai | 15 Locations — Lock Repair Satwa',
-    description: 'Professional mobile locksmith covering all major Dubai areas. Open daily 7 AM–11:30 PM. Call +971 52 642 6161.',
+    description: 'Professional mobile locksmith covering all major Dubai areas. Open daily 24/7. Call +971 52 642 6161.',
     images: [DEFAULT_OG_IMAGE],
   },
 }
@@ -97,8 +97,8 @@ function LocationsHubSchema() {
     openingHoursSpecification: {
       '@type': 'OpeningHoursSpecification',
       dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
-      opens: '07:00',
-      closes: '23:30',
+      opens: '00:00',
+      closes: '23:59',
     },
     aggregateRating: {
       '@type': 'AggregateRating',
@@ -171,7 +171,7 @@ export default function LocationsPage() {
                 covering 15 major areas across the emirate. We reach most central Dubai locations in
                 15–30 minutes and outer areas in 30–60 minutes. All 12 services — car key duplication,
                 door lock repair, smart key programming, transponder keys, car battery replacement and
-                more — are available at every listed location, daily 7 AM–11:30 PM. Call +971 52 642 6161.
+                more — are available at every listed location, daily 24/7. Call +971 52 642 6161.
               </p>
             </div>
 
@@ -218,7 +218,7 @@ export default function LocationsPage() {
               <p className="mt-1 text-sm text-muted-foreground">Dubai Areas Covered</p>
             </div>
             <div className="text-center">
-              <p className="font-heading text-3xl font-extrabold text-brand-gold">7AM–11:30PM</p>
+              <p className="font-heading text-3xl font-extrabold text-brand-gold">24/7</p>
               <p className="mt-1 text-sm text-muted-foreground">Open Daily</p>
             </div>
             <div className="text-center">
@@ -315,11 +315,11 @@ export default function LocationsPage() {
                   id="emergency-banner-heading"
                   className="font-heading text-xl font-bold text-foreground"
                 >
-                  Locksmith Service Available Daily 7 AM–11:30 PM Across All Listed Areas
+                  Locksmith Service Available Daily 24/7 Across All Listed Areas
                 </h2>
                 <p className="mt-1 text-sm text-muted-foreground max-w-lg">
                   Locked out, lost your key, or need a lock repaired? Lock Repair Satwa responds
-                  daily 7 AM–11:30 PM to every area on this page. Average response is 15–30 minutes
+                  daily 24/7 to every area on this page. Average response is 15–30 minutes
                   for central Dubai. Call now for an immediate ETA.
                 </p>
               </div>
@@ -448,7 +448,7 @@ export default function LocationsPage() {
             {[
               'All 12 car key & locksmith services available',
               'Same pricing regardless of Dubai area — no distance surcharge',
-              'Open daily 7 AM–11:30 PM including UAE public holidays',
+              'Open daily 24/7 including UAE public holidays',
               'Upfront pricing confirmed before dispatch',
               'Certified, identity-verified technicians',
               '30-day warranty on all key programming work',
@@ -468,7 +468,7 @@ export default function LocationsPage() {
       {/* ── 8. Final CTA ─────────────────────────────────────────────────────── */}
       <CtaSection
         heading="Need a Locksmith in Dubai? We Come to You."
-        subtext={`${BUSINESS_NAME} (D90, Al Bada'a, Dubai) covers all 15 areas listed above. One call gets you a certified technician with the right equipment for your car and location — open daily 7 AM–11:30 PM, 7 days a week.`}
+        subtext={`${BUSINESS_NAME} (D90, Al Bada'a, Dubai) covers all 15 areas listed above. One call gets you a certified technician with the right equipment for your car and location — open daily 24/7, 7 days a week.`}
       />
     </>
   )

@@ -51,7 +51,7 @@ export const metadata: Metadata = {
     url: `${SITE_URL}/about`,
     siteName: BUSINESS_NAME,
     title: `About ${BUSINESS_NAME} | Professional Locksmith in Dubai`,
-    description: `${BUSINESS_NAME} — professional locksmith based at D90, Al Bada'a, Dubai. Open daily 7 AM–11:30 PM, 12 services, 15+ areas covered. Rated 4.7★ on Google.`,
+    description: `${BUSINESS_NAME} — professional locksmith based at D90, Al Bada'a, Dubai. Open daily 24/7, 12 services, 15+ areas covered. Rated 4.7★ on Google.`,
     images: [{ url: DEFAULT_OG_IMAGE, width: 1200, height: 630, alt: `About ${BUSINESS_NAME}` }],
   },
 }
@@ -64,7 +64,7 @@ const aboutPageSchema = {
   '@id': `${SITE_URL}/about#about-page`,
   name: `About ${BUSINESS_NAME}`,
   url: `${SITE_URL}/about`,
-  description: `${BUSINESS_NAME} is a professional locksmith based at D90, Al Bada'a, Dubai. We provide lock repair, car key duplication, and emergency locksmith services across all Dubai areas. Open daily 7 AM–11:30 PM.`,
+  description: `${BUSINESS_NAME} is a professional locksmith based at D90, Al Bada'a, Dubai. We provide lock repair, car key duplication, and emergency locksmith services across all Dubai areas. Open daily 24/7.`,
   mainEntity: {
     '@type': 'Locksmith',
     '@id': `${SITE_URL}/#lock-repair-satwa`,
@@ -313,7 +313,7 @@ export default function AboutPage() {
             {[
               { value: '10+', label: 'Years UAE Experience' },
               { value: '50+', label: 'Car Brands Covered' },
-              { value: '7AM–11:30PM', label: 'Daily Operating Hours' },
+              { value: '24/7', label: 'Daily Operating Hours' },
             ].map(({ value, label }) => (
               <div
                 key={label}
@@ -429,7 +429,7 @@ export default function AboutPage() {
       {/* ── CTA ───────────────────────────────────────────────────────────────── */}
       <CtaSection
         heading="Ready to Work with Dubai's Professional Locksmith?"
-        subtext={`Call ${BUSINESS_NAME} now for an instant quote. D90, Al Bada'a, Dubai. No call-out fee, upfront pricing, certified technicians — open daily 7 AM–11:30 PM across all Dubai areas.`}
+        subtext={`Call ${BUSINESS_NAME} now for an instant quote. D90, Al Bada'a, Dubai. No call-out fee, upfront pricing, certified technicians — open daily 24/7 across all Dubai areas.`}
       />
     </>
   )

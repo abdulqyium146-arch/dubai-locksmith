@@ -163,7 +163,7 @@ export default async function ServicePage({
               {service.emergency && (
                 <div className="mb-4 inline-flex items-center gap-1.5 rounded-full border border-red-400/40 bg-red-500/20 px-3 py-1 text-xs font-bold text-red-300 uppercase tracking-wide">
                   <AlertTriangle className="h-3.5 w-3.5" aria-hidden="true" />
-                  Priority Service — Daily 7 AM–11:30 PM
+                  Priority Service — Daily 24/7
                 </div>
               )}
 
@@ -507,7 +507,7 @@ export default async function ServicePage({
       {/* ── 9. Final CTA ─────────────────────────────────────────────────────── */}
       <CtaSection
         heading={`Need ${service.title} in Dubai? Call Now.`}
-        subtext={`${BUSINESS_NAME} (D90, Al Bada'a, Dubai) comes to you anywhere in Dubai. Upfront pricing, certified technicians, average arrival in 20–45 minutes. Open daily 7 AM–11:30 PM including weekends and public holidays.`}
+        subtext={`${BUSINESS_NAME} (D90, Al Bada'a, Dubai) comes to you anywhere in Dubai. Upfront pricing, certified technicians, average arrival in 20–45 minutes. Open daily 24/7 including weekends and public holidays.`}
       />
 
       {/* CTA #3 — embedded within the above CtaSection which contains Call Now button */}

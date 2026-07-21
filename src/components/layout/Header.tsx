@@ -37,9 +37,10 @@ interface DropdownProps {
   isOpen: boolean
   onToggle: () => void
   onClose: () => void
+  scrolled: boolean
 }
 
-function NavDropdown({ label, href, items, isOpen, onToggle, onClose }: DropdownProps) {
+function NavDropdown({ label, href, items, isOpen, onToggle, onClose, scrolled }: DropdownProps) {
   const pathname = usePathname()
   const isActive = pathname.startsWith(href)
   const ref = useRef<HTMLDivElement>(null)
@@ -64,7 +65,7 @@ function NavDropdown({ label, href, items, isOpen, onToggle, onClose }: Dropdown
         className={cn(
           'flex items-center gap-1 rounded-md px-3 py-2 text-sm font-medium transition-colors',
           'hover:text-brand-gold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring',
-          isActive ? 'text-brand-gold' : 'text-foreground',
+          isActive ? 'text-brand-gold' : scrolled ? 'text-foreground' : 'text-white/90',
         )}
       >
         {label}
@@ -229,6 +230,7 @@ export function Header() {
             isOpen={openDropdown === 'services'}
             onToggle={() => toggleDropdown('services')}
             onClose={closeDropdown}
+            scrolled={scrolled}
           />
 
           <NavDropdown
@@ -238,6 +240,7 @@ export function Header() {
             isOpen={openDropdown === 'locations'}
             onToggle={() => toggleDropdown('locations')}
             onClose={closeDropdown}
+            scrolled={scrolled}
           />
 
           {['About', 'Contact'].map((item) => {
@@ -273,10 +276,10 @@ export function Header() {
                 ? 'border-brand-gold/30 bg-brand-gold/10 text-brand-gold'
                 : 'border-brand-gold/40 bg-brand-gold/15 text-brand-gold',
             )}
-            aria-label="Open daily 7 AM to 11:30 PM"
+            aria-label="Open 24/7"
           >
             <Clock className="h-3 w-3" aria-hidden="true" />
-            Open Daily 7AM–11:30PM
+            Open 24/7
           </div>
 
           {/* Click-to-call — always visible on desktop */}
@@ -339,7 +342,7 @@ export function Header() {
               </a>
               <div className="flex items-center justify-center gap-1.5 text-sm text-muted-foreground">
                 <Clock className="h-3.5 w-3.5 text-brand-gold" />
-                Open Daily 7 AM – 11:30 PM
+                Open 24/7
               </div>
             </div>
 

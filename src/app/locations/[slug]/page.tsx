@@ -150,8 +150,8 @@ function LocationPageSchema({
     openingHoursSpecification: {
       '@type': 'OpeningHoursSpecification',
       dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
-      opens: '07:00',
-      closes: '23:30',
+      opens: '00:00',
+      closes: '23:59',
     },
     priceRange: SCHEMA_ORG.priceRange,
     currenciesAccepted: SCHEMA_ORG.currenciesAccepted,
@@ -197,7 +197,7 @@ function LocationPageSchema({
     '@context': 'https://schema.org',
     '@type': 'Service',
     name: `Car Key & Locksmith Service in ${locationName}`,
-    description: `Professional locksmith and car key services in ${locationName}, Dubai. Key duplication, lock repair, emergency unlock, transponder programming, smart key replacement, car battery replacement — available daily 7 AM–11:30 PM at your location.`,
+    description: `Professional locksmith and car key services in ${locationName}, Dubai. Key duplication, lock repair, emergency unlock, transponder programming, smart key replacement, car battery replacement — available daily 24/7 at your location.`,
     provider: {
       '@type': 'LocalBusiness',
       name: BUSINESS_NAME,
@@ -218,8 +218,8 @@ function LocationPageSchema({
         hoursAvailable: {
           '@type': 'OpeningHoursSpecification',
           dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
-          opens: '07:00',
-          closes: '23:30',
+          opens: '00:00',
+          closes: '23:59',
         },
       },
     },
@@ -341,7 +341,7 @@ export default async function LocationPage({
                 </div>
                 <div className="inline-flex items-center gap-1.5 rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-sm font-semibold text-white/90">
                   <Zap className="h-4 w-4 text-brand-gold" aria-hidden="true" />
-                  Open Daily 7AM–11:30PM
+                  open 24/7
                 </div>
                 {responseTimeBadge.color === 'gold' && (
                   <Badge variant="gold" size="sm" dot>
@@ -422,7 +422,7 @@ export default async function LocationPage({
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle2 className="h-4 w-4 text-brand-gold shrink-0 mt-0.5" aria-hidden="true" />
-                  <span className="text-sm text-white/80">Open daily 7 AM–11:30 PM including public holidays</span>
+                  <span className="text-sm text-white/80">Open daily 24/7 including public holidays</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle2 className="h-4 w-4 text-brand-gold shrink-0 mt-0.5" aria-hidden="true" />
@@ -913,7 +913,7 @@ export default async function LocationPage({
       {/* CTA #3 — contained within CtaSection */}
       <CtaSection
         heading={`Need a Locksmith in ${location.name}? Call Now.`}
-        subtext={`${BUSINESS_NAME} reaches ${location.name} in ${location.responseTime}. Upfront pricing, certified technician, all key types and lock types covered. Open daily 7 AM–11:30 PM including UAE public holidays.`}
+        subtext={`${BUSINESS_NAME} reaches ${location.name} in ${location.responseTime}. Upfront pricing, certified technician, all key types and lock types covered. Open daily 24/7 including UAE public holidays.`}
       />
     </>
   )

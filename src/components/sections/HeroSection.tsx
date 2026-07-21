@@ -35,7 +35,7 @@ export function HeroSection({
   ctaLabel,
   ctaHref,
   showTrustBar = true,
-  badge = 'Open Daily 7AM–11:30PM — All Dubai Areas',
+  badge = 'open 24/7 — All Dubai Areas',
 }: HeroSectionProps) {
   const headlineDefault = (
     <>

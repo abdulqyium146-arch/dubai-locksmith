@@ -38,7 +38,7 @@ export default function GlobalError({ error, reset }: ErrorProps) {
         {/* Sub-text */}
         <p className="mt-4 text-lg text-muted-foreground">
           We encountered an unexpected error. Please try refreshing the page. If
-          the issue persists, call us directly — open daily 7 AM–11:30 PM.
+          the issue persists, call us directly — open daily 24/7.
         </p>
 
         {/* Error digest for support reference */}

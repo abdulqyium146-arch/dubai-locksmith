@@ -23,7 +23,7 @@ interface CtaSectionProps {
 
 export function CtaSection({
   heading = 'Need a Locksmith in Dubai?',
-  subtext = `${BUSINESS_NAME} is available daily 7 AM–11:30 PM across all Dubai areas. Call or WhatsApp now for an instant quote — no call-out fee, upfront pricing.`,
+  subtext = `${BUSINESS_NAME} is available daily 24/7 across all Dubai areas. Call or WhatsApp now for an instant quote — no call-out fee, upfront pricing.`,
   dark = true,
   className,
 }: CtaSectionProps) {

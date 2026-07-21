@@ -57,12 +57,12 @@ export const DEFAULT_META_DESCRIPTION =
 // ── Service Hours ─────────────────────────────────────────────────────────────
 
 export const SERVICE_HOURS = {
-  availability: '7:00 AM – 11:30 PM' as const,
+  availability: '24/7' as const,
   daysOpen: 'Monday – Sunday' as const,
-  hoursOpen: '7:00 AM – 11:30 PM' as const,
-  emergencyAvailable: false,
-  opens: '07:00' as const,
-  closes: '23:30' as const,
+  hoursOpen: '24 Hours' as const,
+  emergencyAvailable: true,
+  opens: '00:00' as const,
+  closes: '23:59' as const,
 } as const
 
 // ── Response Times ────────────────────────────────────────────────────────────

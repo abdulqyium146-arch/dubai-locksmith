@@ -12,7 +12,7 @@ export const locations: Location[] = [
     metaDescription:
       "Lock Repair Satwa is based in Al Bada'a, Dubai. Fastest response times for key duplication, emergency unlock and smart key programming — +971 52 642 6161.",
     directAnswerOpener:
-      "Lock Repair Satwa is headquartered in Al Bada'a, Dubai — the fastest-response area for our mobile automotive locksmith service. Al Bada'a residents receive priority dispatch with technicians typically arriving in 10–15 minutes. We cover all residential streets and the Al Wasl Road corridor. available daily 7 AM-11:30 PM.",
+      "Lock Repair Satwa is headquartered in Al Bada'a, Dubai — the fastest-response area for our mobile automotive locksmith service. Al Bada'a residents receive priority dispatch with technicians typically arriving in 10–15 minutes. We cover all residential streets and the Al Wasl Road corridor. available 24/7.",
     description:
       "Al Bada'a is a well-established residential neighbourhood in the Jumeirah 1 area of Dubai, bounded by Al Wasl Road to the east and Sheikh Zayed Road to the west. It is home to a mix of villas and low-rise apartment buildings, popular with both UAE nationals and long-term expat residents.\n\nAs Lock Repair Satwa's home base on D90, Al Bada'a residents enjoy the fastest possible response times — our technicians are typically on-site within 10–15 minutes of a call. Whether you need an emergency car unlock, a spare key cut, or a smart key programmed, we have the shortest distance to travel.\n\nThe area's predominantly villa and townhouse architecture means we frequently work on high-capacity vehicles: Toyota Land Cruisers, GMC Yukon Denalis, Ford Expats and Chevrolet Tahoes — all of which we are fully equipped to handle for transponder programming and smart key services.",
     landmarks: [
@@ -55,11 +55,11 @@ export const locations: Location[] = [
   {
     slug: 'jumeirah',
     name: 'Jumeirah',
-    metaTitle: 'Car Key Service Jumeirah Dubai | daily 7 AM-11:30 PM Mobile Locksmith',
+    metaTitle: 'Car Key Service Jumeirah Dubai | 24/7 Mobile Locksmith',
     metaDescription:
       'Mobile automotive locksmith in Jumeirah Dubai. Key duplication, smart key programming, emergency unlock for villas and apartments — +971 52 642 6161.',
     directAnswerOpener:
-      'Lock Repair Satwa provides daily 7 AM-11:30 PM mobile automotive locksmith services across Jumeirah 1, 2 and 3. From villa key duplication to emergency car unlock along Jumeirah Beach Road, we reach most Jumeirah addresses in 15–25 minutes from our Al Bada\'a base. All makes and key types covered.',
+      'Lock Repair Satwa provides 24/7 mobile automotive locksmith services across Jumeirah 1, 2 and 3. From villa key duplication to emergency car unlock along Jumeirah Beach Road, we reach most Jumeirah addresses in 15–25 minutes from our Al Bada\'a base. All makes and key types covered.',
     description:
       "Jumeirah is one of Dubai's most prestigious residential corridors, stretching along the coast from Al Bada'a in the north to Umm Suqeim in the south. Divided into Jumeirah 1, Jumeirah 2 and Jumeirah 3, the area is predominantly low-rise villas, small apartment clusters and boutique commercial strips along Jumeirah Beach Road.\n\nLock Repair Satwa serves all of Jumeirah from our Al Bada'a base, with typical response times of 15–25 minutes. The area's vehicle fleet skews heavily towards large SUVs and luxury sedans — Toyota Land Cruisers, Range Rovers, BMW X7s and Mercedes GLS — all of which require specialised smart key and transponder programming.\n\nJumeirah's villa-dense layout means parking is usually easy for our mobile units, allowing us to work quickly without the access complications found in high-rise tower environments. We frequently service residents locked out of gated villa compounds where the gate fob and car key are both inside the vehicle.",
     landmarks: [
@@ -102,11 +102,11 @@ export const locations: Location[] = [
   {
     slug: 'dubai-marina',
     name: 'Dubai Marina',
-    metaTitle: 'Car Key Service Dubai Marina | Fast daily 7 AM-11:30 PM Locksmith',
+    metaTitle: 'Car Key Service Dubai Marina | Fast 24/7 Locksmith',
     metaDescription:
       'Car key duplication, emergency unlock and smart key programming in Dubai Marina. Mobile locksmith serving all Marina towers — +971 52 642 6161.',
     directAnswerOpener:
-      'Lock Repair Satwa reaches Dubai Marina in 25–40 minutes from our Al Bada\'a base. We service the underground and podium car parks of Dubai Marina\'s high-rise towers, providing emergency car unlock, key duplication and smart key programming for all vehicle types. available daily 7 AM-11:30 PM including weekend nights.',
+      'Lock Repair Satwa reaches Dubai Marina in 25–40 minutes from our Al Bada\'a base. We service the underground and podium car parks of Dubai Marina\'s high-rise towers, providing emergency car unlock, key duplication and smart key programming for all vehicle types. available 24/7 including weekend nights.',
     description:
       "Dubai Marina is one of the world's largest man-made marina developments — a dense cluster of residential skyscrapers, hotels, restaurants and retail space built along a 3.5 km artificial canal. Its resident and visitor population makes it one of Dubai's highest-demand areas for automotive services.\n\nLock Repair Satwa serves all Dubai Marina towers and the surrounding JBR (Jumeirah Beach Residence) area. Our technicians are experienced with the underground parking structures typical of Marina towers, which can present challenges for mobile service — we carry portable lighting and compact equipment sets suitable for basement car park environments.\n\nCommon call types in Dubai Marina include: car keys locked inside the vehicle (very common in the Marina's fast-paced lifestyle), smart key battery failure on remote-start-equipped vehicles, and key duplication requests from residents who commute by motorcycle and need a spare car key made before a trip.",
     landmarks: [
@@ -156,7 +156,7 @@ export const locations: Location[] = [
     metaDescription:
       'Emergency car unlock, smart key programming and key replacement in Downtown Dubai. Fast mobile locksmith near Burj Khalifa — +971 52 642 6161.',
     directAnswerOpener:
-      'Lock Repair Satwa provides emergency automotive locksmith services in Downtown Dubai — including the Burj Khalifa precinct, Dubai Mall area and Old Town. We reach Downtown addresses in 20–30 minutes and work in the multi-storey car parks serving the Burj Khalifa and Dubai Mall. All makes and key types covered, daily, 7 AM-11:30 PM.',
+      'Lock Repair Satwa provides emergency automotive locksmith services in Downtown Dubai — including the Burj Khalifa precinct, Dubai Mall area and Old Town. We reach Downtown addresses in 20–30 minutes and work in the multi-storey car parks serving the Burj Khalifa and Dubai Mall. All makes and key types covered, 24/7.',
     description:
       "Downtown Dubai is the most recognisable part of the emirate — home to the Burj Khalifa (world's tallest building), Dubai Mall (world's largest by total area) and the Dubai Fountain. It is a high-density mixed-use district with luxury residential towers, five-star hotels and a massive daily visitor footfall.\n\nLock Repair Satwa serves Downtown Dubai's residential towers (The Address, Burj Views, South Ridge, The Residences, and many more), the hotel car parks along Sheikh Mohammed Bin Rashid Boulevard, and the public car parks serving Dubai Mall.\n\nParking in Downtown is predominantly in multi-storey structures or basement podiums. Our technicians coordinate with parking security staff to gain access and to work in a safe, authorised manner. Response times to Downtown range from 20–30 minutes depending on traffic conditions on Sheikh Zayed Road and Financial Centre Road.",
     landmarks: [
@@ -206,7 +206,7 @@ export const locations: Location[] = [
     metaDescription:
       'Mobile car key and locksmith services in Business Bay Dubai. Emergency unlock, key programming and battery replacement. Fast response — +971 52 642 6161.',
     directAnswerOpener:
-      'Lock Repair Satwa serves Business Bay — Dubai\'s central business district — with mobile automotive locksmith services available daily 7 AM-11:30 PM. We reach Business Bay offices and residential towers in 20–30 minutes. Emergency car unlock, car key replacement and battery replacement are among our most frequent Business Bay call types.',
+      'Lock Repair Satwa serves Business Bay — Dubai\'s central business district — with mobile automotive locksmith services available 24/7. We reach Business Bay offices and residential towers in 20–30 minutes. Emergency car unlock, car key replacement and battery replacement are among our most frequent Business Bay call types.',
     description:
       "Business Bay is Dubai's primary central business district (CBD), located between Downtown Dubai and Dubai Creek Extension. It comprises over 240 high-rise buildings including commercial towers, mixed-use developments, hotels and a growing residential component.\n\nFor working professionals in Business Bay, a lockout or dead car battery in an underground office car park can derail an entire working day. Lock Repair Satwa provides swift response to Business Bay, with technicians familiar with the valet parking and security procedures of major towers like The Oberoi, Damac Maison and The Binary.\n\nBusiness Bay's vehicle fleet reflects its corporate demographic — BMW 5 Series, Mercedes E-Class and S-Class, Audi A6 and A8, and Lexus ES/IS are extremely common, alongside the ubiquitous Toyota Land Cruiser for Emirati professionals. All of these require specialist smart key programming equipment, which our technicians carry as standard.",
     landmarks: [
@@ -241,7 +241,7 @@ export const locations: Location[] = [
       {
         question: 'My car battery died in the Business Bay underground car park — can you help?',
         answer:
-          'Yes. Car battery replacement is available daily 7 AM-11:30 PM. An underground car park is a standard environment for our service — we carry adequate lighting and compact equipment for basement jobs.',
+          'Yes. Car battery replacement is available 24/7. An underground car park is a standard environment for our service — we carry adequate lighting and compact equipment for basement jobs.',
       },
     ],
     coordinates: { lat: 25.1865, lng: 55.2644 },
@@ -251,7 +251,7 @@ export const locations: Location[] = [
   {
     slug: 'deira',
     name: 'Deira',
-    metaTitle: 'Car Key Service Deira Dubai | Affordable daily 7 AM-11:30 PM Locksmith',
+    metaTitle: 'Car Key Service Deira Dubai | Affordable 24/7 Locksmith',
     metaDescription:
       'Affordable car key services in Deira, Dubai — key cutting, transponder programming, emergency unlock. Fast mobile locksmith — +971 52 642 6161.',
     directAnswerOpener:
@@ -302,11 +302,11 @@ export const locations: Location[] = [
     name: 'Bur Dubai',
     metaTitle: 'Car Key Service Bur Dubai | Mobile Locksmith',
     metaDescription:
-      'Car key duplication, emergency unlock and key programming in Bur Dubai. Serving Karama, Mankhool and Al Raffa. daily 7 AM-11:30 PM mobile — +971 52 642 6161.',
+      'Car key duplication, emergency unlock and key programming in Bur Dubai. Serving Karama, Mankhool and Al Raffa. 24/7 mobile — +971 52 642 6161.',
     directAnswerOpener:
-      'Lock Repair Satwa serves Bur Dubai — including Karama, Mankhool, Al Raffa and Al Fahidi — with mobile automotive locksmith services available daily 7 AM-11:30 PM. Response times to Bur Dubai are typically 25–40 minutes from our Al Bada\'a base. Car key duplication from AED 150, emergency unlock from AED 200, transponder programming from AED 350.',
+      'Lock Repair Satwa serves Bur Dubai — including Karama, Mankhool, Al Raffa and Al Fahidi — with mobile automotive locksmith services available 24/7. Response times to Bur Dubai are typically 25–40 minutes from our Al Bada\'a base. Car key duplication from AED 150, emergency unlock from AED 200, transponder programming from AED 350.',
     description:
-      "Bur Dubai is the older western bank of Dubai Creek, encompassing well-established residential and commercial neighbourhoods including Karama (known for its affordable retail and restaurants), Mankhool, Al Raffa and the historic Al Fahidi district. It is one of Dubai's most diverse and densely populated areas.\n\nThe vehicle mix in Bur Dubai is eclectic — older Japanese and Korean vehicles sit alongside newer SUVs driven by the area's mixed professional and family demographic. We cover the full range, from basic mechanical key cutting for a 2005 Toyota Corolla to smart key programming for a 2023 Hyundai Tucson.\n\nBur Dubai's Al Karama area sees particularly high demand from residents who lock their keys in their cars while grocery shopping at Carrefour or visiting the restaurants along Kuwait Street. We are available daily 7 AM-11:30 PM for these situations.",
+      "Bur Dubai is the older western bank of Dubai Creek, encompassing well-established residential and commercial neighbourhoods including Karama (known for its affordable retail and restaurants), Mankhool, Al Raffa and the historic Al Fahidi district. It is one of Dubai's most diverse and densely populated areas.\n\nThe vehicle mix in Bur Dubai is eclectic — older Japanese and Korean vehicles sit alongside newer SUVs driven by the area's mixed professional and family demographic. We cover the full range, from basic mechanical key cutting for a 2005 Toyota Corolla to smart key programming for a 2023 Hyundai Tucson.\n\nBur Dubai's Al Karama area sees particularly high demand from residents who lock their keys in their cars while grocery shopping at Carrefour or visiting the restaurants along Kuwait Street. We are available 24/7 for these situations.",
     landmarks: [
       'Dubai Museum (Al Fahidi Fort)',
       'Al Fahidi Historic District (Bastakiya)',
@@ -346,9 +346,9 @@ export const locations: Location[] = [
     name: 'Al Barsha',
     metaTitle: 'Car Key Service Al Barsha Dubai | Mobile Locksmith',
     metaDescription:
-      'Car key duplication, emergency unlock and smart key programming in Al Barsha. Serving Al Barsha 1, 2 and 3. daily 7 AM-11:30 PM — +971 52 642 6161.',
+      'Car key duplication, emergency unlock and smart key programming in Al Barsha. Serving Al Barsha 1, 2 and 3. 24/7 — +971 52 642 6161.',
     directAnswerOpener:
-      'Lock Repair Satwa serves Al Barsha 1, 2 and 3 with mobile automotive locksmith services available daily 7 AM–11:30 PM. Al Barsha is 25–40 minutes from our Al Bada\'a base. Common services include emergency car unlock near Mall of the Emirates, key duplication for villa residents and transponder programming for SUVs. All makes covered.',
+      'Lock Repair Satwa serves Al Barsha 1, 2 and 3 with mobile automotive locksmith services available daily 24/7. Al Barsha is 25–40 minutes from our Al Bada\'a base. Common services include emergency car unlock near Mall of the Emirates, key duplication for villa residents and transponder programming for SUVs. All makes covered.',
     description:
       "Al Barsha is a large residential district stretching south of Sheikh Zayed Road, best known as the home of Mall of the Emirates. It is divided into Al Barsha 1 (mixed apartment and villa), Al Barsha 2 (predominantly villas) and Al Barsha 3 (further villas). Al Barsha South extends into newer developments near Al Quoz.\n\nMall of the Emirates generates a significant volume of lockout calls — busy shoppers inadvertently lock their keys inside while loading shopping bags. The mall's large open-air and multi-level car parks are familiar territory for our technicians.\n\nAl Barsha's villa sections (2 and 3) house larger families in spacious villas, typically driving high-capacity vehicles: Toyota Land Cruisers, GMC Yukons, Nissan Armadas and Chevrolet Tahoes. We carry the correct key blanks and programming equipment for all of these models.",
     landmarks: [
@@ -389,9 +389,9 @@ export const locations: Location[] = [
     name: 'Jumeirah Village Circle (JVC)',
     metaTitle: 'Car Key Service JVC Dubai | Jumeirah Village Circle',
     metaDescription:
-      'Mobile car key locksmith in JVC (Jumeirah Village Circle) Dubai. Key duplication, emergency unlock and transponder keys. Fast daily 7 AM-11:30 PM — +971 52 642 6161.',
+      'Mobile car key locksmith in JVC (Jumeirah Village Circle) Dubai. Key duplication, emergency unlock and transponder keys. Fast 24/7 — +971 52 642 6161.',
     directAnswerOpener:
-      'Lock Repair Satwa serves Jumeirah Village Circle (JVC) with mobile car key and locksmith services available daily 7 AM-11:30 PM. JVC\'s circular road layout and villa communities are 30–45 minutes from our Al Bada\'a base. We handle key duplication, emergency car unlock, and smart key programming for the mixed apartment and villa properties common in JVC.',
+      'Lock Repair Satwa serves Jumeirah Village Circle (JVC) with mobile car key and locksmith services available 24/7. JVC\'s circular road layout and villa communities are 30–45 minutes from our Al Bada\'a base. We handle key duplication, emergency car unlock, and smart key programming for the mixed apartment and villa properties common in JVC.',
     description:
       "Jumeirah Village Circle (JVC) is a rapidly growing residential community developed by Nakheel, featuring a mix of townhouses, villas and apartment towers arranged in a series of concentric circles. It has become one of Dubai's most affordable mid-market communities, popular with young families and professionals.\n\nJVC's road layout is unusual for Dubai — the circular street pattern means our technicians need precise location information to find residents quickly. We recommend sharing a Google Maps Plus Code or dropping a pin via WhatsApp when calling from within JVC.\n\nThe community's vehicle fleet is diverse — everything from economy hatchbacks to larger family SUVs. As a growing community, many JVC residents are relatively new to Dubai and may be unfamiliar with local locksmith services. We provide a transparent, professional service with upfront pricing to build trust with new Dubai residents.",
     landmarks: [
@@ -432,7 +432,7 @@ export const locations: Location[] = [
     name: 'Dubai Hills Estate',
     metaTitle: 'Car Key Service Dubai Hills Estate | Mobile Locksmith',
     metaDescription:
-      'Mobile automotive locksmith in Dubai Hills Estate. Key programming, emergency unlock and battery replacement for villas and apartments. daily 7 AM-11:30 PM — +971 52 642 6161.',
+      'Mobile automotive locksmith in Dubai Hills Estate. Key programming, emergency unlock and battery replacement for villas and apartments. 24/7 — +971 52 642 6161.',
     directAnswerOpener:
       'Lock Repair Satwa reaches Dubai Hills Estate in 30–45 minutes from our Al Bada\'a base. We serve the villa communities, mid-rise apartments and Dubai Hills Mall precinct with car key duplication, smart key programming, emergency unlock and car battery replacement. Premium vehicle brands common in Dubai Hills are fully covered.',
     description:
@@ -473,11 +473,11 @@ export const locations: Location[] = [
   {
     slug: 'palm-jumeirah',
     name: 'Palm Jumeirah',
-    metaTitle: 'Car Key Service Palm Jumeirah Dubai | daily 7 AM-11:30 PM Mobile Locksmith',
+    metaTitle: 'Car Key Service Palm Jumeirah Dubai | 24/7 Mobile Locksmith',
     metaDescription:
-      'Emergency car unlock, smart key programming and key replacement on Palm Jumeirah. Serving The Crescent, fronds and trunk. daily 7 AM-11:30 PM — +971 52 642 6161.',
+      'Emergency car unlock, smart key programming and key replacement on Palm Jumeirah. Serving The Crescent, fronds and trunk. 24/7 — +971 52 642 6161.',
     directAnswerOpener:
-      'Lock Repair Satwa serves Palm Jumeirah — including the Trunk, Fronds and The Crescent — with daily 7 AM-11:30 PM mobile automotive locksmith services. Response times are 35–55 minutes due to the Palm\'s unique geography. We handle emergency car unlock, smart key programming and key duplication for all vehicles on the Palm, including luxury and supercar brands.',
+      'Lock Repair Satwa serves Palm Jumeirah — including the Trunk, Fronds and The Crescent — with 24/7 mobile automotive locksmith services. Response times are 35–55 minutes due to the Palm\'s unique geography. We handle emergency car unlock, smart key programming and key duplication for all vehicles on the Palm, including luxury and supercar brands.',
     description:
       "Palm Jumeirah is Dubai's iconic palm-shaped artificial island — home to some of the emirate's most exclusive residences, the Atlantis resort, Nakheel Mall and a string of five-star beach hotels along The Crescent. It is connected to the mainland via the Trunk and accessible by the Palm Monorail and the Tunnel under the Palm.\n\nServing Palm Jumeirah requires our technicians to navigate the island's layout of a central Trunk Road, 16 fronds (residential streets) and the curved Crescent road at the top. Each frond has its own gated security checkpoint, requiring coordination with residents for access.\n\nVehicles on the Palm Jumeirah lean heavily toward ultra-premium brands — McLaren, Ferrari, Lamborghini, Rolls-Royce, Bentley and AMG GT derivatives are not uncommon. While our standard equipment covers most of these, some ultra-exotic brands (Ferrari, Lamborghini) may require specialist dealer support for key programming. We are transparent about our capabilities before dispatching for these models.\n\nThe journey time to the far end of the Crescent from our Al Bada'a base can be 45–55 minutes, which we factor into our ETA.",
     landmarks: [
@@ -524,9 +524,9 @@ export const locations: Location[] = [
     name: 'Motor City',
     metaTitle: 'Car Key Service Motor City Dubai | Mobile Locksmith',
     metaDescription:
-      'Car key duplication, emergency unlock and smart key programming in Motor City, Dubai. Serving Autodrome and villa communities. daily 7 AM-11:30 PM — +971 52 642 6161.',
+      'Car key duplication, emergency unlock and smart key programming in Motor City, Dubai. Serving Autodrome and villa communities. 24/7 — +971 52 642 6161.',
     directAnswerOpener:
-      'Lock Repair Satwa serves Motor City — home of Dubai Autodrome — with mobile automotive locksmith services available daily 7 AM-11:30 PM. Response times from our Al Bada\'a base are 35–50 minutes. We handle car key duplication, emergency unlock and battery replacement for Motor City\'s villa and apartment residents and Autodrome event visitors.',
+      'Lock Repair Satwa serves Motor City — home of Dubai Autodrome — with mobile automotive locksmith services available 24/7. Response times from our Al Bada\'a base are 35–50 minutes. We handle car key duplication, emergency unlock and battery replacement for Motor City\'s villa and apartment residents and Autodrome event visitors.',
     description:
       "Motor City is a themed residential community in Dubailand built around the Dubai Autodrome racing circuit. It comprises villa sub-communities (Uptown Motor City, Green Community Motor City), apartment clusters and the Autodrome itself. The community has a relaxed, family-oriented atmosphere with wide tree-lined streets.\n\nThe Autodrome creates occasional high-demand periods for our services — race days and track experience events can generate multiple lockout calls from visitors who have parked in the open-air event car parks. Our technicians are familiar with event access protocols at the Autodrome.\n\nMotor City's residents tend to drive enthusiast vehicles alongside practical family cars — performance variants of German and Japanese brands are common, as you would expect in a motorsport-themed community. We are equipped to handle performance model keys including those with start/stop ignition systems and advanced immobiliser protocols.",
     landmarks: [
@@ -567,9 +567,9 @@ export const locations: Location[] = [
     name: 'Mirdif',
     metaTitle: 'Locksmith Mirdif Dubai | Mobile Lock Repair Satwa',
     metaDescription:
-      'Mobile car key locksmith in Mirdif, Dubai. Emergency unlock, key duplication and transponder keys for villa communities. Fast daily 7 AM-11:30 PM service — +971 52 642 6161.',
+      'Mobile car key locksmith in Mirdif, Dubai. Emergency unlock, key duplication and transponder keys for villa communities. Fast 24/7 service — +971 52 642 6161.',
     directAnswerOpener:
-      'Lock Repair Satwa serves Mirdif — one of Dubai\'s most popular family villa communities — with daily 7 AM-11:30 PM mobile automotive locksmith services. Response times from our Al Bada\'a base are 35–50 minutes. We regularly service Mirdif villa compounds, Uptown Mirdif mall and the Shorooq and Ghoroob sub-communities.',
+      'Lock Repair Satwa serves Mirdif — one of Dubai\'s most popular family villa communities — with 24/7 mobile automotive locksmith services. Response times from our Al Bada\'a base are 35–50 minutes. We regularly service Mirdif villa compounds, Uptown Mirdif mall and the Shorooq and Ghoroob sub-communities.',
     description:
       "Mirdif is a well-established residential district in eastern Dubai, popular with UAE nationals and Arab expatriate families for its spacious villas, competitive rents and family-friendly environment. It is divided between older villa neighbourhoods along Mirdif Street and newer gated sub-communities like Shorooq, Ghoroob and Mirdif Hills.\n\nMirdif's vehicle fleet strongly favours large family SUVs — Toyota Land Cruisers (in high proportions), Nissan Patrols, Chevrolet Suburbans and GMC Yukons are the dominant vehicles. These large 4x4s have some of the most sophisticated immobiliser and smart key systems of any mainstream vehicles, and Lock Repair Satwa carries the specific OBD tools required for each.\n\nMirdif is also adjacent to Dubai International Airport, making it a frequent service point for residents who return from travel to find a dead car battery (common after extended trips where the car has been parked at home).",
     landmarks: [
@@ -612,11 +612,11 @@ export const locations: Location[] = [
   {
     slug: 'silicon-oasis',
     name: 'Dubai Silicon Oasis',
-    metaTitle: 'Car Key Service Silicon Oasis Dubai | daily 7 AM-11:30 PM Mobile',
+    metaTitle: 'Car Key Service Silicon Oasis Dubai | 24/7 Mobile',
     metaDescription:
-      'Mobile car key locksmith in Dubai Silicon Oasis. Key duplication, smart key programming and emergency unlock for apartments and tech campus. daily 7 AM-11:30 PM — +971 52 642 6161.',
+      'Mobile car key locksmith in Dubai Silicon Oasis. Key duplication, smart key programming and emergency unlock for apartments and tech campus. 24/7 — +971 52 642 6161.',
     directAnswerOpener:
-      'Lock Repair Satwa serves Dubai Silicon Oasis (DSO) with daily 7 AM-11:30 PM mobile automotive locksmith services. Located 40–55 minutes from our Al Bada\'a base, DSO\'s tech campus and residential apartment clusters are regular service areas for us. We handle car key duplication, emergency unlock and battery replacement for all vehicles in the free zone and residential zones.',
+      'Lock Repair Satwa serves Dubai Silicon Oasis (DSO) with 24/7 mobile automotive locksmith services. Located 40–55 minutes from our Al Bada\'a base, DSO\'s tech campus and residential apartment clusters are regular service areas for us. We handle car key duplication, emergency unlock and battery replacement for all vehicles in the free zone and residential zones.',
     description:
       "Dubai Silicon Oasis (DSO) is a technology free zone and integrated community in the eastern suburbs of Dubai. It combines a business campus (home to more than 1,000 technology companies) with a growing residential component of mid-rise apartment towers and villa plots.\n\nDSO's population includes a large international tech professional demographic — mobile devices, connected cars and keyless entry systems are the norm here. We frequently handle smart key programming calls in DSO, particularly for EV-adjacent vehicles (Hybrid SUVs, Tesla Model 3 and Model Y owned by tech professionals).\n\nThe DSO campus has its own road layout separate from the main Dubai road network, connected primarily via Sheikh Mohammad Bin Zayed Road (E311). Our technicians are familiar with DSO's internal street network and the residential cluster addresses.",
     landmarks: [
@@ -661,9 +661,9 @@ export const locations: Location[] = [
     name: 'International City',
     metaTitle: 'Car Key Service International City Dubai | Mobile Locksmith',
     metaDescription:
-      'Car key duplication, emergency unlock and key programming in International City, Dubai. Affordable mobile locksmith. daily 7 AM-11:30 PM service — +971 52 642 6161.',
+      'Car key duplication, emergency unlock and key programming in International City, Dubai. Affordable mobile locksmith. 24/7 service — +971 52 642 6161.',
     directAnswerOpener:
-      'Lock Repair Satwa serves International City — Dubai\'s affordably priced apartment community near Dragon Mart — with daily 7 AM-11:30 PM mobile automotive locksmith services. Response times are 45–60 minutes from our Al Bada\'a base. We provide car key duplication, transponder programming and emergency car unlock at competitive prices for all vehicle types common in the area.',
+      'Lock Repair Satwa serves International City — Dubai\'s affordably priced apartment community near Dragon Mart — with 24/7 mobile automotive locksmith services. Response times are 45–60 minutes from our Al Bada\'a base. We provide car key duplication, transponder programming and emergency car unlock at competitive prices for all vehicle types common in the area.',
     description:
       "International City is one of Dubai's most internationally diverse residential communities, designed with country-themed clusters (China, England, France, Morocco, Greece, etc.) and home to a predominantly middle-income expatriate population. Dragon Mart — the world's largest trading hub for Chinese products outside China — is adjacent to the community.\n\nThe vehicle fleet in International City is eclectic and typically skews toward affordable brands and older models. Toyota Corollas, Nissan Sunnys, Hyundai Elantras, Honda Civics and various Chinese-brand vehicles are the norm. We cover all of these with our standard key cutting and basic transponder programming equipment.\n\nDue to the distance from our Al Bada'a base — approximately 50 km — International City calls have slightly longer response times. We are transparent about this on the phone and will give you an accurate ETA. For non-emergency work (key duplication, spare key), we recommend calling at least 2 hours before you need the service.",
     landmarks: [

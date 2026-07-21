@@ -25,7 +25,7 @@ import {
 export const metadata: Metadata = {
   title: 'All Locksmith Services in Dubai | Lock Repair Satwa',
   description:
-    'Complete range of locksmith services in Dubai from Lock Repair Satwa — key duplication, door lock repair, smart key programming, emergency locksmith, transponder keys, car battery replacement and more. Open daily 7 AM–11:30 PM.',
+    'Complete range of locksmith services in Dubai from Lock Repair Satwa — key duplication, door lock repair, smart key programming, emergency locksmith, transponder keys, car battery replacement and more. Open daily 24/7.',
   alternates: {
     canonical: `${SITE_URL}/services`,
   },
@@ -36,13 +36,13 @@ export const metadata: Metadata = {
     siteName: BUSINESS_NAME,
     title: 'All Locksmith Services in Dubai | Lock Repair Satwa',
     description:
-      'Complete range of locksmith services in Dubai from Lock Repair Satwa — key duplication, door lock repair, smart key programming, emergency locksmith, transponder keys and more. Open daily 7 AM–11:30 PM.',
+      'Complete range of locksmith services in Dubai from Lock Repair Satwa — key duplication, door lock repair, smart key programming, emergency locksmith, transponder keys and more. Open daily 24/7.',
     images: [{ url: DEFAULT_OG_IMAGE, width: 1200, height: 630, alt: `${BUSINESS_NAME} Services` }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'All Locksmith Services in Dubai | Lock Repair Satwa',
-    description: 'Complete locksmith services in Dubai. Mobile, open daily 7 AM–11:30 PM.',
+    description: 'Complete locksmith services in Dubai. Mobile, open daily 24/7.',
     images: [DEFAULT_OG_IMAGE],
   },
 }
@@ -87,7 +87,7 @@ export default function ServicesPage() {
                 Services include car key duplication (AED&nbsp;150–350), smart key programming
                 (AED&nbsp;400–900), emergency car unlock (AED&nbsp;200–500), door lock repair,
                 transponder key programming, flip key replacement, car battery replacement and more —
-                open daily 7 AM–11:30 PM with no dealership visit required. Call +971 52 642 6161.
+                open daily 24/7 with no dealership visit required. Call +971 52 642 6161.
               </p>
             </div>
           </div>
@@ -142,7 +142,7 @@ export default function ServicesPage() {
                   id="emergency-callout-heading"
                   className="font-heading text-xl font-bold text-foreground"
                 >
-                  Need a Locksmith? We Respond Daily 7 AM–11:30 PM
+                  Need a Locksmith? We Respond Daily 24/7
                 </h2>
                 <p className="mt-1 text-sm text-muted-foreground max-w-lg">
                   The following services are available as priority call-outs during our operating hours:{' '}

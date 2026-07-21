@@ -465,7 +465,7 @@ export default function HomePage() {
       {/* ── 7. Final CTA ────────────────────────────────────────────────────── */}
       <CtaSection
         heading="Need a Locksmith or Spare Key? Call Now."
-        subtext={`${BUSINESS_NAME} (D90, Al Bada'a, Dubai) is a professional locksmith serving all Dubai areas, open daily 7 AM–11:30 PM. We come to you — at home, the office, the mall or the roadside.`}
+        subtext={`${BUSINESS_NAME} (D90, Al Bada'a, Dubai) is a professional locksmith serving all Dubai areas, open daily 24/7. We come to you — at home, the office, the mall or the roadside.`}
       />
     </>
   )

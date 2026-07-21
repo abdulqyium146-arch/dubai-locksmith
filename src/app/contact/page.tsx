@@ -39,7 +39,7 @@ import {
 
 export const metadata: Metadata = {
   title: `Contact Lock Repair Satwa | Call ${PHONE_DISPLAY}`,
-  description: `Contact ${BUSINESS_NAME} for professional locksmith services in Dubai. Call ${PHONE_DISPLAY} or WhatsApp for an instant quote. Based at D90, Al Bada'a, open daily 7 AM–11:30 PM.`,
+  description: `Contact ${BUSINESS_NAME} for professional locksmith services in Dubai. Call ${PHONE_DISPLAY} or WhatsApp for an instant quote. Based at D90, Al Bada'a, open daily 24/7.`,
   alternates: {
     canonical: `${SITE_URL}/contact`,
   },
@@ -49,13 +49,13 @@ export const metadata: Metadata = {
     url: `${SITE_URL}/contact`,
     siteName: BUSINESS_NAME,
     title: `Contact ${BUSINESS_NAME} | Locksmith in Dubai — Al Bada'a`,
-    description: `Call or WhatsApp ${PHONE_DISPLAY} for professional locksmith service anywhere in Dubai. Open daily 7 AM–11:30 PM.`,
+    description: `Call or WhatsApp ${PHONE_DISPLAY} for professional locksmith service anywhere in Dubai. Open daily 24/7.`,
     images: [{ url: DEFAULT_OG_IMAGE, width: 1200, height: 630, alt: `Contact ${BUSINESS_NAME}` }],
   },
   twitter: {
     card: 'summary_large_image',
     title: `Contact ${BUSINESS_NAME}`,
-    description: `Professional locksmith in Dubai. Call ${PHONE_DISPLAY}. Open daily 7 AM–11:30 PM.`,
+    description: `Professional locksmith in Dubai. Call ${PHONE_DISPLAY}. Open daily 24/7.`,
     images: [DEFAULT_OG_IMAGE],
   },
 }
@@ -68,7 +68,7 @@ const contactPageSchema = {
   '@id': `${SITE_URL}/contact#contact-page`,
   name: `Contact ${BUSINESS_NAME}`,
   url: `${SITE_URL}/contact`,
-  description: `Contact page for ${BUSINESS_NAME} — Dubai's professional locksmith at D90, Al Bada'a. Open daily 7 AM–11:30 PM.`,
+  description: `Contact page for ${BUSINESS_NAME} — Dubai's professional locksmith at D90, Al Bada'a. Open daily 24/7.`,
   mainEntity: {
     '@type': 'Locksmith',
     '@id': `${SITE_URL}/#lock-repair-satwa`,
@@ -90,8 +90,8 @@ const contactPageSchema = {
     openingHoursSpecification: {
       '@type': 'OpeningHoursSpecification',
       dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
-      opens: '07:00',
-      closes: '23:30',
+      opens: '00:00',
+      closes: '23:59',
     },
     hasMap: GOOGLE_MAPS_URL,
   },
@@ -107,13 +107,13 @@ const breadcrumbs = [
 // ── Business hours display ────────────────────────────────────────────────────
 
 const BUSINESS_HOURS = [
-  { day: 'Monday', hours: '7:00 AM – 11:30 PM' },
-  { day: 'Tuesday', hours: '7:00 AM – 11:30 PM' },
-  { day: 'Wednesday', hours: '7:00 AM – 11:30 PM' },
-  { day: 'Thursday', hours: '7:00 AM – 11:30 PM' },
-  { day: 'Friday', hours: '7:00 AM – 11:30 PM' },
-  { day: 'Saturday', hours: '7:00 AM – 11:30 PM' },
-  { day: 'Sunday', hours: '7:00 AM – 11:30 PM' },
+  { day: 'Monday', hours: '24/7' },
+  { day: 'Tuesday', hours: '24/7' },
+  { day: 'Wednesday', hours: '24/7' },
+  { day: 'Thursday', hours: '24/7' },
+  { day: 'Friday', hours: '24/7' },
+  { day: 'Saturday', hours: '24/7' },
+  { day: 'Sunday', hours: '24/7' },
 ]
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -136,7 +136,7 @@ export default function ContactPage() {
               <span className="text-gold-gradient">Lock Repair Satwa</span>
             </h1>
             <p className="mt-4 text-lg leading-relaxed text-white/75">
-              Open daily 7:00 AM – 11:30 PM, 7 days a week. Call or WhatsApp now
+              Open daily 24/7, 7 days a week. Call or WhatsApp now
               for an instant quote — we dispatch quickly across all Dubai areas.
             </p>
           </div>
@@ -177,7 +177,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <p className="text-xs font-semibold uppercase tracking-wide text-brand-gold">
-                      Call Now — 7 AM–11:30 PM Daily
+                      Call Now — 24/7 Daily
                     </p>
                     <p className="font-heading text-2xl font-extrabold text-foreground sm:text-3xl">
                       {PHONE_DISPLAY}
@@ -312,7 +312,7 @@ export default function ContactPage() {
                   ))}
                 </dl>
                 <p className="mt-4 text-xs text-muted-foreground">
-                  Open daily 7:00 AM – 11:30 PM including UAE public holidays.
+                  Open daily 24/7 including UAE public holidays.
                 </p>
               </div>
             </div>
@@ -435,7 +435,7 @@ export default function ContactPage() {
             </Button>
           </div>
           <p className="mt-5 text-sm text-white/40">
-            No call-out fee · Price confirmed before work starts · Open daily 7 AM–11:30 PM
+            No call-out fee · Price confirmed before work starts · Open daily 24/7
           </p>
         </div>
       </section>
