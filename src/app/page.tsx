@@ -2,6 +2,7 @@
 // Lock Repair Satwa — Homepage
 // ─────────────────────────────────────────────────────────────────────────────
 import type { Metadata } from 'next'
+import Image from 'next/image'
 import Link from 'next/link'
 import { Phone, MessageCircle, CheckCircle2, ArrowRight, PhoneCall, Wrench, ThumbsUp } from 'lucide-react'
 
@@ -28,6 +29,7 @@ import {
   ADDRESS_AREA,
   ADDRESS_CITY,
 } from '@/lib/constants'
+import { formatPriceRange } from '@/lib/utils'
 import type { Review } from '@/types'
 
 // ── Metadata ──────────────────────────────────────────────────────────────────
@@ -303,6 +305,74 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* ── Services in Action Gallery ──────────────────────────────────────── */}
+      <section
+        aria-labelledby="gallery-heading"
+        className="py-16 sm:py-20 bg-background"
+      >
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="mb-10 text-center">
+            <span className="inline-flex items-center gap-1.5 rounded-full border border-brand-gold/30 bg-brand-gold/10 px-3 py-1 text-xs font-semibold text-brand-gold mb-4">
+              Real Work — Real Results
+            </span>
+            <h2
+              id="gallery-heading"
+              className="font-heading text-3xl font-bold tracking-tight text-foreground sm:text-4xl"
+            >
+              Our Services in Action
+            </h2>
+            <p className="mt-4 text-base text-muted-foreground max-w-xl mx-auto">
+              From a Nissan door key to a Bentley smart key — tap any photo to see the full
+              service and pricing.
+            </p>
+          </div>
+
+          <div className="grid gap-4 grid-cols-2 lg:grid-cols-4">
+            {services
+              .filter((s) => s.heroImage)
+              .map((service, index) => (
+                <Link
+                  key={service.slug}
+                  href={`/services/${service.slug}`}
+                  className="group relative overflow-hidden rounded-2xl border border-border shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+                  aria-label={`${service.title} — ${formatPriceRange(service.pricing.min, service.pricing.max)}`}
+                >
+                  <div className="aspect-[4/3] overflow-hidden bg-muted">
+                    <Image
+                      src={service.heroImage!}
+                      alt={service.heroImageAlt ?? `${service.title} in Dubai — Lock Repair Satwa`}
+                      width={400}
+                      height={300}
+                      priority={index < 4}
+                      sizes="(max-width: 640px) calc(50vw - 24px), (max-width: 1024px) calc(50vw - 24px), calc(25vw - 24px)"
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                  </div>
+                  {/* Gradient overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent pointer-events-none" />
+                  {/* Text overlay */}
+                  <div className="absolute bottom-0 left-0 right-0 p-3">
+                    <p className="text-[10px] font-bold text-brand-gold uppercase tracking-widest">
+                      {formatPriceRange(service.pricing.min, service.pricing.max)}
+                    </p>
+                    <p className="text-sm font-semibold text-white leading-snug mt-0.5">
+                      {service.title}
+                    </p>
+                  </div>
+                  {/* Hover arrow badge */}
+                  <div className="absolute top-3 right-3 flex h-7 w-7 items-center justify-center rounded-full bg-brand-gold opacity-0 group-hover:opacity-100 transition-opacity duration-200 shadow-md">
+                    <ArrowRight className="h-3.5 w-3.5 text-brand-navy" aria-hidden="true" />
+                  </div>
+                </Link>
+              ))}
+          </div>
+
+          <p className="mt-6 text-center text-xs text-muted-foreground">
+            All services available 24/7 &nbsp;·&nbsp; Mobile across all Dubai areas &nbsp;·&nbsp; Price confirmed before work starts
+          </p>
+        </div>
+      </section>
+
       {/* ── Satwa Key Shop Section ──────────────────────────────────────────── */}
       <section
         aria-labelledby="satwa-section-heading"
@@ -350,20 +420,55 @@ export default function HomePage() {
                 </Button>
               </div>
             </div>
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-3 gap-3">
               {[
-                { label: 'Door Key Duplication', price: 'From AED 50', desc: 'All key types cut on-site' },
-                { label: 'Car Key Cutting', price: 'From AED 150', desc: 'Toyota, Nissan, BMW + more' },
-                { label: 'Door Lock Change', price: 'From AED 250', desc: 'Metal & wooden door locks' },
-                { label: 'Car Key Programming', price: 'From AED 300', desc: 'Transponder & smart keys' },
-                { label: 'Emergency Lockout', price: 'From AED 200', desc: 'Arrive in 15-20 min' },
-                { label: 'Smart Lock Install', price: 'From AED 350', desc: 'Digital & access card locks' },
-              ].map(({ label, price, desc }) => (
-                <div key={label} className="rounded-xl border border-white/10 bg-white/5 p-4">
-                  <p className="text-xs font-semibold text-brand-gold uppercase tracking-wide">{price}</p>
-                  <p className="mt-1 font-semibold text-white text-sm">{label}</p>
-                  <p className="mt-1 text-xs text-white/50">{desc}</p>
-                </div>
+                {
+                  src: '/images/shop/locksmith-shop-satwa-al-badaa-dubai.webp',
+                  alt: "Lock Repair Satwa shop exterior in Al Bada'a — key maker and locksmith in Satwa Dubai",
+                  caption: 'Our Shop — Satwa',
+                },
+                {
+                  src: '/images/shop/padlock-collection-lock-shop-satwa-dubai.webp',
+                  alt: 'Padlock and lock collection on display at Lock Repair Satwa, Al Bada\'a Dubai',
+                  caption: 'Padlocks & Locks',
+                },
+                {
+                  src: '/images/shop/key-duplication-display-for-sale-satwa-dubai.webp',
+                  alt: 'Key duplication display stand showing duplicate keys for sale — Lock Repair Satwa, Dubai',
+                  caption: 'Keys for Sale',
+                },
+                {
+                  src: '/images/services/car-remote-key-blanks-locksmith-shop-dubai.webp',
+                  alt: 'Car remote key blanks and spare keys on display at Lock Repair Satwa locksmith shop, Dubai',
+                  caption: 'Car Key Blanks',
+                },
+                {
+                  src: '/images/shop/door-lock-handles-repair-shop-satwa-dubai.webp',
+                  alt: 'Door handles and lock hardware display at Lock Repair Satwa, Satwa Dubai',
+                  caption: 'Door Locks',
+                },
+                {
+                  src: '/images/shop/keychains-accessories-key-shop-satwa-dubai.webp',
+                  alt: 'Key accessories and keychains at Lock Repair Satwa key shop in Satwa, Dubai',
+                  caption: 'Accessories',
+                },
+              ].map(({ src, alt, caption }) => (
+                <figure key={src} className="group">
+                  <div className="aspect-square overflow-hidden rounded-xl border border-white/10">
+                    <Image
+                      src={src}
+                      alt={alt}
+                      width={220}
+                      height={220}
+                      loading="lazy"
+                      sizes="(max-width: 1024px) 33vw, 220px"
+                      className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                    />
+                  </div>
+                  <figcaption className="mt-1.5 text-center text-[11px] font-medium text-white/50 truncate">
+                    {caption}
+                  </figcaption>
+                </figure>
               ))}
             </div>
           </div>
