@@ -43,6 +43,8 @@ export interface Service {
   /** URL-safe identifier used in /services/[slug] routes */
   slug: string
   title: string
+  /** Service category for grouped navigation */
+  category?: 'residential' | 'commercial' | 'automotive'
   /** <60 chars — used in <title> tag */
   metaTitle: string
   /** <160 chars — used in <meta name="description"> */
@@ -70,6 +72,22 @@ export interface Service {
   heroImage?: string
   /** Alt text for the hero image — keyword-rich, describes the scene */
   heroImageAlt?: string
+}
+
+// ── Product ───────────────────────────────────────────────────────────────────
+
+export interface Product {
+  slug: string
+  title: string
+  category: 'locks' | 'electronic-locks' | 'safes' | 'commercial-door-hardware'
+  metaTitle: string
+  metaDescription: string
+  description: string
+  features: string[]
+  pricing: { min: number; max: number; currency: 'AED'; note: string }
+  faqs: Array<{ question: string; answer: string }>
+  icon: string
+  heroImage?: string
 }
 
 // ── Location ──────────────────────────────────────────────────────────────────

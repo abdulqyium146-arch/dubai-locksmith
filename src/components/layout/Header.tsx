@@ -1,34 +1,77 @@
 'use client'
 // ─────────────────────────────────────────────────────────────────────────────
-// Lock Repair Satwa — Sticky Header
+// Lock Repair Satwa — Sticky Header with Mega-Menus
 // ─────────────────────────────────────────────────────────────────────────────
 import { useState, useEffect, useRef } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { Phone, ChevronDown, X, Menu, Clock } from 'lucide-react'
+import { Phone, ChevronDown, X, Menu, Clock, ChevronRight } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import {
   BUSINESS_NAME,
   PHONE_DISPLAY,
   PHONE_HREF,
 } from '@/lib/constants'
-import { services } from '@/data/services'
+import {
+  RESIDENTIAL_SERVICES,
+  COMMERCIAL_SERVICES,
+  AUTOMOTIVE_SERVICES,
+} from '@/data/services'
+import {
+  LOCK_PRODUCTS,
+  ELECTRONIC_LOCK_PRODUCTS,
+  SAFE_PRODUCTS,
+  COMMERCIAL_HARDWARE_PRODUCTS,
+  PRODUCT_CATEGORY_LABELS,
+} from '@/data/products'
 import { locations } from '@/data/locations'
 
-// ── Service & Location sub-menus (top items only) ────────────────────────────
-
-const SERVICE_LINKS = services.slice(0, 8).map((s) => ({
-  label: s.title,
-  href: `/services/${s.slug}`,
-  icon: s.icon,
-}))
+// ── Location sub-menu (top items only) ───────────────────────────────────────
 
 const LOCATION_LINKS = locations.slice(0, 9).map((l) => ({
   label: l.name,
   href: `/locations/${l.slug}`,
 }))
 
-// ── Dropdown Menu ─────────────────────────────────────────────────────────────
+// ── Services mega-menu data ───────────────────────────────────────────────────
+
+const SERVICES_MEGA = [
+  {
+    label: 'Residential Services',
+    items: RESIDENTIAL_SERVICES.map((s) => ({ label: s.title, href: `/services/${s.slug}`, icon: s.icon })),
+  },
+  {
+    label: 'Commercial Services',
+    items: COMMERCIAL_SERVICES.map((s) => ({ label: s.title, href: `/services/${s.slug}`, icon: s.icon })),
+  },
+  {
+    label: 'Automotive Services',
+    items: AUTOMOTIVE_SERVICES.map((s) => ({ label: s.title, href: `/services/${s.slug}`, icon: s.icon })),
+  },
+]
+
+// ── Products mega-menu data ───────────────────────────────────────────────────
+
+const PRODUCTS_MEGA = [
+  {
+    label: PRODUCT_CATEGORY_LABELS['locks'],
+    items: LOCK_PRODUCTS.map((p) => ({ label: p.title, href: `/products/${p.slug}`, icon: p.icon })),
+  },
+  {
+    label: PRODUCT_CATEGORY_LABELS['electronic-locks'],
+    items: ELECTRONIC_LOCK_PRODUCTS.map((p) => ({ label: p.title, href: `/products/${p.slug}`, icon: p.icon })),
+  },
+  {
+    label: PRODUCT_CATEGORY_LABELS['safes'],
+    items: SAFE_PRODUCTS.map((p) => ({ label: p.title, href: `/products/${p.slug}`, icon: p.icon })),
+  },
+  {
+    label: PRODUCT_CATEGORY_LABELS['commercial-door-hardware'],
+    items: COMMERCIAL_HARDWARE_PRODUCTS.map((p) => ({ label: p.title, href: `/products/${p.slug}`, icon: p.icon })),
+  },
+]
+
+// ── Simple Dropdown (for Locations) ──────────────────────────────────────────
 
 interface DropdownProps {
   label: string
@@ -45,7 +88,90 @@ function NavDropdown({ label, href, items, isOpen, onToggle, onClose, scrolled }
   const isActive = pathname.startsWith(href)
   const ref = useRef<HTMLDivElement>(null)
 
-  // Close on outside click
+  useEffect(() => {
+    function handler(e: MouseEvent) {
+      if (ref.current && !ref.current.contains(e.target as Node)) {
+        onClose()
+      }
+    }
+    if (isOpen) document.addEventListener('mousedown', handler)
+    return () => document.removeEventListener('mousedown', handler)
+  }, [isOpen, onClose])
+
+  return (
+    <div ref={ref} className="relative">
+      <button
+        onClick={onToggle}
+        aria-expanded={isOpen}
+        aria-haspopup="true"
+        className={cn(
+          'flex items-center gap-1 rounded-md px-3 py-2 text-sm font-medium transition-colors',
+          'hover:text-brand-gold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring',
+          isActive ? 'text-brand-gold' : scrolled ? 'text-foreground' : 'text-white/90',
+        )}
+      >
+        {label}
+        <ChevronDown
+          className={cn('h-3.5 w-3.5 transition-transform duration-200', isOpen && 'rotate-180')}
+          aria-hidden="true"
+        />
+      </button>
+
+      {isOpen && (
+        <div
+          role="menu"
+          className="absolute left-0 top-full z-50 mt-2 w-64 rounded-xl border border-border bg-popover p-2 shadow-navy animate-fade-in"
+        >
+          <Link
+            href={href}
+            role="menuitem"
+            onClick={onClose}
+            className="mb-1 flex items-center justify-between rounded-lg px-3 py-2 text-sm font-semibold text-brand-gold hover:bg-brand-gold/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+          >
+            View all {label}
+            <ChevronDown className="h-3.5 w-3.5 -rotate-90" aria-hidden="true" />
+          </Link>
+          <div className="my-1 h-px bg-border" role="separator" />
+          {items.map((item) => (
+            <Link
+              key={item.href}
+              href={item.href}
+              role="menuitem"
+              onClick={onClose}
+              className="flex items-center gap-3 rounded-lg px-3 py-2 text-sm text-foreground hover:bg-muted hover:text-brand-gold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+            >
+              {item.icon && <span aria-hidden="true" className="text-base leading-none">{item.icon}</span>}
+              {item.label}
+            </Link>
+          ))}
+        </div>
+      )}
+    </div>
+  )
+}
+
+// ── Mega-Menu Dropdown ────────────────────────────────────────────────────────
+
+interface MegaMenuColumn {
+  label: string
+  items: Array<{ label: string; href: string; icon?: string }>
+}
+
+interface MegaMenuProps {
+  label: string
+  href: string
+  columns: MegaMenuColumn[]
+  isOpen: boolean
+  onToggle: () => void
+  onClose: () => void
+  scrolled: boolean
+}
+
+function MegaMenuDropdown({ label, href, columns, isOpen, onToggle, onClose, scrolled }: MegaMenuProps) {
+  const pathname = usePathname()
+  const isActive = pathname.startsWith(href)
+  const ref = useRef<HTMLDivElement>(null)
+
   useEffect(() => {
     function handler(e: MouseEvent) {
       if (ref.current && !ref.current.contains(e.target as Node)) {
@@ -79,38 +205,115 @@ function NavDropdown({ label, href, items, isOpen, onToggle, onClose, scrolled }
         <div
           role="menu"
           className={cn(
-            'absolute left-0 top-full z-50 mt-2 w-64 rounded-xl border border-border bg-popover p-2 shadow-navy',
-            'animate-fade-in',
+            'absolute left-1/2 -translate-x-1/2 top-full z-50 mt-2 rounded-xl border border-border bg-popover shadow-navy animate-fade-in',
+            columns.length >= 4 ? 'w-[820px]' : 'w-[640px]',
           )}
         >
-          {/* "View all" link */}
-          <Link
-            href={href}
-            role="menuitem"
-            onClick={onClose}
-            className="mb-1 flex items-center justify-between rounded-lg px-3 py-2 text-sm font-semibold text-brand-gold hover:bg-brand-gold/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
-          >
-            View all {label}
-            <ChevronDown className="h-3.5 w-3.5 -rotate-90" aria-hidden="true" />
-          </Link>
-
-          <div className="my-1 h-px bg-border" role="separator" />
-
-          {items.map((item) => (
+          {/* Top: View All link */}
+          <div className="flex items-center justify-between border-b border-border px-5 py-3">
             <Link
-              key={item.href}
-              href={item.href}
+              href={href}
               role="menuitem"
               onClick={onClose}
-              className="flex items-center gap-3 rounded-lg px-3 py-2 text-sm text-foreground hover:bg-muted hover:text-brand-gold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+              className="flex items-center gap-1.5 text-sm font-semibold text-brand-gold hover:text-brand-gold-dark focus-visible:outline-none"
             >
-              {item.icon && (
-                <span aria-hidden="true" className="text-base leading-none">
-                  {item.icon}
-                </span>
-              )}
-              {item.label}
+              View all {label}
+              <ChevronRight className="h-3.5 w-3.5" aria-hidden="true" />
             </Link>
+          </div>
+
+          {/* Columns */}
+          <div className={cn(
+            'grid gap-0 divide-x divide-border p-4',
+            columns.length === 3 ? 'grid-cols-3' : 'grid-cols-4',
+          )}>
+            {columns.map((col) => (
+              <div key={col.label} className="px-4 first:pl-0 last:pr-0">
+                {/* Column header */}
+                <p className="mb-3 text-xs font-bold uppercase tracking-wider text-brand-gold border-b border-brand-gold/20 pb-2">
+                  {col.label}
+                </p>
+                {/* Items */}
+                <ul className="space-y-0.5">
+                  {col.items.map((item) => (
+                    <li key={item.href}>
+                      <Link
+                        href={item.href}
+                        role="menuitem"
+                        onClick={onClose}
+                        className="flex items-center gap-2 rounded-lg px-2 py-1.5 text-xs text-foreground hover:bg-muted hover:text-brand-gold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring transition-colors"
+                      >
+                        {item.icon && (
+                          <span aria-hidden="true" className="text-sm leading-none shrink-0">
+                            {item.icon}
+                          </span>
+                        )}
+                        <span className="leading-tight">{item.label}</span>
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+    </div>
+  )
+}
+
+// ── Mobile Accordion Section ──────────────────────────────────────────────────
+
+interface MobileAccordionProps {
+  label: string
+  href: string
+  sections: Array<{ label: string; items: Array<{ label: string; href: string; icon?: string }> }>
+  isOpen: boolean
+  onToggle: () => void
+}
+
+function MobileAccordion({ label, href, sections, isOpen, onToggle }: MobileAccordionProps) {
+  return (
+    <div>
+      <div className="flex items-center gap-2">
+        <Link
+          href={href}
+          className="flex-1 rounded-lg px-4 py-3 font-semibold text-brand-gold hover:bg-brand-gold/10"
+        >
+          All {label}
+        </Link>
+        <button
+          onClick={onToggle}
+          aria-expanded={isOpen}
+          className="rounded-lg p-2 text-muted-foreground hover:bg-muted hover:text-brand-gold"
+          aria-label={`${isOpen ? 'Collapse' : 'Expand'} ${label} submenu`}
+        >
+          <ChevronDown
+            className={cn('h-4 w-4 transition-transform duration-200', isOpen && 'rotate-180')}
+            aria-hidden="true"
+          />
+        </button>
+      </div>
+      {isOpen && (
+        <div className="ml-4 mt-1 space-y-3 pb-2">
+          {sections.map((section) => (
+            <div key={section.label}>
+              <p className="px-4 py-1 text-xs font-bold uppercase tracking-wider text-brand-gold/70">
+                {section.label}
+              </p>
+              <div className="space-y-0.5">
+                {section.items.map((item) => (
+                  <Link
+                    key={item.href}
+                    href={item.href}
+                    className="flex items-center gap-2 rounded-lg px-4 py-2 text-sm text-muted-foreground hover:text-brand-gold hover:bg-muted"
+                  >
+                    {item.icon && <span aria-hidden="true">{item.icon}</span>}
+                    {item.label}
+                  </Link>
+                ))}
+              </div>
+            </div>
           ))}
         </div>
       )}
@@ -125,21 +328,20 @@ export function Header() {
   const [scrolled, setScrolled] = useState(false)
   const [mobileOpen, setMobileOpen] = useState(false)
   const [openDropdown, setOpenDropdown] = useState<string | null>(null)
+  const [mobileExpanded, setMobileExpanded] = useState<string | null>(null)
 
-  // Detect scroll for backdrop blur
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 8)
     window.addEventListener('scroll', onScroll, { passive: true })
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
-  // Close mobile menu on navigation
   useEffect(() => {
     setMobileOpen(false)
     setOpenDropdown(null)
+    setMobileExpanded(null)
   }, [pathname])
 
-  // Prevent body scroll when mobile menu is open
   useEffect(() => {
     if (mobileOpen) {
       document.body.style.overflow = 'hidden'
@@ -155,6 +357,9 @@ export function Header() {
     setOpenDropdown((prev) => (prev === key ? null : key))
 
   const closeDropdown = () => setOpenDropdown(null)
+
+  const toggleMobileExpanded = (key: string) =>
+    setMobileExpanded((prev) => (prev === key ? null : key))
 
   return (
     <header
@@ -174,35 +379,17 @@ export function Header() {
           className="flex items-center gap-2.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded-md"
           aria-label={`${BUSINESS_NAME} — Home`}
         >
-          {/* SVG Logo mark */}
           <div
             aria-hidden="true"
             className="flex h-9 w-9 items-center justify-center rounded-lg bg-brand-gold"
           >
-            <svg
-              viewBox="0 0 36 36"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-6 w-6"
-            >
+            <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" className="h-6 w-6">
               <circle cx="13" cy="13" r="8" stroke="#0B1F3A" strokeWidth="2.5" />
               <circle cx="13" cy="13" r="3" fill="#0B1F3A" />
-              <path
-                d="M19 19l12 12"
-                stroke="#0B1F3A"
-                strokeWidth="2.5"
-                strokeLinecap="round"
-              />
-              <path
-                d="M26 26l-2 4M28 28l4-2"
-                stroke="#0B1F3A"
-                strokeWidth="2"
-                strokeLinecap="round"
-              />
+              <path d="M19 19l12 12" stroke="#0B1F3A" strokeWidth="2.5" strokeLinecap="round" />
+              <path d="M26 26l-2 4M28 28l4-2" stroke="#0B1F3A" strokeWidth="2" strokeLinecap="round" />
             </svg>
           </div>
-
-          {/* Business name */}
           <div className="flex flex-col leading-tight">
             <span
               className={cn(
@@ -212,27 +399,35 @@ export function Header() {
             >
               Lock Repair
             </span>
-            <span className="font-heading text-xs font-semibold text-brand-gold">
-              Satwa
-            </span>
+            <span className="font-heading text-xs font-semibold text-brand-gold">Satwa</span>
           </div>
         </Link>
 
         {/* ── Desktop Navigation ────────────────────────────────────────────── */}
-        <nav
-          aria-label="Main navigation"
-          className="hidden items-center gap-1 lg:flex"
-        >
-          <NavDropdown
+        <nav aria-label="Main navigation" className="hidden items-center gap-1 lg:flex">
+          {/* Services Mega-Menu */}
+          <MegaMenuDropdown
             label="Services"
             href="/services"
-            items={SERVICE_LINKS}
+            columns={SERVICES_MEGA}
             isOpen={openDropdown === 'services'}
             onToggle={() => toggleDropdown('services')}
             onClose={closeDropdown}
             scrolled={scrolled}
           />
 
+          {/* Products Mega-Menu */}
+          <MegaMenuDropdown
+            label="Products"
+            href="/products"
+            columns={PRODUCTS_MEGA}
+            isOpen={openDropdown === 'products'}
+            onToggle={() => toggleDropdown('products')}
+            onClose={closeDropdown}
+            scrolled={scrolled}
+          />
+
+          {/* Locations Dropdown */}
           <NavDropdown
             label="Locations"
             href="/locations"
@@ -268,7 +463,6 @@ export function Header() {
 
         {/* ── Right-side actions ────────────────────────────────────────────── */}
         <div className="flex items-center gap-3">
-          {/* Hours indicator — always visible */}
           <div
             className={cn(
               'hidden items-center gap-1.5 rounded-full border px-3 py-1 text-xs font-semibold sm:flex',
@@ -282,7 +476,6 @@ export function Header() {
             Open 24/7
           </div>
 
-          {/* Click-to-call — always visible on desktop */}
           <a
             href={PHONE_HREF}
             className={cn(
@@ -296,7 +489,6 @@ export function Header() {
             {PHONE_DISPLAY}
           </a>
 
-          {/* Mobile hamburger */}
           <button
             aria-label={mobileOpen ? 'Close menu' : 'Open menu'}
             aria-expanded={mobileOpen}
@@ -304,9 +496,7 @@ export function Header() {
             onClick={() => setMobileOpen((p) => !p)}
             className={cn(
               'rounded-md p-2 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring lg:hidden',
-              scrolled
-                ? 'text-foreground hover:bg-muted'
-                : 'text-white hover:bg-white/10',
+              scrolled ? 'text-foreground hover:bg-muted' : 'text-white hover:bg-white/10',
             )}
           >
             {mobileOpen ? (
@@ -355,27 +545,23 @@ export function Header() {
                 Home
               </Link>
 
-              {/* Services section */}
-              <div>
-                <Link
-                  href="/services"
-                  className="block rounded-lg px-4 py-3 font-semibold text-brand-gold hover:bg-brand-gold/10"
-                >
-                  All Services
-                </Link>
-                <div className="ml-4 mt-1 space-y-1">
-                  {SERVICE_LINKS.map((s) => (
-                    <Link
-                      key={s.href}
-                      href={s.href}
-                      className="flex items-center gap-2 rounded-lg px-4 py-2 text-sm text-muted-foreground hover:text-brand-gold hover:bg-muted"
-                    >
-                      <span aria-hidden="true">{s.icon}</span>
-                      {s.label}
-                    </Link>
-                  ))}
-                </div>
-              </div>
+              {/* Services accordion */}
+              <MobileAccordion
+                label="Services"
+                href="/services"
+                sections={SERVICES_MEGA}
+                isOpen={mobileExpanded === 'services'}
+                onToggle={() => toggleMobileExpanded('services')}
+              />
+
+              {/* Products accordion */}
+              <MobileAccordion
+                label="Products"
+                href="/products"
+                sections={PRODUCTS_MEGA}
+                isOpen={mobileExpanded === 'products'}
+                onToggle={() => toggleMobileExpanded('products')}
+              />
 
               {/* Locations section */}
               <div>
