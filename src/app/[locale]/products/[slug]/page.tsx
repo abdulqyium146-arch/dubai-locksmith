@@ -45,6 +45,7 @@ import {
 } from '@/lib/constants'
 import { formatPriceRange } from '@/lib/utils'
 import { routing } from '@/i18n/routing'
+import { getServicesForProduct } from '@/lib/seo'
 import type { Product } from '@/types'
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -192,6 +193,7 @@ export default async function ProductPage({
   const tNav = await getTranslations('nav')
 
   const relatedProducts = getRelatedProducts(product.slug, product.category)
+  const relatedServices = getServicesForProduct(product.slug)
   const categoryLabel = PRODUCT_CATEGORY_LABELS[product.category]
 
   const breadcrumbs = [
@@ -406,6 +408,52 @@ export default async function ProductPage({
         heading={t('ctaHeading')}
         subtext={t('ctaSubtext')}
       />
+
+      {/* ── Related Services ─────────────────────────────────────────────────── */}
+      {relatedServices.length > 0 && (
+        <section
+          aria-labelledby="product-related-services-heading"
+          className="py-12 sm:py-14 bg-muted/40 border-y border-border"
+        >
+          <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+            <div className="mb-6 flex items-end justify-between gap-4">
+              <h2
+                id="product-related-services-heading"
+                className="font-heading text-xl font-bold text-foreground"
+              >
+                Installation &amp; Repair Services
+              </h2>
+              <Link
+                href="/services"
+                className="flex items-center gap-1.5 text-sm font-semibold text-brand-gold hover:text-brand-gold-dark transition-colors"
+              >
+                All Services
+                <ArrowRight className="h-4 w-4" aria-hidden="true" />
+              </Link>
+            </div>
+            <div className="grid gap-4 sm:grid-cols-2">
+              {relatedServices.map((service) => (
+                <Link
+                  key={service.slug}
+                  href={`/services/${service.slug}`}
+                  className="group flex items-start gap-4 rounded-xl border border-border bg-card p-5 shadow-sm hover:border-brand-gold/40 hover:shadow-md transition-all"
+                >
+                  <span className="text-2xl shrink-0" aria-hidden="true">{service.icon}</span>
+                  <div className="flex-1 min-w-0">
+                    <p className="font-heading text-sm font-semibold text-foreground group-hover:text-brand-gold transition-colors">
+                      {service.title}
+                    </p>
+                    <p className="mt-1 text-xs text-muted-foreground">
+                      {formatPriceRange(service.pricing.min, service.pricing.max)}
+                    </p>
+                  </div>
+                  <ArrowRight className="h-4 w-4 shrink-0 text-muted-foreground group-hover:text-brand-gold transition-colors mt-0.5" aria-hidden="true" />
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* ── Related Products ──────────────────────────────────────────────────── */}
       {relatedProducts.length > 0 && (

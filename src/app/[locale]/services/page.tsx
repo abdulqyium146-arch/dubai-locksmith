@@ -10,6 +10,7 @@ import { CtaSection } from '@/components/sections/CtaSection'
 import { BreadcrumbNav } from '@/components/sections/BreadcrumbNav'
 import { TrustBar } from '@/components/sections/TrustBar'
 import { Button } from '@/components/ui/Button'
+import { JsonLd } from '@/components/schema/JsonLd'
 
 import {
   services,
@@ -25,6 +26,8 @@ import {
   SITE_URL,
   DEFAULT_OG_IMAGE,
 } from '@/lib/constants'
+import { routing } from '@/i18n/routing'
+import { buildItemListSchema } from '@/lib/seo'
 import type { Service } from '@/types'
 
 // ── Metadata ──────────────────────────────────────────────────────────────────
@@ -63,6 +66,12 @@ export async function generateMetadata({
       images: [DEFAULT_OG_IMAGE],
     },
   }
+}
+
+// ── Static params (required for SSG with next-intl) ──────────────────────────
+
+export function generateStaticParams() {
+  return routing.locales.map((locale) => ({ locale }))
 }
 
 // ── Emergency services subset ─────────────────────────────────────────────────
@@ -129,8 +138,41 @@ export default async function ServicesPage({
     },
   ]
 
+  // ── Schemas ───────────────────────────────────────────────────────────────
+  const itemListSchema = buildItemListSchema(
+    'All Locksmith Services in Dubai — Lock Repair Satwa',
+    `Complete range of ${services.length} locksmith and car key services across Dubai. Residential, commercial and automotive. Open 24/7.`,
+    services.map((s) => ({
+      name: s.metaTitle,
+      url: `${SITE_URL}/${locale}/services/${s.slug}`,
+    }))
+  )
+
+  const collectionPageSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    '@id': `${SITE_URL}/${locale}/services#collection`,
+    name: t('pageTitle'),
+    description: t('pageDescription'),
+    url: `${SITE_URL}/${locale}/services`,
+    provider: {
+      '@type': 'Locksmith',
+      '@id': `${SITE_URL}/#lock-repair-satwa`,
+      name: BUSINESS_NAME,
+    },
+    breadcrumb: {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: `${SITE_URL}/${locale}` },
+        { '@type': 'ListItem', position: 2, name: 'Services', item: `${SITE_URL}/${locale}/services` },
+      ],
+    },
+  }
+
   return (
     <>
+      <JsonLd data={itemListSchema} />
+      <JsonLd data={collectionPageSchema} />
       {/* ── Page Header ─────────────────────────────────────────────────────── */}
       <section
         aria-label="Services page header"

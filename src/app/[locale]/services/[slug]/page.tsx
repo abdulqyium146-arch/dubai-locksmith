@@ -23,11 +23,12 @@ import { ReviewsSection } from '@/components/sections/ReviewsSection'
 import { CtaSection } from '@/components/sections/CtaSection'
 import { ServiceCard } from '@/components/sections/ServiceCard'
 import { ServiceSchema } from '@/components/schema/ServiceSchema'
+import { JsonLd } from '@/components/schema/JsonLd'
 import { Badge } from '@/components/ui/Badge'
 import { Button } from '@/components/ui/Button'
 import { Link } from '@/i18n/navigation'
 
-import { services, getServiceBySlug, getAllServiceSlugs } from '@/data/services'
+import { getServiceBySlug, getAllServiceSlugs } from '@/data/services'
 import {
   BUSINESS_NAME,
   PHONE_DISPLAY,
@@ -38,6 +39,7 @@ import {
 } from '@/lib/constants'
 import { formatPriceRange } from '@/lib/utils'
 import { routing } from '@/i18n/routing'
+import { getRelatedServices, TOP_SERVICE_LOCATIONS, getProductsForService } from '@/lib/seo'
 import type { Review } from '@/types'
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -123,9 +125,8 @@ export default async function ServicePage({
   const t = await getTranslations('serviceDetail')
   const tCommon = await getTranslations('common')
 
-  const relatedServices = services
-    .filter((s) => s.slug !== service.slug)
-    .slice(0, 4)
+  const relatedServices = getRelatedServices(service.slug, 4)
+  const relatedProducts = getProductsForService(service.slug)
 
   const breadcrumbs = [
     { name: tCommon('breadcrumbHome'), href: '/' },
@@ -147,6 +148,21 @@ export default async function ServicePage({
     <>
       {/* Schemas */}
       <ServiceSchema service={service} />
+      {service.heroImage && (
+        <JsonLd data={{
+          '@context': 'https://schema.org',
+          '@type': 'ImageObject',
+          '@id': `${SITE_URL}/${locale}/services/${service.slug}#hero-image`,
+          url: `${SITE_URL}${service.heroImage}`,
+          contentUrl: `${SITE_URL}${service.heroImage}`,
+          name: service.heroImageAlt ?? `${service.title} in Dubai — ${BUSINESS_NAME}`,
+          description: service.metaDescription,
+          width: 900,
+          height: 500,
+          representativeOfPage: true,
+          author: { '@id': `${SITE_URL}/#lock-repair-satwa` },
+        }} />
+      )}
 
       {/* ── 1. Hero ─────────────────────────────────────────────────────────── */}
       <section
@@ -526,7 +542,82 @@ export default async function ServicePage({
         subtext={t('ctaSubtext')}
       />
 
-      {/* ── 10. Related Services ─────────────────────────────────────────────── */}
+      {/* ── 10. Service Areas ────────────────────────────────────────────────── */}
+      <section
+        aria-labelledby="service-areas-heading"
+        className="py-12 sm:py-14 bg-muted/40 border-y border-border"
+      >
+        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+          <h2
+            id="service-areas-heading"
+            className="font-heading text-xl font-bold text-foreground mb-4"
+          >
+            {service.title} Service Areas in Dubai
+          </h2>
+          <p className="text-sm text-muted-foreground mb-5">
+            Our mobile technicians cover all Dubai areas. Priority response in these key locations:
+          </p>
+          <div className="flex flex-wrap gap-3">
+            {TOP_SERVICE_LOCATIONS.map((loc) => (
+              <Link
+                key={loc.slug}
+                href={`/locations/${loc.slug}`}
+                className="inline-flex items-center gap-1.5 rounded-full border border-border bg-card px-4 py-1.5 text-sm font-medium text-foreground hover:border-brand-gold/50 hover:bg-brand-gold/5 hover:text-brand-gold transition-colors"
+              >
+                {loc.name}
+                <ArrowRight className="h-3.5 w-3.5 opacity-50" aria-hidden="true" />
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── 11. Related Products ─────────────────────────────────────────────── */}
+      {relatedProducts.length > 0 && (
+        <section
+          aria-labelledby="related-products-heading"
+          className="py-12 sm:py-14 bg-background"
+        >
+          <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+            <div className="mb-6 flex items-end justify-between gap-4">
+              <h2
+                id="related-products-heading"
+                className="font-heading text-xl font-bold text-foreground"
+              >
+                Related Products
+              </h2>
+              <Link
+                href="/products"
+                className="flex items-center gap-1.5 text-sm font-semibold text-brand-gold hover:text-brand-gold-dark transition-colors"
+              >
+                All Products
+                <ArrowRight className="h-4 w-4" aria-hidden="true" />
+              </Link>
+            </div>
+            <div className="grid gap-5 sm:grid-cols-2">
+              {relatedProducts.map((product) => (
+                <Link
+                  key={product.slug}
+                  href={`/products/${product.slug}`}
+                  className="group flex items-start gap-4 rounded-xl border border-border bg-card p-5 shadow-sm hover:border-brand-gold/40 hover:shadow-md transition-all"
+                >
+                  <div className="flex-1 min-w-0">
+                    <p className="font-heading font-semibold text-foreground group-hover:text-brand-gold transition-colors text-sm">
+                      {product.title}
+                    </p>
+                    <p className="mt-1 text-xs text-muted-foreground line-clamp-2">
+                      {product.metaDescription}
+                    </p>
+                  </div>
+                  <ArrowRight className="h-4 w-4 shrink-0 text-muted-foreground group-hover:text-brand-gold transition-colors mt-0.5" aria-hidden="true" />
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* ── 12. Related Services ─────────────────────────────────────────────── */}
       <section
         aria-labelledby="related-services-heading"
         className="py-14 sm:py-16 bg-background"

@@ -51,6 +51,7 @@ import {
   GOOGLE_MAPS_URL,
 } from '@/lib/constants'
 import { routing } from '@/i18n/routing'
+import { TOP_LOCATION_PRODUCTS } from '@/lib/seo'
 
 // ─────────────────────────────────────────────────────────────────────────────
 // Static Params — locale × slug combinations
@@ -845,6 +846,49 @@ export default async function LocationPage({
           </div>
         </section>
       )}
+
+      {/* ── 8b. Related Products ─────────────────────────────────────────── */}
+      <section
+        aria-labelledby="location-products-heading"
+        className="py-12 sm:py-14 bg-muted/40 border-y border-border"
+      >
+        <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+          <div className="mb-6 flex items-end justify-between gap-4">
+            <h2
+              id="location-products-heading"
+              className="font-heading text-xl font-bold text-foreground"
+            >
+              Locks &amp; Security Products in {location.name}
+            </h2>
+            <Link
+              href="/products"
+              className="flex shrink-0 items-center gap-1.5 text-sm font-semibold text-brand-gold hover:text-brand-gold-dark transition-colors"
+            >
+              All Products
+              <ArrowRight className="h-4 w-4" aria-hidden="true" />
+            </Link>
+          </div>
+          <div className="grid gap-4 sm:grid-cols-3">
+            {TOP_LOCATION_PRODUCTS.map((product) => (
+              <Link
+                key={product.slug}
+                href={`/products/${product.slug}`}
+                className="group flex items-center gap-3 rounded-xl border border-border bg-card p-4 shadow-sm hover:border-brand-gold/40 hover:shadow-md transition-all"
+              >
+                <div className="flex-1 min-w-0">
+                  <p className="text-sm font-semibold text-foreground group-hover:text-brand-gold transition-colors">
+                    {product.title}
+                  </p>
+                  <p className="text-xs text-muted-foreground mt-0.5">
+                    Supply &amp; installation in {location.name}
+                  </p>
+                </div>
+                <ArrowRight className="h-4 w-4 shrink-0 text-muted-foreground group-hover:text-brand-gold transition-colors" aria-hidden="true" />
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* ── 9. Reviews Placeholder ────────────────────────────────────────── */}
       <section
