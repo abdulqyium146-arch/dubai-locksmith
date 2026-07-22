@@ -144,7 +144,19 @@
     "diff5Title": "Upfront, Transparent Pricing",
     "diff5Desc": "You receive a firm quote before we start any work. No hidden fees, no surprises.",
     "diff6Title": "50+ Car Brands Covered",
-    "diff6Desc": "From Toyota Land Cruisers to BMW, Mercedes-Benz, Tesla and everything in between."
+    "diff6Desc": "From Toyota Land Cruisers to BMW, Mercedes-Benz, Tesla and everything in between.",
+    "recentWorkBadge": "Real Jobs · Dubai",
+    "recentWorkHeading": "Recent Locksmith Work in Dubai",
+    "recentWorkSubtext": "Photos from actual jobs completed by our team — door lock repairs, car key replacements, and smart key programming across Dubai.",
+    "recentWorkJob1Title": "Door Lock Repair & Replacement",
+    "recentWorkJob1Location": "Al Bada'a, Satwa — Dubai",
+    "recentWorkJob1Alt": "Door lock repair and replacement Dubai — Hoving lock mechanism opened by locksmith at Lock Repair Satwa",
+    "recentWorkJob2Title": "Lexus Car Key Replacement",
+    "recentWorkJob2Location": "Dubai, UAE",
+    "recentWorkJob2Alt": "Lexus car key replacement Dubai — 4-button Lexus smart key fob programmed by Lock Repair Satwa auto locksmith",
+    "recentWorkJob3Title": "Lexus Smart Key Programming",
+    "recentWorkJob3Location": "Dubai, UAE",
+    "recentWorkJob3Alt": "Lexus smart key programming Dubai — Lexus remote key fob programming service by Lock Repair Satwa"
   },
   "services": {
     "pageTitle": "All Locksmith Services — Dubai",

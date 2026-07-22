@@ -471,6 +471,115 @@ export default async function HomePage({
         </div>
       </section>
 
+      {/* ── Recent Work Section ─────────────────────────────────────────────── */}
+      <section
+        aria-labelledby="recent-work-heading"
+        className="py-16 sm:py-20 bg-muted/40 border-y border-border"
+      >
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="mb-10 text-center">
+            <span className="inline-flex items-center gap-1.5 rounded-full border border-brand-gold/30 bg-brand-gold/10 px-3 py-1 text-xs font-semibold text-brand-gold mb-4">
+              {t('recentWorkBadge')}
+            </span>
+            <h2
+              id="recent-work-heading"
+              className="font-heading text-3xl font-bold tracking-tight text-foreground sm:text-4xl"
+            >
+              {t('recentWorkHeading')}
+            </h2>
+            <p className="mt-4 text-base text-muted-foreground max-w-xl mx-auto">
+              {t('recentWorkSubtext')}
+            </p>
+          </div>
+
+          <div className="grid gap-6 sm:grid-cols-3">
+            {/* Job 1 — Door Lock Repair */}
+            <Link
+              href="/services/lock-repair"
+              className="group relative overflow-hidden rounded-2xl border border-border bg-card shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+              aria-label={t('recentWorkJob1Title')}
+            >
+              <div className="aspect-[3/4] overflow-hidden bg-muted">
+                <Image
+                  src="/images/door-lock-repair-dubai-lock-replacement-satwa.jpg.webp"
+                  alt={t('recentWorkJob1Alt')}
+                  width={400}
+                  height={533}
+                  loading="lazy"
+                  sizes="(max-width: 640px) calc(100vw - 32px), (max-width: 1024px) calc(33vw - 24px), 380px"
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+              </div>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent pointer-events-none" />
+              <div className="absolute bottom-0 left-0 right-0 p-4">
+                <p className="text-[10px] font-bold text-brand-gold uppercase tracking-widest">
+                  {t('recentWorkJob1Location')}
+                </p>
+                <p className="mt-1 text-sm font-semibold text-white leading-snug">
+                  {t('recentWorkJob1Title')}
+                </p>
+              </div>
+            </Link>
+
+            {/* Job 2 — Lexus Car Key Replacement */}
+            <Link
+              href="/services/car-key-replacement"
+              className="group relative overflow-hidden rounded-2xl border border-border bg-card shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+              aria-label={t('recentWorkJob2Title')}
+            >
+              <div className="aspect-[3/4] overflow-hidden bg-muted">
+                <Image
+                  src="/images/lexus-car-key-replacement-dubai-auto-locksmith.jpg.webp"
+                  alt={t('recentWorkJob2Alt')}
+                  width={400}
+                  height={533}
+                  loading="lazy"
+                  sizes="(max-width: 640px) calc(100vw - 32px), (max-width: 1024px) calc(33vw - 24px), 380px"
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+              </div>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent pointer-events-none" />
+              <div className="absolute bottom-0 left-0 right-0 p-4">
+                <p className="text-[10px] font-bold text-brand-gold uppercase tracking-widest">
+                  {t('recentWorkJob2Location')}
+                </p>
+                <p className="mt-1 text-sm font-semibold text-white leading-snug">
+                  {t('recentWorkJob2Title')}
+                </p>
+              </div>
+            </Link>
+
+            {/* Job 3 — Lexus Smart Key Programming */}
+            <Link
+              href="/services/remote-smart-key-programming"
+              className="group relative overflow-hidden rounded-2xl border border-border bg-card shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+              aria-label={t('recentWorkJob3Title')}
+            >
+              <div className="aspect-[3/4] overflow-hidden bg-muted">
+                <Image
+                  src="/images/lexus-smart-key-programming-dubai-car-locksmith.jpg.webp"
+                  alt={t('recentWorkJob3Alt')}
+                  width={400}
+                  height={533}
+                  loading="lazy"
+                  sizes="(max-width: 640px) calc(100vw - 32px), (max-width: 1024px) calc(33vw - 24px), 380px"
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+              </div>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent pointer-events-none" />
+              <div className="absolute bottom-0 left-0 right-0 p-4">
+                <p className="text-[10px] font-bold text-brand-gold uppercase tracking-widest">
+                  {t('recentWorkJob3Location')}
+                </p>
+                <p className="mt-1 text-sm font-semibold text-white leading-snug">
+                  {t('recentWorkJob3Title')}
+                </p>
+              </div>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* ── 4. Locations Section ────────────────────────────────────────────── */}
       <section
         aria-labelledby="locations-heading"
