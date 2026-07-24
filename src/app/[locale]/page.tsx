@@ -44,16 +44,16 @@ export async function generateMetadata({
     title: `${t('siteName')} | ${t('tagline')}`,
     description: t('defaultDescription'),
     alternates: {
-      canonical: `${SITE_URL}/${locale}`,
+      canonical: locale === 'en' ? SITE_URL : `${SITE_URL}/${locale}`,
       languages: {
-        en: `${SITE_URL}/en`,
+        en: SITE_URL,
         ar: `${SITE_URL}/ar`,
       },
     },
     openGraph: {
       type: 'website',
       locale: locale === 'ar' ? 'ar_AE' : 'en_AE',
-      url: `${SITE_URL}/${locale}`,
+      url: locale === 'en' ? SITE_URL : `${SITE_URL}/${locale}`,
       siteName: t('siteName'),
       title: `${t('siteName')} | ${t('tagline')}`,
       description: t('defaultDescription'),
