@@ -1,8 +1,7 @@
 'use client'
 
-import { useState, useTransition } from 'react'
+import { useState } from 'react'
 import { Phone, MessageCircle, CheckCircle2, AlertTriangle, Loader2 } from 'lucide-react'
-import { createClient } from '@/utils/supabase/client'
 import { Button } from '@/components/ui/Button'
 import { PHONE_HREF, PHONE_DISPLAY, WHATSAPP_HREF } from '@/lib/constants'
 
@@ -57,7 +56,6 @@ type FormState = 'idle' | 'submitting' | 'success' | 'error'
 export function BookingForm() {
   const [state, setState] = useState<FormState>('idle')
   const [errorMsg, setErrorMsg] = useState('')
-  const [, startTransition] = useTransition()
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault()
@@ -72,20 +70,25 @@ export function BookingForm() {
       area: formData.get('area') as string,
       description: formData.get('description') as string,
       preferred_time: formData.get('preferred_time') as string,
-      status: 'pending',
     }
 
-    startTransition(async () => {
-      const supabase = createClient()
-      const { error } = await supabase.from('bookings').insert([payload])
-
-      if (error) {
+    try {
+      const res = await fetch('/api/bookings', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+      })
+      const data = await res.json()
+      if (!res.ok) {
         setState('error')
-        setErrorMsg(error.message)
+        setErrorMsg(data.error || 'Submission failed. Please try again.')
       } else {
         setState('success')
       }
-    })
+    } catch {
+      setState('error')
+      setErrorMsg('Network error. Please check your connection and try again.')
+    }
   }
 
   if (state === 'success') {
