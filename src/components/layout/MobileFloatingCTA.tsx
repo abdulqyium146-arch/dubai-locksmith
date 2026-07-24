@@ -4,8 +4,9 @@
 // Only shown on mobile (md:hidden)
 // ─────────────────────────────────────────────────────────────────────────────
 import { useEffect, useState } from 'react'
-import { Phone } from 'lucide-react'
+import { Phone, CalendarDays } from 'lucide-react'
 import { useTranslations } from 'next-intl'
+import { Link } from '@/i18n/navigation'
 import { PHONE_DISPLAY, PHONE_HREF, WHATSAPP_HREF } from '@/lib/constants'
 
 export function MobileFloatingCTA() {
@@ -31,6 +32,17 @@ export function MobileFloatingCTA() {
             aria-hidden="true"
             className="pointer-events-none h-6 bg-gradient-to-t from-background/60 to-transparent"
           />
+
+          {/* Book Online strip */}
+          <Link
+            href="/booking"
+            className="flex items-center justify-center gap-2 border-t border-brand-gold/20 bg-brand-navy py-2.5 text-sm font-semibold text-brand-gold hover:bg-brand-navy-light transition-colors"
+            aria-label="Book a locksmith service online"
+          >
+            <CalendarDays className="h-4 w-4" aria-hidden="true" />
+            Book a Service Online
+            <span aria-hidden="true" className="text-brand-gold/60">→</span>
+          </Link>
 
           <div className="flex border-t border-border bg-background/95 backdrop-blur-sm shadow-[0_-4px_24px_rgba(0,0,0,0.12)]">
             {/* Call button */}

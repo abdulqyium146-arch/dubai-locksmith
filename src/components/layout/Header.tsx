@@ -450,20 +450,19 @@ export function Header() {
             viewAllLabel={t('viewAll', { label: t('locations') })}
           />
 
-          {/* Book a Service — CTA nav link */}
+          {/* Book a Service — highlighted CTA button */}
           <Link
             href="/booking"
             className={cn(
-              'rounded-md px-3 py-2 text-sm font-semibold transition-colors',
-              'hover:text-brand-gold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring',
+              'rounded-lg border px-4 py-1.5 text-sm font-semibold transition-all duration-200',
+              'hover:bg-brand-gold hover:border-brand-gold hover:text-brand-navy',
+              'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring',
               pathname === '/booking'
-                ? 'text-brand-gold'
-                : scrolled
-                ? 'text-foreground'
-                : 'text-white/90',
+                ? 'bg-brand-gold border-brand-gold text-brand-navy'
+                : 'border-brand-gold/70 text-brand-gold',
             )}
           >
-            Book a Service
+            Book Online
           </Link>
 
           {/* About & Contact */}
@@ -630,9 +629,9 @@ export function Header() {
 
               <Link
                 href="/booking"
-                className="block rounded-lg px-4 py-3 font-semibold text-brand-gold hover:bg-brand-gold/10"
+                className="block rounded-lg border border-brand-gold/50 px-4 py-3 font-semibold text-brand-gold hover:bg-brand-gold hover:text-brand-navy transition-all text-center"
               >
-                Book a Service
+                Book Online
               </Link>
               <Link
                 href="/about"

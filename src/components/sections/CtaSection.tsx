@@ -1,8 +1,9 @@
 // ─────────────────────────────────────────────────────────────────────────────
 // Lock Repair Satwa — Full-width CTA Section
 // ─────────────────────────────────────────────────────────────────────────────
-import { Phone, MessageCircle } from 'lucide-react'
+import { Phone, MessageCircle, CalendarDays } from 'lucide-react'
 import { getTranslations } from 'next-intl/server'
+import { Link } from '@/i18n/navigation'
 import { Button } from '@/components/ui/Button'
 import { cn } from '@/lib/utils'
 import {
@@ -113,6 +114,18 @@ export async function CtaSection({
               <MessageCircle className="h-5 w-5" aria-hidden="true" />
               {t('whatsappUs')}
             </a>
+          </Button>
+
+          <Button
+            size="lg"
+            variant="outline"
+            className={cn('w-full sm:w-auto', dark && 'border-white/30 text-white hover:bg-white hover:text-brand-navy')}
+            asChild
+          >
+            <Link href="/booking" aria-label="Book a locksmith service online">
+              <CalendarDays className="h-5 w-5" aria-hidden="true" />
+              Book Online
+            </Link>
           </Button>
         </div>
 

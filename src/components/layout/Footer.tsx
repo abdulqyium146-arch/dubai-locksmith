@@ -268,6 +268,7 @@ export async function Footer() {
             </h3>
             <ul className="mt-4 space-y-2.5" role="list">
               {[
+                { label: 'Book a Service', href: '/booking' },
                 { label: t('aboutUs'), href: '/about' },
                 { label: tNav('contact'), href: '/contact' },
                 { label: t('privacyPolicy'), href: '/privacy' },

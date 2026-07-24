@@ -12,6 +12,7 @@ import {
   CheckCircle2,
   ArrowRight,
   Zap,
+  CalendarDays,
 } from 'lucide-react'
 import Image from 'next/image'
 import { getTranslations, setRequestLocale } from 'next-intl/server'
@@ -248,6 +249,12 @@ export default async function ServicePage({
                     {t('whatsappUs')}
                   </a>
                 </Button>
+                <Button size="lg" variant="outline" className="w-full sm:w-auto border-white/30 text-white hover:bg-white hover:text-brand-navy" asChild>
+                  <Link href="/booking" aria-label={`Book ${service.title} online`}>
+                    <CalendarDays className="h-5 w-5" aria-hidden="true" />
+                    Book Online
+                  </Link>
+                </Button>
               </div>
 
               <p className="mt-4 text-xs text-white/40">
@@ -447,6 +454,12 @@ export default async function ServicePage({
                 <MessageCircle className="h-5 w-5" aria-hidden="true" />
                 {t('whatsappUs')}
               </a>
+            </Button>
+            <Button size="lg" variant="outline" className="w-full sm:w-auto" asChild>
+              <Link href="/booking" aria-label={`Book ${service.title} — schedule online`}>
+                <CalendarDays className="h-5 w-5" aria-hidden="true" />
+                Book This Service
+              </Link>
             </Button>
           </div>
         </div>

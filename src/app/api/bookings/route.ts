@@ -16,7 +16,7 @@ export async function POST(request: Request) {
       process.env.SUPABASE_SERVICE_ROLE_KEY!
     )
 
-    const { error } = await supabase.from('bookings').insert([{
+    const payload: Record<string, unknown> = {
       name: String(name).slice(0, 200),
       phone: String(phone).slice(0, 50),
       email: email ? String(email).slice(0, 200) : null,
@@ -25,7 +25,16 @@ export async function POST(request: Request) {
       description: description ? String(description).slice(0, 2000) : null,
       preferred_time: preferred_time ? String(preferred_time).slice(0, 200) : null,
       status: 'pending',
-    }])
+    }
+
+    let { error } = await supabase.from('bookings').insert([payload])
+
+    // email column not yet added in Supabase — retry without it
+    if (error && error.message.toLowerCase().includes('email')) {
+      const { email: _email, ...payloadWithoutEmail } = payload
+      const result = await supabase.from('bookings').insert([payloadWithoutEmail])
+      error = result.error
+    }
 
     if (error) {
       console.error('[bookings API]', error)
