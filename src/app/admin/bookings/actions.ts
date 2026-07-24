@@ -9,6 +9,7 @@ export type Booking = {
   id: string
   name: string
   phone: string
+  email: string | null
   service_type: string
   area: string
   description: string | null

@@ -4,7 +4,7 @@ import { createClient } from '@supabase/supabase-js'
 export async function POST(request: Request) {
   try {
     const body = await request.json()
-    const { name, phone, service_type, area, description, preferred_time } = body
+    const { name, phone, email, service_type, area, description, preferred_time } = body
 
     if (!name || !phone || !service_type || !area) {
       return NextResponse.json({ error: 'Missing required fields' }, { status: 400 })
@@ -19,6 +19,7 @@ export async function POST(request: Request) {
     const { error } = await supabase.from('bookings').insert([{
       name: String(name).slice(0, 200),
       phone: String(phone).slice(0, 50),
+      email: email ? String(email).slice(0, 200) : null,
       service_type: String(service_type).slice(0, 200),
       area: String(area).slice(0, 100),
       description: description ? String(description).slice(0, 2000) : null,

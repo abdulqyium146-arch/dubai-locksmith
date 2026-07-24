@@ -1,7 +1,7 @@
 'use client'
 
 import { useEffect, useState, useTransition } from 'react'
-import { Phone, MessageCircle, Trash2, Search, Bell } from 'lucide-react'
+import { Phone, MessageCircle, Trash2, Search, Bell, Copy, Check } from 'lucide-react'
 import { createClient } from '@/utils/supabase/client'
 import {
   updateBookingStatus,
@@ -57,6 +57,7 @@ export function BookingsTable({ initialBookings }: Props) {
   const [filter, setFilter] = useState<BookingStatus | 'all'>('all')
   const [search, setSearch] = useState('')
   const [newCount, setNewCount] = useState(0)
+  const [copiedId, setCopiedId] = useState<string | null>(null)
   const [, startTransition] = useTransition()
 
   // ── Supabase Realtime — live updates ──────────────────────────────────────
@@ -103,6 +104,26 @@ export function BookingsTable({ initialBookings }: Props) {
     })
   }
 
+  // ── Copy booking details to clipboard ────────────────────────────────────
+  function handleCopy(booking: Booking) {
+    const lines = [
+      `Name: ${booking.name}`,
+      `Phone: ${booking.phone}`,
+      booking.email ? `Email: ${booking.email}` : null,
+      `Service: ${booking.service_type}`,
+      `Area: ${booking.area}`,
+      booking.preferred_time ? `Time: ${booking.preferred_time}` : null,
+      booking.description ? `Notes: ${booking.description}` : null,
+      `Status: ${STATUS_LABELS[booking.status]}`,
+      `Date: ${formatDate(booking.created_at)}`,
+    ].filter(Boolean).join('\n')
+
+    navigator.clipboard.writeText(lines).then(() => {
+      setCopiedId(booking.id)
+      setTimeout(() => setCopiedId(null), 2000)
+    })
+  }
+
   // ── Optimistic delete ─────────────────────────────────────────────────────
   function handleDelete(id: string) {
     if (!confirm('Delete this booking? This cannot be undone.')) return
@@ -120,6 +141,7 @@ export function BookingsTable({ initialBookings }: Props) {
       !q ||
       b.name.toLowerCase().includes(q) ||
       b.phone.includes(q) ||
+      (b.email ?? '').toLowerCase().includes(q) ||
       b.service_type.toLowerCase().includes(q) ||
       b.area.toLowerCase().includes(q)
     return matchStatus && matchSearch
@@ -236,6 +258,15 @@ export function BookingsTable({ initialBookings }: Props) {
                       >
                         {booking.phone}
                       </a>
+                      {booking.email && (
+                        <a
+                          href={`mailto:${booking.email}`}
+                          className="block text-xs text-gray-400 hover:text-amber-600 transition-colors mt-0.5 truncate max-w-[160px]"
+                          title={booking.email}
+                        >
+                          {booking.email}
+                        </a>
+                      )}
                       {booking.preferred_time && (
                         <p className="text-xs text-gray-400 mt-0.5">⏰ {booking.preferred_time}</p>
                       )}
@@ -301,6 +332,17 @@ export function BookingsTable({ initialBookings }: Props) {
                         >
                           <MessageCircle className="h-3.5 w-3.5" />
                         </a>
+                        <button
+                          onClick={() => handleCopy(booking)}
+                          className="flex h-8 w-8 items-center justify-center rounded-lg bg-gray-50 text-gray-500 hover:bg-gray-100 transition-colors"
+                          title="Copy booking details"
+                          aria-label={`Copy details for ${booking.name}`}
+                        >
+                          {copiedId === booking.id
+                            ? <Check className="h-3.5 w-3.5 text-green-600" />
+                            : <Copy className="h-3.5 w-3.5" />
+                          }
+                        </button>
                         <button
                           onClick={() => handleDelete(booking.id)}
                           className="flex h-8 w-8 items-center justify-center rounded-lg bg-red-50 text-red-500 hover:bg-red-100 transition-colors"

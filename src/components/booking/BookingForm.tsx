@@ -66,6 +66,7 @@ export function BookingForm() {
     const payload = {
       name: formData.get('name') as string,
       phone: formData.get('phone') as string,
+      email: formData.get('email') as string,
       service_type: formData.get('service_type') as string,
       area: formData.get('area') as string,
       description: formData.get('description') as string,
@@ -153,6 +154,21 @@ export function BookingForm() {
             className="w-full rounded-lg border border-input bg-background px-4 py-2.5 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-brand-gold/50 focus:border-brand-gold transition-colors"
           />
         </div>
+      </div>
+
+      {/* Email */}
+      <div className="space-y-1.5">
+        <label htmlFor="booking-email" className="block text-sm font-semibold text-foreground">
+          Email Address
+        </label>
+        <input
+          id="booking-email"
+          name="email"
+          type="email"
+          autoComplete="email"
+          placeholder="e.g. ahmed@example.com"
+          className="w-full rounded-lg border border-input bg-background px-4 py-2.5 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-brand-gold/50 focus:border-brand-gold transition-colors"
+        />
       </div>
 
       {/* Service + Area row */}
