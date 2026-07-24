@@ -11,17 +11,22 @@ export const metadata = {
 }
 
 export default async function AdminLayout({ children }: { children: ReactNode }) {
-  const supabase = await createClient()
-  const {
-    data: { user },
-  } = await supabase.auth.getUser()
+  let userEmail: string | null = null
+
+  try {
+    const supabase = await createClient()
+    const { data: { user } } = await supabase.auth.getUser()
+    userEmail = user?.email ?? null
+  } catch {
+    // Auth unavailable — pages handle their own redirect to /admin/login
+  }
 
   return (
     <html lang="en">
       <body className={`${inter.className} bg-gray-50 text-gray-900 antialiased`}>
         <div className="flex min-h-screen">
-          {user && <AdminSidebar userEmail={user.email ?? ''} />}
-          <main className={`flex-1 min-w-0 ${user ? 'lg:pl-60' : ''}`}>
+          {userEmail && <AdminSidebar userEmail={userEmail} />}
+          <main className={`flex-1 min-w-0 ${userEmail ? 'lg:pl-60' : ''}`}>
             {children}
           </main>
         </div>
