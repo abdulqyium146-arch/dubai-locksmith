@@ -13,7 +13,7 @@ const handleIntl = createIntlMiddleware(routing)
 
 const LOCALES: string[] = [...routing.locales]
 
-export function middleware(request: NextRequest) {
+export async function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl
 
   // ── 1. Strip locale prefix from admin routes ──────────────────────────────
@@ -34,7 +34,7 @@ export function middleware(request: NextRequest) {
   }
 
   // ── 3. Everything else — next-intl locale routing ─────────────────────────
-  return handleIntl(request)
+  return await handleIntl(request)
 }
 
 export const config = {
