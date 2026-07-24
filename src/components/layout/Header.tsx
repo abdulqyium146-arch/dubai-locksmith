@@ -450,6 +450,22 @@ export function Header() {
             viewAllLabel={t('viewAll', { label: t('locations') })}
           />
 
+          {/* Book a Service — CTA nav link */}
+          <Link
+            href="/booking"
+            className={cn(
+              'rounded-md px-3 py-2 text-sm font-semibold transition-colors',
+              'hover:text-brand-gold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring',
+              pathname === '/booking'
+                ? 'text-brand-gold'
+                : scrolled
+                ? 'text-foreground'
+                : 'text-white/90',
+            )}
+          >
+            Book a Service
+          </Link>
+
           {/* About & Contact */}
           {(
             [
@@ -612,6 +628,12 @@ export function Header() {
                 </div>
               </div>
 
+              <Link
+                href="/booking"
+                className="block rounded-lg px-4 py-3 font-semibold text-brand-gold hover:bg-brand-gold/10"
+              >
+                Book a Service
+              </Link>
               <Link
                 href="/about"
                 className="block rounded-lg px-4 py-3 font-medium text-foreground hover:bg-muted hover:text-brand-gold"
