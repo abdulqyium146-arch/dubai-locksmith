@@ -4,7 +4,7 @@ import { cookies } from 'next/headers'
 const COOKIE = 'admin_session'
 
 function sessionToken() {
-  const pw = process.env.ADMIN_PASSWORD ?? 'changeme'
+  const pw = (process.env.ADMIN_PASSWORD ?? 'changeme').trim()
   return createHash('sha256').update(pw + '_lrs_admin_v1').digest('hex')
 }
 
