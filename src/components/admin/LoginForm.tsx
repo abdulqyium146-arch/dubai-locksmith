@@ -1,11 +1,34 @@
 'use client'
 
-import { useActionState } from 'react'
-import { Loader2, AlertTriangle, Lock } from 'lucide-react'
+import { useFormState, useFormStatus } from 'react-dom'
+import { AlertTriangle, Loader2, Lock } from 'lucide-react'
 import { loginAction } from '@/app/admin/login/actions'
 
+function SubmitButton() {
+  const { pending } = useFormStatus()
+  return (
+    <button
+      type="submit"
+      disabled={pending}
+      className="flex w-full items-center justify-center gap-2 rounded-lg bg-amber-400 px-4 py-3 text-sm font-bold text-slate-900 hover:bg-amber-300 active:bg-amber-500 disabled:opacity-60 transition-colors"
+    >
+      {pending ? (
+        <>
+          <Loader2 className="h-4 w-4 animate-spin" />
+          Signing in…
+        </>
+      ) : (
+        <>
+          <Lock className="h-4 w-4" />
+          Enter Dashboard
+        </>
+      )}
+    </button>
+  )
+}
+
 export function LoginForm() {
-  const [state, formAction, pending] = useActionState(loginAction, null)
+  const [state, formAction] = useFormState(loginAction, null)
 
   return (
     <form action={formAction} className="space-y-5" noValidate>
@@ -32,23 +55,7 @@ export function LoginForm() {
         </div>
       )}
 
-      <button
-        type="submit"
-        disabled={pending}
-        className="flex w-full items-center justify-center gap-2 rounded-lg bg-amber-400 px-4 py-3 text-sm font-bold text-slate-900 hover:bg-amber-300 active:bg-amber-500 disabled:opacity-60 transition-colors"
-      >
-        {pending ? (
-          <>
-            <Loader2 className="h-4 w-4 animate-spin" />
-            Signing in…
-          </>
-        ) : (
-          <>
-            <Lock className="h-4 w-4" />
-            Enter Dashboard
-          </>
-        )}
-      </button>
+      <SubmitButton />
     </form>
   )
 }
