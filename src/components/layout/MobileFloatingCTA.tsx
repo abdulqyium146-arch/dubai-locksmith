@@ -21,6 +21,7 @@ export function MobileFloatingCTA() {
 
   return (
     <div
+      suppressHydrationWarning
       className={`fixed bottom-0 inset-x-0 z-50 md:hidden floating-cta-safe will-change-transform transition-[transform,opacity] duration-500 ease-out ${
         visible ? 'translate-y-0 opacity-100' : 'translate-y-full opacity-0 pointer-events-none'
       }`}

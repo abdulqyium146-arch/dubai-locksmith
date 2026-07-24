@@ -1,5 +1,4 @@
 import type { ReactNode } from 'react'
-import { Suspense } from 'react'
 import type { Metadata, Viewport } from 'next'
 import { Inter, Poppins, Cairo } from 'next/font/google'
 import { NextIntlClientProvider } from 'next-intl'
@@ -168,6 +167,7 @@ export default async function LocaleLayout({ children, params }: LocaleLayoutPro
       lang={locale}
       dir={dir}
       className={`${inter.variable} ${poppins.variable} ${cairo.variable}`}
+      style={{ backgroundColor: '#0B1F3A' }}
       suppressHydrationWarning
     >
       <head>
@@ -197,7 +197,7 @@ export default async function LocaleLayout({ children, params }: LocaleLayoutPro
           <Header />
 
           <main id="main-content" tabIndex={-1} className="outline-none">
-            <Suspense>{children}</Suspense>
+            {children}
           </main>
 
           <Footer />
