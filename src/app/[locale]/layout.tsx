@@ -1,4 +1,5 @@
 import type { ReactNode } from 'react'
+import { Suspense } from 'react'
 import type { Metadata, Viewport } from 'next'
 import { Inter, Poppins, Cairo } from 'next/font/google'
 import { NextIntlClientProvider } from 'next-intl'
@@ -180,10 +181,10 @@ export default async function LocaleLayout({ children, params }: LocaleLayoutPro
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
         <link rel="manifest" href="/manifest.webmanifest" />
         <meta name="telephone" content={PHONE_DISPLAY} />
-        {/* hreflang alternates */}
-        <link rel="alternate" hrefLang="en" href={`${SITE_URL}/en`} />
+        {/* hreflang alternates — en has no prefix with localePrefix:'as-needed' */}
+        <link rel="alternate" hrefLang="en" href={SITE_URL} />
         <link rel="alternate" hrefLang="ar" href={`${SITE_URL}/ar`} />
-        <link rel="alternate" hrefLang="x-default" href={`${SITE_URL}/en`} />
+        <link rel="alternate" hrefLang="x-default" href={SITE_URL} />
       </head>
       <body className="min-h-screen bg-background font-sans text-foreground">
         <NextIntlClientProvider messages={messages} locale={locale}>
@@ -196,7 +197,7 @@ export default async function LocaleLayout({ children, params }: LocaleLayoutPro
           <Header />
 
           <main id="main-content" tabIndex={-1} className="outline-none">
-            {children}
+            <Suspense>{children}</Suspense>
           </main>
 
           <Footer />
