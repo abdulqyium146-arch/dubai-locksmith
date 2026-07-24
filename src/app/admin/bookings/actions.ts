@@ -1,7 +1,7 @@
 'use server'
 
 import { revalidatePath } from 'next/cache'
-import { createClient } from '@/utils/supabase/server'
+import { createAdminClient } from '@/utils/supabase/admin'
 
 export type BookingStatus = 'pending' | 'confirmed' | 'completed' | 'cancelled'
 
@@ -19,7 +19,7 @@ export type Booking = {
 }
 
 export async function updateBookingStatus(id: string, status: BookingStatus) {
-  const supabase = await createClient()
+  const supabase = createAdminClient()
   const { error } = await supabase.from('bookings').update({ status }).eq('id', id)
   if (error) throw new Error(error.message)
   revalidatePath('/admin')
@@ -27,7 +27,7 @@ export async function updateBookingStatus(id: string, status: BookingStatus) {
 }
 
 export async function deleteBooking(id: string) {
-  const supabase = await createClient()
+  const supabase = createAdminClient()
   const { error } = await supabase.from('bookings').delete().eq('id', id)
   if (error) throw new Error(error.message)
   revalidatePath('/admin')

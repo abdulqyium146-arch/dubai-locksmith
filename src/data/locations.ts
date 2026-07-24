@@ -719,7 +719,342 @@ export const locations: Location[] = [
     coordinates: { lat: 25.1178, lng: 55.3786 },
   },
 
-  // ── 15. International City ─────────────────────────────────────────────────
+  // ── 15. Jumeirah Village Triangle (JVT) ───────────────────────────────────
+  {
+    slug: 'jumeirah-village-triangle',
+    name: 'Jumeirah Village Triangle (JVT)',
+    metaTitle: 'Car Key Service Jumeirah Village Triangle | Mobile Locksmith',
+    metaDescription:
+      'Mobile car key locksmith in JVT (Jumeirah Village Triangle) Dubai. Key duplication, emergency unlock, transponder programming. Fast 24/7 — +971 52 642 6161.',
+    directAnswerOpener:
+      "Lock Repair Satwa serves Jumeirah Village Triangle (JVT) with mobile car key and locksmith services available 24/7. JVT's villa and townhouse communities are 30–45 minutes from our Al Bada'a base. We handle key duplication, emergency car unlock, and smart key programming for all vehicle types.",
+    description:
+      "Jumeirah Village Triangle (JVT) is a Nakheel master community adjacent to Jumeirah Village Circle, featuring a mix of townhouses, villas and low-rise apartment clusters. It is popular with families seeking larger living spaces at mid-market prices, with Al Khail Road providing quick access to Sheikh Zayed Road and the rest of Dubai.\n\nJVT shares a similar road layout to JVC — triangle-shaped community roads that can be confusing for first-time visitors. We recommend sharing your Google Maps pin when calling from within JVT to help our technicians navigate directly to your location.\n\nThe vehicle mix in JVT includes a high proportion of family SUVs and crossovers — Toyota Fortuners, Mitsubishi Pajerols, Kia Sportages and Hyundai Tucson models are common alongside the standard family sedans. We carry key blanks and programming tools for all of these.",
+    landmarks: [
+      'Al Khail Road (E44)',
+      'Sheikh Mohammed Bin Zayed Road (E311)',
+      'JVT Community Park',
+      'GEMS World Academy (nearby)',
+      'Al Barsha South (adjacent)',
+      'JVT District 1',
+    ],
+    buildingTypes: [
+      'Townhouses and semi-detached villas',
+      'Standalone villas',
+      'Low-rise apartment buildings',
+      'Gated sub-community clusters',
+    ],
+    responseTime: '30-45 minutes',
+    faqs: [
+      {
+        question: 'Do you serve Jumeirah Village Triangle (JVT)?',
+        answer:
+          "Yes. JVT is within our regular service area. Response time is 30–45 minutes from our Al Bada'a base. Drop us your WhatsApp location pin when you call to speed up navigation inside the community.",
+      },
+      {
+        question: 'Can you duplicate car keys for townhouse residents in JVT?',
+        answer:
+          "Absolutely. Car key duplication at your JVT doorstep or garage is a common service request. We carry the most popular key blanks for mid-range family vehicles typical in JVT. Call +971 52 642 6161 for a quick quote.",
+      },
+    ],
+    coordinates: { lat: 25.0523, lng: 55.1963 },
+  },
+
+  // ── 16. Al Barari ─────────────────────────────────────────────────────────
+  {
+    slug: 'al-barari',
+    name: 'Al Barari',
+    metaTitle: 'Car Key Service Al Barari Dubai | Luxury Mobile Locksmith',
+    metaDescription:
+      'Mobile automotive locksmith in Al Barari Dubai. Smart key programming, emergency unlock and key replacement for luxury villas. 24/7 — +971 52 642 6161.',
+    directAnswerOpener:
+      "Lock Repair Satwa serves Al Barari — Dubai's ultra-luxury eco villa community — with premium mobile automotive locksmith services available 24/7. Al Barari is 35–50 minutes from our Al Bada'a base. We specialise in the high-end European and American vehicles common to Al Barari's affluent residents.",
+    description:
+      "Al Barari is one of Dubai's most exclusive and unique villa communities, developed as a lush, nature-themed estate featuring botanical gardens, water features and sustainably designed villas. Located off Sheikh Mohammed Bin Zayed Road, it is home to some of Dubai's most expensive residential properties.\n\nAl Barari's fleet mirrors its demographic — Rolls-Royce, Bentley, Mercedes-Benz S-Class, BMW 7 Series, Porsche Panamera and flagship Range Rover models are the norm. These vehicles feature the most advanced proximity and smart key systems available, requiring specialist OBD programming tools that go beyond what standard locksmiths carry.\n\nLock Repair Satwa's technicians are equipped with multi-brand smart key programming software covering all major European luxury marques. We approach Al Barari calls with the same professionalism and discretion expected by the community's residents.",
+    landmarks: [
+      'Al Barari Botanical Gardens',
+      'The Farm Al Barari (restaurant)',
+      'Ashjar by Al Barari',
+      'Seventh Heaven Al Barari',
+      'Sheikh Mohammed Bin Zayed Road (E311)',
+      'Majan (adjacent)',
+    ],
+    buildingTypes: [
+      'Ultra-luxury standalone villas',
+      'Boutique villa clusters with private gardens',
+      'Eco-designed estate homes',
+      'Landscape-integrated villa compounds',
+    ],
+    responseTime: '35-50 minutes',
+    faqs: [
+      {
+        question: 'Can you service luxury and European car keys in Al Barari?',
+        answer:
+          'Yes. Rolls-Royce, Bentley, BMW, Mercedes-Benz, Porsche and Range Rover keys are among our specialisations. We carry OBD programming tools and key blanks for all major European luxury brands common in Al Barari.',
+      },
+      {
+        question: 'Is your service available 24/7 in Al Barari?',
+        answer:
+          "Yes. We operate daily and respond to Al Barari calls day or night. Response time from our Al Bada'a base is approximately 35–50 minutes. We will call when 10 minutes away.",
+      },
+    ],
+    coordinates: { lat: 25.0955, lng: 55.3270 },
+  },
+
+  // ── 17. Al Khawaneej ──────────────────────────────────────────────────────
+  {
+    slug: 'al-khawaneej',
+    name: 'Al Khawaneej',
+    metaTitle: 'Car Key Service Al Khawaneej Dubai | Mobile Locksmith',
+    metaDescription:
+      'Mobile car key locksmith in Al Khawaneej Dubai. Emergency unlock, key duplication and smart key programming for family villas. 24/7 — +971 52 642 6161.',
+    directAnswerOpener:
+      "Lock Repair Satwa serves Al Khawaneej — one of Dubai's established family villa communities — with mobile automotive locksmith services available 24/7. Al Khawaneej is 35–50 minutes from our Al Bada'a base. We cover car key duplication, emergency unlock and transponder programming for the large SUVs popular in the area.",
+    description:
+      "Al Khawaneej is an established residential neighbourhood in eastern Dubai, located near Dubai International Airport and adjacent to Mirdif. It is particularly popular with UAE national families who appreciate its spacious villas, wide streets and proximity to key airport routes.\n\nThe area is known for large-capacity villa plots and its residents drive correspondingly large vehicles — Toyota Land Cruiser, Nissan Patrol, GMC Yukon and Chevrolet Suburban are dominant. These vehicles feature complex immobiliser and key systems that require the correct OBD diagnostic equipment, which Lock Repair Satwa carries as standard.\n\nAl Khawaneej is divided into Al Khawaneej 1 and Al Khawaneej 2, with Khawaneej Road running through the centre. We serve both sub-areas and are familiar with the community's road layout.",
+    landmarks: [
+      'Khawaneej Road',
+      'Dubai International Airport (nearby)',
+      'Al Khawaneej 1 and 2',
+      'Mushrif Park (adjacent)',
+      'Mirdif (adjacent)',
+      'Emirates Road (E611)',
+    ],
+    buildingTypes: [
+      'Large standalone villas',
+      'Emirati family villa compounds',
+      'Government villa allocation areas',
+      'Wide-plot residential streets',
+    ],
+    responseTime: '35-50 minutes',
+    faqs: [
+      {
+        question: 'Do you service Toyota Land Cruiser and Nissan Patrol keys in Al Khawaneej?',
+        answer:
+          'Yes — Land Cruiser and Patrol are among our most frequently serviced vehicles in Al Khawaneej. We carry all key blanks and OBD programming tools for these models. Call +971 52 642 6161 for an instant quote.',
+      },
+      {
+        question: 'How do I arrange access if my Al Khawaneej villa is gated?',
+        answer:
+          'Simply leave the gate open or come out to meet our technician at the entrance. If your compound has a security guard, let them know our van is expected. We will confirm the plate number when you call.',
+      },
+    ],
+    coordinates: { lat: 25.2081, lng: 55.4204 },
+  },
+
+  // ── 18. Al Quoz ───────────────────────────────────────────────────────────
+  {
+    slug: 'al-quoz',
+    name: 'Al Quoz',
+    metaTitle: 'Car Key Service Al Quoz Dubai | Mobile Locksmith',
+    metaDescription:
+      'Mobile car key locksmith in Al Quoz Dubai. Key duplication, emergency unlock and smart key programming for industrial and residential areas. 24/7 — +971 52 642 6161.',
+    directAnswerOpener:
+      "Lock Repair Satwa serves Al Quoz — Dubai's mixed industrial and residential district — with mobile automotive locksmith services available 24/7. Al Quoz is 20–30 minutes from our Al Bada'a base, one of the closer major districts. We cover all of Al Quoz 1, 2, 3 and 4, including the industrial zones and residential communities.",
+    description:
+      "Al Quoz is a large mixed-use district stretching inland from Sheikh Zayed Road. It combines major industrial zones (Al Quoz 1–4 Industrial), a thriving arts district (Alserkal Avenue), residential clusters and some of Dubai's most popular budget dining strips.\n\nAs one of the closer major districts to our Al Bada'a base, Al Quoz benefits from faster response times — typically 20–30 minutes. We serve both the industrial areas (where workshop owners and delivery fleet drivers frequently need key services) and the residential Al Quoz 4 community popular with families.\n\nVehicles in Al Quoz are diverse — company fleet vehicles (commercial vans, pickups, light trucks) in the industrial zones, and family sedans and SUVs in the residential areas. We cover all vehicle types, from basic mechanical keys for older fleet vehicles to smart key programming for newer family cars.",
+    landmarks: [
+      'Alserkal Avenue (arts district)',
+      'Al Quoz 4 residential community',
+      'Sheikh Zayed Road (E11)',
+      'Al Khail Road (E44)',
+      'Times Square Centre Mall',
+      'Al Quoz Pond Park',
+      'ENBD Stadium',
+    ],
+    buildingTypes: [
+      'Industrial warehouses and workshops',
+      'Commercial yards and depots',
+      'Residential apartments (Al Quoz 4)',
+      'Art galleries and creative studios (Alserkal)',
+      'Open surface parking areas',
+    ],
+    responseTime: '20-30 minutes',
+    faqs: [
+      {
+        question: 'Do you serve the industrial areas in Al Quoz?',
+        answer:
+          'Yes — Al Quoz industrial zones are within our regular service area. We serve workshop owners, fleet managers and delivery companies who need key services on-site. Call us for a same-day appointment.',
+      },
+      {
+        question: 'Can you duplicate keys for commercial vehicles and vans in Al Quoz?',
+        answer:
+          'Yes. Commercial van and pickup keys (Toyota HiAce, Nissan Urvan, Ford Transit, etc.) are common in Al Quoz. We carry the relevant blanks and can program basic transponders for most fleet vehicle models.',
+      },
+    ],
+    coordinates: { lat: 25.1461, lng: 55.2389 },
+  },
+
+  // ── 19. Falconcity of Wonders ─────────────────────────────────────────────
+  {
+    slug: 'falconcity-of-wonders',
+    name: 'Falconcity of Wonders',
+    metaTitle: 'Car Key Service Falconcity of Wonders Dubai | Mobile Locksmith',
+    metaDescription:
+      'Mobile car key locksmith in Falconcity of Wonders Dubai. Emergency unlock, key duplication and smart key programming. 24/7 — +971 52 642 6161.',
+    directAnswerOpener:
+      "Lock Repair Satwa serves Falconcity of Wonders — the themed villa community in Dubailand — with mobile automotive locksmith services 24/7. Response times from our Al Bada'a base are 40–55 minutes. We handle car key duplication, emergency unlock and transponder programming for all vehicles in the community.",
+    description:
+      "Falconcity of Wonders is an ambitious themed residential development in Dubailand, designed to feature replicas of the Seven Wonders of the World alongside modern residential properties. The community comprises townhouses, villas and mixed-use units attracting families seeking affordable larger properties with a unique character.\n\nLocated off Emirates Road (E611) in the Dubailand corridor, Falconcity is somewhat remote from central Dubai but well-connected via the major highways. Our technicians take Emirates Road for the most direct route, with typical travel times of 40–55 minutes.\n\nThe community's vehicle fleet reflects its family demographic — mid-range SUVs, MPVs and sedans are the norm. We carry key blanks and programming equipment for all common models and respond 24/7 to lockout and key loss situations.",
+    landmarks: [
+      'Emirates Road (E611)',
+      'Dubailand (surrounding master community)',
+      'Falconcity replicas of world wonders (landmark structures)',
+      'Arabian Ranches (nearby)',
+      'Global Village (seasonal, nearby)',
+    ],
+    buildingTypes: [
+      'Townhouses and cluster villas',
+      'Standalone villas',
+      'Low-rise apartment buildings',
+      'Themed mixed-use podiums',
+    ],
+    responseTime: '40-55 minutes',
+    faqs: [
+      {
+        question: 'Do you reach Falconcity of Wonders for emergency locksmith calls?',
+        answer:
+          "Yes. Despite the distance, we serve Falconcity of Wonders for all car key and locksmith emergencies. Response time is 40–55 minutes from our Al Bada'a base. Call +971 52 642 6161 and we will give you a precise ETA.",
+      },
+      {
+        question: 'Can you duplicate car keys in Falconcity of Wonders?',
+        answer:
+          'Yes. For non-emergency key duplication, we recommend calling ahead so we can schedule the visit and confirm we have the correct blank for your vehicle. We come to you — no need to drive to a shop.',
+      },
+    ],
+    coordinates: { lat: 25.1006, lng: 55.3813 },
+  },
+
+  // ── 20. Jumeirah Lakes Towers (JLT) ───────────────────────────────────────
+  {
+    slug: 'jumeirah-lakes-towers',
+    name: 'Jumeirah Lakes Towers (JLT)',
+    metaTitle: 'Car Key Service JLT Dubai | Jumeirah Lakes Towers Locksmith',
+    metaDescription:
+      'Mobile car key locksmith in JLT (Jumeirah Lakes Towers) Dubai. Emergency unlock, smart key programming and key duplication for tower residents. 24/7 — +971 52 642 6161.',
+    directAnswerOpener:
+      "Lock Repair Satwa serves Jumeirah Lakes Towers (JLT) with 24/7 mobile automotive locksmith services. JLT's cluster of residential and commercial towers around the manmade lakes is 25–40 minutes from our Al Bada'a base. We handle emergency car unlock, smart key programming and key duplication for all vehicles in the JLT clusters.",
+    description:
+      "Jumeirah Lakes Towers (JLT) is a Nakheel mixed-use development comprising over 80 towers arranged around four manmade lakes, located on either side of Sheikh Zayed Road at the Interchange 5 / DMCC Metro Station. It is one of Dubai's most densely populated and diverse communities, home to young professionals, small businesses and corporate offices.\n\nJLT's underground car parks and podium parking structures are the most common locations for lockout calls. Residents in JLT tend to drive mid-range sedans and crossovers — Toyota Camry, Honda Accord, Nissan Altima, BMW 3 Series and Hyundai Sonata are among the most common vehicles we service there.\n\nThe DMCC free zone also generates commercial lockout calls from business professionals whose keys are locked in during working hours. We serve JLT's residential towers (Cluster A through Z), the commercial offices, and the JLT promenade area around the lakes.",
+    landmarks: [
+      'DMCC Metro Station',
+      'JLT Cluster A–Z (all clusters)',
+      'Almas Tower (DMCC headquarters)',
+      'JLT Park and lake promenades',
+      'Sheikh Zayed Road (E11)',
+      'Dubai Marina (adjacent)',
+      'The Promenade JLT',
+    ],
+    buildingTypes: [
+      'High-rise residential towers (35–45 floors)',
+      'Commercial office towers',
+      'Mixed residential/commercial towers',
+      'Podium and underground car parks',
+      'Ground floor retail and F&B',
+    ],
+    responseTime: '25-40 minutes',
+    faqs: [
+      {
+        question: 'Can you access underground car parks in JLT towers?',
+        answer:
+          'Yes. JLT underground car parks are familiar territory for our technicians. You may need to arrange temporary visitor parking at the entrance for our van — building reception can usually issue a short-term visitor pass.',
+      },
+      {
+        question: 'How long does it take to reach JLT from your base?',
+        answer:
+          "JLT is approximately 25–40 minutes from our Al Bada'a base depending on traffic on Sheikh Zayed Road. We give you a precise ETA when you call and will update you if there are delays.",
+      },
+    ],
+    coordinates: { lat: 25.0741, lng: 55.1397 },
+  },
+
+  // ── 21. Jumeirah Beach Residence (JBR) ────────────────────────────────────
+  {
+    slug: 'jumeirah-beach-residence',
+    name: 'Jumeirah Beach Residence (JBR)',
+    metaTitle: 'Car Key Service JBR Dubai | Jumeirah Beach Residence Locksmith',
+    metaDescription:
+      'Mobile car key locksmith in JBR (Jumeirah Beach Residence) Dubai. Emergency unlock, smart key programming and key duplication. 24/7 — +971 52 642 6161.',
+    directAnswerOpener:
+      "Lock Repair Satwa serves Jumeirah Beach Residence (JBR) with 24/7 mobile automotive locksmith services. JBR's beachfront residential towers and The Walk promenade are 25–40 minutes from our Al Bada'a base. We handle emergency car unlock, key duplication and smart key programming for all vehicles, day and night.",
+    description:
+      "Jumeirah Beach Residence (JBR) is one of Dubai's most iconic beachfront communities — a strip of 36 residential and hotel towers fronting The Walk at JBR and The Beach outdoor retail complex. It is home to thousands of residents and attracts enormous visitor footfall from tourists and day-trippers.\n\nThe combination of permanent residents and high visitor volume makes JBR one of the busier areas for lockout calls in Dubai. Visitors to The Beach and The Walk frequently leave keys inside vehicles in the multi-level car parks, particularly during busy weekend evenings.\n\nJBR's resident vehicle profile includes mid to upper-range vehicles — Toyota Camry, Land Cruiser, BMW X5, Mercedes GLC and Range Rover Evoque are all common. Our technicians carry the key blanks and programming equipment for all of these, and are experienced with JBR's multi-level and basement car parking infrastructure.",
+    landmarks: [
+      'The Walk at JBR',
+      'The Beach at JBR',
+      'Dubai Eye (Ain Dubai, adjacent Bluewaters)',
+      'Roxy Cinemas JBR',
+      'JBR Open Beach',
+      'Habtoor Grand Beach Resort',
+      'Le Royal Méridien Beach Resort',
+    ],
+    buildingTypes: [
+      'High-rise beachfront residential towers',
+      'Hotel towers',
+      'Mixed-use podium developments',
+      'Multi-level and underground car parks',
+      'Retail and dining promenade (The Walk)',
+    ],
+    responseTime: '25-40 minutes',
+    faqs: [
+      {
+        question: 'Can you help if I am locked out in the JBR or The Walk car park?',
+        answer:
+          'Yes. JBR car parks are one of our regular lockout locations. We coordinate with parking management on arrival. Call +971 52 642 6161 and share your parking level and bay number for the fastest response.',
+      },
+      {
+        question: 'Do you serve the residential towers in JBR as well as visitors?',
+        answer:
+          'Yes — we serve both JBR tower residents needing key duplication or smart key replacement and visitors who have locked their keys in their car. All 36 towers and the surrounding car parks are within our service area.',
+      },
+    ],
+    coordinates: { lat: 25.0778, lng: 55.1343 },
+  },
+
+  // ── 22. Discovery Gardens / Jebel Ali Village ─────────────────────────────
+  {
+    slug: 'discovery-gardens',
+    name: 'Discovery Gardens',
+    metaTitle: 'Car Key Service Discovery Gardens Dubai | Mobile Locksmith',
+    metaDescription:
+      'Mobile car key locksmith in Discovery Gardens and Jebel Ali Village Dubai. Emergency unlock, key duplication and key programming. 24/7 — +971 52 642 6161.',
+    directAnswerOpener:
+      "Lock Repair Satwa serves Discovery Gardens and Jebel Ali Village with mobile automotive locksmith services available 24/7. Located 35–50 minutes from our Al Bada'a base, these large affordable communities are within our regular service area. Car key duplication, emergency unlock and smart key programming available for all vehicles.",
+    description:
+      "Discovery Gardens is one of Dubai's largest affordable residential communities, developed by Nakheel near the Jebel Ali Free Zone. It comprises six themed clusters (Mediterranean, Zen, Contemporary, Mogul, Cactus and Mesoamerican) of mid-rise apartment blocks housing a large population of mid-income professionals and families.\n\nJebel Ali Village is an older, more established community nearby — featuring a mix of villas and smaller residential buildings, popular with long-term Dubai residents.\n\nBoth communities are in the far southwest of Dubai, near the Jebel Ali Port and the JAFZA free zone. The distance from our base is longer than central Dubai areas, but we maintain regular coverage. Discovery Gardens' clusters can be confusing for first-time visitors — we recommend sharing a WhatsApp pin with the exact cluster and block number when you call.",
+    landmarks: [
+      'Ibn Battuta Mall (nearby)',
+      'Discovery Gardens Metro Station',
+      'Jebel Ali Free Zone (JAFZA)',
+      'Sheikh Zayed Road (E11)',
+      'Mediterranean Cluster Discovery Gardens',
+      'Zen Cluster Discovery Gardens',
+      'Jebel Ali Port',
+    ],
+    buildingTypes: [
+      'Mid-rise apartment blocks (G+5 to G+8)',
+      'Themed residential clusters',
+      'Ground floor retail and supermarkets',
+      'Villas (Jebel Ali Village)',
+      'Surface parking areas',
+    ],
+    responseTime: '35-50 minutes',
+    faqs: [
+      {
+        question: 'Do you serve Discovery Gardens — which cluster do you go to?',
+        answer:
+          'We serve all Discovery Gardens clusters — Mediterranean, Zen, Contemporary, Mogul, Cactus and Mesoamerican. Share your cluster name and block number when you call, or send a WhatsApp pin so our technician can find you quickly.',
+      },
+      {
+        question: 'How long does it take to reach Discovery Gardens from your base?',
+        answer:
+          "Discovery Gardens is 35–50 minutes from our Al Bada'a base via Sheikh Zayed Road. We will give you an accurate ETA when you call. For non-emergency key duplication, calling at least 2 hours in advance is recommended.",
+      },
+    ],
+    coordinates: { lat: 25.0339, lng: 55.1436 },
+  },
+
+  // ── 23. International City ─────────────────────────────────────────────────
   {
     slug: 'international-city',
     name: 'International City',

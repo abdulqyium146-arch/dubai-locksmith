@@ -1,18 +1,16 @@
 import { redirect } from 'next/navigation'
 import Link from 'next/link'
 import { ArrowRight, Phone, MessageCircle } from 'lucide-react'
-import { createClient } from '@/utils/supabase/server'
+import { isAdminAuthenticated } from '@/lib/admin-auth'
+import { createAdminClient } from '@/utils/supabase/admin'
 import { StatsCards } from '@/components/admin/StatsCards'
 import type { Booking } from '@/app/admin/bookings/actions'
 
 export default async function AdminDashboard() {
-  const supabase = await createClient()
-  const {
-    data: { user },
-  } = await supabase.auth.getUser()
-  if (!user) redirect('/admin/login')
+  if (!(await isAdminAuthenticated())) redirect('/admin/login')
 
-  // Fetch all bookings for stats
+  const supabase = createAdminClient()
+
   const { data: all } = await supabase
     .from('bookings')
     .select('id, status, created_at')
@@ -26,7 +24,6 @@ export default async function AdminDashboard() {
   const today = bookings.filter((b) => new Date(b.created_at).toDateString() === todayStr).length
   const completed = bookings.filter((b) => b.status === 'completed').length
 
-  // Recent 6 bookings for preview
   const { data: recent } = await supabase
     .from('bookings')
     .select('*')
@@ -47,19 +44,13 @@ export default async function AdminDashboard() {
 
   return (
     <div className="p-6 sm:p-8 pt-14 lg:pt-8">
-      {/* Header */}
       <div className="mb-8">
         <h1 className="text-2xl font-bold text-gray-900">Dashboard</h1>
-        <p className="mt-1 text-sm text-gray-500">
-          Welcome back —{' '}
-          <span className="font-medium text-gray-700">{user.email}</span>
-        </p>
+        <p className="mt-1 text-sm text-gray-500">Lock Repair Satwa · Booking Management</p>
       </div>
 
-      {/* Stats */}
       <StatsCards total={total} pending={pending} today={today} completed={completed} />
 
-      {/* Recent bookings */}
       <div className="mt-8">
         <div className="mb-4 flex items-center justify-between">
           <h2 className="text-lg font-bold text-gray-900">Recent Bookings</h2>
@@ -137,7 +128,6 @@ export default async function AdminDashboard() {
         )}
       </div>
 
-      {/* Quick links */}
       <div className="mt-8 rounded-2xl border border-gray-100 bg-white p-6 shadow-sm">
         <h2 className="text-base font-bold text-gray-900 mb-4">Quick Links</h2>
         <div className="flex flex-wrap gap-3">

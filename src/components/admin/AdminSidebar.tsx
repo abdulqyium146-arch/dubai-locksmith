@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
-import { usePathname, useRouter } from 'next/navigation'
+import { usePathname } from 'next/navigation'
 import {
   LayoutDashboard,
   CalendarDays,
@@ -11,24 +11,15 @@ import {
   X,
   Lock,
 } from 'lucide-react'
-import { createClient } from '@/utils/supabase/client'
 
 const NAV = [
   { href: '/admin', label: 'Dashboard', icon: LayoutDashboard, exact: true },
   { href: '/admin/bookings', label: 'Bookings', icon: CalendarDays, exact: false },
 ]
 
-export function AdminSidebar({ userEmail }: { userEmail: string }) {
+export function AdminSidebar() {
   const [open, setOpen] = useState(false)
   const pathname = usePathname()
-  const router = useRouter()
-
-  async function handleLogout() {
-    const supabase = createClient()
-    await supabase.auth.signOut()
-    router.push('/admin/login')
-    router.refresh()
-  }
 
   function isActive(href: string, exact: boolean) {
     return exact ? pathname === href : pathname.startsWith(href)
@@ -71,16 +62,15 @@ export function AdminSidebar({ userEmail }: { userEmail: string }) {
 
       <NavLinks />
 
-      {/* User + Logout */}
-      <div className="px-3 py-4 border-t border-white/10 space-y-1">
-        <p className="px-3 text-xs text-slate-500 truncate mb-2">{userEmail}</p>
-        <button
-          onClick={handleLogout}
+      {/* Logout */}
+      <div className="px-3 py-4 border-t border-white/10">
+        <Link
+          href="/admin/logout"
           className="flex w-full items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium text-slate-400 hover:bg-white/5 hover:text-white transition-colors"
         >
           <LogOut className="h-4 w-4 shrink-0" />
           Sign Out
-        </button>
+        </Link>
       </div>
     </div>
   )
