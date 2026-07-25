@@ -90,7 +90,6 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         <Slot
           ref={ref}
           className={cn(buttonVariants({ variant, size, className }))}
-          aria-busy={loading}
           {...props}
         >
           {children}
