@@ -211,7 +211,7 @@ export default async function HomePage({
       {/* ── 2. Services Section ─────────────────────────────────────────────── */}
       <section
         aria-labelledby="services-heading"
-        className="py-16 sm:py-20 bg-background"
+        className="py-16 sm:py-20 bg-background cv-auto"
       >
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           {/* Section header */}
@@ -256,7 +256,7 @@ export default async function HomePage({
       {/* ── 3. How It Works ─────────────────────────────────────────────────── */}
       <section
         aria-labelledby="how-it-works-heading"
-        className="py-16 sm:py-20 bg-muted/40 border-y border-border"
+        className="py-16 sm:py-20 bg-muted/40 border-y border-border cv-auto"
       >
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mb-12 text-center">
@@ -335,7 +335,7 @@ export default async function HomePage({
       {/* ── Services in Action Gallery ──────────────────────────────────────── */}
       <section
         aria-labelledby="gallery-heading"
-        className="py-16 sm:py-20 bg-background"
+        className="py-16 sm:py-20 bg-background cv-auto"
       >
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mb-10 text-center">
@@ -403,7 +403,7 @@ export default async function HomePage({
       {/* ── Satwa Key Shop Section ──────────────────────────────────────────── */}
       <section
         aria-labelledby="satwa-section-heading"
-        className="py-16 sm:py-20 bg-brand-navy text-white"
+        className="py-16 sm:py-20 bg-brand-navy text-white cv-auto"
       >
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid gap-12 lg:grid-cols-2 lg:gap-16 items-center">
@@ -474,7 +474,7 @@ export default async function HomePage({
       {/* ── Recent Work Section ─────────────────────────────────────────────── */}
       <section
         aria-labelledby="recent-work-heading"
-        className="py-16 sm:py-20 bg-muted/40 border-y border-border"
+        className="py-16 sm:py-20 bg-muted/40 border-y border-border cv-auto"
       >
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mb-10 text-center">
@@ -583,7 +583,7 @@ export default async function HomePage({
       {/* ── 4. Locations Section ────────────────────────────────────────────── */}
       <section
         aria-labelledby="locations-heading"
-        className="py-16 sm:py-20 bg-background"
+        className="py-16 sm:py-20 bg-background cv-auto"
       >
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mb-12 text-center">
@@ -623,7 +623,7 @@ export default async function HomePage({
       {/* ── 5. About / E-E-A-T Section ──────────────────────────────────────── */}
       <section
         aria-labelledby="about-heading"
-        className="py-16 sm:py-20 bg-brand-navy text-white"
+        className="py-16 sm:py-20 bg-brand-navy text-white cv-auto"
       >
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid gap-12 lg:grid-cols-2 lg:gap-16 items-center">
@@ -713,7 +713,7 @@ export default async function HomePage({
 
       {/* Placeholder notice — visible only until real reviews are added */}
       {PLACEHOLDER_REVIEWS.length === 0 && (
-        <section className="py-12 bg-muted/30 border-y border-border" aria-label="Customer reviews">
+        <section className="py-12 bg-muted/30 border-y border-border cv-auto" aria-label="Customer reviews">
           <div className="mx-auto max-w-3xl px-4 text-center sm:px-6">
             <p className="text-sm text-muted-foreground">
               {/* TODO: Replace this section with ReviewsSection once real Google reviews are provided by the business owner */}
@@ -734,7 +734,7 @@ export default async function HomePage({
       {/* ── 7. Find Us — Map Section ────────────────────────────────────────── */}
       <section
         aria-labelledby="map-heading"
-        className="py-16 sm:py-20 bg-muted/30 border-y border-border"
+        className="py-16 sm:py-20 bg-muted/30 border-y border-border cv-auto"
       >
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mb-10 text-center">

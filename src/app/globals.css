@@ -176,6 +176,12 @@
   .floating-cta-safe {
     padding-bottom: env(safe-area-inset-bottom);
   }
+
+  /* Below-fold sections — skip layout/paint until scrolled into view */
+  .cv-auto {
+    content-visibility: auto;
+    contain-intrinsic-block-size: auto 600px;
+  }
 }
 
 /* ── Component Layer — Header Scroll State ────────────────────────────────── */
