@@ -1,5 +1,6 @@
 import type { ReactNode } from 'react'
 import type { Metadata, Viewport } from 'next'
+import dynamic from 'next/dynamic'
 import { Inter, Poppins, Cairo } from 'next/font/google'
 import { NextIntlClientProvider } from 'next-intl'
 import { getMessages } from 'next-intl/server'
@@ -8,9 +9,7 @@ import { notFound } from 'next/navigation'
 
 import { Header } from '@/components/layout/Header'
 import { Footer } from '@/components/layout/Footer'
-import { MobileFloatingCTA } from '@/components/layout/MobileFloatingCTA'
 import { LocalBusinessSchema } from '@/components/schema/LocalBusinessSchema'
-
 import {
   BUSINESS_NAME,
   BUSINESS_TAGLINE,
@@ -21,6 +20,13 @@ import {
 } from '@/lib/constants'
 import { routing } from '@/i18n/routing'
 import type { Locale } from '@/i18n/routing'
+
+// Skip SSR for this component — it uses useState/useEffect for a slide-in animation
+// and has no SEO value. Avoids React hydration mismatch (#418/#423).
+const MobileFloatingCTA = dynamic(
+  () => import('@/components/layout/MobileFloatingCTA').then((m) => m.MobileFloatingCTA),
+  { ssr: false },
+)
 
 // ── English Fonts ─────────────────────────────────────────────────────────────
 
@@ -95,9 +101,9 @@ export const metadata: Metadata = {
   creator: BUSINESS_NAME,
   publisher: BUSINESS_NAME,
   formatDetection: {
-    telephone: true,
-    email: true,
-    address: true,
+    telephone: false,
+    email: false,
+    address: false,
   },
   openGraph: {
     type: 'website',
@@ -186,7 +192,7 @@ export default async function LocaleLayout({ children, params }: LocaleLayoutPro
         <link rel="alternate" hrefLang="ar" href={`${SITE_URL}/ar`} />
         <link rel="alternate" hrefLang="x-default" href={SITE_URL} />
       </head>
-      <body className="min-h-screen bg-background font-sans text-foreground">
+      <body suppressHydrationWarning className="min-h-screen bg-background font-sans text-foreground">
         <NextIntlClientProvider messages={messages} locale={locale}>
           <a href="#main-content" className="skip-link">
             {isRtl ? 'انتقل إلى المحتوى الرئيسي' : 'Skip to main content'}
