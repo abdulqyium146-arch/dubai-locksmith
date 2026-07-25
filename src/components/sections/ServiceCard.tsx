@@ -2,8 +2,7 @@
 // Lock Repair Satwa — Service Card
 // ─────────────────────────────────────────────────────────────────────────────
 import { ArrowRight, Clock } from 'lucide-react'
-import { getTranslations } from 'next-intl/server'
-import { Link } from '@/i18n/navigation'
+import Link from 'next/link'
 import { Card, CardContent, CardFooter } from '@/components/ui/Card'
 import { Badge } from '@/components/ui/Badge'
 import { formatPriceRange } from '@/lib/utils'
@@ -16,9 +15,6 @@ interface ServiceCardProps {
 }
 
 export async function ServiceCard({ service, featured = false }: ServiceCardProps) {
-  const t = await getTranslations('card')
-  const tS = await getTranslations('services')
-
   const href = `/services/${service.slug}`
 
   return (
@@ -43,12 +39,12 @@ export async function ServiceCard({ service, featured = false }: ServiceCardProp
             <div className="flex flex-wrap justify-end gap-1.5">
               {service.emergency && (
                 <Badge variant="emergency" size="sm" dot>
-                  {tS('emergency')}
+                  Emergency
                 </Badge>
               )}
               {featured && (
                 <Badge variant="gold" size="sm">
-                  {tS('popular')}
+                  Popular
                 </Badge>
               )}
             </div>
@@ -83,9 +79,9 @@ export async function ServiceCard({ service, featured = false }: ServiceCardProp
           <Link
             href={href}
             className="group flex items-center gap-1.5 text-sm font-semibold text-brand-gold transition-colors hover:text-brand-gold-dark focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring rounded"
-            aria-label={t('serviceLearnMoreAriaLabel', { title: service.title })}
+            aria-label={`Learn more about ${service.title}`}
           >
-            {t('serviceLearnMore')}
+            Learn More
             <ArrowRight
               className="h-4 w-4 transition-transform group-hover:translate-x-1"
               aria-hidden="true"

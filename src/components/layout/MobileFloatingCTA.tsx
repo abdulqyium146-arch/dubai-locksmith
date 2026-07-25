@@ -5,12 +5,10 @@
 // ─────────────────────────────────────────────────────────────────────────────
 import { useEffect, useState } from 'react'
 import { Phone, CalendarDays } from 'lucide-react'
-import { useTranslations } from 'next-intl'
-import { Link } from '@/i18n/navigation'
+import Link from 'next/link'
 import { PHONE_DISPLAY, PHONE_HREF, WHATSAPP_HREF } from '@/lib/constants'
 
 export function MobileFloatingCTA() {
-  const t = useTranslations('mobileCta')
   const [visible, setVisible] = useState(false)
 
   // Slide up after a short delay so it doesn't obscure the hero immediately
@@ -25,7 +23,7 @@ export function MobileFloatingCTA() {
       className={`fixed bottom-0 inset-x-0 z-50 md:hidden floating-cta-safe will-change-transform transition-[transform,opacity] duration-500 ease-out ${
         visible ? 'translate-y-0 opacity-100' : 'translate-y-full opacity-0 pointer-events-none'
       }`}
-      aria-label={t('ariaLabel')}
+      aria-label="Quick contact bar"
       role="complementary"
     >
           {/* Gradient fade above the bar */}
@@ -55,10 +53,10 @@ export function MobileFloatingCTA() {
                 'transition-opacity active:opacity-90',
                 'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-inset',
               ].join(' ')}
-              aria-label={t('callAriaLabel', { phone: PHONE_DISPLAY })}
+              aria-label={`Call Lock Repair Satwa: ${PHONE_DISPLAY}`}
             >
               <Phone className="h-5 w-5" aria-hidden="true" />
-              <span className="text-xs font-bold leading-tight">{t('callNow')}</span>
+              <span className="text-xs font-bold leading-tight">Call Now</span>
               <span className="text-[10px] font-medium leading-tight opacity-80">
                 {PHONE_DISPLAY}
               </span>
@@ -78,7 +76,7 @@ export function MobileFloatingCTA() {
                 'transition-opacity active:opacity-90',
                 'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-inset',
               ].join(' ')}
-              aria-label={t('whatsappAriaLabel')}
+              aria-label="Chat on WhatsApp"
             >
               {/* WhatsApp SVG icon */}
               <svg
@@ -91,7 +89,7 @@ export function MobileFloatingCTA() {
               </svg>
               <span className="text-xs font-bold leading-tight">WhatsApp</span>
               <span className="text-[10px] font-medium leading-tight opacity-80">
-                {t('whatsappFreeChat')}
+                Free Chat
               </span>
             </a>
           </div>

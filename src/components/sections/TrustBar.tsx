@@ -2,7 +2,6 @@
 // Lock Repair Satwa — Trust Bar
 // ─────────────────────────────────────────────────────────────────────────────
 import { Clock, Star, Zap, MapPin, DollarSign } from 'lucide-react'
-import { getTranslations } from 'next-intl/server'
 import { cn } from '@/lib/utils'
 import { GOOGLE_RATING } from '@/lib/constants'
 
@@ -13,39 +12,37 @@ interface TrustBarProps {
 }
 
 export async function TrustBar({ dark = false, className }: TrustBarProps) {
-  const t = await getTranslations('trust')
-
   const TRUST_ITEMS = [
     {
       icon: Clock,
-      label: t('service247'),
-      sub: t('service247Sub'),
+      label: '24/7 Service',
+      sub: 'Always available',
     },
     {
       icon: Star,
-      label: t('googleRated', { rating: GOOGLE_RATING }),
-      sub: t('googleRatedSub'),
+      label: `${GOOGLE_RATING}★ Google Rated`,
+      sub: 'Verified reviews',
     },
     {
       icon: Zap,
-      label: t('response20Min'),
-      sub: t('response20MinSub'),
+      label: '20-Min Response',
+      sub: 'Central Dubai',
     },
     {
       icon: MapPin,
-      label: t('allDubaiCovered'),
-      sub: t('allDubaiCoveredSub'),
+      label: 'All Dubai Covered',
+      sub: '15 key areas',
     },
     {
       icon: DollarSign,
-      label: t('upfrontPricing'),
-      sub: t('upfrontPricingSub'),
+      label: 'Upfront Pricing',
+      sub: 'No hidden fees',
     },
   ]
 
   return (
     <section
-      aria-label={t('ariaLabel')}
+      aria-label="Trust signals"
       className={cn(
         'w-full py-6',
         dark

@@ -3,8 +3,8 @@
 // Lock Repair Satwa — Sticky Header with Mega-Menus
 // ─────────────────────────────────────────────────────────────────────────────
 import { useState, useEffect, useRef } from 'react'
-import { useTranslations } from 'next-intl'
-import { Link, usePathname } from '@/i18n/navigation'
+import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 import { Phone, ChevronDown, X, Menu, Clock, ChevronRight } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import {
@@ -25,7 +25,6 @@ import {
   PRODUCT_CATEGORY_LABELS,
 } from '@/data/products'
 import { locations } from '@/data/locations'
-import { LanguageSwitcher } from '@/components/layout/LanguageSwitcher'
 
 // ── Location sub-menu (top items only) ───────────────────────────────────────
 
@@ -317,24 +316,23 @@ function MobileAccordion({ href, allLabel, expandLabel, collapseLabel, sections,
 
 export function Header() {
   const pathname = usePathname()
-  const t = useTranslations('nav')
   const [scrolled, setScrolled] = useState(false)
   const [mobileOpen, setMobileOpen] = useState(false)
   const [openDropdown, setOpenDropdown] = useState<string | null>(null)
   const [mobileExpanded, setMobileExpanded] = useState<string | null>(null)
 
-  // ── Services mega-menu data (built inside component to access t()) ──────────
+  // ── Services mega-menu data ─────────────────────────────────────────────────
   const SERVICES_MEGA = [
     {
-      label: t('residentialServices'),
+      label: 'Residential Services',
       items: RESIDENTIAL_SERVICES.map((s) => ({ label: s.title, href: `/services/${s.slug}`, icon: s.icon })),
     },
     {
-      label: t('commercialServices'),
+      label: 'Commercial Services',
       items: COMMERCIAL_SERVICES.map((s) => ({ label: s.title, href: `/services/${s.slug}`, icon: s.icon })),
     },
     {
-      label: t('automotiveServices'),
+      label: 'Automotive Services',
       items: AUTOMOTIVE_SERVICES.map((s) => ({ label: s.title, href: `/services/${s.slug}`, icon: s.icon })),
     },
   ]
@@ -386,7 +384,7 @@ export function Header() {
         <Link
           href="/"
           className="flex items-center gap-2.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded-md"
-          aria-label={t('logoHome', { name: BUSINESS_NAME })}
+          aria-label={`${BUSINESS_NAME} — Home`}
         >
           <div
             aria-hidden="true"
@@ -413,41 +411,41 @@ export function Header() {
         </Link>
 
         {/* ── Desktop Navigation ────────────────────────────────────────────── */}
-        <nav aria-label={t('mainNavAriaLabel')} className="hidden items-center gap-1 lg:flex">
+        <nav aria-label="Main navigation" className="hidden items-center gap-1 lg:flex">
           {/* Services Mega-Menu */}
           <MegaMenuDropdown
-            label={t('services')}
+            label="Services"
             href="/services"
             columns={SERVICES_MEGA}
             isOpen={openDropdown === 'services'}
             onToggle={() => toggleDropdown('services')}
             onClose={closeDropdown}
             scrolled={scrolled}
-            viewAllLabel={t('viewAll', { label: t('services') })}
+            viewAllLabel="View all Services"
           />
 
           {/* Products Mega-Menu */}
           <MegaMenuDropdown
-            label={t('products')}
+            label="Products"
             href="/products"
             columns={PRODUCTS_MEGA}
             isOpen={openDropdown === 'products'}
             onToggle={() => toggleDropdown('products')}
             onClose={closeDropdown}
             scrolled={scrolled}
-            viewAllLabel={t('viewAll', { label: t('products') })}
+            viewAllLabel="View all Products"
           />
 
           {/* Locations Dropdown */}
           <NavDropdown
-            label={t('locations')}
+            label="Locations"
             href="/locations"
             items={LOCATION_LINKS}
             isOpen={openDropdown === 'locations'}
             onToggle={() => toggleDropdown('locations')}
             onClose={closeDropdown}
             scrolled={scrolled}
-            viewAllLabel={t('viewAll', { label: t('locations') })}
+            viewAllLabel="View all Locations"
           />
 
           {/* Book a Service — highlighted CTA button */}
@@ -468,10 +466,10 @@ export function Header() {
           {/* About & Contact */}
           {(
             [
-              { key: 'about', href: '/about' },
-              { key: 'contact', href: '/contact' },
+              { label: 'About', href: '/about' },
+              { label: 'Contact', href: '/contact' },
             ] as const
-          ).map(({ key, href }) => {
+          ).map(({ label, href }) => {
             const isActive = pathname === href
             return (
               <Link
@@ -487,7 +485,7 @@ export function Header() {
                     : 'text-white/90',
                 )}
               >
-                {t(key)}
+                {label}
               </Link>
             )
           })}
@@ -502,14 +500,11 @@ export function Header() {
                 ? 'border-brand-gold/30 bg-brand-gold/10 text-brand-gold'
                 : 'border-brand-gold/40 bg-brand-gold/15 text-brand-gold',
             )}
-            aria-label={t('open247')}
+            aria-label="Open 24/7"
           >
             <Clock className="h-3 w-3" aria-hidden="true" />
-            {t('open247')}
+            Open 24/7
           </div>
-
-          {/* Language Switcher — desktop */}
-          <LanguageSwitcher scrolled={scrolled} />
 
           <a
             href={PHONE_HREF}
@@ -518,14 +513,14 @@ export function Header() {
               'bg-brand-gold text-brand-navy hover:bg-brand-gold-dark',
               'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2',
             )}
-            aria-label={t('callUs', { phone: PHONE_DISPLAY })}
+            aria-label={`Call us: ${PHONE_DISPLAY}`}
           >
             <Phone className="h-4 w-4" aria-hidden="true" />
             {PHONE_DISPLAY}
           </a>
 
           <button
-            aria-label={mobileOpen ? t('closeMenu') : t('openMenu')}
+            aria-label={mobileOpen ? 'Close menu' : 'Open menu'}
             aria-expanded={mobileOpen}
             aria-controls="mobile-menu"
             onClick={() => setMobileOpen((p) => !p)}
@@ -548,12 +543,12 @@ export function Header() {
         <div
           id="mobile-menu"
           role="dialog"
-          aria-label={t('mobileNavLabel')}
+          aria-label="Mobile navigation menu"
           aria-modal="true"
           className="fixed inset-0 top-[72px] z-40 overflow-y-auto bg-background lg:hidden"
         >
           <nav
-            aria-label={t('mobileNavAriaLabel')}
+            aria-label="Mobile navigation"
             className="mx-auto max-w-7xl divide-y divide-border px-4 pb-8 pt-4"
           >
             {/* CTA row */}
@@ -568,10 +563,8 @@ export function Header() {
               <div className="flex items-center justify-center gap-2">
                 <div className="flex items-center justify-center gap-1.5 text-sm text-muted-foreground">
                   <Clock className="h-3.5 w-3.5 text-brand-gold" />
-                  {t('open247')}
+                  Open 24/7
                 </div>
-                {/* Language Switcher — mobile */}
-                <LanguageSwitcher variant="compact" />
               </div>
             </div>
 
@@ -581,15 +574,15 @@ export function Header() {
                 href="/"
                 className="block rounded-lg px-4 py-3 font-medium text-foreground hover:bg-muted hover:text-brand-gold"
               >
-                {t('home')}
+                Home
               </Link>
 
               {/* Services accordion */}
               <MobileAccordion
                 href="/services"
-                allLabel={t('allServices')}
-                expandLabel={t('expandSubmenu', { label: t('services') })}
-                collapseLabel={t('collapseSubmenu', { label: t('services') })}
+                allLabel="All Services"
+                expandLabel="Expand Services submenu"
+                collapseLabel="Collapse Services submenu"
                 sections={SERVICES_MEGA}
                 isOpen={mobileExpanded === 'services'}
                 onToggle={() => toggleMobileExpanded('services')}
@@ -598,9 +591,9 @@ export function Header() {
               {/* Products accordion */}
               <MobileAccordion
                 href="/products"
-                allLabel={t('allProducts')}
-                expandLabel={t('expandSubmenu', { label: t('products') })}
-                collapseLabel={t('collapseSubmenu', { label: t('products') })}
+                allLabel="All Products"
+                expandLabel="Expand Products submenu"
+                collapseLabel="Collapse Products submenu"
                 sections={PRODUCTS_MEGA}
                 isOpen={mobileExpanded === 'products'}
                 onToggle={() => toggleMobileExpanded('products')}
@@ -612,7 +605,7 @@ export function Header() {
                   href="/locations"
                   className="block rounded-lg px-4 py-3 font-semibold text-brand-gold hover:bg-brand-gold/10"
                 >
-                  {t('allLocations')}
+                  All Locations
                 </Link>
                 <div className="ml-4 mt-1 grid grid-cols-2 gap-1">
                   {LOCATION_LINKS.map((l) => (
@@ -637,13 +630,13 @@ export function Header() {
                 href="/about"
                 className="block rounded-lg px-4 py-3 font-medium text-foreground hover:bg-muted hover:text-brand-gold"
               >
-                {t('about')}
+                About
               </Link>
               <Link
                 href="/contact"
                 className="block rounded-lg px-4 py-3 font-medium text-foreground hover:bg-muted hover:text-brand-gold"
               >
-                {t('contact')}
+                Contact
               </Link>
             </div>
           </nav>

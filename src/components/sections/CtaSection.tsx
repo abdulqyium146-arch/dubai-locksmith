@@ -2,8 +2,7 @@
 // Lock Repair Satwa — Full-width CTA Section
 // ─────────────────────────────────────────────────────────────────────────────
 import { Phone, MessageCircle, CalendarDays } from 'lucide-react'
-import { getTranslations } from 'next-intl/server'
-import { Link } from '@/i18n/navigation'
+import Link from 'next/link'
 import { Button } from '@/components/ui/Button'
 import { cn } from '@/lib/utils'
 import {
@@ -28,8 +27,6 @@ export async function CtaSection({
   dark = true,
   className,
 }: CtaSectionProps) {
-  const t = await getTranslations('cta')
-
   return (
     <section
       aria-labelledby="cta-heading"
@@ -61,7 +58,7 @@ export async function CtaSection({
             className="h-1.5 w-1.5 animate-pulse rounded-full bg-brand-gold"
             aria-hidden="true"
           />
-          {t('openDailyBadge')}
+          Open Daily 7 AM – 11:30 PM
         </div>
 
         {/* Heading */}
@@ -72,7 +69,7 @@ export async function CtaSection({
             dark ? 'text-white' : 'text-foreground',
           )}
         >
-          {heading ?? t('defaultHeading')}
+          {heading ?? 'Need a Locksmith in Dubai?'}
         </h2>
 
         {/* Subtext */}
@@ -82,7 +79,7 @@ export async function CtaSection({
             dark ? 'text-white/75' : 'text-muted-foreground',
           )}
         >
-          {subtext ?? t('defaultSubtext')}
+          {subtext ?? "Lock Repair Satwa is available daily 24/7 across all Dubai areas. Call or WhatsApp now for an instant quote — no call-out fee, upfront pricing."}
         </p>
 
         {/* CTA buttons */}
@@ -93,9 +90,9 @@ export async function CtaSection({
             className="btn-pulse w-full sm:w-auto"
             asChild
           >
-            <a href={PHONE_HREF} aria-label={t('callAriaLabel', { phone: PHONE_DISPLAY })}>
+            <a href={PHONE_HREF} aria-label={`Call Lock Repair Satwa: ${PHONE_DISPLAY}`}>
               <Phone className="h-5 w-5" aria-hidden="true" />
-              {t('callNow', { phone: PHONE_DISPLAY })}
+              {`Call Now — ${PHONE_DISPLAY}`}
             </a>
           </Button>
 
@@ -109,10 +106,10 @@ export async function CtaSection({
               href={WHATSAPP_HREF}
               target="_blank"
               rel="noopener noreferrer"
-              aria-label={t('whatsappAriaLabel')}
+              aria-label="Chat with us on WhatsApp"
             >
               <MessageCircle className="h-5 w-5" aria-hidden="true" />
-              {t('whatsappUs')}
+              WhatsApp Us
             </a>
           </Button>
 
@@ -136,7 +133,7 @@ export async function CtaSection({
             dark ? 'text-white/40' : 'text-muted-foreground',
           )}
         >
-          {t('reassurance')}
+          No call-out fee · Upfront pricing · All Dubai areas covered
         </p>
       </div>
     </section>

@@ -2,8 +2,7 @@
 // Lock Repair Satwa — Location Card
 // ─────────────────────────────────────────────────────────────────────────────
 import { ArrowRight, Clock, MapPin } from 'lucide-react'
-import { getTranslations } from 'next-intl/server'
-import { Link } from '@/i18n/navigation'
+import Link from 'next/link'
 import { Card, CardContent, CardFooter } from '@/components/ui/Card'
 import { Badge } from '@/components/ui/Badge'
 import type { Location } from '@/types'
@@ -13,8 +12,6 @@ interface LocationCardProps {
 }
 
 export async function LocationCard({ location }: LocationCardProps) {
-  const t = await getTranslations('card')
-
   const href = `/locations/${location.slug}`
 
   // Classify response time urgency for badge styling
@@ -37,11 +34,11 @@ export async function LocationCard({ location }: LocationCardProps) {
 
             {isNearest ? (
               <Badge variant="gold" size="sm" dot>
-                {t('homeBase')}
+                Home Base
               </Badge>
             ) : isFast ? (
               <Badge variant="success" size="sm" dot>
-                {t('fastResponse')}
+                Fast Response
               </Badge>
             ) : null}
           </div>
@@ -62,7 +59,7 @@ export async function LocationCard({ location }: LocationCardProps) {
             <span className="font-medium text-brand-gold">
               {location.responseTime}
             </span>
-            <span className="text-muted-foreground">{t('locationResponseTime')}</span>
+            <span className="text-muted-foreground">response time</span>
           </div>
 
           {/* Key landmarks */}
@@ -84,9 +81,9 @@ export async function LocationCard({ location }: LocationCardProps) {
           <Link
             href={href}
             className="group flex items-center gap-1.5 text-sm font-semibold text-brand-gold transition-colors hover:text-brand-gold-dark focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring rounded"
-            aria-label={t('locationViewServicesAriaLabel', { name: location.name })}
+            aria-label={`Car key services in ${location.name}`}
           >
-            {t('locationViewServices')}
+            View Services
             <ArrowRight
               className="h-4 w-4 transition-transform group-hover:translate-x-1"
               aria-hidden="true"

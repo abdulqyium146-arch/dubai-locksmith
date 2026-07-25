@@ -1,9 +1,8 @@
 // ─────────────────────────────────────────────────────────────────────────────
-// Lock Repair Satwa — Booking Page [locale]/booking/page.tsx
+// Lock Repair Satwa — Booking Page
 // ─────────────────────────────────────────────────────────────────────────────
 import type { Metadata } from 'next'
 import { Phone, MessageCircle, Clock, Shield, Star } from 'lucide-react'
-import { getTranslations, setRequestLocale } from 'next-intl/server'
 
 import { BreadcrumbNav } from '@/components/sections/BreadcrumbNav'
 import { TrustBar } from '@/components/sections/TrustBar'
@@ -19,51 +18,33 @@ import {
   SITE_URL,
   DEFAULT_OG_IMAGE,
 } from '@/lib/constants'
-import { routing } from '@/i18n/routing'
 
 // ── Metadata ──────────────────────────────────────────────────────────────────
 
-export async function generateMetadata({
-  params,
-}: {
-  params: Promise<{ locale: string }>
-}): Promise<Metadata> {
-  const { locale } = await params
-
-  const title = 'Book a Locksmith in Dubai | Lock Repair Satwa'
-  const description =
-    'Book a locksmith or car key service in Dubai online. Lock Repair Satwa — mobile service across all Dubai areas. Same-day response, upfront pricing. Call +971 52 642 6161.'
-
-  return {
-    title,
-    description,
-    alternates: {
-      canonical: `${SITE_URL}/${locale}/booking`,
-      languages: {
-        en: `${SITE_URL}/en/booking`,
-        ar: `${SITE_URL}/ar/booking`,
-      },
-    },
-    openGraph: {
-      type: 'website',
-      locale: locale === 'ar' ? 'ar_AE' : 'en_AE',
-      url: `${SITE_URL}/${locale}/booking`,
-      siteName: BUSINESS_NAME,
-      title,
-      description,
-      images: [{ url: DEFAULT_OG_IMAGE, width: 1200, height: 630, alt: `Book ${BUSINESS_NAME}` }],
-    },
-    twitter: {
-      card: 'summary_large_image',
-      title,
-      description,
-      images: [DEFAULT_OG_IMAGE],
-    },
-  }
-}
-
-export function generateStaticParams() {
-  return routing.locales.map((locale) => ({ locale }))
+export const metadata: Metadata = {
+  title: 'Book a Locksmith in Dubai | Lock Repair Satwa',
+  description:
+    'Book a locksmith or car key service in Dubai online. Lock Repair Satwa — mobile service across all Dubai areas. Same-day response, upfront pricing. Call +971 52 642 6161.',
+  alternates: {
+    canonical: `${SITE_URL}/booking`,
+  },
+  openGraph: {
+    type: 'website',
+    locale: 'en_AE',
+    url: `${SITE_URL}/booking`,
+    siteName: BUSINESS_NAME,
+    title: 'Book a Locksmith in Dubai | Lock Repair Satwa',
+    description:
+      'Book a locksmith or car key service in Dubai online. Lock Repair Satwa — mobile service across all Dubai areas. Same-day response, upfront pricing. Call +971 52 642 6161.',
+    images: [{ url: DEFAULT_OG_IMAGE, width: 1200, height: 630, alt: `Book ${BUSINESS_NAME}` }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Book a Locksmith in Dubai | Lock Repair Satwa',
+    description:
+      'Book a locksmith or car key service in Dubai online. Lock Repair Satwa — mobile service across all Dubai areas. Same-day response, upfront pricing.',
+    images: [DEFAULT_OG_IMAGE],
+  },
 }
 
 // ── Schema ────────────────────────────────────────────────────────────────────
@@ -71,11 +52,11 @@ export function generateStaticParams() {
 const bookingPageSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
-  '@id': `${SITE_URL}/en/booking#page`,
+  '@id': `${SITE_URL}/booking#page`,
   name: 'Book a Locksmith in Dubai',
   description:
     'Online booking form for locksmith and car key services in Dubai. Lock Repair Satwa serves all Dubai areas with mobile technicians.',
-  url: `${SITE_URL}/en/booking`,
+  url: `${SITE_URL}/booking`,
   provider: {
     '@type': 'Locksmith',
     '@id': `${SITE_URL}/#lock-repair-satwa`,
@@ -83,7 +64,7 @@ const bookingPageSchema = {
   },
   potentialAction: {
     '@type': 'ReserveAction',
-    target: `${SITE_URL}/en/booking`,
+    target: `${SITE_URL}/booking`,
     result: {
       '@type': 'Reservation',
       name: 'Locksmith Service Booking',
@@ -95,21 +76,12 @@ const bookingPageSchema = {
 // Page Component
 // ─────────────────────────────────────────────────────────────────────────────
 
-export default async function BookingPage({
-  params,
-}: {
-  params: Promise<{ locale: string }>
-}) {
-  const { locale } = await params
-  setRequestLocale(locale)
+const breadcrumbs = [
+  { name: 'Home', href: '/' },
+  { name: 'Book a Service', href: '/booking' },
+]
 
-  const tCommon = await getTranslations('common')
-
-  const breadcrumbs = [
-    { name: tCommon('breadcrumbHome'), href: '/' },
-    { name: 'Book a Service', href: '/booking' },
-  ]
-
+export default function BookingPage() {
   return (
     <>
       <JsonLd data={bookingPageSchema} />

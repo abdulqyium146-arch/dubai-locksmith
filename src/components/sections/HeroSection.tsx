@@ -4,8 +4,7 @@
 import type { ReactNode } from 'react'
 import Image from 'next/image'
 import { Phone, MessageCircle, ChevronRight, MapPin } from 'lucide-react'
-import { getTranslations } from 'next-intl/server'
-import { Link } from '@/i18n/navigation'
+import Link from 'next/link'
 import { Button } from '@/components/ui/Button'
 import { Badge } from '@/components/ui/Badge'
 import { TrustBar } from '@/components/sections/TrustBar'
@@ -34,12 +33,10 @@ export async function HeroSection({
   showTrustBar = true,
   badge,
 }: HeroSectionProps) {
-  const t = await getTranslations('hero')
-
   const headlineDefault = (
     <>
       Dubai&apos;s Professional{' '}
-      <span className="text-gold-gradient">{t('titleHighlight')}</span>
+      <span className="text-gold-gradient">Locksmith</span>
       {' '}— Lock Repair Satwa
     </>
   )
@@ -75,7 +72,7 @@ export async function HeroSection({
 
               {/* Badge */}
               <Badge variant="gold" size="md" dot className="mb-6 inline-flex">
-                {badge ?? t('badge')}
+                {badge ?? "Key Maker & Locksmith — Satwa & All Dubai Areas"}
               </Badge>
 
               {/* H1 */}
@@ -85,14 +82,14 @@ export async function HeroSection({
 
               {/* Subtitle */}
               <p className="mt-5 text-base leading-relaxed text-white/70 sm:text-lg lg:max-w-lg">
-                {subtitle ?? t('subtitle')}
+                {subtitle ?? "Lock Repair Satwa, D90 Al Bada'a, Dubai — car key duplication, door lock repair, smart key programming and emergency locksmith across all Dubai areas. On-site in 20–45 minutes."}
               </p>
 
               {/* Star rating + review count */}
               <div className="mt-5 flex flex-wrap items-center justify-center gap-x-3 gap-y-1 lg:justify-start">
                 <div
                   className="flex gap-0.5"
-                  aria-label={t('ratingLabel', { rating: GOOGLE_RATING })}
+                  aria-label={`Rated ${GOOGLE_RATING} out of 5 stars on Google`}
                 >
                   {Array.from({ length: 5 }).map((_, i) => (
                     <svg
@@ -112,7 +109,7 @@ export async function HeroSection({
                 </div>
                 <span className="text-sm font-bold text-white">{GOOGLE_RATING}</span>
                 <span className="text-sm text-white/45">
-                  {t('reviewCount', { count: GOOGLE_REVIEW_COUNT })}
+                  · {GOOGLE_REVIEW_COUNT} verified Google reviews
                 </span>
               </div>
 
@@ -124,9 +121,9 @@ export async function HeroSection({
                   className="btn-pulse w-full sm:w-auto"
                   asChild
                 >
-                  <a href={PHONE_HREF} aria-label={t('callAriaLabel', { phone: PHONE_DISPLAY })}>
+                  <a href={PHONE_HREF} aria-label={`Call Lock Repair Satwa: ${PHONE_DISPLAY}`}>
                     <Phone className="h-5 w-5" aria-hidden="true" />
-                    {t('callNow', { phone: PHONE_DISPLAY })}
+                    {`Call Now — ${PHONE_DISPLAY}`}
                   </a>
                 </Button>
                 <Button size="lg" variant="whatsapp" className="w-full sm:w-auto" asChild>
@@ -134,10 +131,10 @@ export async function HeroSection({
                     href={WHATSAPP_HREF}
                     target="_blank"
                     rel="noopener noreferrer"
-                    aria-label={t('whatsappAriaLabel')}
+                    aria-label="WhatsApp Lock Repair Satwa"
                   >
                     <MessageCircle className="h-5 w-5" aria-hidden="true" />
-                    {t('whatsappUs')}
+                    WhatsApp Us
                   </a>
                 </Button>
               </div>
@@ -157,7 +154,7 @@ export async function HeroSection({
 
               {/* Trust micro-copy */}
               <p className="mt-7 text-[11px] font-medium uppercase tracking-widest text-white/30">
-                {t('trustCopy')}
+                No call-out fee · Price confirmed first · Open 24/7 daily
               </p>
             </div>
 
@@ -174,7 +171,7 @@ export async function HeroSection({
               <div className="relative overflow-hidden rounded-2xl shadow-[0_32px_80px_rgba(0,0,0,0.55)] ring-1 ring-white/10">
                 <Image
                   src="/images/services/car-remote-key-blanks-locksmith-shop-dubai.webp"
-                  alt={t('imageAlt')}
+                  alt="Car remote key blanks and transponder keys on display at Lock Repair Satwa shop, Al Bada'a Dubai"
                   width={520}
                   height={380}
                   priority
@@ -192,7 +189,7 @@ export async function HeroSection({
               {/* Floating badge: Google Rating (top-right) */}
               <div
                 className="absolute -top-4 -right-2 sm:-right-4 flex items-center gap-2.5 rounded-xl bg-brand-gold px-3.5 py-2.5 shadow-[0_8px_32px_rgba(201,168,76,0.45)]"
-                aria-label={t('googleBadgeLabel', { rating: GOOGLE_RATING })}
+                aria-label={`${GOOGLE_RATING} star Google rating`}
               >
                 <span className="font-heading text-2xl font-extrabold leading-none text-brand-navy">
                   {GOOGLE_RATING}★
@@ -202,7 +199,7 @@ export async function HeroSection({
                     Google
                   </p>
                   <p className="mt-0.5 text-[10px] font-semibold text-brand-navy/65">
-                    {t('googleReviews', { count: GOOGLE_REVIEW_COUNT })}
+                    {GOOGLE_REVIEW_COUNT} reviews
                   </p>
                 </div>
               </div>
@@ -214,9 +211,9 @@ export async function HeroSection({
                   <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-green-400" />
                 </span>
                 <div className="leading-none">
-                  <p className="text-xs font-bold text-white">{t('openBadge')}</p>
+                  <p className="text-xs font-bold text-white">Open 24/7</p>
                   <p className="mt-0.5 text-[11px] text-white/50">
-                    {t('openBadgeSub')}
+                    D90, Al Bada&apos;a · 20–45 min
                   </p>
                 </div>
               </div>
@@ -225,8 +222,8 @@ export async function HeroSection({
               <div className="absolute bottom-10 -right-4 hidden xl:flex items-center gap-2 rounded-xl border border-white/10 bg-white/8 px-3 py-2.5 backdrop-blur-sm">
                 <MapPin className="h-4 w-4 shrink-0 text-brand-gold" aria-hidden="true" />
                 <div className="leading-none">
-                  <p className="text-[11px] font-bold text-white">{t('locationBadge')}</p>
-                  <p className="mt-0.5 text-[10px] text-white/55">{t('locationBadgeSub')}</p>
+                  <p className="text-[11px] font-bold text-white">Al Bada&apos;a</p>
+                  <p className="mt-0.5 text-[10px] text-white/55">Dubai, UAE</p>
                 </div>
               </div>
             </div>

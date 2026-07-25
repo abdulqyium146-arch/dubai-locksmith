@@ -1,10 +1,10 @@
 // ─────────────────────────────────────────────────────────────────────────────
-// Lock Repair Satwa — Bilingual Homepage [locale]/page.tsx
+// Lock Repair Satwa — Homepage
 // ─────────────────────────────────────────────────────────────────────────────
 import type { Metadata } from 'next'
 import Image from 'next/image'
+import Link from 'next/link'
 import { Phone, MessageCircle, CheckCircle2, ArrowRight, PhoneCall, Wrench, ThumbsUp, MapPin, Clock } from 'lucide-react'
-import { getTranslations, setRequestLocale } from 'next-intl/server'
 
 import { HeroSection } from '@/components/sections/HeroSection'
 import { TrustBar } from '@/components/sections/TrustBar'
@@ -14,7 +14,6 @@ import { ReviewsSection } from '@/components/sections/ReviewsSection'
 import { CtaSection } from '@/components/sections/CtaSection'
 import { JsonLd } from '@/components/schema/JsonLd'
 import { Button } from '@/components/ui/Button'
-import { Link } from '@/i18n/navigation'
 
 import { services } from '@/data/services'
 import { locations } from '@/data/locations'
@@ -32,47 +31,34 @@ import type { Review } from '@/types'
 
 // ── Metadata ──────────────────────────────────────────────────────────────────
 
-export async function generateMetadata({
-  params,
-}: {
-  params: Promise<{ locale: string }>
-}): Promise<Metadata> {
-  const { locale } = await params
-  const t = await getTranslations({ locale, namespace: 'meta' })
-
-  return {
-    title: `${t('siteName')} | ${t('tagline')}`,
-    description: t('defaultDescription'),
-    alternates: {
-      canonical: locale === 'en' ? SITE_URL : `${SITE_URL}/${locale}`,
-      languages: {
-        en: SITE_URL,
-        ar: `${SITE_URL}/ar`,
+export const metadata: Metadata = {
+  title: `Lock Repair Satwa | Dubai's Professional Locksmith — Satwa & Al Bada'a`,
+  description: "Lock Repair Satwa is a professional locksmith in Dubai based in Al Bada'a, serving all areas across the city. Car key duplication, door lock repair, smart key programming, emergency locksmith and more. Rated 4.7★ on Google. Call +971 52 642 6161.",
+  alternates: {
+    canonical: SITE_URL,
+  },
+  openGraph: {
+    type: 'website',
+    locale: 'en_AE',
+    url: SITE_URL,
+    siteName: BUSINESS_NAME,
+    title: `Lock Repair Satwa | Dubai's Professional Locksmith — Satwa & Al Bada'a`,
+    description: "Lock Repair Satwa is a professional locksmith in Dubai based in Al Bada'a, serving all areas across the city. Car key duplication, door lock repair, smart key programming, emergency locksmith and more. Rated 4.7★ on Google. Call +971 52 642 6161.",
+    images: [
+      {
+        url: DEFAULT_OG_IMAGE,
+        width: 1200,
+        height: 630,
+        alt: "Lock Repair Satwa — Dubai's Professional Locksmith in Al Bada'a",
       },
-    },
-    openGraph: {
-      type: 'website',
-      locale: locale === 'ar' ? 'ar_AE' : 'en_AE',
-      url: locale === 'en' ? SITE_URL : `${SITE_URL}/${locale}`,
-      siteName: t('siteName'),
-      title: `${t('siteName')} | ${t('tagline')}`,
-      description: t('defaultDescription'),
-      images: [
-        {
-          url: DEFAULT_OG_IMAGE,
-          width: 1200,
-          height: 630,
-          alt: t('ogAlt'),
-        },
-      ],
-    },
-    twitter: {
-      card: 'summary_large_image',
-      title: `${t('siteName')} | ${t('tagline')}`,
-      description: t('defaultDescription'),
-      images: [DEFAULT_OG_IMAGE],
-    },
-  }
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: `Lock Repair Satwa | Dubai's Professional Locksmith — Satwa & Al Bada'a`,
+    description: "Lock Repair Satwa is a professional locksmith in Dubai based in Al Bada'a, serving all areas across the city.",
+    images: [DEFAULT_OG_IMAGE],
+  },
 }
 
 // ── Website + SearchAction Schema ─────────────────────────────────────────────
@@ -112,76 +98,67 @@ const featuredLocations = locations.slice(0, 6)
 // Page Component
 // ─────────────────────────────────────────────────────────────────────────────
 
-export default async function HomePage({
-  params,
-}: {
-  params: Promise<{ locale: string }>
-}) {
-  const { locale } = await params
-  setRequestLocale(locale)
-
-  const t = await getTranslations('home')
-
+export default async function HomePage() {
   const HOW_IT_WORKS = [
     {
       step: 1,
       icon: PhoneCall,
-      title: t('step1Title'),
-      description: t('step1Desc'),
+      title: 'Call or WhatsApp Us',
+      description: 'Call +971 52 642 6161 or send a WhatsApp message. Tell us your location, key type or lock issue and the service you need. We confirm availability and give you an upfront price in under 2 minutes.',
     },
     {
       step: 2,
       icon: Wrench,
-      title: t('step2Title'),
-      description: t('step2Desc'),
+      title: 'We Come to You',
+      description: "A certified mobile technician is dispatched immediately from our Al Bada'a base or nearest available unit. We reach most Dubai locations in 20–45 minutes — no need to tow your car or visit a workshop.",
     },
     {
       step: 3,
       icon: ThumbsUp,
-      title: t('step3Title'),
-      description: t('step3Desc'),
+      title: 'Problem Solved, On the Spot',
+      description: 'Our technician carries professional key-cutting machines, OBD programming tools and diagnostic equipment. Most jobs are completed in a single visit — you get a tested, working key before we leave.',
     },
   ]
 
   const DIFFERENTIATORS = [
-    { title: t('diff1Title'), description: t('diff1Desc') },
-    { title: t('diff2Title'), description: t('diff2Desc') },
-    { title: t('diff3Title'), description: t('diff3Desc') },
-    { title: t('diff4Title'), description: t('diff4Desc') },
-    { title: t('diff5Title'), description: t('diff5Desc') },
-    { title: t('diff6Title'), description: t('diff6Desc') },
+    { title: '10+ Years Experience', description: 'Certified automotive locksmiths with over a decade of hands-on UAE market experience.' },
+    { title: 'Daily Service 7 AM – 11:30 PM, 7 Days a Week', description: 'Open every day from 7:00 AM to 11:30 PM including weekends and public holidays.' },
+    { title: '100% Mobile — We Come to You', description: 'No workshop visit needed. Our technicians carry all equipment directly to your location.' },
+    { title: 'Dubai-Based & Dubai-Focused', description: "Headquartered in Al Bada'a, Dubai — we know every area and respond fast." },
+    { title: 'Upfront, Transparent Pricing', description: 'You receive a firm quote before we start any work. No hidden fees, no surprises.' },
+    { title: '50+ Car Brands Covered', description: 'From Toyota Land Cruisers to BMW, Mercedes-Benz, Tesla and everything in between.' },
   ]
 
   const SHOP_IMAGES = [
     {
       src: '/images/shop/locksmith-shop-satwa-al-badaa-dubai.webp',
       alt: "Lock Repair Satwa shop exterior in Al Bada'a — key maker and locksmith in Satwa Dubai",
-      caption: t('shopCaption1'),
+      caption: 'Our Shop — Satwa',
     },
     {
       src: '/images/shop/padlock-collection-lock-shop-satwa-dubai.webp',
       alt: "Padlock and lock collection on display at Lock Repair Satwa, Al Bada'a Dubai",
-      caption: t('shopCaption2'),
+      caption: 'Padlocks & Locks',
     },
     {
       src: '/images/shop/key-duplication-display-for-sale-satwa-dubai.webp',
       alt: 'Key duplication display stand showing duplicate keys for sale — Lock Repair Satwa, Dubai',
-      caption: t('shopCaption3'),
+      caption: 'Keys for Sale',
     },
     {
       src: '/images/services/car-remote-key-blanks-locksmith-shop-dubai.webp',
       alt: 'Car remote key blanks and spare keys on display at Lock Repair Satwa locksmith shop, Dubai',
-      caption: t('shopCaption4'),
+      caption: 'Car Key Blanks',
     },
     {
       src: '/images/shop/door-lock-handles-repair-shop-satwa-dubai.webp',
       alt: 'Door handles and lock hardware display at Lock Repair Satwa, Satwa Dubai',
-      caption: t('shopCaption5'),
+      caption: 'Door Locks',
     },
     {
       src: '/images/shop/keychains-accessories-key-shop-satwa-dubai.webp',
       alt: 'Key accessories and keychains at Lock Repair Satwa key shop in Satwa, Dubai',
-      caption: t('shopCaption6'),
+      caption: 'Accessories',
     },
   ]
 
@@ -217,16 +194,16 @@ export default async function HomePage({
           {/* Section header */}
           <div className="mb-12 text-center">
             <span className="inline-flex items-center gap-1.5 rounded-full border border-brand-gold/30 bg-brand-gold/10 px-3 py-1 text-xs font-semibold text-brand-gold mb-4">
-              {t('servicesBadge')}
+              Complete Service Range
             </span>
             <h2
               id="services-heading"
               className="font-heading text-3xl font-bold tracking-tight text-foreground sm:text-4xl"
             >
-              {t('servicesHeading')}
+              All Car Key &amp; Locksmith Services in Dubai
             </h2>
             <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
-              {t('servicesSubtext')}
+              From a simple spare key to full smart key programming for a European luxury car — we handle every automotive key and lock need across Dubai, on-site at your location.
             </p>
           </div>
 
@@ -245,7 +222,7 @@ export default async function HomePage({
           <div className="mt-10 text-center">
             <Button variant="outline" size="lg" asChild>
               <Link href="/services">
-                {t('viewAllServices')}
+                View All Services
                 <ArrowRight className="ml-2 h-4 w-4" aria-hidden="true" />
               </Link>
             </Button>
@@ -261,16 +238,16 @@ export default async function HomePage({
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mb-12 text-center">
             <span className="inline-flex items-center gap-1.5 rounded-full border border-brand-gold/30 bg-brand-gold/10 px-3 py-1 text-xs font-semibold text-brand-gold mb-4">
-              {t('howItWorksBadge')}
+              Simple Process
             </span>
             <h2
               id="how-it-works-heading"
               className="font-heading text-3xl font-bold tracking-tight text-foreground sm:text-4xl"
             >
-              {t('howItWorksHeading')}
+              How It Works
             </h2>
             <p className="mt-4 text-lg text-muted-foreground max-w-xl mx-auto">
-              {t('howItWorksSubtext')}
+              Three steps from stranded to sorted. No towing, no dealership, no waiting days.
             </p>
           </div>
 
@@ -314,7 +291,7 @@ export default async function HomePage({
             <Button size="lg" variant="primary" className="btn-pulse w-full sm:w-auto" asChild>
               <a href={PHONE_HREF} aria-label={`Call Lock Repair Satwa: ${PHONE_DISPLAY}`}>
                 <Phone className="h-5 w-5" aria-hidden="true" />
-                {t('callNow', { phone: PHONE_DISPLAY })}
+                {`Call Now — ${PHONE_DISPLAY}`}
               </a>
             </Button>
             <Button size="lg" variant="whatsapp" className="w-full sm:w-auto" asChild>
@@ -325,7 +302,7 @@ export default async function HomePage({
                 aria-label="WhatsApp Lock Repair Satwa"
               >
                 <MessageCircle className="h-5 w-5" aria-hidden="true" />
-                {t('whatsappUs')}
+                WhatsApp Us
               </a>
             </Button>
           </div>
@@ -340,16 +317,16 @@ export default async function HomePage({
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mb-10 text-center">
             <span className="inline-flex items-center gap-1.5 rounded-full border border-brand-gold/30 bg-brand-gold/10 px-3 py-1 text-xs font-semibold text-brand-gold mb-4">
-              {t('galleryBadge')}
+              Real Work — Real Results
             </span>
             <h2
               id="gallery-heading"
               className="font-heading text-3xl font-bold tracking-tight text-foreground sm:text-4xl"
             >
-              {t('galleryHeading')}
+              Our Services in Action
             </h2>
             <p className="mt-4 text-base text-muted-foreground max-w-xl mx-auto">
-              {t('gallerySubtext')}
+              From a Nissan door key to a Bentley smart key — tap any photo to see the full service and pricing.
             </p>
           </div>
 
@@ -395,7 +372,7 @@ export default async function HomePage({
           </div>
 
           <p className="mt-6 text-center text-xs text-muted-foreground">
-            {t('galleryFootnote')}
+            All services available 24/7 · Mobile across all Dubai areas · Price confirmed before work starts
           </p>
         </div>
       </section>
@@ -409,22 +386,22 @@ export default async function HomePage({
           <div className="grid gap-12 lg:grid-cols-2 lg:gap-16 items-center">
             <div>
               <span className="inline-flex items-center gap-1.5 rounded-full border border-brand-gold/30 bg-brand-gold/15 px-3 py-1 text-xs font-semibold text-brand-gold mb-5">
-                {t('satwaBadge')}
+                Key Shop — Al Satwa, Dubai
               </span>
               <h2 id="satwa-section-heading" className="font-heading text-3xl font-bold tracking-tight text-white sm:text-4xl">
-                {t('satwaHeading')}
+                The Nearest Key Maker to Al Satwa
               </h2>
               <p className="mt-5 text-base leading-relaxed text-white/75">
-                {t('satwaSubtext')}
+                Lock Repair Satwa at D90, Al Bada&apos;a is the closest key shop and locksmith to Al Satwa Road, Queen&apos;s Medical Centre, and Al Diyafa Street. Walk in for instant key duplication, or call for mobile service anywhere in Dubai.
               </p>
               <ul className="mt-6 space-y-3">
                 {[
-                  t('satwaItem1'),
-                  t('satwaItem2'),
-                  t('satwaItem3'),
-                  t('satwaItem4'),
-                  t('satwaItem5'),
-                  t('satwaItem6'),
+                  'Key duplication & key cutting from AED 50',
+                  'Car key maker — all brands, on-site programming',
+                  'Door lock body change from AED 250',
+                  'Wooden door latch (patti) repair from AED 150',
+                  'Smart lock installation & access cards',
+                  'Emergency lockout service — 5-10 min response in Satwa',
                 ].map((item) => (
                   <li key={item} className="flex items-start gap-3 text-sm text-white/80">
                     <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-brand-gold" aria-hidden="true" />
@@ -436,12 +413,12 @@ export default async function HomePage({
                 <Button variant="primary" size="lg" className="btn-pulse" asChild>
                   <a href={PHONE_HREF}>
                     <Phone className="h-5 w-5" aria-hidden="true" />
-                    {t('callNowFull', { phone: PHONE_DISPLAY })}
+                    {`Call Now — ${PHONE_DISPLAY}`}
                   </a>
                 </Button>
                 <Button variant="outline" size="lg" asChild>
                   <Link href="/locations/al-satwa">
-                    {t('satwaPageLink')}
+                    Al Satwa Service Page
                     <ArrowRight className="ml-2 h-4 w-4" aria-hidden="true" />
                   </Link>
                 </Button>
@@ -479,16 +456,16 @@ export default async function HomePage({
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mb-10 text-center">
             <span className="inline-flex items-center gap-1.5 rounded-full border border-brand-gold/30 bg-brand-gold/10 px-3 py-1 text-xs font-semibold text-brand-gold mb-4">
-              {t('recentWorkBadge')}
+              Real Jobs · Dubai
             </span>
             <h2
               id="recent-work-heading"
               className="font-heading text-3xl font-bold tracking-tight text-foreground sm:text-4xl"
             >
-              {t('recentWorkHeading')}
+              Recent Locksmith Work in Dubai
             </h2>
             <p className="mt-4 text-base text-muted-foreground max-w-xl mx-auto">
-              {t('recentWorkSubtext')}
+              Photos from actual jobs completed by our team — door lock repairs, car key replacements, and smart key programming across Dubai.
             </p>
           </div>
 
@@ -497,12 +474,12 @@ export default async function HomePage({
             <Link
               href="/services/lock-repair"
               className="group relative overflow-hidden rounded-2xl border border-border bg-card shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
-              aria-label={t('recentWorkJob1Title')}
+              aria-label="Door Lock Repair &amp; Replacement"
             >
               <div className="aspect-[3/4] overflow-hidden bg-muted">
                 <Image
                   src="/images/door-lock-repair-dubai-lock-replacement-satwa.jpg.webp"
-                  alt={t('recentWorkJob1Alt')}
+                  alt="Door lock repair and replacement Dubai — Hoving lock mechanism opened by locksmith at Lock Repair Satwa"
                   width={400}
                   height={533}
                   loading="lazy"
@@ -513,10 +490,10 @@ export default async function HomePage({
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent pointer-events-none" />
               <div className="absolute bottom-0 left-0 right-0 p-4">
                 <p className="text-[10px] font-bold text-brand-gold uppercase tracking-widest">
-                  {t('recentWorkJob1Location')}
+                  Al Bada&apos;a, Satwa — Dubai
                 </p>
                 <p className="mt-1 text-sm font-semibold text-white leading-snug">
-                  {t('recentWorkJob1Title')}
+                  Door Lock Repair &amp; Replacement
                 </p>
               </div>
             </Link>
@@ -525,12 +502,12 @@ export default async function HomePage({
             <Link
               href="/services/car-key-replacement"
               className="group relative overflow-hidden rounded-2xl border border-border bg-card shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
-              aria-label={t('recentWorkJob2Title')}
+              aria-label="Lexus Car Key Replacement"
             >
               <div className="aspect-[3/4] overflow-hidden bg-muted">
                 <Image
                   src="/images/lexus-car-key-replacement-dubai-auto-locksmith.jpg.webp"
-                  alt={t('recentWorkJob2Alt')}
+                  alt="Lexus car key replacement Dubai — 4-button Lexus smart key fob programmed by Lock Repair Satwa auto locksmith"
                   width={400}
                   height={533}
                   loading="lazy"
@@ -541,10 +518,10 @@ export default async function HomePage({
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent pointer-events-none" />
               <div className="absolute bottom-0 left-0 right-0 p-4">
                 <p className="text-[10px] font-bold text-brand-gold uppercase tracking-widest">
-                  {t('recentWorkJob2Location')}
+                  Dubai, UAE
                 </p>
                 <p className="mt-1 text-sm font-semibold text-white leading-snug">
-                  {t('recentWorkJob2Title')}
+                  Lexus Car Key Replacement
                 </p>
               </div>
             </Link>
@@ -553,12 +530,12 @@ export default async function HomePage({
             <Link
               href="/services/remote-smart-key-programming"
               className="group relative overflow-hidden rounded-2xl border border-border bg-card shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
-              aria-label={t('recentWorkJob3Title')}
+              aria-label="Lexus Smart Key Programming"
             >
               <div className="aspect-[3/4] overflow-hidden bg-muted">
                 <Image
                   src="/images/lexus-smart-key-programming-dubai-car-locksmith.jpg.webp"
-                  alt={t('recentWorkJob3Alt')}
+                  alt="Lexus smart key programming Dubai — Lexus remote key fob programming service by Lock Repair Satwa"
                   width={400}
                   height={533}
                   loading="lazy"
@@ -569,10 +546,10 @@ export default async function HomePage({
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent pointer-events-none" />
               <div className="absolute bottom-0 left-0 right-0 p-4">
                 <p className="text-[10px] font-bold text-brand-gold uppercase tracking-widest">
-                  {t('recentWorkJob3Location')}
+                  Dubai, UAE
                 </p>
                 <p className="mt-1 text-sm font-semibold text-white leading-snug">
-                  {t('recentWorkJob3Title')}
+                  Lexus Smart Key Programming
                 </p>
               </div>
             </Link>
@@ -588,16 +565,16 @@ export default async function HomePage({
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mb-12 text-center">
             <span className="inline-flex items-center gap-1.5 rounded-full border border-brand-gold/30 bg-brand-gold/10 px-3 py-1 text-xs font-semibold text-brand-gold mb-4">
-              {t('locationsBadge')}
+              All Dubai Areas Covered
             </span>
             <h2
               id="locations-heading"
               className="font-heading text-3xl font-bold tracking-tight text-foreground sm:text-4xl"
             >
-              {t('locationsHeading')}
+              We Serve Every Corner of Dubai
             </h2>
             <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
-              {t('locationsSubtext')}
+              From our Al Bada&apos;a base, our mobile technicians reach 15+ major Dubai areas. Whether you&apos;re in Downtown, Dubai Marina, JVC or International City — we come to you.
             </p>
           </div>
 
@@ -612,7 +589,7 @@ export default async function HomePage({
           <div className="mt-10 text-center">
             <Button variant="outline" size="lg" asChild>
               <Link href="/locations">
-                {t('viewAllAreas', { count: locations.length })}
+                {`View All ${locations.length} Service Areas`}
                 <ArrowRight className="ml-2 h-4 w-4" aria-hidden="true" />
               </Link>
             </Button>
@@ -630,25 +607,25 @@ export default async function HomePage({
             {/* Left: copy */}
             <div>
               <span className="inline-flex items-center gap-1.5 rounded-full border border-brand-gold/30 bg-brand-gold/15 px-3 py-1 text-xs font-semibold text-brand-gold mb-5">
-                {t('aboutBadge')}
+                About Lock Repair Satwa
               </span>
               <h2
                 id="about-heading"
                 className="font-heading text-3xl font-bold tracking-tight text-white sm:text-4xl"
               >
-                {t('aboutHeading')}
+                Dubai&apos;s Professional Locksmith — Satwa &amp; Al Bada&apos;a
               </h2>
               <p className="mt-5 text-base leading-relaxed text-white/75">
-                {t('aboutPara1')}
+                Lock Repair Satwa is a professional locksmith based at D90, Al Bada&apos;a, Dubai. We serve all major Dubai areas with expert lock repair, car key duplication, and security solutions — without the days of waiting and premium markup that franchised dealerships charge. Rated 4.7★ on Google by our customers.
               </p>
               <p className="mt-4 text-base leading-relaxed text-white/75">
-                {t('aboutPara2')}
+                Our certified technicians carry professional key-cutting machines, OBD programming equipment and a comprehensive stock of key blanks for 50+ vehicle brands. We cover every type of locksmith service — from a basic spare key to full smart key programming for the latest European luxury vehicles — all performed at your location.
               </p>
 
               {/* Brand tags */}
               <div className="mt-6">
                 <p className="text-sm font-semibold text-white/50 mb-3 uppercase tracking-wide">
-                  {t('supportedMakesLabel')}
+                  Supported Makes Include
                 </p>
                 <div className="flex flex-wrap gap-2">
                   {['Toyota', 'Nissan', 'BMW', 'Mercedes-Benz', 'Audi', 'Land Rover', 'Ford', 'GMC', 'Hyundai', 'Lexus', 'Porsche', 'Tesla'].map((brand) => (
@@ -660,7 +637,7 @@ export default async function HomePage({
                     </span>
                   ))}
                   <span className="rounded-full border border-white/15 bg-white/10 px-3 py-1 text-xs font-medium text-white/80">
-                    {t('moreBrands', { count: 40 })}
+                    + 40 more
                   </span>
                 </div>
               </div>
@@ -668,7 +645,7 @@ export default async function HomePage({
               <div className="mt-8">
                 <Button variant="primary" size="lg" className="btn-pulse" asChild>
                   <Link href="/about">
-                    {t('learnMoreAboutUs')}
+                    Learn More About Us
                     <ArrowRight className="ml-2 h-4 w-4" aria-hidden="true" />
                   </Link>
                 </Button>
@@ -717,14 +694,14 @@ export default async function HomePage({
           <div className="mx-auto max-w-3xl px-4 text-center sm:px-6">
             <p className="text-sm text-muted-foreground">
               {/* TODO: Replace this section with ReviewsSection once real Google reviews are provided by the business owner */}
-              {t('reviewsComingSoon', { rating: 4.7 })}{' '}
+              Customer reviews coming soon — rated 4.7★ on Google Maps.{' '}
               <a
                 href="https://maps.google.com/?q=Lock+Repair+Satwa+Al+Bada%27a+Dubai"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="underline hover:text-brand-gold transition-colors"
               >
-                {t('readReviews')}
+                Read our reviews on Google
               </a>
             </p>
           </div>
@@ -739,16 +716,16 @@ export default async function HomePage({
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mb-10 text-center">
             <span className="inline-flex items-center gap-1.5 rounded-full border border-brand-gold/30 bg-brand-gold/10 px-3 py-1 text-xs font-semibold text-brand-gold mb-4">
-              {t('visitUsBadge')}
+              Visit Us
             </span>
             <h2
               id="map-heading"
               className="font-heading text-3xl font-bold tracking-tight text-foreground sm:text-4xl"
             >
-              {t('findUsHeading')}
+              Find Us in Al Bada&apos;a, Dubai
             </h2>
             <p className="mt-4 text-base text-muted-foreground max-w-xl mx-auto">
-              {t('findUsSubtext')}
+              Walk in for instant key cutting, or call for mobile locksmith service anywhere in Dubai.
             </p>
           </div>
 
@@ -763,31 +740,31 @@ export default async function HomePage({
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title={t('mapTitle')}
+                title="Lock Repair Satwa location on Google Maps — D90, Al Bada'a, Dubai"
               />
             </div>
 
             {/* Address + CTA card */}
             <div className="rounded-2xl border border-border bg-background p-6 shadow-sm lg:sticky lg:top-24">
               <h3 className="font-heading text-lg font-semibold text-foreground mb-5">
-                {t('ourLocation')}
+                Our Location
               </h3>
               <address className="not-italic space-y-4 text-sm text-muted-foreground">
                 <p className="flex items-start gap-3">
                   <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-brand-gold" aria-hidden="true" />
                   <span>
-                    <strong className="block text-foreground mb-0.5">{t('addressLine1')}</strong>
-                    {t('addressLine2')}<br />
-                    {t('addressLine3')}
+                    <strong className="block text-foreground mb-0.5">Lock Repair Satwa</strong>
+                    D90, Al Bada&apos;a<br />
+                    Dubai, UAE
                   </span>
                 </p>
                 <p className="flex items-start gap-3">
                   <Clock className="mt-0.5 h-4 w-4 shrink-0 text-brand-gold" aria-hidden="true" />
                   <span>
-                    <strong className="block text-foreground mb-0.5">{t('hoursLabel')}</strong>
-                    {t('shopHours')}<br />
+                    <strong className="block text-foreground mb-0.5">Hours</strong>
+                    Shop: 7:00 AM – 11:30 PM daily<br />
                     <span className="text-green-600 dark:text-green-400 font-medium">
-                      {t('mobileHours')}
+                      Mobile service: 24/7
                     </span>
                   </span>
                 </p>
@@ -797,7 +774,7 @@ export default async function HomePage({
                 <Button size="md" variant="primary" className="btn-pulse w-full" asChild>
                   <a href={PHONE_HREF} aria-label={`Call Lock Repair Satwa: ${PHONE_DISPLAY}`}>
                     <Phone className="h-4 w-4" aria-hidden="true" />
-                    {t('callPhone', { phone: PHONE_DISPLAY })}
+                    {`Call ${PHONE_DISPLAY}`}
                   </a>
                 </Button>
                 <Button size="md" variant="whatsapp" className="w-full" asChild>
@@ -808,7 +785,7 @@ export default async function HomePage({
                     aria-label="WhatsApp Lock Repair Satwa"
                   >
                     <MessageCircle className="h-4 w-4" aria-hidden="true" />
-                    {t('whatsappUs')}
+                    WhatsApp Us
                   </a>
                 </Button>
                 <a
@@ -817,7 +794,7 @@ export default async function HomePage({
                   rel="noopener noreferrer"
                   className="text-center text-xs text-muted-foreground hover:text-brand-gold transition-colors underline underline-offset-2"
                 >
-                  {t('openGoogleMaps')}
+                  Open in Google Maps →
                 </a>
               </div>
             </div>
@@ -827,8 +804,8 @@ export default async function HomePage({
 
       {/* ── 8. Final CTA ────────────────────────────────────────────────────── */}
       <CtaSection
-        heading={t('finalCtaHeading')}
-        subtext={t('finalCtaSubtext')}
+        heading="Need a Locksmith or Spare Key? Call Now."
+        subtext="Lock Repair Satwa (D90, Al Bada'a, Dubai) is a professional locksmith serving all Dubai areas, open daily 24/7. We come to you — at home, the office, the mall or the roadside."
       />
     </>
   )
