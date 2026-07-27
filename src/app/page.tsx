@@ -462,94 +462,178 @@ export default async function HomePage() {
               id="recent-work-heading"
               className="font-heading text-3xl font-bold tracking-tight text-foreground sm:text-4xl"
             >
-              Recent Locksmith Work in Dubai
+              Recent Locksmith Projects in Dubai
             </h2>
             <p className="mt-4 text-base text-muted-foreground max-w-xl mx-auto">
-              Photos from actual jobs completed by our team — door lock repairs, car key replacements, and smart key programming across Dubai.
+              Photos from real completed jobs — safe box openings, smart lock installations, car key replacements, and door lock repairs across Dubai.
             </p>
           </div>
 
-          <div className="grid gap-6 sm:grid-cols-3">
-            {/* Job 1 — Door Lock Repair */}
+          <div className="grid gap-5 grid-cols-2 sm:grid-cols-3">
+            {/* Job 1 — Nissan Car Key Replacement */}
             <Link
-              href="/services/lock-repair"
+              href="/services/car-key-replacement"
               className="group relative overflow-hidden rounded-2xl border border-border bg-card shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
-              aria-label="Door Lock Repair &amp; Replacement"
+              aria-label="Nissan Car Key Replacement in Dubai"
             >
               <div className="aspect-[3/4] overflow-hidden bg-muted">
                 <Image
-                  src="/images/door-lock-repair-dubai-lock-replacement-satwa.jpg.webp"
-                  alt="Door lock repair and replacement Dubai — Hoving lock mechanism opened by locksmith at Lock Repair Satwa"
+                  src="/images/nissan-car-key-replacement-satwa-dubai.webp"
+                  alt="Nissan car key replacement Dubai — new Nissan transponder key cut and programmed by Lock Repair Satwa auto locksmith in Satwa"
                   width={400}
                   height={533}
                   loading="lazy"
-                  sizes="(max-width: 640px) calc(100vw - 32px), (max-width: 1024px) calc(33vw - 24px), 380px"
+                  sizes="(max-width: 640px) calc(50vw - 20px), (max-width: 1024px) calc(33vw - 24px), 380px"
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
               </div>
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent pointer-events-none" />
-              <div className="absolute bottom-0 left-0 right-0 p-4">
+              <div className="absolute bottom-0 left-0 right-0 p-3 sm:p-4">
+                <p className="text-[10px] font-bold text-brand-gold uppercase tracking-widest">
+                  Al Satwa, Dubai
+                </p>
+                <p className="mt-1 text-sm font-semibold text-white leading-snug">
+                  Nissan Car Key Replacement
+                </p>
+              </div>
+            </Link>
+
+            {/* Job 2 — Safe Box Opening Service */}
+            <Link
+              href="/services/safe-box-services"
+              className="group relative overflow-hidden rounded-2xl border border-border bg-card shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+              aria-label="Safe Box Opening Service Dubai"
+            >
+              <div className="aspect-[3/4] overflow-hidden bg-muted">
+                <Image
+                  src="/images/safe-box-opening-drilled-dubai.webp"
+                  alt="Safe box opening service Dubai — commercial safe drilled and opened by Lock Repair Satwa safe specialist, internal lock bolts visible"
+                  width={400}
+                  height={533}
+                  loading="lazy"
+                  sizes="(max-width: 640px) calc(50vw - 20px), (max-width: 1024px) calc(33vw - 24px), 380px"
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+              </div>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent pointer-events-none" />
+              <div className="absolute bottom-0 left-0 right-0 p-3 sm:p-4">
+                <p className="text-[10px] font-bold text-brand-gold uppercase tracking-widest">
+                  Dubai, UAE
+                </p>
+                <p className="mt-1 text-sm font-semibold text-white leading-snug">
+                  Safe Box Opening Service
+                </p>
+              </div>
+            </Link>
+
+            {/* Job 3 — Smart Door Lock Installation */}
+            <Link
+              href="/services/smart-door-locks"
+              className="group relative overflow-hidden rounded-2xl border border-border bg-card shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+              aria-label="Smart Door Lock Installation Dubai"
+            >
+              <div className="aspect-[3/4] overflow-hidden bg-muted">
+                <Image
+                  src="/images/smart-door-lock-fingerprint-reader-dubai.webp"
+                  alt="Smart door lock installation Dubai — black fingerprint and touch-panel smart lock fitted on wooden apartment door by Lock Repair Satwa"
+                  width={400}
+                  height={533}
+                  loading="lazy"
+                  sizes="(max-width: 640px) calc(50vw - 20px), (max-width: 1024px) calc(33vw - 24px), 380px"
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+              </div>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent pointer-events-none" />
+              <div className="absolute bottom-0 left-0 right-0 p-3 sm:p-4">
+                <p className="text-[10px] font-bold text-brand-gold uppercase tracking-widest">
+                  Dubai Marina
+                </p>
+                <p className="mt-1 text-sm font-semibold text-white leading-snug">
+                  Smart Door Lock Installation
+                </p>
+              </div>
+            </Link>
+
+            {/* Job 4 — Digital Door Lock with Fingerprint */}
+            <Link
+              href="/services/smart-door-locks"
+              className="group relative overflow-hidden rounded-2xl border border-border bg-card shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+              aria-label="Digital Door Lock Installation Dubai"
+            >
+              <div className="aspect-[3/4] overflow-hidden bg-muted">
+                <Image
+                  src="/images/digital-door-lock-fingerprint-installation-dubai.webp"
+                  alt="Digital door lock installation Dubai — premium fingerprint smart lock with touchpad and doorbell sensor installed on wooden door"
+                  width={400}
+                  height={533}
+                  loading="lazy"
+                  sizes="(max-width: 640px) calc(50vw - 20px), (max-width: 1024px) calc(33vw - 24px), 380px"
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+              </div>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent pointer-events-none" />
+              <div className="absolute bottom-0 left-0 right-0 p-3 sm:p-4">
+                <p className="text-[10px] font-bold text-brand-gold uppercase tracking-widest">
+                  JVC, Dubai
+                </p>
+                <p className="mt-1 text-sm font-semibold text-white leading-snug">
+                  Digital Door Lock Installation
+                </p>
+              </div>
+            </Link>
+
+            {/* Job 5 — Safe Lock Replacement */}
+            <Link
+              href="/services/safe-box-services"
+              className="group relative overflow-hidden rounded-2xl border border-border bg-card shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+              aria-label="Safe Lock Replacement Dubai"
+            >
+              <div className="aspect-[3/4] overflow-hidden bg-muted">
+                <Image
+                  src="/images/safe-lock-replacement-broken-cylinder-dubai.webp"
+                  alt="Safe lock replacement Dubai — damaged safe cylinder drilled out and replaced by Lock Repair Satwa safe technician"
+                  width={400}
+                  height={533}
+                  loading="lazy"
+                  sizes="(max-width: 640px) calc(50vw - 20px), (max-width: 1024px) calc(33vw - 24px), 380px"
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+              </div>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent pointer-events-none" />
+              <div className="absolute bottom-0 left-0 right-0 p-3 sm:p-4">
+                <p className="text-[10px] font-bold text-brand-gold uppercase tracking-widest">
+                  Al Barsha, Dubai
+                </p>
+                <p className="mt-1 text-sm font-semibold text-white leading-snug">
+                  Safe Lock Replacement
+                </p>
+              </div>
+            </Link>
+
+            {/* Job 6 — Door Lock Repair */}
+            <Link
+              href="/services/lock-repair"
+              className="group relative overflow-hidden rounded-2xl border border-border bg-card shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+              aria-label="Door Lock Repair &amp; Replacement Dubai"
+            >
+              <div className="aspect-[3/4] overflow-hidden bg-muted">
+                <Image
+                  src="/images/door-lock-repair-dubai-lock-replacement-satwa.jpg.webp"
+                  alt="Door lock repair and replacement Dubai — lock mechanism serviced by Lock Repair Satwa, Al Bada'a Satwa"
+                  width={400}
+                  height={533}
+                  loading="lazy"
+                  sizes="(max-width: 640px) calc(50vw - 20px), (max-width: 1024px) calc(33vw - 24px), 380px"
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+              </div>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent pointer-events-none" />
+              <div className="absolute bottom-0 left-0 right-0 p-3 sm:p-4">
                 <p className="text-[10px] font-bold text-brand-gold uppercase tracking-widest">
                   Al Bada&apos;a, Satwa — Dubai
                 </p>
                 <p className="mt-1 text-sm font-semibold text-white leading-snug">
                   Door Lock Repair &amp; Replacement
-                </p>
-              </div>
-            </Link>
-
-            {/* Job 2 — Lexus Car Key Replacement */}
-            <Link
-              href="/services/car-key-replacement"
-              className="group relative overflow-hidden rounded-2xl border border-border bg-card shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
-              aria-label="Lexus Car Key Replacement"
-            >
-              <div className="aspect-[3/4] overflow-hidden bg-muted">
-                <Image
-                  src="/images/lexus-car-key-replacement-dubai-auto-locksmith.jpg.webp"
-                  alt="Lexus car key replacement Dubai — 4-button Lexus smart key fob programmed by Lock Repair Satwa auto locksmith"
-                  width={400}
-                  height={533}
-                  loading="lazy"
-                  sizes="(max-width: 640px) calc(100vw - 32px), (max-width: 1024px) calc(33vw - 24px), 380px"
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                />
-              </div>
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent pointer-events-none" />
-              <div className="absolute bottom-0 left-0 right-0 p-4">
-                <p className="text-[10px] font-bold text-brand-gold uppercase tracking-widest">
-                  Dubai, UAE
-                </p>
-                <p className="mt-1 text-sm font-semibold text-white leading-snug">
-                  Lexus Car Key Replacement
-                </p>
-              </div>
-            </Link>
-
-            {/* Job 3 — Lexus Smart Key Programming */}
-            <Link
-              href="/services/remote-smart-key-programming"
-              className="group relative overflow-hidden rounded-2xl border border-border bg-card shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
-              aria-label="Lexus Smart Key Programming"
-            >
-              <div className="aspect-[3/4] overflow-hidden bg-muted">
-                <Image
-                  src="/images/lexus-smart-key-programming-dubai-car-locksmith.jpg.webp"
-                  alt="Lexus smart key programming Dubai — Lexus remote key fob programming service by Lock Repair Satwa"
-                  width={400}
-                  height={533}
-                  loading="lazy"
-                  sizes="(max-width: 640px) calc(100vw - 32px), (max-width: 1024px) calc(33vw - 24px), 380px"
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                />
-              </div>
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent pointer-events-none" />
-              <div className="absolute bottom-0 left-0 right-0 p-4">
-                <p className="text-[10px] font-bold text-brand-gold uppercase tracking-widest">
-                  Dubai, UAE
-                </p>
-                <p className="mt-1 text-sm font-semibold text-white leading-snug">
-                  Lexus Smart Key Programming
                 </p>
               </div>
             </Link>
