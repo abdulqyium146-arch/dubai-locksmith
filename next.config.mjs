@@ -37,12 +37,26 @@ const nextConfig = {
 
   async redirects() {
     return [
+      // www → non-www canonical domain
       {
         source: '/:path*',
         has: [{ type: 'host', value: 'www.locksmith-dubai.com' }],
         destination: 'https://locksmith-dubai.com/:path*',
         permanent: true,
       },
+      // /en → / (English is the default locale, no prefix needed)
+      {
+        source: '/en',
+        destination: '/',
+        permanent: true,
+      },
+      // /en/* → /* (strip /en prefix from all English URLs)
+      {
+        source: '/en/:path*',
+        destination: '/:path*',
+        permanent: true,
+      },
+      // Legacy singular URL patterns
       {
         source: '/service/:slug',
         destination: '/services/:slug',

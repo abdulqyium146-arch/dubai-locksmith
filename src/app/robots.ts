@@ -1,26 +1,46 @@
 // ─────────────────────────────────────────────────────────────────────────────
-// Lock Repair Satwa — Robots API Route
-// Optimised for crawl budget, AI bots, and indexability
+// Lock Repair Satwa — Production robots.txt
 // ─────────────────────────────────────────────────────────────────────────────
 import type { MetadataRoute } from 'next'
 import { SITE_URL } from '@/lib/constants'
 
+const SHARED_DISALLOW = [
+  '/api/',
+  '/admin/',
+  '/dashboard/',
+  '/private/',
+  '/search',
+  '/_next/static/',
+]
+
 export default function robots(): MetadataRoute.Robots {
   return {
     rules: [
-      // ── Googlebot — full access, prioritise key pages ──────────────────────
+      // ── Googlebot — full crawl access, image optimiser allowed ─────────────
       {
         userAgent: 'Googlebot',
-        allow: '/',
-        disallow: ['/api/', '/_next/', '/admin/'],
+        allow: ['/', '/_next/image/'],
+        disallow: SHARED_DISALLOW,
+      },
+      // ── Googlebot-Image ───────────────────────────────────────────────────
+      {
+        userAgent: 'Googlebot-Image',
+        allow: ['/', '/_next/image/'],
+        disallow: ['/api/', '/admin/', '/_next/static/'],
+      },
+      // ── Googlebot-Mobile ──────────────────────────────────────────────────
+      {
+        userAgent: 'Googlebot-Mobile',
+        allow: ['/', '/_next/image/'],
+        disallow: SHARED_DISALLOW,
       },
       // ── Bingbot ───────────────────────────────────────────────────────────
       {
         userAgent: 'Bingbot',
-        allow: '/',
-        disallow: ['/api/', '/_next/'],
+        allow: ['/', '/_next/image/'],
+        disallow: SHARED_DISALLOW,
       },
-      // ── AI training / LLM crawlers — allow reading, disallow bulk download
+      // ── AI / LLM crawlers — read content, exclude internals ───────────────
       {
         userAgent: 'GPTBot',
         allow: '/',
@@ -56,14 +76,14 @@ export default function robots(): MetadataRoute.Robots {
         allow: '/',
         disallow: ['/api/', '/_next/'],
       },
-      // ── All other bots — full access except internals ─────────────────────
+      // ── Default — all other bots ──────────────────────────────────────────
       {
         userAgent: '*',
         allow: '/',
-        disallow: ['/api/', '/_next/', '/admin/'],
+        disallow: SHARED_DISALLOW,
       },
     ],
-    sitemap: `${SITE_URL}/sitemap.xml`,
+    sitemap: `${SITE_URL}/sitemap-index.xml`,
     host: SITE_URL,
   }
 }

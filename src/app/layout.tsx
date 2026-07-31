@@ -72,6 +72,14 @@ export const metadata: Metadata = {
     email: false,
     address: false,
   },
+  // Homepage canonical + hreflang (inner pages override via generateMetadata)
+  alternates: {
+    canonical: SITE_URL,
+    languages: {
+      'en': SITE_URL,
+      'x-default': SITE_URL,
+    },
+  },
   openGraph: {
     type: 'website',
     siteName: BUSINESS_NAME,
@@ -138,8 +146,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
         <link rel="manifest" href="/manifest.webmanifest" />
         <meta name="telephone" content={PHONE_DISPLAY} />
-        <link rel="alternate" hrefLang="en" href={SITE_URL} />
-        <link rel="alternate" hrefLang="x-default" href={SITE_URL} />
+        {/* hreflang handled per-page via metadata.alternates — no static tags needed */}
       </head>
       <body suppressHydrationWarning className="min-h-screen bg-background font-sans text-foreground">
         <>
