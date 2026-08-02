@@ -5,7 +5,7 @@
 // ── Business Identity ─────────────────────────────────────────────────────────
 
 export const BUSINESS_NAME = 'Lock Repair Satwa' as const
-export const BUSINESS_TAGLINE = "Dubai's Professional Locksmith — Satwa & Al Bada'a" as const
+export const BUSINESS_TAGLINE = "Key Maker Near Me — Key Shop & Locksmith, Satwa Dubai" as const
 export const BUSINESS_CATEGORY = 'Locksmith' as const
 
 // ── Contact ───────────────────────────────────────────────────────────────────
@@ -52,7 +52,7 @@ export const DEFAULT_OG_IMAGE = `${SITE_URL}/images/og-default.jpg` as const
 
 export const DEFAULT_TITLE_TEMPLATE = `%s | ${BUSINESS_NAME}` as const
 export const DEFAULT_META_DESCRIPTION =
-  "Lock Repair Satwa is a professional locksmith in Dubai based in Al Bada'a, serving all areas across the city. Car key duplication, door lock repair, smart key programming, emergency locksmith and more. Rated 4.7★ on Google. Call +971 52 642 6161." as const
+  "Key maker & key shop near me in Satwa, Dubai. Lock Repair Satwa: key duplication service from AED 50, car key cutting, door lock repair. 24/7 mobile locksmith. Rated 4.7★. Call +971 52 642 6161." as const
 
 // ── Service Hours ─────────────────────────────────────────────────────────────
 

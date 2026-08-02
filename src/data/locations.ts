@@ -8,9 +8,10 @@ export const locations: Location[] = [
   {
     slug: 'al-satwa',
     name: 'Al Satwa',
-    metaTitle: 'Key Maker & Locksmith in Al Satwa Dubai | Lock Repair Satwa',
+    // GMB targets: "key shop al satwa", "satwa key shop", "satwa key maker", "key duplication satwa", "key shop near me"
+    metaTitle: 'Key Shop Al Satwa | Satwa Key Maker & Key Duplication Service | Lock Repair Satwa',
     metaDescription:
-      "Lock Repair Satwa is the nearest key shop and locksmith in Al Satwa, Dubai. Key duplication from AED 50, car keys, door locks, 24/7. Call +971 52 642 6161.",
+      "Key shop in Al Satwa Dubai. Nearest key maker to Satwa Road. Lock Repair Satwa: key duplication service from AED 50, car key cutting, door lock repair. 24/7 mobile. Call +971 52 642 6161.",
     directAnswerOpener:
       "Lock Repair Satwa at D90, Al Bada'a is the closest key maker and locksmith to Al Satwa, Dubai — 2 minutes from Al Satwa Road. Key duplication from AED 50, car key cutting from AED 150, door lock repair from AED 100. Open 24/7. Call +971 52 642 6161.",
     description:

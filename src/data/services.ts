@@ -9,9 +9,10 @@ export const services: Service[] = [
     slug: 'car-key-duplication',
     category: 'automotive',
     title: 'Key Duplication & Key Cutting',
-    metaTitle: 'Key Duplication & Key Cutting in Dubai | Lock Repair Satwa',
+    // GMB targets: "key duplication service" (#2 at 51 searches), "key cutting dubai", "duplicate key near me"
+    metaTitle: 'Key Duplication Service Dubai | Key Cutting Near Me | Lock Repair Satwa',
     metaDescription:
-      'Lock Repair Satwa provides key duplication and key cutting in Dubai from AED 50. Car keys, door keys, padlock keys, all types. Mobile service 24/7. Call +971 52 642 6161.',
+      'Key duplication service in Dubai from AED 50. Duplicate key near me — Lock Repair Satwa cuts car keys, door keys, all types. Key cutting Dubai. Mobile 24/7. Call +971 52 642 6161.',
     directAnswerOpener:
       'Lock Repair Satwa provides key duplication and key cutting in Dubai from AED 50 for door keys and AED 150–350 for car keys. Same-day service, all key types, 24/7 mobile across all Dubai areas. Call +971 52 642 6161.',
     description:
