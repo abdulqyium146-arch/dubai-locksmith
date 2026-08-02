@@ -11,6 +11,7 @@ export function GET() {
     `${SITE_URL}/sitemap-services.xml`,
     `${SITE_URL}/sitemap-locations.xml`,
     `${SITE_URL}/sitemap-products.xml`,
+    `${SITE_URL}/sitemap-images.xml`,
     `${SITE_URL}/sitemap-ar.xml`,
   ]
 

@@ -26,6 +26,7 @@ import { FaqAccordion } from '@/components/sections/FaqAccordion'
 import { CtaSection } from '@/components/sections/CtaSection'
 import { ServiceCard } from '@/components/sections/ServiceCard'
 import { JsonLd } from '@/components/schema/JsonLd'
+import { WebPageSchema } from '@/components/schema/WebPageSchema'
 import { Badge } from '@/components/ui/Badge'
 import { Button } from '@/components/ui/Button'
 
@@ -79,6 +80,7 @@ export async function generateMetadata({
     description: location.metaDescription,
     alternates: {
       canonical: canonicalUrl,
+      languages: { en: canonicalUrl, 'x-default': canonicalUrl },
     },
     openGraph: {
       type: 'website',
@@ -92,7 +94,7 @@ export async function generateMetadata({
           url: DEFAULT_OG_IMAGE,
           width: 1200,
           height: 630,
-          alt: `Car Key Service in ${location.name}, Dubai — ${BUSINESS_NAME}`,
+          alt: `Key Maker & Locksmith in ${location.name}, Dubai — ${BUSINESS_NAME}`,
         },
       ],
     },
@@ -101,6 +103,11 @@ export async function generateMetadata({
       title: location.metaTitle,
       description: location.metaDescription,
       images: [DEFAULT_OG_IMAGE],
+    },
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: { index: true, follow: true, 'max-video-preview': -1, 'max-image-preview': 'large', 'max-snippet': -1 },
     },
   }
 }
@@ -288,6 +295,8 @@ export default async function LocationPage({
   const primaryBuildingType = location.buildingTypes[0] ?? 'residential property'
   const secondaryBuildingType = location.buildingTypes[1] ?? 'commercial building'
 
+  const locationPageUrl = `${SITE_URL}/locations/${location.slug}`
+
   return (
     <>
       {/* Schemas */}
@@ -297,6 +306,19 @@ export default async function LocationPage({
         lat={location.coordinates.lat}
         lng={location.coordinates.lng}
         faqs={location.faqs}
+      />
+      <WebPageSchema
+        pageUrl={locationPageUrl}
+        pageId={`location-${location.slug}`}
+        name={location.metaTitle}
+        description={location.directAnswerOpener}
+        breadcrumbs={[
+          { name: 'Home', url: SITE_URL },
+          { name: 'Locations', url: `${SITE_URL}/locations` },
+          { name: location.name, url: locationPageUrl },
+        ]}
+        primaryImageUrl={`${SITE_URL}/images/shop/locksmith-shop-satwa-al-badaa-dubai.webp`}
+        primaryImageAlt={`Key maker and locksmith serving ${location.name}, Dubai — Lock Repair Satwa`}
       />
 
       {/* ── 1. Hero ────────────────────────────────────────────────────────── */}

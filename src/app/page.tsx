@@ -13,6 +13,7 @@ import { LocationCard } from '@/components/sections/LocationCard'
 import { ReviewsSection } from '@/components/sections/ReviewsSection'
 import { CtaSection } from '@/components/sections/CtaSection'
 import { JsonLd } from '@/components/schema/JsonLd'
+import { WebPageSchema, HowToSchema } from '@/components/schema/WebPageSchema'
 import { Button } from '@/components/ui/Button'
 
 import { services } from '@/data/services'
@@ -172,6 +173,47 @@ export default async function HomePage() {
     <>
       {/* Structured data */}
       <JsonLd data={websiteSchema} />
+
+      {/* WebPage + Speakable — signals AI Overviews & answer engines */}
+      <WebPageSchema
+        pageUrl={SITE_URL}
+        pageId="homepage"
+        name="Key Maker Near Me Dubai | Key Shop Satwa | Lock Repair Satwa"
+        description="Key maker & key shop near me in Satwa, Dubai. Key duplication service from AED 50, car key cutting, door lock repair. 24/7 mobile locksmith. Rated 4.7★."
+        breadcrumbs={[{ name: 'Home', url: SITE_URL }]}
+        primaryImageUrl={`${SITE_URL}/images/shop/locksmith-shop-satwa-al-badaa-dubai.webp`}
+        primaryImageAlt="Lock Repair Satwa key shop exterior in Al Bada'a, nearest key maker to Al Satwa Road, Dubai"
+        images={[
+          { url: `${SITE_URL}/images/shop/key-duplication-display-for-sale-satwa-dubai.webp`, caption: 'Key duplication display at Lock Repair Satwa key shop, Satwa Dubai' },
+          { url: `${SITE_URL}/images/services/car-remote-key-blanks-locksmith-shop-dubai.webp`, caption: 'Car remote key blanks at Lock Repair Satwa locksmith shop, Dubai' },
+          { url: `${SITE_URL}/images/shop/wire-key-rings-accessories-dubai.webp`, caption: 'Key accessories at Lock Repair Satwa, Satwa Dubai' },
+        ]}
+      />
+
+      {/* HowTo schema — "How It Works" 3 steps: eligible for HowTo rich result */}
+      <HowToSchema
+        name="How to Get a Car Key Made or Locksmith Service in Dubai"
+        description="Three simple steps to get a spare key cut, car key programmed, or lock repaired by Lock Repair Satwa — Dubai's key maker near me."
+        totalTime="PT45M"
+        pageUrl={`${SITE_URL}/#how-it-works`}
+        steps={[
+          {
+            position: 1,
+            name: 'Call or WhatsApp Us',
+            text: 'Call +971 52 642 6161 or WhatsApp. Tell us your location, car make/model, and the key or lock issue. We confirm availability and quote an upfront price in under 2 minutes.',
+          },
+          {
+            position: 2,
+            name: 'We Come to You',
+            text: "A certified mobile technician is dispatched from our Al Bada'a base. We reach most Dubai areas in 20–45 minutes — no towing, no workshop visit required.",
+          },
+          {
+            position: 3,
+            name: 'Problem Solved, On the Spot',
+            text: 'Our technician carries professional key-cutting machines and OBD programming tools. Most jobs are completed in a single visit — you get a tested, working key before we leave.',
+          },
+        ]}
+      />
 
       {/* ── 1. Hero ─────────────────────────────────────────────────────────── */}
       <HeroSection

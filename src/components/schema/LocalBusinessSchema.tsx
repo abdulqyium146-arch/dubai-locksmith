@@ -23,18 +23,18 @@ import {
 
 // All 12 services with pricing — gives Google a complete offer catalog
 const OFFER_CATALOG_ITEMS = [
-  { name: 'Key Duplication & Key Cutting', url: `${SITE_URL}/en/services/car-key-duplication`, minPrice: '50', maxPrice: '350' },
-  { name: 'Car Key Replacement', url: `${SITE_URL}/en/services/car-key-replacement`, minPrice: '300', maxPrice: '900' },
-  { name: 'Remote & Smart Key Programming', url: `${SITE_URL}/en/services/remote-smart-key-programming`, minPrice: '400', maxPrice: '900' },
-  { name: 'Transponder Key Programming', url: `${SITE_URL}/en/services/transponder-keys`, minPrice: '350', maxPrice: '700' },
-  { name: 'Emergency Car Unlock', url: `${SITE_URL}/en/services/emergency-car-unlock`, minPrice: '200', maxPrice: '500' },
-  { name: 'Lost & Broken Car Key Service', url: `${SITE_URL}/en/services/lost-broken-car-keys`, minPrice: '200', maxPrice: '700' },
-  { name: 'Flip Key Replacement', url: `${SITE_URL}/en/services/flip-keys`, minPrice: '250', maxPrice: '550' },
-  { name: 'Smart Door Lock Installation', url: `${SITE_URL}/en/services/smart-door-locks`, minPrice: '350', maxPrice: '1200' },
-  { name: 'Safe Box Opening & Service', url: `${SITE_URL}/en/services/safe-box-services`, minPrice: '200', maxPrice: '800' },
-  { name: 'Parking Remote Duplication', url: `${SITE_URL}/en/services/parking-remotes`, minPrice: '150', maxPrice: '450' },
-  { name: 'Car Battery Replacement', url: `${SITE_URL}/en/services/car-battery-replacement`, minPrice: '250', maxPrice: '600' },
-  { name: 'Rubber Stamp Making', url: `${SITE_URL}/en/services/rubber-stamps`, minPrice: '50', maxPrice: '200' },
+  { name: 'Key Duplication & Key Cutting', url: `${SITE_URL}/services/car-key-duplication`, minPrice: '50', maxPrice: '350' },
+  { name: 'Car Key Replacement', url: `${SITE_URL}/services/car-key-replacement`, minPrice: '300', maxPrice: '900' },
+  { name: 'Remote & Smart Key Programming', url: `${SITE_URL}/services/remote-smart-key-programming`, minPrice: '400', maxPrice: '900' },
+  { name: 'Transponder Key Programming', url: `${SITE_URL}/services/transponder-keys`, minPrice: '350', maxPrice: '700' },
+  { name: 'Emergency Car Unlock', url: `${SITE_URL}/services/emergency-car-unlock`, minPrice: '200', maxPrice: '500' },
+  { name: 'Lost & Broken Car Key Service', url: `${SITE_URL}/services/lost-broken-car-keys`, minPrice: '200', maxPrice: '700' },
+  { name: 'Flip Key Replacement', url: `${SITE_URL}/services/flip-keys`, minPrice: '250', maxPrice: '550' },
+  { name: 'Smart Door Lock Installation', url: `${SITE_URL}/services/smart-door-locks`, minPrice: '350', maxPrice: '1200' },
+  { name: 'Safe Box Opening & Service', url: `${SITE_URL}/services/safe-box-services`, minPrice: '200', maxPrice: '800' },
+  { name: 'Parking Remote Duplication', url: `${SITE_URL}/services/parking-remotes`, minPrice: '150', maxPrice: '450' },
+  { name: 'Car Battery Replacement', url: `${SITE_URL}/services/car-battery-replacement`, minPrice: '250', maxPrice: '600' },
+  { name: 'Rubber Stamp Making', url: `${SITE_URL}/services/rubber-stamps`, minPrice: '50', maxPrice: '200' },
 ]
 
 // Dubai areas served — mirrors GMB service area targeting exactly
@@ -146,7 +146,6 @@ export function LocalBusinessSchema() {
       SOCIAL_LINKS.instagram,
       SOCIAL_LINKS.twitter,
       GOOGLE_MAPS_URL,
-      `${SITE_URL}/en`,
     ],
     logo: {
       '@type': 'ImageObject',
@@ -160,15 +159,44 @@ export function LocalBusinessSchema() {
     image: [
       {
         '@type': 'ImageObject',
+        '@id': `${SITE_URL}/#primary-image`,
         url: `${SITE_URL}/images/og-default.jpg`,
+        contentUrl: `${SITE_URL}/images/og-default.jpg`,
         width: 1200,
         height: 630,
-        caption: `${BUSINESS_NAME} — Professional Locksmith in Dubai`,
+        caption: `${BUSINESS_NAME} — Key Maker & Key Shop in Al Bada'a, Satwa Dubai`,
+        name: 'Lock Repair Satwa Key Shop Dubai',
       },
       {
         '@type': 'ImageObject',
         url: `${SITE_URL}/images/shop/locksmith-shop-satwa-al-badaa-dubai.webp`,
-        caption: "Lock Repair Satwa shop exterior in Al Bada'a, Dubai",
+        caption: "Lock Repair Satwa shop exterior in Al Bada'a, Satwa — key shop nearest to Al Satwa Road",
+        name: 'Key Shop Satwa Al Bada\'a Dubai',
+        representativeOfPage: true,
+      },
+      {
+        '@type': 'ImageObject',
+        url: `${SITE_URL}/images/shop/padlock-collection-lock-shop-satwa-dubai.webp`,
+        caption: 'Padlock and lock collection at Lock Repair Satwa key shop, Satwa Dubai',
+        name: 'Padlock Collection Lock Shop Satwa Dubai',
+      },
+      {
+        '@type': 'ImageObject',
+        url: `${SITE_URL}/images/shop/key-duplication-display-for-sale-satwa-dubai.webp`,
+        caption: 'Key duplication display at Lock Repair Satwa — key duplication service from AED 50',
+        name: 'Key Duplication Service Display Satwa Dubai',
+      },
+      {
+        '@type': 'ImageObject',
+        url: `${SITE_URL}/images/shop/door-lock-handles-repair-shop-satwa-dubai.webp`,
+        caption: 'Door lock handles and hardware at Lock Repair Satwa, Satwa Dubai',
+        name: 'Door Lock Repair Shop Satwa Dubai',
+      },
+      {
+        '@type': 'ImageObject',
+        url: `${SITE_URL}/images/services/car-remote-key-blanks-locksmith-shop-dubai.webp`,
+        caption: 'Car remote key blanks at Lock Repair Satwa locksmith shop, Dubai',
+        name: 'Car Remote Key Blanks Dubai Locksmith',
       },
     ],
     keywords: [

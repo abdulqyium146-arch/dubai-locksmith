@@ -23,6 +23,7 @@ import { ReviewsSection } from '@/components/sections/ReviewsSection'
 import { CtaSection } from '@/components/sections/CtaSection'
 import { ServiceCard } from '@/components/sections/ServiceCard'
 import { ServiceSchema } from '@/components/schema/ServiceSchema'
+import { WebPageSchema } from '@/components/schema/WebPageSchema'
 import { Badge } from '@/components/ui/Badge'
 import { Button } from '@/components/ui/Button'
 
@@ -69,6 +70,7 @@ export async function generateMetadata({
     description: service.metaDescription,
     alternates: {
       canonical: canonicalUrl,
+      languages: { en: canonicalUrl, 'x-default': canonicalUrl },
     },
     openGraph: {
       type: 'website',
@@ -91,6 +93,11 @@ export async function generateMetadata({
       title: service.metaTitle,
       description: service.metaDescription,
       images: [ogImage],
+    },
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: { index: true, follow: true, 'max-video-preview': -1, 'max-image-preview': 'large', 'max-snippet': -1 },
     },
   }
 }
@@ -146,10 +153,29 @@ export default async function ServicePage({
     },
   ]
 
+  const servicePageUrl = `${SITE_URL}/services/${service.slug}`
+  const serviceImages = service.heroImage
+    ? [{ url: `${SITE_URL}${service.heroImage}`, caption: service.heroImageAlt ?? service.title }]
+    : []
+
   return (
     <>
       {/* Schemas */}
       <ServiceSchema service={service} />
+      <WebPageSchema
+        pageUrl={servicePageUrl}
+        pageId={`service-${service.slug}`}
+        name={service.metaTitle}
+        description={service.directAnswerOpener}
+        breadcrumbs={[
+          { name: 'Home', url: SITE_URL },
+          { name: 'Services', url: `${SITE_URL}/services` },
+          { name: service.title, url: servicePageUrl },
+        ]}
+        primaryImageUrl={service.heroImage ? `${SITE_URL}${service.heroImage}` : undefined}
+        primaryImageAlt={service.heroImageAlt}
+        images={serviceImages}
+      />
 
       {/* ── 1. Hero ─────────────────────────────────────────────────────────── */}
       <section
