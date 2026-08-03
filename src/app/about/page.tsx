@@ -425,7 +425,7 @@ export default function AboutPage() {
                 caption: 'Door Handles & Hardware',
               },
               {
-                src: '/images/shop/key-duplication-shop-display-satwa-dubai.webp',
+                src: '/images/shop/key-duplication-display-for-sale-satwa-dubai.webp',
                 alt: 'Key duplication display stand at Lock Repair Satwa shop — duplicate keys for sale in Satwa Dubai',
                 caption: 'Key Duplication Display',
               },
