@@ -1169,8 +1169,18 @@ export default async function HomePage() {
             ))}
           </div>
 
+          {/* View all FAQs link */}
+          <div className="mt-8 text-center">
+            <a
+              href="/faq"
+              className="inline-flex items-center gap-1.5 text-sm font-semibold text-brand-gold hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring rounded"
+            >
+              View all 60+ FAQs →
+            </a>
+          </div>
+
           {/* Bottom CTA */}
-          <div className="mt-12 rounded-2xl border border-brand-gold/20 bg-brand-gold/5 px-6 py-8 text-center">
+          <div className="mt-8 rounded-2xl border border-brand-gold/20 bg-brand-gold/5 px-6 py-8 text-center">
             <p className="text-base font-semibold text-foreground">
               Have a question not answered here?
             </p>

@@ -38,6 +38,7 @@ export function GET() {
     { loc: `${SITE_URL}/contact`,         priority: '0.7', changefreq: 'monthly' },
     { loc: `${SITE_URL}/booking`,         priority: '0.7', changefreq: 'monthly' },
     { loc: `${SITE_URL}/about`,           priority: '0.6', changefreq: 'monthly' },
+    { loc: `${SITE_URL}/faq`,            priority: '0.7', changefreq: 'monthly' },
     { loc: `${SITE_URL}/privacy`,         priority: '0.3', changefreq: 'yearly'  },
     { loc: `${SITE_URL}/terms`,           priority: '0.3', changefreq: 'yearly'  },
   ]
