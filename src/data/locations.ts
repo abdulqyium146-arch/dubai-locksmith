@@ -73,7 +73,7 @@ export const locations: Location[] = [
   {
     slug: 'al-badaa',
     name: "Al Bada'a",
-    metaTitle: "Car Key Service Al Bada'a Dubai | Local Locksmith",
+    metaTitle: "Car Key Service Al Bada'a Dubai | Mobile Locksmith | Lock Repair Satwa",
     metaDescription:
       "Lock Repair Satwa is based in Al Bada'a, Dubai. Fastest response times for key duplication, emergency unlock and smart key programming — +971 52 642 6161.",
     directAnswerOpener:
@@ -120,7 +120,7 @@ export const locations: Location[] = [
   {
     slug: 'jumeirah',
     name: 'Jumeirah',
-    metaTitle: 'Car Key Service Jumeirah Dubai | 24/7 Mobile Locksmith',
+    metaTitle: 'Car Key Service Jumeirah Dubai | 24/7 Mobile | Lock Repair Satwa',
     metaDescription:
       'Mobile automotive locksmith in Jumeirah Dubai. Key duplication, smart key programming, emergency unlock for villas and apartments — +971 52 642 6161.',
     directAnswerOpener:
@@ -167,7 +167,7 @@ export const locations: Location[] = [
   {
     slug: 'dubai-marina',
     name: 'Dubai Marina',
-    metaTitle: 'Car Key Service Dubai Marina | Fast 24/7 Locksmith',
+    metaTitle: 'Car Key Service Dubai Marina | 24/7 Mobile | Lock Repair Satwa',
     metaDescription:
       'Car key duplication, emergency unlock and smart key programming in Dubai Marina. Mobile locksmith serving all Marina towers — +971 52 642 6161.',
     directAnswerOpener:
@@ -217,7 +217,7 @@ export const locations: Location[] = [
   {
     slug: 'downtown-dubai',
     name: 'Downtown Dubai',
-    metaTitle: 'Car Key Service Downtown Dubai | Emergency Locksmith',
+    metaTitle: 'Car Key Service Downtown Dubai | Emergency | Lock Repair Satwa',
     metaDescription:
       'Emergency car unlock, smart key programming and key replacement in Downtown Dubai. Fast mobile locksmith near Burj Khalifa — +971 52 642 6161.',
     directAnswerOpener:
@@ -267,7 +267,7 @@ export const locations: Location[] = [
   {
     slug: 'business-bay',
     name: 'Business Bay',
-    metaTitle: 'Car Key Service Business Bay Dubai | Office Locksmith',
+    metaTitle: 'Car Key Service Business Bay Dubai | Lock Repair Satwa',
     metaDescription:
       'Mobile car key and locksmith services in Business Bay Dubai. Emergency unlock, key programming and battery replacement. Fast response — +971 52 642 6161.',
     directAnswerOpener:
@@ -316,7 +316,7 @@ export const locations: Location[] = [
   {
     slug: 'deira',
     name: 'Deira',
-    metaTitle: 'Car Key Service Deira Dubai | Affordable 24/7 Locksmith',
+    metaTitle: 'Car Key Service Deira Dubai | Affordable 24/7 | Lock Repair Satwa',
     metaDescription:
       'Affordable car key services in Deira, Dubai — key cutting, transponder programming, emergency unlock. Fast mobile locksmith — +971 52 642 6161.',
     directAnswerOpener:
@@ -365,7 +365,7 @@ export const locations: Location[] = [
   {
     slug: 'bur-dubai',
     name: 'Bur Dubai',
-    metaTitle: 'Car Key Service Bur Dubai | Mobile Locksmith',
+    metaTitle: 'Car Key Service Bur Dubai | Mobile Locksmith | Lock Repair Satwa',
     metaDescription:
       'Car key duplication, emergency unlock and key programming in Bur Dubai. Serving Karama, Mankhool and Al Raffa. 24/7 mobile — +971 52 642 6161.',
     directAnswerOpener:
@@ -409,7 +409,7 @@ export const locations: Location[] = [
   {
     slug: 'al-barsha',
     name: 'Al Barsha',
-    metaTitle: 'Car Key Service Al Barsha Dubai | Mobile Locksmith',
+    metaTitle: 'Car Key Service Al Barsha Dubai | Mobile Locksmith | Lock Repair Satwa',
     metaDescription:
       'Car key duplication, emergency unlock and smart key programming in Al Barsha. Serving Al Barsha 1, 2 and 3. 24/7 — +971 52 642 6161.',
     directAnswerOpener:
@@ -452,7 +452,7 @@ export const locations: Location[] = [
   {
     slug: 'jumeirah-village-circle',
     name: 'Jumeirah Village Circle (JVC)',
-    metaTitle: 'Car Key Service JVC Dubai | Jumeirah Village Circle',
+    metaTitle: 'Car Key Service JVC Dubai | Jumeirah Village Circle | Lock Repair Satwa',
     metaDescription:
       'Mobile car key locksmith in JVC (Jumeirah Village Circle) Dubai. Key duplication, emergency unlock and transponder keys. Fast 24/7 — +971 52 642 6161.',
     directAnswerOpener:
@@ -495,7 +495,7 @@ export const locations: Location[] = [
   {
     slug: 'dubai-hills',
     name: 'Dubai Hills Estate',
-    metaTitle: 'Car Key Service Dubai Hills Estate | Mobile Locksmith',
+    metaTitle: 'Car Key Service Dubai Hills Estate | Lock Repair Satwa',
     metaDescription:
       'Mobile automotive locksmith in Dubai Hills Estate. Key programming, emergency unlock and battery replacement for villas and apartments. 24/7 — +971 52 642 6161.',
     directAnswerOpener:
@@ -538,7 +538,7 @@ export const locations: Location[] = [
   {
     slug: 'palm-jumeirah',
     name: 'Palm Jumeirah',
-    metaTitle: 'Car Key Service Palm Jumeirah Dubai | 24/7 Mobile Locksmith',
+    metaTitle: 'Car Key Service Palm Jumeirah Dubai | 24/7 Mobile | Lock Repair Satwa',
     metaDescription:
       'Emergency car unlock, smart key programming and key replacement on Palm Jumeirah. Serving The Crescent, fronds and trunk. 24/7 — +971 52 642 6161.',
     directAnswerOpener:
@@ -587,7 +587,7 @@ export const locations: Location[] = [
   {
     slug: 'motor-city',
     name: 'Motor City',
-    metaTitle: 'Car Key Service Motor City Dubai | Mobile Locksmith',
+    metaTitle: 'Car Key Service Motor City Dubai | Lock Repair Satwa',
     metaDescription:
       'Car key duplication, emergency unlock and smart key programming in Motor City, Dubai. Serving Autodrome and villa communities. 24/7 — +971 52 642 6161.',
     directAnswerOpener:
@@ -630,7 +630,7 @@ export const locations: Location[] = [
   {
     slug: 'mirdif',
     name: 'Mirdif',
-    metaTitle: 'Locksmith Mirdif Dubai | Mobile Lock Repair Satwa',
+    metaTitle: 'Locksmith Mirdif Dubai | Mobile Car Key Service | Lock Repair Satwa',
     metaDescription:
       'Mobile car key locksmith in Mirdif, Dubai. Emergency unlock, key duplication and transponder keys for villa communities. Fast 24/7 service — +971 52 642 6161.',
     directAnswerOpener:
@@ -677,7 +677,7 @@ export const locations: Location[] = [
   {
     slug: 'silicon-oasis',
     name: 'Dubai Silicon Oasis',
-    metaTitle: 'Car Key Service Silicon Oasis Dubai | 24/7 Mobile',
+    metaTitle: 'Car Key Service Silicon Oasis Dubai | 24/7 Mobile | Lock Repair Satwa',
     metaDescription:
       'Mobile car key locksmith in Dubai Silicon Oasis. Key duplication, smart key programming and emergency unlock for apartments and tech campus. 24/7 — +971 52 642 6161.',
     directAnswerOpener:
@@ -724,7 +724,7 @@ export const locations: Location[] = [
   {
     slug: 'jumeirah-village-triangle',
     name: 'Jumeirah Village Triangle (JVT)',
-    metaTitle: 'Car Key Service Jumeirah Village Triangle | Mobile Locksmith',
+    metaTitle: 'Car Key Service JVT Dubai | Jumeirah Village Triangle | Lock Repair Satwa',
     metaDescription:
       'Mobile car key locksmith in JVT (Jumeirah Village Triangle) Dubai. Key duplication, emergency unlock, transponder programming. Fast 24/7 — +971 52 642 6161.',
     directAnswerOpener:
@@ -765,7 +765,7 @@ export const locations: Location[] = [
   {
     slug: 'al-barari',
     name: 'Al Barari',
-    metaTitle: 'Car Key Service Al Barari Dubai | Luxury Mobile Locksmith',
+    metaTitle: 'Car Key Service Al Barari Dubai | Luxury Mobile | Lock Repair Satwa',
     metaDescription:
       'Mobile automotive locksmith in Al Barari Dubai. Smart key programming, emergency unlock and key replacement for luxury villas. 24/7 — +971 52 642 6161.',
     directAnswerOpener:
@@ -806,7 +806,7 @@ export const locations: Location[] = [
   {
     slug: 'al-khawaneej',
     name: 'Al Khawaneej',
-    metaTitle: 'Car Key Service Al Khawaneej Dubai | Mobile Locksmith',
+    metaTitle: 'Car Key Service Al Khawaneej Dubai | Lock Repair Satwa',
     metaDescription:
       'Mobile car key locksmith in Al Khawaneej Dubai. Emergency unlock, key duplication and smart key programming for family villas. 24/7 — +971 52 642 6161.',
     directAnswerOpener:
@@ -847,7 +847,7 @@ export const locations: Location[] = [
   {
     slug: 'al-quoz',
     name: 'Al Quoz',
-    metaTitle: 'Car Key Service Al Quoz Dubai | Mobile Locksmith',
+    metaTitle: 'Car Key Service Al Quoz Dubai | Mobile Locksmith | Lock Repair Satwa',
     metaDescription:
       'Mobile car key locksmith in Al Quoz Dubai. Key duplication, emergency unlock and smart key programming for industrial and residential areas. 24/7 — +971 52 642 6161.',
     directAnswerOpener:
@@ -890,7 +890,7 @@ export const locations: Location[] = [
   {
     slug: 'falconcity-of-wonders',
     name: 'Falconcity of Wonders',
-    metaTitle: 'Car Key Service Falconcity of Wonders Dubai | Mobile Locksmith',
+    metaTitle: 'Car Key Service Falconcity of Wonders Dubai | Lock Repair Satwa',
     metaDescription:
       'Mobile car key locksmith in Falconcity of Wonders Dubai. Emergency unlock, key duplication and smart key programming. 24/7 — +971 52 642 6161.',
     directAnswerOpener:
@@ -930,7 +930,7 @@ export const locations: Location[] = [
   {
     slug: 'jumeirah-lakes-towers',
     name: 'Jumeirah Lakes Towers (JLT)',
-    metaTitle: 'Car Key Service JLT Dubai | Jumeirah Lakes Towers Locksmith',
+    metaTitle: 'Car Key Service JLT Dubai | Jumeirah Lakes Towers | Lock Repair Satwa',
     metaDescription:
       'Mobile car key locksmith in JLT (Jumeirah Lakes Towers) Dubai. Emergency unlock, smart key programming and key duplication for tower residents. 24/7 — +971 52 642 6161.',
     directAnswerOpener:
@@ -973,7 +973,7 @@ export const locations: Location[] = [
   {
     slug: 'jumeirah-beach-residence',
     name: 'Jumeirah Beach Residence (JBR)',
-    metaTitle: 'Car Key Service JBR Dubai | Jumeirah Beach Residence Locksmith',
+    metaTitle: 'Car Key Service JBR Dubai | Jumeirah Beach Residence | Lock Repair Satwa',
     metaDescription:
       'Mobile car key locksmith in JBR (Jumeirah Beach Residence) Dubai. Emergency unlock, smart key programming and key duplication. 24/7 — +971 52 642 6161.',
     directAnswerOpener:
@@ -1016,7 +1016,7 @@ export const locations: Location[] = [
   {
     slug: 'discovery-gardens',
     name: 'Discovery Gardens',
-    metaTitle: 'Car Key Service Discovery Gardens Dubai | Mobile Locksmith',
+    metaTitle: 'Car Key Service Discovery Gardens Dubai | Lock Repair Satwa',
     metaDescription:
       'Mobile car key locksmith in Discovery Gardens and Jebel Ali Village Dubai. Emergency unlock, key duplication and key programming. 24/7 — +971 52 642 6161.',
     directAnswerOpener:
@@ -1059,7 +1059,7 @@ export const locations: Location[] = [
   {
     slug: 'international-city',
     name: 'International City',
-    metaTitle: 'Car Key Service International City Dubai | Mobile Locksmith',
+    metaTitle: 'Car Key Service International City Dubai | Lock Repair Satwa',
     metaDescription:
       'Car key duplication, emergency unlock and key programming in International City, Dubai. Affordable mobile locksmith. 24/7 service — +971 52 642 6161.',
     directAnswerOpener:

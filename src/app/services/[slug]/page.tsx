@@ -66,7 +66,7 @@ export async function generateMetadata({
     : DEFAULT_OG_IMAGE
 
   return {
-    title: service.metaTitle,
+    title: { absolute: service.metaTitle },
     description: service.metaDescription,
     alternates: {
       canonical: canonicalUrl,

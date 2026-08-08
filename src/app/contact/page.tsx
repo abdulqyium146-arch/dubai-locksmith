@@ -37,7 +37,7 @@ import {
 // ── Metadata ──────────────────────────────────────────────────────────────────
 
 export const metadata: Metadata = {
-  title: `Contact Lock Repair Satwa | Call ${PHONE_DISPLAY}`,
+  title: { absolute: `Contact Lock Repair Satwa Dubai | Call ${PHONE_DISPLAY}` },
   description: `Contact ${BUSINESS_NAME} for professional locksmith services in Dubai. Call ${PHONE_DISPLAY} or WhatsApp for an instant quote. Based at D90, Al Bada'a, open daily 24/7.`,
   alternates: {
     canonical: `${SITE_URL}/contact`,

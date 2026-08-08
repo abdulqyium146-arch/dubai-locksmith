@@ -66,7 +66,7 @@ export const products: Product[] = [
     slug: 'high-security-locks',
     title: 'High Security Locks',
     category: 'locks',
-    metaTitle: 'High Security Locks Dubai | Anti-Pick & Restricted Key Locks',
+    metaTitle: 'High Security Locks Dubai | Anti-Pick & Restricted Key | Lock Repair Satwa',
     metaDescription:
       'High security locks for Dubai villas and offices. Anti-pick, anti-drill, anti-bump cylinders with restricted key profiles. From AED 400 — +971 52 642 6161.',
     description:
@@ -93,7 +93,7 @@ export const products: Product[] = [
     slug: 'lock-cylinders',
     title: 'Lock Cylinders',
     category: 'locks',
-    metaTitle: 'Lock Cylinders Dubai | Euro, Oval & Rim Cylinders',
+    metaTitle: 'Lock Cylinders Dubai | Euro, Oval & Rim Cylinders | Lock Repair Satwa',
     metaDescription:
       'Lock cylinder supply and replacement in Dubai. Euro profile, oval and rim cylinders for all door types. From AED 100 — +971 52 642 6161.',
     description:
@@ -120,7 +120,7 @@ export const products: Product[] = [
     slug: 'door-knob-locks',
     title: 'Door Knob Locks',
     category: 'locks',
-    metaTitle: 'Door Knob Locks Dubai | Interior & Exterior Door Knob Sets',
+    metaTitle: 'Door Knob Locks Dubai | Interior & Exterior Sets | Lock Repair Satwa',
     metaDescription:
       'Door knob locks supplied and installed in Dubai for interior and exterior doors. All finishes. From AED 150 — +971 52 642 6161.',
     description:
@@ -147,7 +147,7 @@ export const products: Product[] = [
     slug: 'lever-handle-locks',
     title: 'Lever Handle Locks',
     category: 'locks',
-    metaTitle: 'Lever Handle Locks Dubai | Office & Commercial Door Handles',
+    metaTitle: 'Lever Handle Locks Dubai | Office & Commercial | Lock Repair Satwa',
     metaDescription:
       'Lever handle lock sets for Dubai offices and commercial premises. Passage, privacy and keyed lever sets from AED 200 — +971 52 642 6161.',
     description:
@@ -174,7 +174,7 @@ export const products: Product[] = [
     slug: 'glass-door-lock',
     title: 'Glass Door Lock',
     category: 'locks',
-    metaTitle: 'Glass Door Lock Dubai | Frameless & Framed Glass Door Locks',
+    metaTitle: 'Glass Door Lock Dubai | Frameless & Framed | Lock Repair Satwa',
     metaDescription:
       'Glass door locks for Dubai offices and retail premises. Frameless glass, patch fitting and aluminium frame glass doors. From AED 300 — +971 52 642 6161.',
     description:
@@ -201,7 +201,7 @@ export const products: Product[] = [
     slug: 'magnetic-locks',
     title: 'Magnetic Locks',
     category: 'locks',
-    metaTitle: 'Magnetic Locks Dubai | Electromagnetic Lock Supply & Install',
+    metaTitle: 'Magnetic Locks Dubai | Electromagnetic Lock Install | Lock Repair Satwa',
     metaDescription:
       'Magnetic lock (magloc) supply and installation in Dubai for access-controlled doors. From AED 400 — +971 52 642 6161.',
     description:
@@ -228,7 +228,7 @@ export const products: Product[] = [
     slug: 'cam-locks',
     title: 'Cam Locks',
     category: 'locks',
-    metaTitle: 'Cam Locks Dubai | Cabinet, Mailbox & Locker Locks',
+    metaTitle: 'Cam Locks Dubai | Cabinet, Mailbox & Locker | Lock Repair Satwa',
     metaDescription:
       'Cam locks for cabinets, mailboxes, lockers and vending machines in Dubai. All sizes from AED 50 — +971 52 642 6161.',
     description:
@@ -286,7 +286,7 @@ export const products: Product[] = [
     slug: 'fingerprint-door-locks',
     title: 'Fingerprint Door Locks',
     category: 'electronic-locks',
-    metaTitle: 'Fingerprint Door Locks Dubai | Biometric Entry System',
+    metaTitle: 'Fingerprint Door Locks Dubai | Biometric Entry | Lock Repair Satwa',
     metaDescription:
       'Fingerprint door locks for Dubai homes and offices. Fast biometric recognition, supplied and installed from AED 600 — +971 52 642 6161.',
     description:
@@ -313,7 +313,7 @@ export const products: Product[] = [
     slug: 'keyless-door-locks',
     title: 'Keyless Door Locks',
     category: 'electronic-locks',
-    metaTitle: 'Keyless Door Locks Dubai | Code Entry & Remote Access',
+    metaTitle: 'Keyless Door Locks Dubai | Code Entry & Remote | Lock Repair Satwa',
     metaDescription:
       'Keyless door locks for Dubai residential and commercial properties. PIN code, RFID and app access. From AED 400 installed — +971 52 642 6161.',
     description:
@@ -340,7 +340,7 @@ export const products: Product[] = [
     slug: 'keypad-locks',
     title: 'Keypad Locks',
     category: 'electronic-locks',
-    metaTitle: 'Keypad Locks Dubai | PIN Entry Door Locks | Supply & Install',
+    metaTitle: 'Keypad Locks Dubai | PIN Entry Door Locks | Lock Repair Satwa',
     metaDescription:
       'Keypad door locks for Dubai homes and offices. Mechanical and electronic PIN entry. From AED 300 installed — +971 52 642 6161.',
     description:
@@ -371,7 +371,7 @@ export const products: Product[] = [
     slug: 'depository-safes',
     title: 'Depository Safes',
     category: 'safes',
-    metaTitle: 'Depository Safes Dubai | Cash & Document Drop Safes',
+    metaTitle: 'Depository Safes Dubai | Cash & Document Drop | Lock Repair Satwa',
     metaDescription:
       'Depository safes for Dubai retail and commercial businesses. Drop slot and cash deposit safes from AED 500 — +971 52 642 6161.',
     description:
@@ -398,7 +398,7 @@ export const products: Product[] = [
     slug: 'gun-safes',
     title: 'Gun Safes',
     category: 'safes',
-    metaTitle: 'Gun Safes Dubai | Firearm & Weapon Storage Safes',
+    metaTitle: 'Gun Safes Dubai | Firearm Storage Safes | Lock Repair Satwa',
     metaDescription:
       'Gun safes for secure firearm storage in Dubai. Quick-access pistol safes and long-gun rifle safes. From AED 800 — +971 52 642 6161.',
     description:
@@ -425,7 +425,7 @@ export const products: Product[] = [
     slug: 'fireproof-safes',
     title: 'Fireproof Safes',
     category: 'safes',
-    metaTitle: 'Fireproof Safes Dubai | Document & Data Protection Safes',
+    metaTitle: 'Fireproof Safes Dubai | Document Protection | Lock Repair Satwa',
     metaDescription:
       'Fireproof safes for Dubai homes and offices. UL and EN rated fire protection for documents and media. From AED 600 — +971 52 642 6161.',
     description:
@@ -452,7 +452,7 @@ export const products: Product[] = [
     slug: 'floor-safes',
     title: 'Floor Safes',
     category: 'safes',
-    metaTitle: 'Floor Safes Dubai | In-Floor Concealed Safe Supply & Install',
+    metaTitle: 'Floor Safes Dubai | In-Floor Concealed Safe | Lock Repair Satwa',
     metaDescription:
       'Floor safes installed into concrete and tile floors in Dubai villas and offices. Concealed, high-security storage from AED 700 — +971 52 642 6161.',
     description:
@@ -479,7 +479,7 @@ export const products: Product[] = [
     slug: 'wall-safes',
     title: 'Wall Safes',
     category: 'safes',
-    metaTitle: 'Wall Safes Dubai | Concealed In-Wall Safe Installation',
+    metaTitle: 'Wall Safes Dubai | Concealed In-Wall Safe | Lock Repair Satwa',
     metaDescription:
       'Wall safes installed into masonry and stud walls in Dubai homes and offices. Concealed behind mirrors and artwork. From AED 500 — +971 52 642 6161.',
     description:
@@ -506,7 +506,7 @@ export const products: Product[] = [
     slug: 'hotel-safes',
     title: 'Hotel Safes',
     category: 'safes',
-    metaTitle: 'Hotel Safes Dubai | In-Room Guest Safe Supply & Service',
+    metaTitle: 'Hotel Safes Dubai | In-Room Guest Safe | Lock Repair Satwa',
     metaDescription:
       'Hotel room safes for Dubai hotels and serviced apartments. Supply, installation and maintenance. From AED 400 — +971 52 642 6161.',
     description:
@@ -537,7 +537,7 @@ export const products: Product[] = [
     slug: 'commercial-locks',
     title: 'Commercial Locks',
     category: 'commercial-door-hardware',
-    metaTitle: 'Commercial Locks Dubai | Heavy-Duty Office & Industrial Locks',
+    metaTitle: 'Commercial Locks Dubai | Heavy-Duty Office & Industrial | Lock Repair Satwa',
     metaDescription:
       'Commercial-grade locks for Dubai offices, warehouses and industrial premises. High cycle-count, heavy-duty hardware from AED 300 — +971 52 642 6161.',
     description:
@@ -564,7 +564,7 @@ export const products: Product[] = [
     slug: 'commercial-magnetic-locks',
     title: 'Magnetic Locks (Commercial)',
     category: 'commercial-door-hardware',
-    metaTitle: 'Commercial Magnetic Locks Dubai | High-Force Electromagnetic Locks',
+    metaTitle: 'Commercial Magnetic Locks Dubai | High-Force EM Locks | Lock Repair Satwa',
     metaDescription:
       'Commercial magnetic locks for Dubai offices and buildings. 280 kg to 1,200 kg holding force. Supply and installation — +971 52 642 6161.',
     description:
@@ -591,7 +591,7 @@ export const products: Product[] = [
     slug: 'electric-door-strikes',
     title: 'Electric Door Strikes',
     category: 'commercial-door-hardware',
-    metaTitle: 'Electric Door Strikes Dubai | Fail-Safe & Fail-Secure Models',
+    metaTitle: 'Electric Door Strikes Dubai | Fail-Safe & Fail-Secure | Lock Repair Satwa',
     metaDescription:
       'Electric door strike supply and installation in Dubai. Fail-safe and fail-secure models for access control integration. From AED 400 — +971 52 642 6161.',
     description:
@@ -618,7 +618,7 @@ export const products: Product[] = [
     slug: 'panic-bars',
     title: 'Panic Bars',
     category: 'commercial-door-hardware',
-    metaTitle: 'Panic Bars Dubai | Emergency Exit Bar Supply & Installation',
+    metaTitle: 'Panic Bars Dubai | Emergency Exit Bar Install | Lock Repair Satwa',
     metaDescription:
       'Panic bar and exit device supply and installation in Dubai. EN 1125 emergency egress hardware for fire exits and commercial doors. From AED 500 — +971 52 642 6161.',
     description:
@@ -645,7 +645,7 @@ export const products: Product[] = [
     slug: 'door-closers',
     title: 'Door Closers',
     category: 'commercial-door-hardware',
-    metaTitle: 'Door Closers Dubai | Commercial Door Closer Supply & Install',
+    metaTitle: 'Door Closers Dubai | Commercial Door Closer Install | Lock Repair Satwa',
     metaDescription:
       'Door closer supply and installation in Dubai for commercial and fire doors. Overhead and floor spring closers. From AED 200 — +971 52 642 6161.',
     description:
@@ -672,7 +672,7 @@ export const products: Product[] = [
     slug: 'door-operators',
     title: 'Door Operators',
     category: 'commercial-door-hardware',
-    metaTitle: 'Door Operators Dubai | Automatic Door Opener Installation',
+    metaTitle: 'Door Operators Dubai | Automatic Door Opener | Lock Repair Satwa',
     metaDescription:
       'Automatic door operator supply and installation in Dubai for swing and sliding doors. From AED 800 — +971 52 642 6161.',
     description:

@@ -38,7 +38,7 @@ const HOMEPAGE_TITLE = "Key Maker Near Me Dubai | Key Shop Satwa | Lock Repair S
 const HOMEPAGE_DESC  = "Key maker & key shop near me in Satwa, Dubai. Lock Repair Satwa: key duplication service from AED 50, car key cutting, door lock repair. 24/7 mobile locksmith. Rated 4.7★. Call +971 52 642 6161."
 
 export const metadata: Metadata = {
-  title: HOMEPAGE_TITLE,
+  title: { absolute: HOMEPAGE_TITLE },
   description: HOMEPAGE_DESC,
   alternates: {
     canonical: SITE_URL,

@@ -29,7 +29,7 @@ import type { Service } from '@/types'
 // ── Metadata ──────────────────────────────────────────────────────────────────
 
 export const metadata: Metadata = {
-  title: 'All Locksmith Services in Dubai | Lock Repair Satwa',
+  title: { absolute: 'All Locksmith Services in Dubai | Lock Repair Satwa' },
   description:
     'Complete range of locksmith services in Dubai from Lock Repair Satwa — residential, commercial and automotive. Key duplication, lock repair, smart lock installation, master key systems, car key programming, emergency locksmith and more. Open daily 24/7.',
   alternates: {

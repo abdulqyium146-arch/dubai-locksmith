@@ -22,7 +22,7 @@ import {
 // ── Metadata ──────────────────────────────────────────────────────────────────
 
 export const metadata: Metadata = {
-  title: 'Book a Locksmith in Dubai | Lock Repair Satwa',
+  title: { absolute: 'Book a Locksmith in Dubai | Lock Repair Satwa' },
   description:
     'Book a locksmith or car key service in Dubai online. Lock Repair Satwa — mobile service across all Dubai areas. Same-day response, upfront pricing. Call +971 52 642 6161.',
   alternates: {

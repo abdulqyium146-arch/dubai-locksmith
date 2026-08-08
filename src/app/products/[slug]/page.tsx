@@ -68,7 +68,7 @@ export async function generateMetadata({
   const canonicalUrl = `${SITE_URL}/products/${product.slug}`
 
   return {
-    title: product.metaTitle,
+    title: { absolute: product.metaTitle },
     description: product.metaDescription,
     alternates: { canonical: canonicalUrl },
     openGraph: {

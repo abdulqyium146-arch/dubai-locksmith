@@ -14,7 +14,7 @@ import {
 } from '@/lib/constants'
 
 export const metadata: Metadata = {
-  title: `Locksmith FAQs Dubai | ${BUSINESS_NAME} — All Questions Answered`,
+  title: { absolute: `Locksmith FAQs Dubai | ${BUSINESS_NAME} — All Questions Answered` },
   description: `Every locksmith question answered for Dubai. Prices, response times, car key programming, door lock repair, smart locks, safe opening, emergency lockout — Lock Repair Satwa, Al Bada'a, Satwa.`,
   alternates: {
     canonical: `${SITE_URL}/faq`,

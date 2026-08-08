@@ -123,7 +123,7 @@ export const services: Service[] = [
     slug: 'car-key-replacement',
     category: 'automotive',
     title: 'Car Key Replacement',
-    metaTitle: 'Car Key Replacement Dubai | Lost Key Experts',
+    metaTitle: 'Car Key Replacement Dubai | Lost Key Experts | Lock Repair Satwa',
     metaDescription:
       'Lost your only car key in Dubai? We replace car keys on-site without needing the original. All makes covered. mobile service, available 24/7 — +971 52 642 6161.',
     directAnswerOpener:
@@ -242,7 +242,7 @@ export const services: Service[] = [
     slug: 'remote-smart-key-programming',
     category: 'automotive',
     title: 'Remote & Smart Key Programming',
-    metaTitle: 'Remote & Smart Key Programming Dubai | AED 400–900',
+    metaTitle: 'Remote Key Programming Dubai | Smart Key Service | Lock Repair Satwa',
     metaDescription:
       'Expert remote and smart key programming for all car brands in Dubai. Keyless entry, push-start, proximity keys. Mobile service 24/7 — +971 52 642 6161.',
     directAnswerOpener:
@@ -357,7 +357,7 @@ export const services: Service[] = [
     slug: 'transponder-keys',
     category: 'automotive',
     title: 'Transponder Key Cutting & Programming',
-    metaTitle: 'Transponder Key Programming Dubai | AED 350–700',
+    metaTitle: 'Transponder Key Programming Dubai | Chip Key Service | Lock Repair Satwa',
     metaDescription:
       'Transponder key cutting and programming in Dubai for all car makes. On-site chip cloning and ECU pairing. Same-day mobile service — +971 52 642 6161.',
     directAnswerOpener:
@@ -465,7 +465,7 @@ export const services: Service[] = [
     slug: 'emergency-car-unlock',
     category: 'automotive',
     title: 'Emergency Car Unlock',
-    metaTitle: 'Emergency Car Unlock Dubai | 24/7 — AED 200–500',
+    metaTitle: 'Emergency Car Unlock Dubai | 24/7 Locksmith | Lock Repair Satwa',
     metaDescription:
       'Locked out of your car in Dubai? Our mobile locksmith opens any vehicle in 20–45 minutes. 24/7 service, no damage — +971 52 642 6161.',
     directAnswerOpener:
@@ -579,7 +579,7 @@ export const services: Service[] = [
     slug: 'lost-broken-car-keys',
     category: 'automotive',
     title: 'Lost & Broken Car Key Service',
-    metaTitle: 'Lost or Broken Car Key Dubai | Fast Replacement',
+    metaTitle: 'Lost or Broken Car Key Dubai | Fast Replacement | Lock Repair Satwa',
     metaDescription:
       'Lost or snapped your car key in Dubai? We replace and extract broken keys on-site. 24/7 service for all makes. Call +971 52 642 6161.',
     directAnswerOpener:
@@ -682,7 +682,7 @@ export const services: Service[] = [
     slug: 'flip-keys',
     category: 'automotive',
     title: 'Flip Key Replacement & Programming',
-    metaTitle: 'Flip Key Replacement Dubai | Folding Key Service',
+    metaTitle: 'Flip Key Replacement Dubai | Folding Car Key | Lock Repair Satwa',
     metaDescription:
       'Flip key shell replacement, blade cutting and remote programming in Dubai. All car makes covered. On-site mobile service — +971 52 642 6161.',
     directAnswerOpener:
@@ -785,7 +785,7 @@ export const services: Service[] = [
     slug: 'smart-door-locks',
     category: 'residential',
     title: 'Smart Door Lock Installation & Repair',
-    metaTitle: 'Smart Door Lock Installation Dubai | AED 350–1200',
+    metaTitle: 'Smart Door Lock Installation Dubai | Lock Repair Satwa',
     metaDescription:
       'Smart door lock supply, installation and repair in Dubai. Fingerprint, PIN, RFID and app-controlled locks for villas and apartments — +971 52 642 6161.',
     directAnswerOpener:
@@ -887,7 +887,7 @@ export const services: Service[] = [
     slug: 'safe-box-services',
     category: 'residential',
     title: 'Safe Box Opening, Installation & Repair',
-    metaTitle: 'Safe Box Opening & Installation Dubai | AED 200–800',
+    metaTitle: 'Safe Box Opening & Installation Dubai | Lock Repair Satwa',
     metaDescription:
       'Safe box opening, combination reset and installation in Dubai. Hotel, home and office safes. Mobile service — call +971 52 642 6161.',
     directAnswerOpener:
@@ -982,7 +982,7 @@ export const services: Service[] = [
     slug: 'parking-remotes',
     category: 'residential',
     title: 'Parking Remote & Gate Remote Services',
-    metaTitle: 'Parking Remote Programming Dubai | Gate Fob Cloning',
+    metaTitle: 'Parking Remote Programming Dubai | Gate Fob Cloning | Lock Repair Satwa',
     metaDescription:
       'Parking and gate remote programming, cloning and replacement in Dubai. All frequencies covered. Mobile service — call +971 52 642 6161.',
     directAnswerOpener:
@@ -1070,7 +1070,7 @@ export const services: Service[] = [
   {
     slug: 'rubber-stamps',
     title: 'Rubber Stamp Making Dubai',
-    metaTitle: 'Rubber Stamp Making Dubai | Fast Same-Day Service',
+    metaTitle: 'Rubber Stamp Making Dubai | Same-Day Service | Lock Repair Satwa',
     metaDescription:
       'Custom rubber stamps in Dubai — self-inking, pre-inked and traditional. Business, legal and personal stamps. Same-day delivery — +971 52 642 6161.',
     directAnswerOpener:
@@ -1165,7 +1165,7 @@ export const services: Service[] = [
     slug: 'car-battery-replacement',
     category: 'automotive',
     title: 'Car Battery Replacement Dubai',
-    metaTitle: 'Car Battery Replacement Dubai | AED 250–600',
+    metaTitle: 'Car Battery Replacement Dubai | Mobile Service | Lock Repair Satwa',
     metaDescription:
       'Mobile car battery replacement in Dubai. We test, supply and fit batteries for all car makes. 24/7 service, no towing needed — +971 52 642 6161.',
     directAnswerOpener:
@@ -1325,7 +1325,7 @@ export const services: Service[] = [
     slug: 'safe-opening',
     category: 'residential',
     title: 'Safe Opening',
-    metaTitle: 'Safe Opening Dubai | Forgotten Combination Experts | AED 200+',
+    metaTitle: 'Safe Opening Dubai | Forgotten Combination | Lock Repair Satwa',
     metaDescription:
       'Professional safe opening in Dubai without drilling where possible. Forgotten combination, dead battery or jammed mechanism — Lock Repair Satwa opens it. Call +971 52 642 6161.',
     directAnswerOpener:
@@ -1375,7 +1375,7 @@ export const services: Service[] = [
     slug: 'access-card-duplication',
     category: 'residential',
     title: 'Access Card Duplication',
-    metaTitle: 'Access Card Duplication Dubai | RFID & Proximity Cards',
+    metaTitle: 'Access Card Duplication Dubai | RFID Cards | Lock Repair Satwa',
     metaDescription:
       'Access card and key fob duplication in Dubai for residential buildings. RFID, proximity and EM4100 card cloning — 15–30 minutes. Call +971 52 642 6161.',
     directAnswerOpener:
@@ -1423,7 +1423,7 @@ export const services: Service[] = [
     slug: 'lock-change',
     category: 'residential',
     title: 'Lock Change',
-    metaTitle: 'Lock Change Dubai | Residential Door Lock Replacement',
+    metaTitle: 'Lock Change Dubai | Door Lock Replacement | Lock Repair Satwa',
     metaDescription:
       'Lock change service for Dubai apartments and villas. We replace mortise locks, deadbolts and smart locks. From AED 200 — +971 52 642 6161.',
     directAnswerOpener:
@@ -1472,7 +1472,7 @@ export const services: Service[] = [
     slug: 'lock-repair',
     category: 'residential',
     title: 'Lock Repair',
-    metaTitle: 'Lock Repair Dubai | Stiff, Jammed or Broken Locks Fixed',
+    metaTitle: 'Lock Repair Dubai | Stiff & Broken Locks Fixed | Lock Repair Satwa',
     metaDescription:
       'Lock repair in Dubai for stiff, jammed or broken door locks. On-site service in 30–60 minutes. From AED 150 — +971 52 642 6161.',
     directAnswerOpener:
@@ -1521,7 +1521,7 @@ export const services: Service[] = [
     slug: 'mailbox-lock',
     category: 'residential',
     title: 'Mailbox Lock Services',
-    metaTitle: 'Mailbox Lock Dubai | Open, Replace & Duplicate Keys',
+    metaTitle: 'Mailbox Lock Dubai | Open, Replace & Duplicate Keys | Lock Repair Satwa',
     metaDescription:
       'Mailbox lock opening, replacement and key duplication in Dubai. Same-day service for apartment and villa mailboxes — +971 52 642 6161.',
     directAnswerOpener:
@@ -1569,7 +1569,7 @@ export const services: Service[] = [
     slug: 'garage-remote-duplicate',
     category: 'residential',
     title: 'Garage Remote Duplicate',
-    metaTitle: 'Garage Remote Duplicate Dubai | Gate & Garage Fob Cloning',
+    metaTitle: 'Garage Remote Duplicate Dubai | Gate Fob Cloning | Lock Repair Satwa',
     metaDescription:
       'Garage remote and gate fob duplication in Dubai. Clone your remote in 15–30 minutes from AED 150. Mobile service available — +971 52 642 6161.',
     directAnswerOpener:
@@ -1617,7 +1617,7 @@ export const services: Service[] = [
     slug: 'sliding-patio-door-lock',
     category: 'residential',
     title: 'Sliding Patio Door Lock Installation',
-    metaTitle: 'Sliding Patio Door Lock Dubai | Installation & Repair',
+    metaTitle: 'Sliding Patio Door Lock Dubai | Installation & Repair | Lock Repair Satwa',
     metaDescription:
       'Sliding patio door lock installation and repair in Dubai for villas and apartments. From AED 250 — +971 52 642 6161.',
     directAnswerOpener:
@@ -1666,7 +1666,7 @@ export const services: Service[] = [
     slug: 'home-lockout',
     category: 'residential',
     title: 'Home Lockout Service',
-    metaTitle: 'Home Lockout Dubai | 24/7 Emergency Locksmith | 20–40 Min',
+    metaTitle: 'Home Lockout Dubai | 24/7 Emergency Locksmith | Lock Repair Satwa',
     metaDescription:
       'Locked out of your home in Dubai? We arrive in 20–40 minutes, open your door without damage and can change the lock on the spot. +971 52 642 6161.',
     directAnswerOpener:
@@ -1764,7 +1764,7 @@ export const services: Service[] = [
     slug: 'master-key-system',
     category: 'commercial',
     title: 'Master Key System',
-    metaTitle: 'Master Key System Dubai | Commercial Lock Hierarchy Setup',
+    metaTitle: 'Master Key System Dubai | Commercial Lock Setup | Lock Repair Satwa',
     metaDescription:
       'Master key system design and installation in Dubai for offices, hotels and commercial buildings. Custom lock hierarchy, keyed-alike options — +971 52 642 6161.',
     directAnswerOpener:
@@ -1813,7 +1813,7 @@ export const services: Service[] = [
     slug: 'cabinet-lock',
     category: 'commercial',
     title: 'Cabinet Lock Services',
-    metaTitle: 'Cabinet Lock Dubai | Office Filing Cabinet & Drawer Locks',
+    metaTitle: 'Cabinet Lock Dubai | Filing Cabinet & Drawer Locks | Lock Repair Satwa',
     metaDescription:
       'Cabinet lock replacement, opening and rekeying for office filing cabinets and drawers in Dubai. Same-day service from AED 100 — +971 52 642 6161.',
     directAnswerOpener:
@@ -1862,7 +1862,7 @@ export const services: Service[] = [
     slug: 'access-control-installation',
     category: 'commercial',
     title: 'Access Control Installation',
-    metaTitle: 'Access Control Installation Dubai | Commercial Security Systems',
+    metaTitle: 'Access Control Installation Dubai | Lock Repair Satwa',
     metaDescription:
       'Access control system installation in Dubai for offices and commercial buildings. RFID, biometric and PIN systems from AED 800 — +971 52 642 6161.',
     directAnswerOpener:
@@ -1911,7 +1911,7 @@ export const services: Service[] = [
     slug: 'door-closer-installation',
     category: 'commercial',
     title: 'Door Closer Installation',
-    metaTitle: 'Door Closer Installation Dubai | Commercial & Fire Doors',
+    metaTitle: 'Door Closer Installation Dubai | Commercial Doors | Lock Repair Satwa',
     metaDescription:
       'Door closer supply and installation in Dubai for offices, commercial buildings and fire doors. From AED 300 — +971 52 642 6161.',
     directAnswerOpener:
@@ -1960,7 +1960,7 @@ export const services: Service[] = [
     slug: 'push-bar-installation',
     category: 'commercial',
     title: 'Push Bar Installation',
-    metaTitle: 'Push Bar Installation Dubai | Panic Bar & Exit Device Fitting',
+    metaTitle: 'Push Bar Installation Dubai | Panic Bar & Exit Device | Lock Repair Satwa',
     metaDescription:
       'Panic bar and push bar installation in Dubai for emergency exits, fire doors and commercial buildings. From AED 400 — +971 52 642 6161.',
     directAnswerOpener:
@@ -2009,7 +2009,7 @@ export const services: Service[] = [
     slug: 'car-key-maker',
     category: 'automotive',
     title: 'Car Key Maker',
-    metaTitle: 'Car Key Maker Dubai | New Car Keys Cut & Programmed On-Site',
+    metaTitle: 'Car Key Maker Dubai | Keys Cut & Programmed On-Site | Lock Repair Satwa',
     metaDescription:
       'Car key maker in Dubai — we cut and program new car keys on-site for all makes. From AED 150. Mobile service 24/7 — +971 52 642 6161.',
     directAnswerOpener:
@@ -2064,7 +2064,7 @@ export const services: Service[] = [
     slug: 'automotive-lock-repair',
     category: 'automotive',
     title: 'Automotive Lock Repair',
-    metaTitle: 'Automotive Lock Repair Dubai | Car Door & Ignition Lock Fix',
+    metaTitle: 'Automotive Lock Repair Dubai | Car Door & Ignition | Lock Repair Satwa',
     metaDescription:
       'Car door lock and ignition lock repair in Dubai. We fix jammed, broken or worn automotive locks on-site. From AED 200 — +971 52 642 6161.',
     directAnswerOpener:
@@ -2119,7 +2119,7 @@ export const services: Service[] = [
     slug: 'ignition-repair',
     category: 'automotive',
     title: 'Ignition Repair & Replacement',
-    metaTitle: 'Ignition Repair Dubai | Stuck or Broken Ignition Fix | 24/7',
+    metaTitle: 'Ignition Repair Dubai | Stuck or Broken Ignition | Lock Repair Satwa',
     metaDescription:
       'Ignition repair and ignition replacement in Dubai. Stuck key, worn barrel, no-start condition — mobile service 24/7. From AED 300 — +971 52 642 6161.',
     directAnswerOpener:
@@ -2174,7 +2174,7 @@ export const services: Service[] = [
     slug: 'car-trunk-unlock',
     category: 'automotive',
     title: 'Car Trunk Unlock',
-    metaTitle: 'Car Trunk Unlock Dubai | Boot Open Without Key | 24/7',
+    metaTitle: 'Car Trunk Unlock Dubai | Boot Open Without Key | Lock Repair Satwa',
     metaDescription:
       'Car boot and trunk unlock service in Dubai. Keys locked inside or trunk won\'t open? Mobile service 24/7, average arrival 20–40 min — +971 52 642 6161.',
     directAnswerOpener:
@@ -2229,7 +2229,7 @@ export const services: Service[] = [
     slug: 'car-key-cover-replacement',
     category: 'automotive',
     title: 'Car Key Cover Replacement',
-    metaTitle: 'Car Key Cover Replacement Dubai | Key Shell & Case Repair',
+    metaTitle: 'Car Key Cover Replacement Dubai | Key Shell & Case | Lock Repair Satwa',
     metaDescription:
       'Car key cover and shell replacement in Dubai. Cracked or broken key fob housing replaced without full reprogramming. From AED 100 — +971 52 642 6161.',
     directAnswerOpener:

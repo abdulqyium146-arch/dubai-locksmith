@@ -40,7 +40,7 @@ import {
 // ── Metadata ──────────────────────────────────────────────────────────────────
 
 export const metadata: Metadata = {
-  title: `About Lock Repair Satwa | Professional Locksmith in Dubai`,
+  title: { absolute: `About Lock Repair Satwa | Professional Locksmith in Dubai` },
   description:
     `Learn about Lock Repair Satwa — Dubai's professional locksmith based at D90, Al Bada'a. We provide lock repair, car key duplication, smart key programming and emergency locksmith services across all Dubai areas. Rated 4.7★ on Google.`,
   alternates: {

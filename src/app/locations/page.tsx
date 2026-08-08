@@ -30,7 +30,7 @@ import {
 // ── Metadata ──────────────────────────────────────────────────────────────────
 
 export const metadata: Metadata = {
-  title: 'Locksmith Service Areas in Dubai | All 15 Locations — Lock Repair Satwa',
+  title: { absolute: 'Locksmith Areas Dubai | 24+ Locations Covered | Lock Repair Satwa' },
   description:
     'Lock Repair Satwa covers all major Dubai areas — Jumeirah, Downtown, Dubai Marina, Business Bay, Dubai Hills, Palm Jumeirah and more. Professional mobile locksmith open daily 24/7. Call +971 52 642 6161.',
   alternates: {

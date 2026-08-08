@@ -31,7 +31,7 @@ import { formatPriceRange } from '@/lib/utils'
 // ── Metadata ──────────────────────────────────────────────────────────────────
 
 export const metadata: Metadata = {
-  title: 'Locksmith Products Dubai — Locks, Safes & Security Hardware | Lock Repair Satwa',
+  title: { absolute: 'Security Products Dubai | Locks, Safes & Hardware | Lock Repair Satwa' },
   description:
     'Browse our full range of security products in Dubai: deadbolts, mortise locks, high security locks, smart door locks, fingerprint locks, keypad locks, safes and commercial door hardware. Supply and installation by Lock Repair Satwa.',
   alternates: {

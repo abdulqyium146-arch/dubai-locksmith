@@ -71,6 +71,28 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.6,
     },
 
+    // ── FAQ ──────────────────────────────────────────────────────────────────
+    {
+      url: `${SITE_URL}/faq`,
+      lastModified: now,
+      changeFrequency: 'monthly',
+      priority: 0.65,
+    },
+
+    // ── Privacy & Terms ──────────────────────────────────────────────────────
+    {
+      url: `${SITE_URL}/privacy`,
+      lastModified: now,
+      changeFrequency: 'yearly',
+      priority: 0.3,
+    },
+    {
+      url: `${SITE_URL}/terms`,
+      lastModified: now,
+      changeFrequency: 'yearly',
+      priority: 0.3,
+    },
+
     // ── Individual service pages (priority 0.9 — core money pages) ───────────
     ...serviceSlugs.map((slug) => ({
       url: `${SITE_URL}/services/${slug}`,

@@ -12,7 +12,7 @@ import {
 } from '@/lib/constants'
 
 export const metadata: Metadata = {
-  title: `Terms of Service | ${BUSINESS_NAME} — Locksmith Dubai`,
+  title: { absolute: `Terms of Service | ${BUSINESS_NAME} — Locksmith Dubai` },
   description: `Terms of Service for ${BUSINESS_NAME}, professional key shop and locksmith in Al Bada'a, Satwa, Dubai. Key duplication, car key programming, lock repair — service terms and conditions.`,
   alternates: {
     canonical: `${SITE_URL}/terms`,

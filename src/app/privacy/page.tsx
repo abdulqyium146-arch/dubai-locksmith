@@ -12,7 +12,7 @@ import {
 } from '@/lib/constants'
 
 export const metadata: Metadata = {
-  title: `Privacy Policy | ${BUSINESS_NAME} — Locksmith Dubai`,
+  title: { absolute: `Privacy Policy | ${BUSINESS_NAME} — Locksmith Dubai` },
   description: `Privacy Policy for ${BUSINESS_NAME}, Dubai's professional key shop and locksmith. Learn how we collect, use, and protect your personal data. Based in Al Bada'a, Satwa, Dubai.`,
   alternates: {
     canonical: `${SITE_URL}/privacy`,
