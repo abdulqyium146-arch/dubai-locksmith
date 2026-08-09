@@ -58,7 +58,7 @@ export async function CtaSection({
             className="h-1.5 w-1.5 animate-pulse rounded-full bg-brand-gold"
             aria-hidden="true"
           />
-          Open Daily 7 AM – 11:30 PM
+          Mobile 24/7 · Lock Repair Satwa, Dubai
         </div>
 
         {/* Heading */}

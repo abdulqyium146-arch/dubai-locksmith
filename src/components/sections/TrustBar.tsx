@@ -31,7 +31,7 @@ export async function TrustBar({ dark = false, className }: TrustBarProps) {
     {
       icon: MapPin,
       label: 'All Dubai Covered',
-      sub: '15 key areas',
+      sub: '24+ areas served',
     },
     {
       icon: DollarSign,

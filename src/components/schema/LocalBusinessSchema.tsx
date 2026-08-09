@@ -37,13 +37,17 @@ const OFFER_CATALOG_ITEMS = [
   { name: 'Rubber Stamp Making', url: `${SITE_URL}/services/rubber-stamps`, minPrice: '50', maxPrice: '200' },
 ]
 
-// Dubai areas served — mirrors GMB service area targeting exactly
+// Dubai areas served — mirrors GMB service area targeting exactly (24+ areas)
 const DUBAI_AREAS = [
   'Al Satwa', "Al Bada'a", 'Dubai',
-  'Jumeirah Village Triangle', 'Al Barari', 'Al Barsha', 'Al Barsha South',
-  'Al Khawaneej', 'Dubai Marina', 'Al Quoz', 'Dubai Silicon Oasis',
-  'Falconcity of Wonders', 'Jumeirah Lakes Towers', 'Jumeirah Beach Residence',
-  'Discovery Gardens', 'Jebel Ali Village',
+  'Downtown Dubai', 'Business Bay', 'DIFC', 'Dubai Marina',
+  'Jumeirah', 'Jumeirah Beach Residence', 'Jumeirah Lakes Towers',
+  'Jumeirah Village Circle', 'Jumeirah Village Triangle',
+  'Al Barsha', 'Al Barsha South', 'Dubai Hills Estate',
+  'Palm Jumeirah', 'Deira', 'Bur Dubai',
+  'Al Quoz', 'Motor City', 'Mirdif', 'Dubai Silicon Oasis',
+  'Al Barari', 'Al Khawaneej', 'Falconcity of Wonders',
+  'Discovery Gardens', 'International City', 'Jebel Ali Village',
 ]
 
 export function LocalBusinessSchema() {
@@ -63,7 +67,6 @@ export function LocalBusinessSchema() {
       addressLocality: ADDRESS_AREA,
       addressRegion: ADDRESS_CITY,
       addressCountry: 'AE',
-      postalCode: '00000',
     },
     geo: {
       '@type': 'GeoCoordinates',

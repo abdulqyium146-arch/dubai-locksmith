@@ -349,6 +349,9 @@ export default async function LocationPage({
                 <span className="text-gold-gradient">&amp; Locksmith</span>{' '}
                 Service
               </h1>
+              <p className="mt-1 text-xs font-semibold uppercase tracking-widest text-brand-gold/70">
+                Lock Repair Satwa · Al Bada&apos;a, Dubai, UAE
+              </p>
 
               {/* Landmark subheading — uses real location data */}
               <p className="mt-3 text-base text-white/70 leading-relaxed">

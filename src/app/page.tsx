@@ -466,13 +466,13 @@ export default async function HomePage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mb-12 text-center">
             <span className="inline-flex items-center gap-1.5 rounded-full border border-brand-gold/30 bg-brand-gold/10 px-3 py-1 text-xs font-semibold text-brand-gold mb-4">
-              Simple Process
+              Lock Repair Satwa · Simple Process
             </span>
             <h2
               id="how-it-works-heading"
               className="font-heading text-3xl font-bold tracking-tight text-foreground sm:text-4xl"
             >
-              How It Works
+              How Our Dubai Locksmith Service Works
             </h2>
             <p className="mt-4 text-lg text-muted-foreground max-w-xl mx-auto">
               Three steps from stranded to sorted. No towing, no dealership, no waiting days.
@@ -1123,13 +1123,13 @@ export default async function HomePage() {
           {/* Section header */}
           <div className="mb-12 text-center">
             <span className="inline-flex items-center gap-1.5 rounded-full border border-brand-gold/30 bg-brand-gold/10 px-3 py-1 text-xs font-semibold text-brand-gold mb-4">
-              Questions Answered
+              Lock Repair Satwa · Dubai FAQ
             </span>
             <h2
               id="faq-heading"
               className="font-heading text-3xl font-bold tracking-tight text-foreground sm:text-4xl"
             >
-              Frequently Asked Questions
+              Locksmith FAQs — Dubai Prices, Response Times &amp; Coverage
             </h2>
             <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto page-description">
               Everything you need to know about key cutting, car key programming, lock repair, and locksmith services in Dubai — prices, response times, locations, and more.

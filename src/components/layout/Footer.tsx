@@ -125,7 +125,10 @@ export async function Footer() {
             </Link>
 
             <p className="mt-4 text-sm leading-relaxed text-white/70">
-              Professional locksmith at D90, Al Bada&apos;a, Dubai, serving all Dubai areas 24/7.
+              Key maker &amp; key shop at D90, Al Bada&apos;a, Dubai — the nearest locksmith to Al Satwa Road. Car key duplication, programming, emergency unlock and door lock repair across all 24+ Dubai areas. Available 24/7.
+            </p>
+            <p className="mt-2 text-xs text-white/40 leading-relaxed">
+              Key Maker Near Me · Key Shop Satwa · Car Key Service Dubai · 24/7 Mobile Locksmith
             </p>
 
             {/* NAP */}

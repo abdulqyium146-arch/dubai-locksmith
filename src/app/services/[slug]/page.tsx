@@ -205,9 +205,14 @@ export default async function ServicePage({
                 >
                   {service.icon}
                 </div>
-                <h1 className="font-heading text-3xl font-extrabold leading-tight text-white sm:text-4xl lg:text-5xl">
-                  {service.title}
-                </h1>
+                <div>
+                  <h1 className="font-heading text-3xl font-extrabold leading-tight text-white sm:text-4xl lg:text-5xl">
+                    {service.title}
+                  </h1>
+                  <p className="mt-1 text-xs font-semibold uppercase tracking-widest text-brand-gold/70">
+                    Lock Repair Satwa · Dubai, UAE
+                  </p>
+                </div>
               </div>
 
               {/* Meta badges: price + turnaround */}
