@@ -52,7 +52,7 @@ export const metadata: Metadata = {
     url: `${SITE_URL}/about`,
     siteName: BUSINESS_NAME,
     title: `About ${BUSINESS_NAME} | Professional Locksmith in Dubai`,
-    description: `${BUSINESS_NAME} — professional locksmith based at D90, Al Bada'a, Dubai. Open daily 24/7, 12 services, 15+ areas covered. Rated 4.7★ on Google.`,
+    description: `${BUSINESS_NAME} — professional locksmith based at D90, Al Bada'a, Dubai. Open daily 24/7, 32 services, 24+ areas covered. Rated 4.7★ on Google.`,
     images: [{ url: DEFAULT_OG_IMAGE, width: 1200, height: 630, alt: `About ${BUSINESS_NAME}` }],
   },
 }
@@ -142,10 +142,9 @@ const WHY_CHOOSE_US = [
   },
   {
     icon: Award,
-    title: 'Certified & Insured Technicians',
+    title: 'UAE Trade Licensed Business',
     description:
-      // TODO: Update with actual certification details from business owner (e.g., ALOA, UAE trade licence number)
-      'All our technicians are certified automotive locksmiths with UAE trade licences. We carry professional indemnity insurance and every job is documented with a receipt.',
+      'Lock Repair Satwa operates under a valid UAE trade licence. Every technician carries company ID on every visit and every completed job is confirmed with a receipt.',
   },
   {
     icon: Star,
@@ -210,36 +209,29 @@ export default function AboutPage() {
           </h2>
 
           <div className="mt-8 space-y-5 text-base leading-relaxed text-muted-foreground">
-            {/* TODO: Business owner to review and personalise this section with:
-                - Actual founding year
-                - Owner name (if comfortable sharing)
-                - Specific personal story about starting the business
-                - Any particular challenges that inspired the service
-                - Specific certifications or training background
-            */}
             <p>
-              Lock Repair Satwa was founded by a professional locksmith who had spent years
-              watching Dubai residents face an unfair choice: either wait 3–7 days and pay
-              AED&nbsp;800–1,500 at a franchised dealership, or rely on unlicensed roadside
-              operators with no accountability, no insurance and no guarantee of quality work.
+              Lock Repair Satwa is a professional locksmith and key shop based at D90, Al Bada&apos;a,
+              Dubai — the neighbourhood immediately adjacent to Al Satwa Road. We built the business
+              around the three things Dubai residents consistently tell us they need most:{' '}
+              <strong>speed</strong>, <strong>reliability</strong>, and <strong>honest, upfront pricing</strong>.
             </p>
             <p>
-              The solution was obvious: a fully mobile, fully certified locksmith service that brought
-              professional-grade key-cutting, lock repair and programming equipment directly to customers
-              anywhere in Dubai — at transparent prices, during our daily operating hours. We built the business
-              around the three things Dubai residents told us they valued most: <strong>speed</strong>,{' '}
-              <strong>reliability</strong> and <strong>honest pricing</strong>.
+              Dubai residents face a frustrating choice when a key breaks or a lock fails: wait days
+              and pay premium prices at a franchised dealership, or take a chance on an unaccountable
+              roadside operator. Lock Repair Satwa exists to be the professional third option — a
+              fully equipped mobile service that brings the workshop to you, at transparent prices,
+              across all Dubai areas.
             </p>
             <p>
-              Today, Lock Repair Satwa (D90, Al Bada&apos;a, Dubai) operates across all major Dubai
-              areas. Our technicians collectively cover thousands of service calls per year — from
-              basic key duplication for a Toyota Corolla to complex smart key programming for a
-              Range Rover Vogue, and everything in between. Call us on +971 52 642 6161.
+              Our physical shop at D90, Al Bada&apos;a is open daily from 7:00 AM to 11:30 PM for
+              walk-in key cutting, lock repair and hardware sales. Our mobile technicians extend
+              that service 24/7 across every Dubai community — from Downtown and Dubai Marina to
+              International City and Motor City. Call us on +971 52 642 6161.
             </p>
             <p>
-              Every job we complete earns us the right to be called back the next time that
-              customer&apos;s family or friends needs a locksmith. That&apos;s the reputation we
-              work to protect on every single call-out.
+              Every job we complete earns the right to be called back the next time that customer —
+              or their family or neighbours — needs a locksmith. That is the reputation we work to
+              protect on every call-out.
             </p>
           </div>
         </div>
@@ -339,41 +331,36 @@ export default function AboutPage() {
             id="team-heading"
             className="font-heading text-3xl font-bold tracking-tight text-foreground sm:text-4xl"
           >
-            Certified Technicians Who Know Dubai
+            Technicians Who Know Dubai
           </h2>
 
           <div className="mt-8 space-y-5 text-base leading-relaxed text-muted-foreground">
-            {/* TODO: Business owner to provide:
-                - Number of technicians on the team
-                - Names and photos of key team members (with their permission)
-                - Specific certifications held (e.g., ALOA, IMobileLocksmith, brand-specific training)
-                - Languages spoken
-                - Years of experience per technician
-            */}
             <p>
-              Every Lock Repair Satwa technician undergoes training in locksmithing
-              before being deployed on customer calls. Our team covers a combined total of over
-              ten years of UAE-market locksmith experience, including specific training
-              on the European, Japanese, American and Korean vehicle brands most common in Dubai.
+              Every Lock Repair Satwa technician is trained on the lock systems, key types and
+              vehicle brands most common in Dubai before being deployed on customer calls. Our
+              team covers the full range of automotive key programming — from Toyota and Nissan
+              through to BMW, Mercedes-Benz, Land Rover and other European makes — using
+              professional OBD diagnostic equipment.
             </p>
             <p>
               We only work with technicians who hold valid UAE employment documentation and who
               carry professional identification on every call-out. This is both a legal and
-              ethical requirement — you have the right to know who is working on your vehicle.
+              ethical requirement — you have the right to know who is working on your vehicle or
+              your property.
             </p>
             <p>
-              Our technicians carry photo ID and our company name cards on every visit. If any
-              technician cannot produce company identification on request, please call our main
-              line immediately.
+              Every technician carries company photo ID and name cards on every visit. If any
+              technician arrives without company identification, please call our main line on
+              +971 52 642 6161 immediately before allowing any work to proceed.
             </p>
           </div>
 
           {/* Trust signals */}
           <div className="mt-10 grid gap-4 sm:grid-cols-3">
             {[
-              { value: '10+', label: 'Years UAE Experience' },
               { value: '50+', label: 'Car Brands Covered' },
-              { value: '24/7', label: 'Daily Operating Hours' },
+              { value: '24/7', label: 'Mobile Service Hours' },
+              { value: '4.7★', label: 'Google Rating' },
             ].map(({ value, label }) => (
               <div
                 key={label}
@@ -469,14 +456,15 @@ export default function AboutPage() {
                 We Cover All of Dubai
               </h2>
               <p className="mt-5 text-base leading-relaxed text-muted-foreground">
-                Our mobile service area covers all Dubai municipalities and free zones. From our
-                Al Bada&apos;a base, we reach most central Dubai areas in 20–35 minutes and
-                outlying areas such as Silicon Oasis, International City and Motor City in
-                40–60 minutes. We do not charge extra for distance within Dubai city limits.
+                Our mobile service covers all Dubai municipalities and free zones. From our
+                Al Bada&apos;a base we reach most central Dubai areas in 20–35 minutes, and
+                outlying communities such as Silicon Oasis, International City and Motor City
+                in 40–60 minutes. We do not charge extra for distance within Dubai city limits.
               </p>
               <p className="mt-4 text-base leading-relaxed text-muted-foreground">
-                We maintain a presence in Abu Dhabi and Sharjah for emergency requests but our
-                primary and fastest coverage is within the Dubai emirate boundary.
+                Our primary and fastest coverage is within the Dubai emirate boundary — call us
+                on +971 52 642 6161 and we will confirm arrival time for your specific location
+                before you commit.
               </p>
 
               <div className="mt-8">
@@ -492,7 +480,7 @@ export default function AboutPage() {
             {/* Right: location list */}
             <div>
               <p className="text-sm font-semibold text-muted-foreground uppercase tracking-wide mb-4">
-                15 Key Service Areas
+                24 Service Areas Covered
               </p>
               <ul className="grid gap-2 sm:grid-cols-2" role="list">
                 {locations.map((location) => (
@@ -552,7 +540,7 @@ export default function AboutPage() {
       {/* ── CTA ───────────────────────────────────────────────────────────────── */}
       <CtaSection
         heading="Ready to Work with Dubai's Professional Locksmith?"
-        subtext={`Call ${BUSINESS_NAME} now for an instant quote. D90, Al Bada'a, Dubai. No call-out fee, upfront pricing, certified technicians — open daily 24/7 across all Dubai areas.`}
+        subtext={`Call ${BUSINESS_NAME} now for an instant quote. D90, Al Bada'a, Dubai. No call-out fee, upfront pricing, trained technicians — open daily 24/7 across all Dubai areas.`}
       />
     </>
   )

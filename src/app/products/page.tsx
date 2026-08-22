@@ -169,7 +169,7 @@ export default function ProductsPage() {
               <p className="text-base leading-relaxed text-white/90">
                 Lock Repair Satwa supplies and installs a complete range of security products across Dubai —
                 from deadbolt locks and high-security cylinders to smart door locks, electronic safes and
-                commercial door hardware. Every product we sell is also installed by our certified
+                commercial door hardware. Every product we sell is also installed by our trained
                 technicians. Call{' '}
                 <a href={PHONE_HREF} className="font-semibold text-brand-gold hover:underline">
                   {PHONE_DISPLAY}

@@ -168,8 +168,8 @@ export default function LocationsPage() {
               </p>
               <p className="text-base leading-relaxed text-white/90">
                 Lock Repair Satwa (D90, Al Bada&apos;a, Dubai) is a professional mobile locksmith
-                covering 15 major areas across the emirate. We reach most central Dubai locations in
-                15–30 minutes and outer areas in 30–60 minutes. All 12 services — car key duplication,
+                covering 24+ areas across the emirate. We reach most central Dubai locations in
+                20–35 minutes and outer areas in 40–60 minutes. All services — car key duplication,
                 door lock repair, smart key programming, transponder keys, car battery replacement and
                 more — are available at every listed location, daily 24/7. Call +971 52 642 6161.
               </p>
@@ -468,7 +468,7 @@ export default function LocationsPage() {
       {/* ── 8. Final CTA ─────────────────────────────────────────────────────── */}
       <CtaSection
         heading="Need a Locksmith in Dubai? We Come to You."
-        subtext={`${BUSINESS_NAME} (D90, Al Bada'a, Dubai) covers all 15 areas listed above. One call gets you a certified technician with the right equipment for your car and location — open daily 24/7, 7 days a week.`}
+        subtext={`${BUSINESS_NAME} (D90, Al Bada'a, Dubai) covers all 24+ areas listed above. One call gets you a trained technician with the right equipment for your car and location — open daily 24/7, 7 days a week.`}
       />
     </>
   )

@@ -62,7 +62,7 @@ const FAQ_CATEGORIES = [
       },
       {
         q: 'Is Lock Repair Satwa licensed to operate in Dubai?',
-        a: 'Yes. Lock Repair Satwa operates under a valid UAE trade licence. Our technicians are certified for automotive key programming and security hardware installation. For emergency lockout jobs, we may request proof of vehicle ownership or residency — standard security practice to protect our customers.',
+        a: 'Yes. Lock Repair Satwa operates under a valid UAE trade licence. Our technicians are trained in automotive key programming and security hardware installation. For emergency lockout jobs, we may request proof of vehicle ownership or residency — standard security practice to protect our customers.',
       },
     ],
   },

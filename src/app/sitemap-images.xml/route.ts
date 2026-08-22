@@ -96,7 +96,7 @@ const IMAGE_MAP: PageImages[] = [
       {
         loc: `${SITE_URL}/images/nissan-car-key-replacement-satwa-dubai.webp`,
         title: 'Nissan Car Key Replacement Satwa Dubai — Lock Repair Satwa Auto Locksmith',
-        caption: 'Nissan car key replacement completed in Satwa, Dubai by Lock Repair Satwa certified auto locksmith. Car key replacement from AED 300.',
+        caption: 'Nissan car key replacement completed in Satwa, Dubai by Lock Repair Satwa professional auto locksmith. Car key replacement from AED 300.',
         geo: GEO,
       },
       {
@@ -121,7 +121,7 @@ const IMAGE_MAP: PageImages[] = [
       {
         loc: `${SITE_URL}/images/lexus-smart-key-programming-dubai-car-locksmith.jpg.webp`,
         title: 'Lexus Smart Key Programming Dubai — Lock Repair Satwa Car Locksmith',
-        caption: 'Lexus smart key programming in Dubai by Lock Repair Satwa certified car locksmith. Remote key programming from AED 400.',
+        caption: 'Lexus smart key programming in Dubai by Lock Repair Satwa professional car locksmith. Remote key programming from AED 400.',
         geo: GEO,
       },
     ],
@@ -258,7 +258,7 @@ const IMAGE_MAP: PageImages[] = [
       {
         loc: `${SITE_URL}/images/electronic-door-lock-repair-al-bada-dubai.webp`,
         title: "Electronic Door Lock Repair Al Bada'a Dubai — Lock Repair Satwa",
-        caption: "Electronic door lock repair service in Al Bada'a, Dubai by Lock Repair Satwa certified technician.",
+        caption: "Electronic door lock repair service in Al Bada'a, Dubai by Lock Repair Satwa professional technician.",
         geo: GEO,
       },
     ],

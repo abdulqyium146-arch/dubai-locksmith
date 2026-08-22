@@ -245,7 +245,7 @@ const FAQ_CATEGORIES = [
     faqs: [
       {
         q: 'Are you a licensed locksmith in Dubai?',
-        a: 'Yes. Lock Repair Satwa operates under a valid UAE trade licence. Our technicians are certified for automotive key programming and security hardware installation. For emergency jobs, we may ask for proof of vehicle ownership or residency — standard practice to protect our customers.',
+        a: 'Yes. Lock Repair Satwa operates under a valid UAE trade licence. Our technicians are trained in automotive key programming and security hardware installation. For emergency jobs, we may ask for proof of vehicle ownership or residency — standard practice to protect our customers.',
       },
       {
         q: 'Do you charge extra for emergency or night-time calls?',
@@ -296,7 +296,7 @@ export default async function HomePage() {
       step: 2,
       icon: Wrench,
       title: 'We Come to You',
-      description: "A certified mobile technician is dispatched immediately from our Al Bada'a base or nearest available unit. We reach most Dubai locations in 20–45 minutes — no need to tow your car or visit a workshop.",
+      description: "A trained mobile technician is dispatched immediately from our Al Bada'a base or nearest available unit. We reach most Dubai locations in 20–45 minutes — no need to tow your car or visit a workshop.",
     },
     {
       step: 3,
@@ -307,7 +307,7 @@ export default async function HomePage() {
   ]
 
   const DIFFERENTIATORS = [
-    { title: '10+ Years Experience', description: 'Certified automotive locksmiths with over a decade of hands-on UAE market experience.' },
+    { title: 'Physical Key Shop in Al Bada\'a', description: 'Walk in to our shop at D90, Al Bada\'a — open daily 7 AM to 11:30 PM — or call for mobile service anywhere in Dubai.' },
     { title: 'Daily Service 7 AM – 11:30 PM, 7 Days a Week', description: 'Open every day from 7:00 AM to 11:30 PM including weekends and public holidays.' },
     { title: '100% Mobile — We Come to You', description: 'No workshop visit needed. Our technicians carry all equipment directly to your location.' },
     { title: 'Dubai-Based & Dubai-Focused', description: "Headquartered in Al Bada'a, Dubai — we know every area and respond fast." },
@@ -386,7 +386,7 @@ export default async function HomePage() {
           {
             position: 2,
             name: 'We Come to You',
-            text: "A certified mobile technician is dispatched from our Al Bada'a base. We reach most Dubai areas in 20–45 minutes — no towing, no workshop visit required.",
+            text: "A trained mobile technician is dispatched from our Al Bada'a base. We reach most Dubai areas in 20–45 minutes — no towing, no workshop visit required.",
           },
           {
             position: 3,
@@ -1145,7 +1145,7 @@ export default async function HomePage() {
                 Lock Repair Satwa is a professional locksmith based at D90, Al Bada&apos;a, Dubai. We serve all major Dubai areas with expert lock repair, car key duplication, and security solutions — without the days of waiting and premium markup that franchised dealerships charge. Rated 4.7★ on Google by our customers.
               </p>
               <p className="mt-4 text-base leading-relaxed text-white/75">
-                Our certified technicians carry professional key-cutting machines, OBD programming equipment and a comprehensive stock of key blanks for 50+ vehicle brands. We cover every type of locksmith service — from a basic spare key to full smart key programming for the latest European luxury vehicles — all performed at your location.
+                Our technicians carry professional key-cutting machines, OBD programming equipment and a comprehensive stock of key blanks for 50+ vehicle brands. We cover every type of locksmith service — from a basic spare key to full smart key programming for the latest European luxury vehicles — all performed at your location.
               </p>
 
               {/* Brand tags */}

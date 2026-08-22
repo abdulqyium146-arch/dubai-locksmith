@@ -213,7 +213,7 @@ A: We do not add emergency surcharges for night calls on most standard services.
 A: Cash, credit/debit card, and bank transfer (for commercial clients). Payment is taken after the job is complete and the customer is satisfied.
 
 **Q: Are you licensed to operate as a locksmith in Dubai?**
-A: Yes. Lock Repair Satwa operates with full trade licensing in Dubai. We are certified technicians for automotive key programming and lock installation.
+A: Yes. Lock Repair Satwa operates under a valid UAE trade licence. Our technicians are trained in automotive key programming and lock installation.
 
 **Q: Can you copy a key if I don't have the original?**
 A: For door locks: sometimes — we can cut a key from the lock code or by decoding the lock pins. For cars: if you have lost all keys, we use OBD diagnostic methods to generate a key from the vehicle's ECU data. This is a replacement service (AED 400–900) rather than a duplication.

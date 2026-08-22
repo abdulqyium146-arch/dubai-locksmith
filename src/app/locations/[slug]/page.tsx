@@ -443,7 +443,7 @@ export default async function LocationPage({
               <ul className="space-y-3">
                 <li className="flex items-start gap-3">
                   <CheckCircle2 className="h-4 w-4 text-brand-gold shrink-0 mt-0.5" aria-hidden="true" />
-                  <span className="text-sm text-white/80">All 12 services available in {location.name}</span>
+                  <span className="text-sm text-white/80">All services available in {location.name}</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle2 className="h-4 w-4 text-brand-gold shrink-0 mt-0.5" aria-hidden="true" />
@@ -585,7 +585,7 @@ export default async function LocationPage({
                 All Services Available in {location.name}
               </h2>
               <p className="mt-2 text-sm text-muted-foreground">
-                Because we are a mobile service, every one of our 12 services is available
+                Because we are a mobile service, every locksmith service we offer is available
                 at your {location.name} location — no restrictions.
               </p>
             </div>
@@ -938,7 +938,7 @@ export default async function LocationPage({
       {/* CTA #3 — contained within CtaSection */}
       <CtaSection
         heading={`Need a Locksmith in ${location.name}? Call Now.`}
-        subtext={`${BUSINESS_NAME} reaches ${location.name} in ${location.responseTime}. Upfront pricing, certified technician, all key types and lock types covered. Open daily 24/7 including UAE public holidays.`}
+        subtext={`${BUSINESS_NAME} reaches ${location.name} in ${location.responseTime}. Upfront pricing, trained technician, all key types and lock types covered. Open daily 24/7 including UAE public holidays.`}
       />
     </>
   )

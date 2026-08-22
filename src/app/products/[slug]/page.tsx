@@ -416,7 +416,7 @@ export default async function ProductPage({
       {/* ── Final CTA ─────────────────────────────────────────────────────────── */}
       <CtaSection
         heading={`Order ${product.title} in Dubai — Supply & Installation`}
-        subtext={`${BUSINESS_NAME} (D90, Al Bada'a, Dubai) supplies and installs ${product.title} across all Dubai areas. Call or WhatsApp for an upfront price — no hidden charges, certified installation, 7 days a week.`}
+        subtext={`${BUSINESS_NAME} (D90, Al Bada'a, Dubai) supplies and installs ${product.title} across all Dubai areas. Call or WhatsApp for an upfront price — no hidden charges, professional installation, 7 days a week.`}
       />
 
       {/* ── Related Products ──────────────────────────────────────────────────── */}
