@@ -693,7 +693,7 @@ export default async function HomePage() {
               Recent Locksmith Projects in Dubai
             </h2>
             <p className="mt-4 text-base text-muted-foreground max-w-xl mx-auto">
-              Photos from real completed jobs — safe box openings, smart lock installations, car key replacements, and door lock repairs across Dubai.
+              Photos from real completed jobs — Mercedes smart key replacements, Eufy smart lock installations, electronic door lock repairs, safe box openings, car key programming, and door lock repairs across Dubai.
             </p>
           </div>
 
@@ -862,6 +862,146 @@ export default async function HomePage() {
                 </p>
                 <p className="mt-1 text-sm font-semibold text-white leading-snug">
                   Door Lock Repair &amp; Replacement
+                </p>
+              </div>
+            </Link>
+
+            {/* Job 7 — Mercedes-Benz Smart Key Replacement */}
+            <Link
+              href="/services/car-key-replacement"
+              className="group relative overflow-hidden rounded-2xl border border-border bg-card shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+              aria-label="Mercedes-Benz Smart Key Replacement Dubai"
+            >
+              <div className="aspect-[3/4] overflow-hidden bg-muted">
+                <Image
+                  src="/images/mercedes-benz-smart-key-replacement-dubai.webp"
+                  alt="Mercedes-Benz smart key replacement Dubai — new Mercedes proximity key programmed on-site by Lock Repair Satwa auto locksmith, Al Bada'a"
+                  width={400}
+                  height={533}
+                  loading="lazy"
+                  sizes="(max-width: 640px) calc(50vw - 20px), (max-width: 1024px) calc(33vw - 24px), 380px"
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+              </div>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent pointer-events-none" />
+              <div className="absolute bottom-0 left-0 right-0 p-3 sm:p-4">
+                <p className="text-[10px] font-bold text-brand-gold uppercase tracking-widest">
+                  Dubai, UAE
+                </p>
+                <p className="mt-1 text-sm font-semibold text-white leading-snug">
+                  Mercedes-Benz Smart Key Replacement
+                </p>
+              </div>
+            </Link>
+
+            {/* Job 8 — Mercedes Car Key Cutting & Duplication */}
+            <Link
+              href="/services/car-key-duplication"
+              className="group relative overflow-hidden rounded-2xl border border-border bg-card shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+              aria-label="Mercedes Car Key Cutting and Duplication Dubai"
+            >
+              <div className="aspect-[3/4] overflow-hidden bg-muted">
+                <Image
+                  src="/images/mercedes-car-key-cutting-duplication-dubai.webp"
+                  alt="Mercedes car key cutting and duplication Dubai — Mercedes blade key precision-cut and programmed by Lock Repair Satwa mobile locksmith"
+                  width={400}
+                  height={533}
+                  loading="lazy"
+                  sizes="(max-width: 640px) calc(50vw - 20px), (max-width: 1024px) calc(33vw - 24px), 380px"
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+              </div>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent pointer-events-none" />
+              <div className="absolute bottom-0 left-0 right-0 p-3 sm:p-4">
+                <p className="text-[10px] font-bold text-brand-gold uppercase tracking-widest">
+                  Dubai, UAE
+                </p>
+                <p className="mt-1 text-sm font-semibold text-white leading-snug">
+                  Mercedes Key Cutting &amp; Duplication
+                </p>
+              </div>
+            </Link>
+
+            {/* Job 9 — Luxury Car Key Programming */}
+            <Link
+              href="/services/remote-smart-key-programming"
+              className="group relative overflow-hidden rounded-2xl border border-border bg-card shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+              aria-label="Luxury Car Key Programming Service Dubai"
+            >
+              <div className="aspect-[3/4] overflow-hidden bg-muted">
+                <Image
+                  src="/images/luxury-car-key-programming-service-dubai.webp"
+                  alt="Luxury car key programming service Dubai — premium European car smart key programmed on-site by Lock Repair Satwa OBD specialist"
+                  width={400}
+                  height={533}
+                  loading="lazy"
+                  sizes="(max-width: 640px) calc(50vw - 20px), (max-width: 1024px) calc(33vw - 24px), 380px"
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+              </div>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent pointer-events-none" />
+              <div className="absolute bottom-0 left-0 right-0 p-3 sm:p-4">
+                <p className="text-[10px] font-bold text-brand-gold uppercase tracking-widest">
+                  Dubai, UAE
+                </p>
+                <p className="mt-1 text-sm font-semibold text-white leading-snug">
+                  Luxury Car Key Programming
+                </p>
+              </div>
+            </Link>
+
+            {/* Job 10 — Eufy Smart Lock Installation */}
+            <Link
+              href="/services/smart-door-locks"
+              className="group relative overflow-hidden rounded-2xl border border-border bg-card shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+              aria-label="Eufy Smart Lock Installation Al Satwa Dubai"
+            >
+              <div className="aspect-[3/4] overflow-hidden bg-muted">
+                <Image
+                  src="/images/eufy-smart-lock-installation-al-satwa-dubai.webp"
+                  alt="Eufy smart lock installation Al Satwa Dubai — Eufy video doorbell smart lock fitted on apartment door by Lock Repair Satwa near Al Satwa Road"
+                  width={400}
+                  height={533}
+                  loading="lazy"
+                  sizes="(max-width: 640px) calc(50vw - 20px), (max-width: 1024px) calc(33vw - 24px), 380px"
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+              </div>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent pointer-events-none" />
+              <div className="absolute bottom-0 left-0 right-0 p-3 sm:p-4">
+                <p className="text-[10px] font-bold text-brand-gold uppercase tracking-widest">
+                  Al Satwa, Dubai
+                </p>
+                <p className="mt-1 text-sm font-semibold text-white leading-snug">
+                  Eufy Smart Lock Installation
+                </p>
+              </div>
+            </Link>
+
+            {/* Job 11 — Electronic Door Lock Repair */}
+            <Link
+              href="/services/lock-repair"
+              className="group relative overflow-hidden rounded-2xl border border-border bg-card shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+              aria-label="Electronic Door Lock Repair Al Bada'a Dubai"
+            >
+              <div className="aspect-[3/4] overflow-hidden bg-muted">
+                <Image
+                  src="/images/electronic-door-lock-repair-al-bada-dubai.webp"
+                  alt="Electronic door lock repair Al Bada'a Dubai — digital smart lock fault-diagnosed and repaired by Lock Repair Satwa technician at D90, Al Bada'a"
+                  width={400}
+                  height={533}
+                  loading="lazy"
+                  sizes="(max-width: 640px) calc(50vw - 20px), (max-width: 1024px) calc(33vw - 24px), 380px"
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+              </div>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent pointer-events-none" />
+              <div className="absolute bottom-0 left-0 right-0 p-3 sm:p-4">
+                <p className="text-[10px] font-bold text-brand-gold uppercase tracking-widest">
+                  Al Bada&apos;a, Dubai
+                </p>
+                <p className="mt-1 text-sm font-semibold text-white leading-snug">
+                  Electronic Door Lock Repair
                 </p>
               </div>
             </Link>
