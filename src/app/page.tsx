@@ -363,6 +363,7 @@ export default async function HomePage() {
         breadcrumbs={[{ name: 'Home', url: SITE_URL }]}
         primaryImageUrl={`${SITE_URL}/images/shop/locksmith-shop-satwa-al-badaa-dubai.webp`}
         primaryImageAlt="Lock Repair Satwa key shop exterior in Al Bada'a, nearest key maker to Al Satwa Road, Dubai"
+        dateModified={new Date().toISOString().split('T')[0]}
         images={[
           { url: `${SITE_URL}/images/shop/key-duplication-display-for-sale-satwa-dubai.webp`, caption: 'Key duplication display at Lock Repair Satwa key shop, Satwa Dubai' },
           { url: `${SITE_URL}/images/services/car-remote-key-blanks-locksmith-shop-dubai.webp`, caption: 'Car remote key blanks at Lock Repair Satwa locksmith shop, Dubai' },
@@ -458,7 +459,68 @@ export default async function HomePage() {
         </div>
       </section>
 
-      {/* ── 3. How It Works ─────────────────────────────────────────────────── */}
+      {/* ── 3. Price Guide ──────────────────────────────────────────────────── */}
+      <section
+        aria-labelledby="prices-heading"
+        className="py-16 sm:py-20 bg-muted/40 border-y border-border cv-auto"
+      >
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="mb-10 text-center">
+            <span className="inline-flex items-center gap-1.5 rounded-full border border-brand-gold/30 bg-brand-gold/10 px-3 py-1 text-xs font-semibold text-brand-gold mb-4">
+              Transparent Pricing
+            </span>
+            <h2
+              id="prices-heading"
+              className="font-heading text-3xl font-bold tracking-tight text-foreground sm:text-4xl"
+            >
+              Dubai Locksmith Price Guide 2025
+            </h2>
+            <p className="mt-4 text-base text-muted-foreground max-w-2xl mx-auto">
+              All prices confirmed upfront before work starts. No hidden fees. Prices in AED — inclusive of labour, parts, and on-site service across Dubai.
+            </p>
+          </div>
+
+          <div className="overflow-hidden rounded-2xl border border-border bg-card shadow-sm">
+            <table className="w-full text-sm">
+              <thead>
+                <tr className="border-b border-border bg-muted/60">
+                  <th className="px-5 py-3.5 text-left font-semibold text-foreground">Service</th>
+                  <th className="px-5 py-3.5 text-right font-semibold text-foreground">Price (AED)</th>
+                  <th className="hidden sm:table-cell px-5 py-3.5 text-left font-semibold text-foreground">Notes</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-border">
+                {[
+                  { service: 'Standard door key duplication', price: '50–150', note: 'In-shop, ready in 5–10 min' },
+                  { service: 'Car key duplication (with chip)', price: '150–350', note: 'Transponder cloned + tested' },
+                  { service: 'Car key replacement (all keys lost)', price: '400–900', note: 'OBD programming, no original needed' },
+                  { service: 'Remote / smart key programming', price: '300–700', note: 'All brands, on-site' },
+                  { service: 'Flip key replacement', price: '250–550', note: 'Cut + programmed' },
+                  { service: 'Emergency car unlock', price: '150–350', note: 'No damage, 24/7' },
+                  { service: 'Door lock body change (metal door)', price: '250–500', note: 'New lock supplied + fitted' },
+                  { service: 'Door latch repair (wooden door)', price: '150–300', note: 'Same-day mobile visit' },
+                  { service: 'Smart door lock installation', price: '350–1,200', note: 'Fingerprint/keypad/RFID' },
+                  { service: 'Safe box opening', price: '200–500', note: 'Non-destructive where possible' },
+                  { service: 'Parking remote / access card copy', price: '50–200', note: '125kHz RFID compatible' },
+                  { service: 'Car battery replacement', price: '250–600', note: 'On-site, all makes' },
+                ].map(({ service, price, note }) => (
+                  <tr key={service} className="hover:bg-muted/30 transition-colors">
+                    <td className="px-5 py-3.5 font-medium text-foreground">{service}</td>
+                    <td className="px-5 py-3.5 text-right font-semibold text-brand-gold whitespace-nowrap">{price}</td>
+                    <td className="hidden sm:table-cell px-5 py-3.5 text-muted-foreground">{note}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+
+          <p className="mt-5 text-center text-xs text-muted-foreground">
+            Prices vary by car make/model and lock type. Call <a href={PHONE_HREF} className="font-semibold text-brand-gold hover:underline">{PHONE_DISPLAY}</a> for a free, instant quote.
+          </p>
+        </div>
+      </section>
+
+      {/* ── 4. How It Works ─────────────────────────────────────────────────── */}
       <section
         aria-labelledby="how-it-works-heading"
         className="py-16 sm:py-20 bg-muted/40 border-y border-border cv-auto"
@@ -1009,7 +1071,7 @@ export default async function HomePage() {
         </div>
       </section>
 
-      {/* ── 4. Locations Section ────────────────────────────────────────────── */}
+      {/* ── 5. Locations Section ────────────────────────────────────────────── */}
       <section
         aria-labelledby="locations-heading"
         className="py-16 sm:py-20 bg-background cv-auto"
@@ -1037,8 +1099,20 @@ export default async function HomePage() {
             ))}
           </div>
 
+          {/* All service areas — crawlable text for Google local SEO */}
+          <div className="mt-10 rounded-xl border border-border bg-muted/30 px-5 py-4 text-center">
+            <p className="text-xs font-semibold text-muted-foreground uppercase tracking-widest mb-2">All 24+ Areas Covered</p>
+            <p className="text-sm text-muted-foreground leading-relaxed">
+              Al Satwa · Al Bada&apos;a · Downtown Dubai · Business Bay · DIFC · Dubai Marina · JBR ·
+              Jumeirah Lakes Towers · Jumeirah Village Circle · Jumeirah Village Triangle ·
+              Al Barsha · Al Barsha South · Dubai Hills Estate · Palm Jumeirah · Deira ·
+              Bur Dubai · Al Quoz · Motor City · Mirdif · Dubai Silicon Oasis ·
+              Discovery Gardens · International City · Jebel Ali Village · Al Khawaneej
+            </p>
+          </div>
+
           {/* View all locations */}
-          <div className="mt-10 text-center">
+          <div className="mt-6 text-center">
             <Button variant="outline" size="lg" asChild>
               <Link href="/locations">
                 {`View All ${locations.length} Service Areas`}
@@ -1049,7 +1123,7 @@ export default async function HomePage() {
         </div>
       </section>
 
-      {/* ── 5. About / E-E-A-T Section ──────────────────────────────────────── */}
+      {/* ── 6. About / E-E-A-T Section ──────────────────────────────────────── */}
       <section
         aria-labelledby="about-heading"
         className="py-16 sm:py-20 bg-brand-navy text-white cv-auto"
