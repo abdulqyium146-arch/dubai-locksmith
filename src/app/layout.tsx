@@ -157,6 +157,8 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <link rel="manifest" href="/manifest.webmanifest" />
         <meta name="telephone" content={PHONE_DISPLAY} />
         {/* hreflang handled per-page via metadata.alternates — no static tags needed */}
+        {/* Sitemap discovery — supplementary to robots.txt, read by all crawlers */}
+        <link rel="sitemap" type="application/xml" href="/sitemap-index.xml" />
       </head>
       <body suppressHydrationWarning className="min-h-screen bg-background font-sans text-foreground">
         <>

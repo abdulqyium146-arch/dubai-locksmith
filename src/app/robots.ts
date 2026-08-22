@@ -83,7 +83,7 @@ export default function robots(): MetadataRoute.Robots {
         disallow: SHARED_DISALLOW,
       },
     ],
-    sitemap: `${SITE_URL}/sitemap-index.xml`,
+    sitemap: [`${SITE_URL}/sitemap-index.xml`, `${SITE_URL}/sitemap.xml`],
     host: SITE_URL,
   }
 }

@@ -227,6 +227,43 @@ const IMAGE_MAP: PageImages[] = [
     ],
   },
 
+  // ── Homepage — Recent Work (Jobs 7-11 new images) ──────────────────────────
+  {
+    pageUrl: SITE_URL,
+    images: [
+      {
+        loc: `${SITE_URL}/images/mercedes-benz-smart-key-replacement-dubai.webp`,
+        title: 'Mercedes-Benz Smart Key Replacement Dubai — Lock Repair Satwa',
+        caption: 'Mercedes-Benz smart key replacement completed in Dubai by Lock Repair Satwa — OEM-grade smart key programmed on-site.',
+        geo: GEO,
+      },
+      {
+        loc: `${SITE_URL}/images/mercedes-car-key-cutting-duplication-dubai.webp`,
+        title: 'Mercedes Car Key Cutting and Duplication Dubai — Lock Repair Satwa',
+        caption: 'Mercedes car key cutting and duplication service in Dubai by Lock Repair Satwa. Precision key cutting from AED 150.',
+        geo: GEO,
+      },
+      {
+        loc: `${SITE_URL}/images/luxury-car-key-programming-service-dubai.webp`,
+        title: 'Luxury Car Key Programming Service Dubai — Lock Repair Satwa',
+        caption: 'Luxury car key programming service in Dubai — Lock Repair Satwa programs all luxury vehicle smart keys and transponders.',
+        geo: GEO,
+      },
+      {
+        loc: `${SITE_URL}/images/eufy-smart-lock-installation-al-satwa-dubai.webp`,
+        title: 'Eufy Smart Lock Installation Al Satwa Dubai — Lock Repair Satwa',
+        caption: 'Eufy smart door lock installation in Al Satwa, Dubai by Lock Repair Satwa. Smart lock installation from AED 350.',
+        geo: "Al Satwa, Dubai, UAE",
+      },
+      {
+        loc: `${SITE_URL}/images/electronic-door-lock-repair-al-bada-dubai.webp`,
+        title: "Electronic Door Lock Repair Al Bada'a Dubai — Lock Repair Satwa",
+        caption: "Electronic door lock repair service in Al Bada'a, Dubai by Lock Repair Satwa certified technician.",
+        geo: GEO,
+      },
+    ],
+  },
+
   // ── Al Satwa Location ───────────────────────────────────────────────────────
   {
     pageUrl: `${SITE_URL}/locations/al-satwa`,

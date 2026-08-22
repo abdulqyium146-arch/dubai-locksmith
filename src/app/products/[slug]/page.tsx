@@ -17,6 +17,7 @@ import { BreadcrumbNav } from '@/components/sections/BreadcrumbNav'
 import { FaqAccordion } from '@/components/sections/FaqAccordion'
 import { CtaSection } from '@/components/sections/CtaSection'
 import { JsonLd } from '@/components/schema/JsonLd'
+import { WebPageSchema } from '@/components/schema/WebPageSchema'
 import { Button } from '@/components/ui/Button'
 import { Badge } from '@/components/ui/Badge'
 
@@ -186,10 +187,23 @@ export default async function ProductPage({
     { name: product.title, href: `/products/${product.slug}` },
   ]
 
+  const productPageUrl = `${SITE_URL}/products/${product.slug}`
+
   return (
     <>
       {/* Schema */}
       <JsonLd data={buildProductSchema(product)} />
+      <WebPageSchema
+        pageUrl={productPageUrl}
+        pageId={`product-${product.slug}`}
+        name={product.metaTitle}
+        description={product.metaDescription}
+        breadcrumbs={[
+          { name: 'Home', url: SITE_URL },
+          { name: 'Products', url: `${SITE_URL}/products` },
+          { name: product.title, url: productPageUrl },
+        ]}
+      />
 
       {/* ── Hero ────────────────────────────────────────────────────────────── */}
       <section
