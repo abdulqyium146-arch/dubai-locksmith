@@ -1,5 +1,5 @@
 // ─────────────────────────────────────────────────────────────────────────────
-// Lock Repair Satwa — Dynamic Service Page Template
+// Lock repair service — Dynamic Service Page Template
 // Works for all 12 services purely from data module — no hardcoded content
 // ─────────────────────────────────────────────────────────────────────────────
 import type { Metadata } from 'next'
@@ -13,6 +13,8 @@ import {
   CheckCircle2,
   ArrowRight,
   Zap,
+  MapPin,
+  Package,
 } from 'lucide-react'
 
 import Image from 'next/image'
@@ -28,6 +30,9 @@ import { Badge } from '@/components/ui/Badge'
 import { Button } from '@/components/ui/Button'
 
 import { services, getServiceBySlug, getAllServiceSlugs } from '@/data/services'
+import { locations } from '@/data/locations'
+import { products } from '@/data/products'
+import { parseWithLinks } from '@/lib/link-parser'
 import {
   BUSINESS_NAME,
   PHONE_DISPLAY,
@@ -135,6 +140,27 @@ export default async function ServicePage({
   if (!service) notFound()
 
   const relatedServices = getRelatedServices(service.slug)
+  const relatedProductSlugs = ((): string[] => {
+    // Inline product mapping for this service (from seo.ts logic)
+    const map: Record<string, string[]> = {
+      'smart-door-locks':             ['fingerprint-door-locks', 'keypad-locks', 'smart-door-locks-buy'],
+      'safe-box-services':            ['fireproof-safes', 'depository-safes', 'floor-safes'],
+      'safe-opening':                 ['fireproof-safes', 'floor-safes', 'wall-safes'],
+      'lock-change':                  ['deadbolt-locks', 'mortise-locks', 'lock-cylinders'],
+      'lock-repair':                  ['lock-cylinders', 'deadbolt-locks', 'mortise-locks'],
+      'home-lockout':                 ['deadbolt-locks', 'high-security-locks'],
+      'master-key-system':            ['lock-cylinders', 'high-security-locks'],
+      'mailbox-lock':                 ['lock-cylinders', 'cam-locks'],
+      'cabinet-lock':                 ['cam-locks', 'lock-cylinders'],
+      'access-control-installation':  ['magnetic-locks', 'electric-door-strikes'],
+      'door-closer-installation':     ['door-closers'],
+      'push-bar-installation':        ['panic-bars'],
+      'sliding-patio-door-lock':      ['deadbolt-locks', 'high-security-locks'],
+      'access-card-duplication':      ['magnetic-locks', 'electric-door-strikes'],
+    }
+    return (map[service.slug] ?? []).slice(0, 3)
+  })()
+  const relatedProducts = products.filter((p) => relatedProductSlugs.includes(p.slug))
 
   const breadcrumbs = [
     { name: 'Home', href: '/' },
@@ -210,7 +236,7 @@ export default async function ServicePage({
                     {service.title}
                   </h1>
                   <p className="mt-1 text-xs font-semibold uppercase tracking-widest text-brand-gold/70">
-                    Lock Repair Satwa · Dubai, UAE
+                    Lock repair service · Dubai, UAE
                   </p>
                 </div>
               </div>
@@ -313,7 +339,7 @@ export default async function ServicePage({
             <div className="overflow-hidden rounded-2xl border border-border shadow-md">
               <Image
                 src={service.heroImage}
-                alt={service.heroImageAlt ?? `${service.title} in Dubai — Lock Repair Satwa`}
+                alt={service.heroImageAlt ?? `${service.title} in Dubai — Lock repair service`}
                 width={900}
                 height={500}
                 className="w-full object-cover"
@@ -339,7 +365,7 @@ export default async function ServicePage({
           <div className="mt-6 space-y-4">
             {service.description.split('\n\n').map((paragraph, i) => (
               <p key={i} className="text-base leading-relaxed text-muted-foreground">
-                {paragraph}
+                {parseWithLinks(paragraph)}
               </p>
             ))}
           </div>
@@ -589,6 +615,114 @@ export default async function ServicePage({
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {relatedServices.map((related) => (
               <ServiceCard key={related.slug} service={related} />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── 11. Related Products ─────────────────────────────────────────────── */}
+      {relatedProducts.length > 0 && (
+        <section
+          aria-labelledby="related-products-heading"
+          className="py-14 sm:py-16 bg-muted/40 border-y border-border"
+        >
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div className="mb-8 flex items-end justify-between gap-4">
+              <div>
+                <h2
+                  id="related-products-heading"
+                  className="font-heading text-2xl font-bold tracking-tight text-foreground"
+                >
+                  Products Used in {service.title}
+                </h2>
+                <p className="mt-1 text-sm text-muted-foreground">
+                  We supply and install these products as part of this service — sourced,
+                  fitted, and warranted in a single visit.
+                </p>
+              </div>
+              <Link
+                href="/products"
+                className="flex shrink-0 items-center gap-1.5 text-sm font-semibold text-brand-gold hover:text-brand-gold-dark transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring rounded"
+              >
+                All Products
+                <ArrowRight className="h-4 w-4" aria-hidden="true" />
+              </Link>
+            </div>
+            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+              {relatedProducts.map((product) => (
+                <Link
+                  key={product.slug}
+                  href={`/products/${product.slug}`}
+                  className="group rounded-xl border border-border bg-card p-6 shadow-sm transition-all hover:border-brand-gold/40 hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+                >
+                  <div className="mb-4 flex items-center gap-3">
+                    <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-brand-gold/10 text-2xl ring-1 ring-brand-gold/20 group-hover:bg-brand-gold/20 transition-colors">
+                      {product.icon}
+                    </div>
+                    <div>
+                      <h3 className="font-heading text-base font-semibold text-foreground group-hover:text-brand-gold transition-colors">
+                        {product.title}
+                      </h3>
+                      <p className="text-xs font-medium text-brand-gold">
+                        from AED {product.pricing.min}
+                      </p>
+                    </div>
+                  </div>
+                  <p className="text-sm leading-relaxed text-muted-foreground line-clamp-2">
+                    {product.description.split('\n\n')[0]}
+                  </p>
+                  <div className="mt-4 flex items-center gap-1 text-xs font-semibold text-brand-gold">
+                    <Package className="h-3.5 w-3.5" aria-hidden="true" />
+                    View product details
+                    <ArrowRight className="h-3 w-3 transition-transform group-hover:translate-x-1" aria-hidden="true" />
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* ── 12. Dubai Areas We Serve ─────────────────────────────────────────── */}
+      <section
+        aria-labelledby="service-areas-heading"
+        className="py-14 sm:py-16 bg-background"
+      >
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="mb-8 flex items-end justify-between gap-4">
+            <div>
+              <h2
+                id="service-areas-heading"
+                className="font-heading text-2xl font-bold tracking-tight text-foreground sm:text-3xl"
+              >
+                {service.title} — Dubai Areas We Serve
+              </h2>
+              <p className="mt-2 text-sm text-muted-foreground">
+                Our mobile technicians provide {service.title.toLowerCase()} across all major Dubai
+                areas. Select your area for local response times and service details.
+              </p>
+            </div>
+            <Link
+              href="/locations"
+              className="flex shrink-0 items-center gap-1.5 text-sm font-semibold text-brand-gold hover:text-brand-gold-dark transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring rounded"
+            >
+              All Areas
+              <ArrowRight className="h-4 w-4" aria-hidden="true" />
+            </Link>
+          </div>
+          <div className="grid gap-2.5 grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6">
+            {locations.map((location) => (
+              <Link
+                key={location.slug}
+                href={`/locations/${location.slug}`}
+                className="group flex items-center gap-2 rounded-lg border border-border bg-card px-3 py-2.5 text-sm transition-all hover:border-brand-gold/40 hover:bg-brand-gold/5 hover:text-brand-gold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+                aria-label={`${service.title} in ${location.name}`}
+              >
+                <MapPin className="h-3.5 w-3.5 shrink-0 text-brand-gold" aria-hidden="true" />
+                <span className="font-medium text-foreground group-hover:text-brand-gold transition-colors leading-tight text-xs sm:text-sm">
+                  {location.name}
+                </span>
+              </Link>
             ))}
           </div>
         </div>

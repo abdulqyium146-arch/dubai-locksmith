@@ -1,5 +1,5 @@
 // ─────────────────────────────────────────────────────────────────────────────
-// Lock Repair Satwa — Page Loading Skeleton
+// Lock repair service — Page Loading Skeleton
 // ─────────────────────────────────────────────────────────────────────────────
 
 export default function Loading() {

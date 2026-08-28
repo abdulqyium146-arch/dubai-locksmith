@@ -2,7 +2,7 @@ import type { MetadataRoute } from 'next'
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: 'Lock Repair Satwa',
+    name: 'Lock repair service',
     short_name: 'Lock Repair',
     description: 'Professional locksmith in Dubai — open daily 24/7',
     start_url: '/',

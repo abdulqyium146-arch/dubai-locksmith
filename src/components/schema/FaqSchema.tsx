@@ -1,5 +1,5 @@
 // ─────────────────────────────────────────────────────────────────────────────
-// Lock Repair Satwa — FAQPage Schema
+// Lock repair service — FAQPage Schema
 // ─────────────────────────────────────────────────────────────────────────────
 import { JsonLd } from './JsonLd'
 import type { Faq } from '@/types'

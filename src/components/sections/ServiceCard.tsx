@@ -1,5 +1,5 @@
 // ─────────────────────────────────────────────────────────────────────────────
-// Lock Repair Satwa — Service Card
+// Lock repair service — Service Card
 // ─────────────────────────────────────────────────────────────────────────────
 import { ArrowRight, Clock } from 'lucide-react'
 import Link from 'next/link'

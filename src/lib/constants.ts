@@ -1,10 +1,10 @@
 // ─────────────────────────────────────────────────────────────────────────────
-// Lock Repair Satwa — Site-wide Constants
+// Lock repair service — Site-wide Constants
 // ─────────────────────────────────────────────────────────────────────────────
 
 // ── Business Identity ─────────────────────────────────────────────────────────
 
-export const BUSINESS_NAME = 'Lock Repair Satwa' as const
+export const BUSINESS_NAME = 'Lock repair service' as const
 export const BUSINESS_TAGLINE = "Key Maker Near Me — Key Shop & Locksmith, Satwa Dubai" as const
 export const BUSINESS_CATEGORY = 'Locksmith' as const
 
@@ -26,9 +26,11 @@ export const ADDRESS_COUNTRY = 'UAE' as const
 export const ADDRESS_FULL =
   `${ADDRESS_STREET}, ${ADDRESS_AREA}, ${ADDRESS_CITY}, ${ADDRESS_COUNTRY}` as const
 
+export const PLUS_CODE = '67MH+93' as const
+
 export const COORDINATES = {
-  lat: 25.23341473023507,
-  lng: 55.275106874155064,
+  lat: 25.2334375,
+  lng: 55.2776875,
 } as const
 
 // ── Social & Reviews ──────────────────────────────────────────────────────────
@@ -36,7 +38,7 @@ export const COORDINATES = {
 export const GOOGLE_RATING = 4.7 as const
 export const GOOGLE_REVIEW_COUNT = 20 as const
 export const GOOGLE_MAPS_URL =
-  'https://maps.google.com/?q=Lock+Repair+Satwa+Al+Bada%27a+Dubai' as const
+  'https://maps.google.com/?q=67MH%2B93+Dubai' as const
 
 // ── Site ──────────────────────────────────────────────────────────────────────
 
@@ -52,7 +54,7 @@ export const DEFAULT_OG_IMAGE = `${SITE_URL}/api/og` as const
 
 export const DEFAULT_TITLE_TEMPLATE = `%s | ${BUSINESS_NAME}` as const
 export const DEFAULT_META_DESCRIPTION =
-  "Key maker & key shop near me in Satwa, Dubai. Lock Repair Satwa: key duplication service from AED 50, car key cutting, door lock repair. 24/7 mobile locksmith. Rated 4.7★. Call +971 52 642 6161." as const
+  "Key maker & key shop near me in Satwa, Dubai. Lock repair service: key duplication service from AED 50, car key cutting, door lock repair. 24/7 mobile locksmith. Rated 4.7★. Call +971 52 642 6161." as const
 
 // ── Service Hours ─────────────────────────────────────────────────────────────
 

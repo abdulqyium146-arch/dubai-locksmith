@@ -1,5 +1,5 @@
 // ─────────────────────────────────────────────────────────────────────────────
-// Lock Repair Satwa — Edge Runtime Open Graph Image Generator
+// Lock repair service — Edge Runtime Open Graph Image Generator
 // Route: GET /api/og?title=...&description=...
 // ─────────────────────────────────────────────────────────────────────────────
 import { ImageResponse } from 'next/og'
@@ -18,7 +18,7 @@ const GOLD_LIGHT = '#E8C96A'
 const WHITE = '#FFFFFF'
 const MUTED = '#94A3B8'
 
-const DEFAULT_TITLE = 'Lock Repair Satwa | Locksmith in Dubai — Al Bada\'a'
+const DEFAULT_TITLE = 'Lock repair service | Locksmith in Dubai — Al Bada\'a'
 const DEFAULT_DESCRIPTION =
   'Professional locksmith services across Dubai — car key duplication, door lock repair, smart key programming, emergency locksmith and more. Open daily 24/7.'
 const PHONE = '+971 52 642 6161'
@@ -129,7 +129,7 @@ export async function GET(request: NextRequest): Promise<ImageResponse> {
                   letterSpacing: '-0.01em',
                 }}
               >
-                Lock Repair Satwa
+                Lock repair service
               </span>
             </div>
 

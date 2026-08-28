@@ -1,5 +1,5 @@
 // ─────────────────────────────────────────────────────────────────────────────
-// Lock Repair Satwa — Locations Hub Page
+// Lock repair service — Locations Hub Page
 // /locations — overview of all 15 service areas
 // ─────────────────────────────────────────────────────────────────────────────
 import type { Metadata } from 'next'
@@ -30,9 +30,9 @@ import {
 // ── Metadata ──────────────────────────────────────────────────────────────────
 
 export const metadata: Metadata = {
-  title: { absolute: 'Locksmith Areas Dubai | 24+ Locations Covered | Lock Repair Satwa' },
+  title: { absolute: 'Locksmith Areas Dubai | 24+ Locations Covered | Lock repair service' },
   description:
-    'Lock Repair Satwa covers all major Dubai areas — Jumeirah, Downtown, Dubai Marina, Business Bay, Dubai Hills, Palm Jumeirah and more. Professional mobile locksmith open daily 24/7. Call +971 52 642 6161.',
+    'Lock repair service covers all major Dubai areas — Jumeirah, Downtown, Dubai Marina, Business Bay, Dubai Hills, Palm Jumeirah and more. Professional mobile locksmith open daily 24/7. Call +971 52 642 6161.',
   alternates: {
     canonical: `${SITE_URL}/locations`,
   },
@@ -41,9 +41,9 @@ export const metadata: Metadata = {
     locale: 'en_AE',
     url: `${SITE_URL}/locations`,
     siteName: BUSINESS_NAME,
-    title: 'Locksmith Service Areas in Dubai | All 15 Locations — Lock Repair Satwa',
+    title: 'Locksmith Service Areas in Dubai | All 15 Locations — Lock repair service',
     description:
-      'Lock Repair Satwa covers all major Dubai areas — Jumeirah, Downtown, Dubai Marina, Business Bay, Dubai Hills, Palm Jumeirah and more. Professional mobile locksmith, open daily 24/7.',
+      'Lock repair service covers all major Dubai areas — Jumeirah, Downtown, Dubai Marina, Business Bay, Dubai Hills, Palm Jumeirah and more. Professional mobile locksmith, open daily 24/7.',
     images: [
       {
         url: DEFAULT_OG_IMAGE,
@@ -55,7 +55,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Locksmith Service Areas in Dubai | 15 Locations — Lock Repair Satwa',
+    title: 'Locksmith Service Areas in Dubai | 15 Locations — Lock repair service',
     description: 'Professional mobile locksmith covering all major Dubai areas. Open daily 24/7. Call +971 52 642 6161.',
     images: [DEFAULT_OG_IMAGE],
   },
@@ -157,7 +157,7 @@ export default function LocationsPage() {
             </div>
 
             <h1 className="font-heading text-4xl font-extrabold leading-tight tracking-tight text-white sm:text-5xl">
-              Lock Repair Satwa{' '}
+              Lock repair service{' '}
               <span className="text-gold-gradient">Covers All of Dubai</span>
             </h1>
 
@@ -167,7 +167,7 @@ export default function LocationsPage() {
                 Coverage Summary
               </p>
               <p className="text-base leading-relaxed text-white/90">
-                Lock Repair Satwa (D90, Al Bada&apos;a, Dubai) is a professional mobile locksmith
+                Lock repair service (D90, Al Bada&apos;a, Dubai) is a professional mobile locksmith
                 covering 24+ areas across the emirate. We reach most central Dubai locations in
                 20–35 minutes and outer areas in 40–60 minutes. All services — car key duplication,
                 door lock repair, smart key programming, transponder keys, car battery replacement and
@@ -178,7 +178,7 @@ export default function LocationsPage() {
             {/* CTA #1 — above the fold */}
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <Button size="lg" variant="primary" className="btn-pulse w-full sm:w-auto" asChild>
-                <a href={PHONE_HREF} aria-label={`Call Lock Repair Satwa: ${PHONE_DISPLAY}`}>
+                <a href={PHONE_HREF} aria-label={`Call Lock repair service: ${PHONE_DISPLAY}`}>
                   <Phone className="h-5 w-5" aria-hidden="true" />
                   Call Now — {PHONE_DISPLAY}
                 </a>
@@ -188,7 +188,7 @@ export default function LocationsPage() {
                   href={WHATSAPP_HREF}
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label="WhatsApp Lock Repair Satwa"
+                  aria-label="WhatsApp Lock repair service"
                 >
                   <MessageCircle className="h-5 w-5" aria-hidden="true" />
                   WhatsApp Us
@@ -318,7 +318,7 @@ export default function LocationsPage() {
                   Locksmith Service Available Daily 24/7 Across All Listed Areas
                 </h2>
                 <p className="mt-1 text-sm text-muted-foreground max-w-lg">
-                  Locked out, lost your key, or need a lock repaired? Lock Repair Satwa responds
+                  Locked out, lost your key, or need a lock repaired? Lock repair service responds
                   daily 24/7 to every area on this page. Average response is 15–30 minutes
                   for central Dubai. Call now for an immediate ETA.
                 </p>

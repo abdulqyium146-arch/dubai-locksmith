@@ -6,7 +6,7 @@ import { AdminSidebar } from '@/components/admin/AdminSidebar'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
-  title: 'Admin — Lock Repair Satwa',
+  title: 'Admin — Lock repair service',
   robots: { index: false, follow: false },
 }
 

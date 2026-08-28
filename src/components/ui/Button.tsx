@@ -1,6 +1,6 @@
 'use client'
 // ─────────────────────────────────────────────────────────────────────────────
-// Lock Repair Satwa — Button Primitive
+// Lock repair service — Button Primitive
 // ─────────────────────────────────────────────────────────────────────────────
 import * as React from 'react'
 import { Slot } from '@radix-ui/react-slot'

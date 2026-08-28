@@ -11,7 +11,7 @@ export default function AdminLoginPage() {
             <Lock className="h-7 w-7 text-amber-400" />
           </div>
           <h1 className="text-2xl font-bold text-gray-900">Admin Login</h1>
-          <p className="mt-1 text-sm text-gray-500">Lock Repair Satwa · Booking Dashboard</p>
+          <p className="mt-1 text-sm text-gray-500">Lock repair service · Booking Dashboard</p>
         </div>
 
         {/* Login card */}
@@ -20,7 +20,7 @@ export default function AdminLoginPage() {
         </div>
 
         <p className="mt-6 text-center text-xs text-gray-400">
-          Secure admin access — Lock Repair Satwa
+          Secure admin access — Lock repair service
         </p>
       </div>
     </div>

@@ -1,5 +1,5 @@
 // ─────────────────────────────────────────────────────────────────────────────
-// Lock Repair Satwa — Trust Bar
+// Lock repair service — Trust Bar
 // ─────────────────────────────────────────────────────────────────────────────
 import { Clock, Star, Zap, MapPin, DollarSign } from 'lucide-react'
 import { cn } from '@/lib/utils'

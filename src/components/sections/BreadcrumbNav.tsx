@@ -1,5 +1,5 @@
 // ─────────────────────────────────────────────────────────────────────────────
-// Lock Repair Satwa — Breadcrumb Navigation
+// Lock repair service — Breadcrumb Navigation
 // Renders visible breadcrumbs + inline BreadcrumbList JSON-LD
 // ─────────────────────────────────────────────────────────────────────────────
 import Link from 'next/link'

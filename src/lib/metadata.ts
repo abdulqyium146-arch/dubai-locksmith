@@ -1,5 +1,5 @@
 // ─────────────────────────────────────────────────────────────────────────────
-// Lock Repair Satwa — Shared Metadata Builder Utility
+// Lock repair service — Shared Metadata Builder Utility
 // ─────────────────────────────────────────────────────────────────────────────
 import type { Metadata } from 'next'
 import type { Service, Location } from '@/types'

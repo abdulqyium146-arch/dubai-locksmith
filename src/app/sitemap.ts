@@ -1,5 +1,5 @@
 // ─────────────────────────────────────────────────────────────────────────────
-// Lock Repair Satwa — /sitemap.xml
+// Lock repair service — /sitemap.xml
 // English-only, no /en prefix. All URLs are canonical indexable routes.
 // ─────────────────────────────────────────────────────────────────────────────
 import type { MetadataRoute } from 'next'

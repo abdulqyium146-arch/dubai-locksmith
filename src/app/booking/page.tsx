@@ -1,5 +1,5 @@
 // ─────────────────────────────────────────────────────────────────────────────
-// Lock Repair Satwa — Booking Page
+// Lock repair service — Booking Page
 // ─────────────────────────────────────────────────────────────────────────────
 import type { Metadata } from 'next'
 import { Phone, MessageCircle, Clock, Shield, Star } from 'lucide-react'
@@ -22,9 +22,9 @@ import {
 // ── Metadata ──────────────────────────────────────────────────────────────────
 
 export const metadata: Metadata = {
-  title: { absolute: 'Book a Locksmith in Dubai | Lock Repair Satwa' },
+  title: { absolute: 'Book a Locksmith in Dubai | Lock repair service' },
   description:
-    'Book a locksmith or car key service in Dubai online. Lock Repair Satwa — mobile service across all Dubai areas. Same-day response, upfront pricing. Call +971 52 642 6161.',
+    'Book a locksmith or car key service in Dubai online. Lock repair service — mobile service across all Dubai areas. Same-day response, upfront pricing. Call +971 52 642 6161.',
   alternates: {
     canonical: `${SITE_URL}/booking`,
   },
@@ -33,16 +33,16 @@ export const metadata: Metadata = {
     locale: 'en_AE',
     url: `${SITE_URL}/booking`,
     siteName: BUSINESS_NAME,
-    title: 'Book a Locksmith in Dubai | Lock Repair Satwa',
+    title: 'Book a Locksmith in Dubai | Lock repair service',
     description:
-      'Book a locksmith or car key service in Dubai online. Lock Repair Satwa — mobile service across all Dubai areas. Same-day response, upfront pricing. Call +971 52 642 6161.',
+      'Book a locksmith or car key service in Dubai online. Lock repair service — mobile service across all Dubai areas. Same-day response, upfront pricing. Call +971 52 642 6161.',
     images: [{ url: DEFAULT_OG_IMAGE, width: 1200, height: 630, alt: `Book ${BUSINESS_NAME}` }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Book a Locksmith in Dubai | Lock Repair Satwa',
+    title: 'Book a Locksmith in Dubai | Lock repair service',
     description:
-      'Book a locksmith or car key service in Dubai online. Lock Repair Satwa — mobile service across all Dubai areas. Same-day response, upfront pricing.',
+      'Book a locksmith or car key service in Dubai online. Lock repair service — mobile service across all Dubai areas. Same-day response, upfront pricing.',
     images: [DEFAULT_OG_IMAGE],
   },
 }
@@ -55,7 +55,7 @@ const bookingPageSchema = {
   '@id': `${SITE_URL}/booking#page`,
   name: 'Book a Locksmith in Dubai',
   description:
-    'Online booking form for locksmith and car key services in Dubai. Lock Repair Satwa serves all Dubai areas with mobile technicians.',
+    'Online booking form for locksmith and car key services in Dubai. Lock repair service serves all Dubai areas with mobile technicians.',
   url: `${SITE_URL}/booking`,
   provider: {
     '@type': 'Locksmith',
@@ -158,7 +158,7 @@ export default function BookingPage() {
               {/* Why us card */}
               <div className="rounded-2xl border border-border bg-card p-6 shadow-sm">
                 <h3 className="font-heading text-base font-bold text-foreground mb-5">
-                  Why Book with Lock Repair Satwa?
+                  Why Book with Lock repair service?
                 </h3>
                 <ul className="space-y-4">
                   {[

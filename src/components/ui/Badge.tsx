@@ -1,5 +1,5 @@
 // ─────────────────────────────────────────────────────────────────────────────
-// Lock Repair Satwa — Badge Primitive
+// Lock repair service — Badge Primitive
 // ─────────────────────────────────────────────────────────────────────────────
 import * as React from 'react'
 import { cva, type VariantProps } from 'class-variance-authority'

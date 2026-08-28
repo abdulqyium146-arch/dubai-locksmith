@@ -123,8 +123,8 @@ export const metadata: Metadata = {
   other: {
     'geo.region': 'AE-DU',
     'geo.placename': "Al Bada'a, Dubai",
-    'geo.position': '25.23341473023507;55.275106874155064',
-    ICBM: '25.23341473023507, 55.275106874155064',
+    'geo.position': '25.2334375;55.2776875',
+    ICBM: '25.2334375, 55.2776875',
   },
 }
 

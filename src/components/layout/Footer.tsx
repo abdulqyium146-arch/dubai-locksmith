@@ -1,5 +1,5 @@
 // ─────────────────────────────────────────────────────────────────────────────
-// Lock Repair Satwa — Footer (server component)
+// Lock repair service — Footer (server component)
 // ─────────────────────────────────────────────────────────────────────────────
 import Link from 'next/link'
 import {
@@ -31,12 +31,12 @@ import { locations } from '@/data/locations'
 
 const currentYear = new Date().getFullYear()
 
-const FOOTER_SERVICES = services.slice(0, 7).map((s) => ({
+const FOOTER_SERVICES = services.map((s) => ({
   label: s.title,
   href: `/services/${s.slug}`,
 }))
 
-const FOOTER_LOCATIONS = locations.slice(0, 8).map((l) => ({
+const FOOTER_LOCATIONS = locations.map((l) => ({
   label: l.name,
   href: `/locations/${l.slug}`,
 }))
@@ -116,10 +116,10 @@ export async function Footer() {
               </div>
               <div className="flex flex-col leading-tight">
                 <span className="font-heading text-base font-bold text-white">
-                  Lock Repair
+                  Lock repair
                 </span>
                 <span className="font-heading text-xs font-semibold text-brand-gold">
-                  Satwa
+                  service
                 </span>
               </div>
             </Link>
@@ -211,21 +211,21 @@ export async function Footer() {
             <h3 className="font-heading text-sm font-semibold uppercase tracking-widest text-brand-gold">
               Our Services
             </h3>
-            <ul className="mt-4 space-y-2.5" role="list">
+            <ul className="mt-4 grid grid-cols-2 gap-x-4 gap-y-2" role="list">
               {FOOTER_SERVICES.map(({ label, href }) => (
                 <li key={href}>
                   <Link
                     href={href}
-                    className="text-sm text-white/70 transition-colors hover:text-brand-gold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring rounded"
+                    className="text-xs text-white/70 transition-colors hover:text-brand-gold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring rounded leading-snug block"
                   >
                     {label}
                   </Link>
                 </li>
               ))}
-              <li>
+              <li className="col-span-2 mt-1">
                 <Link
                   href="/services"
-                  className="text-sm font-medium text-brand-gold hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring rounded"
+                  className="text-xs font-medium text-brand-gold hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring rounded"
                 >
                   View all services →
                 </Link>
@@ -238,21 +238,21 @@ export async function Footer() {
             <h3 className="font-heading text-sm font-semibold uppercase tracking-widest text-brand-gold">
               Service Areas
             </h3>
-            <ul className="mt-4 space-y-2.5" role="list">
+            <ul className="mt-4 grid grid-cols-2 gap-x-4 gap-y-2" role="list">
               {FOOTER_LOCATIONS.map(({ label, href }) => (
                 <li key={href}>
                   <Link
                     href={href}
-                    className="text-sm text-white/70 transition-colors hover:text-brand-gold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring rounded"
+                    className="text-xs text-white/70 transition-colors hover:text-brand-gold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring rounded leading-snug block"
                   >
                     {label}
                   </Link>
                 </li>
               ))}
-              <li>
+              <li className="col-span-2 mt-1">
                 <Link
                   href="/locations"
-                  className="text-sm font-medium text-brand-gold hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring rounded"
+                  className="text-xs font-medium text-brand-gold hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring rounded"
                 >
                   View all areas →
                 </Link>

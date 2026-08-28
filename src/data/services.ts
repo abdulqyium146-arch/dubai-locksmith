@@ -1,5 +1,5 @@
 // ─────────────────────────────────────────────────────────────────────────────
-// Lock Repair Satwa — Services Data
+// Lock repair service — Services Data
 // ─────────────────────────────────────────────────────────────────────────────
 import type { Service } from '@/types'
 
@@ -10,13 +10,13 @@ export const services: Service[] = [
     category: 'automotive',
     title: 'Key Duplication & Key Cutting',
     // GMB targets: "key duplication service" (#2 at 51 searches), "key cutting dubai", "duplicate key near me"
-    metaTitle: 'Key Duplication Service Dubai | Key Cutting Near Me | Lock Repair Satwa',
+    metaTitle: 'Key Duplication Service Dubai | Key Cutting Near Me | Lock repair service',
     metaDescription:
-      'Key duplication service in Dubai from AED 50. Duplicate key near me — Lock Repair Satwa cuts car keys, door keys, all types. Key cutting Dubai. Mobile 24/7. Call +971 52 642 6161.',
+      'Key duplication service in Dubai from AED 50. Duplicate key near me — Lock repair service cuts car keys, door keys, all types. Key cutting Dubai. Mobile 24/7. Call +971 52 642 6161.',
     directAnswerOpener:
-      'Lock Repair Satwa provides key duplication and key cutting in Dubai from AED 50 for door keys and AED 150–350 for car keys. Same-day service, all key types, 24/7 mobile across all Dubai areas. Call +971 52 642 6161.',
+      'Lock repair service provides key duplication and key cutting in Dubai from AED 50 for door keys and AED 150–350 for car keys. Same-day service, all key types, 24/7 mobile across all Dubai areas. Call +971 52 642 6161.',
     description:
-      'Having a spare car key is one of the simplest precautions a Dubai driver can take — yet most people wait until they\'ve locked themselves out or lost their only key before acting. Lock Repair Satwa provides on-site car key duplication across all of Dubai, cutting and programming a working copy of your existing key directly at your location.\n\nOur technicians carry professional key-cutting machines and a wide range of key blanks to cover virtually every make and model sold in the UAE market — from Toyota Land Cruisers and Nissan Patrols to BMW, Mercedes-Benz and Tesla. Whether you need a simple mechanical blade copy, a remote-equipped key, or a full transponder duplicate with chip programming, we handle it all in a single visit.\n\nThe process takes 15 to 45 minutes depending on key complexity. Standard mechanical keys are cut in as little as 15 minutes; transponder keys with chip cloning take 30–45 minutes. All duplicated keys are tested in the vehicle\'s ignition and doors before we leave.\n\nPricing starts at AED 150 for basic mechanical keys and goes up to AED 350 for keys that include remote buttons and a transponder chip. We recommend getting a spare key made before you ever need it — the cost of duplication is a fraction of the emergency call-out price for a replacement.',
+      'Having a spare car key is one of the simplest precautions a Dubai driver can take — yet most people wait until they\'ve locked themselves out or lost their only key before acting. Lock repair service provides on-site car key duplication across all of Dubai, cutting and programming a working copy of your existing key directly at your location.\n\nOur technicians carry professional key-cutting machines and a wide range of key blanks to cover virtually every make and model sold in the UAE market — from Toyota Land Cruisers and Nissan Patrols to BMW, Mercedes-Benz and Tesla. Whether you need a simple mechanical blade copy, a remote-equipped key, or a full transponder duplicate with chip programming, we handle it all in a single visit.\n\nThe process takes 15 to 45 minutes depending on key complexity. Standard mechanical keys are cut in as little as 15 minutes; transponder keys with chip cloning take 30–45 minutes. All duplicated keys are tested in the vehicle\'s ignition and doors before we leave.\n\nPricing starts at AED 150 for basic mechanical keys and goes up to AED 350 for keys that include remote buttons and a transponder chip. We recommend getting a spare key made before you ever need it — the cost of duplication is a fraction of the emergency call-out price for a replacement.',
     benefits: [
       {
         title: 'Immediate On-Site Service',
@@ -113,7 +113,7 @@ export const services: Service[] = [
       'Land Rover', 'Volvo', 'Subaru',
     ],
     heroImage: '/images/services/nissan-car-key-duplication-dubai.webp',
-    heroImageAlt: 'Technician holding a duplicate Nissan car key inside the vehicle — key duplication service in Dubai, Lock Repair Satwa',
+    heroImageAlt: 'Technician holding a duplicate Nissan car key inside the vehicle — key duplication service in Dubai, Lock repair service',
     icon: '🔑',
     emergency: false,
   },
@@ -123,13 +123,13 @@ export const services: Service[] = [
     slug: 'car-key-replacement',
     category: 'automotive',
     title: 'Car Key Replacement',
-    metaTitle: 'Car Key Replacement Dubai | Lost Key Experts | Lock Repair Satwa',
+    metaTitle: 'Car Key Replacement Dubai | Lost Key Experts | Lock repair service',
     metaDescription:
       'Lost your only car key in Dubai? We replace car keys on-site without needing the original. All makes covered. mobile service, available 24/7 — +971 52 642 6161.',
     directAnswerOpener:
-      'Lock Repair Satwa replaces lost or damaged car keys in Dubai without requiring a dealership visit. Using OBD programming tools and VIN-based key cutting, we make a fully functional replacement key on-site. Pricing ranges from AED 300 to AED 900 depending on vehicle and key technology. Service available 24/7 across all Dubai areas.',
+      'Lock repair service replaces lost or damaged car keys in Dubai without requiring a dealership visit. Using OBD programming tools and VIN-based key cutting, we make a fully functional replacement key on-site. Pricing ranges from AED 300 to AED 900 depending on vehicle and key technology. Service available 24/7 across all Dubai areas.',
     description:
-      'Losing your only car key in Dubai is more than an inconvenience — it can strand you for days if you rely on the dealership. Lock Repair Satwa offers a fast, fully mobile car key replacement service that gets you back on the road without the long wait and premium dealership pricing.\n\nUnlike duplication (which needs your original key), replacement involves generating a new key from your vehicle\'s VIN (Vehicle Identification Number) and programming it directly to your car\'s ECU via OBD port. Our technicians carry the latest key generation software and a comprehensive library of key blanks, covering everything from basic mechanical vehicles to the latest proximity/smart keys.\n\nThe process starts with identity verification — we will ask for your Emirates ID, vehicle registration (Mulkiya) and a photograph of your driving licence. This is a legal requirement to prevent unauthorised key production. Once verified, the technician generates the key code from the VIN, cuts the blade, and programs the transponder/remote to your vehicle.\n\nReplacement takes 45 minutes to 1.5 hours on-site. All existing keys can be erased from the vehicle\'s memory on request, so a previously lost key can no longer be used to access your car. We cover all mainstream brands sold in the UAE and many European and American luxury marques.',
+      'Losing your only car key in Dubai is more than an inconvenience — it can strand you for days if you rely on the dealership. Lock repair service offers a fast, fully mobile car key replacement service that gets you back on the road without the long wait and premium dealership pricing.\n\nUnlike duplication (which needs your original key), replacement involves generating a new key from your vehicle\'s VIN (Vehicle Identification Number) and programming it directly to your car\'s ECU via OBD port. Our technicians carry the latest key generation software and a comprehensive library of key blanks, covering everything from basic mechanical vehicles to the latest proximity/smart keys.\n\nThe process starts with identity verification — we will ask for your Emirates ID, vehicle registration (Mulkiya) and a photograph of your driving licence. This is a legal requirement to prevent unauthorised key production. Once verified, the technician generates the key code from the VIN, cuts the blade, and programs the transponder/remote to your vehicle.\n\nReplacement takes 45 minutes to 1.5 hours on-site. All existing keys can be erased from the vehicle\'s memory on request, so a previously lost key can no longer be used to access your car. We cover all mainstream brands sold in the UAE and many European and American luxury marques.',
     benefits: [
       {
         title: 'No Original Key Required',
@@ -232,7 +232,7 @@ export const services: Service[] = [
       'Volvo', 'MINI', 'Jaguar',
     ],
     heroImage: '/images/services/car-remote-key-blanks-locksmith-shop-dubai.webp',
-    heroImageAlt: 'Display case full of car remote key blanks and spare keys at Lock Repair Satwa locksmith shop, Dubai — car key replacement service',
+    heroImageAlt: 'Display case full of car remote key blanks and spare keys at Lock repair service locksmith shop, Dubai — car key replacement service',
     icon: '🗝️',
     emergency: true,
   },
@@ -242,13 +242,13 @@ export const services: Service[] = [
     slug: 'remote-smart-key-programming',
     category: 'automotive',
     title: 'Remote & Smart Key Programming',
-    metaTitle: 'Remote Key Programming Dubai | Smart Key Service | Lock Repair Satwa',
+    metaTitle: 'Remote Key Programming Dubai | Smart Key Service | Lock repair service',
     metaDescription:
       'Expert remote and smart key programming for all car brands in Dubai. Keyless entry, push-start, proximity keys. Mobile service 24/7 — +971 52 642 6161.',
     directAnswerOpener:
-      'Remote and smart key programming in Dubai costs AED 400–900 depending on make and key technology. Lock Repair Satwa programs OEM and aftermarket remote keys, keyless entry fobs and proximity push-start keys using manufacturer-level OBD tools. Mobile service available 24/7; most programming jobs completed in 30–60 minutes at your location.',
+      'Remote and smart key programming in Dubai costs AED 400–900 depending on make and key technology. Lock repair service programs OEM and aftermarket remote keys, keyless entry fobs and proximity push-start keys using manufacturer-level OBD tools. Mobile service available 24/7; most programming jobs completed in 30–60 minutes at your location.',
     description:
-      'Modern car keys do far more than simply cut an ignition — they communicate wirelessly with your car\'s security system via rolling-code encryption, proximity sensors and push-start electronics. When that communication breaks down — because of a dead remote, a replaced ECU, a new key purchase or a battery reset — Lock Repair Satwa provides expert reprogramming to restore full functionality.\n\nWe program remote keys, smart keys and proximity fobs for all major makes sold in Dubai. Our technicians use OEM-compatible programming tools (including Autel, Launch X431, Lonsdor K518 and brand-specific platforms) that access the vehicle\'s immobiliser, body control module and smart key ECU directly over the OBD port.\n\nCommon scenarios we handle include: adding a second remote key to your vehicle, reprogramming a remote that stopped working after a battery change, replacing a damaged smart key fob, and setting up a new proximity key after an ECU swap. We also handle keyless entry systems (one-touch lock/unlock) and remote start programming where factory-equipped.\n\nAll programming is non-destructive — your existing keys remain active unless you specifically request that old keys be erased. We provide a written confirmation of which keys are active in your vehicle\'s system at the end of every job.',
+      'Modern car keys do far more than simply cut an ignition — they communicate wirelessly with your car\'s security system via rolling-code encryption, proximity sensors and push-start electronics. When that communication breaks down — because of a dead remote, a replaced ECU, a new key purchase or a battery reset — Lock repair service provides expert reprogramming to restore full functionality.\n\nWe program remote keys, smart keys and proximity fobs for all major makes sold in Dubai. Our technicians use OEM-compatible programming tools (including Autel, Launch X431, Lonsdor K518 and brand-specific platforms) that access the vehicle\'s immobiliser, body control module and smart key ECU directly over the OBD port.\n\nCommon scenarios we handle include: adding a second remote key to your vehicle, reprogramming a remote that stopped working after a battery change, replacing a damaged smart key fob, and setting up a new proximity key after an ECU swap. We also handle keyless entry systems (one-touch lock/unlock) and remote start programming where factory-equipped.\n\nAll programming is non-destructive — your existing keys remain active unless you specifically request that old keys be erased. We provide a written confirmation of which keys are active in your vehicle\'s system at the end of every job.',
     benefits: [
       {
         title: 'Factory-Level OBD Programming',
@@ -347,7 +347,7 @@ export const services: Service[] = [
       'BYD', 'MG',
     ],
     heroImage: '/images/services/transponder-chip-smart-key-programming-dubai.webp',
-    heroImageAlt: 'Smart car key circuit board being inspected during remote key programming — Lock Repair Satwa Dubai',
+    heroImageAlt: 'Smart car key circuit board being inspected during remote key programming — Lock repair service Dubai',
     icon: '📡',
     emergency: false,
   },
@@ -357,13 +357,13 @@ export const services: Service[] = [
     slug: 'transponder-keys',
     category: 'automotive',
     title: 'Transponder Key Cutting & Programming',
-    metaTitle: 'Transponder Key Programming Dubai | Chip Key Service | Lock Repair Satwa',
+    metaTitle: 'Transponder Key Programming Dubai | Chip Key Service | Lock repair service',
     metaDescription:
       'Transponder key cutting and programming in Dubai for all car makes. On-site chip cloning and ECU pairing. Same-day mobile service — +971 52 642 6161.',
     directAnswerOpener:
-      'Transponder keys contain a micro-chip that must be programmed to your car\'s immobiliser before the engine will start. Lock Repair Satwa cuts and programs transponder keys for all major brands in Dubai for AED 350–700. Our mobile technicians use OBD-based programming tools and chip cloners — same-day on-site service, no dealership required.',
+      'Transponder keys contain a micro-chip that must be programmed to your car\'s immobiliser before the engine will start. Lock repair service cuts and programs transponder keys for all major brands in Dubai for AED 350–700. Our mobile technicians use OBD-based programming tools and chip cloners — same-day on-site service, no dealership required.',
     description:
-      'A transponder key (also called a "chipped key") contains a small RFID microchip embedded in the key head. When you turn the ignition, an antenna ring around the ignition barrel sends a radio signal to the chip, which responds with a unique code. If the code matches what the car\'s immobiliser expects, the engine is allowed to start. Without this handshake, the engine will crank but not fire — making transponder keys a highly effective theft deterrent.\n\nLock Repair Satwa provides complete transponder key services: blade cutting, chip programming, chip cloning and immobiliser bypass (for vehicles where the immobiliser has failed). We stock a comprehensive range of transponder chips — fixed-code chips, crypto-transponders (Hitag 2, Hitag Pro, DST80) and OEM smart chips — to cover vehicles from the late 1990s through to the current model year.\n\nChip cloning is available for vehicles where the ECU supports it, allowing us to copy the exact chip signal from your original key to a new blank without entering the car\'s programming mode. This is the fastest method and does not disturb your other registered keys. For vehicles requiring ECU-based programming, we access the immobiliser via OBD and add the new chip\'s ID to the authorised key table.\n\nAll transponder work is conducted with your vehicle present and your ownership documents verified. We provide a 30-day warranty on all transponder key work.',
+      'A transponder key (also called a "chipped key") contains a small RFID microchip embedded in the key head. When you turn the ignition, an antenna ring around the ignition barrel sends a radio signal to the chip, which responds with a unique code. If the code matches what the car\'s immobiliser expects, the engine is allowed to start. Without this handshake, the engine will crank but not fire — making transponder keys a highly effective theft deterrent.\n\nLock repair service provides complete transponder key services: blade cutting, chip programming, chip cloning and immobiliser bypass (for vehicles where the immobiliser has failed). We stock a comprehensive range of transponder chips — fixed-code chips, crypto-transponders (Hitag 2, Hitag Pro, DST80) and OEM smart chips — to cover vehicles from the late 1990s through to the current model year.\n\nChip cloning is available for vehicles where the ECU supports it, allowing us to copy the exact chip signal from your original key to a new blank without entering the car\'s programming mode. This is the fastest method and does not disturb your other registered keys. For vehicles requiring ECU-based programming, we access the immobiliser via OBD and add the new chip\'s ID to the authorised key table.\n\nAll transponder work is conducted with your vehicle present and your ownership documents verified. We provide a 30-day warranty on all transponder key work.',
     benefits: [
       {
         title: 'Chip Cloning & OBD Programming',
@@ -465,13 +465,13 @@ export const services: Service[] = [
     slug: 'emergency-car-unlock',
     category: 'automotive',
     title: 'Emergency Car Unlock',
-    metaTitle: 'Emergency Car Unlock Dubai | 24/7 Locksmith | Lock Repair Satwa',
+    metaTitle: 'Emergency Car Unlock Dubai | 24/7 Locksmith | Lock repair service',
     metaDescription:
       'Locked out of your car in Dubai? Our mobile locksmith opens any vehicle in 20–45 minutes. 24/7 service, no damage — +971 52 642 6161.',
     directAnswerOpener:
-      'Lock Repair Satwa provides 24/7 car unlock service across Dubai for AED 200–500. A trained mobile locksmith reaches most Dubai locations within 20–45 minutes and opens your vehicle using non-destructive lock-pick, wedge or OBD unlock methods. No damage to door seals, windows or lock cylinders guaranteed.',
+      'Lock repair service provides 24/7 car unlock service across Dubai for AED 200–500. A trained mobile locksmith reaches most Dubai locations within 20–45 minutes and opens your vehicle using non-destructive lock-pick, wedge or OBD unlock methods. No damage to door seals, windows or lock cylinders guaranteed.',
     description:
-      'Being locked out of your car is one of the most stressful roadside situations in Dubai — especially in summer when cabin temperatures can exceed 60°C within minutes. If a child or pet is trapped inside, every second counts. Lock Repair Satwa operates daily from 7 AM to 11:30 PM, 365 days a year, with fast-response mobile locksmiths positioned across Dubai to reach you as quickly as possible.\n\nOur technicians are trained in non-destructive vehicle entry techniques: air wedge and long-reach tools for vehicles with manual door controls, and OBD-based electronic unlock for modern keyless vehicles. We never break windows unless you explicitly request it or an emergency involving a child or animal inside the car makes it absolutely necessary — in which case the fastest method takes priority.\n\nCommon scenarios we handle: keys locked inside the car, key broken in the door lock, remote key battery dead with no manual unlock option, electronic door failure due to a flat car battery, and smart key malfunction.\n\nWe cover all Dubai areas including Motor City, Dubai Hills, International City and other locations further from our Al Bada\'a base. Emergency unlocks at peak traffic times carry a small surcharge for travel. All pricing is confirmed before the technician departs.',
+      'Being locked out of your car is one of the most stressful roadside situations in Dubai — especially in summer when cabin temperatures can exceed 60°C within minutes. If a child or pet is trapped inside, every second counts. Lock repair service operates daily from 7 AM to 11:30 PM, 365 days a year, with fast-response mobile locksmiths positioned across Dubai to reach you as quickly as possible.\n\nOur technicians are trained in non-destructive vehicle entry techniques: air wedge and long-reach tools for vehicles with manual door controls, and OBD-based electronic unlock for modern keyless vehicles. We never break windows unless you explicitly request it or an emergency involving a child or animal inside the car makes it absolutely necessary — in which case the fastest method takes priority.\n\nCommon scenarios we handle: keys locked inside the car, key broken in the door lock, remote key battery dead with no manual unlock option, electronic door failure due to a flat car battery, and smart key malfunction.\n\nWe cover all Dubai areas including Motor City, Dubai Hills, International City and other locations further from our Al Bada\'a base. Emergency unlocks at peak traffic times carry a small surcharge for travel. All pricing is confirmed before the technician departs.',
     benefits: [
       {
         title: 'Open Daily 24/7 Including Public Holidays',
@@ -569,7 +569,7 @@ export const services: Service[] = [
       'BYD', 'MG', 'Tesla',
     ],
     heroImage: '/images/services/locksmith-tools-lock-cylinders-dubai.webp',
-    heroImageAlt: 'Professional locksmith tools, lock cylinders and key blanks laid out — emergency car unlock service in Dubai by Lock Repair Satwa',
+    heroImageAlt: 'Professional locksmith tools, lock cylinders and key blanks laid out — emergency car unlock service in Dubai by Lock repair service',
     icon: '🚗',
     emergency: true,
   },
@@ -579,13 +579,13 @@ export const services: Service[] = [
     slug: 'lost-broken-car-keys',
     category: 'automotive',
     title: 'Lost & Broken Car Key Service',
-    metaTitle: 'Lost or Broken Car Key Dubai | Fast Replacement | Lock Repair Satwa',
+    metaTitle: 'Lost or Broken Car Key Dubai | Fast Replacement | Lock repair service',
     metaDescription:
       'Lost or snapped your car key in Dubai? We replace and extract broken keys on-site. 24/7 service for all makes. Call +971 52 642 6161.',
     directAnswerOpener:
-      'Lock Repair Satwa handles lost and broken car key situations across Dubai 24/7. We extract broken key fragments from ignition barrels and door locks, then cut and program a full replacement key on-site. Service costs AED 200–700 depending on vehicle and key type. No tow truck or dealership visit required.',
+      'Lock repair service handles lost and broken car key situations across Dubai 24/7. We extract broken key fragments from ignition barrels and door locks, then cut and program a full replacement key on-site. Service costs AED 200–700 depending on vehicle and key type. No tow truck or dealership visit required.',
     description:
-      'Dubai\'s extreme heat cycles cause car keys to become brittle over time — a key that snaps in the ignition or door lock is a surprisingly common call we receive. Equally, losing your only key in a mall, on the beach or at the airport leaves you completely stranded. Lock Repair Satwa handles both scenarios with a single mobile call-out.\n\nFor broken keys, our technicians use specialist extraction tools to remove key fragments from ignition barrels and door lock cylinders without damage to the lock mechanism. Once extracted, the broken blade is used as a template (where possible) to cut a new key. If the break makes the blade unusable, we cut from the VIN-based code.\n\nFor lost keys, the process is identical to our full car key replacement service: identity verification, VIN-based blade cutting, transponder chip programming and remote synchronisation. We also offer the option to erase the lost key from the immobiliser memory so it cannot be used if found by someone else.\n\nWe recommend that every Dubai driver has at least one spare key made before they need it — the cost of duplication (AED 150–350) is significantly lower than an emergency replacement call-out (AED 300–900).',
+      'Dubai\'s extreme heat cycles cause car keys to become brittle over time — a key that snaps in the ignition or door lock is a surprisingly common call we receive. Equally, losing your only key in a mall, on the beach or at the airport leaves you completely stranded. Lock repair service handles both scenarios with a single mobile call-out.\n\nFor broken keys, our technicians use specialist extraction tools to remove key fragments from ignition barrels and door lock cylinders without damage to the lock mechanism. Once extracted, the broken blade is used as a template (where possible) to cut a new key. If the break makes the blade unusable, we cut from the VIN-based code.\n\nFor lost keys, the process is identical to our full car key replacement service: identity verification, VIN-based blade cutting, transponder chip programming and remote synchronisation. We also offer the option to erase the lost key from the immobiliser memory so it cannot be used if found by someone else.\n\nWe recommend that every Dubai driver has at least one spare key made before they need it — the cost of duplication (AED 150–350) is significantly lower than an emergency replacement call-out (AED 300–900).',
     benefits: [
       {
         title: 'Broken Key Extraction Without Damage',
@@ -672,7 +672,7 @@ export const services: Service[] = [
       'Land Rover', 'Volvo', 'MINI',
     ],
     heroImage: '/images/services/bentley-spare-car-key-duplication-dubai.webp',
-    heroImageAlt: 'Bentley original and newly duplicated spare car key — lost or broken car key replacement in Dubai, Lock Repair Satwa',
+    heroImageAlt: 'Bentley original and newly duplicated spare car key — lost or broken car key replacement in Dubai, Lock repair service',
     icon: '🔨',
     emergency: true,
   },
@@ -682,13 +682,13 @@ export const services: Service[] = [
     slug: 'flip-keys',
     category: 'automotive',
     title: 'Flip Key Replacement & Programming',
-    metaTitle: 'Flip Key Replacement Dubai | Folding Car Key | Lock Repair Satwa',
+    metaTitle: 'Flip Key Replacement Dubai | Folding Car Key | Lock repair service',
     metaDescription:
       'Flip key shell replacement, blade cutting and remote programming in Dubai. All car makes covered. On-site mobile service — +971 52 642 6161.',
     directAnswerOpener:
-      'Flip keys (folding remote keys) combine a retractable blade and a remote fob in one compact unit. Lock Repair Satwa replaces damaged flip key shells, cuts new blades and programs the remote electronics on-site across Dubai. Service costs AED 250–550. Common on Toyota, Nissan, Audi, VW and many other brands popular in the UAE.',
+      'Flip keys (folding remote keys) combine a retractable blade and a remote fob in one compact unit. Lock repair service replaces damaged flip key shells, cuts new blades and programs the remote electronics on-site across Dubai. Service costs AED 250–550. Common on Toyota, Nissan, Audi, VW and many other brands popular in the UAE.',
     description:
-      'The flip key — also called a folding key — is one of the most common key types on UAE roads. Found on Toyota Fortuners, Nissan Patrols, Audi vehicles, Volkswagen models and many others, the flip mechanism folds the blade into the remote housing when not in use, protecting the blade and reducing pocket bulk.\n\nOver time, the hinge mechanism can break, the blade can snap, the remote buttons can fail, or the entire key can be lost. Lock Repair Satwa handles every flip-key scenario: shell replacement (when the blade and chip are intact but the housing is cracked), blade replacement (when the blade snaps at the hinge), full replacement (when the key is lost entirely), and remote reprogramming (when the lock/unlock buttons stop responding).\n\nFor shell replacements, we transfer the existing blade and chip to a new housing — a cost-effective option when only the plastic is damaged. For full replacements, we cut a new blade to VIN spec and program the remote and transponder chip via OBD. Our technicians carry a wide range of flip key shells to cover the most popular UAE vehicle models.',
+      'The flip key — also called a folding key — is one of the most common key types on UAE roads. Found on Toyota Fortuners, Nissan Patrols, Audi vehicles, Volkswagen models and many others, the flip mechanism folds the blade into the remote housing when not in use, protecting the blade and reducing pocket bulk.\n\nOver time, the hinge mechanism can break, the blade can snap, the remote buttons can fail, or the entire key can be lost. Lock repair service handles every flip-key scenario: shell replacement (when the blade and chip are intact but the housing is cracked), blade replacement (when the blade snaps at the hinge), full replacement (when the key is lost entirely), and remote reprogramming (when the lock/unlock buttons stop responding).\n\nFor shell replacements, we transfer the existing blade and chip to a new housing — a cost-effective option when only the plastic is damaged. For full replacements, we cut a new blade to VIN spec and program the remote and transponder chip via OBD. Our technicians carry a wide range of flip key shells to cover the most popular UAE vehicle models.',
     benefits: [
       {
         title: 'Shell Replacement Without Full Reprogramming',
@@ -775,7 +775,7 @@ export const services: Service[] = [
       'Mazda', 'Subaru', 'Suzuki',
     ],
     heroImage: '/images/services/ducati-motorcycle-key-cutting-dubai.webp',
-    heroImageAlt: 'Ducati motorcycle flip key on leather surface — flip key cutting and programming service in Dubai by Lock Repair Satwa',
+    heroImageAlt: 'Ducati motorcycle flip key on leather surface — flip key cutting and programming service in Dubai by Lock repair service',
     icon: '🔄',
     emergency: false,
   },
@@ -785,13 +785,13 @@ export const services: Service[] = [
     slug: 'smart-door-locks',
     category: 'residential',
     title: 'Smart Door Lock Installation & Repair',
-    metaTitle: 'Smart Door Lock Installation Dubai | Lock Repair Satwa',
+    metaTitle: 'Smart Door Lock Installation Dubai | Lock repair service',
     metaDescription:
       'Smart door lock supply, installation and repair in Dubai. Fingerprint, PIN, RFID and app-controlled locks for villas and apartments — +971 52 642 6161.',
     directAnswerOpener:
-      'Lock Repair Satwa installs and repairs smart door locks in Dubai for residential and commercial properties. We supply and fit fingerprint, PIN code, RFID card and app-controlled smart locks compatible with Dubai\'s villa and apartment door types. Installation costs AED 350–1,200 including the lock unit. Service available 7 days a week.',
+      'Lock repair service installs and repairs smart door locks in Dubai for residential and commercial properties. We supply and fit fingerprint, PIN code, RFID card and app-controlled smart locks compatible with Dubai\'s villa and apartment door types. Installation costs AED 350–1,200 including the lock unit. Service available 7 days a week.',
     description:
-      'Smart door locks are becoming the preferred access solution across Dubai\'s villa communities and high-rise apartments — eliminating the need for physical keys while providing audit logs, remote access and multiple entry methods. Lock Repair Satwa supplies, installs and services a curated range of smart lock brands tested for reliability in Dubai\'s climate, where summer humidity and heat can degrade cheaper electronic components.\n\nWe offer four main smart lock categories: fingerprint biometric locks (recognition in under 0.5 seconds), PIN keypad locks (programmable with multiple user codes), RFID card/fob locks (compatible with most building access cards), and WiFi/Bluetooth app-controlled locks (remotely controllable via iOS and Android apps). Many models combine multiple methods on a single unit.\n\nOur technicians assess your existing door and frame before recommending a lock. We cover standard apartment doors, solid wood villa doors, glass doors, and hollow-core doors — each requiring different mounting hardware. All installations include a full function test, programming of at least one fingerprint/PIN/card, and an orientation walkthrough for the resident.\n\nWe also repair and service existing smart locks: battery replacement, fingerprint sensor cleaning, firmware updates, and lock mechanism servicing.',
+      'Smart door locks are becoming the preferred access solution across Dubai\'s villa communities and high-rise apartments — eliminating the need for physical keys while providing audit logs, remote access and multiple entry methods. Lock repair service supplies, installs and services a curated range of smart lock brands tested for reliability in Dubai\'s climate, where summer humidity and heat can degrade cheaper electronic components.\n\nWe offer four main smart lock categories: fingerprint biometric locks (recognition in under 0.5 seconds), PIN keypad locks (programmable with multiple user codes), RFID card/fob locks (compatible with most building access cards), and WiFi/Bluetooth app-controlled locks (remotely controllable via iOS and Android apps). Many models combine multiple methods on a single unit.\n\nOur technicians assess your existing door and frame before recommending a lock. We cover standard apartment doors, solid wood villa doors, glass doors, and hollow-core doors — each requiring different mounting hardware. All installations include a full function test, programming of at least one fingerprint/PIN/card, and an orientation walkthrough for the resident.\n\nWe also repair and service existing smart locks: battery replacement, fingerprint sensor cleaning, firmware updates, and lock mechanism servicing.',
     benefits: [
       {
         title: 'Multiple Entry Methods',
@@ -877,7 +877,7 @@ export const services: Service[] = [
     ],
     supportedBrands: [],
     heroImage: '/images/services/smart-door-lock-installation-dubai.webp',
-    heroImageAlt: 'Black smart door lock with touchpad installed on apartment door — smart lock installation service in Dubai by Lock Repair Satwa',
+    heroImageAlt: 'Black smart door lock with touchpad installed on apartment door — smart lock installation service in Dubai by Lock repair service',
     icon: '🏠',
     emergency: false,
   },
@@ -887,13 +887,13 @@ export const services: Service[] = [
     slug: 'safe-box-services',
     category: 'residential',
     title: 'Safe Box Opening, Installation & Repair',
-    metaTitle: 'Safe Box Opening & Installation Dubai | Lock Repair Satwa',
+    metaTitle: 'Safe Box Opening & Installation Dubai | Lock repair service',
     metaDescription:
       'Safe box opening, combination reset and installation in Dubai. Hotel, home and office safes. Mobile service — call +971 52 642 6161.',
     directAnswerOpener:
-      'Lock Repair Satwa opens, repairs and installs safe boxes for homes, hotels and offices across Dubai. We open safes with forgotten combinations, dead batteries or malfunctioning locks — without drilling where possible. Safe opening starts at AED 200. We also supply and install new electronic and mechanical safes from AED 400.',
+      'Lock repair service opens, repairs and installs safe boxes for homes, hotels and offices across Dubai. We open safes with forgotten combinations, dead batteries or malfunctioning locks — without drilling where possible. Safe opening starts at AED 200. We also supply and install new electronic and mechanical safes from AED 400.',
     description:
-      'Whether you have forgotten your safe combination, the electronic keypad has failed, the battery has died, or you have acquired a second-hand safe with an unknown code, Lock Repair Satwa provides professional safe box services across Dubai.\n\nOur technicians are trained in both electronic and mechanical safe entry methods. For electronic safes, we first attempt a battery bypass or keypad reset. If these are unsuccessful, we use manufacturer override codes (where available) before resorting to any physical manipulation. For combination mechanical safes, we use non-destructive dial manipulation techniques developed by professional locksmiths.\n\nWe also supply and install new safes for home, hotel room and office use. Our range includes compact hotel-style safes, large home safes bolted to floors or walls, and heavy-duty commercial safes for jewellery and document storage. All installations include secure anchoring to the floor or wall structure and full programming of the initial combination.\n\nNote: We do not open safes without proof of ownership. For hotel safes, we work directly with hotel management and security teams.',
+      'Whether you have forgotten your safe combination, the electronic keypad has failed, the battery has died, or you have acquired a second-hand safe with an unknown code, Lock repair service provides professional safe box services across Dubai.\n\nOur technicians are trained in both electronic and mechanical safe entry methods. For electronic safes, we first attempt a battery bypass or keypad reset. If these are unsuccessful, we use manufacturer override codes (where available) before resorting to any physical manipulation. For combination mechanical safes, we use non-destructive dial manipulation techniques developed by professional locksmiths.\n\nWe also supply and install new safes for home, hotel room and office use. Our range includes compact hotel-style safes, large home safes bolted to floors or walls, and heavy-duty commercial safes for jewellery and document storage. All installations include secure anchoring to the floor or wall structure and full programming of the initial combination.\n\nNote: We do not open safes without proof of ownership. For hotel safes, we work directly with hotel management and security teams.',
     benefits: [
       {
         title: 'Non-Destructive Opening Where Possible',
@@ -982,13 +982,13 @@ export const services: Service[] = [
     slug: 'parking-remotes',
     category: 'residential',
     title: 'Parking Remote & Gate Remote Services',
-    metaTitle: 'Parking Remote Programming Dubai | Gate Fob Cloning | Lock Repair Satwa',
+    metaTitle: 'Parking Remote Programming Dubai | Gate Fob Cloning | Lock repair service',
     metaDescription:
       'Parking and gate remote programming, cloning and replacement in Dubai. All frequencies covered. Mobile service — call +971 52 642 6161.',
     directAnswerOpener:
-      'Lock Repair Satwa programs, clones and replaces parking garage and gate remotes across Dubai for AED 150–450. We cover fixed-code and rolling-code systems used in Dubai residential buildings, villa community gates, and underground car parks. Same-day service for most remote types.',
+      'Lock repair service programs, clones and replaces parking garage and gate remotes across Dubai for AED 150–450. We cover fixed-code and rolling-code systems used in Dubai residential buildings, villa community gates, and underground car parks. Same-day service for most remote types.',
     description:
-      'Parking remotes and gate fobs are easy to lose and surprisingly expensive to replace through building management companies. Lock Repair Satwa offers a faster, more affordable alternative — we clone, program or replace parking remotes for Dubai residential buildings, compound gates and underground car parks.\n\nWe work with the two main remote system categories used in Dubai buildings: fixed-code remotes (where we can clone the signal to a new fob in minutes) and rolling-code remotes (where we must program the new fob through the gate control panel, which typically requires building management cooperation).\n\nFor fixed-code remotes (the majority of older residential buildings in Dubai), we clone your existing remote to a new fob in under 15 minutes. For rolling-code systems, we program the new remote if you have access to the control panel, or advise on the building management process.\n\nWe also supply spare remotes at competitive prices, allowing you to keep a backup fob without paying the premium charged by building management offices.',
+      'Parking remotes and gate fobs are easy to lose and surprisingly expensive to replace through building management companies. Lock repair service offers a faster, more affordable alternative — we clone, program or replace parking remotes for Dubai residential buildings, compound gates and underground car parks.\n\nWe work with the two main remote system categories used in Dubai buildings: fixed-code remotes (where we can clone the signal to a new fob in minutes) and rolling-code remotes (where we must program the new fob through the gate control panel, which typically requires building management cooperation).\n\nFor fixed-code remotes (the majority of older residential buildings in Dubai), we clone your existing remote to a new fob in under 15 minutes. For rolling-code systems, we program the new remote if you have access to the control panel, or advise on the building management process.\n\nWe also supply spare remotes at competitive prices, allowing you to keep a backup fob without paying the premium charged by building management offices.',
     benefits: [
       {
         title: 'Remote Cloning in 15 Minutes',
@@ -1070,13 +1070,13 @@ export const services: Service[] = [
   {
     slug: 'rubber-stamps',
     title: 'Rubber Stamp Making Dubai',
-    metaTitle: 'Rubber Stamp Making Dubai | Same-Day Service | Lock Repair Satwa',
+    metaTitle: 'Rubber Stamp Making Dubai | Same-Day Service | Lock repair service',
     metaDescription:
       'Custom rubber stamps in Dubai — self-inking, pre-inked and traditional. Business, legal and personal stamps. Same-day delivery — +971 52 642 6161.',
     directAnswerOpener:
-      'Lock Repair Satwa produces custom rubber stamps in Dubai for businesses, professionals and personal use. We make self-inking, pre-inked and traditional rubber stamps with custom text, logos and Arabic text. Stamps are ready in 30–90 minutes. Pricing starts at AED 50 for a basic round stamp, up to AED 200 for large self-inking business stamps.',
+      'Lock repair service produces custom rubber stamps in Dubai for businesses, professionals and personal use. We make self-inking, pre-inked and traditional rubber stamps with custom text, logos and Arabic text. Stamps are ready in 30–90 minutes. Pricing starts at AED 50 for a basic round stamp, up to AED 200 for large self-inking business stamps.',
     description:
-      'Custom rubber stamps are an essential business tool across Dubai — from company signature stamps and "Received" office stamps to notary-style stamps for legal documents. Lock Repair Satwa provides fast, high-quality rubber stamp production as an extension of our physical security and key services.\n\nWe produce three stamp types: self-inking stamps (built-in ink reservoir, recommended for frequent use), pre-inked stamps (high-impression-quality, ink-infused die for premium results) and traditional rubber stamps (requiring a separate ink pad, most economical option).\n\nOur stamps support English and Arabic text, custom logos, QR codes and signature reproductions. We can produce standard round and rectangular stamps, as well as custom shapes for marketing purposes. Files can be submitted as PDF, PNG or AI (Adobe Illustrator) format.\n\nOrder online or by WhatsApp, and your stamp is ready for collection or delivery within 1–3 hours for standard designs.',
+      'Custom rubber stamps are an essential business tool across Dubai — from company signature stamps and "Received" office stamps to notary-style stamps for legal documents. Lock repair service provides fast, high-quality rubber stamp production as an extension of our physical security and key services.\n\nWe produce three stamp types: self-inking stamps (built-in ink reservoir, recommended for frequent use), pre-inked stamps (high-impression-quality, ink-infused die for premium results) and traditional rubber stamps (requiring a separate ink pad, most economical option).\n\nOur stamps support English and Arabic text, custom logos, QR codes and signature reproductions. We can produce standard round and rectangular stamps, as well as custom shapes for marketing purposes. Files can be submitted as PDF, PNG or AI (Adobe Illustrator) format.\n\nOrder online or by WhatsApp, and your stamp is ready for collection or delivery within 1–3 hours for standard designs.',
     benefits: [
       {
         title: 'Arabic & English Text',
@@ -1165,13 +1165,13 @@ export const services: Service[] = [
     slug: 'car-battery-replacement',
     category: 'automotive',
     title: 'Car Battery Replacement Dubai',
-    metaTitle: 'Car Battery Replacement Dubai | Mobile Service | Lock Repair Satwa',
+    metaTitle: 'Car Battery Replacement Dubai | Mobile Service | Lock repair service',
     metaDescription:
       'Mobile car battery replacement in Dubai. We test, supply and fit batteries for all car makes. 24/7 service, no towing needed — +971 52 642 6161.',
     directAnswerOpener:
-      'Lock Repair Satwa provides mobile car battery replacement across Dubai for AED 250–600, including the battery and fitting. We carry batteries for Japanese, European, American and Korean vehicles. A technician tests your current battery on-site using a digital load tester, then fits a new battery and resets any ECU memory codes. available 24/7.',
+      'Lock repair service provides mobile car battery replacement across Dubai for AED 250–600, including the battery and fitting. We carry batteries for Japanese, European, American and Korean vehicles. A technician tests your current battery on-site using a digital load tester, then fits a new battery and resets any ECU memory codes. available 24/7.',
     description:
-      'Dubai\'s extreme summer heat is the number one killer of car batteries — the average battery life in UAE climates is 2–3 years, compared to 4–5 years in Europe. When your car refuses to start on a scorching Dubai morning, the battery is the most common culprit.\n\nLock Repair Satwa provides a complete mobile battery service: we come to you, test the existing battery with a professional digital load tester, confirm the diagnosis, and replace the battery with a correctly spec\'d replacement unit sourced from trusted brands (Varta, Bosch, ACDelco, Rocket, and Amaron).\n\nOur technicians carry the most common battery sizes for popular UAE vehicles — Toyota Land Cruisers, Nissan Patrols, Honda Accords, BMW 5 Series and many more. If your battery size is less common, we can source and deliver it within 2–4 hours.\n\nImportantly, we handle ECU memory reset after battery replacement on modern vehicles that require it (some BMWs, Mercedes and other European cars need battery registration to the BCM to ensure correct charging profile). We carry OBD tools to perform this step on-site, preventing erratic charging behaviour from a newly fitted battery.\n\nOld batteries are removed and disposed of responsibly through our recycling partner.',
+      'Dubai\'s extreme summer heat is the number one killer of car batteries — the average battery life in UAE climates is 2–3 years, compared to 4–5 years in Europe. When your car refuses to start on a scorching Dubai morning, the battery is the most common culprit.\n\nLock repair service provides a complete mobile battery service: we come to you, test the existing battery with a professional digital load tester, confirm the diagnosis, and replace the battery with a correctly spec\'d replacement unit sourced from trusted brands (Varta, Bosch, ACDelco, Rocket, and Amaron).\n\nOur technicians carry the most common battery sizes for popular UAE vehicles — Toyota Land Cruisers, Nissan Patrols, Honda Accords, BMW 5 Series and many more. If your battery size is less common, we can source and deliver it within 2–4 hours.\n\nImportantly, we handle ECU memory reset after battery replacement on modern vehicles that require it (some BMWs, Mercedes and other European cars need battery registration to the BCM to ensure correct charging profile). We carry OBD tools to perform this step on-site, preventing erratic charging behaviour from a newly fitted battery.\n\nOld batteries are removed and disposed of responsibly through our recycling partner.',
     benefits: [
       {
         title: 'Digital Load Testing First',
@@ -1277,13 +1277,13 @@ export const services: Service[] = [
     slug: 'key-duplication',
     category: 'residential',
     title: 'Key Duplication',
-    metaTitle: 'Key Duplication Dubai | Door & Home Keys | Lock Repair Satwa',
+    metaTitle: 'Key Duplication Dubai | Door & Home Keys | Lock repair service',
     metaDescription:
       'Fast key duplication in Dubai for door keys, padlock keys, mailbox keys and more. From AED 50. Mobile service or visit our Al Bada\'a workshop — +971 52 642 6161.',
     directAnswerOpener:
-      'Lock Repair Satwa provides key duplication in Dubai from AED 50 for standard door keys. We copy mortise keys, Yale keys, padlock keys, mailbox keys and more in 10–20 minutes. Mobile service available across all Dubai neighbourhoods or visit our D90 Al Bada\'a workshop. Call +971 52 642 6161.',
+      'Lock repair service provides key duplication in Dubai from AED 50 for standard door keys. We copy mortise keys, Yale keys, padlock keys, mailbox keys and more in 10–20 minutes. Mobile service available across all Dubai neighbourhoods or visit our D90 Al Bada\'a workshop. Call +971 52 642 6161.',
     description:
-      'Having a spare door key is one of the simplest and most practical security measures for any Dubai home. Whether you need a copy for a family member, a housekeeper, or simply as a backup, Lock Repair Satwa duplicates all types of residential keys quickly and at competitive prices.\n\nWe copy mortise keys, Yale flat keys, dimple keys, tubular keys, padlock keys, mailbox keys and safe deposit keys. Our precision key-cutting machines ensure the duplicate is cut to exact tolerances — keys that actually work first time, not approximate copies that wear out your lock.\n\nOur Al Bada\'a workshop is open daily, and we also offer mobile key duplication for customers who prefer service at their home or office. Standard door keys are duplicated in as little as 10 minutes. Specialty high-security keys with restricted profiles may take slightly longer.',
+      'Having a spare door key is one of the simplest and most practical security measures for any Dubai home. Whether you need a copy for a family member, a housekeeper, or simply as a backup, Lock repair service duplicates all types of residential keys quickly and at competitive prices.\n\nWe copy mortise keys, Yale flat keys, dimple keys, tubular keys, padlock keys, mailbox keys and safe deposit keys. Our precision key-cutting machines ensure the duplicate is cut to exact tolerances — keys that actually work first time, not approximate copies that wear out your lock.\n\nOur Al Bada\'a workshop is open daily, and we also offer mobile key duplication for customers who prefer service at their home or office. Standard door keys are duplicated in as little as 10 minutes. Specialty high-security keys with restricted profiles may take slightly longer.',
     benefits: [
       {
         title: 'All Key Types Copied',
@@ -1325,13 +1325,13 @@ export const services: Service[] = [
     slug: 'safe-opening',
     category: 'residential',
     title: 'Safe Opening',
-    metaTitle: 'Safe Opening Dubai | Forgotten Combination | Lock Repair Satwa',
+    metaTitle: 'Safe Opening Dubai | Forgotten Combination | Lock repair service',
     metaDescription:
-      'Professional safe opening in Dubai without drilling where possible. Forgotten combination, dead battery or jammed mechanism — Lock Repair Satwa opens it. Call +971 52 642 6161.',
+      'Professional safe opening in Dubai without drilling where possible. Forgotten combination, dead battery or jammed mechanism — Lock repair service opens it. Call +971 52 642 6161.',
     directAnswerOpener:
-      'Lock Repair Satwa opens safes in Dubai with forgotten combinations, dead batteries or malfunctioning electronic keypads. We use non-destructive methods first — battery bypass, override codes and dial manipulation — before any drilling. Safe opening starts at AED 200. Available 24/7 for emergency situations. Call +971 52 642 6161.',
+      'Lock repair service opens safes in Dubai with forgotten combinations, dead batteries or malfunctioning electronic keypads. We use non-destructive methods first — battery bypass, override codes and dial manipulation — before any drilling. Safe opening starts at AED 200. Available 24/7 for emergency situations. Call +971 52 642 6161.',
     description:
-      'A locked safe you cannot open is one of the most frustrating situations — especially when important documents, cash or valuables are inside. Lock Repair Satwa provides professional safe opening services across Dubai for home, hotel and office safes of all makes and models.\n\nOur approach is always non-destructive first. For electronic safes, we attempt battery bypass via the external terminal, followed by emergency override codes where the manufacturer provides them. For mechanical combination safes, our locksmiths use professional dial manipulation techniques that require no drilling and leave the safe in full working condition.\n\nOnly in cases where the locking bolts are mechanically jammed or the safe is a high-security vault without any bypass option do we proceed with controlled drilling at the point of least structural damage. After opening, we inspect and service the lock mechanism, reset the combination to your new code, and confirm the safe is fully functional before we leave.',
+      'A locked safe you cannot open is one of the most frustrating situations — especially when important documents, cash or valuables are inside. Lock repair service provides professional safe opening services across Dubai for home, hotel and office safes of all makes and models.\n\nOur approach is always non-destructive first. For electronic safes, we attempt battery bypass via the external terminal, followed by emergency override codes where the manufacturer provides them. For mechanical combination safes, our locksmiths use professional dial manipulation techniques that require no drilling and leave the safe in full working condition.\n\nOnly in cases where the locking bolts are mechanically jammed or the safe is a high-security vault without any bypass option do we proceed with controlled drilling at the point of least structural damage. After opening, we inspect and service the lock mechanism, reset the combination to your new code, and confirm the safe is fully functional before we leave.',
     benefits: [
       {
         title: 'Non-Destructive First Approach',
@@ -1375,13 +1375,13 @@ export const services: Service[] = [
     slug: 'access-card-duplication',
     category: 'residential',
     title: 'Access Card Duplication',
-    metaTitle: 'Access Card Duplication Dubai | RFID Cards | Lock Repair Satwa',
+    metaTitle: 'Access Card Duplication Dubai | RFID Cards | Lock repair service',
     metaDescription:
       'Access card and key fob duplication in Dubai for residential buildings. RFID, proximity and EM4100 card cloning — 15–30 minutes. Call +971 52 642 6161.',
     directAnswerOpener:
-      'Lock Repair Satwa duplicates access cards and key fobs for Dubai residential buildings, offices and parking barriers. We clone RFID (125 kHz EM4100), HID proximity and NFC access cards in 15–30 minutes from AED 50. Mobile service available — we come to your home or office. Call +971 52 642 6161.',
+      'Lock repair service duplicates access cards and key fobs for Dubai residential buildings, offices and parking barriers. We clone RFID (125 kHz EM4100), HID proximity and NFC access cards in 15–30 minutes from AED 50. Mobile service available — we come to your home or office. Call +971 52 642 6161.',
     description:
-      'Access cards and key fobs are the primary entry method for the vast majority of Dubai\'s residential towers and villa communities. Losing one — or needing a spare for a family member or housekeeper — means either paying the building management\'s premium replacement fee or waiting days for processing.\n\nLock Repair Satwa provides fast, affordable access card and fob duplication for standard 125 kHz cards (EM4100, EM4102, T5577 format) and HID proximity cards commonly used in UAE buildings. We clone the card\'s identification data to a new blank card of the same format, producing an identical duplicate that works on all readers registered to the original.\n\nNote: Encrypted card systems (Mifare Classic with custom encryption, DESFire) and building-specific high-security cards cannot be cloned — these require direct programming through the building management system. We will identify your card type during the service and advise whether cloning is feasible.',
+      'Access cards and key fobs are the primary entry method for the vast majority of Dubai\'s residential towers and villa communities. Losing one — or needing a spare for a family member or housekeeper — means either paying the building management\'s premium replacement fee or waiting days for processing.\n\nLock repair service provides fast, affordable access card and fob duplication for standard 125 kHz cards (EM4100, EM4102, T5577 format) and HID proximity cards commonly used in UAE buildings. We clone the card\'s identification data to a new blank card of the same format, producing an identical duplicate that works on all readers registered to the original.\n\nNote: Encrypted card systems (Mifare Classic with custom encryption, DESFire) and building-specific high-security cards cannot be cloned — these require direct programming through the building management system. We will identify your card type during the service and advise whether cloning is feasible.',
     benefits: [
       {
         title: 'Fast Cloning in 15–30 Minutes',
@@ -1423,13 +1423,13 @@ export const services: Service[] = [
     slug: 'lock-change',
     category: 'residential',
     title: 'Lock Change',
-    metaTitle: 'Lock Change Dubai | Door Lock Replacement | Lock Repair Satwa',
+    metaTitle: 'Lock Change Dubai | Door Lock Replacement | Lock repair service',
     metaDescription:
       'Lock change service for Dubai apartments and villas. We replace mortise locks, deadbolts and smart locks. From AED 200 — +971 52 642 6161.',
     directAnswerOpener:
-      'Lock Repair Satwa changes door locks for Dubai apartments, villas and offices from AED 200 including parts and labour. We supply and fit mortise locks, deadbolt locks, digital smart locks and padlocks. Service takes 30–60 minutes. Available daily across all Dubai areas. Call +971 52 642 6161.',
+      'Lock repair service changes door locks for Dubai apartments, villas and offices from AED 200 including parts and labour. We supply and fit mortise locks, deadbolt locks, digital smart locks and padlocks. Service takes 30–60 minutes. Available daily across all Dubai areas. Call +971 52 642 6161.',
     description:
-      'Changing your door lock is the most effective security upgrade you can make when you move into a new Dubai property, after a break-in, when a key is lost, or when a previous tenant or contractor may still have a key. Lock Repair Satwa supplies and fits replacement locks for all residential and light commercial door types across Dubai.\n\nWe carry a range of quality lock brands suitable for Dubai\'s climate — from standard mortise locks and single/double cylinder deadbolts to high-security picks-resistant locks for enhanced protection. Our technicians match the new lock to your existing door preparation where possible, avoiding unnecessary drilling or door modification.\n\nFor apartments, we replace the lock cylinder within the existing mortise body, preserving the door hardware and reducing cost. For villas and buildings requiring a full lock mechanism replacement, we supply and fit the complete unit. We also offer digital smart lock upgrades as part of a lock change — replacing a standard mechanical lock with a fingerprint or PIN-code model in the same visit.',
+      'Changing your door lock is the most effective security upgrade you can make when you move into a new Dubai property, after a break-in, when a key is lost, or when a previous tenant or contractor may still have a key. Lock repair service supplies and fits replacement locks for all residential and light commercial door types across Dubai.\n\nWe carry a range of quality lock brands suitable for Dubai\'s climate — from standard mortise locks and single/double cylinder deadbolts to high-security picks-resistant locks for enhanced protection. Our technicians match the new lock to your existing door preparation where possible, avoiding unnecessary drilling or door modification.\n\nFor apartments, we replace the lock cylinder within the existing mortise body, preserving the door hardware and reducing cost. For villas and buildings requiring a full lock mechanism replacement, we supply and fit the complete unit. We also offer digital smart lock upgrades as part of a lock change — replacing a standard mechanical lock with a fingerprint or PIN-code model in the same visit.',
     benefits: [
       {
         title: 'Same-Day Lock Supply & Fitting',
@@ -1472,13 +1472,13 @@ export const services: Service[] = [
     slug: 'lock-repair',
     category: 'residential',
     title: 'Lock Repair',
-    metaTitle: 'Lock Repair Dubai | Stiff & Broken Locks Fixed | Lock Repair Satwa',
+    metaTitle: 'Lock Repair Dubai | Stiff & Broken Locks Fixed | Lock repair service',
     metaDescription:
       'Lock repair in Dubai for stiff, jammed or broken door locks. On-site service in 30–60 minutes. From AED 150 — +971 52 642 6161.',
     directAnswerOpener:
-      'Lock Repair Satwa repairs stiff, jammed, broken or misaligned door locks across Dubai for AED 150–400. Common faults include loose handles, broken cylinders, misaligned strike plates and worn mortise mechanisms. Our mobile locksmiths diagnose and fix most lock faults on-site in 30–60 minutes. Call +971 52 642 6161.',
+      'Lock repair service repairs stiff, jammed, broken or misaligned door locks across Dubai for AED 150–400. Common faults include loose handles, broken cylinders, misaligned strike plates and worn mortise mechanisms. Our mobile locksmiths diagnose and fix most lock faults on-site in 30–60 minutes. Call +971 52 642 6161.',
     description:
-      'A stiff, sticky or jammed door lock is both an inconvenience and a security risk — a lock that is hard to operate can fail completely at the worst possible time, leaving you locked out or unable to secure your property. Lock Repair Satwa provides on-site lock repair across Dubai for residential and light commercial doors.\n\nCommon lock faults we repair include: worn cylinder pins (causing the key to turn with difficulty), broken springs inside the mortise body, misaligned strike plates causing the latch or bolt to bind, loose or wobbly handles due to worn through-bolts, broken cam in the cylinder preventing key operation, and general lubrication and servicing to restore smooth operation.\n\nWhere a lock fault is caused by door misalignment — which is common in Dubai buildings where temperature cycling causes frames to expand and contract — we adjust the strike plate position or sand the door edge to restore proper alignment. This avoids unnecessary lock replacement costs when the lock body itself is not at fault.',
+      'A stiff, sticky or jammed door lock is both an inconvenience and a security risk — a lock that is hard to operate can fail completely at the worst possible time, leaving you locked out or unable to secure your property. Lock repair service provides on-site lock repair across Dubai for residential and light commercial doors.\n\nCommon lock faults we repair include: worn cylinder pins (causing the key to turn with difficulty), broken springs inside the mortise body, misaligned strike plates causing the latch or bolt to bind, loose or wobbly handles due to worn through-bolts, broken cam in the cylinder preventing key operation, and general lubrication and servicing to restore smooth operation.\n\nWhere a lock fault is caused by door misalignment — which is common in Dubai buildings where temperature cycling causes frames to expand and contract — we adjust the strike plate position or sand the door edge to restore proper alignment. This avoids unnecessary lock replacement costs when the lock body itself is not at fault.',
     benefits: [
       {
         title: 'Diagnosis Before Repair Quote',
@@ -1521,13 +1521,13 @@ export const services: Service[] = [
     slug: 'mailbox-lock',
     category: 'residential',
     title: 'Mailbox Lock Services',
-    metaTitle: 'Mailbox Lock Dubai | Open, Replace & Duplicate Keys | Lock Repair Satwa',
+    metaTitle: 'Mailbox Lock Dubai | Open, Replace & Duplicate Keys | Lock repair service',
     metaDescription:
       'Mailbox lock opening, replacement and key duplication in Dubai. Same-day service for apartment and villa mailboxes — +971 52 642 6161.',
     directAnswerOpener:
-      'Lock Repair Satwa opens, replaces and provides spare keys for mailbox locks across Dubai from AED 100. If you have lost your mailbox key or the lock is jammed, our locksmiths open it without damage and supply a replacement lock and spare keys. Service takes 20–40 minutes. Call +971 52 642 6161.',
+      'Lock repair service opens, replaces and provides spare keys for mailbox locks across Dubai from AED 100. If you have lost your mailbox key or the lock is jammed, our locksmiths open it without damage and supply a replacement lock and spare keys. Service takes 20–40 minutes. Call +971 52 642 6161.',
     description:
-      'Mailbox locks are small but important — your utility bills, official correspondence and bank letters all arrive via the mailbox, making it a security concern. Lock Repair Satwa provides a full range of mailbox lock services for Dubai apartment complexes, villa compounds and commercial buildings.\n\nWe open locked mailboxes without a key using non-destructive picking or impressioning techniques. Once open, we replace the lock with a new unit and provide two or more spare keys. We also duplicate mailbox keys when an original is available but spares are needed.\n\nCommon Dubai mailbox lock types include cam locks (the most common type in UAE buildings) and tubular locks. We carry a range of standard cam lock sizes and can match or replace the existing lock in most cases without requiring a specialist order.',
+      'Mailbox locks are small but important — your utility bills, official correspondence and bank letters all arrive via the mailbox, making it a security concern. Lock repair service provides a full range of mailbox lock services for Dubai apartment complexes, villa compounds and commercial buildings.\n\nWe open locked mailboxes without a key using non-destructive picking or impressioning techniques. Once open, we replace the lock with a new unit and provide two or more spare keys. We also duplicate mailbox keys when an original is available but spares are needed.\n\nCommon Dubai mailbox lock types include cam locks (the most common type in UAE buildings) and tubular locks. We carry a range of standard cam lock sizes and can match or replace the existing lock in most cases without requiring a specialist order.',
     benefits: [
       {
         title: 'Non-Destructive Mailbox Opening',
@@ -1569,13 +1569,13 @@ export const services: Service[] = [
     slug: 'garage-remote-duplicate',
     category: 'residential',
     title: 'Garage Remote Duplicate',
-    metaTitle: 'Garage Remote Duplicate Dubai | Gate Fob Cloning | Lock Repair Satwa',
+    metaTitle: 'Garage Remote Duplicate Dubai | Gate Fob Cloning | Lock repair service',
     metaDescription:
       'Garage remote and gate fob duplication in Dubai. Clone your remote in 15–30 minutes from AED 150. Mobile service available — +971 52 642 6161.',
     directAnswerOpener:
-      'Lock Repair Satwa clones and duplicates garage and gate remotes across Dubai in 15–30 minutes from AED 150. We cover fixed-code and compatible rolling-code remotes used in Dubai villa garages and residential gate systems. Mobile service available — we come to your location. Call +971 52 642 6161.',
+      'Lock repair service clones and duplicates garage and gate remotes across Dubai in 15–30 minutes from AED 150. We cover fixed-code and compatible rolling-code remotes used in Dubai villa garages and residential gate systems. Mobile service available — we come to your location. Call +971 52 642 6161.',
     description:
-      'Garage remotes are convenient until you need a spare or lose one. Lock Repair Satwa provides garage remote duplication services for Dubai villas and residential properties, creating an exact working copy of your existing remote without any programming of the gate control panel.\n\nFor fixed-code garage remotes (the most common type in older Dubai villa garages), we clone the signal directly from your working remote to a new blank fob in minutes. The clone works identically on your garage door or gate motor.\n\nFor more modern rolling-code garage systems (commonly found in newer Dubai villa developments), cloning requires access to the garage motor\'s learn button or control panel to register the new remote. Where you have access to the motor, we handle the full programming process on-site.\n\nWe carry a range of universal remote blanks compatible with popular garage motor brands used in Dubai, including FAAC, BFT, Nice, Came, Hormann and others commonly installed in UAE residential developments.',
+      'Garage remotes are convenient until you need a spare or lose one. Lock repair service provides garage remote duplication services for Dubai villas and residential properties, creating an exact working copy of your existing remote without any programming of the gate control panel.\n\nFor fixed-code garage remotes (the most common type in older Dubai villa garages), we clone the signal directly from your working remote to a new blank fob in minutes. The clone works identically on your garage door or gate motor.\n\nFor more modern rolling-code garage systems (commonly found in newer Dubai villa developments), cloning requires access to the garage motor\'s learn button or control panel to register the new remote. Where you have access to the motor, we handle the full programming process on-site.\n\nWe carry a range of universal remote blanks compatible with popular garage motor brands used in Dubai, including FAAC, BFT, Nice, Came, Hormann and others commonly installed in UAE residential developments.',
     benefits: [
       {
         title: 'Fixed-Code Cloning Without Motor Access',
@@ -1617,13 +1617,13 @@ export const services: Service[] = [
     slug: 'sliding-patio-door-lock',
     category: 'residential',
     title: 'Sliding Patio Door Lock Installation',
-    metaTitle: 'Sliding Patio Door Lock Dubai | Installation & Repair | Lock Repair Satwa',
+    metaTitle: 'Sliding Patio Door Lock Dubai | Installation & Repair | Lock repair service',
     metaDescription:
       'Sliding patio door lock installation and repair in Dubai for villas and apartments. From AED 250 — +971 52 642 6161.',
     directAnswerOpener:
-      'Lock Repair Satwa installs and repairs sliding patio door locks in Dubai villas and apartments from AED 250. We fit mortise sliding locks, hook bolt locks, multi-point locks and secondary security bars for aluminium and uPVC sliding doors. Available 7 days a week across all Dubai areas. Call +971 52 642 6161.',
+      'Lock repair service installs and repairs sliding patio door locks in Dubai villas and apartments from AED 250. We fit mortise sliding locks, hook bolt locks, multi-point locks and secondary security bars for aluminium and uPVC sliding doors. Available 7 days a week across all Dubai areas. Call +971 52 642 6161.',
     description:
-      'Sliding patio doors are a feature of many Dubai villa gardens and apartment balconies, but they are frequently the weakest point in a property\'s security. Standard sliding door locks are often flimsy, and the doors can be easily lifted off their tracks if no secondary security is fitted. Lock Repair Satwa installs high-quality sliding door locks and security solutions that provide genuine protection.\n\nWe install mortise-style sliding door locks that engage a bolt into the frame, hook bolt locks that prevent the door being lifted out of the track, multi-point locking bars, and secondary security pins or bars for an additional layer of protection. For balcony sliding doors in apartments, we also install key-locking secondary bolts that prevent the door being opened from outside even if the primary latch is defeated.\n\nFor existing sliding doors where the lock mechanism has worn or the handle is loose, we service and repair the lock carriage, replace worn rollers that cause the door to bind, and adjust the frame to ensure the lock engages properly.',
+      'Sliding patio doors are a feature of many Dubai villa gardens and apartment balconies, but they are frequently the weakest point in a property\'s security. Standard sliding door locks are often flimsy, and the doors can be easily lifted off their tracks if no secondary security is fitted. Lock repair service installs high-quality sliding door locks and security solutions that provide genuine protection.\n\nWe install mortise-style sliding door locks that engage a bolt into the frame, hook bolt locks that prevent the door being lifted out of the track, multi-point locking bars, and secondary security pins or bars for an additional layer of protection. For balcony sliding doors in apartments, we also install key-locking secondary bolts that prevent the door being opened from outside even if the primary latch is defeated.\n\nFor existing sliding doors where the lock mechanism has worn or the handle is loose, we service and repair the lock carriage, replace worn rollers that cause the door to bind, and adjust the frame to ensure the lock engages properly.',
     benefits: [
       {
         title: 'Security Upgrade for Vulnerable Sliding Doors',
@@ -1666,13 +1666,13 @@ export const services: Service[] = [
     slug: 'home-lockout',
     category: 'residential',
     title: 'Home Lockout Service',
-    metaTitle: 'Home Lockout Dubai | 24/7 Emergency Locksmith | Lock Repair Satwa',
+    metaTitle: 'Home Lockout Dubai | 24/7 Emergency Locksmith | Lock repair service',
     metaDescription:
       'Locked out of your home in Dubai? We arrive in 20–40 minutes, open your door without damage and can change the lock on the spot. +971 52 642 6161.',
     directAnswerOpener:
-      'Lock Repair Satwa resolves home lockout situations across Dubai 24/7, with average arrival in 20–40 minutes. We use non-destructive picking, impressioning or bypass methods to open residential doors without damage. Service costs AED 200–400. We can also change the lock in the same visit if needed. Call +971 52 642 6161.',
+      'Lock repair service resolves home lockout situations across Dubai 24/7, with average arrival in 20–40 minutes. We use non-destructive picking, impressioning or bypass methods to open residential doors without damage. Service costs AED 200–400. We can also change the lock in the same visit if needed. Call +971 52 642 6161.',
     description:
-      'Being locked out of your Dubai home is stressful at any hour — even more so late at night or with children waiting outside. Lock Repair Satwa provides a fast, professional home lockout response across all Dubai areas, with technicians on the road 24/7 including weekends and public holidays.\n\nOur locksmiths use non-destructive entry techniques as the first approach: lock picking for standard pin-tumbler cylinders (mortise and Yale locks), card shimming for spring latches, and bypass tools for deadbolts with accessible cam mechanisms. In the vast majority of residential lockout situations, we open the door without any damage to the lock or door frame.\n\nOnce you are inside, we can change the lock in the same visit if needed — for example if the key was lost outside and security is a concern, or if the lock is old and worn and contributed to the lockout. We carry a range of common cylinder and mortise lock replacements for same-day fitting.\n\nWe require identity verification (Emirates ID or passport, plus any tenancy or ownership document for the property) before opening any residential door, to protect property owners against unauthorised entry.',
+      'Being locked out of your Dubai home is stressful at any hour — even more so late at night or with children waiting outside. Lock repair service provides a fast, professional home lockout response across all Dubai areas, with technicians on the road 24/7 including weekends and public holidays.\n\nOur locksmiths use non-destructive entry techniques as the first approach: lock picking for standard pin-tumbler cylinders (mortise and Yale locks), card shimming for spring latches, and bypass tools for deadbolts with accessible cam mechanisms. In the vast majority of residential lockout situations, we open the door without any damage to the lock or door frame.\n\nOnce you are inside, we can change the lock in the same visit if needed — for example if the key was lost outside and security is a concern, or if the lock is old and worn and contributed to the lockout. We carry a range of common cylinder and mortise lock replacements for same-day fitting.\n\nWe require identity verification (Emirates ID or passport, plus any tenancy or ownership document for the property) before opening any residential door, to protect property owners against unauthorised entry.',
     benefits: [
       {
         title: '24/7 Emergency Response',
@@ -1716,13 +1716,13 @@ export const services: Service[] = [
     slug: 'key-maker',
     category: 'residential',
     title: 'Key Maker Dubai',
-    metaTitle: 'Key Maker Dubai | All Key Types Cut | Lock Repair Satwa',
+    metaTitle: 'Key Maker Dubai | All Key Types Cut | Lock repair service',
     metaDescription:
       'Key maker service in Dubai for all key types — door keys, padlock keys, cabinet keys, safe keys and more. From AED 50. Call +971 52 642 6161.',
     directAnswerOpener:
-      'Lock Repair Satwa is a professional key maker in Dubai, cutting keys for doors, padlocks, cabinets, safes, mailboxes and more from AED 50. Our workshop at D90 Al Bada\'a and mobile technicians cover all Dubai areas. Keys are cut on professional machines and tested before handover. Call +971 52 642 6161.',
+      'Lock repair service is a professional key maker in Dubai, cutting keys for doors, padlocks, cabinets, safes, mailboxes and more from AED 50. Our workshop at D90 Al Bada\'a and mobile technicians cover all Dubai areas. Keys are cut on professional machines and tested before handover. Call +971 52 642 6161.',
     description:
-      'A key maker service in Dubai needs to handle far more than just simple house keys — from the tubular padlock keys used on storage rooms to the high-security dimple keys protecting villas, and the tiny cam lock keys for cabinets and mailboxes. Lock Repair Satwa provides a comprehensive key making service from our Al Bada\'a workshop and via mobile technicians across Dubai.\n\nWe cut keys by duplication from your original, by code from manufacturers\' key code databases, and by impressioning for situations where no original or code is available. Our key-cutting machines are regularly calibrated for precision, ensuring every key we produce turns smoothly without forcing or excessive wear on the lock.\n\nKey types we cut include: Yale flat keys, mortise keys (both round and flat profiles), dimple keys, tubular keys, T-shaped furniture keys, cam lock keys, padlock keys, safe deposit box keys, cabinet and drawer lock keys, and various specialist security key profiles. We carry a comprehensive range of key blanks to minimise situations where we need to order in.',
+      'A key maker service in Dubai needs to handle far more than just simple house keys — from the tubular padlock keys used on storage rooms to the high-security dimple keys protecting villas, and the tiny cam lock keys for cabinets and mailboxes. Lock repair service provides a comprehensive key making service from our Al Bada\'a workshop and via mobile technicians across Dubai.\n\nWe cut keys by duplication from your original, by code from manufacturers\' key code databases, and by impressioning for situations where no original or code is available. Our key-cutting machines are regularly calibrated for precision, ensuring every key we produce turns smoothly without forcing or excessive wear on the lock.\n\nKey types we cut include: Yale flat keys, mortise keys (both round and flat profiles), dimple keys, tubular keys, T-shaped furniture keys, cam lock keys, padlock keys, safe deposit box keys, cabinet and drawer lock keys, and various specialist security key profiles. We carry a comprehensive range of key blanks to minimise situations where we need to order in.',
     benefits: [
       {
         title: 'Workshop & Mobile Cutting Available',
@@ -1764,13 +1764,13 @@ export const services: Service[] = [
     slug: 'master-key-system',
     category: 'commercial',
     title: 'Master Key System',
-    metaTitle: 'Master Key System Dubai | Commercial Lock Setup | Lock Repair Satwa',
+    metaTitle: 'Master Key System Dubai | Commercial Lock Setup | Lock repair service',
     metaDescription:
       'Master key system design and installation in Dubai for offices, hotels and commercial buildings. Custom lock hierarchy, keyed-alike options — +971 52 642 6161.',
     directAnswerOpener:
-      'Lock Repair Satwa designs and installs master key systems for commercial properties in Dubai from AED 500. A master key system allows one key to open multiple locks while individual keys open only their designated door — ideal for offices, hotels, warehouses and residential complexes. System design takes 1–3 days depending on property size. Call +971 52 642 6161.',
+      'Lock repair service designs and installs master key systems for commercial properties in Dubai from AED 500. A master key system allows one key to open multiple locks while individual keys open only their designated door — ideal for offices, hotels, warehouses and residential complexes. System design takes 1–3 days depending on property size. Call +971 52 642 6161.',
     description:
-      'A master key system is the foundation of access control for any commercial property in Dubai — allowing management to hold one key that opens every door, while employees, tenants or guests hold individual keys that only open their designated areas. Lock Repair Satwa designs, supplies and installs bespoke master key systems for offices, hotels, warehouses, apartment complexes and commercial buildings across Dubai.\n\nWe work with high-quality master key-compatible cylinder ranges from established manufacturers, planning the pin stack configurations that create the required key hierarchy without compromising the security level of individual locks. Our systems support grand master keys (open everything), master keys (open a section), and change keys (individual door access) — as many levels as your property requires.\n\nThe process begins with a site survey to map all doors, access zones and the required key hierarchy. We then specify the cylinder and key blank combination, manufacture the cylinders and keys to your specification, and install or rekey all locks in a single planned operation to minimise disruption to your business.',
+      'A master key system is the foundation of access control for any commercial property in Dubai — allowing management to hold one key that opens every door, while employees, tenants or guests hold individual keys that only open their designated areas. Lock repair service designs, supplies and installs bespoke master key systems for offices, hotels, warehouses, apartment complexes and commercial buildings across Dubai.\n\nWe work with high-quality master key-compatible cylinder ranges from established manufacturers, planning the pin stack configurations that create the required key hierarchy without compromising the security level of individual locks. Our systems support grand master keys (open everything), master keys (open a section), and change keys (individual door access) — as many levels as your property requires.\n\nThe process begins with a site survey to map all doors, access zones and the required key hierarchy. We then specify the cylinder and key blank combination, manufacture the cylinders and keys to your specification, and install or rekey all locks in a single planned operation to minimise disruption to your business.',
     benefits: [
       {
         title: 'Custom Hierarchy Design',
@@ -1813,13 +1813,13 @@ export const services: Service[] = [
     slug: 'cabinet-lock',
     category: 'commercial',
     title: 'Cabinet Lock Services',
-    metaTitle: 'Cabinet Lock Dubai | Filing Cabinet & Drawer Locks | Lock Repair Satwa',
+    metaTitle: 'Cabinet Lock Dubai | Filing Cabinet & Drawer Locks | Lock repair service',
     metaDescription:
       'Cabinet lock replacement, opening and rekeying for office filing cabinets and drawers in Dubai. Same-day service from AED 100 — +971 52 642 6161.',
     directAnswerOpener:
-      'Lock Repair Satwa opens, replaces and rekeys office cabinet and drawer locks across Dubai from AED 100. We service filing cabinet locks (desk and lateral), pedestal drawers, roller shutters and display case locks. Same-day service for most cabinet types. Mobile service available for offices across Dubai. Call +971 52 642 6161.',
+      'Lock repair service opens, replaces and rekeys office cabinet and drawer locks across Dubai from AED 100. We service filing cabinet locks (desk and lateral), pedestal drawers, roller shutters and display case locks. Same-day service for most cabinet types. Mobile service available for offices across Dubai. Call +971 52 642 6161.',
     description:
-      'Office filing cabinets, pedestal drawers and storage cabinets are critical for securing confidential documents, valuables and equipment in Dubai commercial premises. When a cabinet lock fails, jams or the key is lost, Lock Repair Satwa provides fast on-site solutions without needing to remove the furniture or wait for the original supplier.\n\nWe open locked cabinets using non-destructive picking and bypass methods for standard filing cabinet locks. Once open, we rekey the lock to a new key or replace the lock cylinder entirely. Where the existing key is available but the lock is stiff, worn or faulty, we service and lubricate the mechanism to restore smooth operation.\n\nFor offices requiring all cabinets to be opened by a single key (keyed-alike service), we rekey multiple cabinets to the same key as part of the same visit — eliminating the frustration of managing many different cabinet keys.',
+      'Office filing cabinets, pedestal drawers and storage cabinets are critical for securing confidential documents, valuables and equipment in Dubai commercial premises. When a cabinet lock fails, jams or the key is lost, Lock repair service provides fast on-site solutions without needing to remove the furniture or wait for the original supplier.\n\nWe open locked cabinets using non-destructive picking and bypass methods for standard filing cabinet locks. Once open, we rekey the lock to a new key or replace the lock cylinder entirely. Where the existing key is available but the lock is stiff, worn or faulty, we service and lubricate the mechanism to restore smooth operation.\n\nFor offices requiring all cabinets to be opened by a single key (keyed-alike service), we rekey multiple cabinets to the same key as part of the same visit — eliminating the frustration of managing many different cabinet keys.',
     benefits: [
       {
         title: 'Non-Destructive Cabinet Opening',
@@ -1862,13 +1862,13 @@ export const services: Service[] = [
     slug: 'access-control-installation',
     category: 'commercial',
     title: 'Access Control Installation',
-    metaTitle: 'Access Control Installation Dubai | Lock Repair Satwa',
+    metaTitle: 'Access Control Installation Dubai | Lock repair service',
     metaDescription:
       'Access control system installation in Dubai for offices and commercial buildings. RFID, biometric and PIN systems from AED 800 — +971 52 642 6161.',
     directAnswerOpener:
-      'Lock Repair Satwa installs access control systems for commercial properties in Dubai from AED 800. We supply and install RFID card readers, biometric fingerprint readers, PIN keypads and video intercom systems. Systems are configured for your exact access zones and staff hierarchy. Installation takes 1–2 days depending on size. Call +971 52 642 6161.',
+      'Lock repair service installs access control systems for commercial properties in Dubai from AED 800. We supply and install RFID card readers, biometric fingerprint readers, PIN keypads and video intercom systems. Systems are configured for your exact access zones and staff hierarchy. Installation takes 1–2 days depending on size. Call +971 52 642 6161.',
     description:
-      'Access control systems replace physical keys with electronic credentials — RFID cards, PIN codes or biometric fingerprints — giving commercial properties in Dubai precise, auditable control over who can enter which area and when. Lock Repair Satwa installs, commissions and configures access control systems for offices, warehouses, server rooms, retail premises and apartment buildings.\n\nOur systems range from standalone single-door controllers (ideal for individual office doors or server rooms) to networked multi-door systems covering an entire building with central software management. All systems include door strike or magnetic lock hardware, the reader/controller, and the power supply and cabling required for a complete installation.\n\nWe integrate with electric door strikes, magnetic locks and automatic door operators. For properties wanting video confirmation of access, we also supply and install video intercom systems that allow staff to see and verify visitors before granting entry. All systems are configured to your specific access rules — time zones, anti-passback, and multiple credential levels.',
+      'Access control systems replace physical keys with electronic credentials — RFID cards, PIN codes or biometric fingerprints — giving commercial properties in Dubai precise, auditable control over who can enter which area and when. Lock repair service installs, commissions and configures access control systems for offices, warehouses, server rooms, retail premises and apartment buildings.\n\nOur systems range from standalone single-door controllers (ideal for individual office doors or server rooms) to networked multi-door systems covering an entire building with central software management. All systems include door strike or magnetic lock hardware, the reader/controller, and the power supply and cabling required for a complete installation.\n\nWe integrate with electric door strikes, magnetic locks and automatic door operators. For properties wanting video confirmation of access, we also supply and install video intercom systems that allow staff to see and verify visitors before granting entry. All systems are configured to your specific access rules — time zones, anti-passback, and multiple credential levels.',
     benefits: [
       {
         title: 'Full System Supply & Installation',
@@ -1911,13 +1911,13 @@ export const services: Service[] = [
     slug: 'door-closer-installation',
     category: 'commercial',
     title: 'Door Closer Installation',
-    metaTitle: 'Door Closer Installation Dubai | Commercial Doors | Lock Repair Satwa',
+    metaTitle: 'Door Closer Installation Dubai | Commercial Doors | Lock repair service',
     metaDescription:
       'Door closer supply and installation in Dubai for offices, commercial buildings and fire doors. From AED 300 — +971 52 642 6161.',
     directAnswerOpener:
-      'Lock Repair Satwa installs door closers for commercial, office and fire doors across Dubai from AED 300 including the unit and fitting. We supply and fit overhead door closers, concealed closers and floor spring closers for all door weights and closing speeds. Same-day installation available for most door types. Call +971 52 642 6161.',
+      'Lock repair service installs door closers for commercial, office and fire doors across Dubai from AED 300 including the unit and fitting. We supply and fit overhead door closers, concealed closers and floor spring closers for all door weights and closing speeds. Same-day installation available for most door types. Call +971 52 642 6161.',
     description:
-      'Door closers are a mandatory requirement for fire doors in UAE buildings and a practical asset for any commercial door that must remain closed and self-latching. Lock Repair Satwa supplies and installs door closers for offices, retail premises, warehouses, hotels and residential buildings across Dubai.\n\nWe install three main types: standard overhead closers (surface-mounted on the door face or frame — the most common commercial type), concealed overhead closers (fitted inside the door head for a clean architectural finish) and floor spring closers (for frameless glass or heavy timber doors). All closers we supply are adjustable for closing speed, latching speed and back-check tension.\n\nFor fire doors, we specify and install closers to the appropriate standard for the fire rating of the door — a critical compliance requirement in UAE buildings. Closer selection depends on door weight, door width and the required hold-open force. Our technicians complete the installation with a full adjustment to Dubai\'s climate, where thermal expansion can cause door closer adjustment to drift seasonally.',
+      'Door closers are a mandatory requirement for fire doors in UAE buildings and a practical asset for any commercial door that must remain closed and self-latching. Lock repair service supplies and installs door closers for offices, retail premises, warehouses, hotels and residential buildings across Dubai.\n\nWe install three main types: standard overhead closers (surface-mounted on the door face or frame — the most common commercial type), concealed overhead closers (fitted inside the door head for a clean architectural finish) and floor spring closers (for frameless glass or heavy timber doors). All closers we supply are adjustable for closing speed, latching speed and back-check tension.\n\nFor fire doors, we specify and install closers to the appropriate standard for the fire rating of the door — a critical compliance requirement in UAE buildings. Closer selection depends on door weight, door width and the required hold-open force. Our technicians complete the installation with a full adjustment to Dubai\'s climate, where thermal expansion can cause door closer adjustment to drift seasonally.',
     benefits: [
       {
         title: 'Fire Door Compliance',
@@ -1960,13 +1960,13 @@ export const services: Service[] = [
     slug: 'push-bar-installation',
     category: 'commercial',
     title: 'Push Bar Installation',
-    metaTitle: 'Push Bar Installation Dubai | Panic Bar & Exit Device | Lock Repair Satwa',
+    metaTitle: 'Push Bar Installation Dubai | Panic Bar & Exit Device | Lock repair service',
     metaDescription:
       'Panic bar and push bar installation in Dubai for emergency exits, fire doors and commercial buildings. From AED 400 — +971 52 642 6161.',
     directAnswerOpener:
-      'Lock Repair Satwa installs push bars (panic bars) and emergency exit devices in Dubai for fire exits, warehouses and commercial buildings from AED 400 including the unit and fitting. Push bars allow fast single-motion exit without requiring a key or handle operation — mandatory for designated emergency exits. Call +971 52 642 6161.',
+      'Lock repair service installs push bars (panic bars) and emergency exit devices in Dubai for fire exits, warehouses and commercial buildings from AED 400 including the unit and fitting. Push bars allow fast single-motion exit without requiring a key or handle operation — mandatory for designated emergency exits. Call +971 52 642 6161.',
     description:
-      'Push bars — also called panic bars or exit devices — are a UAE building code requirement for emergency exits in commercial buildings, warehouses, cinemas, retail stores and any premises where rapid evacuation must be possible without requiring occupants to operate a conventional door handle or key.\n\nLock Repair Satwa supplies and installs push bar exit devices for single and double doors, timber and aluminium frames, and fire-rated door assemblies. We offer rim-mounted panic hardware (the most common commercial type), mortise panic hardware for heavy-duty applications, and vertical rod devices for double doors where both the top and bottom of the door must be secured.\n\nAll push bar devices we supply meet EN 1125 emergency egress requirements and are suitable for fire exit door applications. We also fit external access hardware — outside lever trim or cylinder override — allowing authorised entry from outside while maintaining the panic release function from inside. Installation includes alignment of the strike plate and adjustment of the push bar for smooth, consistent operation.',
+      'Push bars — also called panic bars or exit devices — are a UAE building code requirement for emergency exits in commercial buildings, warehouses, cinemas, retail stores and any premises where rapid evacuation must be possible without requiring occupants to operate a conventional door handle or key.\n\nLock repair service supplies and installs push bar exit devices for single and double doors, timber and aluminium frames, and fire-rated door assemblies. We offer rim-mounted panic hardware (the most common commercial type), mortise panic hardware for heavy-duty applications, and vertical rod devices for double doors where both the top and bottom of the door must be secured.\n\nAll push bar devices we supply meet EN 1125 emergency egress requirements and are suitable for fire exit door applications. We also fit external access hardware — outside lever trim or cylinder override — allowing authorised entry from outside while maintaining the panic release function from inside. Installation includes alignment of the strike plate and adjustment of the push bar for smooth, consistent operation.',
     benefits: [
       {
         title: 'Emergency Exit Compliance',
@@ -2009,13 +2009,13 @@ export const services: Service[] = [
     slug: 'car-key-maker',
     category: 'automotive',
     title: 'Car Key Maker',
-    metaTitle: 'Car Key Maker Dubai | Keys Cut & Programmed On-Site | Lock Repair Satwa',
+    metaTitle: 'Car Key Maker Dubai | Keys Cut & Programmed On-Site | Lock repair service',
     metaDescription:
       'Car key maker in Dubai — we cut and program new car keys on-site for all makes. From AED 150. Mobile service 24/7 — +971 52 642 6161.',
     directAnswerOpener:
-      'Lock Repair Satwa is a professional car key maker in Dubai, cutting and programming new keys on-site for all major car brands from AED 150. We make mechanical keys, transponder keys, remote keys and smart proximity keys. Mobile service available across Dubai with average arrival in 20–45 minutes. Call +971 52 642 6161.',
+      'Lock repair service is a professional car key maker in Dubai, cutting and programming new keys on-site for all major car brands from AED 150. We make mechanical keys, transponder keys, remote keys and smart proximity keys. Mobile service available across Dubai with average arrival in 20–45 minutes. Call +971 52 642 6161.',
     description:
-      'Being your own car key maker means having the equipment, blanks and expertise to produce a working key for virtually any vehicle on-site — and that is exactly what Lock Repair Satwa does. Our fully equipped mobile workshop serves drivers across all Dubai areas, cutting and programming car keys without requiring a dealership appointment or tow truck.\n\nWe produce mechanical keys (blade-only, for older vehicles), transponder keys (blade plus immobiliser chip), remote keys (blade, chip and wireless remote buttons) and smart proximity keys (keyless entry and push-button start). Each type requires different cutting and programming methods, and we carry the professional equipment for all of them.\n\nKey cutting is performed on precision automatic and laser cutting machines. Programming is done via OBD using manufacturer-compatible tools. We carry an extensive range of key blanks for Japanese, European, American, Korean and Chinese brands sold in the UAE market, minimising situations where we need to source unusual blanks.',
+      'Being your own car key maker means having the equipment, blanks and expertise to produce a working key for virtually any vehicle on-site — and that is exactly what Lock repair service does. Our fully equipped mobile workshop serves drivers across all Dubai areas, cutting and programming car keys without requiring a dealership appointment or tow truck.\n\nWe produce mechanical keys (blade-only, for older vehicles), transponder keys (blade plus immobiliser chip), remote keys (blade, chip and wireless remote buttons) and smart proximity keys (keyless entry and push-button start). Each type requires different cutting and programming methods, and we carry the professional equipment for all of them.\n\nKey cutting is performed on precision automatic and laser cutting machines. Programming is done via OBD using manufacturer-compatible tools. We carry an extensive range of key blanks for Japanese, European, American, Korean and Chinese brands sold in the UAE market, minimising situations where we need to source unusual blanks.',
     benefits: [
       {
         title: 'All Key Types Made On-Site',
@@ -2064,13 +2064,13 @@ export const services: Service[] = [
     slug: 'automotive-lock-repair',
     category: 'automotive',
     title: 'Automotive Lock Repair',
-    metaTitle: 'Automotive Lock Repair Dubai | Car Door & Ignition | Lock Repair Satwa',
+    metaTitle: 'Automotive Lock Repair Dubai | Car Door & Ignition | Lock repair service',
     metaDescription:
       'Car door lock and ignition lock repair in Dubai. We fix jammed, broken or worn automotive locks on-site. From AED 200 — +971 52 642 6161.',
     directAnswerOpener:
-      'Lock Repair Satwa repairs car door locks, boot locks and ignition cylinders across Dubai from AED 200. Common faults include jammed door lock cylinders, broken internal actuators, stiff or worn ignition barrels, and door handles that no longer release the lock. Mobile service with 24/7 availability. Call +971 52 642 6161.',
+      'Lock repair service repairs car door locks, boot locks and ignition cylinders across Dubai from AED 200. Common faults include jammed door lock cylinders, broken internal actuators, stiff or worn ignition barrels, and door handles that no longer release the lock. Mobile service with 24/7 availability. Call +971 52 642 6161.',
     description:
-      'Car locks take significant punishment from Dubai\'s heat and sand — door lock cylinders corrode, actuator rods bend, springs fatigue and ignition barrels wear. Lock Repair Satwa provides on-site automotive lock repair across Dubai for all makes and models, diagnosing and fixing mechanical lock faults without requiring workshop visits or parts replacements from the dealership.\n\nCommon automotive lock repairs we handle: door lock cylinder replacement (when the cylinder no longer turns with the key), actuator repair (when the electric door lock button works but the mechanism inside doesn\'t engage), ignition lock servicing (cleaning and lubricating worn ignition barrels), boot lock repair (when the tailgate or boot release sticks or jams), and handle-to-lock rod reconnection (when a broken door handle no longer releases the latch).\n\nFor door cylinders that have been drilled, damaged by attempted break-ins, or simply worn to the point of failure, we supply and fit replacement cylinders keyed to match your existing key where possible — meaning you keep using your original key after the repair.',
+      'Car locks take significant punishment from Dubai\'s heat and sand — door lock cylinders corrode, actuator rods bend, springs fatigue and ignition barrels wear. Lock repair service provides on-site automotive lock repair across Dubai for all makes and models, diagnosing and fixing mechanical lock faults without requiring workshop visits or parts replacements from the dealership.\n\nCommon automotive lock repairs we handle: door lock cylinder replacement (when the cylinder no longer turns with the key), actuator repair (when the electric door lock button works but the mechanism inside doesn\'t engage), ignition lock servicing (cleaning and lubricating worn ignition barrels), boot lock repair (when the tailgate or boot release sticks or jams), and handle-to-lock rod reconnection (when a broken door handle no longer releases the latch).\n\nFor door cylinders that have been drilled, damaged by attempted break-ins, or simply worn to the point of failure, we supply and fit replacement cylinders keyed to match your existing key where possible — meaning you keep using your original key after the repair.',
     benefits: [
       {
         title: 'On-Site Repair Without Towing',
@@ -2119,13 +2119,13 @@ export const services: Service[] = [
     slug: 'ignition-repair',
     category: 'automotive',
     title: 'Ignition Repair & Replacement',
-    metaTitle: 'Ignition Repair Dubai | Stuck or Broken Ignition | Lock Repair Satwa',
+    metaTitle: 'Ignition Repair Dubai | Stuck or Broken Ignition | Lock repair service',
     metaDescription:
       'Ignition repair and ignition replacement in Dubai. Stuck key, worn barrel, no-start condition — mobile service 24/7. From AED 300 — +971 52 642 6161.',
     directAnswerOpener:
-      'Lock Repair Satwa repairs and replaces car ignition cylinders across Dubai from AED 300. We fix stuck ignition switches, extract broken keys from the ignition barrel, replace worn ignition cylinders and reprogram the immobiliser after replacement. Mobile 24/7 service for all major vehicle brands. Call +971 52 642 6161.',
+      'Lock repair service repairs and replaces car ignition cylinders across Dubai from AED 300. We fix stuck ignition switches, extract broken keys from the ignition barrel, replace worn ignition cylinders and reprogram the immobiliser after replacement. Mobile 24/7 service for all major vehicle brands. Call +971 52 642 6161.',
     description:
-      'Ignition problems are among the most debilitating car faults — a stuck ignition key or a worn barrel that no longer recognises the key can leave you unable to start your vehicle. Lock Repair Satwa provides mobile ignition repair and replacement services across Dubai, attending to your vehicle at your location without requiring a tow.\n\nCommon ignition faults we handle include: key stuck in the ignition (often caused by a worn pin in the barrel engaging prematurely), ignition cylinder worn to the point where the key turns freely without catching (requiring barrel replacement), broken key extraction from the ignition barrel, steering column lock seizure (common in some models when the steering wheel is turned against the lock while the key is out), and ignition replacement after ECU work or security upgrades.\n\nIgnition barrel replacement involves more than a mechanical swap — the new barrel must be programmed to match the vehicle\'s transponder system so the engine starts. Lock Repair Satwa carries OBD programming tools to complete the electronic pairing in the same visit as the mechanical replacement, getting you back on the road without multiple call-outs.',
+      'Ignition problems are among the most debilitating car faults — a stuck ignition key or a worn barrel that no longer recognises the key can leave you unable to start your vehicle. Lock repair service provides mobile ignition repair and replacement services across Dubai, attending to your vehicle at your location without requiring a tow.\n\nCommon ignition faults we handle include: key stuck in the ignition (often caused by a worn pin in the barrel engaging prematurely), ignition cylinder worn to the point where the key turns freely without catching (requiring barrel replacement), broken key extraction from the ignition barrel, steering column lock seizure (common in some models when the steering wheel is turned against the lock while the key is out), and ignition replacement after ECU work or security upgrades.\n\nIgnition barrel replacement involves more than a mechanical swap — the new barrel must be programmed to match the vehicle\'s transponder system so the engine starts. Lock repair service carries OBD programming tools to complete the electronic pairing in the same visit as the mechanical replacement, getting you back on the road without multiple call-outs.',
     benefits: [
       {
         title: 'Stuck Key Extraction',
@@ -2174,13 +2174,13 @@ export const services: Service[] = [
     slug: 'car-trunk-unlock',
     category: 'automotive',
     title: 'Car Trunk Unlock',
-    metaTitle: 'Car Trunk Unlock Dubai | Boot Open Without Key | Lock Repair Satwa',
+    metaTitle: 'Car Trunk Unlock Dubai | Boot Open Without Key | Lock repair service',
     metaDescription:
       'Car boot and trunk unlock service in Dubai. Keys locked inside or trunk won\'t open? Mobile service 24/7, average arrival 20–40 min — +971 52 642 6161.',
     directAnswerOpener:
-      'Lock Repair Satwa opens car boots and trunks across Dubai for AED 150–350 without damaging the vehicle. Whether keys are locked inside, the boot latch has jammed or the remote release has failed, our mobile locksmiths provide non-destructive trunk unlock service 24/7. Average arrival in 20–40 minutes. Call +971 52 642 6161.',
+      'Lock repair service opens car boots and trunks across Dubai for AED 150–350 without damaging the vehicle. Whether keys are locked inside, the boot latch has jammed or the remote release has failed, our mobile locksmiths provide non-destructive trunk unlock service 24/7. Average arrival in 20–40 minutes. Call +971 52 642 6161.',
     description:
-      'A car trunk or boot that won\'t open can be caused by several different faults — keys locked inside the boot itself, a failed remote release, a stuck latch actuator or a mechanical fault with the boot lock cylinder. Lock Repair Satwa diagnoses and resolves all trunk-related lockout situations across Dubai without damage to the vehicle.\n\nFor the most common scenario — keys locked inside the boot — we first attempt to access the vehicle through the doors using our car unlock service, then release the boot from the interior. For boots that are locked separately with their own cylinder (and the key is lost), we pick the cylinder or access the release cable through the vehicle interior.\n\nFor power-operated tailgates and boot lids (common on modern SUVs), we can bypass the electronic actuator to release the tailgate mechanically. For flat-battery situations where the electronic release is inoperative, we locate the emergency manual release where available.',
+      'A car trunk or boot that won\'t open can be caused by several different faults — keys locked inside the boot itself, a failed remote release, a stuck latch actuator or a mechanical fault with the boot lock cylinder. Lock repair service diagnoses and resolves all trunk-related lockout situations across Dubai without damage to the vehicle.\n\nFor the most common scenario — keys locked inside the boot — we first attempt to access the vehicle through the doors using our car unlock service, then release the boot from the interior. For boots that are locked separately with their own cylinder (and the key is lost), we pick the cylinder or access the release cable through the vehicle interior.\n\nFor power-operated tailgates and boot lids (common on modern SUVs), we can bypass the electronic actuator to release the tailgate mechanically. For flat-battery situations where the electronic release is inoperative, we locate the emergency manual release where available.',
     benefits: [
       {
         title: 'Non-Destructive Trunk Opening',
@@ -2229,13 +2229,13 @@ export const services: Service[] = [
     slug: 'car-key-cover-replacement',
     category: 'automotive',
     title: 'Car Key Cover Replacement',
-    metaTitle: 'Car Key Cover Replacement Dubai | Key Shell & Case | Lock Repair Satwa',
+    metaTitle: 'Car Key Cover Replacement Dubai | Key Shell & Case | Lock repair service',
     metaDescription:
       'Car key cover and shell replacement in Dubai. Cracked or broken key fob housing replaced without full reprogramming. From AED 100 — +971 52 642 6161.',
     directAnswerOpener:
-      'Lock Repair Satwa replaces broken or cracked car key covers and fob housings in Dubai from AED 100. We swap the shell while preserving your existing key blade, transponder chip and remote circuit board — no reprogramming needed in most cases. Wide range of covers for Toyota, Nissan, BMW, Mercedes, Hyundai and more. Call +971 52 642 6161.',
+      'Lock repair service replaces broken or cracked car key covers and fob housings in Dubai from AED 100. We swap the shell while preserving your existing key blade, transponder chip and remote circuit board — no reprogramming needed in most cases. Wide range of covers for Toyota, Nissan, BMW, Mercedes, Hyundai and more. Call +971 52 642 6161.',
     description:
-      'Car key covers and fob housings take constant punishment — dropped on hard surfaces, scratched in pockets and bags, and exposed to Dubai\'s heat. When the plastic shell cracks, buttons fall off, or the key fob becomes difficult to operate, Lock Repair Satwa replaces just the housing without touching the functional components inside.\n\nOur shell replacement service transfers your existing key blade (where applicable), transponder chip and remote circuit board into a new housing that looks and functions like a brand new key. Because the electronics are not disturbed, no reprogramming is required in most cases — the key continues to start your car and operate the remote functions immediately after the shell swap.\n\nWe stock key covers for the most popular UAE vehicle brands including Toyota, Nissan, Honda, BMW, Mercedes-Benz, Audi, Hyundai, Kia, Ford and Chevrolet. For less common models, we can source the correct cover within 1–2 days. We also supply upgraded key covers in carbon fibre, leather-wrapped or metal finishes for customers wanting a premium look.',
+      'Car key covers and fob housings take constant punishment — dropped on hard surfaces, scratched in pockets and bags, and exposed to Dubai\'s heat. When the plastic shell cracks, buttons fall off, or the key fob becomes difficult to operate, Lock repair service replaces just the housing without touching the functional components inside.\n\nOur shell replacement service transfers your existing key blade (where applicable), transponder chip and remote circuit board into a new housing that looks and functions like a brand new key. Because the electronics are not disturbed, no reprogramming is required in most cases — the key continues to start your car and operate the remote functions immediately after the shell swap.\n\nWe stock key covers for the most popular UAE vehicle brands including Toyota, Nissan, Honda, BMW, Mercedes-Benz, Audi, Hyundai, Kia, Ford and Chevrolet. For less common models, we can source the correct cover within 1–2 days. We also supply upgraded key covers in carbon fibre, leather-wrapped or metal finishes for customers wanting a premium look.',
     benefits: [
       {
         title: 'Shell Replacement Without Reprogramming',

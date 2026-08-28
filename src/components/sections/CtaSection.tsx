@@ -1,5 +1,5 @@
 // ─────────────────────────────────────────────────────────────────────────────
-// Lock Repair Satwa — Full-width CTA Section
+// Lock repair service — Full-width CTA Section
 // ─────────────────────────────────────────────────────────────────────────────
 import { Phone, MessageCircle, CalendarDays } from 'lucide-react'
 import Link from 'next/link'
@@ -58,7 +58,7 @@ export async function CtaSection({
             className="h-1.5 w-1.5 animate-pulse rounded-full bg-brand-gold"
             aria-hidden="true"
           />
-          Mobile 24/7 · Lock Repair Satwa, Dubai
+          Mobile 24/7 · Lock repair service, Dubai
         </div>
 
         {/* Heading */}
@@ -79,7 +79,7 @@ export async function CtaSection({
             dark ? 'text-white/75' : 'text-muted-foreground',
           )}
         >
-          {subtext ?? "Lock Repair Satwa is available daily 24/7 across all Dubai areas. Call or WhatsApp now for an instant quote — no call-out fee, upfront pricing."}
+          {subtext ?? "Lock repair service is available daily 24/7 across all Dubai areas. Call or WhatsApp now for an instant quote — no call-out fee, upfront pricing."}
         </p>
 
         {/* CTA buttons */}
@@ -90,7 +90,7 @@ export async function CtaSection({
             className="btn-pulse w-full sm:w-auto"
             asChild
           >
-            <a href={PHONE_HREF} aria-label={`Call Lock Repair Satwa: ${PHONE_DISPLAY}`}>
+            <a href={PHONE_HREF} aria-label={`Call Lock repair service: ${PHONE_DISPLAY}`}>
               <Phone className="h-5 w-5" aria-hidden="true" />
               {`Call Now — ${PHONE_DISPLAY}`}
             </a>

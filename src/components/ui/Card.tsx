@@ -1,5 +1,5 @@
 // ─────────────────────────────────────────────────────────────────────────────
-// Lock Repair Satwa — Card Primitive
+// Lock repair service — Card Primitive
 // ─────────────────────────────────────────────────────────────────────────────
 import * as React from 'react'
 import { cn } from '@/lib/utils'

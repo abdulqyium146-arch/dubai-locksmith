@@ -1,5 +1,5 @@
 // ─────────────────────────────────────────────────────────────────────────────
-// Lock Repair Satwa — Location Card
+// Lock repair service — Location Card
 // ─────────────────────────────────────────────────────────────────────────────
 import { ArrowRight, Clock, MapPin } from 'lucide-react'
 import Link from 'next/link'

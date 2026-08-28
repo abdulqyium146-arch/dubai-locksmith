@@ -1,5 +1,5 @@
 // ─────────────────────────────────────────────────────────────────────────────
-// Lock Repair Satwa — OpenGraph Image URL Builder
+// Lock repair service — OpenGraph Image URL Builder
 // Helper to construct /api/og URLs for use in generateMetadata functions.
 // ─────────────────────────────────────────────────────────────────────────────
 import { SITE_URL } from '@/lib/constants'

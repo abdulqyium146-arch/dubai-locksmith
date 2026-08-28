@@ -1,5 +1,5 @@
 // ─────────────────────────────────────────────────────────────────────────────
-// Lock Repair Satwa — Hero Section (Split layout with image card)
+// Lock repair service — Hero Section (Split layout with image card)
 // ─────────────────────────────────────────────────────────────────────────────
 import type { ReactNode } from 'react'
 import Image from 'next/image'
@@ -37,7 +37,7 @@ export async function HeroSection({
     <>
       Dubai&apos;s Professional{' '}
       <span className="text-gold-gradient">Locksmith</span>
-      {' '}— Lock Repair Satwa
+      {' '}— Lock repair service
     </>
   )
 
@@ -82,7 +82,7 @@ export async function HeroSection({
 
               {/* Subtitle */}
               <p className="mt-5 text-base leading-relaxed text-white/70 sm:text-lg lg:max-w-lg">
-                {subtitle ?? "Lock Repair Satwa, D90 Al Bada'a, Dubai — car key duplication, door lock repair, smart key programming and emergency locksmith across all Dubai areas. On-site in 20–45 minutes."}
+                {subtitle ?? "Lock repair service, D90 Al Bada'a, Dubai — car key duplication, door lock repair, smart key programming and emergency locksmith across all Dubai areas. On-site in 20–45 minutes."}
               </p>
 
               {/* Star rating + review count */}
@@ -121,7 +121,7 @@ export async function HeroSection({
                   className="btn-pulse w-full sm:w-auto"
                   asChild
                 >
-                  <a href={PHONE_HREF} aria-label={`Call Lock Repair Satwa: ${PHONE_DISPLAY}`}>
+                  <a href={PHONE_HREF} aria-label={`Call Lock repair service: ${PHONE_DISPLAY}`}>
                     <Phone className="h-5 w-5" aria-hidden="true" />
                     {`Call Now — ${PHONE_DISPLAY}`}
                   </a>
@@ -131,7 +131,7 @@ export async function HeroSection({
                     href={WHATSAPP_HREF}
                     target="_blank"
                     rel="noopener noreferrer"
-                    aria-label="WhatsApp Lock Repair Satwa"
+                    aria-label="WhatsApp Lock repair service"
                   >
                     <MessageCircle className="h-5 w-5" aria-hidden="true" />
                     WhatsApp Us
@@ -171,7 +171,7 @@ export async function HeroSection({
               <div className="relative overflow-hidden rounded-2xl shadow-[0_32px_80px_rgba(0,0,0,0.55)] ring-1 ring-white/10">
                 <Image
                   src="/images/services/car-remote-key-blanks-locksmith-shop-dubai.webp"
-                  alt="Car remote key blanks and transponder keys on display at Lock Repair Satwa shop, Al Bada'a Dubai"
+                  alt="Car remote key blanks and transponder keys on display at Lock repair service shop, Al Bada'a Dubai"
                   width={520}
                   height={380}
                   priority

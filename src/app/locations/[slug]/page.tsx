@@ -1,5 +1,5 @@
 // ─────────────────────────────────────────────────────────────────────────────
-// Lock Repair Satwa — Dynamic Location Page
+// Lock repair service — Dynamic Location Page
 // /locations/[slug] — unique page for each of 15 Dubai service areas
 // All content pulled from data module — zero hardcoded area-specific content
 // ─────────────────────────────────────────────────────────────────────────────
@@ -36,6 +36,7 @@ import {
   getNearbyLocations,
 } from '@/data/locations'
 import { services } from '@/data/services'
+import { parseWithLinks } from '@/lib/link-parser'
 import {
   BUSINESS_NAME,
   PHONE_DISPLAY,
@@ -318,7 +319,7 @@ export default async function LocationPage({
           { name: location.name, url: locationPageUrl },
         ]}
         primaryImageUrl={`${SITE_URL}/images/shop/locksmith-shop-satwa-al-badaa-dubai.webp`}
-        primaryImageAlt={`Key maker and locksmith serving ${location.name}, Dubai — Lock Repair Satwa`}
+        primaryImageAlt={`Key maker and locksmith serving ${location.name}, Dubai — Lock repair service`}
       />
 
       {/* ── 1. Hero ────────────────────────────────────────────────────────── */}
@@ -350,7 +351,7 @@ export default async function LocationPage({
                 Service
               </h1>
               <p className="mt-1 text-xs font-semibold uppercase tracking-widest text-brand-gold/70">
-                Lock Repair Satwa · Al Bada&apos;a, Dubai, UAE
+                Lock repair service · Al Bada&apos;a, Dubai, UAE
               </p>
 
               {/* Landmark subheading — uses real location data */}
@@ -395,7 +396,7 @@ export default async function LocationPage({
                 >
                   <a
                     href={PHONE_HREF}
-                    aria-label={`Call Lock Repair Satwa for ${location.name}: ${PHONE_DISPLAY}`}
+                    aria-label={`Call Lock repair service for ${location.name}: ${PHONE_DISPLAY}`}
                   >
                     <Phone className="h-5 w-5" aria-hidden="true" />
                     Call Now — {PHONE_DISPLAY}
@@ -635,6 +636,65 @@ export default async function LocationPage({
         </div>
       </section>
 
+      {/* ── 3b. Products We Supply & Install ─────────────────────────────── */}
+      {(() => {
+        const LOCATION_PRODUCTS = [
+          { slug: 'deadbolt-locks',       title: 'Deadbolt Locks',            icon: '🔒' },
+          { slug: 'mortise-locks',         title: 'Mortise Locks',             icon: '🚪' },
+          { slug: 'fingerprint-door-locks',title: 'Fingerprint Door Locks',    icon: '👆' },
+          { slug: 'smart-door-locks-buy',  title: 'Smart Electronic Locks',    icon: '📱' },
+          { slug: 'keypad-locks',          title: 'Keypad Locks',              icon: '🔢' },
+          { slug: 'high-security-locks',   title: 'High-Security Locks',       icon: '🛡️' },
+          { slug: 'fireproof-safes',       title: 'Fireproof Safes',           icon: '🔥' },
+          { slug: 'magnetic-locks',        title: 'Magnetic Locks',            icon: '🧲' },
+        ]
+        return (
+          <section
+            aria-labelledby="products-heading"
+            className="py-14 sm:py-16 bg-background"
+          >
+            <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+              <div className="mb-8 flex items-end justify-between gap-4">
+                <div>
+                  <h2
+                    id="products-heading"
+                    className="font-heading text-2xl font-bold tracking-tight text-foreground sm:text-3xl"
+                  >
+                    Locks &amp; Security Products — {location.name}
+                  </h2>
+                  <p className="mt-2 text-sm text-muted-foreground">
+                    We supply and install these security products at your {location.name} location.
+                    All hardware is sourced, fitted, and tested in a single visit.
+                  </p>
+                </div>
+                <Link
+                  href="/products"
+                  className="flex shrink-0 items-center gap-1.5 text-sm font-semibold text-brand-gold hover:text-brand-gold-dark transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring rounded"
+                >
+                  All Products
+                  <ArrowRight className="h-4 w-4" aria-hidden="true" />
+                </Link>
+              </div>
+              <div className="grid gap-3 grid-cols-2 sm:grid-cols-4 lg:grid-cols-8">
+                {LOCATION_PRODUCTS.map(({ slug, title, icon }) => (
+                  <Link
+                    key={slug}
+                    href={`/products/${slug}`}
+                    className="group flex flex-col items-center gap-2 rounded-xl border border-border bg-card p-4 text-center shadow-sm transition-all hover:border-brand-gold/40 hover:bg-brand-gold/5 hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+                    aria-label={`${title} supply and installation in ${location.name}`}
+                  >
+                    <span className="text-2xl" aria-hidden="true">{icon}</span>
+                    <span className="text-xs font-medium text-foreground group-hover:text-brand-gold transition-colors leading-tight">
+                      {title}
+                    </span>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </section>
+        )
+      })()}
+
       {/* ── 4. Response Time Detail ────────────────────────────────────────── */}
       <section
         aria-labelledby="response-time-heading"
@@ -735,7 +795,7 @@ export default async function LocationPage({
           <div className="space-y-4">
             {location.description.split('\n\n').map((paragraph, i) => (
               <p key={i} className="text-base leading-relaxed text-muted-foreground">
-                {paragraph}
+                {parseWithLinks(paragraph)}
               </p>
             ))}
           </div>

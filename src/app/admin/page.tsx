@@ -46,7 +46,7 @@ export default async function AdminDashboard() {
     <div className="p-6 sm:p-8 pt-14 lg:pt-8">
       <div className="mb-8">
         <h1 className="text-2xl font-bold text-gray-900">Dashboard</h1>
-        <p className="mt-1 text-sm text-gray-500">Lock Repair Satwa · Booking Management</p>
+        <p className="mt-1 text-sm text-gray-500">Lock repair service · Booking Management</p>
       </div>
 
       <StatsCards total={total} pending={pending} today={today} completed={completed} />

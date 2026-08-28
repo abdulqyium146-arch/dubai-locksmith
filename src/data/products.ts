@@ -1,5 +1,5 @@
 // ─────────────────────────────────────────────────────────────────────────────
-// Lock Repair Satwa — Products Data
+// Lock repair service — Products Data
 // ─────────────────────────────────────────────────────────────────────────────
 import type { Product } from '@/types'
 
@@ -12,11 +12,11 @@ export const products: Product[] = [
     slug: 'deadbolt-locks',
     title: 'Deadbolt Locks',
     category: 'locks',
-    metaTitle: 'Deadbolt Locks Dubai | Supply & Installation | Lock Repair Satwa',
+    metaTitle: 'Deadbolt Locks Dubai | Supply & Installation | Lock repair service',
     metaDescription:
       'Deadbolt locks for Dubai homes and offices. Single and double cylinder deadbolts supplied and installed. From AED 150. Call +971 52 642 6161.',
     description:
-      'Deadbolt locks are the most reliable mechanical locking solution for residential and light commercial doors in Dubai. Unlike spring latches, a deadbolt extends a solid steel bolt into the door frame, providing resistance to kick-in attacks and forced entry that no latch lock can match. Lock Repair Satwa supplies and installs single cylinder deadbolts (key outside, thumb-turn inside), double cylinder deadbolts (key both sides) and horizontal rim deadbolts for a wide range of Dubai door types.\n\nWe stock deadbolts from quality brands tested for durability in Dubai\'s climate, where summer heat and humidity accelerate corrosion in lesser products. All deadbolts we supply are ANSI Grade 1 or equivalent rated — the highest residential security classification. Lock Repair Satwa installs the deadbolt and supplies keys in the same visit, with optional rekeying to match an existing key if you prefer fewer keys on your ring.',
+      'Deadbolt locks are the most reliable mechanical locking solution for residential and light commercial doors in Dubai. Unlike spring latches, a deadbolt extends a solid steel bolt into the door frame, providing resistance to kick-in attacks and forced entry that no latch lock can match. Lock repair service supplies and installs single cylinder deadbolts (key outside, thumb-turn inside), double cylinder deadbolts (key both sides) and horizontal rim deadbolts for a wide range of Dubai door types.\n\nWe stock deadbolts from quality brands tested for durability in Dubai\'s climate, where summer heat and humidity accelerate corrosion in lesser products. All deadbolts we supply are ANSI Grade 1 or equivalent rated — the highest residential security classification. Lock repair service installs the deadbolt and supplies keys in the same visit, with optional rekeying to match an existing key if you prefer fewer keys on your ring.',
     features: [
       'ANSI Grade 1 or equivalent security rating',
       'Single and double cylinder options available',
@@ -39,11 +39,11 @@ export const products: Product[] = [
     slug: 'mortise-locks',
     title: 'Mortise Locks',
     category: 'locks',
-    metaTitle: 'Mortise Locks Dubai | Supply & Fitting | Lock Repair Satwa',
+    metaTitle: 'Mortise Locks Dubai | Supply & Fitting | Lock repair service',
     metaDescription:
       'Mortise lock supply and installation in Dubai for villas and commercial doors. All sizes and finishes. From AED 200 — +971 52 642 6161.',
     description:
-      'Mortise locks are the standard locking solution for most Dubai villa and commercial doors — installed inside a mortised cavity in the door edge, making them considerably more secure than surface-mounted locks. Lock Repair Satwa supplies and installs mortise locksets, cylinder mortise locks and lever-handle mortise locks for residential villas, offices and commercial premises across Dubai.\n\nOur mortise lock range covers standard UAE door preparations (60 mm and 70 mm backsets) as well as custom specifications for thicker or non-standard door leaves. We supply complete mortise lock sets including the lock body, cylinder, strike plate and handles, or individual components for upgrading an existing installation. All fittings are stainless steel or brass-finished for resistance to Dubai\'s high humidity.',
+      'Mortise locks are the standard locking solution for most Dubai villa and commercial doors — installed inside a mortised cavity in the door edge, making them considerably more secure than surface-mounted locks. Lock repair service supplies and installs mortise locksets, cylinder mortise locks and lever-handle mortise locks for residential villas, offices and commercial premises across Dubai.\n\nOur mortise lock range covers standard UAE door preparations (60 mm and 70 mm backsets) as well as custom specifications for thicker or non-standard door leaves. We supply complete mortise lock sets including the lock body, cylinder, strike plate and handles, or individual components for upgrading an existing installation. All fittings are stainless steel or brass-finished for resistance to Dubai\'s high humidity.',
     features: [
       'Complete mortise lock sets including body, cylinder, handles and strike plate',
       'Lever-handle and knob-handle variants available',
@@ -66,11 +66,11 @@ export const products: Product[] = [
     slug: 'high-security-locks',
     title: 'High Security Locks',
     category: 'locks',
-    metaTitle: 'High Security Locks Dubai | Anti-Pick & Restricted Key | Lock Repair Satwa',
+    metaTitle: 'High Security Locks Dubai | Anti-Pick & Restricted Key | Lock repair service',
     metaDescription:
       'High security locks for Dubai villas and offices. Anti-pick, anti-drill, anti-bump cylinders with restricted key profiles. From AED 400 — +971 52 642 6161.',
     description:
-      'Standard pin-tumbler locks can be picked, bumped or drilled by a skilled intruder in seconds. High security locks add multiple layers of mechanical resistance — security pins that defeat picking, hardened steel inserts that defeat drilling, and patented key profiles that cannot be duplicated without authorisation. Lock Repair Satwa supplies and installs high security lock cylinders and complete locksets for Dubai residences and commercial premises requiring maximum mechanical security.\n\nOur high security range includes brands with grade certifications for pick resistance, bump resistance and cylinder attack resistance. Restricted key systems prevent unauthorised key copies being cut at any locksmith or key cutting shop without a documented authorisation card — ensuring your key hierarchy remains under your control.',
+      'Standard pin-tumbler locks can be picked, bumped or drilled by a skilled intruder in seconds. High security locks add multiple layers of mechanical resistance — security pins that defeat picking, hardened steel inserts that defeat drilling, and patented key profiles that cannot be duplicated without authorisation. Lock repair service supplies and installs high security lock cylinders and complete locksets for Dubai residences and commercial premises requiring maximum mechanical security.\n\nOur high security range includes brands with grade certifications for pick resistance, bump resistance and cylinder attack resistance. Restricted key systems prevent unauthorised key copies being cut at any locksmith or key cutting shop without a documented authorisation card — ensuring your key hierarchy remains under your control.',
     features: [
       'Anti-pick security pins (spools, serrated, mushroom) defeating standard picking',
       'Hardened steel anti-drill pins protecting against drill attacks',
@@ -93,11 +93,11 @@ export const products: Product[] = [
     slug: 'lock-cylinders',
     title: 'Lock Cylinders',
     category: 'locks',
-    metaTitle: 'Lock Cylinders Dubai | Euro, Oval & Rim Cylinders | Lock Repair Satwa',
+    metaTitle: 'Lock Cylinders Dubai | Euro, Oval & Rim Cylinders | Lock repair service',
     metaDescription:
       'Lock cylinder supply and replacement in Dubai. Euro profile, oval and rim cylinders for all door types. From AED 100 — +971 52 642 6161.',
     description:
-      'The lock cylinder is the heart of any pin-tumbler lock — the component that reads the key and allows or prevents rotation. When a cylinder wears out, is damaged, or needs rekeying after a key loss, replacing just the cylinder is far more economical than replacing the entire lock. Lock Repair Satwa supplies lock cylinders for all common UAE door lock formats.\n\nWe stock euro profile cylinders (the most common format in modern UAE villa and apartment doors), oval cylinders (common in older Dubai buildings and some mortise locks), rim cylinders (for surface-mounted rim locks and nightlatches), and cam cylinders for cabinet and mailbox locks. All cylinders are supplied with the appropriate number of keys and can be rekeyed on the spot to match your existing key.',
+      'The lock cylinder is the heart of any pin-tumbler lock — the component that reads the key and allows or prevents rotation. When a cylinder wears out, is damaged, or needs rekeying after a key loss, replacing just the cylinder is far more economical than replacing the entire lock. Lock repair service supplies lock cylinders for all common UAE door lock formats.\n\nWe stock euro profile cylinders (the most common format in modern UAE villa and apartment doors), oval cylinders (common in older Dubai buildings and some mortise locks), rim cylinders (for surface-mounted rim locks and nightlatches), and cam cylinders for cabinet and mailbox locks. All cylinders are supplied with the appropriate number of keys and can be rekeyed on the spot to match your existing key.',
     features: [
       'Euro profile double cylinders for standard UAE apartment and villa doors',
       'Oval cylinders for older lock body formats',
@@ -120,11 +120,11 @@ export const products: Product[] = [
     slug: 'door-knob-locks',
     title: 'Door Knob Locks',
     category: 'locks',
-    metaTitle: 'Door Knob Locks Dubai | Interior & Exterior Sets | Lock Repair Satwa',
+    metaTitle: 'Door Knob Locks Dubai | Interior & Exterior Sets | Lock repair service',
     metaDescription:
       'Door knob locks supplied and installed in Dubai for interior and exterior doors. All finishes. From AED 150 — +971 52 642 6161.',
     description:
-      'Door knob locks combine a latch and keyed cylinder in a single handle unit, making them one of the most economical locking solutions for interior and light exterior doors in Dubai residential and commercial properties. Lock Repair Satwa supplies and fits door knob lock sets for bedroom doors, bathroom doors, office interiors and utility room doors across Dubai.\n\nOur range includes passage knob sets (no lock, lever only), privacy knob sets (push-button interior lock for bathrooms), and keyed entry knob sets for exterior or security doors. We carry finishes in satin nickel, polished chrome, antique bronze and matte black to match your existing interior hardware.',
+      'Door knob locks combine a latch and keyed cylinder in a single handle unit, making them one of the most economical locking solutions for interior and light exterior doors in Dubai residential and commercial properties. Lock repair service supplies and fits door knob lock sets for bedroom doors, bathroom doors, office interiors and utility room doors across Dubai.\n\nOur range includes passage knob sets (no lock, lever only), privacy knob sets (push-button interior lock for bathrooms), and keyed entry knob sets for exterior or security doors. We carry finishes in satin nickel, polished chrome, antique bronze and matte black to match your existing interior hardware.',
     features: [
       'Passage, privacy and keyed entry configurations',
       'Suitable for 35–45 mm door thicknesses standard in UAE construction',
@@ -147,11 +147,11 @@ export const products: Product[] = [
     slug: 'lever-handle-locks',
     title: 'Lever Handle Locks',
     category: 'locks',
-    metaTitle: 'Lever Handle Locks Dubai | Office & Commercial | Lock Repair Satwa',
+    metaTitle: 'Lever Handle Locks Dubai | Office & Commercial | Lock repair service',
     metaDescription:
       'Lever handle lock sets for Dubai offices and commercial premises. Passage, privacy and keyed lever sets from AED 200 — +971 52 642 6161.',
     description:
-      'Lever handle locks are the preferred choice for commercial and high-traffic doors in Dubai — the lever action is easier to operate than a knob, making them accessible and practical for offices, hotels, hospitals and retail premises. Lock Repair Satwa supplies and installs lever handle lock sets for all commercial and residential applications across Dubai.\n\nOur range covers mortise lever sets (lever handle attached to a mortise lock body), tubular lever sets (lever handle with integrated latch for standard door bore), and lever-on-backplate sets (architectural lever handles on an escutcheon plate). We stock ADA-compliant lever designs suitable for buildings requiring accessibility compliance.',
+      'Lever handle locks are the preferred choice for commercial and high-traffic doors in Dubai — the lever action is easier to operate than a knob, making them accessible and practical for offices, hotels, hospitals and retail premises. Lock repair service supplies and installs lever handle lock sets for all commercial and residential applications across Dubai.\n\nOur range covers mortise lever sets (lever handle attached to a mortise lock body), tubular lever sets (lever handle with integrated latch for standard door bore), and lever-on-backplate sets (architectural lever handles on an escutcheon plate). We stock ADA-compliant lever designs suitable for buildings requiring accessibility compliance.',
     features: [
       'Passage, privacy and keyed entry configurations',
       'Mortise and tubular body options for different door preparations',
@@ -174,11 +174,11 @@ export const products: Product[] = [
     slug: 'glass-door-lock',
     title: 'Glass Door Lock',
     category: 'locks',
-    metaTitle: 'Glass Door Lock Dubai | Frameless & Framed | Lock Repair Satwa',
+    metaTitle: 'Glass Door Lock Dubai | Frameless & Framed | Lock repair service',
     metaDescription:
       'Glass door locks for Dubai offices and retail premises. Frameless glass, patch fitting and aluminium frame glass doors. From AED 300 — +971 52 642 6161.',
     description:
-      'Glass doors are a design staple of Dubai\'s modern commercial and residential interiors — requiring specialist locking hardware that is both secure and aesthetically appropriate for transparent door surfaces. Lock Repair Satwa supplies and installs glass door locks for frameless glass doors, patch-fitting glass doors and aluminium-framed glass doors across Dubai offices, retail premises and residential lobbies.\n\nOur glass door lock range includes patch fitting deadbolts (mortised directly into the glass edge at the manufacturer\'s specified patch location), glass door rim locks (surface-mounted on the glass face using adhesive bonding hardware), floor locks (spring-loaded floor bolts for glass and frameless door applications) and electrified glass door locks for access control integration.',
+      'Glass doors are a design staple of Dubai\'s modern commercial and residential interiors — requiring specialist locking hardware that is both secure and aesthetically appropriate for transparent door surfaces. Lock repair service supplies and installs glass door locks for frameless glass doors, patch-fitting glass doors and aluminium-framed glass doors across Dubai offices, retail premises and residential lobbies.\n\nOur glass door lock range includes patch fitting deadbolts (mortised directly into the glass edge at the manufacturer\'s specified patch location), glass door rim locks (surface-mounted on the glass face using adhesive bonding hardware), floor locks (spring-loaded floor bolts for glass and frameless door applications) and electrified glass door locks for access control integration.',
     features: [
       'Patch fitting deadbolts for frameless 10–12 mm toughened glass',
       'Rim locks for framed and semi-framed glass doors',
@@ -201,11 +201,11 @@ export const products: Product[] = [
     slug: 'magnetic-locks',
     title: 'Magnetic Locks',
     category: 'locks',
-    metaTitle: 'Magnetic Locks Dubai | Electromagnetic Lock Install | Lock Repair Satwa',
+    metaTitle: 'Magnetic Locks Dubai | Electromagnetic Lock Install | Lock repair service',
     metaDescription:
       'Magnetic lock (magloc) supply and installation in Dubai for access-controlled doors. From AED 400 — +971 52 642 6161.',
     description:
-      'Magnetic locks (electromagnetic locks or maglocks) use an electromagnetic force to hold a door closed — when energised, the magnet holds a steel armature plate on the door face with hundreds of kilograms of force, providing a secure, keyless locking solution for access-controlled doors. Lock Repair Satwa supplies and installs magnetic locks for commercial doors, office entrances, server rooms and residential access control systems across Dubai.\n\nMagnetic locks have no mechanical moving parts, making them extremely durable and low-maintenance. They release immediately when power is removed — inherently fail-safe for emergency egress, making them suitable for fire exit applications where doors must open on alarm activation. We install single-door and double-door magnetic locks in surface-mount and armature configurations, including weatherproof models for exterior gate and entrance applications.',
+      'Magnetic locks (electromagnetic locks or maglocks) use an electromagnetic force to hold a door closed — when energised, the magnet holds a steel armature plate on the door face with hundreds of kilograms of force, providing a secure, keyless locking solution for access-controlled doors. Lock repair service supplies and installs magnetic locks for commercial doors, office entrances, server rooms and residential access control systems across Dubai.\n\nMagnetic locks have no mechanical moving parts, making them extremely durable and low-maintenance. They release immediately when power is removed — inherently fail-safe for emergency egress, making them suitable for fire exit applications where doors must open on alarm activation. We install single-door and double-door magnetic locks in surface-mount and armature configurations, including weatherproof models for exterior gate and entrance applications.',
     features: [
       '280 kg to 600 kg holding force models available',
       'Fail-safe operation — unlocks on power loss for emergency egress',
@@ -228,11 +228,11 @@ export const products: Product[] = [
     slug: 'cam-locks',
     title: 'Cam Locks',
     category: 'locks',
-    metaTitle: 'Cam Locks Dubai | Cabinet, Mailbox & Locker | Lock Repair Satwa',
+    metaTitle: 'Cam Locks Dubai | Cabinet, Mailbox & Locker | Lock repair service',
     metaDescription:
       'Cam locks for cabinets, mailboxes, lockers and vending machines in Dubai. All sizes from AED 50 — +971 52 642 6161.',
     description:
-      'Cam locks are the most versatile and widely used small lock format in Dubai commercial and residential settings — found in filing cabinets, office drawers, mailboxes, lockers, electrical panels, vending machines and display cases. Lock Repair Satwa supplies cam locks in all standard sizes (16 mm, 19 mm, 22 mm, 25 mm and 30 mm) in cylinder-and-cam configurations to suit virtually any application.\n\nWe supply cam locks in standard keyed-different format (each lock has a unique key) or keyed-alike sets (multiple locks operated by a single key) — ideal for office environments where one key opening all pedestal drawers is more practical. We also stock high-security cam locks with stainless steel bodies for damp environments such as pool lockers and outdoor storage applications.',
+      'Cam locks are the most versatile and widely used small lock format in Dubai commercial and residential settings — found in filing cabinets, office drawers, mailboxes, lockers, electrical panels, vending machines and display cases. Lock repair service supplies cam locks in all standard sizes (16 mm, 19 mm, 22 mm, 25 mm and 30 mm) in cylinder-and-cam configurations to suit virtually any application.\n\nWe supply cam locks in standard keyed-different format (each lock has a unique key) or keyed-alike sets (multiple locks operated by a single key) — ideal for office environments where one key opening all pedestal drawers is more practical. We also stock high-security cam locks with stainless steel bodies for damp environments such as pool lockers and outdoor storage applications.',
     features: [
       'Available in 16 mm, 19 mm, 22 mm, 25 mm and 30 mm flange diameters',
       'Standard keyed-different or keyed-alike sets',
@@ -259,11 +259,11 @@ export const products: Product[] = [
     slug: 'smart-door-locks-buy',
     title: 'Smart Door Locks',
     category: 'electronic-locks',
-    metaTitle: 'Smart Door Locks Dubai | Buy & Install | Lock Repair Satwa',
+    metaTitle: 'Smart Door Locks Dubai | Buy & Install | Lock repair service',
     metaDescription:
       'Smart door locks for Dubai homes and offices. Fingerprint, PIN, RFID and app-controlled models supplied and installed from AED 500 — +971 52 642 6161.',
     description:
-      'Smart door locks replace traditional key entry with electronic credentials — fingerprint biometrics, PIN codes, RFID cards, or smartphone apps — providing convenience, audit trails and remote access control that physical keys cannot offer. Lock Repair Satwa supplies and installs smart door locks for apartments, villas, offices and commercial premises across Dubai, selecting models proven to perform reliably in Dubai\'s high-temperature, high-humidity environment.\n\nOur smart lock range covers all major entry methods: fingerprint biometric locks (recognition in under 0.5 seconds, up to 100 stored fingerprints), PIN keypad locks (multiple user codes, time-limited access), RFID card locks (compatible with common UAE building access cards), and WiFi/Bluetooth app-controlled locks (remote access via iOS and Android). Many models combine all four methods on a single unit for maximum flexibility.',
+      'Smart door locks replace traditional key entry with electronic credentials — fingerprint biometrics, PIN codes, RFID cards, or smartphone apps — providing convenience, audit trails and remote access control that physical keys cannot offer. Lock repair service supplies and installs smart door locks for apartments, villas, offices and commercial premises across Dubai, selecting models proven to perform reliably in Dubai\'s high-temperature, high-humidity environment.\n\nOur smart lock range covers all major entry methods: fingerprint biometric locks (recognition in under 0.5 seconds, up to 100 stored fingerprints), PIN keypad locks (multiple user codes, time-limited access), RFID card locks (compatible with common UAE building access cards), and WiFi/Bluetooth app-controlled locks (remote access via iOS and Android). Many models combine all four methods on a single unit for maximum flexibility.',
     features: [
       'Fingerprint recognition in under 0.5 seconds with 0.001% false acceptance rate',
       'PIN code entry with anti-peep scramble pad technology',
@@ -286,11 +286,11 @@ export const products: Product[] = [
     slug: 'fingerprint-door-locks',
     title: 'Fingerprint Door Locks',
     category: 'electronic-locks',
-    metaTitle: 'Fingerprint Door Locks Dubai | Biometric Entry | Lock Repair Satwa',
+    metaTitle: 'Fingerprint Door Locks Dubai | Biometric Entry | Lock repair service',
     metaDescription:
       'Fingerprint door locks for Dubai homes and offices. Fast biometric recognition, supplied and installed from AED 600 — +971 52 642 6161.',
     description:
-      'Fingerprint door locks provide the fastest and most convenient keyless entry — simply place your registered finger on the sensor and the door unlocks in under a second, with no keys to carry, no PIN to remember and no card to lose. Lock Repair Satwa supplies and installs fingerprint door locks for residential and commercial properties across Dubai, using models with capacitive sensors proven to perform in Dubai\'s hot and humid conditions where optical sensors can fail.\n\nOur fingerprint lock range supports multiple enrolled fingerprints (typically 20–100 depending on model), allowing an entire household or office team to gain access without sharing a code. Fingerprints can be deleted individually — when a housekeeper leaves, only their fingerprint is removed, with no need to change locks or redistribute codes.',
+      'Fingerprint door locks provide the fastest and most convenient keyless entry — simply place your registered finger on the sensor and the door unlocks in under a second, with no keys to carry, no PIN to remember and no card to lose. Lock repair service supplies and installs fingerprint door locks for residential and commercial properties across Dubai, using models with capacitive sensors proven to perform in Dubai\'s hot and humid conditions where optical sensors can fail.\n\nOur fingerprint lock range supports multiple enrolled fingerprints (typically 20–100 depending on model), allowing an entire household or office team to gain access without sharing a code. Fingerprints can be deleted individually — when a housekeeper leaves, only their fingerprint is removed, with no need to change locks or redistribute codes.',
     features: [
       'Capacitive fingerprint sensor — reliable in Dubai heat and humidity',
       'Recognition time under 0.5 seconds from touch to door open',
@@ -313,11 +313,11 @@ export const products: Product[] = [
     slug: 'keyless-door-locks',
     title: 'Keyless Door Locks',
     category: 'electronic-locks',
-    metaTitle: 'Keyless Door Locks Dubai | Code Entry & Remote | Lock Repair Satwa',
+    metaTitle: 'Keyless Door Locks Dubai | Code Entry & Remote | Lock repair service',
     metaDescription:
       'Keyless door locks for Dubai residential and commercial properties. PIN code, RFID and app access. From AED 400 installed — +971 52 642 6161.',
     description:
-      'Keyless door locks eliminate the risk and inconvenience of physical keys — no lost keys, no lockouts, no key cutting costs. Lock Repair Satwa supplies and installs keyless entry systems for Dubai homes and businesses, including PIN keypad locks, RFID card/fob locks, Bluetooth smartphone locks and remote-control locks for gate and garage applications.\n\nKeyless systems are particularly practical for Dubai properties with multiple regular visitors — housekeepers, drivers, delivery services — who can each be given a unique code or credential that can be deleted instantly when no longer needed. Time-limited codes provide access only during specified hours, ideal for Airbnb hosts and short-term rental properties across Dubai.',
+      'Keyless door locks eliminate the risk and inconvenience of physical keys — no lost keys, no lockouts, no key cutting costs. Lock repair service supplies and installs keyless entry systems for Dubai homes and businesses, including PIN keypad locks, RFID card/fob locks, Bluetooth smartphone locks and remote-control locks for gate and garage applications.\n\nKeyless systems are particularly practical for Dubai properties with multiple regular visitors — housekeepers, drivers, delivery services — who can each be given a unique code or credential that can be deleted instantly when no longer needed. Time-limited codes provide access only during specified hours, ideal for Airbnb hosts and short-term rental properties across Dubai.',
     features: [
       'PIN code entry with anti-peep keypad (scrambled number display)',
       'RFID card and fob compatibility for multiple users',
@@ -340,11 +340,11 @@ export const products: Product[] = [
     slug: 'keypad-locks',
     title: 'Keypad Locks',
     category: 'electronic-locks',
-    metaTitle: 'Keypad Locks Dubai | PIN Entry Door Locks | Lock Repair Satwa',
+    metaTitle: 'Keypad Locks Dubai | PIN Entry Door Locks | Lock repair service',
     metaDescription:
       'Keypad door locks for Dubai homes and offices. Mechanical and electronic PIN entry. From AED 300 installed — +971 52 642 6161.',
     description:
-      'Keypad locks provide secure, keyless access via a PIN code — one of the most practical electronic lock options for Dubai properties. Lock Repair Satwa supplies and installs electronic keypad locks for residential and commercial doors, including battery-powered electronic keypads, mechanical combination keypads (no battery required), and backlit keypad models suitable for use in low-light building entrance areas.\n\nElectronic keypad locks offer multi-user PIN management, auto-lock functionality and anti-tamper alarms for repeated wrong entries. Mechanical keypad locks (also known as combination locks) require no power at all — ideal for gates, storage areas and outdoor applications where battery maintenance is inconvenient.',
+      'Keypad locks provide secure, keyless access via a PIN code — one of the most practical electronic lock options for Dubai properties. Lock repair service supplies and installs electronic keypad locks for residential and commercial doors, including battery-powered electronic keypads, mechanical combination keypads (no battery required), and backlit keypad models suitable for use in low-light building entrance areas.\n\nElectronic keypad locks offer multi-user PIN management, auto-lock functionality and anti-tamper alarms for repeated wrong entries. Mechanical keypad locks (also known as combination locks) require no power at all — ideal for gates, storage areas and outdoor applications where battery maintenance is inconvenient.',
     features: [
       'Electronic and mechanical keypad options',
       'Multi-user PIN management with master and user code hierarchy',
@@ -371,11 +371,11 @@ export const products: Product[] = [
     slug: 'depository-safes',
     title: 'Depository Safes',
     category: 'safes',
-    metaTitle: 'Depository Safes Dubai | Cash & Document Drop | Lock Repair Satwa',
+    metaTitle: 'Depository Safes Dubai | Cash & Document Drop | Lock repair service',
     metaDescription:
       'Depository safes for Dubai retail and commercial businesses. Drop slot and cash deposit safes from AED 500 — +971 52 642 6161.',
     description:
-      'Depository safes allow cash, envelopes and small items to be deposited through a slot or hopper without unlocking the main safe body — making them the standard cash security solution for Dubai retail outlets, restaurants, petrol stations and businesses that handle daily cash takings. Lock Repair Satwa supplies and installs depository safes for commercial premises across Dubai, from compact under-counter models to large floor-mounted units for high-volume cash handling.\n\nOur depository safe range includes front-drop (slot in the door face), top-drop (slot in the lid) and rotary hopper models (allows bulkier items like cassettes and bags to be deposited). All models can be bolted to the floor or wall for immobilisation. Installation includes anchor bolting and electronic lock programming with a master and user code.',
+      'Depository safes allow cash, envelopes and small items to be deposited through a slot or hopper without unlocking the main safe body — making them the standard cash security solution for Dubai retail outlets, restaurants, petrol stations and businesses that handle daily cash takings. Lock repair service supplies and installs depository safes for commercial premises across Dubai, from compact under-counter models to large floor-mounted units for high-volume cash handling.\n\nOur depository safe range includes front-drop (slot in the door face), top-drop (slot in the lid) and rotary hopper models (allows bulkier items like cassettes and bags to be deposited). All models can be bolted to the floor or wall for immobilisation. Installation includes anchor bolting and electronic lock programming with a master and user code.',
     features: [
       'Front-drop slot for envelopes and flat cash deposits',
       'Rotary hopper for bulky bags and cassette deposits',
@@ -398,11 +398,11 @@ export const products: Product[] = [
     slug: 'gun-safes',
     title: 'Gun Safes',
     category: 'safes',
-    metaTitle: 'Gun Safes Dubai | Firearm Storage Safes | Lock Repair Satwa',
+    metaTitle: 'Gun Safes Dubai | Firearm Storage Safes | Lock repair service',
     metaDescription:
       'Gun safes for secure firearm storage in Dubai. Quick-access pistol safes and long-gun rifle safes. From AED 800 — +971 52 642 6161.',
     description:
-      'Secure firearm storage is a legal and ethical requirement for any gun owner in Dubai and the UAE. Lock Repair Satwa supplies gun safes for authorised firearms licence holders — from compact quick-access pistol safes to full-length rifle and long-gun safes. All gun safes we supply meet the UAE Interior Ministry\'s recommended standards for firearm storage security.\n\nOur range includes biometric quick-access pistol safes (open in under 2 seconds), key-operated pistol lockboxes, and full-size rifle safes with multi-gun racking and ammunition storage compartments. All safes can be floor or wall anchored. We advise on the correct safe size for your licensed firearm collection and ensure the safe meets all documentation requirements under your firearms licence.',
+      'Secure firearm storage is a legal and ethical requirement for any gun owner in Dubai and the UAE. Lock repair service supplies gun safes for authorised firearms licence holders — from compact quick-access pistol safes to full-length rifle and long-gun safes. All gun safes we supply meet the UAE Interior Ministry\'s recommended standards for firearm storage security.\n\nOur range includes biometric quick-access pistol safes (open in under 2 seconds), key-operated pistol lockboxes, and full-size rifle safes with multi-gun racking and ammunition storage compartments. All safes can be floor or wall anchored. We advise on the correct safe size for your licensed firearm collection and ensure the safe meets all documentation requirements under your firearms licence.',
     features: [
       'Biometric quick-access models for authorised pistol holders',
       'Full-size long-gun safes with rifle racks',
@@ -425,11 +425,11 @@ export const products: Product[] = [
     slug: 'fireproof-safes',
     title: 'Fireproof Safes',
     category: 'safes',
-    metaTitle: 'Fireproof Safes Dubai | Document Protection | Lock Repair Satwa',
+    metaTitle: 'Fireproof Safes Dubai | Document Protection | Lock repair service',
     metaDescription:
       'Fireproof safes for Dubai homes and offices. UL and EN rated fire protection for documents and media. From AED 600 — +971 52 642 6161.',
     description:
-      'Important documents — passports, contracts, property deeds, will, insurance policies — are irreplaceable. A fireproof safe provides critical protection during building fires, maintaining internal temperatures below 177°C (the paper charring threshold) for a defined period, typically 30, 60 or 120 minutes. Lock Repair Satwa supplies fireproof safes for Dubai homes and offices, rated to UL or EN 1047 fire testing standards.\n\nOur fireproof range includes document safes (protecting paper documents and banknotes), media safes (lower internal temperature limit protecting hard drives, USB drives and optical media at below 52°C), and combined fireproof and waterproof safes for dual protection. All safes are supplied with a burglary-resistant lock in addition to fire protection, as standalone fireproof safes are typically thin-walled and easily forced.',
+      'Important documents — passports, contracts, property deeds, will, insurance policies — are irreplaceable. A fireproof safe provides critical protection during building fires, maintaining internal temperatures below 177°C (the paper charring threshold) for a defined period, typically 30, 60 or 120 minutes. Lock repair service supplies fireproof safes for Dubai homes and offices, rated to UL or EN 1047 fire testing standards.\n\nOur fireproof range includes document safes (protecting paper documents and banknotes), media safes (lower internal temperature limit protecting hard drives, USB drives and optical media at below 52°C), and combined fireproof and waterproof safes for dual protection. All safes are supplied with a burglary-resistant lock in addition to fire protection, as standalone fireproof safes are typically thin-walled and easily forced.',
     features: [
       'UL or EN 1047 rated fire protection for 30, 60 or 120 minute durations',
       'Internal temperature maintained below 177°C for document protection',
@@ -452,11 +452,11 @@ export const products: Product[] = [
     slug: 'floor-safes',
     title: 'Floor Safes',
     category: 'safes',
-    metaTitle: 'Floor Safes Dubai | In-Floor Concealed Safe | Lock Repair Satwa',
+    metaTitle: 'Floor Safes Dubai | In-Floor Concealed Safe | Lock repair service',
     metaDescription:
       'Floor safes installed into concrete and tile floors in Dubai villas and offices. Concealed, high-security storage from AED 700 — +971 52 642 6161.',
     description:
-      'Floor safes are installed into the concrete structure of your floor, making them both extremely difficult to remove and virtually invisible when covered with a mat, tile or concealment panel. Lock Repair Satwa supplies and installs floor safes for Dubai villas, apartments and commercial premises — cutting the floor, setting the safe in concrete, and restoring the floor finish around it.\n\nFloor safes provide the highest level of physical security against theft because their removal would require breaking up the entire floor structure. They are ideal for storing passports, contracts, cash, jewellery and other valuables that need secure but accessible storage. Most floor safe models use a combination dial or electronic keypad lock, with the entire top surface flush with or slightly below the finished floor level.',
+      'Floor safes are installed into the concrete structure of your floor, making them both extremely difficult to remove and virtually invisible when covered with a mat, tile or concealment panel. Lock repair service supplies and installs floor safes for Dubai villas, apartments and commercial premises — cutting the floor, setting the safe in concrete, and restoring the floor finish around it.\n\nFloor safes provide the highest level of physical security against theft because their removal would require breaking up the entire floor structure. They are ideal for storing passports, contracts, cash, jewellery and other valuables that need secure but accessible storage. Most floor safe models use a combination dial or electronic keypad lock, with the entire top surface flush with or slightly below the finished floor level.',
     features: [
       'Installed into concrete floor structure for maximum security',
       'Concealed under tile, mat or wooden floor panel',
@@ -479,11 +479,11 @@ export const products: Product[] = [
     slug: 'wall-safes',
     title: 'Wall Safes',
     category: 'safes',
-    metaTitle: 'Wall Safes Dubai | Concealed In-Wall Safe | Lock Repair Satwa',
+    metaTitle: 'Wall Safes Dubai | Concealed In-Wall Safe | Lock repair service',
     metaDescription:
       'Wall safes installed into masonry and stud walls in Dubai homes and offices. Concealed behind mirrors and artwork. From AED 500 — +971 52 642 6161.',
     description:
-      'Wall safes are recessed into the wall structure, sitting flush with or behind the surface and hidden behind artwork, mirrors or panels. Lock Repair Satwa supplies and installs wall safes for Dubai villas, apartments and offices in both masonry (block and concrete) and stud-framed partition walls.\n\nMasonry installation provides the highest security as the safe is embedded in solid concrete or block — virtually impossible to extract without significant structural damage. Stud-wall installation is suitable for interior partitions and provides concealment with a lighter-duty security level. We cut the wall opening, set the safe, and restore the wall finish around it.',
+      'Wall safes are recessed into the wall structure, sitting flush with or behind the surface and hidden behind artwork, mirrors or panels. Lock repair service supplies and installs wall safes for Dubai villas, apartments and offices in both masonry (block and concrete) and stud-framed partition walls.\n\nMasonry installation provides the highest security as the safe is embedded in solid concrete or block — virtually impossible to extract without significant structural damage. Stud-wall installation is suitable for interior partitions and provides concealment with a lighter-duty security level. We cut the wall opening, set the safe, and restore the wall finish around it.',
     features: [
       'Flush-mount installation concealed behind mirror, artwork or panel',
       'Masonry and stud-wall installation options',
@@ -506,11 +506,11 @@ export const products: Product[] = [
     slug: 'hotel-safes',
     title: 'Hotel Safes',
     category: 'safes',
-    metaTitle: 'Hotel Safes Dubai | In-Room Guest Safe | Lock Repair Satwa',
+    metaTitle: 'Hotel Safes Dubai | In-Room Guest Safe | Lock repair service',
     metaDescription:
       'Hotel room safes for Dubai hotels and serviced apartments. Supply, installation and maintenance. From AED 400 — +971 52 642 6161.',
     description:
-      'Hotel room safes are a standard guest amenity in Dubai\'s hotel and serviced apartment sector, providing guests with secure storage for valuables, electronics and passports during their stay. Lock Repair Satwa supplies, installs and services hotel room safes for properties of all sizes across Dubai — from small boutique hotels to large resort properties.\n\nOur hotel safe range is designed specifically for hospitality applications: easy guest programming via electronic keypad, a manager override code for checkout retrieval, and a shelf design accommodating modern laptops and tablets. Safes are supplied in standard configurations sized to fit standard hotel wardrobe shelves and can be anchored to the shelf or wardrobe floor for security.',
+      'Hotel room safes are a standard guest amenity in Dubai\'s hotel and serviced apartment sector, providing guests with secure storage for valuables, electronics and passports during their stay. Lock repair service supplies, installs and services hotel room safes for properties of all sizes across Dubai — from small boutique hotels to large resort properties.\n\nOur hotel safe range is designed specifically for hospitality applications: easy guest programming via electronic keypad, a manager override code for checkout retrieval, and a shelf design accommodating modern laptops and tablets. Safes are supplied in standard configurations sized to fit standard hotel wardrobe shelves and can be anchored to the shelf or wardrobe floor for security.',
     features: [
       'Guest-programmable electronic keypad with 3–8 digit code',
       'Manager override code for forgotten code and checkout access',
@@ -537,11 +537,11 @@ export const products: Product[] = [
     slug: 'commercial-locks',
     title: 'Commercial Locks',
     category: 'commercial-door-hardware',
-    metaTitle: 'Commercial Locks Dubai | Heavy-Duty Office & Industrial | Lock Repair Satwa',
+    metaTitle: 'Commercial Locks Dubai | Heavy-Duty Office & Industrial | Lock repair service',
     metaDescription:
       'Commercial-grade locks for Dubai offices, warehouses and industrial premises. High cycle-count, heavy-duty hardware from AED 300 — +971 52 642 6161.',
     description:
-      'Commercial locks are built to handle higher cycle counts, heavier doors and more demanding environments than residential hardware — rated for 250,000 to 1,000,000 operation cycles and tested for resistance to forced entry at commercial security standards. Lock Repair Satwa supplies commercial-grade deadbolts, mortise locks, rim locks and multipoint locking systems for Dubai offices, warehouses, retail premises and industrial facilities.\n\nWe specify the correct lock grade for each application — Grade 2 for light commercial use, Grade 1 for heavy-traffic commercial doors, and certified high-security hardware for server rooms, data centres and sensitive commercial premises. All commercial hardware is sourced from brands with established UAE market presence and local warranty support.',
+      'Commercial locks are built to handle higher cycle counts, heavier doors and more demanding environments than residential hardware — rated for 250,000 to 1,000,000 operation cycles and tested for resistance to forced entry at commercial security standards. Lock repair service supplies commercial-grade deadbolts, mortise locks, rim locks and multipoint locking systems for Dubai offices, warehouses, retail premises and industrial facilities.\n\nWe specify the correct lock grade for each application — Grade 2 for light commercial use, Grade 1 for heavy-traffic commercial doors, and certified high-security hardware for server rooms, data centres and sensitive commercial premises. All commercial hardware is sourced from brands with established UAE market presence and local warranty support.',
     features: [
       '250,000 to 1,000,000 cycle ratings for heavy-traffic commercial applications',
       'ANSI Grade 1 and 2 commercial lock sets',
@@ -564,11 +564,11 @@ export const products: Product[] = [
     slug: 'commercial-magnetic-locks',
     title: 'Magnetic Locks (Commercial)',
     category: 'commercial-door-hardware',
-    metaTitle: 'Commercial Magnetic Locks Dubai | High-Force EM Locks | Lock Repair Satwa',
+    metaTitle: 'Commercial Magnetic Locks Dubai | High-Force EM Locks | Lock repair service',
     metaDescription:
       'Commercial magnetic locks for Dubai offices and buildings. 280 kg to 1,200 kg holding force. Supply and installation — +971 52 642 6161.',
     description:
-      'Commercial magnetic locks provide fail-safe electronic locking for high-traffic access-controlled doors in Dubai commercial buildings — holding forces from 280 kg to 1,200 kg for single and double door applications. Lock Repair Satwa supplies and installs commercial magnetic locks for office entrance doors, server room doors, fire exit doors and building lobby doors as part of comprehensive access control systems.\n\nCommercial magnetic locks are particularly suitable for high-frequency access applications — they have no mechanical parts to wear, operate silently and provide instant release for emergency egress. We supply both indoor and weatherproof outdoor models, as well as mini magnetic locks for gates and lighter interior doors.',
+      'Commercial magnetic locks provide fail-safe electronic locking for high-traffic access-controlled doors in Dubai commercial buildings — holding forces from 280 kg to 1,200 kg for single and double door applications. Lock repair service supplies and installs commercial magnetic locks for office entrance doors, server room doors, fire exit doors and building lobby doors as part of comprehensive access control systems.\n\nCommercial magnetic locks are particularly suitable for high-frequency access applications — they have no mechanical parts to wear, operate silently and provide instant release for emergency egress. We supply both indoor and weatherproof outdoor models, as well as mini magnetic locks for gates and lighter interior doors.',
     features: [
       '280 kg, 600 kg and 1,200 kg holding force models',
       'Double door models for lobby and entrance door pairs',
@@ -591,11 +591,11 @@ export const products: Product[] = [
     slug: 'electric-door-strikes',
     title: 'Electric Door Strikes',
     category: 'commercial-door-hardware',
-    metaTitle: 'Electric Door Strikes Dubai | Fail-Safe & Fail-Secure | Lock Repair Satwa',
+    metaTitle: 'Electric Door Strikes Dubai | Fail-Safe & Fail-Secure | Lock repair service',
     metaDescription:
       'Electric door strike supply and installation in Dubai. Fail-safe and fail-secure models for access control integration. From AED 400 — +971 52 642 6161.',
     description:
-      'Electric door strikes replace the static strike plate in a door frame with an electrically controlled latch keeper — allowing the latch bolt to be electrically released from a remote location, providing access without a key. Lock Repair Satwa supplies and installs electric door strikes for Dubai offices, residential buildings, access control systems and intercom entry systems.\n\nWe supply fail-safe models (which release when power is removed — appropriate for fire exit applications) and fail-secure models (which stay locked when power is removed — appropriate for server rooms and security areas). Electric strikes are the most common hardware used with video intercom entry systems in Dubai apartment buildings, allowing the front desk or residents to remotely release the main entrance door.',
+      'Electric door strikes replace the static strike plate in a door frame with an electrically controlled latch keeper — allowing the latch bolt to be electrically released from a remote location, providing access without a key. Lock repair service supplies and installs electric door strikes for Dubai offices, residential buildings, access control systems and intercom entry systems.\n\nWe supply fail-safe models (which release when power is removed — appropriate for fire exit applications) and fail-secure models (which stay locked when power is removed — appropriate for server rooms and security areas). Electric strikes are the most common hardware used with video intercom entry systems in Dubai apartment buildings, allowing the front desk or residents to remotely release the main entrance door.',
     features: [
       'Fail-safe and fail-secure models for different security requirements',
       'Compatible with all standard mortise and rim latches',
@@ -618,11 +618,11 @@ export const products: Product[] = [
     slug: 'panic-bars',
     title: 'Panic Bars',
     category: 'commercial-door-hardware',
-    metaTitle: 'Panic Bars Dubai | Emergency Exit Bar Install | Lock Repair Satwa',
+    metaTitle: 'Panic Bars Dubai | Emergency Exit Bar Install | Lock repair service',
     metaDescription:
       'Panic bar and exit device supply and installation in Dubai. EN 1125 emergency egress hardware for fire exits and commercial doors. From AED 500 — +971 52 642 6161.',
     description:
-      'Panic bars (also called crash bars or push bars) are mandatory on emergency exit doors in UAE commercial buildings — allowing rapid single-motion exit by anyone without knowledge of lock operation. Lock Repair Satwa supplies and installs panic bar exit devices for commercial properties across Dubai, covering rim-mounted, mortise and vertical rod configurations for single and double doors.\n\nAll panic bars we supply meet EN 1125 emergency escape hardware requirements. We offer standard push-bar devices for single doors, co-ordinator and flush bolt kits for double doors, and alarm-equipped panic bars that trigger an audible alarm when the emergency exit is used outside normal hours. External access options (cylinder trim or lever outside) allow authorised re-entry from outside while maintaining panic release from inside.',
+      'Panic bars (also called crash bars or push bars) are mandatory on emergency exit doors in UAE commercial buildings — allowing rapid single-motion exit by anyone without knowledge of lock operation. Lock repair service supplies and installs panic bar exit devices for commercial properties across Dubai, covering rim-mounted, mortise and vertical rod configurations for single and double doors.\n\nAll panic bars we supply meet EN 1125 emergency escape hardware requirements. We offer standard push-bar devices for single doors, co-ordinator and flush bolt kits for double doors, and alarm-equipped panic bars that trigger an audible alarm when the emergency exit is used outside normal hours. External access options (cylinder trim or lever outside) allow authorised re-entry from outside while maintaining panic release from inside.',
     features: [
       'EN 1125 certified emergency egress hardware',
       'Rim, mortise and vertical rod configurations',
@@ -645,11 +645,11 @@ export const products: Product[] = [
     slug: 'door-closers',
     title: 'Door Closers',
     category: 'commercial-door-hardware',
-    metaTitle: 'Door Closers Dubai | Commercial Door Closer Install | Lock Repair Satwa',
+    metaTitle: 'Door Closers Dubai | Commercial Door Closer Install | Lock repair service',
     metaDescription:
       'Door closer supply and installation in Dubai for commercial and fire doors. Overhead and floor spring closers. From AED 200 — +971 52 642 6161.',
     description:
-      'Door closers ensure commercial and fire doors return to the closed position after each use — a mandatory requirement for fire doors in UAE buildings and a practical necessity for any secure or controlled-environment door. Lock Repair Satwa supplies and installs overhead door closers, concealed door closers and floor spring closers for commercial properties across Dubai.\n\nOur commercial door closer range is sized by EN or ISO closing force grade, matched to door weight and width for consistent positive latching. We adjust all closers to Dubai-climate specifications, compensating for thermal expansion that can cause misalignment in the UAE summer. We also service and repair existing closers — recalibrating speed adjustment valves and replacing hydraulic seals on leaking units.',
+      'Door closers ensure commercial and fire doors return to the closed position after each use — a mandatory requirement for fire doors in UAE buildings and a practical necessity for any secure or controlled-environment door. Lock repair service supplies and installs overhead door closers, concealed door closers and floor spring closers for commercial properties across Dubai.\n\nOur commercial door closer range is sized by EN or ISO closing force grade, matched to door weight and width for consistent positive latching. We adjust all closers to Dubai-climate specifications, compensating for thermal expansion that can cause misalignment in the UAE summer. We also service and repair existing closers — recalibrating speed adjustment valves and replacing hydraulic seals on leaking units.',
     features: [
       'EN grade 1–6 closing force options covering all commercial door sizes',
       'Overhead, concealed and floor spring configurations',
@@ -672,11 +672,11 @@ export const products: Product[] = [
     slug: 'door-operators',
     title: 'Door Operators',
     category: 'commercial-door-hardware',
-    metaTitle: 'Door Operators Dubai | Automatic Door Opener | Lock Repair Satwa',
+    metaTitle: 'Door Operators Dubai | Automatic Door Opener | Lock repair service',
     metaDescription:
       'Automatic door operator supply and installation in Dubai for swing and sliding doors. From AED 800 — +971 52 642 6161.',
     description:
-      'Door operators (automatic door openers) provide hands-free or push-plate activated automatic door opening for Dubai commercial buildings, hospitals, hotels, retail premises and accessibility-compliant facilities. Lock Repair Satwa supplies and installs door operators for swing doors (low-energy and full-power models), sliding entrance doors, and fold-back automatic door systems.\n\nLow-energy swing door operators allow a door to be opened by a light push or push-plate activation — suitable for accessibility applications where manual door opening is impractical. Full-power automatic swing door operators open and close the door entirely automatically using motion detection, push plates or access control activation. All door operator systems include a manual override mode allowing doors to be used conventionally if the operator loses power.',
+      'Door operators (automatic door openers) provide hands-free or push-plate activated automatic door opening for Dubai commercial buildings, hospitals, hotels, retail premises and accessibility-compliant facilities. Lock repair service supplies and installs door operators for swing doors (low-energy and full-power models), sliding entrance doors, and fold-back automatic door systems.\n\nLow-energy swing door operators allow a door to be opened by a light push or push-plate activation — suitable for accessibility applications where manual door opening is impractical. Full-power automatic swing door operators open and close the door entirely automatically using motion detection, push plates or access control activation. All door operator systems include a manual override mode allowing doors to be used conventionally if the operator loses power.',
     features: [
       'Low-energy and full-power automatic swing door operators',
       'Sliding door operators for entrance vestibule applications',

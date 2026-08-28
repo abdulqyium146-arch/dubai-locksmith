@@ -1,5 +1,5 @@
 // ─────────────────────────────────────────────────────────────────────────────
-// Lock Repair Satwa — LocalBusiness + Organization Schema
+// Lock repair service — LocalBusiness + Organization Schema
 // Production-grade JSON-LD for maximum Google entity understanding
 // ─────────────────────────────────────────────────────────────────────────────
 import { JsonLd } from './JsonLd'
@@ -11,6 +11,7 @@ import {
   ADDRESS_STREET,
   ADDRESS_AREA,
   ADDRESS_CITY,
+  PLUS_CODE,
   COORDINATES,
   GOOGLE_RATING,
   GOOGLE_REVIEW_COUNT,
@@ -54,9 +55,9 @@ export function LocalBusinessSchema() {
   const localBusinessSchema = {
     '@context': 'https://schema.org',
     '@type': ['Locksmith', 'LocalBusiness'],
-    '@id': `${SITE_URL}/#lock-repair-satwa`,
+    '@id': `${SITE_URL}/#lock-repair-service`,
     name: BUSINESS_NAME,
-    alternateName: ['Lock Repair Satwa Dubai', 'Locksmith Dubai', 'Key Maker Dubai', 'Key Shop Satwa'],
+    alternateName: ['Lock repair service Dubai', 'Locksmith Dubai', 'Key Maker Dubai', 'Key Shop Satwa'],
     description: `${BUSINESS_TAGLINE}. Open 24/7 across all Dubai areas. Car key duplication, programming, emergency unlock, door lock repair, smart locks. Rated ${GOOGLE_RATING}★ on Google.`,
     url: SITE_URL,
     telephone: PHONE_RAW,
@@ -72,6 +73,11 @@ export function LocalBusinessSchema() {
       '@type': 'GeoCoordinates',
       latitude: COORDINATES.lat,
       longitude: COORDINATES.lng,
+    },
+    additionalProperty: {
+      '@type': 'PropertyValue',
+      name: 'Google Plus Code',
+      value: PLUS_CODE,
     },
     hasMap: GOOGLE_MAPS_URL,
     // 24/7 — represented as array of 7-day specs (Google's preferred format)
@@ -118,7 +124,7 @@ export function LocalBusinessSchema() {
             '@type': 'Service',
             name: item.name,
             url: item.url,
-            provider: { '@id': `${SITE_URL}/#lock-repair-satwa` },
+            provider: { '@id': `${SITE_URL}/#lock-repair-service` },
           },
           priceCurrency: 'AED',
           priceSpecification: {
@@ -166,37 +172,37 @@ export function LocalBusinessSchema() {
         url: `${SITE_URL}/images/shop/locksmith-shop-satwa-al-badaa-dubai.webp`,
         contentUrl: `${SITE_URL}/images/shop/locksmith-shop-satwa-al-badaa-dubai.webp`,
         caption: `${BUSINESS_NAME} — Key Maker & Key Shop in Al Bada'a, Satwa Dubai`,
-        name: 'Lock Repair Satwa Key Shop Dubai',
+        name: 'Lock repair service Key Shop Dubai',
       },
       {
         '@type': 'ImageObject',
         url: `${SITE_URL}/images/shop/locksmith-shop-satwa-al-badaa-dubai.webp`,
-        caption: "Lock Repair Satwa shop exterior in Al Bada'a, Satwa — key shop nearest to Al Satwa Road",
+        caption: "Lock repair service shop exterior in Al Bada'a, Satwa — key shop nearest to Al Satwa Road",
         name: 'Key Shop Satwa Al Bada\'a Dubai',
         representativeOfPage: true,
       },
       {
         '@type': 'ImageObject',
         url: `${SITE_URL}/images/shop/padlock-collection-lock-shop-satwa-dubai.webp`,
-        caption: 'Padlock and lock collection at Lock Repair Satwa key shop, Satwa Dubai',
+        caption: 'Padlock and lock collection at Lock repair service key shop, Satwa Dubai',
         name: 'Padlock Collection Lock Shop Satwa Dubai',
       },
       {
         '@type': 'ImageObject',
         url: `${SITE_URL}/images/shop/key-duplication-display-for-sale-satwa-dubai.webp`,
-        caption: 'Key duplication display at Lock Repair Satwa — key duplication service from AED 50',
+        caption: 'Key duplication display at Lock repair service — key duplication service from AED 50',
         name: 'Key Duplication Service Display Satwa Dubai',
       },
       {
         '@type': 'ImageObject',
         url: `${SITE_URL}/images/shop/door-lock-handles-repair-shop-satwa-dubai.webp`,
-        caption: 'Door lock handles and hardware at Lock Repair Satwa, Satwa Dubai',
+        caption: 'Door lock handles and hardware at Lock repair service, Satwa Dubai',
         name: 'Door Lock Repair Shop Satwa Dubai',
       },
       {
         '@type': 'ImageObject',
         url: `${SITE_URL}/images/services/car-remote-key-blanks-locksmith-shop-dubai.webp`,
-        caption: 'Car remote key blanks at Lock Repair Satwa locksmith shop, Dubai',
+        caption: 'Car remote key blanks at Lock repair service locksmith shop, Dubai',
         name: 'Car Remote Key Blanks Dubai Locksmith',
       },
     ],

@@ -1,5 +1,5 @@
 // ─────────────────────────────────────────────────────────────────────────────
-// Lock Repair Satwa — Products Hub Page
+// Lock repair service — Products Hub Page
 // ─────────────────────────────────────────────────────────────────────────────
 import type { Metadata } from 'next'
 import Link from 'next/link'
@@ -31,9 +31,9 @@ import { formatPriceRange } from '@/lib/utils'
 // ── Metadata ──────────────────────────────────────────────────────────────────
 
 export const metadata: Metadata = {
-  title: { absolute: 'Security Products Dubai | Locks, Safes & Hardware | Lock Repair Satwa' },
+  title: { absolute: 'Security Products Dubai | Locks, Safes & Hardware | Lock repair service' },
   description:
-    'Browse our full range of security products in Dubai: deadbolts, mortise locks, high security locks, smart door locks, fingerprint locks, keypad locks, safes and commercial door hardware. Supply and installation by Lock Repair Satwa.',
+    'Browse our full range of security products in Dubai: deadbolts, mortise locks, high security locks, smart door locks, fingerprint locks, keypad locks, safes and commercial door hardware. Supply and installation by Lock repair service.',
   alternates: {
     canonical: `${SITE_URL}/products`,
   },
@@ -42,9 +42,9 @@ export const metadata: Metadata = {
     locale: 'en_AE',
     url: `${SITE_URL}/products`,
     siteName: BUSINESS_NAME,
-    title: 'Locksmith Products Dubai — Locks, Safes & Security Hardware | Lock Repair Satwa',
+    title: 'Locksmith Products Dubai — Locks, Safes & Security Hardware | Lock repair service',
     description:
-      'Complete range of locks, electronic locks, safes and commercial door hardware supplied and installed in Dubai by Lock Repair Satwa.',
+      'Complete range of locks, electronic locks, safes and commercial door hardware supplied and installed in Dubai by Lock repair service.',
     images: [{ url: DEFAULT_OG_IMAGE, width: 1200, height: 630, alt: `${BUSINESS_NAME} Products` }],
   },
 }
@@ -167,7 +167,7 @@ export default function ProductsPage() {
 
             <div className="mt-6 rounded-xl border-l-4 border-brand-gold bg-white/10 p-5 backdrop-blur-sm">
               <p className="text-base leading-relaxed text-white/90">
-                Lock Repair Satwa supplies and installs a complete range of security products across Dubai —
+                Lock repair service supplies and installs a complete range of security products across Dubai —
                 from deadbolt locks and high-security cylinders to smart door locks, electronic safes and
                 commercial door hardware. Every product we sell is also installed by our trained
                 technicians. Call{' '}

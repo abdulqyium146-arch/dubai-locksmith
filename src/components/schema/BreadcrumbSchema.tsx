@@ -1,5 +1,5 @@
 // ─────────────────────────────────────────────────────────────────────────────
-// Lock Repair Satwa — BreadcrumbList Schema
+// Lock repair service — BreadcrumbList Schema
 // ─────────────────────────────────────────────────────────────────────────────
 import { JsonLd } from './JsonLd'
 import type { BreadcrumbItem } from '@/types'

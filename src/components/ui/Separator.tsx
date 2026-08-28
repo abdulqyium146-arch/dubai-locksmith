@@ -1,5 +1,5 @@
 // ─────────────────────────────────────────────────────────────────────────────
-// Lock Repair Satwa — Separator Primitive
+// Lock repair service — Separator Primitive
 // ─────────────────────────────────────────────────────────────────────────────
 import * as React from 'react'
 import * as SeparatorPrimitive from '@radix-ui/react-separator'

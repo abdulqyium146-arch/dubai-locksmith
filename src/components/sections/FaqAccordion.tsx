@@ -1,6 +1,6 @@
 'use client'
 // ─────────────────────────────────────────────────────────────────────────────
-// Lock Repair Satwa — FAQ Accordion (CSS grid-row animation, no framer-motion)
+// Lock repair service — FAQ Accordion (CSS grid-row animation, no framer-motion)
 // ─────────────────────────────────────────────────────────────────────────────
 import { useState } from 'react'
 import { Plus, Minus } from 'lucide-react'

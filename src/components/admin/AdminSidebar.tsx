@@ -54,7 +54,7 @@ export function AdminSidebar() {
             <Lock className="h-5 w-5 text-slate-900" />
           </div>
           <div className="min-w-0">
-            <p className="text-sm font-bold text-white leading-none truncate">Lock Repair Satwa</p>
+            <p className="text-sm font-bold text-white leading-none truncate">Lock repair service</p>
             <p className="text-xs text-amber-400 leading-none mt-1">Admin Dashboard</p>
           </div>
         </div>

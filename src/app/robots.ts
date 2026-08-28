@@ -1,5 +1,5 @@
 // ─────────────────────────────────────────────────────────────────────────────
-// Lock Repair Satwa — Production robots.txt
+// Lock repair service — Production robots.txt
 // ─────────────────────────────────────────────────────────────────────────────
 import type { MetadataRoute } from 'next'
 import { SITE_URL } from '@/lib/constants'

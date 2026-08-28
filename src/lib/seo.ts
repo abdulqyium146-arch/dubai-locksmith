@@ -1,5 +1,5 @@
 // ─────────────────────────────────────────────────────────────────────────────
-// Lock Repair Satwa — SEO Utility: Related Content & Internal Linking
+// Lock repair service — SEO Utility: Related Content & Internal Linking
 // Drives PageRank flow and topical authority across all page types
 // ─────────────────────────────────────────────────────────────────────────────
 import { services } from '@/data/services'
@@ -41,18 +41,21 @@ export const TOP_SERVICE_LOCATIONS = [
 // ── Service → Product links ───────────────────────────────────────────────────
 
 const SERVICE_TO_PRODUCTS: Record<string, string[]> = {
-  'car-key-duplication':          ['deadbolt-locks', 'mortise-locks'],
-  'car-key-replacement':          ['deadbolt-locks', 'mortise-locks'],
-  'remote-smart-key-programming': ['smart-locks', 'keypad-locks'],
-  'transponder-keys':             ['deadbolt-locks', 'mortise-locks'],
-  'emergency-car-unlock':         ['deadbolt-locks', 'mortise-locks'],
-  'lost-broken-car-keys':         ['deadbolt-locks', 'mortise-locks'],
-  'flip-keys':                    ['mortise-locks', 'rim-locks'],
-  'smart-door-locks':             ['smart-locks', 'keypad-locks'],
-  'safe-box-services':            ['padlocks', 'deadbolt-locks'],
-  'parking-remotes':              ['smart-locks', 'keypad-locks'],
-  'car-battery-replacement':      ['deadbolt-locks', 'mortise-locks'],
-  'rubber-stamps':                ['deadbolt-locks', 'mortise-locks'],
+  // Door/lock services — direct product relevance
+  'smart-door-locks':             ['fingerprint-door-locks', 'keypad-locks', 'smart-door-locks-buy'],
+  'safe-box-services':            ['fireproof-safes', 'depository-safes', 'floor-safes'],
+  'safe-opening':                 ['fireproof-safes', 'floor-safes', 'wall-safes'],
+  'lock-change':                  ['deadbolt-locks', 'mortise-locks', 'lock-cylinders'],
+  'lock-repair':                  ['lock-cylinders', 'deadbolt-locks', 'mortise-locks'],
+  'home-lockout':                 ['deadbolt-locks', 'high-security-locks'],
+  'master-key-system':            ['lock-cylinders', 'high-security-locks'],
+  'mailbox-lock':                 ['lock-cylinders', 'cam-locks'],
+  'cabinet-lock':                 ['cam-locks', 'lock-cylinders'],
+  'access-control-installation':  ['magnetic-locks', 'electric-door-strikes'],
+  'door-closer-installation':     ['door-closers'],
+  'push-bar-installation':        ['panic-bars'],
+  'sliding-patio-door-lock':      ['deadbolt-locks', 'high-security-locks'],
+  'access-card-duplication':      ['magnetic-locks', 'electric-door-strikes'],
 }
 
 /** Returns up to 2 products contextually related to a service. */
@@ -97,12 +100,22 @@ export const TOP_LOCATION_PRODUCTS = [
 // ── Product → Services ────────────────────────────────────────────────────────
 
 const PRODUCT_TO_SERVICES: Record<string, string[]> = {
-  'deadbolt-locks':    ['lock-repair', 'lock-change'],
-  'mortise-locks':     ['lock-repair', 'lock-change'],
-  'smart-locks':       ['smart-door-locks', 'lock-repair'],
-  'keypad-locks':      ['smart-door-locks', 'lock-repair'],
-  'padlocks':          ['safe-box-services', 'lock-repair'],
-  'rim-locks':         ['lock-repair', 'lock-change'],
+  'deadbolt-locks':          ['lock-change', 'lock-repair', 'home-lockout'],
+  'mortise-locks':           ['lock-change', 'lock-repair'],
+  'high-security-locks':     ['lock-change', 'master-key-system'],
+  'lock-cylinders':          ['lock-repair', 'lock-change', 'master-key-system'],
+  'fingerprint-door-locks':  ['smart-door-locks', 'access-control-installation'],
+  'keypad-locks':            ['smart-door-locks', 'access-control-installation'],
+  'smart-door-locks-buy':    ['smart-door-locks'],
+  'magnetic-locks':          ['access-control-installation'],
+  'electric-door-strikes':   ['access-control-installation'],
+  'cam-locks':               ['cabinet-lock', 'mailbox-lock'],
+  'fireproof-safes':         ['safe-box-services', 'safe-opening'],
+  'depository-safes':        ['safe-box-services', 'safe-opening'],
+  'floor-safes':             ['safe-box-services'],
+  'wall-safes':              ['safe-box-services'],
+  'panic-bars':              ['push-bar-installation'],
+  'door-closers':            ['door-closer-installation'],
 }
 
 /** Returns up to 2 installation/repair services for a product. */

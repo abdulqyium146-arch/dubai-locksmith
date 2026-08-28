@@ -1,5 +1,5 @@
 // ─────────────────────────────────────────────────────────────────────────────
-// Lock Repair Satwa — Product Detail Page
+// Lock repair service — Product Detail Page
 // ─────────────────────────────────────────────────────────────────────────────
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
@@ -234,7 +234,7 @@ export default async function ProductPage({
                     {product.title}
                   </h1>
                   <p className="mt-1 text-xs font-semibold uppercase tracking-widest text-brand-gold/70">
-                    Lock Repair Satwa · Dubai, UAE
+                    Lock repair service · Dubai, UAE
                   </p>
                 </div>
               </div>

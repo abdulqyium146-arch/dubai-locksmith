@@ -1,5 +1,5 @@
 // ─────────────────────────────────────────────────────────────────────────────
-// Lock Repair Satwa — About Page (E-E-A-T Focused)
+// Lock repair service — About Page (E-E-A-T Focused)
 // ─────────────────────────────────────────────────────────────────────────────
 import type { Metadata } from 'next'
 import Image from 'next/image'
@@ -40,9 +40,9 @@ import {
 // ── Metadata ──────────────────────────────────────────────────────────────────
 
 export const metadata: Metadata = {
-  title: { absolute: `About Lock Repair Satwa | Professional Locksmith in Dubai` },
+  title: { absolute: `About Lock repair service | Professional Locksmith in Dubai` },
   description:
-    `Learn about Lock Repair Satwa — Dubai's professional locksmith based at D90, Al Bada'a. We provide lock repair, car key duplication, smart key programming and emergency locksmith services across all Dubai areas. Rated 4.7★ on Google.`,
+    `Learn about Lock repair service — Dubai's professional locksmith based at D90, Al Bada'a. We provide lock repair, car key duplication, smart key programming and emergency locksmith services across all Dubai areas. Rated 4.7★ on Google.`,
   alternates: {
     canonical: `${SITE_URL}/about`,
   },
@@ -87,9 +87,9 @@ const GMB_VIDEO_URL =
 const videoObjectSchema = {
   '@context': 'https://schema.org',
   '@type': 'VideoObject',
-  name: 'Lock Repair Satwa — Professional Locksmith in Dubai',
+  name: 'Lock repair service — Professional Locksmith in Dubai',
   description:
-    "Watch Lock Repair Satwa professionals at work — key duplication, car key programming, door lock repair and emergency locksmith services at D90, Al Bada'a, Dubai.",
+    "Watch Lock repair service professionals at work — key duplication, car key programming, door lock repair and emergency locksmith services at D90, Al Bada'a, Dubai.",
   contentUrl: GMB_VIDEO_URL,
   thumbnailUrl: GMB_VIDEO_URL,
   uploadDate: '2025-01-01',
@@ -144,7 +144,7 @@ const WHY_CHOOSE_US = [
     icon: Award,
     title: 'UAE Trade Licensed Business',
     description:
-      'Lock Repair Satwa operates under a valid UAE trade licence. Every technician carries company ID on every visit and every completed job is confirmed with a receipt.',
+      'Lock repair service operates under a valid UAE trade licence. Every technician carries company ID on every visit and every completed job is confirmed with a receipt.',
   },
   {
     icon: Star,
@@ -180,10 +180,10 @@ export default function AboutPage() {
           <div className="mt-6 max-w-3xl">
             <h1 className="font-heading text-4xl font-extrabold leading-tight tracking-tight text-white sm:text-5xl">
               About{' '}
-              <span className="text-gold-gradient">Lock Repair Satwa</span>
+              <span className="text-gold-gradient">Lock repair service</span>
             </h1>
             <p className="mt-5 text-lg leading-relaxed text-white/75 max-w-2xl">
-              Lock Repair Satwa is a professional locksmith based at D90, Al Bada&apos;a, Dubai —
+              Lock repair service is a professional locksmith based at D90, Al Bada&apos;a, Dubai —
               serving all Dubai areas daily from 7 AM to 11:30 PM. Rated 4.7&#9733; on Google.
             </p>
           </div>
@@ -205,12 +205,12 @@ export default function AboutPage() {
             id="story-heading"
             className="font-heading text-3xl font-bold tracking-tight text-foreground sm:text-4xl"
           >
-            Why We Started Lock Repair Satwa
+            Why We Started Lock repair service
           </h2>
 
           <div className="mt-8 space-y-5 text-base leading-relaxed text-muted-foreground">
             <p>
-              Lock Repair Satwa is a professional locksmith and key shop based at D90, Al Bada&apos;a,
+              Lock repair service is a professional locksmith and key shop based at D90, Al Bada&apos;a,
               Dubai — the neighbourhood immediately adjacent to Al Satwa Road. We built the business
               around the three things Dubai residents consistently tell us they need most:{' '}
               <strong>speed</strong>, <strong>reliability</strong>, and <strong>honest, upfront pricing</strong>.
@@ -218,7 +218,7 @@ export default function AboutPage() {
             <p>
               Dubai residents face a frustrating choice when a key breaks or a lock fails: wait days
               and pay premium prices at a franchised dealership, or take a chance on an unaccountable
-              roadside operator. Lock Repair Satwa exists to be the professional third option — a
+              roadside operator. Lock repair service exists to be the professional third option — a
               fully equipped mobile service that brings the workshop to you, at transparent prices,
               across all Dubai areas.
             </p>
@@ -267,11 +267,11 @@ export default function AboutPage() {
               playsInline
               controls
               className="w-full aspect-video block"
-              aria-label="Lock Repair Satwa — professional locksmith team in action at Al Bada'a Dubai"
+              aria-label="Lock repair service — professional locksmith team in action at Al Bada'a Dubai"
             />
           </div>
           <p className="mt-4 text-center text-sm text-muted-foreground">
-            Lock Repair Satwa · D90, Al Bada&apos;a, Dubai · Professional Locksmith Services
+            Lock repair service · D90, Al Bada&apos;a, Dubai · Professional Locksmith Services
           </p>
         </div>
       </section>
@@ -290,7 +290,7 @@ export default function AboutPage() {
               id="why-choose-us-heading"
               className="font-heading text-3xl font-bold tracking-tight text-foreground sm:text-4xl"
             >
-              What Makes Lock Repair Satwa Different
+              What Makes Lock repair service Different
             </h2>
             <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
               These are the concrete, specific reasons our customers call us back — and refer their friends.
@@ -336,7 +336,7 @@ export default function AboutPage() {
 
           <div className="mt-8 space-y-5 text-base leading-relaxed text-muted-foreground">
             <p>
-              Every Lock Repair Satwa technician is trained on the lock systems, key types and
+              Every Lock repair service technician is trained on the lock systems, key types and
               vehicle brands most common in Dubai before being deployed on customer calls. Our
               team covers the full range of automotive key programming — from Toyota and Nissan
               through to BMW, Mercedes-Benz, Land Rover and other European makes — using
@@ -388,7 +388,7 @@ export default function AboutPage() {
               id="gallery-heading"
               className="font-heading text-3xl font-bold tracking-tight text-foreground sm:text-4xl"
             >
-              Inside Lock Repair Satwa — Al Bada&apos;a, Dubai
+              Inside Lock repair service — Al Bada&apos;a, Dubai
             </h2>
             <p className="mt-4 text-base text-muted-foreground max-w-xl mx-auto">
               Real shop. Real stock. Real technicians. Based at D90, Al Bada&apos;a — serving all Dubai areas daily 24/7.
@@ -398,22 +398,22 @@ export default function AboutPage() {
             {[
               {
                 src: '/images/shop/locksmith-shop-satwa-al-badaa-dubai.webp',
-                alt: 'Lock Repair Satwa shop exterior in Al Bada\'a Satwa area, Dubai — professional locksmith and key maker',
+                alt: 'Lock repair service shop exterior in Al Bada\'a Satwa area, Dubai — professional locksmith and key maker',
                 caption: 'Shop — Al Bada\'a, Satwa',
               },
               {
                 src: '/images/shop/padlock-collection-lock-shop-satwa-dubai.webp',
-                alt: 'Wall display of padlocks and door locks at Lock Repair Satwa shop in Satwa, Dubai',
+                alt: 'Wall display of padlocks and door locks at Lock repair service shop in Satwa, Dubai',
                 caption: 'Padlocks & Locks Stock',
               },
               {
                 src: '/images/shop/door-lock-handles-repair-shop-satwa-dubai.webp',
-                alt: 'Door handles and lock hardware display at Lock Repair Satwa, Dubai — door lock repair and replacement',
+                alt: 'Door handles and lock hardware display at Lock repair service, Dubai — door lock repair and replacement',
                 caption: 'Door Handles & Hardware',
               },
               {
                 src: '/images/shop/key-duplication-display-for-sale-satwa-dubai.webp',
-                alt: 'Key duplication display stand at Lock Repair Satwa shop — duplicate keys for sale in Satwa Dubai',
+                alt: 'Key duplication display stand at Lock repair service shop — duplicate keys for sale in Satwa Dubai',
                 caption: 'Key Duplication Display',
               },
             ].map(({ src, alt, caption }) => (

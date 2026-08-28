@@ -1,6 +1,6 @@
 'use client'
 // ─────────────────────────────────────────────────────────────────────────────
-// Lock Repair Satwa — Global Error Boundary
+// Lock repair service — Global Error Boundary
 // ─────────────────────────────────────────────────────────────────────────────
 import { useEffect } from 'react'
 import { RefreshCw, Phone } from 'lucide-react'

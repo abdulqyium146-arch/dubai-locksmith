@@ -1,5 +1,5 @@
 // ─────────────────────────────────────────────────────────────────────────────
-// Lock Repair Satwa — Pricing Table
+// Lock repair service — Pricing Table
 // ─────────────────────────────────────────────────────────────────────────────
 import { CheckCircle2, Info } from 'lucide-react'
 import { cn } from '@/lib/utils'

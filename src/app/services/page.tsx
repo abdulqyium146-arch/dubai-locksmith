@@ -1,5 +1,5 @@
 // ─────────────────────────────────────────────────────────────────────────────
-// Lock Repair Satwa — Services Index Page (Categorised)
+// Lock repair service — Services Index Page (Categorised)
 // ─────────────────────────────────────────────────────────────────────────────
 import type { Metadata } from 'next'
 import { Phone, MessageCircle, AlertTriangle } from 'lucide-react'
@@ -29,9 +29,9 @@ import type { Service } from '@/types'
 // ── Metadata ──────────────────────────────────────────────────────────────────
 
 export const metadata: Metadata = {
-  title: { absolute: 'All Locksmith Services in Dubai | Lock Repair Satwa' },
+  title: { absolute: 'All Locksmith Services in Dubai | Lock repair service' },
   description:
-    'Complete range of locksmith services in Dubai from Lock Repair Satwa — residential, commercial and automotive. Key duplication, lock repair, smart lock installation, master key systems, car key programming, emergency locksmith and more. Open daily 24/7.',
+    'Complete range of locksmith services in Dubai from Lock repair service — residential, commercial and automotive. Key duplication, lock repair, smart lock installation, master key systems, car key programming, emergency locksmith and more. Open daily 24/7.',
   alternates: {
     canonical: `${SITE_URL}/services`,
   },
@@ -40,14 +40,14 @@ export const metadata: Metadata = {
     locale: 'en_AE',
     url: `${SITE_URL}/services`,
     siteName: BUSINESS_NAME,
-    title: 'All Locksmith Services in Dubai | Lock Repair Satwa',
+    title: 'All Locksmith Services in Dubai | Lock repair service',
     description:
-      'Complete range of locksmith services in Dubai from Lock Repair Satwa — key duplication, door lock repair, smart key programming, emergency locksmith and more. Open daily 24/7.',
+      'Complete range of locksmith services in Dubai from Lock repair service — key duplication, door lock repair, smart key programming, emergency locksmith and more. Open daily 24/7.',
     images: [{ url: DEFAULT_OG_IMAGE, width: 1200, height: 630, alt: `${BUSINESS_NAME} Services` }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'All Locksmith Services in Dubai | Lock Repair Satwa',
+    title: 'All Locksmith Services in Dubai | Lock repair service',
     description: 'Complete locksmith services in Dubai. Mobile, open daily 24/7.',
     images: [DEFAULT_OG_IMAGE],
   },
@@ -127,7 +127,7 @@ export default function ServicesPage() {
             {/* Direct Answer Opener */}
             <div className="mt-6 rounded-xl border-l-4 border-brand-gold bg-white/10 p-5 backdrop-blur-sm">
               <p className="text-base leading-relaxed text-white/90">
-                Lock Repair Satwa (D90, Al Bada&apos;a, Dubai) provides {services.length} locksmith and car key services
+                Lock repair service (D90, Al Bada&apos;a, Dubai) provides {services.length} locksmith and car key services
                 across Dubai — residential, commercial and automotive — all delivered by mobile technicians
                 who come directly to your location. Open daily 24/7. Call{' '}
                 <a href={PHONE_HREF} className="font-semibold text-brand-gold hover:underline">

@@ -1,5 +1,5 @@
 // ─────────────────────────────────────────────────────────────────────────────
-// Lock Repair Satwa — Generic JSON-LD Component
+// Lock repair service — Generic JSON-LD Component
 // ─────────────────────────────────────────────────────────────────────────────
 
 interface JsonLdProps {

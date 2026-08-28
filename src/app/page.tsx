@@ -1,5 +1,5 @@
 // ─────────────────────────────────────────────────────────────────────────────
-// Lock Repair Satwa — Homepage
+// Lock repair service — Homepage
 // ─────────────────────────────────────────────────────────────────────────────
 import type { Metadata } from 'next'
 import Image from 'next/image'
@@ -34,8 +34,8 @@ import type { Review } from '@/types'
 
 // GMB top searches: "key maker near me" (66), "key duplication service" (51), "locksmith" (20)
 // Title targets #1 + #2 GMB terms; H1 changed to match "key maker" language
-const HOMEPAGE_TITLE = "Key Maker Near Me Dubai | Key Shop Satwa | Lock Repair Satwa"
-const HOMEPAGE_DESC  = "Key maker & key shop near me in Satwa, Dubai. Lock Repair Satwa: key duplication service from AED 50, car key cutting, door lock repair. 24/7 mobile locksmith. Rated 4.7★. Call +971 52 642 6161."
+const HOMEPAGE_TITLE = "Key Maker Near Me Dubai | Key Shop Satwa | Lock repair service"
+const HOMEPAGE_DESC  = "Key maker & key shop near me in Satwa, Dubai. Lock repair service: key duplication service from AED 50, car key cutting, door lock repair. 24/7 mobile locksmith. Rated 4.7★. Call +971 52 642 6161."
 
 export const metadata: Metadata = {
   title: { absolute: HOMEPAGE_TITLE },
@@ -56,7 +56,7 @@ export const metadata: Metadata = {
         url: DEFAULT_OG_IMAGE,
         width: 1200,
         height: 630,
-        alt: "Lock Repair Satwa — Key Maker & Key Shop in Al Bada'a, Satwa Dubai",
+        alt: "Lock repair service — Key Maker & Key Shop in Al Bada'a, Satwa Dubai",
       },
     ],
   },
@@ -119,7 +119,7 @@ const FAQ_CATEGORIES = [
       },
       {
         q: 'Is a mobile locksmith cheaper than the dealership for a spare car key?',
-        a: 'Yes — significantly. Dealership car key duplication typically costs AED 600–1,200, requires advance booking, and sometimes towing. Lock Repair Satwa cuts and programs a spare key at your location for AED 150–350 with same-day, no-appointment service anywhere in Dubai.',
+        a: 'Yes — significantly. Dealership car key duplication typically costs AED 600–1,200, requires advance booking, and sometimes towing. Lock repair service cuts and programs a spare key at your location for AED 150–350 with same-day, no-appointment service anywhere in Dubai.',
       },
       {
         q: 'How much does a locksmith cost in Dubai?',
@@ -136,7 +136,7 @@ const FAQ_CATEGORIES = [
     faqs: [
       {
         q: 'Is there a 24/7 locksmith in Dubai?',
-        a: 'Yes. Lock Repair Satwa provides 24/7 mobile locksmith service across all Dubai areas. The shop at D90, Al Bada\'a is open 7:00 AM – 11:30 PM daily. Emergency mobile response runs all night. Call +971 52 642 6161 any time — day or night.',
+        a: 'Yes. Lock repair service provides 24/7 mobile locksmith service across all Dubai areas. The shop at D90, Al Bada\'a is open 7:00 AM – 11:30 PM daily. Emergency mobile response runs all night. Call +971 52 642 6161 any time — day or night.',
       },
       {
         q: 'How quickly can a locksmith reach me in Dubai?',
@@ -144,7 +144,7 @@ const FAQ_CATEGORIES = [
       },
       {
         q: 'Are you open on Fridays and public holidays in Dubai?',
-        a: 'Yes. Lock Repair Satwa is open 7 days a week, 365 days a year. The shop opens at 7:00 AM and closes at 11:30 PM daily, including Fridays and all UAE public holidays. Emergency mobile service operates 24/7 without exception.',
+        a: 'Yes. Lock repair service is open 7 days a week, 365 days a year. The shop opens at 7:00 AM and closes at 11:30 PM daily, including Fridays and all UAE public holidays. Emergency mobile service operates 24/7 without exception.',
       },
       {
         q: 'How long does key duplication take?',
@@ -161,7 +161,7 @@ const FAQ_CATEGORIES = [
     faqs: [
       {
         q: 'Where is the nearest key shop to Al Satwa in Dubai?',
-        a: 'Lock Repair Satwa at D90, Al Bada\'a is the closest key shop to Al Satwa — a 2–3 minute walk from Al Satwa Road, near Queen\'s Medical Centre and Al Diyafa Street. Open daily 7:00 AM – 11:30 PM for walk-in key cutting from AED 50.',
+        a: 'Lock repair service at D90, Al Bada\'a is the closest key shop to Al Satwa — a 2–3 minute walk from Al Satwa Road, near Queen\'s Medical Centre and Al Diyafa Street. Open daily 7:00 AM – 11:30 PM for walk-in key cutting from AED 50.',
       },
       {
         q: 'Do you cover all areas of Dubai?',
@@ -173,7 +173,7 @@ const FAQ_CATEGORIES = [
       },
       {
         q: 'Is there a key maker near me in Satwa?',
-        a: 'Yes. Lock Repair Satwa is the key maker closest to Al Satwa, based at D90, Al Bada\'a — 2 minutes from Satwa Road. We cut all types of keys on the spot: door keys from AED 50, car keys from AED 150. No appointment needed.',
+        a: 'Yes. Lock repair service is the key maker closest to Al Satwa, based at D90, Al Bada\'a — 2 minutes from Satwa Road. We cut all types of keys on the spot: door keys from AED 50, car keys from AED 150. No appointment needed.',
       },
     ],
   },
@@ -194,7 +194,7 @@ const FAQ_CATEGORIES = [
       },
       {
         q: 'I\'m locked out of my car in Dubai — what should I do?',
-        a: 'Call Lock Repair Satwa immediately on +971 52 642 6161. Our mobile locksmith reaches most Dubai areas in 20–45 minutes (5–10 min in Satwa). We open car doors without damage in most cases. Available 24/7. Do not force the lock — it causes expensive damage to the door mechanism.',
+        a: 'Call Lock repair service immediately on +971 52 642 6161. Our mobile locksmith reaches most Dubai areas in 20–45 minutes (5–10 min in Satwa). We open car doors without damage in most cases. Available 24/7. Do not force the lock — it causes expensive damage to the door mechanism.',
       },
       {
         q: 'Can you make a new car key if I\'ve lost all my keys?',
@@ -223,7 +223,7 @@ const FAQ_CATEGORIES = [
       },
       {
         q: 'Should I change my locks when moving into a new Dubai apartment?',
-        a: 'Yes — we strongly recommend it. Changing your cylinder or full lock body ensures previous tenants\' keys no longer work. Lock Repair Satwa replaces door locks from AED 250. Mobile technician comes to you. Call +971 52 642 6161 to book.',
+        a: 'Yes — we strongly recommend it. Changing your cylinder or full lock body ensures previous tenants\' keys no longer work. Lock repair service replaces door locks from AED 250. Mobile technician comes to you. Call +971 52 642 6161 to book.',
       },
     ],
   },
@@ -245,7 +245,7 @@ const FAQ_CATEGORIES = [
     faqs: [
       {
         q: 'Are you a licensed locksmith in Dubai?',
-        a: 'Yes. Lock Repair Satwa operates under a valid UAE trade licence. Our technicians are trained in automotive key programming and security hardware installation. For emergency jobs, we may ask for proof of vehicle ownership or residency — standard practice to protect our customers.',
+        a: 'Yes. Lock repair service operates under a valid UAE trade licence. Our technicians are trained in automotive key programming and security hardware installation. For emergency jobs, we may ask for proof of vehicle ownership or residency — standard practice to protect our customers.',
       },
       {
         q: 'Do you charge extra for emergency or night-time calls?',
@@ -318,32 +318,32 @@ export default async function HomePage() {
   const SHOP_IMAGES = [
     {
       src: '/images/shop/locksmith-shop-satwa-al-badaa-dubai.webp',
-      alt: "Lock Repair Satwa shop exterior in Al Bada'a — key maker and locksmith in Satwa Dubai",
+      alt: "Lock repair service shop exterior in Al Bada'a — key maker and locksmith in Satwa Dubai",
       caption: 'Our Shop — Satwa',
     },
     {
       src: '/images/shop/padlock-collection-lock-shop-satwa-dubai.webp',
-      alt: "Padlock and lock collection on display at Lock Repair Satwa, Al Bada'a Dubai",
+      alt: "Padlock and lock collection on display at Lock repair service, Al Bada'a Dubai",
       caption: 'Padlocks & Locks',
     },
     {
       src: '/images/shop/key-duplication-display-for-sale-satwa-dubai.webp',
-      alt: 'Key duplication display stand showing duplicate keys for sale — Lock Repair Satwa, Dubai',
+      alt: 'Key duplication display stand showing duplicate keys for sale — Lock repair service, Dubai',
       caption: 'Keys for Sale',
     },
     {
       src: '/images/services/car-remote-key-blanks-locksmith-shop-dubai.webp',
-      alt: 'Car remote key blanks and spare keys on display at Lock Repair Satwa locksmith shop, Dubai',
+      alt: 'Car remote key blanks and spare keys on display at Lock repair service locksmith shop, Dubai',
       caption: 'Car Key Blanks',
     },
     {
       src: '/images/shop/door-lock-handles-repair-shop-satwa-dubai.webp',
-      alt: 'Door handles and lock hardware display at Lock Repair Satwa, Satwa Dubai',
+      alt: 'Door handles and lock hardware display at Lock repair service, Satwa Dubai',
       caption: 'Door Locks',
     },
     {
       src: '/images/shop/keychains-accessories-key-shop-satwa-dubai.webp',
-      alt: 'Key accessories and keychains at Lock Repair Satwa key shop in Satwa, Dubai',
+      alt: 'Key accessories and keychains at Lock repair service key shop in Satwa, Dubai',
       caption: 'Accessories',
     },
   ]
@@ -358,23 +358,23 @@ export default async function HomePage() {
       <WebPageSchema
         pageUrl={SITE_URL}
         pageId="homepage"
-        name="Key Maker Near Me Dubai | Key Shop Satwa | Lock Repair Satwa"
+        name="Key Maker Near Me Dubai | Key Shop Satwa | Lock repair service"
         description="Key maker & key shop near me in Satwa, Dubai. Key duplication service from AED 50, car key cutting, door lock repair. 24/7 mobile locksmith. Rated 4.7★."
         breadcrumbs={[{ name: 'Home', url: SITE_URL }]}
         primaryImageUrl={`${SITE_URL}/images/shop/locksmith-shop-satwa-al-badaa-dubai.webp`}
-        primaryImageAlt="Lock Repair Satwa key shop exterior in Al Bada'a, nearest key maker to Al Satwa Road, Dubai"
+        primaryImageAlt="Lock repair service key shop exterior in Al Bada'a, nearest key maker to Al Satwa Road, Dubai"
         dateModified={new Date().toISOString().split('T')[0]}
         images={[
-          { url: `${SITE_URL}/images/shop/key-duplication-display-for-sale-satwa-dubai.webp`, caption: 'Key duplication display at Lock Repair Satwa key shop, Satwa Dubai' },
-          { url: `${SITE_URL}/images/services/car-remote-key-blanks-locksmith-shop-dubai.webp`, caption: 'Car remote key blanks at Lock Repair Satwa locksmith shop, Dubai' },
-          { url: `${SITE_URL}/images/shop/wire-key-rings-accessories-dubai.webp`, caption: 'Key accessories at Lock Repair Satwa, Satwa Dubai' },
+          { url: `${SITE_URL}/images/shop/key-duplication-display-for-sale-satwa-dubai.webp`, caption: 'Key duplication display at Lock repair service key shop, Satwa Dubai' },
+          { url: `${SITE_URL}/images/services/car-remote-key-blanks-locksmith-shop-dubai.webp`, caption: 'Car remote key blanks at Lock repair service locksmith shop, Dubai' },
+          { url: `${SITE_URL}/images/shop/wire-key-rings-accessories-dubai.webp`, caption: 'Key accessories at Lock repair service, Satwa Dubai' },
         ]}
       />
 
       {/* HowTo schema — "How It Works" 3 steps: eligible for HowTo rich result */}
       <HowToSchema
         name="How to Get a Car Key Made or Locksmith Service in Dubai"
-        description="Three simple steps to get a spare key cut, car key programmed, or lock repaired by Lock Repair Satwa — Dubai's key maker near me."
+        description="Three simple steps to get a spare key cut, car key programmed, or lock repaired by Lock repair service — Dubai's key maker near me."
         totalTime="PT45M"
         pageUrl={`${SITE_URL}/#how-it-works`}
         steps={[
@@ -528,7 +528,7 @@ export default async function HomePage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mb-12 text-center">
             <span className="inline-flex items-center gap-1.5 rounded-full border border-brand-gold/30 bg-brand-gold/10 px-3 py-1 text-xs font-semibold text-brand-gold mb-4">
-              Lock Repair Satwa · Simple Process
+              Lock repair service · Simple Process
             </span>
             <h2
               id="how-it-works-heading"
@@ -579,7 +579,7 @@ export default async function HomePage() {
           {/* Emergency CTA below steps */}
           <div className="mt-12 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
             <Button size="lg" variant="primary" className="btn-pulse w-full sm:w-auto" asChild>
-              <a href={PHONE_HREF} aria-label={`Call Lock Repair Satwa: ${PHONE_DISPLAY}`}>
+              <a href={PHONE_HREF} aria-label={`Call Lock repair service: ${PHONE_DISPLAY}`}>
                 <Phone className="h-5 w-5" aria-hidden="true" />
                 {`Call Now — ${PHONE_DISPLAY}`}
               </a>
@@ -589,7 +589,7 @@ export default async function HomePage() {
                 href={WHATSAPP_HREF}
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="WhatsApp Lock Repair Satwa"
+                aria-label="WhatsApp Lock repair service"
               >
                 <MessageCircle className="h-5 w-5" aria-hidden="true" />
                 WhatsApp Us
@@ -633,7 +633,7 @@ export default async function HomePage() {
                   <div className="aspect-[4/3] overflow-hidden bg-muted">
                     <Image
                       src={service.heroImage!}
-                      alt={service.heroImageAlt ?? `${service.title} in Dubai — Lock Repair Satwa`}
+                      alt={service.heroImageAlt ?? `${service.title} in Dubai — Lock repair service`}
                       width={400}
                       height={300}
                       priority={index < 2}
@@ -682,7 +682,7 @@ export default async function HomePage() {
                 The Nearest Key Maker to Al Satwa
               </h2>
               <p className="mt-5 text-base leading-relaxed text-white/75">
-                Lock Repair Satwa at D90, Al Bada&apos;a is the closest key shop and locksmith to Al Satwa Road, Queen&apos;s Medical Centre, and Al Diyafa Street. Walk in for instant key duplication, or call for mobile service anywhere in Dubai.
+                Lock repair service at D90, Al Bada&apos;a is the closest key shop and locksmith to Al Satwa Road, Queen&apos;s Medical Centre, and Al Diyafa Street. Walk in for instant key duplication, or call for mobile service anywhere in Dubai.
               </p>
               <ul className="mt-6 space-y-3">
                 {[
@@ -769,7 +769,7 @@ export default async function HomePage() {
               <div className="aspect-[3/4] overflow-hidden bg-muted">
                 <Image
                   src="/images/nissan-car-key-replacement-satwa-dubai.webp"
-                  alt="Nissan car key replacement Dubai — new Nissan transponder key cut and programmed by Lock Repair Satwa auto locksmith in Satwa"
+                  alt="Nissan car key replacement Dubai — new Nissan transponder key cut and programmed by Lock repair service auto locksmith in Satwa"
                   width={400}
                   height={533}
                   loading="lazy"
@@ -797,7 +797,7 @@ export default async function HomePage() {
               <div className="aspect-[3/4] overflow-hidden bg-muted">
                 <Image
                   src="/images/safe-box-opening-drilled-dubai.webp"
-                  alt="Safe box opening service Dubai — commercial safe drilled and opened by Lock Repair Satwa safe specialist, internal lock bolts visible"
+                  alt="Safe box opening service Dubai — commercial safe drilled and opened by Lock repair service safe specialist, internal lock bolts visible"
                   width={400}
                   height={533}
                   loading="lazy"
@@ -825,7 +825,7 @@ export default async function HomePage() {
               <div className="aspect-[3/4] overflow-hidden bg-muted">
                 <Image
                   src="/images/smart-door-lock-fingerprint-reader-dubai.webp"
-                  alt="Smart door lock installation Dubai — black fingerprint and touch-panel smart lock fitted on wooden apartment door by Lock Repair Satwa"
+                  alt="Smart door lock installation Dubai — black fingerprint and touch-panel smart lock fitted on wooden apartment door by Lock repair service"
                   width={400}
                   height={533}
                   loading="lazy"
@@ -881,7 +881,7 @@ export default async function HomePage() {
               <div className="aspect-[3/4] overflow-hidden bg-muted">
                 <Image
                   src="/images/safe-lock-replacement-broken-cylinder-dubai.webp"
-                  alt="Safe lock replacement Dubai — damaged safe cylinder drilled out and replaced by Lock Repair Satwa safe technician"
+                  alt="Safe lock replacement Dubai — damaged safe cylinder drilled out and replaced by Lock repair service safe technician"
                   width={400}
                   height={533}
                   loading="lazy"
@@ -909,7 +909,7 @@ export default async function HomePage() {
               <div className="aspect-[3/4] overflow-hidden bg-muted">
                 <Image
                   src="/images/door-lock-repair-dubai-lock-replacement-satwa.jpg.webp"
-                  alt="Door lock repair and replacement Dubai — lock mechanism serviced by Lock Repair Satwa, Al Bada'a Satwa"
+                  alt="Door lock repair and replacement Dubai — lock mechanism serviced by Lock repair service, Al Bada'a Satwa"
                   width={400}
                   height={533}
                   loading="lazy"
@@ -937,7 +937,7 @@ export default async function HomePage() {
               <div className="aspect-[3/4] overflow-hidden bg-muted">
                 <Image
                   src="/images/mercedes-benz-smart-key-replacement-dubai.webp"
-                  alt="Mercedes-Benz smart key replacement Dubai — new Mercedes proximity key programmed on-site by Lock Repair Satwa auto locksmith, Al Bada'a"
+                  alt="Mercedes-Benz smart key replacement Dubai — new Mercedes proximity key programmed on-site by Lock repair service auto locksmith, Al Bada'a"
                   width={400}
                   height={533}
                   loading="lazy"
@@ -965,7 +965,7 @@ export default async function HomePage() {
               <div className="aspect-[3/4] overflow-hidden bg-muted">
                 <Image
                   src="/images/mercedes-car-key-cutting-duplication-dubai.webp"
-                  alt="Mercedes car key cutting and duplication Dubai — Mercedes blade key precision-cut and programmed by Lock Repair Satwa mobile locksmith"
+                  alt="Mercedes car key cutting and duplication Dubai — Mercedes blade key precision-cut and programmed by Lock repair service mobile locksmith"
                   width={400}
                   height={533}
                   loading="lazy"
@@ -993,7 +993,7 @@ export default async function HomePage() {
               <div className="aspect-[3/4] overflow-hidden bg-muted">
                 <Image
                   src="/images/luxury-car-key-programming-service-dubai.webp"
-                  alt="Luxury car key programming service Dubai — premium European car smart key programmed on-site by Lock Repair Satwa OBD specialist"
+                  alt="Luxury car key programming service Dubai — premium European car smart key programmed on-site by Lock repair service OBD specialist"
                   width={400}
                   height={533}
                   loading="lazy"
@@ -1021,7 +1021,7 @@ export default async function HomePage() {
               <div className="aspect-[3/4] overflow-hidden bg-muted">
                 <Image
                   src="/images/eufy-smart-lock-installation-al-satwa-dubai.webp"
-                  alt="Eufy smart lock installation Al Satwa Dubai — Eufy video doorbell smart lock fitted on apartment door by Lock Repair Satwa near Al Satwa Road"
+                  alt="Eufy smart lock installation Al Satwa Dubai — Eufy video doorbell smart lock fitted on apartment door by Lock repair service near Al Satwa Road"
                   width={400}
                   height={533}
                   loading="lazy"
@@ -1049,7 +1049,7 @@ export default async function HomePage() {
               <div className="aspect-[3/4] overflow-hidden bg-muted">
                 <Image
                   src="/images/electronic-door-lock-repair-al-bada-dubai.webp"
-                  alt="Electronic door lock repair Al Bada'a Dubai — digital smart lock fault-diagnosed and repaired by Lock Repair Satwa technician at D90, Al Bada'a"
+                  alt="Electronic door lock repair Al Bada'a Dubai — digital smart lock fault-diagnosed and repaired by Lock repair service technician at D90, Al Bada'a"
                   width={400}
                   height={533}
                   loading="lazy"
@@ -1133,7 +1133,7 @@ export default async function HomePage() {
             {/* Left: copy */}
             <div>
               <span className="inline-flex items-center gap-1.5 rounded-full border border-brand-gold/30 bg-brand-gold/15 px-3 py-1 text-xs font-semibold text-brand-gold mb-5">
-                About Lock Repair Satwa
+                About Lock repair service
               </span>
               <h2
                 id="about-heading"
@@ -1142,7 +1142,7 @@ export default async function HomePage() {
                 Dubai&apos;s Professional Locksmith — Satwa &amp; Al Bada&apos;a
               </h2>
               <p className="mt-5 text-base leading-relaxed text-white/75">
-                Lock Repair Satwa is a professional locksmith based at D90, Al Bada&apos;a, Dubai. We serve all major Dubai areas with expert lock repair, car key duplication, and security solutions — without the days of waiting and premium markup that franchised dealerships charge. Rated 4.7★ on Google by our customers.
+                Lock repair service is a professional locksmith based at D90, Al Bada&apos;a, Dubai. We serve all major Dubai areas with expert lock repair, car key duplication, and security solutions — without the days of waiting and premium markup that franchised dealerships charge. Rated 4.7★ on Google by our customers.
               </p>
               <p className="mt-4 text-base leading-relaxed text-white/75">
                 Our technicians carry professional key-cutting machines, OBD programming equipment and a comprehensive stock of key blanks for 50+ vehicle brands. We cover every type of locksmith service — from a basic spare key to full smart key programming for the latest European luxury vehicles — all performed at your location.
@@ -1259,14 +1259,14 @@ export default async function HomePage() {
             {/* Map iframe */}
             <div className="overflow-hidden rounded-2xl border border-border shadow-md aspect-[16/9] lg:aspect-auto lg:h-[420px]">
               <iframe
-                src="https://www.google.com/maps?q=25.23341473023507,55.275106874155064&z=17&output=embed"
+                src="https://www.google.com/maps?q=25.2334375,55.2776875&z=17&output=embed"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="Lock Repair Satwa location on Google Maps — D90, Al Bada'a, Dubai"
+                title="Lock repair service location on Google Maps — D90, Al Bada'a, Dubai"
               />
             </div>
 
@@ -1279,7 +1279,7 @@ export default async function HomePage() {
                 <p className="flex items-start gap-3">
                   <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-brand-gold" aria-hidden="true" />
                   <span>
-                    <strong className="block text-foreground mb-0.5">Lock Repair Satwa</strong>
+                    <strong className="block text-foreground mb-0.5">Lock repair service</strong>
                     D90, Al Bada&apos;a<br />
                     Dubai, UAE
                   </span>
@@ -1298,7 +1298,7 @@ export default async function HomePage() {
 
               <div className="mt-6 flex flex-col gap-3">
                 <Button size="md" variant="primary" className="btn-pulse w-full" asChild>
-                  <a href={PHONE_HREF} aria-label={`Call Lock Repair Satwa: ${PHONE_DISPLAY}`}>
+                  <a href={PHONE_HREF} aria-label={`Call Lock repair service: ${PHONE_DISPLAY}`}>
                     <Phone className="h-4 w-4" aria-hidden="true" />
                     {`Call ${PHONE_DISPLAY}`}
                   </a>
@@ -1308,7 +1308,7 @@ export default async function HomePage() {
                     href={WHATSAPP_HREF}
                     target="_blank"
                     rel="noopener noreferrer"
-                    aria-label="WhatsApp Lock Repair Satwa"
+                    aria-label="WhatsApp Lock repair service"
                   >
                     <MessageCircle className="h-4 w-4" aria-hidden="true" />
                     WhatsApp Us
@@ -1337,7 +1337,7 @@ export default async function HomePage() {
           {/* Section header */}
           <div className="mb-12 text-center">
             <span className="inline-flex items-center gap-1.5 rounded-full border border-brand-gold/30 bg-brand-gold/10 px-3 py-1 text-xs font-semibold text-brand-gold mb-4">
-              Lock Repair Satwa · Dubai FAQ
+              Lock repair service · Dubai FAQ
             </span>
             <h2
               id="faq-heading"
@@ -1403,13 +1403,13 @@ export default async function HomePage() {
             </p>
             <div className="mt-5 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
               <Button variant="primary" size="lg" className="btn-pulse w-full sm:w-auto" asChild>
-                <a href={PHONE_HREF} aria-label={`Call Lock Repair Satwa: ${PHONE_DISPLAY}`}>
+                <a href={PHONE_HREF} aria-label={`Call Lock repair service: ${PHONE_DISPLAY}`}>
                   <Phone className="h-5 w-5" aria-hidden="true" />
                   {`Call ${PHONE_DISPLAY}`}
                 </a>
               </Button>
               <Button variant="whatsapp" size="lg" className="w-full sm:w-auto" asChild>
-                <a href={WHATSAPP_HREF} target="_blank" rel="noopener noreferrer" aria-label="WhatsApp Lock Repair Satwa">
+                <a href={WHATSAPP_HREF} target="_blank" rel="noopener noreferrer" aria-label="WhatsApp Lock repair service">
                   <MessageCircle className="h-5 w-5" aria-hidden="true" />
                   WhatsApp Us
                 </a>
@@ -1422,7 +1422,7 @@ export default async function HomePage() {
       {/* ── 9. Final CTA ────────────────────────────────────────────────────── */}
       <CtaSection
         heading="Need a Locksmith or Spare Key? Call Now."
-        subtext="Lock Repair Satwa (D90, Al Bada'a, Dubai) is a professional locksmith serving all Dubai areas, open daily 24/7. We come to you — at home, the office, the mall or the roadside."
+        subtext="Lock repair service (D90, Al Bada'a, Dubai) is a professional locksmith serving all Dubai areas, open daily 24/7. We come to you — at home, the office, the mall or the roadside."
       />
     </>
   )

@@ -1,6 +1,6 @@
 'use client'
 // ─────────────────────────────────────────────────────────────────────────────
-// Lock Repair Satwa — Sticky Header with Mega-Menus
+// Lock repair service — Sticky Header with Mega-Menus
 // ─────────────────────────────────────────────────────────────────────────────
 import { useState, useEffect, useRef } from 'react'
 import Link from 'next/link'
@@ -404,9 +404,9 @@ export function Header() {
                 scrolled ? 'text-foreground' : 'text-white',
               )}
             >
-              Lock Repair
+              Lock repair
             </span>
-            <span className="font-heading text-xs font-semibold text-brand-gold">Satwa</span>
+            <span className="font-heading text-xs font-semibold text-brand-gold">service</span>
           </div>
         </Link>
 

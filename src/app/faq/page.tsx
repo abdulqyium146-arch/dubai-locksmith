@@ -4,6 +4,7 @@ import { Phone, MessageCircle, ChevronDown } from 'lucide-react'
 import { BreadcrumbNav } from '@/components/sections/BreadcrumbNav'
 import { JsonLd } from '@/components/schema/JsonLd'
 import { Button } from '@/components/ui/Button'
+import { parseWithLinks } from '@/lib/link-parser'
 import {
   BUSINESS_NAME,
   SITE_URL,
@@ -15,7 +16,7 @@ import {
 
 export const metadata: Metadata = {
   title: { absolute: `Locksmith FAQs Dubai | ${BUSINESS_NAME} — All Questions Answered` },
-  description: `Every locksmith question answered for Dubai. Prices, response times, car key programming, door lock repair, smart locks, safe opening, emergency lockout — Lock Repair Satwa, Al Bada'a, Satwa.`,
+  description: `Every locksmith question answered for Dubai. Prices, response times, car key programming, door lock repair, smart locks, safe opening, emergency lockout — Lock repair service, Al Bada'a, Satwa.`,
   alternates: {
     canonical: `${SITE_URL}/faq`,
     languages: { en: `${SITE_URL}/faq`, 'x-default': `${SITE_URL}/faq` },
@@ -31,7 +32,7 @@ export const metadata: Metadata = {
     url: `${SITE_URL}/faq`,
     siteName: BUSINESS_NAME,
     title: `Locksmith FAQs Dubai | ${BUSINESS_NAME}`,
-    description: `Prices, response times, car keys, door locks, smart locks, emergency lockout — every locksmith question answered for Dubai by Lock Repair Satwa.`,
+    description: `Prices, response times, car keys, door locks, smart locks, emergency lockout — every locksmith question answered for Dubai by Lock repair service.`,
     images: [{ url: DEFAULT_OG_IMAGE, width: 1200, height: 630, alt: `${BUSINESS_NAME} — Locksmith FAQs Dubai` }],
   },
 }
@@ -40,38 +41,55 @@ export const metadata: Metadata = {
 // Sourced from Google People Also Ask + real customer enquiries.
 // All answers are Dubai-specific with AED prices and local context.
 
-const FAQ_CATEGORIES = [
+const FAQ_CATEGORIES: Array<{
+  category: string
+  faqs: Array<{ q: string; a: string }>
+  relatedLinks?: Array<{ label: string; href: string }>
+}> = [
   {
-    category: 'About Lock Repair Satwa',
+    category: 'About Lock repair service',
+    relatedLinks: [
+      { label: 'All Services', href: '/services' },
+      { label: 'Service Areas', href: '/locations' },
+      { label: 'Contact Us', href: '/contact' },
+      { label: 'Book a Service', href: '/booking' },
+    ],
     faqs: [
       {
-        q: 'What is Lock Repair Satwa?',
-        a: "Lock Repair Satwa is a professional locksmith and key shop located at D90, Al Bada'a, Dubai — immediately adjacent to Al Satwa. We provide key duplication from AED 50, car key programming, door lock repair, smart lock installation, safe opening, and 24/7 emergency mobile locksmith service across all Dubai areas. Rated 4.7★ on Google.",
+        q: 'What is Lock repair service?',
+        a: "Lock repair service is a professional locksmith and key shop located at D90, Al Bada'a, Dubai — immediately adjacent to Al Satwa. We provide key duplication from AED 50, car key programming, door lock repair, smart lock installation, safe opening, and 24/7 emergency mobile locksmith service across all Dubai areas. Rated 4.7★ on Google.",
       },
       {
-        q: "Where is Lock Repair Satwa located?",
-        a: "Our shop is at D90, Al Bada'a, Dubai — a 2–3 minute walk from Al Satwa Road, near Queen's Medical Centre and Al Diyafa Street. GPS coordinates: 25.2334° N, 55.2751° E. Open daily 7:00 AM – 11:30 PM for walk-in service.",
+        q: "Where is Lock repair service located?",
+        a: "Our shop is at D90, Al Bada'a, Dubai — a 2–3 minute walk from Al Satwa Road, near Queen's Medical Centre and Al Diyafa Street. Google Plus Code: 67MH+93 Dubai. Open daily 7:00 AM – 11:30 PM for walk-in service.",
       },
       {
-        q: 'What are Lock Repair Satwa opening hours?',
+        q: 'What are Lock repair service opening hours?',
         a: 'The shop is open 7:00 AM – 11:30 PM daily, including Fridays and UAE public holidays. Mobile emergency locksmith service runs 24 hours a day, 7 days a week, 365 days a year — including Eid, National Day, and all other public holidays.',
       },
       {
-        q: 'How do I contact Lock Repair Satwa?',
+        q: 'How do I contact Lock repair service?',
         a: `Call or WhatsApp +971 52 642 6161 any time — day or night. For emergency lockouts, call immediately and we will dispatch a mobile technician to your location. For non-urgent enquiries, WhatsApp is fastest. Email: info@locksmith-dubai.com.`,
       },
       {
-        q: 'Is Lock Repair Satwa licensed to operate in Dubai?',
-        a: 'Yes. Lock Repair Satwa operates under a valid UAE trade licence. Our technicians are trained in automotive key programming and security hardware installation. For emergency lockout jobs, we may request proof of vehicle ownership or residency — standard security practice to protect our customers.',
+        q: 'Is Lock repair service licensed to operate in Dubai?',
+        a: 'Yes. Lock repair service operates under a valid UAE trade licence. Our technicians are trained in automotive key programming and security hardware installation. For emergency lockout jobs, we may request proof of vehicle ownership or residency — standard security practice to protect our customers.',
       },
     ],
   },
   {
     category: 'Locksmith Prices in Dubai (AED)',
+    relatedLinks: [
+      { label: 'Key Duplication Service', href: '/services/car-key-duplication' },
+      { label: 'Lock Change Service', href: '/services/lock-change' },
+      { label: 'Car Key Replacement', href: '/services/car-key-replacement' },
+      { label: 'Smart Door Locks', href: '/services/smart-door-locks' },
+      { label: 'Safe Box Services', href: '/services/safe-box-services' },
+    ],
     faqs: [
       {
         q: 'How much does a locksmith charge per hour in Dubai?',
-        a: 'Lock Repair Satwa does not charge by the hour — we quote a fixed price per job, confirmed before work begins. This means no surprise bills. Indicative prices: key duplication from AED 50, door lock repair from AED 100–300, car key programming AED 300–700, emergency car unlock from AED 150, smart lock installation from AED 350.',
+        a: 'Lock repair service does not charge by the hour — we quote a fixed price per job, confirmed before work begins. This means no surprise bills. Indicative prices: key duplication from AED 50, door lock repair from AED 100–300, car key programming AED 300–700, emergency car unlock from AED 150, smart lock installation from AED 350.',
       },
       {
         q: 'How much does a full lock change cost in Dubai?',
@@ -87,11 +105,11 @@ const FAQ_CATEGORIES = [
       },
       {
         q: 'How expensive is a new lock in Dubai?',
-        a: 'New lock prices in Dubai: basic padlocks AED 50–200, cylinder deadbolts AED 150–400, mortise locks AED 200–600, high-security locks AED 350–800, smart fingerprint locks AED 350–1,200. Lock Repair Satwa supplies and installs all types — price includes hardware and fitting at your location.',
+        a: 'New lock prices in Dubai: basic padlocks AED 50–200, cylinder deadbolts AED 150–400, mortise locks AED 200–600, high-security locks AED 350–800, smart fingerprint locks AED 350–1,200. Lock repair service supplies and installs all types — price includes hardware and fitting at your location.',
       },
       {
         q: 'Is a locksmith cheaper than a dealership for car keys in Dubai?',
-        a: 'Yes — significantly. UAE dealerships charge AED 600–1,200+ for a spare car key and require advance booking (often days). Lock Repair Satwa cuts and programs a spare key at your location for AED 150–350 on the same day without an appointment. For lost-all-keys replacement: AED 400–900 vs. AED 1,500–3,000 at dealerships.',
+        a: 'Yes — significantly. UAE dealerships charge AED 600–1,200+ for a spare car key and require advance booking (often days). Lock repair service cuts and programs a spare key at your location for AED 150–350 on the same day without an appointment. For lost-all-keys replacement: AED 400–900 vs. AED 1,500–3,000 at dealerships.',
       },
       {
         q: 'Do you charge extra for emergency or night calls in Dubai?',
@@ -101,10 +119,16 @@ const FAQ_CATEGORIES = [
   },
   {
     category: 'Emergency Lockout — Dubai',
+    relatedLinks: [
+      { label: 'Emergency Car Unlock', href: '/services/emergency-car-unlock' },
+      { label: 'Home Lockout Service', href: '/services/home-lockout' },
+      { label: 'Lock Repair Service', href: '/services/lock-repair' },
+      { label: 'All Service Areas', href: '/locations' },
+    ],
     faqs: [
       {
         q: "I'm locked out of my apartment in Dubai — what should I do?",
-        a: 'Call Lock Repair Satwa immediately on +971 52 642 6161. Our mobile technician will come to your address and open the lock non-destructively in most cases. We operate 24/7 including nights and Fridays. Do not attempt to force the lock — it causes expensive damage to the door mechanism that costs significantly more than a locksmith call-out.',
+        a: 'Call Lock repair service immediately on +971 52 642 6161. Our mobile technician will come to your address and open the lock non-destructively in most cases. We operate 24/7 including nights and Fridays. Do not attempt to force the lock — it causes expensive damage to the door mechanism that costs significantly more than a locksmith call-out.',
       },
       {
         q: 'Can we open a door lock without a key in Dubai?',
@@ -116,11 +140,11 @@ const FAQ_CATEGORIES = [
       },
       {
         q: "I'm locked out of my car in Dubai — what should I do?",
-        a: 'Call Lock Repair Satwa on +971 52 642 6161. Our mobile locksmith will reach you in 5–10 minutes in Satwa or 20–45 minutes across Dubai. We open car doors without damage using professional slim jim and air wedge tools. Never force the door — it bends the frame and voids insurance. Available 24/7 across all Dubai areas.',
+        a: 'Call Lock repair service on +971 52 642 6161. Our mobile locksmith will reach you in 5–10 minutes in Satwa or 20–45 minutes across Dubai. We open car doors without damage using professional slim jim and air wedge tools. Never force the door — it bends the frame and voids insurance. Available 24/7 across all Dubai areas.',
       },
       {
         q: 'Do I need to call the police if locked out in Dubai?',
-        a: 'No — the police do not provide property lockout services in Dubai. Call a locksmith directly. Lock Repair Satwa is faster (20–45 min response), available 24/7, and far cheaper than any alternative. Call +971 52 642 6161.',
+        a: 'No — the police do not provide property lockout services in Dubai. Call a locksmith directly. Lock repair service is faster (20–45 min response), available 24/7, and far cheaper than any alternative. Call +971 52 642 6161.',
       },
       {
         q: 'How to force a lock open?',
@@ -134,10 +158,18 @@ const FAQ_CATEGORIES = [
   },
   {
     category: 'Car Keys & Automotive Locksmith',
+    relatedLinks: [
+      { label: 'Car Key Duplication', href: '/services/car-key-duplication' },
+      { label: 'Car Key Replacement', href: '/services/car-key-replacement' },
+      { label: 'Smart Key Programming', href: '/services/remote-smart-key-programming' },
+      { label: 'Transponder Keys', href: '/services/transponder-keys' },
+      { label: 'Flip Keys', href: '/services/flip-keys' },
+      { label: 'Lost & Broken Car Keys', href: '/services/lost-broken-car-keys' },
+    ],
     faqs: [
       {
         q: 'Can a locksmith program a car key in Dubai?',
-        a: 'Yes. Lock Repair Satwa programs transponder keys, smart keys, flip keys, and remote keys for 50+ car brands using OBD diagnostic equipment. Car key programming costs AED 300–700 depending on vehicle make and model. We come to your location — no towing required. Available 24/7.',
+        a: 'Yes. Lock repair service programs transponder keys, smart keys, flip keys, and remote keys for 50+ car brands using OBD diagnostic equipment. Car key programming costs AED 300–700 depending on vehicle make and model. We come to your location — no towing required. Available 24/7.',
       },
       {
         q: 'What is a transponder key?',
@@ -167,34 +199,42 @@ const FAQ_CATEGORIES = [
   },
   {
     category: 'Door Locks — Types, Repair & Installation',
+    relatedLinks: [
+      { label: 'Lock Change Service', href: '/services/lock-change' },
+      { label: 'Door Lock Repair', href: '/services/lock-repair' },
+      { label: 'Deadbolt Locks', href: '/products/deadbolt-locks' },
+      { label: 'Mortise Locks', href: '/products/mortise-locks' },
+      { label: 'High-Security Locks', href: '/products/high-security-locks' },
+      { label: 'Lock Cylinders', href: '/products/lock-cylinders' },
+    ],
     faqs: [
       {
         q: 'What are the 7 types of locks?',
-        a: 'The seven main lock types: (1) Deadbolts — solid bolt, highest mechanical security; (2) Mortise locks — installed inside door edge, standard for UAE villas and offices; (3) Padlocks — portable, free-standing; (4) Knob locks — round handles with built-in cylinder; (5) Lever handle locks — push-handle, common in commercial buildings; (6) Cam locks — small cylindrical locks for cabinets and mailboxes; (7) Smart locks — electronic keyless systems with fingerprint, PIN, or app access. Lock Repair Satwa supplies and installs all seven types.',
+        a: 'The seven main lock types: (1) Deadbolts — solid bolt, highest mechanical security; (2) Mortise locks — installed inside door edge, standard for UAE villas and offices; (3) Padlocks — portable, free-standing; (4) Knob locks — round handles with built-in cylinder; (5) Lever handle locks — push-handle, common in commercial buildings; (6) Cam locks — small cylindrical locks for cabinets and mailboxes; (7) Smart locks — electronic keyless systems with fingerprint, PIN, or app access. Lock repair service supplies and installs all seven types.',
       },
       {
         q: 'What is the best type of front door lock for a Dubai apartment?',
-        a: "For Dubai apartments, we recommend: Primary — a digital smart lock (fingerprint + PIN + app + emergency key), AED 350–800. Secondary — a quality deadbolt. This combination gives keyless daily convenience plus mechanical backup. For villas: a high-security mortise lock with anti-pick cylinder is the main door standard. Lock Repair Satwa installs both and advises on the right spec for your door.",
+        a: "For Dubai apartments, we recommend: Primary — a digital smart lock (fingerprint + PIN + app + emergency key), AED 350–800. Secondary — a quality deadbolt. This combination gives keyless daily convenience plus mechanical backup. For villas: a high-security mortise lock with anti-pick cylinder is the main door standard. Lock repair service installs both and advises on the right spec for your door.",
       },
       {
         q: 'Which locks are best for home security in Dubai?',
-        a: "Best for Dubai homes: (1) Smart fingerprint locks — best convenience + security, AED 350–1,200; (2) Grade 1 certified deadbolts — best mechanical security, AED 200–500; (3) Anti-pick mortise locks with hardened cylinder — best for villa main doors, AED 300–700. Avoid single knob locks on exterior doors — they provide minimal security. Lock Repair Satwa can advise on the right combination for your property.",
+        a: "Best for Dubai homes: (1) Smart fingerprint locks — best convenience + security, AED 350–1,200; (2) Grade 1 certified deadbolts — best mechanical security, AED 200–500; (3) Anti-pick mortise locks with hardened cylinder — best for villa main doors, AED 300–700. Avoid single knob locks on exterior doors — they provide minimal security. Lock repair service can advise on the right combination for your property.",
       },
       {
         q: 'What is a 7-lever lock?',
-        a: 'A 7-lever lock is a high-security mechanical lock using seven internal metal plates (levers) that must all be lifted to precise heights by the correct key simultaneously for the bolt to move. More levers = significantly harder to pick. 7-lever locks are common in heavy padlocks, safes, and high-security main doors. Lock Repair Satwa stocks and fits 7-lever systems for high-security applications.',
+        a: 'A 7-lever lock is a high-security mechanical lock using seven internal metal plates (levers) that must all be lifted to precise heights by the correct key simultaneously for the bolt to move. More levers = significantly harder to pick. 7-lever locks are common in heavy padlocks, safes, and high-security main doors. Lock repair service stocks and fits 7-lever systems for high-security applications.',
       },
       {
         q: 'Are locks easy to change in Dubai?',
-        a: 'Simple knob locks can be DIY-swapped with just a screwdriver. However, the most common UAE door types — cylinder mortise locks and euro cylinder deadbolts — require precise alignment and correct sizing. Improper installation creates security gaps and premature wear. Lock Repair Satwa fits any lock correctly from AED 100 labour, at your location, same day.',
+        a: 'Simple knob locks can be DIY-swapped with just a screwdriver. However, the most common UAE door types — cylinder mortise locks and euro cylinder deadbolts — require precise alignment and correct sizing. Improper installation creates security gaps and premature wear. Lock repair service fits any lock correctly from AED 100 labour, at your location, same day.',
       },
       {
         q: 'How to fix a door lock in Dubai?',
-        a: 'For a stiff key: spray dry graphite or silicone lubricant into the keyhole — avoid WD-40 long-term as it gums up. For a latch that misses the strike plate: tighten door hinges or adjust the strike plate position. For a completely failed lock: call a locksmith. Lock Repair Satwa repairs door locks from AED 100 or replaces them from AED 250, at your home or office.',
+        a: 'For a stiff key: spray dry graphite or silicone lubricant into the keyhole — avoid WD-40 long-term as it gums up. For a latch that misses the strike plate: tighten door hinges or adjust the strike plate position. For a completely failed lock: call a locksmith. Lock repair service repairs door locks from AED 100 or replaces them from AED 250, at your home or office.',
       },
       {
         q: 'How to fix a door lock cylinder?',
-        a: 'Lubricate with graphite or PTFE spray (not WD-40). If jammed with a broken key, use needle-nose pliers or a broken key extractor. If the cylinder is failed: remove the retaining screw on the door edge, insert the key, turn it slightly to release the cam, and pull the cylinder out. Measure the existing cylinder (e.g., 30/30, 35/35) and buy a matching replacement. Or call Lock Repair Satwa — cylinder replacement from AED 150 including parts.',
+        a: 'Lubricate with graphite or PTFE spray (not WD-40). If jammed with a broken key, use needle-nose pliers or a broken key extractor. If the cylinder is failed: remove the retaining screw on the door edge, insert the key, turn it slightly to release the cam, and pull the cylinder out. Measure the existing cylinder (e.g., 30/30, 35/35) and buy a matching replacement. Or call Lock repair service — cylinder replacement from AED 150 including parts.',
       },
       {
         q: 'What causes a door lock to become stiff in Dubai?',
@@ -202,24 +242,30 @@ const FAQ_CATEGORIES = [
       },
       {
         q: 'Should I change my locks when moving into a new Dubai apartment?',
-        a: "Yes — always. Previous tenants (or their family, friends, or building contractors) may have copies of keys you don't know about. Lock Repair Satwa replaces apartment door locks from AED 250 or rekeyes from AED 100–200. A one-time cost for ongoing peace of mind. We can do it the day you move in.",
+        a: "Yes — always. Previous tenants (or their family, friends, or building contractors) may have copies of keys you don't know about. Lock repair service replaces apartment door locks from AED 250 or rekeyes from AED 100–200. A one-time cost for ongoing peace of mind. We can do it the day you move in.",
       },
       {
         q: 'Can I change a lock by myself in Dubai?',
-        a: 'Standard knob locks can be DIY-replaced with a screwdriver and a matching replacement set. However, the most common UAE apartment and villa door types use mortise locks or euro cylinders that need precise sizing and fitting. Professional fitting costs AED 100 labour and ensures the lock works perfectly, aligns with the strike plate, and the door closes smoothly. Lock Repair Satwa comes to you — no workshop visit needed.',
+        a: 'Standard knob locks can be DIY-replaced with a screwdriver and a matching replacement set. However, the most common UAE apartment and villa door types use mortise locks or euro cylinders that need precise sizing and fitting. Professional fitting costs AED 100 labour and ensures the lock works perfectly, aligns with the strike plate, and the door closes smoothly. Lock repair service comes to you — no workshop visit needed.',
       },
       {
         q: 'How to remove a door lock?',
-        a: 'For a standard knob or handle lock: (1) Find and remove screws on the interior faceplate, (2) Pull both inner and outer handle pieces off, (3) Unscrew the latch plate on the door edge, (4) Slide the latch mechanism out. For cylinder locks: locate the retaining screw on the door edge, remove it, then pull the cylinder with the key turned slightly. Lock Repair Satwa removes and replaces any lock type from AED 100.',
+        a: 'For a standard knob or handle lock: (1) Find and remove screws on the interior faceplate, (2) Pull both inner and outer handle pieces off, (3) Unscrew the latch plate on the door edge, (4) Slide the latch mechanism out. For cylinder locks: locate the retaining screw on the door edge, remove it, then pull the cylinder with the key turned slightly. Lock repair service removes and replaces any lock type from AED 100.',
       },
     ],
   },
   {
     category: 'Smart Locks — Dubai Apartments & Villas',
+    relatedLinks: [
+      { label: 'Smart Door Lock Installation', href: '/services/smart-door-locks' },
+      { label: 'Fingerprint Door Locks', href: '/products/fingerprint-door-locks' },
+      { label: 'Keypad Locks', href: '/products/keypad-locks' },
+      { label: 'Smart Door Locks (Shop)', href: '/products/smart-door-locks-buy' },
+    ],
     faqs: [
       {
         q: 'What are smart locks and should I get one for my Dubai apartment?',
-        a: "Smart locks are electronic door locks that use fingerprints, PIN codes, RFID cards, or smartphone apps instead of (or alongside) traditional keys. For Dubai apartments they offer: no key to lose, temporary access codes for guests/maids/maintenance, tamper alarms, access logs, and battery backup with emergency key slot. Lock Repair Satwa installs smart locks from AED 350 — same-day installation.",
+        a: "Smart locks are electronic door locks that use fingerprints, PIN codes, RFID cards, or smartphone apps instead of (or alongside) traditional keys. For Dubai apartments they offer: no key to lose, temporary access codes for guests/maids/maintenance, tamper alarms, access logs, and battery backup with emergency key slot. Lock repair service installs smart locks from AED 350 — same-day installation.",
       },
       {
         q: 'What brands of smart lock do you recommend for Dubai?',
@@ -227,20 +273,26 @@ const FAQ_CATEGORIES = [
       },
       {
         q: "Do smart locks work reliably in Dubai's heat?",
-        a: "Quality smart locks are rated to operate in temperatures up to 60–70°C, which covers Dubai's summer climate. Cheap unrated locks can have battery drain, sensor errors, or motor failures in extreme heat. Lock Repair Satwa only installs brands with verified UAE climate ratings. All installations come with manufacturer warranty and we provide after-installation support.",
+        a: "Quality smart locks are rated to operate in temperatures up to 60–70°C, which covers Dubai's summer climate. Cheap unrated locks can have battery drain, sensor errors, or motor failures in extreme heat. Lock repair service only installs brands with verified UAE climate ratings. All installations come with manufacturer warranty and we provide after-installation support.",
       },
       {
         q: 'How do I install a smart lock in my Dubai apartment?',
-        a: "Smart lock installation requires matching the lock to your existing door preparation (backset size, door thickness, handle position). Incorrect sizing means the lock won't fit or the door won't close properly. Lock Repair Satwa measures your door, confirms the compatible model, and installs it fully configured — fingerprints enrolled, PIN set, emergency key tested. Installation from AED 350 including the lock unit.",
+        a: "Smart lock installation requires matching the lock to your existing door preparation (backset size, door thickness, handle position). Incorrect sizing means the lock won't fit or the door won't close properly. Lock repair service measures your door, confirms the compatible model, and installs it fully configured — fingerprints enrolled, PIN set, emergency key tested. Installation from AED 350 including the lock unit.",
       },
       {
         q: "What happens if my smart lock battery dies in Dubai?",
-        a: "Quality smart locks have: (1) Low battery warning (weeks in advance), (2) Emergency key slot (physical key backup), (3) 9V battery jumpstart port on some models (place a 9V battery against the contacts to power up temporarily). Lock Repair Satwa recommends changing batteries every 6–12 months as preventive maintenance. We also supply batteries and can service your smart lock on-site.",
+        a: "Quality smart locks have: (1) Low battery warning (weeks in advance), (2) Emergency key slot (physical key backup), (3) 9V battery jumpstart port on some models (place a 9V battery against the contacts to power up temporarily). Lock repair service recommends changing batteries every 6–12 months as preventive maintenance. We also supply batteries and can service your smart lock on-site.",
       },
     ],
   },
   {
     category: 'Rekeying vs Lock Replacement',
+    relatedLinks: [
+      { label: 'Lock Change Service', href: '/services/lock-change' },
+      { label: 'Lock Cylinders', href: '/products/lock-cylinders' },
+      { label: 'Deadbolt Locks', href: '/products/deadbolt-locks' },
+      { label: 'Book a Service', href: '/booking' },
+    ],
     faqs: [
       {
         q: 'What is rekeying and when should I use it in Dubai?',
@@ -248,28 +300,35 @@ const FAQ_CATEGORIES = [
       },
       {
         q: 'Can a lock be rekeyed multiple times?',
-        a: 'Yes. Most standard pin-tumbler cylinders (the type used in 95% of UAE doors) can be rekeyed multiple times without replacing the hardware. Each rekeying changes the pin heights to match a new key. Lock Repair Satwa rekeyes most standard UAE door cylinders from AED 100. We recommend rekeying rather than replacement whenever the existing hardware is still in good condition.',
+        a: 'Yes. Most standard pin-tumbler cylinders (the type used in 95% of UAE doors) can be rekeyed multiple times without replacing the hardware. Each rekeying changes the pin heights to match a new key. Lock repair service rekeyes most standard UAE door cylinders from AED 100. We recommend rekeying rather than replacement whenever the existing hardware is still in good condition.',
       },
       {
         q: 'What is the difference between rekeying and changing a lock?',
-        a: 'Rekeying: changes only the internal pin configuration — keeps the same lock body and handles, costs AED 100–200, takes 20–30 minutes. Lock change: replaces the entire lock body with new hardware — better if the lock is damaged, old, or you want a security upgrade, costs AED 250–500, takes 30–60 minutes. Lock Repair Satwa advises which is right for your situation.',
+        a: 'Rekeying: changes only the internal pin configuration — keeps the same lock body and handles, costs AED 100–200, takes 20–30 minutes. Lock change: replaces the entire lock body with new hardware — better if the lock is damaged, old, or you want a security upgrade, costs AED 250–500, takes 30–60 minutes. Lock repair service advises which is right for your situation.',
       },
     ],
   },
   {
     category: 'Safe Box Services',
+    relatedLinks: [
+      { label: 'Safe Box Services', href: '/services/safe-box-services' },
+      { label: 'Fireproof Safes', href: '/products/fireproof-safes' },
+      { label: 'Floor Safes', href: '/products/floor-safes' },
+      { label: 'Depository Safes', href: '/products/depository-safes' },
+      { label: 'Access Card Duplication', href: '/services/access-card-duplication' },
+    ],
     faqs: [
       {
         q: 'Can you open a safe without the combination or key in Dubai?',
         a: 'Yes. Our safe technicians use non-destructive methods (manipulation, bypass, or scope) where possible — AED 200–400. If the mechanism is fully seized, we drill and replace the lock — AED 300–500. We service hotel room safes, home floor and wall safes, document safes, gun safes, and commercial cash safes. Call +971 52 642 6161 with the brand and model for a quote.',
       },
       {
-        q: 'What types of safes does Lock Repair Satwa service?',
+        q: 'What types of safes does Lock repair service service?',
         a: "We open and service all common safe types in Dubai: hotel room safes (common in apartments and villas rented furnished), home floor and wall safes, fireproof document safes, gun safes, depository safes, biometric safes, and commercial cash safes. We also supply and install new safes at competitive prices.",
       },
       {
         q: 'How do I choose a safe for my Dubai home?',
-        a: "For a Dubai home: choose a fireproof safe rated at least 30 minutes at 1,000°C for documents. For valuables: a floor safe bolted to the ground prevents removal. Electronic combination with emergency key backup is the most practical for daily use. Size to your actual contents — most people underestimate how quickly safes fill up. Lock Repair Satwa supplies, delivers, and installs safes at your home. Call +971 52 642 6161 for advice.",
+        a: "For a Dubai home: choose a fireproof safe rated at least 30 minutes at 1,000°C for documents. For valuables: a floor safe bolted to the ground prevents removal. Electronic combination with emergency key backup is the most practical for daily use. Size to your actual contents — most people underestimate how quickly safes fill up. Lock repair service supplies, delivers, and installs safes at your home. Call +971 52 642 6161 for advice.",
       },
       {
         q: 'Do you duplicate access cards and parking fobs in Dubai?',
@@ -279,6 +338,13 @@ const FAQ_CATEGORIES = [
   },
   {
     category: 'Lock Types — Expert Guide',
+    relatedLinks: [
+      { label: 'All Lock Products', href: '/products' },
+      { label: 'Deadbolt Locks', href: '/products/deadbolt-locks' },
+      { label: 'Mortise Locks', href: '/products/mortise-locks' },
+      { label: 'High-Security Locks', href: '/products/high-security-locks' },
+      { label: 'Magnetic Locks', href: '/products/magnetic-locks' },
+    ],
     faqs: [
       {
         q: 'What are common door lock problems?',
@@ -286,7 +352,7 @@ const FAQ_CATEGORIES = [
       },
       {
         q: 'What is a master key and how does it work?',
-        a: 'A master key system uses locks where each door has its own individual key, but one master key opens all doors in the group. Achieved by adding a master wafer between certain pin pairs — both the change key height and the master key height create a shear line. Lock Repair Satwa designs and installs master key systems for apartment buildings, offices, and commercial complexes in Dubai.',
+        a: 'A master key system uses locks where each door has its own individual key, but one master key opens all doors in the group. Achieved by adding a master wafer between certain pin pairs — both the change key height and the master key height create a shear line. Lock repair service designs and installs master key systems for apartment buildings, offices, and commercial complexes in Dubai.',
       },
       {
         q: 'Which key opens every lock?',
@@ -294,15 +360,15 @@ const FAQ_CATEGORIES = [
       },
       {
         q: 'Can a lock be opened by different keys?',
-        a: 'Standard locks: one key per lock. Master key systems: both the individual (change) key and a master key open the lock — achieved by adding a third pin (master wafer) that creates a second shear line. Keyed-alike systems: multiple locks share the same key profile so one key opens all of them — common in Dubai apartment main door and building entry sets. Lock Repair Satwa can set up any of these configurations.',
+        a: 'Standard locks: one key per lock. Master key systems: both the individual (change) key and a master key open the lock — achieved by adding a third pin (master wafer) that creates a second shear line. Keyed-alike systems: multiple locks share the same key profile so one key opens all of them — common in Dubai apartment main door and building entry sets. Lock repair service can set up any of these configurations.',
       },
       {
         q: 'What locks can a locksmith not open?',
-        a: "A professional locksmith can open almost any standard residential or commercial lock without destruction. The most challenging cases are: (1) Advanced biometric safes that require manufacturer factory reset codes, (2) High-security electronic locks where the firmware is corrupted, (3) Specialist bank vault systems requiring certified vault technicians. For all standard Dubai apartment locks, villa locks, car locks, padlocks, and most safes — Lock Repair Satwa opens them non-destructively.",
+        a: "A professional locksmith can open almost any standard residential or commercial lock without destruction. The most challenging cases are: (1) Advanced biometric safes that require manufacturer factory reset codes, (2) High-security electronic locks where the firmware is corrupted, (3) Specialist bank vault systems requiring certified vault technicians. For all standard Dubai apartment locks, villa locks, car locks, padlocks, and most safes — Lock repair service opens them non-destructively.",
       },
       {
         q: 'What is a C-type padlock?',
-        a: "A C-type padlock (also called a chain-specific padlock) has a body shaped to accept chain links or cables directly through its shackle gap — allowing it to secure a chain without a separate padlock hasp. Used for securing bicycles, motorcycles, gates, and storage units. Lock Repair Satwa supplies padlocks of all types including C-type and heavy-duty anti-cut models from AED 50.",
+        a: "A C-type padlock (also called a chain-specific padlock) has a body shaped to accept chain links or cables directly through its shackle gap — allowing it to secure a chain without a separate padlock hasp. Used for securing bicycles, motorcycles, gates, and storage units. Lock repair service supplies padlocks of all types including C-type and heavy-duty anti-cut models from AED 50.",
       },
       {
         q: 'How long do door locks last in Dubai?',
@@ -312,18 +378,25 @@ const FAQ_CATEGORIES = [
   },
   {
     category: 'Security Advice for Dubai Residents',
+    relatedLinks: [
+      { label: 'Smart Door Lock Installation', href: '/services/smart-door-locks' },
+      { label: 'Lock Change Service', href: '/services/lock-change' },
+      { label: 'Emergency Car Unlock', href: '/services/emergency-car-unlock' },
+      { label: 'Master Key System', href: '/services/master-key-system' },
+      { label: 'Access Control Installation', href: '/services/access-control-installation' },
+    ],
     faqs: [
       {
         q: 'What is the best way to secure my Dubai apartment front door?',
-        a: "Best security setup for a Dubai apartment: (1) Smart fingerprint lock as primary entry — keyless, tamper alarm, access log; (2) Deadbolt as secondary mechanical lock; (3) Strike plate reinforced with 7cm+ screws (most UAE apartments use short screws easily kicked in); (4) Door chain for when you're inside. Lock Repair Satwa can implement all of this in a single visit from AED 350.",
+        a: "Best security setup for a Dubai apartment: (1) Smart fingerprint lock as primary entry — keyless, tamper alarm, access log; (2) Deadbolt as secondary mechanical lock; (3) Strike plate reinforced with 7cm+ screws (most UAE apartments use short screws easily kicked in); (4) Door chain for when you're inside. Lock repair service can implement all of this in a single visit from AED 350.",
       },
       {
         q: 'Can a locksmith open a car without damaging it in Dubai?',
-        a: 'Yes. Lock Repair Satwa uses professional slim jim tools, air wedge kits, and long-reach tools designed specifically for non-destructive car opening. We successfully open car doors without damage in the vast majority of cases across all common UAE vehicle types (Toyota, Nissan, Ford, Lexus, and more). Available 24/7 — call +971 52 642 6161.',
+        a: 'Yes. Lock repair service uses professional slim jim tools, air wedge kits, and long-reach tools designed specifically for non-destructive car opening. We successfully open car doors without damage in the vast majority of cases across all common UAE vehicle types (Toyota, Nissan, Ford, Lexus, and more). Available 24/7 — call +971 52 642 6161.',
       },
       {
         q: 'How do I make my Dubai villa more secure?',
-        a: "For Dubai villas: (1) Upgrade main entrance to an anti-pick, anti-drill mortise lock with reinforced strike plate; (2) Add a smart lock for convenience and access logging; (3) Ensure all side/back doors have deadbolts; (4) Change locks on all doors when moving in — you don't know who has keys; (5) Consider a CCTV/smart intercom integration. Lock Repair Satwa can audit your villa's security and recommend upgrades. Call +971 52 642 6161.",
+        a: "For Dubai villas: (1) Upgrade main entrance to an anti-pick, anti-drill mortise lock with reinforced strike plate; (2) Add a smart lock for convenience and access logging; (3) Ensure all side/back doors have deadbolts; (4) Change locks on all doors when moving in — you don't know who has keys; (5) Consider a CCTV/smart intercom integration. Lock repair service can audit your villa's security and recommend upgrades. Call +971 52 642 6161.",
       },
       {
         q: 'What should I do if I suspect my locks have been tampered with in Dubai?',
@@ -435,8 +508,8 @@ export default function FaqPage() {
 
         {/* FAQ Categories */}
         <section className="py-12 sm:py-16 bg-background">
-          <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 space-y-12">
-            {FAQ_CATEGORIES.map(({ category, faqs }) => (
+          <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 space-y-14">
+            {FAQ_CATEGORIES.map(({ category, faqs, relatedLinks }) => (
               <div
                 key={category}
                 id={category.toLowerCase().replace(/[^a-z0-9]+/g, '-')}
@@ -460,11 +533,29 @@ export default function FaqPage() {
                         />
                       </summary>
                       <div className="px-5 pb-5 pt-1">
-                        <p className="direct-answer text-sm leading-relaxed text-muted-foreground">{a}</p>
+                        <p className="direct-answer text-sm leading-relaxed text-muted-foreground">
+                          {parseWithLinks(a)}
+                        </p>
                       </div>
                     </details>
                   ))}
                 </div>
+
+                {/* Contextual related page links per category */}
+                {relatedLinks && relatedLinks.length > 0 && (
+                  <div className="mt-5 flex flex-wrap gap-2">
+                    <span className="text-xs font-medium text-muted-foreground self-center">See also:</span>
+                    {relatedLinks.map(({ label, href }) => (
+                      <Link
+                        key={href}
+                        href={href}
+                        className="inline-flex items-center rounded-full border border-brand-gold/30 bg-brand-gold/5 px-3 py-1 text-xs font-medium text-brand-gold hover:bg-brand-gold/15 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+                      >
+                        {label}
+                      </Link>
+                    ))}
+                  </div>
+                )}
               </div>
             ))}
           </div>
@@ -477,7 +568,7 @@ export default function FaqPage() {
               Still Have a Question? Call Us.
             </h2>
             <p className="mt-3 text-base text-white/70">
-              Lock Repair Satwa responds in under 2 minutes — 24 hours a day, 7 days a week.
+              Lock repair service responds in under 2 minutes — 24 hours a day, 7 days a week.
               D90, Al Bada&apos;a, Dubai.
             </p>
             <div className="mt-7 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">

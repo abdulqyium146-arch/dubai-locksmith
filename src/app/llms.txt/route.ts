@@ -27,7 +27,7 @@ function build(): string {
 
 > Key maker, key shop, and locksmith in Al Bada'a (Satwa), Dubai. Key duplication service from AED 50, car key cutting, door lock repair, smart key programming, and 24/7 emergency locksmith across all Dubai areas. Rated ${GOOGLE_RATING}★ on Google (${GOOGLE_REVIEW_COUNT}+ reviews).
 
-Lock Repair Satwa is a professional locksmith and key shop based at D90, Al Bada'a, Dubai — immediately adjacent to Al Satwa and the closest key maker to Al Satwa Road. The business provides mobile locksmith services across all major Dubai neighbourhoods, with technicians dispatched directly to the customer's location. No workshop visit is required.
+Lock repair service is a professional locksmith and key shop based at D90, Al Bada'a, Dubai — immediately adjacent to Al Satwa and the closest key maker to Al Satwa Road. The business provides mobile locksmith services across all major Dubai neighbourhoods, with technicians dispatched directly to the customer's location. No workshop visit is required.
 
 ## Business Information
 
@@ -75,7 +75,7 @@ ${productLines}
 - [All Services](${SITE_URL}/services): Complete list of locksmith and key services in Dubai
 - [All Locations](${SITE_URL}/locations): Dubai areas covered with response times
 - [Products](${SITE_URL}/products): Locks and security hardware — supply and installation
-- [About](${SITE_URL}/about): About Lock Repair Satwa
+- [About](${SITE_URL}/about): About Lock repair service
 - [Contact](${SITE_URL}/contact): Get in touch or book a service
 
 ## Optional

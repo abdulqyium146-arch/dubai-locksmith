@@ -1,5 +1,5 @@
 // ─────────────────────────────────────────────────────────────────────────────
-// Lock Repair Satwa — Contact Page (Conversion-Focused)
+// Lock repair service — Contact Page (Conversion-Focused)
 // ─────────────────────────────────────────────────────────────────────────────
 import type { Metadata } from 'next'
 import {
@@ -37,7 +37,7 @@ import {
 // ── Metadata ──────────────────────────────────────────────────────────────────
 
 export const metadata: Metadata = {
-  title: { absolute: `Contact Lock Repair Satwa Dubai | Call ${PHONE_DISPLAY}` },
+  title: { absolute: `Contact Lock repair service Dubai | Call ${PHONE_DISPLAY}` },
   description: `Contact ${BUSINESS_NAME} for professional locksmith services in Dubai. Call ${PHONE_DISPLAY} or WhatsApp for an instant quote. Based at D90, Al Bada'a, open daily 24/7.`,
   alternates: {
     canonical: `${SITE_URL}/contact`,
@@ -83,8 +83,8 @@ const contactPageSchema = {
     },
     geo: {
       '@type': 'GeoCoordinates',
-      latitude: 25.23341473023507,
-      longitude: 55.275106874155064,
+      latitude: 25.2334375,
+      longitude: 55.2776875,
     },
     openingHoursSpecification: {
       '@type': 'OpeningHoursSpecification',
@@ -132,7 +132,7 @@ export default function ContactPage() {
           <div className="mt-6 max-w-2xl">
             <h1 className="font-heading text-4xl font-extrabold leading-tight tracking-tight text-white sm:text-5xl">
               Contact{' '}
-              <span className="text-gold-gradient">Lock Repair Satwa</span>
+              <span className="text-gold-gradient">Lock repair service</span>
             </h1>
             <p className="mt-4 text-lg leading-relaxed text-white/75">
               Open daily 24/7, 7 days a week. Call or WhatsApp now
@@ -168,7 +168,7 @@ export default function ContactPage() {
               <div className="mt-8 flex flex-col gap-4">
                 <a
                   href={PHONE_HREF}
-                  aria-label={`Call Lock Repair Satwa: ${PHONE_DISPLAY}`}
+                  aria-label={`Call Lock repair service: ${PHONE_DISPLAY}`}
                   className="group flex items-center gap-4 rounded-2xl border-2 border-brand-gold bg-brand-gold/10 p-5 transition-colors hover:bg-brand-gold/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
                 >
                   <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-brand-gold text-brand-navy shadow-md group-hover:shadow-lg transition-shadow">
@@ -192,7 +192,7 @@ export default function ContactPage() {
                   href={`https://wa.me/${WHATSAPP_NUMBER}?text=Hi%2C%20I%20need%20help%20with%20my%20car%20key%20in%20Dubai.`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label="WhatsApp Lock Repair Satwa"
+                  aria-label="WhatsApp Lock repair service"
                   className="group flex items-center gap-4 rounded-2xl border border-[#25D366]/30 bg-[#25D366]/10 p-5 transition-colors hover:bg-[#25D366]/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
                 >
                   <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-[#25D366] text-white shadow-md">
@@ -272,18 +272,18 @@ export default function ContactPage() {
                   </div>
                 </div>
 
-                {/* Google Maps Embed — verified Place ID for Lock Repair Satwa */}
+                {/* Google Maps Embed — verified Place ID for Lock repair service */}
                 <div className="overflow-hidden rounded-lg border border-border">
                   <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3609.1042121159103!2d55.275106874155064!3d25.23341473023507!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f43ba64cf6469%3A0x6d2acd58680471f4!2sLock%20repair%20satwa!5e0!3m2!1sen!2s!4v1784627012430!5m2!1sen!2s"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3609.1042121159103!2d55.2776875!3d25.2334375!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f43ba64cf6469%3A0x6d2acd58680471f4!2sLock%20repair%20service!5e0!3m2!1sen!2s!4v1784627012430!5m2!1sen!2s"
                     width="100%"
                     height="360"
                     loading="lazy"
                     referrerPolicy="strict-origin-when-cross-origin"
                     allowFullScreen
-                    title="Lock Repair Satwa — D90, Al Bada'a, Dubai on Google Maps"
+                    title="Lock repair service — D90, Al Bada'a, Dubai on Google Maps"
                     className="block w-full border-0"
-                    aria-label="Google Maps showing Lock Repair Satwa at D90, Al Bada'a, Dubai"
+                    aria-label="Google Maps showing Lock repair service at D90, Al Bada'a, Dubai"
                   />
                 </div>
                 <a
@@ -340,7 +340,7 @@ export default function ContactPage() {
                   playsInline
                   controls
                   className="w-full block"
-                  aria-label="Lock Repair Satwa — professional locksmith team at work in Dubai"
+                  aria-label="Lock repair service — professional locksmith team at work in Dubai"
                 />
               </div>
             </div>

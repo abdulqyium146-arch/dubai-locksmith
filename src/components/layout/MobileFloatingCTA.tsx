@@ -1,6 +1,6 @@
 'use client'
 // ─────────────────────────────────────────────────────────────────────────────
-// Lock Repair Satwa — Mobile Floating CTA Bar
+// Lock repair service — Mobile Floating CTA Bar
 // Only shown on mobile (md:hidden)
 // ─────────────────────────────────────────────────────────────────────────────
 import { useEffect, useState } from 'react'
@@ -53,7 +53,7 @@ export function MobileFloatingCTA() {
                 'transition-opacity active:opacity-90',
                 'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-inset',
               ].join(' ')}
-              aria-label={`Call Lock Repair Satwa: ${PHONE_DISPLAY}`}
+              aria-label={`Call Lock repair service: ${PHONE_DISPLAY}`}
             >
               <Phone className="h-5 w-5" aria-hidden="true" />
               <span className="text-xs font-bold leading-tight">Call Now</span>
