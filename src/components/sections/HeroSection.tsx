@@ -3,7 +3,7 @@
 // ─────────────────────────────────────────────────────────────────────────────
 import type { ReactNode } from 'react'
 import Image from 'next/image'
-import { Phone, MessageCircle, ChevronRight, MapPin } from 'lucide-react'
+import { Phone, MessageCircle, ChevronRight, MapPin, Car } from 'lucide-react'
 import Link from 'next/link'
 import { Button } from '@/components/ui/Button'
 import { Badge } from '@/components/ui/Badge'
@@ -25,6 +25,19 @@ interface HeroSectionProps {
   badge?: string
 }
 
+// All locksmith service categories — one chip per major type so visitors
+// understand full breadth without reading a paragraph
+const SERVICE_CHIPS = [
+  { emoji: '🔑', label: 'Car Key Cutting',    href: '/services/car-key-duplication' },
+  { emoji: '🚗', label: 'Key Programming',    href: '/services/transponder-keys' },
+  { emoji: '🚪', label: 'Door Lock Repair',   href: '/services/lock-repair' },
+  { emoji: '🔓', label: 'Lock Change',        href: '/services/lock-change' },
+  { emoji: '🧠', label: 'Smart Locks',        href: '/services/smart-door-locks' },
+  { emoji: '⚡', label: 'Emergency Unlock',   href: '/services/emergency-car-unlock' },
+  { emoji: '🏦', label: 'Safe Opening',       href: '/services/safe-box-services' },
+  { emoji: '🅿️', label: 'Parking Remote',    href: '/services/parking-remotes' },
+]
+
 export async function HeroSection({
   title,
   subtitle,
@@ -35,9 +48,9 @@ export async function HeroSection({
 }: HeroSectionProps) {
   const headlineDefault = (
     <>
-      Dubai&apos;s Professional{' '}
+      Dubai&apos;s Complete{' '}
       <span className="text-gold-gradient">Locksmith</span>
-      {' '}— Lock repair service
+      {' '}— Mobile, Fast &amp; 24/7
     </>
   )
 
@@ -45,16 +58,28 @@ export async function HeroSection({
     <>
       <section
         aria-label="Hero"
-        className="relative overflow-hidden bg-hero-gradient pt-[72px]"
+        className="relative overflow-hidden bg-brand-navy pt-[72px]"
       >
-        {/* ── Decorative background ───────────────────────────────────────── */}
-        <div aria-hidden="true" className="pointer-events-none absolute inset-0">
-          {/* Radial glows */}
-          <div className="absolute -right-40 -top-40 h-[500px] w-[500px] rounded-full bg-brand-gold/8 blur-3xl" />
-          <div className="absolute -bottom-20 -left-20 h-80 w-80 rounded-full bg-brand-gold/5 blur-3xl" />
+        {/* ── Background image — <Image fill> so Googlebot indexes it (not CSS bg) */}
+        <div className="absolute inset-0 overflow-hidden" aria-hidden="true">
+          <Image
+            src="/images/shop/locksmith-shop-satwa-al-badaa-dubai.webp"
+            alt=""
+            fill
+            className="object-cover object-center opacity-50"
+            priority
+            quality={50}
+            sizes="100vw"
+          />
+          {/* Layered gradient: readability + brand colour retention */}
+          <div className="absolute inset-0 bg-gradient-to-br from-brand-navy/90 via-brand-navy/75 to-brand-navy/55" />
+          <div className="absolute inset-0 bg-gradient-to-t from-brand-navy/70 via-transparent to-transparent" />
+          {/* Radial gold glows */}
+          <div className="absolute -right-40 -top-40 h-[500px] w-[500px] rounded-full bg-brand-gold/10 blur-3xl" />
+          <div className="absolute -bottom-20 -left-20 h-80 w-80 rounded-full bg-brand-gold/6 blur-3xl" />
           {/* Subtle grid */}
           <div
-            className="absolute inset-0 opacity-[0.025]"
+            className="absolute inset-0 opacity-[0.02]"
             style={{
               backgroundImage:
                 'linear-gradient(rgba(201,168,76,1) 1px, transparent 1px), linear-gradient(90deg, rgba(201,168,76,1) 1px, transparent 1px)',
@@ -72,7 +97,7 @@ export async function HeroSection({
 
               {/* Badge */}
               <Badge variant="gold" size="md" dot className="mb-6 inline-flex">
-                {badge ?? "Key Maker & Locksmith — Satwa & All Dubai Areas"}
+                {badge ?? 'Mobile Locksmith · All Services · All 24 Dubai Areas'}
               </Badge>
 
               {/* H1 */}
@@ -81,12 +106,29 @@ export async function HeroSection({
               </h1>
 
               {/* Subtitle */}
-              <p className="mt-5 text-base leading-relaxed text-white/70 sm:text-lg lg:max-w-lg">
-                {subtitle ?? "Lock repair service, D90 Al Bada'a, Dubai — car key duplication, door lock repair, smart key programming and emergency locksmith across all Dubai areas. On-site in 20–45 minutes."}
+              <p className="mt-5 text-base leading-relaxed text-white/70 sm:text-lg lg:max-w-xl">
+                {subtitle ?? "Mobile locksmith dispatched to your location across all 24 Dubai areas — car key duplication & programming, door lock repair, smart lock installation, emergency unlock, safe opening and more. Arrives in 20–45 minutes. No call-out fee."}
               </p>
 
+              {/* ── Service category chips — shows full breadth at a glance ── */}
+              <div
+                className="mt-5 flex flex-wrap justify-center gap-2 lg:justify-start"
+                aria-label="Service types available"
+              >
+                {SERVICE_CHIPS.map(({ emoji, label, href }) => (
+                  <Link
+                    key={href}
+                    href={href}
+                    className="inline-flex shrink-0 items-center gap-1.5 rounded-full border border-brand-gold/25 bg-brand-gold/10 px-3 py-1.5 text-xs font-medium text-white/80 transition-colors hover:border-brand-gold/50 hover:bg-brand-gold/20 hover:text-white"
+                  >
+                    <span aria-hidden="true">{emoji}</span>
+                    {label}
+                  </Link>
+                ))}
+              </div>
+
               {/* Star rating + review count */}
-              <div className="mt-5 flex flex-wrap items-center justify-center gap-x-3 gap-y-1 lg:justify-start">
+              <div className="mt-6 flex flex-wrap items-center justify-center gap-x-3 gap-y-1 lg:justify-start">
                 <div
                   className="flex gap-0.5"
                   aria-label={`Rated ${GOOGLE_RATING} out of 5 stars on Google`}
@@ -154,7 +196,7 @@ export async function HeroSection({
 
               {/* Trust micro-copy */}
               <p className="mt-7 text-[11px] font-medium uppercase tracking-widest text-white/30">
-                No call-out fee · Price confirmed first · Open 24/7 daily
+                32+ services · 24 Dubai areas · No call-out fee · Price confirmed first · Open 24/7
               </p>
             </div>
 
@@ -204,16 +246,13 @@ export async function HeroSection({
                 </div>
               </div>
 
-              {/* Floating badge: Open 24/7 (bottom-left) */}
+              {/* Floating badge: Mobile Service (bottom-left) */}
               <div className="absolute -bottom-4 left-4 flex items-center gap-3 rounded-xl border border-white/15 bg-brand-navy/90 px-4 py-3 shadow-xl backdrop-blur-md">
-                <span className="relative flex h-2.5 w-2.5 shrink-0" aria-hidden="true">
-                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-400 opacity-75" />
-                  <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-green-400" />
-                </span>
+                <Car className="h-5 w-5 shrink-0 text-brand-gold" aria-hidden="true" />
                 <div className="leading-none">
-                  <p className="text-xs font-bold text-white">Open 24/7</p>
+                  <p className="text-xs font-bold text-white">Mobile — We Come to You</p>
                   <p className="mt-0.5 text-[11px] text-white/50">
-                    D90, Al Bada&apos;a · 20–45 min
+                    24/7 · 20–45 min anywhere in Dubai
                   </p>
                 </div>
               </div>
@@ -222,8 +261,8 @@ export async function HeroSection({
               <div className="absolute bottom-10 -right-4 hidden xl:flex items-center gap-2 rounded-xl border border-white/10 bg-white/8 px-3 py-2.5 backdrop-blur-sm">
                 <MapPin className="h-4 w-4 shrink-0 text-brand-gold" aria-hidden="true" />
                 <div className="leading-none">
-                  <p className="text-[11px] font-bold text-white">Al Bada&apos;a</p>
-                  <p className="mt-0.5 text-[10px] text-white/55">Dubai, UAE</p>
+                  <p className="text-[11px] font-bold text-white">All Dubai</p>
+                  <p className="mt-0.5 text-[10px] text-white/55">24 areas covered</p>
                 </div>
               </div>
             </div>

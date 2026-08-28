@@ -14,6 +14,7 @@ import {
   Shield,
   Zap,
   Award,
+  ExternalLink,
 } from 'lucide-react'
 import {
   BUSINESS_NAME,
@@ -285,6 +286,23 @@ export async function Footer() {
               ))}
             </ul>
 
+            {/* Partner Sites */}
+            <div className="mt-8">
+              <h4 className="font-heading text-xs font-semibold uppercase tracking-widest text-white/40 mb-3">
+                Partner Sites
+              </h4>
+              <a
+                href="https://carlocksmithdubai.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2.5 rounded-lg border border-white/10 bg-white/5 px-3.5 py-2.5 text-xs text-white/70 transition-colors hover:border-brand-gold/30 hover:bg-brand-gold/10 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+                aria-label="Car Locksmith Dubai — partner locksmith service"
+              >
+                <ExternalLink className="h-3.5 w-3.5 shrink-0 text-brand-gold" aria-hidden="true" />
+                <span className="font-medium">Car Locksmith Dubai</span>
+              </a>
+            </div>
+
             {/* Google rating badge */}
             <a
               href={GOOGLE_MAPS_URL}
@@ -353,13 +371,25 @@ export async function Footer() {
 
       {/* ── Bottom bar ───────────────────────────────────────────────────────── */}
       <div className="border-t border-white/10">
-        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-4 py-6 sm:flex-row sm:px-6 lg:px-8">
+        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-3 px-4 py-6 sm:flex-row sm:px-6 lg:px-8">
           <p className="text-center text-xs text-white/50 sm:text-left">
             © {currentYear} {BUSINESS_NAME}. All rights reserved.
           </p>
-          <p className="text-center text-xs text-white/40 sm:text-right">
-            Professional Locksmith · D90, Al Bada&apos;a, Dubai, UAE · {PHONE_DISPLAY}
-          </p>
+          <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-1 sm:justify-end">
+            <p className="text-xs text-white/40">
+              Professional Locksmith · D90, Al Bada&apos;a, Dubai, UAE · {PHONE_DISPLAY}
+            </p>
+            <span className="hidden text-white/20 sm:inline">·</span>
+            <a
+              href="https://carlocksmithdubai.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1 text-xs text-white/35 transition-colors hover:text-brand-gold/70"
+            >
+              <ExternalLink className="h-3 w-3" aria-hidden="true" />
+              Car Locksmith Dubai
+            </a>
+          </div>
         </div>
       </div>
     </footer>

@@ -174,8 +174,22 @@ export default function AboutPage() {
       <JsonLd data={videoObjectSchema} />
 
       {/* ── Page Header ─────────────────────────────────────────────────────── */}
-      <section aria-label="About page header" className="bg-hero-gradient pt-[72px]">
-        <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8">
+      <section aria-label="About page header" className="relative overflow-hidden bg-brand-navy pt-[72px]">
+        <div className="absolute inset-0 overflow-hidden" aria-hidden="true">
+          <Image
+            src="/images/shop/locksmith-shop-satwa-al-badaa-dubai.webp"
+            alt=""
+            fill
+            className="object-cover object-center opacity-50"
+            priority
+            quality={50}
+            sizes="100vw"
+          />
+          <div className="absolute inset-0 bg-gradient-to-br from-brand-navy/90 via-brand-navy/75 to-brand-navy/60" />
+          <div className="absolute inset-0 bg-gradient-to-t from-brand-navy/65 via-transparent to-transparent" />
+        </div>
+
+        <div className="relative mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8">
           <BreadcrumbNav items={breadcrumbs} light />
           <div className="mt-6 max-w-3xl">
             <h1 className="font-heading text-4xl font-extrabold leading-tight tracking-tight text-white sm:text-5xl">

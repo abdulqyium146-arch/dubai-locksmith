@@ -15,6 +15,7 @@ import {
   Zap,
   MapPin,
   Package,
+  Car,
 } from 'lucide-react'
 
 import Image from 'next/image'
@@ -206,9 +207,24 @@ export default async function ServicePage({
       {/* ── 1. Hero ─────────────────────────────────────────────────────────── */}
       <section
         aria-label={`${service.title} hero`}
-        className={`pt-[72px] ${service.emergency ? 'bg-gradient-to-br from-brand-navy via-brand-navy to-red-950' : 'bg-hero-gradient'}`}
+        className="relative overflow-hidden bg-brand-navy pt-[72px]"
       >
-        <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6 sm:py-14 lg:px-8">
+        {/* Background image — <Image fill> so Googlebot indexes it, not CSS bg-image */}
+        <div className="absolute inset-0 overflow-hidden" aria-hidden="true">
+          <Image
+            src={service.heroImage ?? '/images/services/locksmith-tools-lock-cylinders-dubai.webp'}
+            alt=""
+            fill
+            className="object-cover object-center opacity-45"
+            priority
+            quality={50}
+            sizes="100vw"
+          />
+          <div className={`absolute inset-0 ${service.emergency ? 'bg-gradient-to-br from-brand-navy/92 via-red-950/60 to-brand-navy/80' : 'bg-gradient-to-br from-brand-navy/92 via-brand-navy/78 to-brand-navy/60'}`} />
+          <div className="absolute inset-0 bg-gradient-to-t from-brand-navy/65 via-transparent to-transparent" />
+        </div>
+
+        <div className="relative mx-auto max-w-7xl px-4 py-10 sm:px-6 sm:py-14 lg:px-8">
           {/* Breadcrumb */}
           <BreadcrumbNav items={breadcrumbs} light />
 
@@ -294,13 +310,52 @@ export default async function ServicePage({
                 </Button>
               </div>
 
+              {/* Mobile service call-out — reinforces we dispatch to customer */}
+              <div className="mt-5 flex items-start gap-3 rounded-xl border border-brand-gold/25 bg-brand-gold/10 px-4 py-3">
+                <Car className="h-5 w-5 shrink-0 text-brand-gold mt-0.5" aria-hidden="true" />
+                <div>
+                  <p className="text-sm font-bold text-white">Mobile — Technician Comes to You</p>
+                  <p className="mt-0.5 text-xs text-white/60">
+                    Dispatched to your home, office or car park anywhere in Dubai. 20–45 min arrival. Price confirmed before work starts.
+                  </p>
+                </div>
+              </div>
+
               <p className="mt-4 text-xs text-white/40">
-                Mobile service · Price confirmed before work starts · All Dubai areas
+                32+ locksmith services · 24 Dubai areas · No call-out fee · Open 24/7
               </p>
             </div>
 
-            {/* Right: process preview (first 3 steps) */}
+            {/* Right: process preview + service coverage */}
             <div className="rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-sm">
+              {/* Service coverage chips */}
+              <div className="mb-5 border-b border-white/10 pb-5">
+                <p className="mb-2.5 text-xs font-semibold uppercase tracking-wide text-white/50">
+                  Our Complete Locksmith Range
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  {[
+                    { emoji: '🔑', label: 'Key Cutting', href: '/services/car-key-duplication' },
+                    { emoji: '🚗', label: 'Key Programming', href: '/services/transponder-keys' },
+                    { emoji: '🚪', label: 'Door Locks', href: '/services/lock-repair' },
+                    { emoji: '🔓', label: 'Lock Change', href: '/services/lock-change' },
+                    { emoji: '🧠', label: 'Smart Locks', href: '/services/smart-door-locks' },
+                    { emoji: '⚡', label: 'Emergency', href: '/services/emergency-car-unlock' },
+                    { emoji: '🏦', label: 'Safe Opening', href: '/services/safe-box-services' },
+                    { emoji: '🅿️', label: 'Parking Remote', href: '/services/parking-remotes' },
+                  ].map(({ emoji, label, href }) => (
+                    <Link
+                      key={href}
+                      href={href}
+                      className="inline-flex shrink-0 items-center gap-1.5 rounded-full border border-white/15 bg-white/8 px-2.5 py-1 text-[11px] font-medium text-white/70 transition-colors hover:border-brand-gold/40 hover:text-white"
+                    >
+                      <span aria-hidden="true">{emoji}</span>
+                      {label}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+
               <h2 className="font-heading text-lg font-semibold text-white mb-5">
                 How the Service Works
               </h2>

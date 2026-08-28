@@ -2,6 +2,7 @@
 // Lock repair service — Booking Page
 // ─────────────────────────────────────────────────────────────────────────────
 import type { Metadata } from 'next'
+import Image from 'next/image'
 import { Phone, MessageCircle, Clock, Shield, Star } from 'lucide-react'
 
 import { BreadcrumbNav } from '@/components/sections/BreadcrumbNav'
@@ -89,9 +90,23 @@ export default function BookingPage() {
       {/* ── Hero ─────────────────────────────────────────────────────────────── */}
       <section
         aria-label="Booking page hero"
-        className="bg-hero-gradient pt-[72px]"
+        className="relative overflow-hidden bg-brand-navy pt-[72px]"
       >
-        <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8">
+        <div className="absolute inset-0 overflow-hidden" aria-hidden="true">
+          <Image
+            src="/images/services/transponder-chip-smart-key-programming-dubai.webp"
+            alt=""
+            fill
+            className="object-cover object-center opacity-45"
+            priority
+            quality={50}
+            sizes="100vw"
+          />
+          <div className="absolute inset-0 bg-gradient-to-br from-brand-navy/92 via-brand-navy/78 to-brand-navy/60" />
+          <div className="absolute inset-0 bg-gradient-to-t from-brand-navy/65 via-transparent to-transparent" />
+        </div>
+
+        <div className="relative mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8">
           <BreadcrumbNav items={breadcrumbs} light />
 
           <div className="mt-6 max-w-3xl">

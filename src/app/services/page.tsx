@@ -2,6 +2,7 @@
 // Lock repair service — Services Index Page (Categorised)
 // ─────────────────────────────────────────────────────────────────────────────
 import type { Metadata } from 'next'
+import Image from 'next/image'
 import { Phone, MessageCircle, AlertTriangle } from 'lucide-react'
 
 import { ServiceCard } from '@/components/sections/ServiceCard'
@@ -113,27 +114,63 @@ export default function ServicesPage() {
       {/* ── Page Header ─────────────────────────────────────────────────────── */}
       <section
         aria-label="Services page header"
-        className="bg-hero-gradient pt-[72px]"
+        className="relative overflow-hidden bg-brand-navy pt-[72px]"
       >
-        <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8">
+        <div className="absolute inset-0 overflow-hidden" aria-hidden="true">
+          <Image
+            src="/images/services/locksmith-tools-lock-cylinders-dubai.webp"
+            alt=""
+            fill
+            className="object-cover object-center opacity-45"
+            priority
+            quality={50}
+            sizes="100vw"
+          />
+          <div className="absolute inset-0 bg-gradient-to-br from-brand-navy/92 via-brand-navy/78 to-brand-navy/60" />
+          <div className="absolute inset-0 bg-gradient-to-t from-brand-navy/65 via-transparent to-transparent" />
+        </div>
+
+        <div className="relative mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8">
           <BreadcrumbNav items={breadcrumbs} light />
 
           <div className="mt-6 max-w-3xl">
             <h1 className="font-heading text-4xl font-extrabold leading-tight tracking-tight text-white sm:text-5xl">
-              All Car Key &amp; Locksmith{' '}
+              All Locksmith{' '}
               <span className="text-gold-gradient">Services in Dubai</span>
+              {' '}— Mobile & Fast
             </h1>
 
             {/* Direct Answer Opener */}
             <div className="mt-6 rounded-xl border-l-4 border-brand-gold bg-white/10 p-5 backdrop-blur-sm">
               <p className="text-base leading-relaxed text-white/90">
-                Lock repair service (D90, Al Bada&apos;a, Dubai) provides {services.length} locksmith and car key services
-                across Dubai — residential, commercial and automotive — all delivered by mobile technicians
-                who come directly to your location. Open daily 24/7. Call{' '}
+                Lock repair service provides {services.length}+ locksmith and car key services across Dubai —
+                residential, commercial and automotive — delivered by mobile technicians dispatched to your
+                location. Every service available in all 24 Dubai areas, 24/7. Call{' '}
                 <a href={PHONE_HREF} className="font-semibold text-brand-gold hover:underline">
                   +971 52 642 6161
                 </a>.
               </p>
+            </div>
+
+            {/* Quick coverage stats */}
+            <div className="mt-5 flex flex-wrap gap-3">
+              {[
+                { emoji: '🚗', stat: 'Mobile Dispatch', sub: 'We come to you' },
+                { emoji: '⚡', stat: '20–45 Min Response', sub: 'All Dubai areas' },
+                { emoji: '📍', stat: '24 Areas Covered', sub: 'Every part of Dubai' },
+                { emoji: '🕐', stat: 'Open 24/7', sub: 'Including holidays' },
+              ].map(({ emoji, stat, sub }) => (
+                <div
+                  key={stat}
+                  className="inline-flex items-center gap-2.5 rounded-xl border border-white/15 bg-white/8 px-3.5 py-2.5 backdrop-blur-sm"
+                >
+                  <span className="text-lg" aria-hidden="true">{emoji}</span>
+                  <div className="leading-none">
+                    <p className="text-xs font-bold text-white">{stat}</p>
+                    <p className="mt-0.5 text-[10px] text-white/50">{sub}</p>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </div>

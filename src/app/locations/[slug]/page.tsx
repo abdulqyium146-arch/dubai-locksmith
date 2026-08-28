@@ -21,6 +21,7 @@ import {
   ExternalLink,
 } from 'lucide-react'
 
+import Image from 'next/image'
 import { BreadcrumbNav } from '@/components/sections/BreadcrumbNav'
 import { FaqAccordion } from '@/components/sections/FaqAccordion'
 import { CtaSection } from '@/components/sections/CtaSection'
@@ -325,9 +326,24 @@ export default async function LocationPage({
       {/* ── 1. Hero ────────────────────────────────────────────────────────── */}
       <section
         aria-label={`${location.name} car key service hero`}
-        className="bg-hero-gradient pt-[72px]"
+        className="relative overflow-hidden bg-brand-navy pt-[72px]"
       >
-        <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6 sm:py-14 lg:px-8">
+        {/* Background image — <Image fill> so Googlebot indexes it, not CSS bg-image */}
+        <div className="absolute inset-0 overflow-hidden" aria-hidden="true">
+          <Image
+            src="/images/misc/satwa-area-retail-dubai.webp"
+            alt=""
+            fill
+            className="object-cover object-center opacity-45"
+            priority
+            quality={50}
+            sizes="100vw"
+          />
+          <div className="absolute inset-0 bg-gradient-to-br from-brand-navy/92 via-brand-navy/78 to-brand-navy/60" />
+          <div className="absolute inset-0 bg-gradient-to-t from-brand-navy/65 via-transparent to-transparent" />
+        </div>
+
+        <div className="relative mx-auto max-w-7xl px-4 py-10 sm:px-6 sm:py-14 lg:px-8">
           {/* Breadcrumb */}
           <BreadcrumbNav items={breadcrumbs} light />
 
@@ -386,6 +402,43 @@ export default async function LocationPage({
                 </p>
               </div>
 
+              {/* Services available — chips show full scope at a glance */}
+              <div className="mt-5">
+                <p className="mb-2.5 text-xs font-semibold uppercase tracking-wide text-white/50">
+                  All Locksmith Services in {location.name}
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  {[
+                    { emoji: '🔑', label: 'Car Key Cutting', href: '/services/car-key-duplication' },
+                    { emoji: '🚗', label: 'Key Programming', href: '/services/transponder-keys' },
+                    { emoji: '🚪', label: 'Door Lock Repair', href: '/services/lock-repair' },
+                    { emoji: '🔓', label: 'Lock Change', href: '/services/lock-change' },
+                    { emoji: '🧠', label: 'Smart Locks', href: '/services/smart-door-locks' },
+                    { emoji: '⚡', label: 'Emergency Unlock', href: '/services/emergency-car-unlock' },
+                    { emoji: '🏦', label: 'Safe Opening', href: '/services/safe-box-services' },
+                    { emoji: '🅿️', label: 'Parking Remote', href: '/services/parking-remotes' },
+                  ].map(({ emoji, label, href }) => (
+                    <Link
+                      key={href}
+                      href={href}
+                      className="inline-flex shrink-0 items-center gap-1.5 rounded-full border border-brand-gold/25 bg-brand-gold/10 px-2.5 py-1.5 text-xs font-medium text-white/80 transition-colors hover:border-brand-gold/50 hover:text-white"
+                    >
+                      <span aria-hidden="true">{emoji}</span>
+                      {label}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+
+              {/* Mobile dispatch call-out */}
+              <div className="mt-4 flex items-start gap-3 rounded-xl border border-white/15 bg-white/5 px-4 py-3 backdrop-blur-sm">
+                <Car className="h-5 w-5 shrink-0 text-brand-gold mt-0.5" aria-hidden="true" />
+                <p className="text-xs leading-relaxed text-white/70">
+                  <span className="font-semibold text-white">Mobile — we come to your address in {location.name}.</span>{' '}
+                  All services dispatched on-site. Price confirmed before technician departs.
+                </p>
+              </div>
+
               {/* CTA #1 — above fold */}
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
                 <Button
@@ -416,7 +469,7 @@ export default async function LocationPage({
               </div>
 
               <p className="mt-4 text-xs text-white/40">
-                Mobile service · Comes to your location · All {location.name} areas covered
+                32+ locksmith services · Mobile dispatch · 24/7 · No call-out fee
               </p>
             </div>
 

@@ -11,8 +11,10 @@ import {
   ArrowRight,
   Tag,
   ChevronDown,
+  Car,
 } from 'lucide-react'
 
+import Image from 'next/image'
 import { BreadcrumbNav } from '@/components/sections/BreadcrumbNav'
 import { FaqAccordion } from '@/components/sections/FaqAccordion'
 import { CtaSection } from '@/components/sections/CtaSection'
@@ -208,9 +210,24 @@ export default async function ProductPage({
       {/* ── Hero ────────────────────────────────────────────────────────────── */}
       <section
         aria-label={`${product.title} product hero`}
-        className="bg-hero-gradient pt-[72px]"
+        className="relative overflow-hidden bg-brand-navy pt-[72px]"
       >
-        <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6 sm:py-14 lg:px-8">
+        {/* Background image — <Image fill> so Googlebot indexes it, not CSS bg-image */}
+        <div className="absolute inset-0 overflow-hidden" aria-hidden="true">
+          <Image
+            src="/images/shop/padlock-collection-lock-shop-satwa-dubai.webp"
+            alt=""
+            fill
+            className="object-cover object-center opacity-45"
+            priority
+            quality={50}
+            sizes="100vw"
+          />
+          <div className="absolute inset-0 bg-gradient-to-br from-brand-navy/92 via-brand-navy/78 to-brand-navy/60" />
+          <div className="absolute inset-0 bg-gradient-to-t from-brand-navy/65 via-transparent to-transparent" />
+        </div>
+
+        <div className="relative mx-auto max-w-7xl px-4 py-10 sm:px-6 sm:py-14 lg:px-8">
           <BreadcrumbNav items={breadcrumbs} light />
 
           <div className="mt-6 grid gap-10 lg:grid-cols-2 lg:items-center">
@@ -270,8 +287,19 @@ export default async function ProductPage({
                 </Button>
               </div>
 
+              {/* Mobile supply & install indicator */}
+              <div className="mt-5 flex items-start gap-3 rounded-xl border border-brand-gold/25 bg-brand-gold/10 px-4 py-3">
+                <Car className="h-5 w-5 shrink-0 text-brand-gold mt-0.5" aria-hidden="true" />
+                <div>
+                  <p className="text-sm font-bold text-white">Mobile Supply &amp; Installation</p>
+                  <p className="mt-0.5 text-xs text-white/60">
+                    Technician brings the product and fits it at your location — home, office or car park across all Dubai areas.
+                  </p>
+                </div>
+              </div>
+
               <p className="mt-4 text-xs text-white/40">
-                Supply &amp; installation · All Dubai areas · Price confirmed before work starts
+                All Dubai areas · Price confirmed before technician departs · 24/7
               </p>
             </div>
 

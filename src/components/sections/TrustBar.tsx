@@ -1,7 +1,7 @@
 // ─────────────────────────────────────────────────────────────────────────────
 // Lock repair service — Trust Bar
 // ─────────────────────────────────────────────────────────────────────────────
-import { Clock, Star, Zap, MapPin, DollarSign } from 'lucide-react'
+import { Clock, Star, Zap, MapPin, DollarSign, Car } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import { GOOGLE_RATING } from '@/lib/constants'
 
@@ -14,24 +14,29 @@ interface TrustBarProps {
 export async function TrustBar({ dark = false, className }: TrustBarProps) {
   const TRUST_ITEMS = [
     {
+      icon: Car,
+      label: 'Mobile Service',
+      sub: 'We come to you',
+    },
+    {
       icon: Clock,
-      label: '24/7 Service',
-      sub: 'Always available',
+      label: '24/7 Available',
+      sub: 'Every day, all year',
+    },
+    {
+      icon: Zap,
+      label: '20–45 Min Response',
+      sub: 'All Dubai areas',
+    },
+    {
+      icon: MapPin,
+      label: '24 Areas Covered',
+      sub: 'All of Dubai, UAE',
     },
     {
       icon: Star,
       label: `${GOOGLE_RATING}★ Google Rated`,
       sub: 'Verified reviews',
-    },
-    {
-      icon: Zap,
-      label: '20-Min Response',
-      sub: 'Central Dubai',
-    },
-    {
-      icon: MapPin,
-      label: 'All Dubai Covered',
-      sub: '24+ areas served',
     },
     {
       icon: DollarSign,
