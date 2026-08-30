@@ -119,6 +119,9 @@ export const metadata: Metadata = {
   },
   verification: {
     google: 'MTOWRhySJi7QRv2vRvrdz58Tvfev6NJGN9ki4DEJEkg',
+    other: {
+      'p:domain_verify': '76dc70d847402d935731240d72f4a1f9',
+    },
   },
   other: {
     'geo.region': 'AE-DU',
