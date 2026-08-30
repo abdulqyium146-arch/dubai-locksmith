@@ -128,6 +128,7 @@ export const metadata: Metadata = {
     'geo.placename': "Al Bada'a, Dubai",
     'geo.position': '25.2334375;55.2776875',
     ICBM: '25.2334375, 55.2776875',
+    'trustpilot-one-time-domain-verification-id': '22c56b7f-4bcc-451f-8442-eb3e18eceb2b',
   },
 }
 
