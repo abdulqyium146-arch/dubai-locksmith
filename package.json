@@ -34,10 +34,25 @@
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
     "autoprefixer": "^10.4.19",
+    "critters": "^0.0.23",
     "eslint": "^8.57.0",
     "eslint-config-next": "14.2.5",
     "postcss": "^8.4.39",
     "tailwindcss": "^3.4.6",
     "typescript": "^5.5.3"
+  },
+  "browserslist": {
+    "production": [
+      "last 2 chrome versions",
+      "last 2 edge versions",
+      "last 2 firefox versions",
+      "last 2 safari versions",
+      "last 2 ios_saf versions"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }

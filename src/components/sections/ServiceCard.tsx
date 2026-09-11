@@ -79,9 +79,8 @@ export async function ServiceCard({ service, featured = false }: ServiceCardProp
           <Link
             href={href}
             className="group flex items-center gap-1.5 text-sm font-semibold text-brand-gold transition-colors hover:text-brand-gold-dark focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring rounded"
-            aria-label={`Learn more about ${service.title}`}
           >
-            Learn More
+            Learn More<span className="sr-only"> about {service.title}</span>
             <ArrowRight
               className="h-4 w-4 transition-transform group-hover:translate-x-1"
               aria-hidden="true"

@@ -131,6 +131,7 @@ export async function HeroSection({
               <div className="mt-6 flex flex-wrap items-center justify-center gap-x-3 gap-y-1 lg:justify-start">
                 <div
                   className="flex gap-0.5"
+                  role="img"
                   aria-label={`Rated ${GOOGLE_RATING} out of 5 stars on Google`}
                 >
                   {Array.from({ length: 5 }).map((_, i) => (
@@ -231,6 +232,7 @@ export async function HeroSection({
               {/* Floating badge: Google Rating (top-right) */}
               <div
                 className="absolute -top-4 -right-2 sm:-right-4 flex items-center gap-2.5 rounded-xl bg-brand-gold px-3.5 py-2.5 shadow-[0_8px_32px_rgba(201,168,76,0.45)]"
+                role="img"
                 aria-label={`${GOOGLE_RATING} star Google rating`}
               >
                 <span className="font-heading text-2xl font-extrabold leading-none text-brand-navy">
