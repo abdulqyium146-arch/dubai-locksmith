@@ -128,7 +128,7 @@ export async function Footer() {
             <p className="mt-4 text-sm leading-relaxed text-white/70">
               Key maker &amp; key shop at D90, Al Bada&apos;a, Dubai — the nearest locksmith to Al Satwa Road. Car key duplication, programming, emergency unlock and door lock repair across all 24+ Dubai areas. Available 24/7.
             </p>
-            <p className="mt-2 text-xs text-white/40 leading-relaxed">
+            <p className="mt-2 text-xs text-white/60 leading-relaxed">
               Key Maker Near Me · Key Shop Satwa · Car Key Service Dubai · 24/7 Mobile Locksmith
             </p>
 
@@ -136,7 +136,7 @@ export async function Footer() {
             <address className="mt-6 not-italic space-y-3 text-sm">
               <a
                 href={PHONE_HREF}
-                className="flex items-start gap-3 text-white/80 transition-colors hover:text-brand-gold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring rounded"
+                className="flex items-center gap-3 min-h-[44px] text-white/80 transition-colors hover:text-brand-gold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring rounded"
                 aria-label={`Call us: ${PHONE_DISPLAY}`}
               >
                 <Phone className="mt-0.5 h-4 w-4 shrink-0 text-brand-gold" aria-hidden="true" />
@@ -147,7 +147,7 @@ export async function Footer() {
                 href={WHATSAPP_HREF}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-start gap-3 text-white/80 transition-colors hover:text-brand-gold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring rounded"
+                className="flex items-center gap-3 min-h-[44px] text-white/80 transition-colors hover:text-brand-gold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring rounded"
                 aria-label="Message us on WhatsApp"
               >
                 {/* WhatsApp icon */}
@@ -164,7 +164,7 @@ export async function Footer() {
 
               <a
                 href={`mailto:${EMAIL}`}
-                className="flex items-start gap-3 text-white/80 transition-colors hover:text-brand-gold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring rounded"
+                className="flex items-center gap-3 min-h-[44px] text-white/80 transition-colors hover:text-brand-gold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring rounded"
               >
                 <Mail className="mt-0.5 h-4 w-4 shrink-0 text-brand-gold" aria-hidden="true" />
                 <span>{EMAIL}</span>
@@ -174,7 +174,7 @@ export async function Footer() {
                 href={GOOGLE_MAPS_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-start gap-3 text-white/80 transition-colors hover:text-brand-gold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring rounded"
+                className="flex items-center gap-3 min-h-[44px] text-white/80 transition-colors hover:text-brand-gold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring rounded"
               >
                 <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-brand-gold" aria-hidden="true" />
                 <span>{ADDRESS_FULL}</span>
@@ -217,7 +217,7 @@ export async function Footer() {
                 <li key={href}>
                   <Link
                     href={href}
-                    className="text-xs text-white/70 transition-colors hover:text-brand-gold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring rounded leading-snug block"
+                    className="text-xs text-white/70 transition-colors hover:text-brand-gold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring rounded leading-snug block py-1.5"
                   >
                     {label}
                   </Link>
@@ -244,7 +244,7 @@ export async function Footer() {
                 <li key={href}>
                   <Link
                     href={href}
-                    className="text-xs text-white/70 transition-colors hover:text-brand-gold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring rounded leading-snug block"
+                    className="text-xs text-white/70 transition-colors hover:text-brand-gold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring rounded leading-snug block py-1.5"
                   >
                     {label}
                   </Link>
@@ -288,7 +288,7 @@ export async function Footer() {
 
             {/* Partner Sites */}
             <div className="mt-8">
-              <h4 className="font-heading text-xs font-semibold uppercase tracking-widest text-white/40 mb-3">
+              <h4 className="font-heading text-xs font-semibold uppercase tracking-widest text-white/60 mb-3">
                 Partner Sites
               </h4>
               <a
@@ -359,9 +359,9 @@ export async function Footer() {
                 <span className="text-sm font-bold text-brand-gold">
                   {GOOGLE_RATING}
                 </span>
-                <span className="text-xs text-white/50">/ 5</span>
+                <span className="text-xs text-white/65">/ 5</span>
               </div>
-              <p className="text-xs text-white/50">
+              <p className="text-xs text-white/65">
                 Tap to read reviews on Google Maps
               </p>
             </a>
@@ -376,7 +376,7 @@ export async function Footer() {
             © {currentYear} {BUSINESS_NAME}. All rights reserved.
           </p>
           <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-1 sm:justify-end">
-            <p className="text-xs text-white/40">
+            <p className="text-xs text-white/60">
               Professional Locksmith · D90, Al Bada&apos;a, Dubai, UAE · {PHONE_DISPLAY}
             </p>
             <span className="hidden text-white/20 sm:inline">·</span>
@@ -384,7 +384,7 @@ export async function Footer() {
               href="https://carlocksmithdubai.com/"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1 text-xs text-white/35 transition-colors hover:text-brand-gold/70"
+              className="inline-flex items-center gap-1 text-xs text-white/60 transition-colors hover:text-brand-gold"
             >
               <ExternalLink className="h-3 w-3" aria-hidden="true" />
               Car Locksmith Dubai

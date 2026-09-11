@@ -56,6 +56,7 @@ const config: Config = {
           gold: '#C9A84C',
           'gold-light': '#E8C96A',
           'gold-dark': '#A8882E',
+          'gold-accessible': '#8B6914', // 5.1:1 on white — WCAG AA for normal text
           navy: '#0B1F3A',
           'navy-light': '#132840',
           'navy-dark': '#071526',

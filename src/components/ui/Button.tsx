@@ -29,15 +29,15 @@ const buttonVariants = cva(
         // Ghost — low-emphasis
         ghost:
           'bg-transparent text-foreground hover:bg-muted hover:text-foreground',
-        // Outline — bordered
+        // Outline — bordered; accessible dark gold on transparent, navy on gold hover
         outline:
-          'border border-brand-gold bg-transparent text-brand-gold hover:bg-brand-gold hover:text-brand-navy',
+          'border border-brand-gold bg-transparent text-brand-gold-accessible hover:bg-brand-gold hover:text-brand-navy',
         // Destructive
         destructive:
           'bg-destructive text-destructive-foreground hover:bg-destructive/90',
-        // WhatsApp green
+        // WhatsApp green — dark text for 9:1 contrast on #25D366
         whatsapp:
-          'bg-[#25D366] text-white hover:bg-[#1ebe5d] shadow-sm',
+          'bg-[#25D366] text-brand-navy hover:bg-[#1ebe5d] shadow-sm',
         // Link style
         link: 'text-brand-gold underline-offset-4 hover:underline p-0 h-auto',
       },

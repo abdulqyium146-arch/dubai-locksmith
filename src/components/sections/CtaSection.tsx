@@ -51,7 +51,7 @@ export async function CtaSection({
             'mb-4 inline-flex items-center gap-1.5 rounded-full border px-3 py-1 text-xs font-semibold',
             dark
               ? 'border-brand-gold/30 bg-brand-gold/15 text-brand-gold'
-              : 'border-brand-gold/20 bg-brand-gold/10 text-brand-gold',
+              : 'border-brand-gold/20 bg-brand-gold/10 text-brand-gold-accessible',
           )}
         >
           <span
@@ -130,7 +130,7 @@ export async function CtaSection({
         <p
           className={cn(
             'mt-6 text-sm',
-            dark ? 'text-white/40' : 'text-muted-foreground',
+            dark ? 'text-white/60' : 'text-muted-foreground',
           )}
         >
           No call-out fee · Upfront pricing · All Dubai areas covered

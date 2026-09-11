@@ -90,7 +90,7 @@ export function PricingTable({ rows, caption, className }: PricingTableProps) {
 
               {/* Price */}
               <td className="px-4 py-4 text-right sm:px-6">
-                <span className="font-bold text-brand-gold">{row.priceRange}</span>
+                <span className="font-bold text-brand-gold-accessible">{row.priceRange}</span>
               </td>
 
               {/* Turnaround — hidden on mobile */}
@@ -109,7 +109,7 @@ export function PricingTable({ rows, caption, className }: PricingTableProps) {
           no hidden fees.{' '}
           <a
             href={PHONE_HREF}
-            className="font-medium text-brand-gold hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring rounded"
+            className="font-medium text-brand-gold-accessible hover:text-brand-gold hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring rounded"
           >
             Call {PHONE_DISPLAY}
           </a>{' '}

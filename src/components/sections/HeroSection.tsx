@@ -34,7 +34,7 @@ const SERVICE_CHIPS = [
   { emoji: '🔓', label: 'Lock Change',        href: '/services/lock-change' },
   { emoji: '🧠', label: 'Smart Locks',        href: '/services/smart-door-locks' },
   { emoji: '⚡', label: 'Emergency Unlock',   href: '/services/emergency-car-unlock' },
-  { emoji: '🏦', label: 'Safe Opening',       href: '/services/safe-box-services' },
+  { emoji: '🏦', label: 'Safe Box',            href: '/services/safe-box-services' },
   { emoji: '🅿️', label: 'Parking Remote',    href: '/services/parking-remotes' },
 ]
 

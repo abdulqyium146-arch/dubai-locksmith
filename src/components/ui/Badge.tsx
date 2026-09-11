@@ -13,11 +13,11 @@ const badgeVariants = cva(
         default:
           'bg-muted text-muted-foreground',
         gold:
-          'bg-brand-gold/15 text-brand-gold border border-brand-gold/30',
+          'bg-brand-gold/15 text-brand-gold-accessible border border-brand-gold/30',
         navy:
           'bg-brand-navy text-white dark:bg-brand-navy-light',
         emergency:
-          'bg-red-500/15 text-red-600 border border-red-500/30 dark:text-red-400',
+          'bg-red-500/15 text-red-700 border border-red-500/30 dark:text-red-400',
         success:
           'bg-green-500/15 text-green-700 border border-green-500/30 dark:text-green-400',
         outline:

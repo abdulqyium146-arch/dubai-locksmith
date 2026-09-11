@@ -62,7 +62,7 @@ export async function ServiceCard({ service, featured = false }: ServiceCardProp
 
           {/* Meta row */}
           <div className="mt-4 flex flex-wrap items-center gap-3 text-xs text-muted-foreground">
-            <span className="flex items-center gap-1 font-medium text-brand-gold">
+            <span className="flex items-center gap-1 font-medium text-brand-gold-accessible">
               {formatPriceRange(service.pricing.min, service.pricing.max)}
             </span>
             <span aria-hidden="true" className="text-border">
@@ -78,7 +78,7 @@ export async function ServiceCard({ service, featured = false }: ServiceCardProp
         <CardFooter className="border-t border-border pt-4">
           <Link
             href={href}
-            className="group flex items-center gap-1.5 text-sm font-semibold text-brand-gold transition-colors hover:text-brand-gold-dark focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring rounded"
+            className="group flex items-center gap-1.5 text-sm font-semibold text-brand-gold-accessible transition-colors hover:text-brand-gold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring rounded"
           >
             Learn More<span className="sr-only"> about {service.title}</span>
             <ArrowRight

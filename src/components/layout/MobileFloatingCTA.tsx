@@ -72,7 +72,7 @@ export function MobileFloatingCTA() {
               rel="noopener noreferrer"
               className={[
                 'flex flex-1 flex-col items-center justify-center gap-0.5 py-3.5 px-2',
-                'bg-[#25D366] text-white font-semibold',
+                'bg-[#25D366] text-brand-navy font-semibold',
                 'transition-opacity active:opacity-90',
                 'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-inset',
               ].join(' ')}
