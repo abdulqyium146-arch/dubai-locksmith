@@ -1,0 +1,252 @@
+// ─────────────────────────────────────────────────────────────────────────────
+// Lock repair service — LocalBusiness + Organization Schema
+// Production-grade JSON-LD for maximum Google entity understanding
+// ─────────────────────────────────────────────────────────────────────────────
+import { JsonLd } from './JsonLd'
+import {
+  BUSINESS_NAME,
+  BUSINESS_TAGLINE,
+  PHONE_RAW,
+  EMAIL,
+  ADDRESS_STREET,
+  ADDRESS_AREA,
+  ADDRESS_CITY,
+  PLUS_CODE,
+  COORDINATES,
+  GOOGLE_RATING,
+  GOOGLE_REVIEW_COUNT,
+  GOOGLE_MAPS_URL,
+  SITE_URL,
+  SCHEMA_ORG,
+  SOCIAL_LINKS,
+  SERVICE_HOURS,
+} from '@/lib/constants'
+
+// All 12 services with pricing — gives Google a complete offer catalog
+const OFFER_CATALOG_ITEMS = [
+  { name: 'Key Duplication & Key Cutting', url: `${SITE_URL}/services/car-key-duplication`, minPrice: '50', maxPrice: '350' },
+  { name: 'Car Key Replacement', url: `${SITE_URL}/services/car-key-replacement`, minPrice: '300', maxPrice: '900' },
+  { name: 'Remote & Smart Key Programming', url: `${SITE_URL}/services/remote-smart-key-programming`, minPrice: '400', maxPrice: '900' },
+  { name: 'Transponder Key Programming', url: `${SITE_URL}/services/transponder-keys`, minPrice: '350', maxPrice: '700' },
+  { name: 'Emergency Car Unlock', url: `${SITE_URL}/services/emergency-car-unlock`, minPrice: '200', maxPrice: '500' },
+  { name: 'Lost & Broken Car Key Service', url: `${SITE_URL}/services/lost-broken-car-keys`, minPrice: '200', maxPrice: '700' },
+  { name: 'Flip Key Replacement', url: `${SITE_URL}/services/flip-keys`, minPrice: '250', maxPrice: '550' },
+  { name: 'Smart Door Lock Installation', url: `${SITE_URL}/services/smart-door-locks`, minPrice: '350', maxPrice: '1200' },
+  { name: 'Safe Box Opening & Service', url: `${SITE_URL}/services/safe-box-services`, minPrice: '200', maxPrice: '800' },
+  { name: 'Parking Remote Duplication', url: `${SITE_URL}/services/parking-remotes`, minPrice: '150', maxPrice: '450' },
+  { name: 'Car Battery Replacement', url: `${SITE_URL}/services/car-battery-replacement`, minPrice: '250', maxPrice: '600' },
+  { name: 'Rubber Stamp Making', url: `${SITE_URL}/services/rubber-stamps`, minPrice: '50', maxPrice: '200' },
+]
+
+// Dubai areas served — mirrors GMB service area targeting exactly (24+ areas)
+const DUBAI_AREAS = [
+  'Al Satwa', "Al Bada'a", 'Dubai',
+  'Downtown Dubai', 'Business Bay', 'DIFC', 'Dubai Marina',
+  'Jumeirah', 'Jumeirah Beach Residence', 'Jumeirah Lakes Towers',
+  'Jumeirah Village Circle', 'Jumeirah Village Triangle',
+  'Al Barsha', 'Al Barsha South', 'Dubai Hills Estate',
+  'Palm Jumeirah', 'Deira', 'Bur Dubai',
+  'Al Quoz', 'Motor City', 'Mirdif', 'Dubai Silicon Oasis',
+  'Al Barari', 'Al Khawaneej', 'Falconcity of Wonders',
+  'Discovery Gardens', 'International City', 'Jebel Ali Village',
+]
+
+export function LocalBusinessSchema() {
+  const localBusinessSchema = {
+    '@context': 'https://schema.org',
+    '@type': ['Locksmith', 'LocalBusiness'],
+    '@id': `${SITE_URL}/#lock-repair-service`,
+    name: BUSINESS_NAME,
+    alternateName: ['Lock repair service Dubai', 'Locksmith Dubai', 'Key Maker Dubai', 'Key Shop Satwa'],
+    description: `${BUSINESS_TAGLINE}. Open 24/7 across all Dubai areas. Car key duplication, programming, emergency unlock, door lock repair, smart locks. Rated ${GOOGLE_RATING}★ on Google.`,
+    url: SITE_URL,
+    telephone: PHONE_RAW,
+    email: EMAIL,
+    address: {
+      '@type': 'PostalAddress',
+      streetAddress: ADDRESS_STREET,
+      addressLocality: ADDRESS_AREA,
+      addressRegion: ADDRESS_CITY,
+      addressCountry: 'AE',
+    },
+    geo: {
+      '@type': 'GeoCoordinates',
+      latitude: COORDINATES.lat,
+      longitude: COORDINATES.lng,
+    },
+    additionalProperty: {
+      '@type': 'PropertyValue',
+      name: 'Google Plus Code',
+      value: PLUS_CODE,
+    },
+    hasMap: GOOGLE_MAPS_URL,
+    // 24/7 — represented as array of 7-day specs (Google's preferred format)
+    openingHoursSpecification: [
+      'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday',
+    ].map((day) => ({
+      '@type': 'OpeningHoursSpecification',
+      dayOfWeek: day,
+      opens: SERVICE_HOURS.opens,
+      closes: SERVICE_HOURS.closes,
+    })),
+    priceRange: SCHEMA_ORG.priceRange,
+    currenciesAccepted: SCHEMA_ORG.currenciesAccepted,
+    paymentAccepted: SCHEMA_ORG.paymentAccepted,
+    // Full Dubai service area — helps Google understand geographic relevance
+    areaServed: DUBAI_AREAS.map((area) => ({
+      '@type': 'City',
+      name: `${area}, Dubai, UAE`,
+    })),
+    // Physical location context
+    containedInPlace: {
+      '@type': 'Neighborhood',
+      name: "Al Bada'a, Dubai",
+      containedInPlace: {
+        '@type': 'City',
+        name: 'Dubai',
+        containedInPlace: {
+          '@type': 'Country',
+          name: 'United Arab Emirates',
+          sameAs: 'https://www.wikidata.org/wiki/Q878',
+        },
+      },
+    },
+    // Complete offer catalog — all 12 services with prices and URLs
+    hasOfferCatalog: {
+      '@type': 'OfferCatalog',
+      name: 'Dubai Locksmith Services',
+      itemListElement: OFFER_CATALOG_ITEMS.map((item, i) => ({
+        '@type': 'ListItem',
+        position: i + 1,
+        item: {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: item.name,
+            url: item.url,
+            provider: { '@id': `${SITE_URL}/#lock-repair-service` },
+          },
+          priceCurrency: 'AED',
+          priceSpecification: {
+            '@type': 'PriceSpecification',
+            minPrice: item.minPrice,
+            maxPrice: item.maxPrice,
+            priceCurrency: 'AED',
+          },
+          areaServed: { '@type': 'City', name: 'Dubai, UAE' },
+          availability: 'https://schema.org/InStock',
+          availabilityStarts: SERVICE_HOURS.opens,
+          availabilityEnds: SERVICE_HOURS.closes,
+        },
+      })),
+    },
+    // Google verifiable aggregate rating
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: GOOGLE_RATING,
+      bestRating: 5,
+      worstRating: 1,
+      reviewCount: GOOGLE_REVIEW_COUNT,
+      ratingCount: GOOGLE_REVIEW_COUNT,
+    },
+    // Social profiles and external references for entity disambiguation
+    sameAs: [
+      SOCIAL_LINKS.facebook,
+      SOCIAL_LINKS.instagram,
+      SOCIAL_LINKS.twitter,
+      GOOGLE_MAPS_URL,
+    ],
+    logo: {
+      '@type': 'ImageObject',
+      '@id': `${SITE_URL}/#logo`,
+      url: `${SITE_URL}/android-chrome-512x512.png`,
+      contentUrl: `${SITE_URL}/android-chrome-512x512.png`,
+      width: 512,
+      height: 512,
+      caption: `${BUSINESS_NAME} Logo`,
+    },
+    image: [
+      {
+        '@type': 'ImageObject',
+        '@id': `${SITE_URL}/#primary-image`,
+        url: `${SITE_URL}/images/shop/locksmith-shop-satwa-al-badaa-dubai.webp`,
+        contentUrl: `${SITE_URL}/images/shop/locksmith-shop-satwa-al-badaa-dubai.webp`,
+        caption: `${BUSINESS_NAME} — Key Maker & Key Shop in Al Bada'a, Satwa Dubai`,
+        name: 'Lock repair service Key Shop Dubai',
+      },
+      {
+        '@type': 'ImageObject',
+        url: `${SITE_URL}/images/shop/locksmith-shop-satwa-al-badaa-dubai.webp`,
+        caption: "Lock repair service shop exterior in Al Bada'a, Satwa — key shop nearest to Al Satwa Road",
+        name: 'Key Shop Satwa Al Bada\'a Dubai',
+        representativeOfPage: true,
+      },
+      {
+        '@type': 'ImageObject',
+        url: `${SITE_URL}/images/shop/padlock-collection-lock-shop-satwa-dubai.webp`,
+        caption: 'Padlock and lock collection at Lock repair service key shop, Satwa Dubai',
+        name: 'Padlock Collection Lock Shop Satwa Dubai',
+      },
+      {
+        '@type': 'ImageObject',
+        url: `${SITE_URL}/images/shop/key-duplication-display-for-sale-satwa-dubai.webp`,
+        caption: 'Key duplication display at Lock repair service — key duplication service from AED 50',
+        name: 'Key Duplication Service Display Satwa Dubai',
+      },
+      {
+        '@type': 'ImageObject',
+        url: `${SITE_URL}/images/shop/door-lock-handles-repair-shop-satwa-dubai.webp`,
+        caption: 'Door lock handles and hardware at Lock repair service, Satwa Dubai',
+        name: 'Door Lock Repair Shop Satwa Dubai',
+      },
+      {
+        '@type': 'ImageObject',
+        url: `${SITE_URL}/images/services/car-remote-key-blanks-locksmith-shop-dubai.webp`,
+        caption: 'Car remote key blanks at Lock repair service locksmith shop, Dubai',
+        name: 'Car Remote Key Blanks Dubai Locksmith',
+      },
+    ],
+    keywords: [
+      'locksmith Dubai', 'key maker Dubai', 'key duplication Dubai',
+      'car key replacement Dubai', 'emergency locksmith Dubai',
+      'smart key programming Dubai', 'door lock repair Dubai',
+      'نسخ مفاتيح دبي', 'لوكسميث دبي', 'مفتاح سيارة دبي',
+    ].join(', '),
+  }
+
+  // Separate Organization schema — helps Google understand the brand entity
+  const organizationSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    '@id': `${SITE_URL}/#organization`,
+    name: BUSINESS_NAME,
+    url: SITE_URL,
+    logo: { '@id': `${SITE_URL}/#logo` },
+    contactPoint: {
+      '@type': 'ContactPoint',
+      telephone: PHONE_RAW,
+      contactType: 'customer service',
+      areaServed: 'AE',
+      availableLanguage: ['English', 'Arabic'],
+      hoursAvailable: {
+        '@type': 'OpeningHoursSpecification',
+        dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
+        opens: SERVICE_HOURS.opens,
+        closes: SERVICE_HOURS.closes,
+      },
+    },
+    sameAs: [
+      SOCIAL_LINKS.facebook,
+      SOCIAL_LINKS.instagram,
+      SOCIAL_LINKS.twitter,
+      GOOGLE_MAPS_URL,
+    ],
+  }
+
+  return (
+    <>
+      <JsonLd data={localBusinessSchema} />
+      <JsonLd data={organizationSchema} />
+    </>
+  )
+}

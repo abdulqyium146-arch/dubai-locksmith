@@ -1,0 +1,188 @@
+import type { ReactNode } from 'react'
+import type { Metadata, Viewport } from 'next'
+import dynamic from 'next/dynamic'
+import { Inter, Poppins } from 'next/font/google'
+import './globals.css'
+
+import { Header } from '@/components/layout/Header'
+import { Footer } from '@/components/layout/Footer'
+import { LocalBusinessSchema } from '@/components/schema/LocalBusinessSchema'
+import {
+  BUSINESS_NAME,
+  BUSINESS_TAGLINE,
+  DEFAULT_META_DESCRIPTION,
+  DEFAULT_OG_IMAGE,
+  PHONE_DISPLAY,
+  SITE_URL,
+} from '@/lib/constants'
+
+// Skip SSR for this component — it uses useState/useEffect for a slide-in animation
+// and has no SEO value. Avoids React hydration mismatch (#418/#423).
+const MobileFloatingCTA = dynamic(
+  () => import('@/components/layout/MobileFloatingCTA').then((m) => m.MobileFloatingCTA),
+  { ssr: false },
+)
+
+// ── English Fonts ─────────────────────────────────────────────────────────────
+
+const inter = Inter({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-inter',
+})
+
+// Headings only — 600 (semibold), 700 (bold), 800 (extrabold used in H1s)
+const poppins = Poppins({
+  subsets: ['latin'],
+  weight: ['600', '700', '800'],
+  display: 'swap',
+  variable: '--font-poppins',
+})
+
+// ── Root Metadata ─────────────────────────────────────────────────────────────
+
+export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
+  title: {
+    default: `${BUSINESS_NAME} | ${BUSINESS_TAGLINE}`,
+    template: `%s | ${BUSINESS_NAME}`,
+  },
+  description: DEFAULT_META_DESCRIPTION,
+  // Ordered by GMB search volume: "key maker near me" (66), "key duplication service" (51), "locksmith" (20)
+  keywords: [
+    'key maker near me',
+    'key duplication service',
+    'locksmith',
+    'key shop near me',
+    'key shop Satwa',
+    'key shop Al Satwa',
+    'satwa key maker',
+    'satwa key shop',
+    'key cutting Dubai',
+    'car key maker near me',
+    'duplicate key near me',
+    'locksmith near me',
+    'locksmith Dubai',
+    'key maker Dubai',
+    'car door lock repair near me',
+    'key duplicate shop near me',
+    'key duplication Satwa',
+    'lock repair',
+    'smart lock Dubai',
+    'locksmith 24/7',
+    'نسخ المفاتيح',
+    'نسخ مفاتيح',
+    'اقفال ابواب',
+  ],
+  authors: [{ name: BUSINESS_NAME, url: SITE_URL }],
+  creator: BUSINESS_NAME,
+  publisher: BUSINESS_NAME,
+  formatDetection: {
+    telephone: false,
+    email: false,
+    address: false,
+  },
+  // Homepage canonical + hreflang (inner pages override via generateMetadata)
+  alternates: {
+    canonical: SITE_URL,
+    languages: {
+      'en': SITE_URL,
+      'x-default': SITE_URL,
+    },
+  },
+  openGraph: {
+    type: 'website',
+    siteName: BUSINESS_NAME,
+    images: [
+      {
+        url: DEFAULT_OG_IMAGE,
+        width: 1200,
+        height: 630,
+        alt: `${BUSINESS_NAME} — Dubai's Professional Locksmith in Al Bada'a`,
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    images: [DEFAULT_OG_IMAGE],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  verification: {
+    google: 'MTOWRhySJi7QRv2vRvrdz58Tvfev6NJGN9ki4DEJEkg',
+    other: {
+      'p:domain_verify': '76dc70d847402d935731240d72f4a1f9',
+    },
+  },
+  other: {
+    'geo.region': 'AE-DU',
+    'geo.placename': "Al Bada'a, Dubai",
+    'geo.position': '25.2334375;55.2776875',
+    ICBM: '25.2334375, 55.2776875',
+    'trustpilot-one-time-domain-verification-id': '22c56b7f-4bcc-451f-8442-eb3e18eceb2b',
+  },
+}
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 5,
+  themeColor: [
+    { media: '(prefers-color-scheme: light)', color: '#ffffff' },
+    { media: '(prefers-color-scheme: dark)', color: '#0B1F3A' },
+  ],
+}
+
+// ── Layout ────────────────────────────────────────────────────────────────────
+
+export default function RootLayout({ children }: { children: ReactNode }) {
+  return (
+    <html
+      lang="en"
+      dir="ltr"
+      className={`${inter.variable} ${poppins.variable}`}
+      style={{ backgroundColor: '#0B1F3A' }}
+      suppressHydrationWarning
+    >
+      <head>
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+        <link rel="manifest" href="/manifest.webmanifest" />
+        <meta name="telephone" content={PHONE_DISPLAY} />
+        {/* hreflang handled per-page via metadata.alternates — no static tags needed */}
+        {/* Sitemap discovery — supplementary to robots.txt, read by all crawlers */}
+        <link rel="sitemap" type="application/xml" href="/sitemap-index.xml" />
+      </head>
+      <body suppressHydrationWarning className="min-h-screen bg-background font-sans text-foreground">
+        <>
+          <a href="#main-content" className="skip-link">
+            Skip to main content
+          </a>
+
+          <LocalBusinessSchema />
+
+          <Header />
+
+          <main id="main-content" tabIndex={-1} className="outline-none">
+            {children}
+          </main>
+
+          <Footer />
+
+          <MobileFloatingCTA />
+        </>
+      </body>
+    </html>
+  )
+}
