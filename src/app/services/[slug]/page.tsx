@@ -322,7 +322,10 @@ export default async function ServicePage({
               </div>
 
               <p className="mt-4 text-xs text-white/40">
-                32+ locksmith services · 24 Dubai areas · No call-out fee · Open 24/7
+                <Link href="/" className="hover:text-white/60 transition-colors">32+ Dubai locksmith services</Link>
+                {' · '}
+                <Link href="/locations" className="hover:text-white/60 transition-colors">24 areas covered</Link>
+                {' · No call-out fee · Open 24/7'}
               </p>
             </div>
 
@@ -424,6 +427,13 @@ export default async function ServicePage({
               </p>
             ))}
           </div>
+          <p className="mt-6 pt-5 border-t border-border text-sm text-muted-foreground">
+            {service.title} is one of 32+ services offered by{' '}
+            <Link href="/" className="font-medium text-brand-gold-accessible hover:text-brand-gold transition-colors">
+              Lock repair service — Dubai&apos;s mobile locksmith
+            </Link>
+            . We dispatch to your location across all 24 Dubai areas, 24/7, with no call-out fee.
+          </p>
         </div>
       </section>
 
@@ -780,6 +790,17 @@ export default async function ServicePage({
               </Link>
             ))}
           </div>
+          <p className="mt-6 text-sm text-muted-foreground">
+            Need a different service? Visit our{' '}
+            <Link href="/" className="font-medium text-brand-gold-accessible hover:text-brand-gold transition-colors">
+              Dubai locksmith homepage
+            </Link>
+            {' '}for the complete service range, or{' '}
+            <Link href="/services" className="font-medium text-brand-gold-accessible hover:text-brand-gold transition-colors">
+              browse all 32+ services
+            </Link>
+            .
+          </p>
         </div>
       </section>
     </>

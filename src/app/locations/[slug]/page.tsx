@@ -469,7 +469,8 @@ export default async function LocationPage({
               </div>
 
               <p className="mt-4 text-xs text-white/40">
-                32+ locksmith services · Mobile dispatch · 24/7 · No call-out fee
+                <Link href="/" className="hover:text-white/60 transition-colors">32+ Dubai locksmith services</Link>
+                {' · Mobile dispatch · 24/7 · No call-out fee'}
               </p>
             </div>
 
@@ -686,6 +687,13 @@ export default async function LocationPage({
               <ServiceCard key={service.slug} service={service} />
             ))}
           </div>
+          <p className="mt-6 pt-5 border-t border-border text-sm text-muted-foreground">
+            All services above are available in {location.name} through our{' '}
+            <Link href="/" className="font-medium text-brand-gold-accessible hover:text-brand-gold transition-colors">
+              mobile locksmith service in Dubai
+            </Link>
+            {' '}— dispatched to your exact address, no call-out fee, price confirmed upfront.
+          </p>
         </div>
       </section>
 
@@ -1018,6 +1026,13 @@ export default async function LocationPage({
                 </Link>
               ))}
             </div>
+            <p className="mt-6 text-sm text-muted-foreground">
+              Select any area above for local response times and service details, or return to our{' '}
+              <Link href="/" className="font-medium text-brand-gold-accessible hover:text-brand-gold transition-colors">
+                Dubai locksmith service homepage
+              </Link>
+              {' '}for an overview of everything we offer.
+            </p>
           </div>
         </section>
       )}
