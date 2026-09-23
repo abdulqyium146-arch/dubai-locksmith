@@ -34,7 +34,7 @@ import { Button } from '@/components/ui/Button'
 import {
   getLocationBySlug,
   getAllLocationSlugs,
-  getNearbyLocations,
+  locations,
 } from '@/data/locations'
 import { services } from '@/data/services'
 import { parseWithLinks } from '@/lib/link-parser'
@@ -272,7 +272,7 @@ export default async function LocationPage({
 
   if (!location) notFound()
 
-  const nearbyLocations = getNearbyLocations(location.slug, 4)
+  const nearbyLocations = locations.filter((l) => l.slug !== location.slug)
   const responseTimeBadge = getResponseTimeBadge(location.responseTime)
 
   const breadcrumbs = [
@@ -955,23 +955,23 @@ export default async function LocationPage({
         </div>
       </section>
 
-      {/* ── 8. Nearby Locations ───────────────────────────────────────────── */}
+      {/* ── 8. All Dubai Service Areas ───────────────────────────────────── */}
       {nearbyLocations.length > 0 && (
         <section
           aria-labelledby="nearby-heading"
           className="py-14 sm:py-16 bg-background"
         >
-          <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="mb-6 flex items-end justify-between gap-4">
               <div>
                 <h2
                   id="nearby-heading"
                   className="font-heading text-2xl font-bold tracking-tight text-foreground sm:text-3xl"
                 >
-                  Nearby Service Areas
+                  All Dubai Service Areas
                 </h2>
                 <p className="mt-1 text-sm text-muted-foreground">
-                  Also looking for service in a neighbouring area?
+                  We cover all {nearbyLocations.length + 1} Dubai areas — fast mobile response wherever you are.
                 </p>
               </div>
               <Link
@@ -983,8 +983,8 @@ export default async function LocationPage({
               </Link>
             </div>
 
-            {/* Compact nearby location cards — not full LocationCards */}
-            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            {/* All location cards — links every area for crawl discovery */}
+            <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
               {nearbyLocations.map((nearby) => (
                 <Link
                   key={nearby.slug}

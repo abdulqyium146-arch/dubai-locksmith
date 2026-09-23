@@ -1099,16 +1099,21 @@ export default async function HomePage() {
             ))}
           </div>
 
-          {/* All service areas — crawlable text for Google local SEO */}
-          <div className="mt-10 rounded-xl border border-border bg-muted/30 px-5 py-4 text-center">
-            <p className="text-xs font-semibold text-muted-foreground uppercase tracking-widest mb-2">All 24+ Areas Covered</p>
-            <p className="text-sm text-muted-foreground leading-relaxed">
-              Al Satwa · Al Bada&apos;a · Downtown Dubai · Business Bay · DIFC · Dubai Marina · JBR ·
-              Jumeirah Lakes Towers · Jumeirah Village Circle · Jumeirah Village Triangle ·
-              Al Barsha · Al Barsha South · Dubai Hills Estate · Palm Jumeirah · Deira ·
-              Bur Dubai · Al Quoz · Motor City · Mirdif · Dubai Silicon Oasis ·
-              Discovery Gardens · International City · Jebel Ali Village · Al Khawaneej
-            </p>
+          {/* All service areas — linked for Googlebot crawl discovery */}
+          <div className="mt-10 rounded-xl border border-border bg-muted/30 px-5 py-5 text-center">
+            <p className="text-xs font-semibold text-muted-foreground uppercase tracking-widest mb-4">All {locations.length} Dubai Areas Covered</p>
+            <div className="flex flex-wrap justify-center gap-2">
+              {locations.map((loc) => (
+                <Link
+                  key={loc.slug}
+                  href={`/locations/${loc.slug}`}
+                  className="inline-flex items-center gap-1 rounded-full border border-border bg-background px-3 py-1.5 text-xs font-medium text-muted-foreground transition-colors hover:border-brand-gold/40 hover:bg-brand-gold/5 hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+                >
+                  <MapPin className="h-3 w-3 shrink-0 text-brand-gold" aria-hidden="true" />
+                  {loc.name}
+                </Link>
+              ))}
+            </div>
           </div>
 
           {/* View all locations */}
