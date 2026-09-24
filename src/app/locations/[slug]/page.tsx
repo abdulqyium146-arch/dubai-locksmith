@@ -47,11 +47,16 @@ import {
   DEFAULT_OG_IMAGE,
   PHONE_RAW,
   EMAIL,
+  ADDRESS_STREET,
+  ADDRESS_AREA,
+  ADDRESS_CITY,
+  PLUS_CODE,
   COORDINATES,
   GOOGLE_RATING,
   SCHEMA_ORG,
   SOCIAL_LINKS,
   GOOGLE_MAPS_URL,
+  SERVICE_HOURS,
 } from '@/lib/constants'
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -139,16 +144,16 @@ function LocationPageSchema({
   const localBusinessSchema = {
     '@context': 'https://schema.org',
     '@type': ['Locksmith', 'LocalBusiness'],
-    '@id': `${pageUrl}#localbusiness`,
+    '@id': `${SITE_URL}/#lock-repair-service`,
     name: BUSINESS_NAME,
     url: pageUrl,
     telephone: PHONE_RAW,
     email: EMAIL,
     address: {
       '@type': 'PostalAddress',
-      streetAddress: 'D90',
-      addressLocality: 'Al Bada\'a',
-      addressRegion: 'Dubai',
+      streetAddress: ADDRESS_STREET,
+      addressLocality: ADDRESS_AREA,
+      addressRegion: ADDRESS_CITY,
       addressCountry: 'AE',
     },
     geo: {
@@ -156,12 +161,20 @@ function LocationPageSchema({
       latitude: COORDINATES.lat,
       longitude: COORDINATES.lng,
     },
-    openingHoursSpecification: {
-      '@type': 'OpeningHoursSpecification',
-      dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
-      opens: '00:00',
-      closes: '23:59',
+    additionalProperty: {
+      '@type': 'PropertyValue',
+      name: 'Google Plus Code',
+      value: PLUS_CODE,
     },
+    hasMap: GOOGLE_MAPS_URL,
+    openingHoursSpecification: [
+      'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday',
+    ].map((day) => ({
+      '@type': 'OpeningHoursSpecification',
+      dayOfWeek: day,
+      opens: SERVICE_HOURS.opens,
+      closes: SERVICE_HOURS.closes,
+    })),
     priceRange: SCHEMA_ORG.priceRange,
     currenciesAccepted: SCHEMA_ORG.currenciesAccepted,
     paymentAccepted: SCHEMA_ORG.paymentAccepted,
@@ -170,18 +183,19 @@ function LocationPageSchema({
       ratingValue: GOOGLE_RATING,
       bestRating: 5,
       worstRating: 1,
-      reviewCount: 20,
+      reviewCount: GOOGLE_RATING,
+      ratingCount: GOOGLE_RATING,
     },
-    areaServed: {
-      '@type': 'Place',
-      name: locationName,
-      geo: {
-        '@type': 'GeoCoordinates',
-        latitude: lat,
-        longitude: lng,
-      },
-    },
-    sameAs: [SOCIAL_LINKS.facebook, SOCIAL_LINKS.instagram, GOOGLE_MAPS_URL],
+    areaServed: [
+      { '@type': 'Place', name: locationName, geo: { '@type': 'GeoCoordinates', latitude: lat, longitude: lng } },
+      { '@type': 'City', name: 'Dubai, UAE' },
+    ],
+    sameAs: [
+      SITE_URL,
+      GOOGLE_MAPS_URL,
+      SOCIAL_LINKS.facebook,
+      SOCIAL_LINKS.instagram,
+    ],
   }
 
   // FAQPage schema for location-specific FAQs

@@ -33,6 +33,8 @@ import {
   SITE_URL,
   DEFAULT_OG_IMAGE,
   GOOGLE_MAPS_URL,
+  PLUS_CODE,
+  COORDINATES,
 } from '@/lib/constants'
 
 // ── Metadata ──────────────────────────────────────────────────────────────────
@@ -71,7 +73,7 @@ const contactPageSchema = {
   description: `Contact page for ${BUSINESS_NAME} — Dubai's professional locksmith at D90, Al Bada'a. Open daily 24/7.`,
   mainEntity: {
     '@type': 'Locksmith',
-    '@id': `${SITE_URL}/#lock-repair-satwa`,
+    '@id': `${SITE_URL}/#lock-repair-service`,
     name: BUSINESS_NAME,
     telephone: PHONE_RAW,
     email: EMAIL,
@@ -84,16 +86,23 @@ const contactPageSchema = {
     },
     geo: {
       '@type': 'GeoCoordinates',
-      latitude: 25.2334375,
-      longitude: 55.2776875,
+      latitude: COORDINATES.lat,
+      longitude: COORDINATES.lng,
     },
-    openingHoursSpecification: {
-      '@type': 'OpeningHoursSpecification',
-      dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
-      opens: '00:00',
-      closes: '23:59',
+    additionalProperty: {
+      '@type': 'PropertyValue',
+      name: 'Google Plus Code',
+      value: PLUS_CODE,
     },
     hasMap: GOOGLE_MAPS_URL,
+    openingHoursSpecification: [
+      'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday',
+    ].map((day) => ({
+      '@type': 'OpeningHoursSpecification',
+      dayOfWeek: day,
+      opens: '00:00',
+      closes: '23:59',
+    })),
   },
 }
 

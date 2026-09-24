@@ -23,6 +23,7 @@ import {
   WHATSAPP_HREF,
   EMAIL,
   ADDRESS_FULL,
+  PLUS_CODE,
   GOOGLE_RATING,
   GOOGLE_MAPS_URL,
   SOCIAL_LINKS,
@@ -181,9 +182,15 @@ export async function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-3 min-h-[44px] text-white/80 transition-colors hover:text-brand-gold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring rounded"
+                aria-label={`Open in Google Maps — Plus Code ${PLUS_CODE}`}
               >
                 <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-brand-gold" aria-hidden="true" />
-                <span>{ADDRESS_FULL}</span>
+                <span>
+                  {ADDRESS_FULL}
+                  <span className="ml-2 inline-block rounded bg-white/10 px-1.5 py-0.5 text-[10px] font-mono font-semibold text-white/60 tracking-wide">
+                    {PLUS_CODE}
+                  </span>
+                </span>
               </a>
 
               <div className="flex items-start gap-3 text-white/80">
