@@ -11,7 +11,7 @@ export const locations: Location[] = [
     // GMB targets: "key shop al satwa", "satwa key shop", "satwa key maker", "key duplication satwa", "key shop near me"
     metaTitle: 'Key Shop Al Satwa | Satwa Key Maker & Key Duplication Service | Lock repair service',
     metaDescription:
-      "Key shop in Al Satwa Dubai. Nearest key maker to Satwa Road. Lock repair service: key duplication service from AED 50, car key cutting, door lock repair. 24/7 mobile. Call +971 52 642 6161.",
+      'Key shop in Al Satwa Dubai. Key duplication from AED 50, car key cutting, door lock repair. Nearest key maker to Satwa Road. Call +971 52 642 6161.',
     directAnswerOpener:
       "Lock repair service at D90, Al Bada'a is the closest key maker and locksmith to Al Satwa, Dubai — 2 minutes from Al Satwa Road. Key duplication from AED 50, car key cutting from AED 150, door lock repair from AED 100. Open 24/7. Call +971 52 642 6161.",
     description:
@@ -75,7 +75,7 @@ export const locations: Location[] = [
     name: "Al Bada'a",
     metaTitle: "Car Key Service Al Bada'a Dubai | Mobile Locksmith | Lock repair service",
     metaDescription:
-      "Lock repair service is based in Al Bada'a, Dubai. Fastest response times for key duplication, emergency unlock and smart key programming — +971 52 642 6161.",
+      "Lock repair service is based in Al Bada'a, Dubai. Fastest response: key duplication, emergency unlock and smart key programming. +971 52 642 6161.",
     directAnswerOpener:
       "Lock repair service is headquartered in Al Bada'a, Dubai — the fastest-response area for our mobile automotive locksmith service. Al Bada'a residents receive priority dispatch with technicians typically arriving in 10–15 minutes. We cover all residential streets and the Al Wasl Road corridor. available 24/7.",
     description:
@@ -497,7 +497,7 @@ export const locations: Location[] = [
     name: 'Dubai Hills Estate',
     metaTitle: 'Car Key Service Dubai Hills Estate | Lock repair service',
     metaDescription:
-      'Mobile automotive locksmith in Dubai Hills Estate. Key programming, emergency unlock and battery replacement for villas and apartments. 24/7 — +971 52 642 6161.',
+      'Mobile automotive locksmith in Dubai Hills Estate. Key programming, emergency unlock and battery replacement for villas and apartments — +971 52 642 6161.',
     directAnswerOpener:
       'Lock repair service reaches Dubai Hills Estate in 30–45 minutes from our Al Bada\'a base. We serve the villa communities, mid-rise apartments and Dubai Hills Mall precinct with car key duplication, smart key programming, emergency unlock and car battery replacement. Premium vehicle brands common in Dubai Hills are fully covered.',
     description:
@@ -632,7 +632,7 @@ export const locations: Location[] = [
     name: 'Mirdif',
     metaTitle: 'Locksmith Mirdif Dubai | Mobile Car Key Service | Lock repair service',
     metaDescription:
-      'Mobile car key locksmith in Mirdif, Dubai. Emergency unlock, key duplication and transponder keys for villa communities. Fast 24/7 service — +971 52 642 6161.',
+      'Mobile car key locksmith in Mirdif, Dubai. Emergency unlock, key duplication and transponder keys for villa communities. 24/7 service — +971 52 642 6161.',
     directAnswerOpener:
       'Lock repair service serves Mirdif — one of Dubai\'s most popular family villa communities — with 24/7 mobile automotive locksmith services. Response times from our Al Bada\'a base are 35–50 minutes. We regularly service Mirdif villa compounds, Uptown Mirdif mall and the Shorooq and Ghoroob sub-communities.',
     description:
@@ -679,7 +679,7 @@ export const locations: Location[] = [
     name: 'Dubai Silicon Oasis',
     metaTitle: 'Car Key Service Silicon Oasis Dubai | 24/7 Mobile | Lock repair service',
     metaDescription:
-      'Mobile car key locksmith in Dubai Silicon Oasis. Key duplication, smart key programming and emergency unlock for apartments and tech campus. 24/7 — +971 52 642 6161.',
+      'Mobile car key locksmith in Dubai Silicon Oasis. Key duplication, smart key programming, emergency unlock. Apartments and tech campus. 24/7 — +971 52 642 6161.',
     directAnswerOpener:
       'Lock repair service serves Dubai Silicon Oasis (DSO) with 24/7 mobile automotive locksmith services. Located 40–55 minutes from our Al Bada\'a base, DSO\'s tech campus and residential apartment clusters are regular service areas for us. We handle car key duplication, emergency unlock and battery replacement for all vehicles in the free zone and residential zones.',
     description:
@@ -726,7 +726,7 @@ export const locations: Location[] = [
     name: 'Jumeirah Village Triangle (JVT)',
     metaTitle: 'Car Key Service JVT Dubai | Jumeirah Village Triangle | Lock repair service',
     metaDescription:
-      'Mobile car key locksmith in JVT (Jumeirah Village Triangle) Dubai. Key duplication, emergency unlock, transponder programming. Fast 24/7 — +971 52 642 6161.',
+      'Mobile car key locksmith in JVT (Jumeirah Village Triangle) Dubai. Key duplication, emergency unlock, transponder programming. 24/7 — +971 52 642 6161.',
     directAnswerOpener:
       "Lock repair service serves Jumeirah Village Triangle (JVT) with mobile car key and locksmith services available 24/7. JVT's villa and townhouse communities are 30–45 minutes from our Al Bada'a base. We handle key duplication, emergency car unlock, and smart key programming for all vehicle types.",
     description:
@@ -849,7 +849,7 @@ export const locations: Location[] = [
     name: 'Al Quoz',
     metaTitle: 'Car Key Service Al Quoz Dubai | Mobile Locksmith | Lock repair service',
     metaDescription:
-      'Mobile car key locksmith in Al Quoz Dubai. Key duplication, emergency unlock and smart key programming for industrial and residential areas. 24/7 — +971 52 642 6161.',
+      'Mobile car key locksmith in Al Quoz Dubai. Key duplication, emergency unlock, smart key programming. Industrial and residential areas. 24/7 — +971 52 642 6161.',
     directAnswerOpener:
       "Lock repair service serves Al Quoz — Dubai's mixed industrial and residential district — with mobile automotive locksmith services available 24/7. Al Quoz is 20–30 minutes from our Al Bada'a base, one of the closer major districts. We cover all of Al Quoz 1, 2, 3 and 4, including the industrial zones and residential communities.",
     description:
@@ -932,7 +932,7 @@ export const locations: Location[] = [
     name: 'Jumeirah Lakes Towers (JLT)',
     metaTitle: 'Car Key Service JLT Dubai | Jumeirah Lakes Towers | Lock repair service',
     metaDescription:
-      'Mobile car key locksmith in JLT (Jumeirah Lakes Towers) Dubai. Emergency unlock, smart key programming and key duplication for tower residents. 24/7 — +971 52 642 6161.',
+      'Mobile car key locksmith in JLT Dubai. Emergency unlock, smart key programming and key duplication for tower residents. 24/7 — +971 52 642 6161.',
     directAnswerOpener:
       "Lock repair service serves Jumeirah Lakes Towers (JLT) with 24/7 mobile automotive locksmith services. JLT's cluster of residential and commercial towers around the manmade lakes is 25–40 minutes from our Al Bada'a base. We handle emergency car unlock, smart key programming and key duplication for all vehicles in the JLT clusters.",
     description:

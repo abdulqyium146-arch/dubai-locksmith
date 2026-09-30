@@ -620,7 +620,7 @@ export const products: Product[] = [
     category: 'commercial-door-hardware',
     metaTitle: 'Panic Bars Dubai | Emergency Exit Bar Install | Lock repair service',
     metaDescription:
-      'Panic bar and exit device supply and installation in Dubai. EN 1125 emergency egress hardware for fire exits and commercial doors. From AED 500 — +971 52 642 6161.',
+      'Panic bar and exit device supply and installation in Dubai. EN 1125 egress hardware for fire exits and commercial doors. From AED 500 — +971 52 642 6161.',
     description:
       'Panic bars (also called crash bars or push bars) are mandatory on emergency exit doors in UAE commercial buildings — allowing rapid single-motion exit by anyone without knowledge of lock operation. Lock repair service supplies and installs panic bar exit devices for commercial properties across Dubai, covering rim-mounted, mortise and vertical rod configurations for single and double doors.\n\nAll panic bars we supply meet EN 1125 emergency escape hardware requirements. We offer standard push-bar devices for single doors, co-ordinator and flush bolt kits for double doors, and alarm-equipped panic bars that trigger an audible alarm when the emergency exit is used outside normal hours. External access options (cylinder trim or lever outside) allow authorised re-entry from outside while maintaining panic release from inside.',
     features: [
