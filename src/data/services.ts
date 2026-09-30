@@ -12,7 +12,7 @@ export const services: Service[] = [
     // GMB targets: "key duplication service" (#2 at 51 searches), "key cutting dubai", "duplicate key near me"
     metaTitle: 'Key Duplication Service Dubai | Key Cutting Near Me | Lock repair service',
     metaDescription:
-      'Key duplication service in Dubai from AED 50. Duplicate key near me — Lock repair service cuts car keys, door keys, all types. Key cutting Dubai. Mobile 24/7. Call +971 52 642 6161.',
+      'Key duplication near me in Dubai from AED 50 — door keys, car keys, padlock keys, all types. Mobile 24/7 or visit our Al Bada\'a shop. Call +971 52 642 6161.',
     directAnswerOpener:
       'Lock repair service provides key duplication and key cutting in Dubai from AED 50 for door keys and AED 150–350 for car keys. Same-day service, all key types, 24/7 mobile across all Dubai areas. Call +971 52 642 6161.',
     description:
@@ -125,7 +125,7 @@ export const services: Service[] = [
     title: 'Car Key Replacement',
     metaTitle: 'Car Key Replacement Dubai | Lost Key Experts | Lock repair service',
     metaDescription:
-      'Lost your only car key in Dubai? We replace car keys on-site without needing the original. All makes covered. mobile service, available 24/7 — +971 52 642 6161.',
+      'Lost your car key in Dubai? We replace it on-site — no original needed. All makes covered. Mobile service 24/7. Call +971 52 642 6161.',
     directAnswerOpener:
       'Lock repair service replaces lost or damaged car keys in Dubai without requiring a dealership visit. Using OBD programming tools and VIN-based key cutting, we make a fully functional replacement key on-site. Pricing ranges from AED 300 to AED 900 depending on vehicle and key technology. Service available 24/7 across all Dubai areas.',
     description:
@@ -244,7 +244,7 @@ export const services: Service[] = [
     title: 'Remote & Smart Key Programming',
     metaTitle: 'Remote Key Programming Dubai | Smart Key Service | Lock repair service',
     metaDescription:
-      'Expert remote and smart key programming for all car brands in Dubai. Keyless entry, push-start, proximity keys. Mobile service 24/7 — +971 52 642 6161.',
+      'Remote & smart key programming in Dubai for all car brands — keyless entry, push-start, proximity keys. Mobile 24/7. Call +971 52 642 6161.',
     directAnswerOpener:
       'Remote and smart key programming in Dubai costs AED 400–900 depending on make and key technology. Lock repair service programs OEM and aftermarket remote keys, keyless entry fobs and proximity push-start keys using manufacturer-level OBD tools. Mobile service available 24/7; most programming jobs completed in 30–60 minutes at your location.',
     description:
@@ -359,7 +359,7 @@ export const services: Service[] = [
     title: 'Transponder Key Cutting & Programming',
     metaTitle: 'Transponder Key Programming Dubai | Chip Key Service | Lock repair service',
     metaDescription:
-      'Transponder key cutting and programming in Dubai for all car makes. On-site chip cloning and ECU pairing. Same-day mobile service — +971 52 642 6161.',
+      'Transponder key cutting and programming in Dubai — chip cloning, ECU pairing, all car makes. Same-day mobile service. Call +971 52 642 6161.',
     directAnswerOpener:
       'Transponder keys contain a micro-chip that must be programmed to your car\'s immobiliser before the engine will start. Lock repair service cuts and programs transponder keys for all major brands in Dubai for AED 350–700. Our mobile technicians use OBD-based programming tools and chip cloners — same-day on-site service, no dealership required.',
     description:
@@ -787,7 +787,7 @@ export const services: Service[] = [
     title: 'Smart Door Lock Installation & Repair',
     metaTitle: 'Smart Door Lock Installation Dubai | Lock repair service',
     metaDescription:
-      'Smart door lock supply, installation and repair in Dubai. Fingerprint, PIN, RFID and app-controlled locks for villas and apartments — +971 52 642 6161.',
+      'Smart door lock installation in Dubai — fingerprint, PIN, RFID and app-controlled locks for villas and apartments. From AED 350. Call +971 52 642 6161.',
     directAnswerOpener:
       'Lock repair service installs and repairs smart door locks in Dubai for residential and commercial properties. We supply and fit fingerprint, PIN code, RFID card and app-controlled smart locks compatible with Dubai\'s villa and apartment door types. Installation costs AED 350–1,200 including the lock unit. Service available 7 days a week.',
     description:
@@ -1072,7 +1072,7 @@ export const services: Service[] = [
     title: 'Rubber Stamp Making Dubai',
     metaTitle: 'Rubber Stamp Making Dubai | Same-Day Service | Lock repair service',
     metaDescription:
-      'Custom rubber stamps in Dubai — self-inking, pre-inked and traditional. Business, legal and personal stamps. Same-day delivery — +971 52 642 6161.',
+      'Custom rubber stamps in Dubai — self-inking, pre-inked, traditional. Business and personal. Same-day delivery. Call +971 52 642 6161.',
     directAnswerOpener:
       'Lock repair service produces custom rubber stamps in Dubai for businesses, professionals and personal use. We make self-inking, pre-inked and traditional rubber stamps with custom text, logos and Arabic text. Stamps are ready in 30–90 minutes. Pricing starts at AED 50 for a basic round stamp, up to AED 200 for large self-inking business stamps.',
     description:
@@ -1279,7 +1279,7 @@ export const services: Service[] = [
     title: 'Key Duplication',
     metaTitle: 'Key Duplication Dubai | Door & Home Keys | Lock repair service',
     metaDescription:
-      'Fast key duplication in Dubai for door keys, padlock keys, mailbox keys and more. From AED 50. Mobile service or visit our Al Bada\'a workshop — +971 52 642 6161.',
+      'Key duplication in Dubai — door keys, padlock keys, mailbox keys from AED 50. Mobile service or visit our Al Bada\'a shop. Call +971 52 642 6161.',
     directAnswerOpener:
       'Lock repair service provides key duplication in Dubai from AED 50 for standard door keys. We copy mortise keys, Yale keys, padlock keys, mailbox keys and more in 10–20 minutes. Mobile service available across all Dubai neighbourhoods or visit our D90 Al Bada\'a workshop. Call +971 52 642 6161.',
     description:
@@ -1327,7 +1327,7 @@ export const services: Service[] = [
     title: 'Safe Opening',
     metaTitle: 'Safe Opening Dubai | Forgotten Combination | Lock repair service',
     metaDescription:
-      'Professional safe opening in Dubai without drilling where possible. Forgotten combination, dead battery or jammed mechanism — Lock repair service opens it. Call +971 52 642 6161.',
+      'Safe opening in Dubai without drilling where possible — forgotten combination, dead battery or jammed mechanism. 24/7. Call +971 52 642 6161.',
     directAnswerOpener:
       'Lock repair service opens safes in Dubai with forgotten combinations, dead batteries or malfunctioning electronic keypads. We use non-destructive methods first — battery bypass, override codes and dial manipulation — before any drilling. Safe opening starts at AED 200. Available 24/7 for emergency situations. Call +971 52 642 6161.',
     description:
@@ -1377,7 +1377,7 @@ export const services: Service[] = [
     title: 'Access Card Duplication',
     metaTitle: 'Access Card Duplication Dubai | RFID Cards | Lock repair service',
     metaDescription:
-      'Access card and key fob duplication in Dubai for residential buildings. RFID, proximity and EM4100 card cloning — 15–30 minutes. Call +971 52 642 6161.',
+      'Access card and key fob duplication in Dubai — RFID, proximity, EM4100 card cloning in 15–30 min. Residential buildings. Call +971 52 642 6161.',
     directAnswerOpener:
       'Lock repair service duplicates access cards and key fobs for Dubai residential buildings, offices and parking barriers. We clone RFID (125 kHz EM4100), HID proximity and NFC access cards in 15–30 minutes from AED 50. Mobile service available — we come to your home or office. Call +971 52 642 6161.',
     description:
@@ -1668,7 +1668,7 @@ export const services: Service[] = [
     title: 'Home Lockout Service',
     metaTitle: 'Home Lockout Dubai | 24/7 Emergency Locksmith | Lock repair service',
     metaDescription:
-      'Locked out of your home in Dubai? We arrive in 20–40 minutes, open your door without damage and can change the lock on the spot. +971 52 642 6161.',
+      'Locked out at home in Dubai? We arrive in 20–40 min, open without damage, and can change the lock on the spot. 24/7. Call +971 52 642 6161.',
     directAnswerOpener:
       'Lock repair service resolves home lockout situations across Dubai 24/7, with average arrival in 20–40 minutes. We use non-destructive picking, impressioning or bypass methods to open residential doors without damage. Service costs AED 200–400. We can also change the lock in the same visit if needed. Call +971 52 642 6161.',
     description:
@@ -1766,7 +1766,7 @@ export const services: Service[] = [
     title: 'Master Key System',
     metaTitle: 'Master Key System Dubai | Commercial Lock Setup | Lock repair service',
     metaDescription:
-      'Master key system design and installation in Dubai for offices, hotels and commercial buildings. Custom lock hierarchy, keyed-alike options — +971 52 642 6161.',
+      'Master key system design and installation in Dubai for offices and commercial buildings. Custom lock hierarchy, keyed-alike. Call +971 52 642 6161.',
     directAnswerOpener:
       'Lock repair service designs and installs master key systems for commercial properties in Dubai from AED 500. A master key system allows one key to open multiple locks while individual keys open only their designated door — ideal for offices, hotels, warehouses and residential complexes. System design takes 1–3 days depending on property size. Call +971 52 642 6161.',
     description:
@@ -1815,7 +1815,7 @@ export const services: Service[] = [
     title: 'Cabinet Lock Services',
     metaTitle: 'Cabinet Lock Dubai | Filing Cabinet & Drawer Locks | Lock repair service',
     metaDescription:
-      'Cabinet lock replacement, opening and rekeying for office filing cabinets and drawers in Dubai. Same-day service from AED 100 — +971 52 642 6161.',
+      'Cabinet lock replacement, opening and rekeying in Dubai — office filing cabinets and drawers. Same-day from AED 100. Call +971 52 642 6161.',
     directAnswerOpener:
       'Lock repair service opens, replaces and rekeys office cabinet and drawer locks across Dubai from AED 100. We service filing cabinet locks (desk and lateral), pedestal drawers, roller shutters and display case locks. Same-day service for most cabinet types. Mobile service available for offices across Dubai. Call +971 52 642 6161.',
     description:
@@ -1864,7 +1864,7 @@ export const services: Service[] = [
     title: 'Access Control Installation',
     metaTitle: 'Access Control Installation Dubai | Lock repair service',
     metaDescription:
-      'Access control system installation in Dubai for offices and commercial buildings. RFID, biometric and PIN systems from AED 800 — +971 52 642 6161.',
+      'Access control installation in Dubai — RFID, biometric and PIN systems for offices and commercial buildings. From AED 800. Call +971 52 642 6161.',
     directAnswerOpener:
       'Lock repair service installs access control systems for commercial properties in Dubai from AED 800. We supply and install RFID card readers, biometric fingerprint readers, PIN keypads and video intercom systems. Systems are configured for your exact access zones and staff hierarchy. Installation takes 1–2 days depending on size. Call +971 52 642 6161.',
     description:
@@ -2121,7 +2121,7 @@ export const services: Service[] = [
     title: 'Ignition Repair & Replacement',
     metaTitle: 'Ignition Repair Dubai | Stuck or Broken Ignition | Lock repair service',
     metaDescription:
-      'Ignition repair and ignition replacement in Dubai. Stuck key, worn barrel, no-start condition — mobile service 24/7. From AED 300 — +971 52 642 6161.',
+      'Ignition repair in Dubai — stuck key, worn barrel, no-start condition. Mobile service 24/7. From AED 300. Call +971 52 642 6161.',
     directAnswerOpener:
       'Lock repair service repairs and replaces car ignition cylinders across Dubai from AED 300. We fix stuck ignition switches, extract broken keys from the ignition barrel, replace worn ignition cylinders and reprogram the immobiliser after replacement. Mobile 24/7 service for all major vehicle brands. Call +971 52 642 6161.',
     description:
@@ -2176,7 +2176,7 @@ export const services: Service[] = [
     title: 'Car Trunk Unlock',
     metaTitle: 'Car Trunk Unlock Dubai | Boot Open Without Key | Lock repair service',
     metaDescription:
-      'Car boot and trunk unlock service in Dubai. Keys locked inside or trunk won\'t open? Mobile service 24/7, average arrival 20–40 min — +971 52 642 6161.',
+      'Car trunk unlock in Dubai — keys locked inside or boot won\'t open. Mobile service 24/7, arrival 20–40 min. Call +971 52 642 6161.',
     directAnswerOpener:
       'Lock repair service opens car boots and trunks across Dubai for AED 150–350 without damaging the vehicle. Whether keys are locked inside, the boot latch has jammed or the remote release has failed, our mobile locksmiths provide non-destructive trunk unlock service 24/7. Average arrival in 20–40 minutes. Call +971 52 642 6161.',
     description:
@@ -2231,7 +2231,7 @@ export const services: Service[] = [
     title: 'Car Key Cover Replacement',
     metaTitle: 'Car Key Cover Replacement Dubai | Key Shell & Case | Lock repair service',
     metaDescription:
-      'Car key cover and shell replacement in Dubai. Cracked or broken key fob housing replaced without full reprogramming. From AED 100 — +971 52 642 6161.',
+      'Car key cover and shell replacement in Dubai — cracked fob housing replaced without reprogramming. From AED 100. Call +971 52 642 6161.',
     directAnswerOpener:
       'Lock repair service replaces broken or cracked car key covers and fob housings in Dubai from AED 100. We swap the shell while preserving your existing key blade, transponder chip and remote circuit board — no reprogramming needed in most cases. Wide range of covers for Toyota, Nissan, BMW, Mercedes, Hyundai and more. Call +971 52 642 6161.',
     description:
