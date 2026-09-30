@@ -13,7 +13,7 @@ import {
 
 export const metadata: Metadata = {
   title: { absolute: `Privacy Policy | ${BUSINESS_NAME} — Locksmith Dubai` },
-  description: `Privacy Policy for ${BUSINESS_NAME}, Dubai's professional key shop and locksmith. Learn how we collect, use, and protect your personal data. Based in Al Bada'a, Satwa, Dubai.`,
+  description: `Privacy Policy for ${BUSINESS_NAME} — Dubai locksmith. How we collect, use, and protect your personal data. Al Bada'a, Satwa, Dubai.`,
   alternates: {
     canonical: `${SITE_URL}/privacy`,
     languages: { en: `${SITE_URL}/privacy`, 'x-default': `${SITE_URL}/privacy` },

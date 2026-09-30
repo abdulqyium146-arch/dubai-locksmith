@@ -13,7 +13,7 @@ import {
 
 export const metadata: Metadata = {
   title: { absolute: `Terms of Service | ${BUSINESS_NAME} — Locksmith Dubai` },
-  description: `Terms of Service for ${BUSINESS_NAME}, professional key shop and locksmith in Al Bada'a, Satwa, Dubai. Key duplication, car key programming, lock repair — service terms and conditions.`,
+  description: `Terms of Service for ${BUSINESS_NAME} — Dubai locksmith. Car key duplication, programming, lock repair. Service terms for Al Bada'a, Satwa, Dubai.`,
   alternates: {
     canonical: `${SITE_URL}/terms`,
     languages: { en: `${SITE_URL}/terms`, 'x-default': `${SITE_URL}/terms` },
