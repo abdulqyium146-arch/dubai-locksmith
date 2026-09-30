@@ -32,6 +32,7 @@ import {
   PLUS_CODE,
 } from '@/lib/constants'
 import { formatPriceRange } from '@/lib/utils'
+import { parseWithLinks } from '@/lib/link-parser'
 import type { Review } from '@/types'
 
 // ── Metadata ──────────────────────────────────────────────────────────────────
@@ -1533,7 +1534,7 @@ export default async function HomePage() {
                       </summary>
                       <div className="px-5 pb-5">
                         <p className="direct-answer text-sm leading-relaxed text-muted-foreground">
-                          {a}
+                          {parseWithLinks(a)}
                         </p>
                       </div>
                     </details>
