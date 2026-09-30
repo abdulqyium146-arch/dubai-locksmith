@@ -352,6 +352,13 @@ export default async function ProductPage({
               </p>
             ))}
           </div>
+          <p className="mt-6 pt-5 border-t border-border text-sm text-muted-foreground">
+            {product.title} is supplied and installed by{' '}
+            <Link href="/" className="font-medium text-brand-gold-accessible hover:text-brand-gold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring rounded">
+              Lock repair service — Dubai&apos;s mobile locksmith &amp; key maker
+            </Link>
+            . Mobile fitting across all 24 Dubai areas, 24/7, no call-out fee.
+          </p>
         </div>
       </section>
 
