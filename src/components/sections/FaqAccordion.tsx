@@ -7,6 +7,7 @@ import { Plus, Minus } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import type { Faq } from '@/types'
 import { FaqSchema } from '@/components/schema/FaqSchema'
+import { parseWithLinks } from '@/lib/link-parser'
 
 interface FaqAccordionProps {
   faqs: Faq[]
@@ -96,7 +97,7 @@ export function FaqAccordion({
                 <div className="overflow-hidden">
                   <div className="border-t border-border bg-muted/20 px-5 pb-5 pt-4">
                     <p className="text-sm leading-relaxed text-muted-foreground">
-                      {faq.answer}
+                      {parseWithLinks(faq.answer)}
                     </p>
                   </div>
                 </div>
