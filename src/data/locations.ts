@@ -679,7 +679,7 @@ export const locations: Location[] = [
     name: 'Dubai Silicon Oasis',
     metaTitle: 'Car Key Service Silicon Oasis Dubai | 24/7 Mobile | Lock repair service',
     metaDescription:
-      'Mobile car key locksmith in Dubai Silicon Oasis. Key duplication, smart key programming, emergency unlock. Apartments and tech campus. 24/7 — +971 52 642 6161.',
+      'Mobile car key locksmith in Dubai Silicon Oasis. Key duplication, smart key programming, emergency unlock. 24/7. Call +971 52 642 6161.',
     directAnswerOpener:
       'Lock repair service serves Dubai Silicon Oasis (DSO) with 24/7 mobile automotive locksmith services. Located 40–55 minutes from our Al Bada\'a base, DSO\'s tech campus and residential apartment clusters are regular service areas for us. We handle car key duplication, emergency unlock and battery replacement for all vehicles in the free zone and residential zones.',
     description:
@@ -849,7 +849,7 @@ export const locations: Location[] = [
     name: 'Al Quoz',
     metaTitle: 'Car Key Service Al Quoz Dubai | Mobile Locksmith | Lock repair service',
     metaDescription:
-      'Mobile car key locksmith in Al Quoz Dubai. Key duplication, emergency unlock, smart key programming. Industrial and residential areas. 24/7 — +971 52 642 6161.',
+      'Mobile car key locksmith in Al Quoz Dubai. Key duplication, emergency unlock, smart key programming. Industrial area. 24/7 — +971 52 642 6161.',
     directAnswerOpener:
       "Lock repair service serves Al Quoz — Dubai's mixed industrial and residential district — with mobile automotive locksmith services available 24/7. Al Quoz is 20–30 minutes from our Al Bada'a base, one of the closer major districts. We cover all of Al Quoz 1, 2, 3 and 4, including the industrial zones and residential communities.",
     description:

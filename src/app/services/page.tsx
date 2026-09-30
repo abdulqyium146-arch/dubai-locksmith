@@ -33,7 +33,7 @@ import type { Service } from '@/types'
 export const metadata: Metadata = {
   title: { absolute: 'Locksmith Services Dubai — 32+ Car, Home & Commercial | Lock repair service' },
   description:
-    '32+ locksmith services in Dubai — car key cutting, lock repair, emergency unlock, smart locks & access control. Mobile dispatch 24/7. Call +971 52 642 6161.',
+    '32+ locksmith services in Dubai — car key cutting, lock repair, emergency unlock, smart locks, access control. Mobile dispatch 24/7. Call +971 52 642 6161.',
   alternates: {
     canonical: `${SITE_URL}/services`,
   },
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     siteName: BUSINESS_NAME,
     title: 'Locksmith Services Dubai — 32+ Car, Home & Commercial | Lock repair service',
     description:
-      '32+ locksmith services in Dubai — car key cutting, lock repair, emergency unlock, smart locks & access control. Mobile dispatch 24/7. Call +971 52 642 6161.',
+      '32+ locksmith services in Dubai — car key cutting, lock repair, emergency unlock, smart locks, access control. Mobile dispatch 24/7. Call +971 52 642 6161.',
     images: [{ url: DEFAULT_OG_IMAGE, width: 1200, height: 630, alt: `${BUSINESS_NAME} — 32+ Services in Dubai` }],
   },
   twitter: {

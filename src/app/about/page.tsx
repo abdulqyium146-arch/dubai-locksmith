@@ -42,7 +42,7 @@ import {
 export const metadata: Metadata = {
   title: { absolute: `About Lock repair service | Professional Locksmith in Dubai` },
   description:
-    `Learn about Lock repair service — Dubai's professional locksmith based at D90, Al Bada'a. We provide lock repair, car key duplication, smart key programming and emergency locksmith services across all Dubai areas. Rated 4.7★ on Google.`,
+    `Key maker and locksmith near Satwa, Dubai. Car key duplication, lock repair, smart key programming, 24/7 emergency. Rated 4.7★. Call +971 52 642 6161.`,
   alternates: {
     canonical: `${SITE_URL}/about`,
   },

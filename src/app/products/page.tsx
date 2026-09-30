@@ -34,7 +34,7 @@ import { formatPriceRange } from '@/lib/utils'
 export const metadata: Metadata = {
   title: { absolute: 'Security Products Dubai | Locks, Safes & Hardware | Lock repair service' },
   description:
-    'Locks, smart locks & safes supplied and installed in Dubai. Deadbolts, fingerprint locks, commercial hardware. Same-day installation. Call +971 52 642 6161.',
+    'Locks, smart locks, safes supplied and installed in Dubai. Deadbolts, fingerprint locks, commercial hardware. Same-day installation. Call +971 52 642 6161.',
   alternates: {
     canonical: `${SITE_URL}/products`,
   },
