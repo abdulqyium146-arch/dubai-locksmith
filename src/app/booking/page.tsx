@@ -60,7 +60,7 @@ const bookingPageSchema = {
   url: `${SITE_URL}/booking`,
   provider: {
     '@type': 'Locksmith',
-    '@id': `${SITE_URL}/#lock-repair-satwa`,
+    '@id': `${SITE_URL}/#lock-repair-service`,
     name: BUSINESS_NAME,
   },
   potentialAction: {

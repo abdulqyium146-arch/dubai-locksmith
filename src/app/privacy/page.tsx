@@ -48,7 +48,7 @@ const webPageSchema = {
   description: `Privacy policy for ${BUSINESS_NAME} — locksmith and key shop in Al Bada'a, Satwa, Dubai.`,
   inLanguage: 'en',
   isPartOf: { '@id': `${SITE_URL}/#website` },
-  about: { '@id': `${SITE_URL}/#lock-repair-satwa` },
+  about: { '@id': `${SITE_URL}/#lock-repair-service` },
   breadcrumb: {
     '@type': 'BreadcrumbList',
     itemListElement: breadcrumbs.map((b, i) => ({

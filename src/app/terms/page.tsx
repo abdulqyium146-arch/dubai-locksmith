@@ -48,7 +48,7 @@ const webPageSchema = {
   description: `Terms and conditions for locksmith and key shop services by ${BUSINESS_NAME}, Al Bada'a, Satwa, Dubai.`,
   inLanguage: 'en',
   isPartOf: { '@id': `${SITE_URL}/#website` },
-  about: { '@id': `${SITE_URL}/#lock-repair-satwa` },
+  about: { '@id': `${SITE_URL}/#lock-repair-service` },
   breadcrumb: {
     '@type': 'BreadcrumbList',
     itemListElement: breadcrumbs.map((b, i) => ({
