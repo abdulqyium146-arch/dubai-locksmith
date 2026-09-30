@@ -60,6 +60,22 @@ export const PROSE_LINK_DEFS: LinkDef[] = [
     terms: ['car trunk unlock service', 'car trunk unlock'],
     href: '/services/car-trunk-unlock',
   },
+  {
+    terms: ['lost & broken car key service', 'lost broken car key', 'lost car key service', 'lost all car keys', 'broken car key'],
+    href: '/services/lost-broken-car-keys',
+  },
+  {
+    terms: ['car key maker Dubai', 'car key maker', 'car key shop'],
+    href: '/services/car-key-maker',
+  },
+  {
+    terms: ['automotive lock repair service', 'automotive lock repair', 'car lock repair'],
+    href: '/services/automotive-lock-repair',
+  },
+  {
+    terms: ['car key cover replacement', 'key cover replacement', 'key fob cover replacement'],
+    href: '/services/car-key-cover-replacement',
+  },
   // ── Services: Door / Lock ─────────────────────────────────────────────────
   {
     terms: ['smart door lock installation', 'smart lock installation service', 'digital lock installation'],
@@ -80,6 +96,10 @@ export const PROSE_LINK_DEFS: LinkDef[] = [
   {
     terms: ['home lockout service', 'apartment lockout service'],
     href: '/services/home-lockout',
+  },
+  {
+    terms: ['sliding patio door lock installation', 'sliding door lock service', 'patio door lock', 'sliding door lock'],
+    href: '/services/sliding-patio-door-lock',
   },
   {
     terms: ['master key system installation', 'master key system'],
@@ -165,6 +185,11 @@ export const PROSE_LINK_DEFS: LinkDef[] = [
   {
     terms: ['cam lock supply', 'cam lock installation'],
     href: '/products/cam-locks',
+  },
+  // ── Key service pages ─────────────────────────────────────────────────────
+  {
+    terms: ['key maker Dubai', 'key shop Dubai', 'key maker near me', 'key shop near me', 'key maker'],
+    href: '/services/key-maker',
   },
   // ── Key pages ─────────────────────────────────────────────────────────────
   {
