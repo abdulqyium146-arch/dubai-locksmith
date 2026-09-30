@@ -22,9 +22,9 @@ import {
 // ── Metadata ──────────────────────────────────────────────────────────────────
 
 export const metadata: Metadata = {
-  title: { absolute: 'Car Brands We Service in Dubai | Key Replacement & Programming | Lock repair service' },
+  title: { absolute: 'Car Key Programming Dubai | 50+ Brands | Lock repair service' },
   description:
-    'Lock repair service covers all major car brands in Dubai — Toyota, Nissan, BMW, Mercedes, Hyundai, Kia and more. Mobile car key replacement and programming, open 24/7. Call +971 52 642 6161.',
+    'Car key cutting & programming for 50+ brands in Dubai — Toyota, BMW, Nissan, Mercedes, Land Rover, Hyundai. Mobile on-site service. 24/7. Call +971 52 642 6161.',
   alternates: {
     canonical: `${SITE_URL}/car-brands`,
   },
@@ -33,15 +33,15 @@ export const metadata: Metadata = {
     locale: 'en_AE',
     url: `${SITE_URL}/car-brands`,
     siteName: BUSINESS_NAME,
-    title: 'Car Brands We Service in Dubai | Key Replacement & Programming',
+    title: 'Car Key Programming Dubai — 50+ Brands | Lock repair service',
     description:
-      'Mobile car key replacement and programming for all major brands in Dubai — Toyota, Nissan, BMW, Mercedes, Hyundai, Kia, Land Rover and more. Open 24/7.',
-    images: [{ url: DEFAULT_OG_IMAGE, width: 1200, height: 630, alt: `${BUSINESS_NAME} — Car Brands Dubai` }],
+      'Car key cutting & programming for 50+ brands in Dubai — Toyota, BMW, Nissan, Mercedes, Land Rover, Hyundai. Mobile on-site. 24/7.',
+    images: [{ url: DEFAULT_OG_IMAGE, width: 1200, height: 630, alt: `${BUSINESS_NAME} — Car Key Programming for 50+ Brands, Dubai` }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Car Brands We Service in Dubai | Lock repair service',
-    description: 'Mobile car key replacement and programming for all major brands. Open 24/7.',
+    title: 'Car Key Programming Dubai — 50+ Brands | Lock repair service',
+    description: 'Car key cutting & programming for 50+ brands in Dubai. Toyota, BMW, Nissan, Mercedes and more. Mobile 24/7.',
     images: [DEFAULT_OG_IMAGE],
   },
 }
@@ -198,6 +198,50 @@ export default function CarBrandsPage() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* ── Documents needed — Dubai-specific trust signal ───────────────────── */}
+      <section aria-labelledby="docs-heading" className="py-12 bg-background border-y border-border">
+        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+          <h2 id="docs-heading" className="font-heading text-xl font-bold text-foreground mb-3">
+            What to Have Ready When You Call
+          </h2>
+          <p className="text-sm text-muted-foreground mb-4">
+            For car key replacement in Dubai, our technician will ask for proof of ownership before beginning work — standard industry practice to protect you as the vehicle owner.
+          </p>
+          <div className="grid gap-3 sm:grid-cols-2">
+            {[
+              { item: 'Vehicle registration (Mulkiya)', detail: 'Required for all car key replacements. Shows you are the registered owner.' },
+              { item: 'Emirates ID or passport', detail: 'Photo ID of the registered owner or authorised driver.' },
+              { item: 'Vehicle make, model and year', detail: 'Tell us when you call so we can bring the correct key blank.' },
+              { item: 'Company car: trade licence + letter', detail: 'For company-registered vehicles, an authorisation letter from the fleet manager.' },
+            ].map(({ item, detail }) => (
+              <div key={item} className="flex gap-3 text-sm">
+                <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-brand-gold" aria-hidden="true" />
+                <div>
+                  <p className="font-semibold text-foreground">{item}</p>
+                  <p className="text-muted-foreground text-xs mt-0.5">{detail}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+          <p className="mt-5 text-sm text-muted-foreground">
+            Need a car key or lock service?{' '}
+            <Link
+              href="/services"
+              className="font-semibold text-brand-gold hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring rounded"
+            >
+              Browse all automotive services
+            </Link>
+            {' '}or return to our{' '}
+            <Link
+              href="/"
+              className="font-semibold text-brand-gold hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring rounded"
+            >
+              Dubai locksmith homepage
+            </Link>.
+          </p>
         </div>
       </section>
 

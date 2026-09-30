@@ -34,7 +34,7 @@ import { formatPriceRange } from '@/lib/utils'
 export const metadata: Metadata = {
   title: { absolute: 'Security Products Dubai | Locks, Safes & Hardware | Lock repair service' },
   description:
-    'Browse our full range of security products in Dubai: deadbolts, mortise locks, high security locks, smart door locks, fingerprint locks, keypad locks, safes and commercial door hardware. Supply and installation by Lock repair service.',
+    'Locks, smart locks & safes supplied and installed in Dubai. Deadbolts, fingerprint locks, commercial hardware. Same-day installation. Call +971 52 642 6161.',
   alternates: {
     canonical: `${SITE_URL}/products`,
   },
@@ -43,10 +43,10 @@ export const metadata: Metadata = {
     locale: 'en_AE',
     url: `${SITE_URL}/products`,
     siteName: BUSINESS_NAME,
-    title: 'Locksmith Products Dubai — Locks, Safes & Security Hardware | Lock repair service',
+    title: 'Security Products Dubai — Locks, Safes & Hardware | Lock repair service',
     description:
-      'Complete range of locks, electronic locks, safes and commercial door hardware supplied and installed in Dubai by Lock repair service.',
-    images: [{ url: DEFAULT_OG_IMAGE, width: 1200, height: 630, alt: `${BUSINESS_NAME} Products` }],
+      'Locks, smart locks & safes supplied and installed in Dubai. Deadbolts, fingerprint locks, commercial hardware. Same-day installation.',
+    images: [{ url: DEFAULT_OG_IMAGE, width: 1200, height: 630, alt: `${BUSINESS_NAME} — Security Products Supply & Installation, Dubai` }],
   },
 }
 
@@ -72,7 +72,7 @@ const CATEGORIES: CategoryBlock[] = [
     key: 'locks',
     label: PRODUCT_CATEGORY_LABELS['locks'],
     description:
-      'Deadbolts, mortise locks, high-security cylinders and specialist locks for every door type in Dubai homes and offices.',
+      'Deadbolts, mortise locks and high-security cylinders for Dubai homes, apartments and offices. Compatible with standard UAE door types — metal, wooden and aluminium. Supply and fit from AED 150.',
     icon: '🔒',
     products: LOCK_PRODUCTS,
   },
@@ -80,7 +80,7 @@ const CATEGORIES: CategoryBlock[] = [
     key: 'electronic-locks',
     label: PRODUCT_CATEGORY_LABELS['electronic-locks'],
     description:
-      'Smart door locks, fingerprint biometric locks, keyless entry systems and keypad locks for modern Dubai residences.',
+      'Smart door locks with fingerprint, keypad, RFID card and app control — for Dubai apartments, villas and offices. Installation from AED 350 including the lock unit. Same-day setup available.',
     icon: '📱',
     products: ELECTRONIC_LOCK_PRODUCTS,
   },
@@ -88,7 +88,7 @@ const CATEGORIES: CategoryBlock[] = [
     key: 'safes',
     label: PRODUCT_CATEGORY_LABELS['safes'],
     description:
-      'Depository safes, gun safes, fireproof safes, floor safes and hotel safes supplied and installed across Dubai.',
+      'Fireproof safes, depository safes, gun safes and hotel safes — supplied and anchored to floor or wall by our technicians across Dubai. Safe opening and combination reset also available from AED 200.',
     icon: '🔓',
     products: SAFE_PRODUCTS,
   },
@@ -96,7 +96,7 @@ const CATEGORIES: CategoryBlock[] = [
     key: 'commercial-door-hardware',
     label: PRODUCT_CATEGORY_LABELS['commercial-door-hardware'],
     description:
-      'Commercial locks, magnetic locks, electric strikes, panic bars, door closers and door operators for Dubai businesses.',
+      'Magnetic locks, electric strikes, panic bars, door closers and commercial-grade cylinders for Dubai offices, retail units and warehouses. Installed and tested on-site — no separate contractor needed.',
     icon: '🏢',
     products: COMMERCIAL_HARDWARE_PRODUCTS,
   },
@@ -257,6 +257,29 @@ export default function ProductsPage() {
           </div>
         </section>
       ))}
+
+      {/* ── Contextual back-link to homepage and services ────────────────────── */}
+      <section className="py-8 bg-muted/30 border-y border-border">
+        <div className="mx-auto max-w-4xl px-4 sm:px-6 text-center text-sm text-muted-foreground">
+          <p>
+            All products can be installed by our mobile technicians — see{' '}
+            <Link
+              href="/services"
+              className="font-semibold text-brand-gold hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring rounded"
+            >
+              installation services
+            </Link>
+            {' '}or visit our{' '}
+            <Link
+              href="/"
+              className="font-semibold text-brand-gold hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring rounded"
+            >
+              Dubai locksmith homepage
+            </Link>
+            {' '}for the full service overview.
+          </p>
+        </div>
+      </section>
 
       {/* ── CTA ───────────────────────────────────────────────────────────────── */}
       <CtaSection
