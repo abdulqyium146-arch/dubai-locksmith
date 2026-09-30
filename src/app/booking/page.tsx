@@ -25,7 +25,7 @@ import {
 export const metadata: Metadata = {
   title: { absolute: 'Book a Locksmith in Dubai | Lock repair service' },
   description:
-    'Book a locksmith or car key service in Dubai online. Lock repair service — mobile service across all Dubai areas. Same-day response, upfront pricing. Call +971 52 642 6161.',
+    'Book a locksmith or car key service in Dubai. Lock repair service — mobile dispatch, upfront pricing, same-day. Call +971 52 642 6161.',
   alternates: {
     canonical: `${SITE_URL}/booking`,
   },
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     siteName: BUSINESS_NAME,
     title: 'Book a Locksmith in Dubai | Lock repair service',
     description:
-      'Book a locksmith or car key service in Dubai online. Lock repair service — mobile service across all Dubai areas. Same-day response, upfront pricing. Call +971 52 642 6161.',
+      'Book a locksmith or car key service in Dubai. Lock repair service — mobile dispatch, upfront pricing, same-day. Call +971 52 642 6161.',
     images: [{ url: DEFAULT_OG_IMAGE, width: 1200, height: 630, alt: `Book ${BUSINESS_NAME}` }],
   },
   twitter: {

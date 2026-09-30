@@ -16,7 +16,7 @@ import {
 
 export const metadata: Metadata = {
   title: { absolute: `Locksmith FAQs Dubai | ${BUSINESS_NAME} — All Questions Answered` },
-  description: `Every locksmith question answered for Dubai. Prices, response times, car key programming, door lock repair, smart locks, safe opening, emergency lockout — Lock repair service, Al Bada'a, Satwa.`,
+  description: `Locksmith FAQs Dubai — prices, response times, car key programming, door locks, smart locks, safe opening, emergency lockout. Lock repair service, Satwa.`,
   alternates: {
     canonical: `${SITE_URL}/faq`,
     languages: { en: `${SITE_URL}/faq`, 'x-default': `${SITE_URL}/faq` },

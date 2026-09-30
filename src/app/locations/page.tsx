@@ -39,7 +39,7 @@ import {
 export const metadata: Metadata = {
   title: { absolute: 'Locksmith Service Areas Dubai | 24 Locations Covered | Lock repair service' },
   description:
-    'Mobile locksmith in Dubai — 24 areas covered including Dubai Marina, Downtown, Business Bay, JVC, Al Barsha, Palm Jumeirah. 32+ services, 24/7. Call +971 52 642 6161.',
+    'Mobile locksmith in Dubai — 24 areas including Marina, Downtown, Business Bay, Al Barsha, JVC, Palm Jumeirah. 32+ services. 24/7. Call +971 52 642 6161.',
   alternates: {
     canonical: `${SITE_URL}/locations`,
   },

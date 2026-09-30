@@ -24,7 +24,7 @@ import {
 export const metadata: Metadata = {
   title: { absolute: 'Car Key Programming Dubai | 50+ Brands | Lock repair service' },
   description:
-    'Car key cutting & programming for 50+ brands in Dubai — Toyota, BMW, Nissan, Mercedes, Land Rover, Hyundai. Mobile on-site service. 24/7. Call +971 52 642 6161.',
+    'Car key cutting & programming for 50+ brands in Dubai — Toyota, BMW, Nissan, Mercedes, Land Rover, Hyundai. Mobile 24/7. Call +971 52 642 6161.',
   alternates: {
     canonical: `${SITE_URL}/car-brands`,
   },
