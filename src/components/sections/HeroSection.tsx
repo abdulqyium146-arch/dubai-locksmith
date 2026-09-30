@@ -14,6 +14,7 @@ import {
   WHATSAPP_HREF,
   GOOGLE_RATING,
   GOOGLE_REVIEW_COUNT,
+  GOOGLE_MAPS_URL,
 } from '@/lib/constants'
 
 interface HeroSectionProps {
@@ -127,13 +128,15 @@ export async function HeroSection({
                 ))}
               </div>
 
-              {/* Star rating + review count */}
-              <div className="mt-6 flex flex-wrap items-center justify-center gap-x-3 gap-y-1 lg:justify-start">
-                <div
-                  className="flex gap-0.5"
-                  role="img"
-                  aria-label={`Rated ${GOOGLE_RATING} out of 5 stars on Google`}
-                >
+              {/* Star rating + review count — links to Google Maps */}
+              <a
+                href={GOOGLE_MAPS_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-6 inline-flex flex-wrap items-center justify-center gap-x-3 gap-y-1 lg:justify-start rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+                aria-label={`Rated ${GOOGLE_RATING} out of 5 stars · ${GOOGLE_REVIEW_COUNT} reviews on Google Maps`}
+              >
+                <div className="flex gap-0.5" aria-hidden="true">
                   {Array.from({ length: 5 }).map((_, i) => (
                     <svg
                       key={i}
@@ -151,10 +154,10 @@ export async function HeroSection({
                   ))}
                 </div>
                 <span className="text-sm font-bold text-white">{GOOGLE_RATING}</span>
-                <span className="text-sm text-white/45">
+                <span className="text-sm text-white/45 hover:text-white/70 transition-colors">
                   · {GOOGLE_REVIEW_COUNT} verified Google reviews
                 </span>
-              </div>
+              </a>
 
               {/* Primary CTA buttons */}
               <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:justify-center lg:justify-start">
@@ -229,11 +232,13 @@ export async function HeroSection({
                 />
               </div>
 
-              {/* Floating badge: Google Rating (top-right) */}
-              <div
-                className="absolute -top-4 -right-2 sm:-right-4 flex items-center gap-2.5 rounded-xl bg-brand-gold px-3.5 py-2.5 shadow-[0_8px_32px_rgba(201,168,76,0.45)]"
-                role="img"
-                aria-label={`${GOOGLE_RATING} star Google rating`}
+              {/* Floating badge: Google Rating (top-right) — links to GMB */}
+              <a
+                href={GOOGLE_MAPS_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="absolute -top-4 -right-2 sm:-right-4 flex items-center gap-2.5 rounded-xl bg-brand-gold px-3.5 py-2.5 shadow-[0_8px_32px_rgba(201,168,76,0.45)] transition-opacity hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
+                aria-label={`${GOOGLE_RATING}★ · ${GOOGLE_REVIEW_COUNT} reviews on Google Maps`}
               >
                 <span className="font-heading text-2xl font-extrabold leading-none text-brand-navy">
                   {GOOGLE_RATING}★
@@ -246,7 +251,7 @@ export async function HeroSection({
                     {GOOGLE_REVIEW_COUNT} reviews
                   </p>
                 </div>
-              </div>
+              </a>
 
               {/* Floating badge: Mobile Service (bottom-left) */}
               <div className="absolute -bottom-4 left-4 flex items-center gap-3 rounded-xl border border-white/15 bg-brand-navy/90 px-4 py-3 shadow-xl backdrop-blur-md">

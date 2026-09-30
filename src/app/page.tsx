@@ -26,6 +26,9 @@ import {
   WHATSAPP_HREF,
   SITE_URL,
   DEFAULT_OG_IMAGE,
+  GOOGLE_RATING,
+  GOOGLE_REVIEW_COUNT,
+  GOOGLE_MAPS_URL,
 } from '@/lib/constants'
 import { formatPriceRange } from '@/lib/utils'
 import type { Review } from '@/types'
@@ -33,9 +36,9 @@ import type { Review } from '@/types'
 // ── Metadata ──────────────────────────────────────────────────────────────────
 
 // GMB top searches: "key maker near me" (66), "key duplication service" (51), "locksmith" (20)
-// Title targets #1 + #2 GMB terms; H1 changed to match "key maker" language
-const HOMEPAGE_TITLE = "Key Maker Near Me Dubai | Key Shop Satwa | Lock repair service"
-const HOMEPAGE_DESC  = "Key maker & key shop near me in Satwa, Dubai. Lock repair service: key duplication service from AED 50, car key cutting, door lock repair. 24/7 mobile locksmith. Rated 4.7★. Call +971 52 642 6161."
+// Title targets #1 + #2 GMB terms; includes "24/7 Locksmith" for emergency intent
+const HOMEPAGE_TITLE = "Key Maker Near Me Dubai | 24/7 Locksmith | Lock repair service"
+const HOMEPAGE_DESC  = "Key maker & key shop near me in Satwa, Dubai. Lock repair service: key duplication from AED 50, car key cutting, door lock repair. 24/7 mobile locksmith. Rated 4.7★ · 23 reviews. Call +971 52 642 6161."
 
 export const metadata: Metadata = {
   title: { absolute: HOMEPAGE_TITLE },
@@ -63,7 +66,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: HOMEPAGE_TITLE,
-    description: "Key maker & key shop in Satwa, Dubai. Key duplication service from AED 50, car key cutting, 24/7 locksmith. Rated 4.7★.",
+    description: "Key maker & key shop in Satwa, Dubai. Key duplication from AED 50, car key cutting, 24/7 locksmith. Rated 4.7★ · 23 reviews on Google.",
     images: [DEFAULT_OG_IMAGE],
   },
 }
@@ -358,7 +361,7 @@ export default async function HomePage() {
       <WebPageSchema
         pageUrl={SITE_URL}
         pageId="homepage"
-        name="Key Maker Near Me Dubai | Key Shop Satwa | Lock repair service"
+        name="Key Maker Near Me Dubai | 24/7 Locksmith | Lock repair service"
         description="Key maker & key shop near me in Satwa, Dubai. Key duplication service from AED 50, car key cutting, door lock repair. 24/7 mobile locksmith. Rated 4.7★."
         breadcrumbs={[{ name: 'Home', url: SITE_URL }]}
         primaryImageUrl={`${SITE_URL}/images/shop/locksmith-shop-satwa-al-badaa-dubai.webp`}
@@ -1147,7 +1150,16 @@ export default async function HomePage() {
                 Dubai&apos;s Professional Locksmith — Satwa &amp; Al Bada&apos;a
               </h2>
               <p className="mt-5 text-base leading-relaxed text-white/75">
-                Lock repair service is a professional locksmith based at D90, Al Bada&apos;a, Dubai. We serve all major Dubai areas with expert lock repair, car key duplication, and security solutions — without the days of waiting and premium markup that franchised dealerships charge. Rated 4.7★ on Google by our customers.
+                Lock repair service is a professional locksmith based at D90, Al Bada&apos;a, Dubai. We serve all major Dubai areas with expert lock repair, car key duplication, and security solutions — without the days of waiting and premium markup that franchised dealerships charge.{' '}
+                <a
+                  href={GOOGLE_MAPS_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-semibold text-brand-gold hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring rounded"
+                  aria-label={`Rated ${GOOGLE_RATING}★ on Google — ${GOOGLE_REVIEW_COUNT} verified reviews`}
+                >
+                  Rated {GOOGLE_RATING}★ on Google · {GOOGLE_REVIEW_COUNT} reviews
+                </a>
               </p>
               <p className="mt-4 text-base leading-relaxed text-white/75">
                 Our technicians carry professional key-cutting machines, OBD programming equipment and a comprehensive stock of key blanks for 50+ vehicle brands. We cover every type of locksmith service — from a basic spare key to full smart key programming for the latest European luxury vehicles — all performed at your location.
@@ -1219,22 +1231,52 @@ export default async function HomePage() {
         </section>
       )}
 
-      {/* Placeholder notice — visible only until real reviews are added */}
+      {/* Google Reviews CTA — shown when no review content is loaded */}
       {PLACEHOLDER_REVIEWS.length === 0 && (
-        <section className="py-12 bg-muted/30 border-y border-border cv-auto" aria-label="Customer reviews">
-          <div className="mx-auto max-w-3xl px-4 text-center sm:px-6">
-            <p className="text-sm text-muted-foreground">
-              {/* TODO: Replace this section with ReviewsSection once real Google reviews are provided by the business owner */}
-              Customer reviews coming soon — rated 4.7★ on Google Maps.{' '}
+        <section className="py-14 bg-muted/30 border-y border-border cv-auto" aria-label="Google Reviews">
+          <div className="mx-auto max-w-3xl px-4 sm:px-6">
+            <div className="flex flex-col items-center gap-6 sm:flex-row sm:items-center sm:justify-between rounded-2xl border border-brand-gold/20 bg-background p-6 shadow-sm">
+              <div className="flex items-center gap-4">
+                {/* Google G icon */}
+                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-white shadow-sm">
+                  <svg viewBox="0 0 24 24" className="h-7 w-7" aria-hidden="true">
+                    <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4" />
+                    <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853" />
+                    <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05" />
+                    <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335" />
+                  </svg>
+                </div>
+                <div>
+                  <p className="font-semibold text-foreground text-sm">Rated on Google Maps</p>
+                  <div className="mt-1 flex items-center gap-2">
+                    <div className="flex gap-0.5" aria-label={`${GOOGLE_RATING} out of 5 stars`}>
+                      {Array.from({ length: 5 }).map((_, i) => (
+                        <svg key={i} className={`h-4 w-4 ${i < Math.floor(GOOGLE_RATING) ? 'text-yellow-400' : 'text-gray-300'}`} fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                          <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                        </svg>
+                      ))}
+                    </div>
+                    <span className="text-sm font-bold text-foreground">{GOOGLE_RATING}</span>
+                    <span className="text-xs text-muted-foreground">· {GOOGLE_REVIEW_COUNT} verified reviews</span>
+                  </div>
+                </div>
+              </div>
               <a
-                href="https://maps.google.com/?q=Lock+Repair+Satwa+Al+Bada%27a+Dubai"
+                href={GOOGLE_MAPS_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="underline hover:text-brand-gold transition-colors"
+                className="inline-flex items-center gap-2 rounded-lg border border-brand-gold/30 bg-brand-gold/10 px-5 py-2.5 text-sm font-semibold text-foreground transition-colors hover:bg-brand-gold/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring whitespace-nowrap"
+                aria-label={`Read ${GOOGLE_REVIEW_COUNT} reviews for Lock repair service on Google Maps`}
               >
-                Read our reviews on Google
+                <svg viewBox="0 0 24 24" className="h-4 w-4 shrink-0" aria-hidden="true">
+                  <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4" />
+                  <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853" />
+                  <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05" />
+                  <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335" />
+                </svg>
+                Read {GOOGLE_REVIEW_COUNT} Reviews on Google
               </a>
-            </p>
+            </div>
           </div>
         </section>
       )}
@@ -1320,7 +1362,7 @@ export default async function HomePage() {
                   </a>
                 </Button>
                 <a
-                  href="https://maps.google.com/?q=Lock+Repair+Satwa+Al+Bada%27a+Dubai"
+                  href={GOOGLE_MAPS_URL}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-center text-xs text-muted-foreground hover:text-brand-gold transition-colors underline underline-offset-2"

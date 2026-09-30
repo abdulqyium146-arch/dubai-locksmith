@@ -36,7 +36,7 @@ export const COORDINATES = {
 // ── Social & Reviews ──────────────────────────────────────────────────────────
 
 export const GOOGLE_RATING = 4.7 as const
-export const GOOGLE_REVIEW_COUNT = 20 as const
+export const GOOGLE_REVIEW_COUNT = 23 as const
 export const GOOGLE_MAPS_URL =
   'https://maps.google.com/?q=67MH%2B93+Dubai' as const
 
@@ -54,7 +54,7 @@ export const DEFAULT_OG_IMAGE = `${SITE_URL}/api/og` as const
 
 export const DEFAULT_TITLE_TEMPLATE = `%s | ${BUSINESS_NAME}` as const
 export const DEFAULT_META_DESCRIPTION =
-  "Key maker & key shop near me in Satwa, Dubai. Lock repair service: key duplication service from AED 50, car key cutting, door lock repair. 24/7 mobile locksmith. Rated 4.7★. Call +971 52 642 6161." as const
+  "Key maker & key shop near me in Satwa, Dubai. Lock repair service: key duplication service from AED 50, car key cutting, door lock repair. 24/7 mobile locksmith. Rated 4.7★ · 23 reviews. Call +971 52 642 6161." as const
 
 // ── Service Hours ─────────────────────────────────────────────────────────────
 
