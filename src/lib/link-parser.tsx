@@ -186,6 +186,38 @@ export const PROSE_LINK_DEFS: LinkDef[] = [
     terms: ['cam lock supply', 'cam lock installation'],
     href: '/products/cam-locks',
   },
+  {
+    terms: ['depository safe installation', 'depository safe'],
+    href: '/products/depository-safes',
+  },
+  {
+    terms: ['gun safe installation', 'gun safe'],
+    href: '/products/gun-safes',
+  },
+  {
+    terms: ['hotel safe installation', 'hotel room safe', 'hotel safe'],
+    href: '/products/hotel-safes',
+  },
+  {
+    terms: ['smart door lock supply', 'smart door lock shop', 'smart door locks supply'],
+    href: '/products/smart-door-locks-buy',
+  },
+  {
+    terms: ['keyless door lock', 'keyless lock installation'],
+    href: '/products/keyless-door-locks',
+  },
+  {
+    terms: ['lever handle lock', 'lever door handle lock'],
+    href: '/products/lever-handle-locks',
+  },
+  {
+    terms: ['door knob lock', 'door knob replacement'],
+    href: '/products/door-knob-locks',
+  },
+  {
+    terms: ['panic bar supply', 'push bar supply', 'panic bar'],
+    href: '/products/panic-bars',
+  },
   // ── Key service pages ─────────────────────────────────────────────────────
   {
     terms: ['key maker Dubai', 'key shop Dubai', 'key maker near me', 'key shop near me', 'key maker'],
