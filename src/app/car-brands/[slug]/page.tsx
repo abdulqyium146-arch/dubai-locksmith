@@ -201,6 +201,13 @@ export default async function CarBrandPage({
                   <p key={i}>{para}</p>
                 ))}
               </div>
+              <p className="mt-5 pt-4 border-t border-border text-sm text-muted-foreground">
+                {brand.name} key service is part of 32+ automotive and locksmith services by{' '}
+                <Link href="/" className="font-medium text-brand-gold-accessible hover:text-brand-gold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring rounded">
+                  Lock repair service — Dubai&apos;s mobile key maker
+                </Link>
+                . Mobile dispatch across all 24 Dubai areas, 24/7, no call-out fee.
+              </p>
 
               {/* Popular models */}
               <div className="mt-6">
