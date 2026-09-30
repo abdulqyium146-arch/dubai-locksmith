@@ -14,6 +14,7 @@ import { JsonLd } from '@/components/schema/JsonLd'
 import { Button } from '@/components/ui/Button'
 
 import { locations } from '@/data/locations'
+import Link from 'next/link'
 import {
   BUSINESS_NAME,
   PHONE_DISPLAY,
@@ -24,16 +25,21 @@ import {
   PHONE_RAW,
   EMAIL,
   COORDINATES,
-  GOOGLE_RATING,
   SCHEMA_ORG,
+  GOOGLE_MAPS_URL,
+  ADDRESS_STREET,
+  ADDRESS_AREA,
+  ADDRESS_CITY,
+  PLUS_CODE,
+  SERVICE_HOURS,
 } from '@/lib/constants'
 
 // ── Metadata ──────────────────────────────────────────────────────────────────
 
 export const metadata: Metadata = {
-  title: { absolute: 'Locksmith Areas Dubai | 24+ Locations Covered | Lock repair service' },
+  title: { absolute: 'Locksmith Service Areas Dubai | 24 Locations Covered | Lock repair service' },
   description:
-    'Lock repair service covers all major Dubai areas — Jumeirah, Downtown, Dubai Marina, Business Bay, Dubai Hills, Palm Jumeirah and more. Professional mobile locksmith open daily 24/7. Call +971 52 642 6161.',
+    'Mobile locksmith in Dubai — 24 areas covered including Dubai Marina, Downtown, Business Bay, JVC, Al Barsha, Palm Jumeirah. 32+ services, 24/7. Call +971 52 642 6161.',
   alternates: {
     canonical: `${SITE_URL}/locations`,
   },
@@ -42,22 +48,22 @@ export const metadata: Metadata = {
     locale: 'en_AE',
     url: `${SITE_URL}/locations`,
     siteName: BUSINESS_NAME,
-    title: 'Locksmith Service Areas in Dubai | All 15 Locations — Lock repair service',
+    title: 'Locksmith Service Areas Dubai | 24 Locations — Lock repair service',
     description:
-      'Lock repair service covers all major Dubai areas — Jumeirah, Downtown, Dubai Marina, Business Bay, Dubai Hills, Palm Jumeirah and more. Professional mobile locksmith, open daily 24/7.',
+      'Mobile locksmith in Dubai — 24 areas covered, 32+ services, 24/7. Dubai Marina, Downtown, Business Bay, JVC, Palm Jumeirah and more. Call +971 52 642 6161.',
     images: [
       {
         url: DEFAULT_OG_IMAGE,
         width: 1200,
         height: 630,
-        alt: `${BUSINESS_NAME} — Service Areas Across Dubai`,
+        alt: `${BUSINESS_NAME} — 24 Service Areas Across Dubai`,
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Locksmith Service Areas in Dubai | 15 Locations — Lock repair service',
-    description: 'Professional mobile locksmith covering all major Dubai areas. Open daily 24/7. Call +971 52 642 6161.',
+    title: 'Locksmith Service Areas Dubai | 24 Locations — Lock repair service',
+    description: 'Mobile locksmith — 24 Dubai areas, 32+ services, 24/7. Call +971 52 642 6161.',
     images: [DEFAULT_OG_IMAGE],
   },
 }
@@ -71,20 +77,23 @@ const breadcrumbs = [
 
 // ── LocalBusiness schema with all 15 areas in areaServed ─────────────────────
 
+const DAYS_OF_WEEK = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
+
 function LocationsHubSchema() {
   const schema = {
     '@context': 'https://schema.org',
     '@type': ['Locksmith', 'LocalBusiness'],
-    '@id': `${SITE_URL}/#lock-repair-satwa`,
+    '@id': `${SITE_URL}/#lock-repair-service`,
     name: BUSINESS_NAME,
     url: SITE_URL,
     telephone: PHONE_RAW,
     email: EMAIL,
+    hasMap: GOOGLE_MAPS_URL,
     address: {
       '@type': 'PostalAddress',
-      streetAddress: 'D90',
-      addressLocality: 'Al Bada\'a',
-      addressRegion: 'Dubai',
+      streetAddress: ADDRESS_STREET,
+      addressLocality: ADDRESS_AREA,
+      addressRegion: ADDRESS_CITY,
       addressCountry: 'AE',
     },
     geo: {
@@ -92,22 +101,20 @@ function LocationsHubSchema() {
       latitude: COORDINATES.lat,
       longitude: COORDINATES.lng,
     },
+    additionalProperty: {
+      '@type': 'PropertyValue',
+      name: 'Google Plus Code',
+      value: PLUS_CODE,
+    },
     priceRange: SCHEMA_ORG.priceRange,
     currenciesAccepted: SCHEMA_ORG.currenciesAccepted,
     paymentAccepted: SCHEMA_ORG.paymentAccepted,
-    openingHoursSpecification: {
+    openingHoursSpecification: DAYS_OF_WEEK.map((day) => ({
       '@type': 'OpeningHoursSpecification',
-      dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
-      opens: '00:00',
-      closes: '23:59',
-    },
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: GOOGLE_RATING,
-      bestRating: 5,
-      worstRating: 1,
-      reviewCount: 20,
-    },
+      dayOfWeek: day,
+      opens: SERVICE_HOURS.opens,
+      closes: SERVICE_HOURS.closes,
+    })),
     areaServed: locations.map((loc) => ({
       '@type': 'Place',
       name: loc.name,
@@ -168,7 +175,7 @@ export default function LocationsPage() {
             {/* Eyebrow badge */}
             <div className="mb-4 inline-flex items-center gap-1.5 rounded-full border border-brand-gold/30 bg-brand-gold/15 px-3 py-1 text-xs font-semibold text-brand-gold">
               <MapPin className="h-3.5 w-3.5" aria-hidden="true" />
-              15 Dubai Areas Covered
+              {locations.length} Dubai Areas Covered
             </div>
 
             <h1 className="font-heading text-4xl font-extrabold leading-tight tracking-tight text-white sm:text-5xl">
@@ -229,7 +236,7 @@ export default function LocationsPage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 gap-6 sm:grid-cols-4">
             <div className="text-center">
-              <p className="font-heading text-3xl font-extrabold text-brand-gold">15</p>
+              <p className="font-heading text-3xl font-extrabold text-brand-gold">{locations.length}</p>
               <p className="mt-1 text-sm text-muted-foreground">Dubai Areas Covered</p>
             </div>
             <div className="text-center">
@@ -237,11 +244,11 @@ export default function LocationsPage() {
               <p className="mt-1 text-sm text-muted-foreground">Open Daily</p>
             </div>
             <div className="text-center">
-              <p className="font-heading text-3xl font-extrabold text-brand-gold">15–30<span className="text-xl">min</span></p>
+              <p className="font-heading text-3xl font-extrabold text-brand-gold">20–45<span className="text-xl">min</span></p>
               <p className="mt-1 text-sm text-muted-foreground">Average Response Time</p>
             </div>
             <div className="text-center">
-              <p className="font-heading text-3xl font-extrabold text-brand-gold">12</p>
+              <p className="font-heading text-3xl font-extrabold text-brand-gold">32+</p>
               <p className="mt-1 text-sm text-muted-foreground">Services at Every Location</p>
             </div>
           </div>
@@ -461,7 +468,7 @@ export default function LocationsPage() {
           </h2>
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {[
-              'All 12 car key & locksmith services available',
+              'All 32+ car key & locksmith services available',
               'Same pricing regardless of Dubai area — no distance surcharge',
               'Open daily 24/7 including UAE public holidays',
               'Upfront pricing confirmed before dispatch',
@@ -480,10 +487,33 @@ export default function LocationsPage() {
         </div>
       </section>
 
-      {/* ── 8. Final CTA ─────────────────────────────────────────────────────── */}
+      {/* ── 8. Contextual back-link — hub-and-spoke internal link ───────────── */}
+      <section className="py-8 bg-muted/30 border-y border-border">
+        <div className="mx-auto max-w-4xl px-4 sm:px-6 text-center text-sm text-muted-foreground">
+          <p>
+            All locations connect to our{' '}
+            <Link
+              href="/"
+              className="font-semibold text-brand-gold hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring rounded"
+            >
+              Dubai locksmith & key maker homepage
+            </Link>
+            {' '}— or browse{' '}
+            <Link
+              href="/services"
+              className="font-semibold text-brand-gold hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring rounded"
+            >
+              all 32+ services
+            </Link>
+            {' '}to find the right service for your situation.
+          </p>
+        </div>
+      </section>
+
+      {/* ── 9. Final CTA ─────────────────────────────────────────────────────── */}
       <CtaSection
         heading="Need a Locksmith in Dubai? We Come to You."
-        subtext={`${BUSINESS_NAME} (D90, Al Bada'a, Dubai) covers all 24+ areas listed above. One call gets you a trained technician with the right equipment for your car and location — open daily 24/7, 7 days a week.`}
+        subtext={`${BUSINESS_NAME} (D90, Al Bada'a, Dubai) covers all ${locations.length} areas listed above. One call gets you a trained technician with the right equipment for your car and location — open daily 24/7, 7 days a week.`}
       />
     </>
   )

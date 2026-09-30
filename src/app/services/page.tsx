@@ -3,6 +3,7 @@
 // ─────────────────────────────────────────────────────────────────────────────
 import type { Metadata } from 'next'
 import Image from 'next/image'
+import Link from 'next/link'
 import { Phone, MessageCircle, AlertTriangle } from 'lucide-react'
 
 import { ServiceCard } from '@/components/sections/ServiceCard'
@@ -30,9 +31,9 @@ import type { Service } from '@/types'
 // ── Metadata ──────────────────────────────────────────────────────────────────
 
 export const metadata: Metadata = {
-  title: { absolute: 'All Locksmith Services in Dubai | Lock repair service' },
+  title: { absolute: 'Locksmith Services Dubai — 32+ Car, Home & Commercial | Lock repair service' },
   description:
-    'Complete range of locksmith services in Dubai from Lock repair service — residential, commercial and automotive. Key duplication, lock repair, smart lock installation, master key systems, car key programming, emergency locksmith and more. Open daily 24/7.',
+    '32+ locksmith services in Dubai — car key cutting, lock repair, emergency unlock, smart locks & access control. Mobile dispatch 24/7. Call +971 52 642 6161.',
   alternates: {
     canonical: `${SITE_URL}/services`,
   },
@@ -41,15 +42,15 @@ export const metadata: Metadata = {
     locale: 'en_AE',
     url: `${SITE_URL}/services`,
     siteName: BUSINESS_NAME,
-    title: 'All Locksmith Services in Dubai | Lock repair service',
+    title: 'Locksmith Services Dubai — 32+ Car, Home & Commercial | Lock repair service',
     description:
-      'Complete range of locksmith services in Dubai from Lock repair service — key duplication, door lock repair, smart key programming, emergency locksmith and more. Open daily 24/7.',
-    images: [{ url: DEFAULT_OG_IMAGE, width: 1200, height: 630, alt: `${BUSINESS_NAME} Services` }],
+      '32+ locksmith services in Dubai — car key cutting, lock repair, emergency unlock, smart locks & access control. Mobile dispatch 24/7. Call +971 52 642 6161.',
+    images: [{ url: DEFAULT_OG_IMAGE, width: 1200, height: 630, alt: `${BUSINESS_NAME} — 32+ Services in Dubai` }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'All Locksmith Services in Dubai | Lock repair service',
-    description: 'Complete locksmith services in Dubai. Mobile, open daily 24/7.',
+    title: 'Locksmith Services Dubai — 32+ Car, Home & Commercial',
+    description: '32+ locksmith services in Dubai — car keys, lock repair, emergency unlock, smart locks. Mobile 24/7.',
     images: [DEFAULT_OG_IMAGE],
   },
 }
@@ -79,26 +80,26 @@ type CategorySection = {
 const CATEGORIES: CategorySection[] = [
   {
     id: 'residential',
-    label: 'Residential Services',
+    label: 'Home & Residential Services',
     description:
-      'Home lock services for Dubai apartments and villas — key duplication, lock change, lock repair, safe opening, smart lock installation, home lockout and more.',
+      'Key duplication, lock change, lock repair, smart lock installation and safe opening for Dubai apartments, villas and townhouses. Covers all standard door types — metal, wooden and aluminium. From AED 50 for a key copy to AED 1,200 for a full smart lock setup.',
     icon: '🏠',
     services: RESIDENTIAL_SERVICES,
   },
   {
     id: 'commercial',
-    label: 'Commercial Services',
+    label: 'Commercial & Office Services',
     description:
-      'Security solutions for Dubai offices, shops and commercial buildings — master key systems, access control, door closers, push bars and cabinet locks.',
+      'Master key systems, access control installation, door closers, push bars and cabinet locks for Dubai offices, shops and commercial buildings. Each commercial service includes consultation on the right hardware for your door type, footfall, and security grade required.',
     icon: '🏢',
     services: COMMERCIAL_SERVICES,
     darkBg: true,
   },
   {
     id: 'automotive',
-    label: 'Automotive Services',
+    label: 'Automotive Car Key & Lock Services',
     description:
-      'Mobile car key and lock services across Dubai — car key programming, key replacement, emergency unlock, ignition repair, transponder keys and more.',
+      'Car key cutting, transponder programming, lost-all-keys replacement, emergency unlock, ignition repair and flip key services for 50+ vehicle brands. Performed on-site at your location anywhere in Dubai using professional OBD diagnostic equipment — no towing or workshop visit needed.',
     icon: '🚗',
     services: AUTOMOTIVE_SERVICES,
   },
@@ -269,6 +270,104 @@ export default function ServicesPage() {
               </Button>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* ── Which service do I need? Decision guide ─────────────────────────── */}
+      <section
+        aria-labelledby="service-guide-heading"
+        className="py-14 sm:py-16 bg-background border-y border-border"
+      >
+        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+          <h2
+            id="service-guide-heading"
+            className="font-heading text-2xl font-bold text-foreground sm:text-3xl mb-2"
+          >
+            Not sure which service you need?
+          </h2>
+          <p className="text-sm text-muted-foreground mb-8">
+            Call <a href={PHONE_HREF} className="font-semibold text-brand-gold hover:underline">{PHONE_DISPLAY}</a> — we identify the right service in under 2 minutes. Or use this guide:
+          </p>
+          <div className="grid gap-4 sm:grid-cols-2">
+            {[
+              {
+                scenario: 'I have one working key and want a spare',
+                service: 'Key Duplication',
+                href: '/services/key-duplication',
+                note: 'Fastest and cheapest option — from AED 50 in-shop.',
+              },
+              {
+                scenario: 'I lost all my car keys',
+                service: 'Car Key Replacement',
+                href: '/services/car-key-replacement',
+                note: 'We generate a new key from VIN/OBD data — no original needed. AED 400–900.',
+              },
+              {
+                scenario: 'My car key works mechanically but the remote or immobiliser doesn\'t',
+                service: 'Remote / Smart Key Programming',
+                href: '/services/remote-smart-key-programming',
+                note: 'Transponder or remote re-programmed on-site. AED 300–700.',
+              },
+              {
+                scenario: 'I\'m locked inside or outside my home or car right now',
+                service: 'Emergency Unlock',
+                href: '/services/emergency-car-unlock',
+                note: '24/7 dispatch — 20–45 min arrival. Non-destructive where possible.',
+              },
+              {
+                scenario: 'My door lock is stiff, broken or won\'t turn',
+                service: 'Lock Repair',
+                href: '/services/lock-repair',
+                note: 'Cylinder, latch and handle repairs from AED 100. Mobile visit.',
+              },
+              {
+                scenario: 'I want to upgrade to a fingerprint or keypad lock',
+                service: 'Smart Door Lock Installation',
+                href: '/services/smart-door-locks',
+                note: 'Supply and fit from AED 350. Same-day installation available.',
+              },
+            ].map(({ scenario, service, href, note }) => (
+              <div
+                key={href}
+                className="rounded-xl border border-border bg-card p-4 flex flex-col gap-2"
+              >
+                <p className="text-sm text-muted-foreground">
+                  <span className="font-medium text-foreground">&ldquo;{scenario}&rdquo;</span>
+                </p>
+                <div className="flex items-start gap-2 mt-1">
+                  <span className="text-brand-gold text-xs font-bold mt-0.5">→</span>
+                  <div>
+                    <Link
+                      href={href}
+                      className="text-sm font-semibold text-brand-gold hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring rounded"
+                    >
+                      {service}
+                    </Link>
+                    <p className="text-xs text-muted-foreground mt-0.5">{note}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Contextual back-link to homepage — hub-and-spoke internal link */}
+          <p className="mt-8 text-sm text-muted-foreground text-center">
+            Browse the complete offering at our{' '}
+            <Link
+              href="/"
+              className="font-semibold text-brand-gold hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring rounded"
+            >
+              Dubai locksmith homepage
+            </Link>
+            , or view{' '}
+            <Link
+              href="/locations"
+              className="font-semibold text-brand-gold hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring rounded"
+            >
+              all 24 service areas
+            </Link>
+            {' '}to confirm we cover your location.
+          </p>
         </div>
       </section>
 
