@@ -55,6 +55,8 @@ import {
   SCHEMA_ORG,
   SOCIAL_LINKS,
   GOOGLE_MAPS_URL,
+  GOOGLE_RATING,
+  GOOGLE_REVIEW_COUNT,
   SERVICE_HOURS,
 } from '@/lib/constants'
 
@@ -1053,7 +1055,7 @@ export default async function LocationPage({
         <div className="mx-auto max-w-3xl px-4 text-center sm:px-6">
           <p className="text-sm text-muted-foreground">
             Rated{' '}
-            <strong className="text-brand-gold">4.7★ on Google Maps</strong> by verified
+            <strong className="text-brand-gold">{GOOGLE_RATING}★ on Google Maps</strong> by verified
             customers across Dubai, including {location.name}.{' '}
             <a
               href={GOOGLE_MAPS_URL}
@@ -1061,7 +1063,7 @@ export default async function LocationPage({
               rel="noopener noreferrer"
               className="underline hover:text-brand-gold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring rounded"
             >
-              Read our Google reviews
+              Read our {GOOGLE_REVIEW_COUNT} Google reviews
             </a>
           </p>
         </div>

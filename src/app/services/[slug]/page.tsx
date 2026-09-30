@@ -41,6 +41,9 @@ import {
   WHATSAPP_HREF,
   SITE_URL,
   DEFAULT_OG_IMAGE,
+  GOOGLE_MAPS_URL,
+  GOOGLE_RATING,
+  GOOGLE_REVIEW_COUNT,
 } from '@/lib/constants'
 import { formatPriceRange } from '@/lib/utils'
 import type { Review } from '@/types'
@@ -634,14 +637,14 @@ export default async function ServicePage({
             {/* TODO: Replace with <ReviewsSection> once real Google reviews are provided */}
             <p className="text-sm text-muted-foreground">
               Rated{' '}
-              <strong className="text-brand-gold">4.7★ on Google Maps</strong> by verified customers.{' '}
+              <strong className="text-brand-gold">{GOOGLE_RATING}★ on Google Maps</strong> by verified customers · {GOOGLE_REVIEW_COUNT} reviews.{' '}
               <a
-                href="https://maps.google.com/?q=Lock+Repair+Satwa+Al+Bada%27a+Dubai"
+                href={GOOGLE_MAPS_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="underline hover:text-brand-gold transition-colors"
               >
-                Read our Google reviews
+                Read our {GOOGLE_REVIEW_COUNT} Google reviews
               </a>
             </p>
           </div>
