@@ -26,6 +26,7 @@ import { Button } from '@/components/ui/Button'
 
 import { carBrands, getCarBrandBySlug, getAllCarBrandSlugs } from '@/data/car-brands'
 import { services } from '@/data/services'
+import { parseWithLinks } from '@/lib/link-parser'
 import {
   BUSINESS_NAME,
   PHONE_DISPLAY,
@@ -198,7 +199,7 @@ export default async function CarBrandPage({
               </h2>
               <div className="space-y-4 text-sm text-muted-foreground leading-relaxed">
                 {introParas.map((para, i) => (
-                  <p key={i}>{para}</p>
+                  <p key={i}>{parseWithLinks(para)}</p>
                 ))}
               </div>
               <p className="mt-5 pt-4 border-t border-border text-sm text-muted-foreground">
@@ -317,7 +318,7 @@ export default async function CarBrandPage({
                 {brand.commonIssues.map((issue) => (
                   <li key={issue} className="flex gap-3 rounded-lg border border-border bg-muted/30 p-3.5">
                     <AlertTriangle className="mt-0.5 h-4 w-4 shrink-0 text-amber-500" aria-hidden="true" />
-                    <p className="text-sm text-foreground leading-relaxed">{issue}</p>
+                    <p className="text-sm text-foreground leading-relaxed">{parseWithLinks(issue)}</p>
                   </li>
                 ))}
               </ul>
@@ -328,7 +329,7 @@ export default async function CarBrandPage({
                 OEM vs Aftermarket Keys — {brand.name}
               </h2>
               <div className="rounded-xl border border-border bg-muted/30 p-5 text-sm text-muted-foreground leading-relaxed whitespace-pre-line">
-                {brand.oemVsAftermarket}
+                {parseWithLinks(brand.oemVsAftermarket)}
               </div>
             </div>
           </div>

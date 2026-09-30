@@ -47,6 +47,7 @@ import {
 } from '@/lib/constants'
 import { formatPriceRange } from '@/lib/utils'
 import type { Product } from '@/types'
+import { parseWithLinks } from '@/lib/link-parser'
 
 // ─────────────────────────────────────────────────────────────────────────────
 // Static Params
@@ -348,7 +349,7 @@ export default async function ProductPage({
           <div className="mt-6 space-y-4">
             {product.description.split('\n\n').map((paragraph, i) => (
               <p key={i} className="text-base leading-relaxed text-muted-foreground">
-                {paragraph}
+                {parseWithLinks(paragraph)}
               </p>
             ))}
           </div>
