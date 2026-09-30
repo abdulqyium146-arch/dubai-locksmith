@@ -23,6 +23,7 @@ import { JsonLd } from '@/components/schema/JsonLd'
 import { Button } from '@/components/ui/Button'
 
 import { locations } from '@/data/locations'
+import { parseWithLinks } from '@/lib/link-parser'
 import {
   BUSINESS_NAME,
   BUSINESS_TAGLINE,
@@ -324,7 +325,7 @@ export default function AboutPage() {
                   {title}
                 </h3>
                 <p className="mt-2 text-sm leading-relaxed text-muted-foreground flex-1">
-                  {description}
+                  {parseWithLinks(description)}
                 </p>
               </div>
             ))}
