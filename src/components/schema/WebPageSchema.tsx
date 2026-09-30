@@ -44,7 +44,7 @@ export function WebPageSchema({
       url: SITE_URL,
     },
     about: {
-      '@id': `${SITE_URL}/#lock-repair-satwa`,
+      '@id': `${SITE_URL}/#lock-repair-service`,
     },
     ...(dateModified && { dateModified }),
     ...(primaryImageUrl && {

@@ -428,7 +428,7 @@ const webPageSchema = {
   description: "Every locksmith question answered for Dubai — prices, response times, car keys, door locks, smart locks, safe opening, emergency lockout.",
   inLanguage: 'en',
   isPartOf: { '@id': `${SITE_URL}/#website` },
-  about: { '@id': `${SITE_URL}/#lock-repair-satwa` },
+  about: { '@id': `${SITE_URL}/#lock-repair-service` },
   speakable: {
     '@type': 'SpeakableSpecification',
     cssSelector: ['h1', '.direct-answer', '.page-description'],

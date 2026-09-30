@@ -43,6 +43,9 @@ import {
   PHONE_RAW,
   GOOGLE_RATING,
   GOOGLE_REVIEW_COUNT,
+  PLUS_CODE,
+  GOOGLE_MAPS_URL,
+  SERVICE_HOURS,
 } from '@/lib/constants'
 import { formatPriceRange } from '@/lib/utils'
 import type { Product } from '@/types'
@@ -101,8 +104,8 @@ function buildProductSchema(product: Product) {
     '@context': 'https://schema.org',
     '@graph': [
       {
-        '@type': 'LocalBusiness',
-        '@id': `${SITE_URL}/#localbusiness`,
+        '@type': ['Locksmith', 'LocalBusiness'],
+        '@id': `${SITE_URL}/#lock-repair-service`,
         name: BUSINESS_NAME,
         url: SITE_URL,
         telephone: PHONE_RAW,
@@ -118,18 +121,28 @@ function buildProductSchema(product: Product) {
           latitude: COORDINATES.lat,
           longitude: COORDINATES.lng,
         },
+        additionalProperty: {
+          '@type': 'PropertyValue',
+          name: 'Google Plus Code',
+          value: PLUS_CODE,
+        },
+        hasMap: GOOGLE_MAPS_URL,
         aggregateRating: {
           '@type': 'AggregateRating',
           ratingValue: GOOGLE_RATING,
           reviewCount: GOOGLE_REVIEW_COUNT,
+          ratingCount: GOOGLE_REVIEW_COUNT,
           bestRating: 5,
+          worstRating: 1,
         },
-        openingHoursSpecification: {
+        openingHoursSpecification: [
+          'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday',
+        ].map((day) => ({
           '@type': 'OpeningHoursSpecification',
-          dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
-          opens: '00:00',
-          closes: '23:59',
-        },
+          dayOfWeek: day,
+          opens: SERVICE_HOURS.opens,
+          closes: SERVICE_HOURS.closes,
+        })),
       },
       {
         '@type': 'Product',

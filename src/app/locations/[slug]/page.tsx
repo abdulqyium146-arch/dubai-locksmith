@@ -53,6 +53,7 @@ import {
   PLUS_CODE,
   COORDINATES,
   GOOGLE_RATING,
+  GOOGLE_REVIEW_COUNT,
   SCHEMA_ORG,
   SOCIAL_LINKS,
   GOOGLE_MAPS_URL,
@@ -183,8 +184,8 @@ function LocationPageSchema({
       ratingValue: GOOGLE_RATING,
       bestRating: 5,
       worstRating: 1,
-      reviewCount: GOOGLE_RATING,
-      ratingCount: GOOGLE_RATING,
+      reviewCount: GOOGLE_REVIEW_COUNT,
+      ratingCount: GOOGLE_REVIEW_COUNT,
     },
     areaServed: [
       { '@type': 'Place', name: locationName, geo: { '@type': 'GeoCoordinates', latitude: lat, longitude: lng } },

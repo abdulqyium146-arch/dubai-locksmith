@@ -21,7 +21,7 @@ export function CarBrandServiceSchema({ brand }: { brand: CarBrand }) {
     url: brandUrl,
     provider: {
       '@type': 'Locksmith',
-      '@id': `${SITE_URL}/#lock-repair-satwa`,
+      '@id': `${SITE_URL}/#lock-repair-service`,
       name: BUSINESS_NAME,
       telephone: PHONE_RAW,
     },
