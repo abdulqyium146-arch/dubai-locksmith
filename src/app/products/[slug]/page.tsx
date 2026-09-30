@@ -41,8 +41,6 @@ import {
   ADDRESS_CITY,
   COORDINATES,
   PHONE_RAW,
-  GOOGLE_RATING,
-  GOOGLE_REVIEW_COUNT,
   PLUS_CODE,
   GOOGLE_MAPS_URL,
   SERVICE_HOURS,
@@ -127,14 +125,6 @@ function buildProductSchema(product: Product) {
           value: PLUS_CODE,
         },
         hasMap: GOOGLE_MAPS_URL,
-        aggregateRating: {
-          '@type': 'AggregateRating',
-          ratingValue: GOOGLE_RATING,
-          reviewCount: GOOGLE_REVIEW_COUNT,
-          ratingCount: GOOGLE_REVIEW_COUNT,
-          bestRating: 5,
-          worstRating: 1,
-        },
         openingHoursSpecification: [
           'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday',
         ].map((day) => ({
