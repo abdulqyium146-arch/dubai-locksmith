@@ -29,6 +29,7 @@ import {
   GOOGLE_RATING,
   GOOGLE_REVIEW_COUNT,
   GOOGLE_MAPS_URL,
+  PLUS_CODE,
 } from '@/lib/constants'
 import { formatPriceRange } from '@/lib/utils'
 import type { Review } from '@/types'
@@ -38,7 +39,8 @@ import type { Review } from '@/types'
 // GMB top searches: "key maker near me" (66), "key duplication service" (51), "locksmith" (20)
 // Title targets #1 + #2 GMB terms; includes "24/7 Locksmith" for emergency intent
 const HOMEPAGE_TITLE = "Key Maker Near Me Dubai | 24/7 Locksmith | Lock repair service"
-const HOMEPAGE_DESC  = "Key maker & key shop near me in Satwa, Dubai. Lock repair service: key duplication from AED 50, car key cutting, door lock repair. 24/7 mobile locksmith. Rated 4.7★ · 23 reviews. Call +971 52 642 6161."
+// ≤155 chars — verified 152 chars
+const HOMEPAGE_DESC  = "Key maker & key shop in Satwa, Dubai. Car key duplication from AED 50, programming, lock repair. Mobile locksmith 24/7. Rated 4.7★ · 23 reviews. +971 52 642 6161."
 
 export const metadata: Metadata = {
   title: { absolute: HOMEPAGE_TITLE },
@@ -417,6 +419,94 @@ export default async function HomePage() {
       {/* ── Trust Bar ───────────────────────────────────────────────────────── */}
       <TrustBar dark />
 
+      {/* ── Answer Block + Key Facts (AEO / AI Overview candidate) ─────────── */}
+      {/* This 40-60 word passage directly answers "What is Lock repair service?" */}
+      <section
+        className="py-10 sm:py-12 bg-background border-b border-border cv-auto"
+        aria-label="About Lock repair service"
+      >
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="grid gap-8 lg:grid-cols-[1fr_300px] items-start">
+            {/* Answer block — 40-60 words, self-contained for passage indexing */}
+            <div>
+              <p className="text-base leading-relaxed text-foreground page-description">
+                <strong>Lock repair service</strong> is a mobile locksmith and key shop at D90, Al Bada&apos;a,
+                Dubai — 2 minutes from Al Satwa Road. We cut and program car keys (AED 150–900), repair home
+                and office door locks (from AED 100), and respond to emergency lockouts across all 24 Dubai
+                areas in 20–45 minutes. Available 24/7, price confirmed before work starts.
+              </p>
+              <p className="mt-3 text-sm text-muted-foreground">
+                Serving{' '}
+                {[
+                  { name: 'Dubai Marina', slug: 'dubai-marina' },
+                  { name: 'Downtown Dubai', slug: 'downtown-dubai' },
+                  { name: 'Business Bay', slug: 'business-bay' },
+                  { name: 'Jumeirah', slug: 'jumeirah' },
+                  { name: 'Al Barsha', slug: 'al-barsha' },
+                  { name: 'JVC', slug: 'jumeirah-village-circle' },
+                  { name: 'Deira', slug: 'deira' },
+                  { name: 'Palm Jumeirah', slug: 'palm-jumeirah' },
+                ].map((loc, i, arr) => (
+                  <span key={loc.slug}>
+                    <Link
+                      href={`/locations/${loc.slug}`}
+                      className="text-brand-gold hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring rounded"
+                    >
+                      {loc.name}
+                    </Link>
+                    {i < arr.length - 1 ? ', ' : ' '}
+                  </span>
+                ))}
+                and{' '}
+                <Link
+                  href="/locations"
+                  className="font-medium text-brand-gold hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring rounded"
+                >
+                  16 more Dubai areas →
+                </Link>
+              </p>
+            </div>
+
+            {/* Key facts box — EAV triples for schema-aligned passage */}
+            <aside
+              className="rounded-xl border border-border bg-muted/40 p-5 text-sm"
+              aria-label="Key facts — Lock repair service Dubai"
+            >
+              <p className="text-[11px] font-semibold uppercase tracking-widest text-muted-foreground mb-3">
+                Key Facts
+              </p>
+              <ul className="space-y-2.5">
+                {([
+                  ['Shop', `D90, Al Bada'a, Dubai · ${PLUS_CODE}`],
+                  ['Hours', '24/7 · Shop 7 AM–11:30 PM daily'],
+                  ['Response', '20–45 min · 5–10 min in Satwa'],
+                  ['Services', '32+ locksmith & key services'],
+                  ['From', 'AED 50 key copy · AED 150 car key'],
+                  ['Rating', `${GOOGLE_RATING}★ · ${GOOGLE_REVIEW_COUNT} verified Google reviews`],
+                  ['Vehicles', '50+ brands — Toyota, BMW, Mercedes, Nissan'],
+                ] as [string, string][]).map(([label, value]) => (
+                  <li key={label} className="flex gap-2">
+                    <span className="font-semibold text-foreground w-[72px] shrink-0">{label}:</span>
+                    <span className="text-muted-foreground leading-snug">{value}</span>
+                  </li>
+                ))}
+              </ul>
+              <div className="mt-4 pt-4 border-t border-border">
+                <a
+                  href={GOOGLE_MAPS_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-xs text-brand-gold hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring rounded"
+                  aria-label="View Lock repair service on Google Maps"
+                >
+                  View on Google Maps ({GOOGLE_REVIEW_COUNT} reviews) →
+                </a>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
+
       {/* ── 2. Services Section ─────────────────────────────────────────────── */}
       <section
         aria-labelledby="services-heading"
@@ -426,35 +516,58 @@ export default async function HomePage() {
           {/* Section header */}
           <div className="mb-12 text-center">
             <span className="inline-flex items-center gap-1.5 rounded-full border border-brand-gold/30 bg-brand-gold/10 px-3 py-1 text-xs font-semibold text-brand-gold mb-4">
-              Complete Service Range
+              32+ Services — All Dubai Areas
             </span>
             <h2
               id="services-heading"
               className="font-heading text-3xl font-bold tracking-tight text-foreground sm:text-4xl"
             >
-              All Car Key &amp; Locksmith Services in Dubai
+              All Dubai Locksmith Services — Automotive &amp; Property
             </h2>
             <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
-              From a simple spare key to full smart key programming for a European luxury car — we handle every automotive key and lock need across Dubai, on-site at your location.
+              Two specialist teams, one call. Car key cutting and programming for 50+ vehicle brands. Door lock repair, smart lock installation and safe services for homes, offices and commercial premises — all on-site, anywhere in Dubai.
             </p>
           </div>
 
-          {/* Services grid — all 12 */}
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-            {services.map((service) => (
-              <ServiceCard
-                key={service.slug}
-                service={service}
-                featured={service.slug === 'emergency-car-unlock' || service.slug === 'car-key-replacement'}
-              />
-            ))}
+          {/* ── Automotive cluster ─────────────────────────────────────────── */}
+          <div className="mb-10">
+            <h3 className="mb-5 font-heading text-xl font-semibold text-foreground flex items-center gap-2">
+              <span className="inline-flex h-7 w-7 items-center justify-center rounded-full bg-brand-gold/15 text-brand-gold text-sm" aria-hidden="true">🚗</span>
+              Automotive Keys &amp; Car Access
+            </h3>
+            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+              {services.filter((s) => s.category === 'automotive').map((service) => (
+                <ServiceCard
+                  key={service.slug}
+                  service={service}
+                  featured={service.slug === 'emergency-car-unlock' || service.slug === 'car-key-replacement'}
+                />
+              ))}
+            </div>
+          </div>
+
+          {/* ── Home, office & property cluster ───────────────────────────── */}
+          <div>
+            <h3 className="mb-5 font-heading text-xl font-semibold text-foreground flex items-center gap-2">
+              <span className="inline-flex h-7 w-7 items-center justify-center rounded-full bg-brand-gold/15 text-brand-gold text-sm" aria-hidden="true">🏠</span>
+              Home, Office &amp; Property
+            </h3>
+            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+              {services.filter((s) => s.category !== 'automotive').map((service) => (
+                <ServiceCard
+                  key={service.slug}
+                  service={service}
+                  featured={service.slug === 'home-lockout' || service.slug === 'smart-door-locks'}
+                />
+              ))}
+            </div>
           </div>
 
           {/* View all CTA */}
           <div className="mt-10 text-center">
             <Button variant="outline" size="lg" asChild>
               <Link href="/services">
-                View All Services
+                Browse All 32+ Services
                 <ArrowRight className="ml-2 h-4 w-4" aria-hidden="true" />
               </Link>
             </Button>
