@@ -45,6 +45,12 @@ export const metadata: Metadata = {
   description: `Call ${PHONE_DISPLAY} for ${BUSINESS_NAME} — Dubai locksmith for car keys, door locks & emergency lockout. Based at Al Bada'a. Open 24/7.`,
   alternates: {
     canonical: `${SITE_URL}/contact`,
+    languages: { en: `${SITE_URL}/contact`, 'x-default': `${SITE_URL}/contact` },
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: { index: true, follow: true, 'max-video-preview': -1, 'max-image-preview': 'large', 'max-snippet': -1 },
   },
   openGraph: {
     type: 'website',

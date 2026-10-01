@@ -28,6 +28,12 @@ export const metadata: Metadata = {
     'Book a locksmith or car key service in Dubai. Lock repair service — mobile dispatch, upfront pricing, same-day. Call +971 52 642 6161.',
   alternates: {
     canonical: `${SITE_URL}/booking`,
+    languages: { en: `${SITE_URL}/booking`, 'x-default': `${SITE_URL}/booking` },
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: { index: true, follow: true, 'max-video-preview': -1, 'max-image-preview': 'large', 'max-snippet': -1 },
   },
   openGraph: {
     type: 'website',

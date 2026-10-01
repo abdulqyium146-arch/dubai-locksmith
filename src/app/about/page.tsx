@@ -46,6 +46,12 @@ export const metadata: Metadata = {
     `Key maker and locksmith near Satwa, Dubai. Car key duplication, lock repair, smart key programming, 24/7 emergency. Rated 4.7★. Call +971 52 642 6161.`,
   alternates: {
     canonical: `${SITE_URL}/about`,
+    languages: { en: `${SITE_URL}/about`, 'x-default': `${SITE_URL}/about` },
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: { index: true, follow: true, 'max-video-preview': -1, 'max-image-preview': 'large', 'max-snippet': -1 },
   },
   openGraph: {
     type: 'website',
