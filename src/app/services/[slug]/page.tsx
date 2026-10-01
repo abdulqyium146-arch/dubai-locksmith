@@ -283,7 +283,7 @@ export default async function ServicePage({
                   Quick Answer
                 </p>
                 <p className="text-base leading-relaxed text-white/90">
-                  {service.directAnswerOpener}
+                  {parseWithLinks(service.directAnswerOpener)}
                 </p>
               </div>
 
@@ -377,7 +377,7 @@ export default async function ServicePage({
                     <div>
                       <p className="font-semibold text-white text-sm">{step.title}</p>
                       <p className="mt-0.5 text-xs leading-relaxed text-white/60 line-clamp-2">
-                        {step.description}
+                        {parseWithLinks(step.description)}
                       </p>
                     </div>
                   </li>
@@ -467,7 +467,7 @@ export default async function ServicePage({
                     {benefit.title}
                   </h3>
                   <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                    {benefit.description}
+                    {parseWithLinks(benefit.description)}
                   </p>
                 </div>
               ))}
@@ -513,7 +513,7 @@ export default async function ServicePage({
                       {step.title}
                     </h3>
                     <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                      {step.description}
+                      {parseWithLinks(step.description)}
                     </p>
                   </div>
                 </li>

@@ -405,7 +405,7 @@ export default async function LocationPage({
                   Quick Answer
                 </p>
                 <p className="text-base leading-relaxed text-white/90">
-                  {location.directAnswerOpener}
+                  {parseWithLinks(location.directAnswerOpener)}
                 </p>
               </div>
 
