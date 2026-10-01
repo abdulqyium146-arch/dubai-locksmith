@@ -45,6 +45,12 @@ export const metadata: Metadata = {
     'Mobile locksmith in Dubai — 24 areas including Marina, Downtown, Business Bay, Al Barsha, JVC, Palm Jumeirah. 32+ services. 24/7. Call +971 52 642 6161.',
   alternates: {
     canonical: `${SITE_URL}/locations`,
+    languages: { en: `${SITE_URL}/locations`, 'x-default': `${SITE_URL}/locations` },
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: { index: true, follow: true, 'max-video-preview': -1, 'max-image-preview': 'large', 'max-snippet': -1 },
   },
   openGraph: {
     type: 'website',

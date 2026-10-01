@@ -42,6 +42,12 @@ export const metadata: Metadata = {
     'Locks, smart locks, safes supplied and installed in Dubai. Deadbolts, fingerprint locks, commercial hardware. Same-day installation. Call +971 52 642 6161.',
   alternates: {
     canonical: `${SITE_URL}/products`,
+    languages: { en: `${SITE_URL}/products`, 'x-default': `${SITE_URL}/products` },
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: { index: true, follow: true, 'max-video-preview': -1, 'max-image-preview': 'large', 'max-snippet': -1 },
   },
   openGraph: {
     type: 'website',

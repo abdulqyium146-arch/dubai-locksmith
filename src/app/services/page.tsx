@@ -40,6 +40,12 @@ export const metadata: Metadata = {
     '32+ locksmith services in Dubai — car key cutting, lock repair, emergency unlock, smart locks, access control. Mobile dispatch 24/7. Call +971 52 642 6161.',
   alternates: {
     canonical: `${SITE_URL}/services`,
+    languages: { en: `${SITE_URL}/services`, 'x-default': `${SITE_URL}/services` },
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: { index: true, follow: true, 'max-video-preview': -1, 'max-image-preview': 'large', 'max-snippet': -1 },
   },
   openGraph: {
     type: 'website',
