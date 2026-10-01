@@ -287,6 +287,8 @@ export const PROSE_LINK_DEFS: LinkDef[] = [
   { terms: ["Al Bada'a", 'Al Badaa'], href: '/locations/al-badaa' },
   { terms: ['Deira'], href: '/locations/deira' },
   { terms: ['Bur Dubai'], href: '/locations/bur-dubai' },
+  { terms: ['Discovery Gardens'], href: '/locations/discovery-gardens' },
+  { terms: ['Falconcity of Wonders', 'Falconcity'], href: '/locations/falconcity-of-wonders' },
   // ── External authority ────────────────────────────────────────────────────
   {
     terms: ['Roads and Transport Authority', 'Dubai RTA'],

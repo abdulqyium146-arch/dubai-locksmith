@@ -16,6 +16,7 @@ import { Button } from '@/components/ui/Button'
 
 import { locations } from '@/data/locations'
 import Link from 'next/link'
+import { parseWithLinks } from '@/lib/link-parser'
 import {
   BUSINESS_NAME,
   PHONE_DISPLAY,
@@ -200,11 +201,7 @@ export default function LocationsPage() {
                 Coverage Summary
               </p>
               <p className="direct-answer text-base leading-relaxed text-white/90">
-                Lock repair service (D90, Al Bada&apos;a, Dubai) is a professional mobile locksmith
-                covering 24+ areas across the emirate. We reach most central Dubai locations in
-                20–35 minutes and outer areas in 40–60 minutes. All services — car key duplication,
-                door lock repair, smart key programming, transponder keys, car battery replacement and
-                more — are available at every listed location, daily 24/7. Call +971 52 642 6161.
+                {parseWithLinks("Lock repair service (D90, Al Bada'a, Dubai) is a professional mobile locksmith covering 24+ areas across the emirate. We reach most central Dubai locations in 20–35 minutes and outer areas in 40–60 minutes. All services — car key duplication, door lock repair, smart key programming, transponder keys, car battery replacement and more — are available at every listed location, daily 24/7. Call +971 52 642 6161.")}
               </p>
             </div>
 
