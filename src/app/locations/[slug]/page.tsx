@@ -37,6 +37,7 @@ import {
   locations,
 } from '@/data/locations'
 import { services } from '@/data/services'
+import { carBrands } from '@/data/car-brands'
 import { parseWithLinks } from '@/lib/link-parser'
 import {
   BUSINESS_NAME,
@@ -1069,7 +1070,47 @@ export default async function LocationPage({
         </div>
       </section>
 
-      {/* ── 10. Final CTA ─────────────────────────────────────────────────── */}
+      {/* ── 10. Car Key Services by Brand ────────────────────────────────── */}
+      <section aria-labelledby="car-brands-heading" className="bg-muted/40 py-12 border-y border-border">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="mb-5 flex items-center justify-between gap-4">
+            <h2
+              id="car-brands-heading"
+              className="font-heading text-lg font-bold text-foreground"
+            >
+              Car Key Programming in {location.name} — By Brand
+            </h2>
+            <Link
+              href="/car-brands"
+              className="flex shrink-0 items-center gap-1 text-sm font-semibold text-brand-gold hover:text-brand-gold-dark transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring rounded"
+            >
+              All brands
+              <ArrowRight className="h-3.5 w-3.5" aria-hidden="true" />
+            </Link>
+          </div>
+          <div className="flex flex-wrap gap-2">
+            {carBrands.slice(0, 8).map((brand) => (
+              <Link
+                key={brand.slug}
+                href={`/car-brands/${brand.slug}`}
+                className="inline-flex items-center gap-1.5 rounded-lg border border-border bg-card px-3 py-2 text-sm text-foreground hover:border-brand-gold/50 hover:text-brand-gold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+                aria-label={`${brand.name} car key service in ${location.name}`}
+              >
+                <span aria-hidden="true">{brand.icon}</span>
+                {brand.name}
+              </Link>
+            ))}
+            <Link
+              href="/car-brands"
+              className="inline-flex items-center gap-1.5 rounded-lg border border-brand-gold/30 bg-brand-gold/5 px-3 py-2 text-sm font-medium text-brand-gold hover:bg-brand-gold/10 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+            >
+              + more brands →
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* ── 11. Final CTA ─────────────────────────────────────────────────── */}
       {/* CTA #3 — contained within CtaSection */}
       <CtaSection
         heading={`Need a Locksmith in ${location.name}? Call Now.`}

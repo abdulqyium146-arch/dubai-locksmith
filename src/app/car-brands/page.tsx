@@ -28,6 +28,12 @@ export const metadata: Metadata = {
     'Car key cutting & programming for 50+ brands in Dubai — Toyota, BMW, Nissan, Mercedes, Land Rover, Hyundai. Mobile 24/7. Call +971 52 642 6161.',
   alternates: {
     canonical: `${SITE_URL}/car-brands`,
+    languages: { en: `${SITE_URL}/car-brands`, 'x-default': `${SITE_URL}/car-brands` },
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: { index: true, follow: true, 'max-video-preview': -1, 'max-image-preview': 'large', 'max-snippet': -1 },
   },
   openGraph: {
     type: 'website',
