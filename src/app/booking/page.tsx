@@ -53,11 +53,25 @@ export const metadata: Metadata = {
 const bookingPageSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
-  '@id': `${SITE_URL}/booking#page`,
+  '@id': `${SITE_URL}/booking#webpage`,
   name: 'Book a Locksmith in Dubai',
   description:
     'Online booking form for locksmith and car key services in Dubai. Lock repair service serves all Dubai areas with mobile technicians.',
   url: `${SITE_URL}/booking`,
+  inLanguage: 'en',
+  isPartOf: { '@id': `${SITE_URL}/#website` },
+  about: { '@id': `${SITE_URL}/#lock-repair-service` },
+  speakable: {
+    '@type': 'SpeakableSpecification',
+    cssSelector: ['h1', '.direct-answer', '.page-description'],
+  },
+  breadcrumb: {
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_URL },
+      { '@type': 'ListItem', position: 2, name: 'Book a Service', item: `${SITE_URL}/booking` },
+    ],
+  },
   provider: {
     '@type': 'Locksmith',
     '@id': `${SITE_URL}/#lock-repair-service`,
@@ -115,7 +129,7 @@ export default function BookingPage() {
             </h1>
 
             <div className="mt-6 rounded-xl border-l-4 border-brand-gold bg-white/10 p-5 backdrop-blur-sm">
-              <p className="text-base leading-relaxed text-white/90">
+              <p className="direct-answer text-base leading-relaxed text-white/90">
                 Fill in the form below and we&apos;ll call you back to confirm your booking and
                 give you an exact ETA. For emergencies, call or WhatsApp us directly — we dispatch
                 within minutes.
