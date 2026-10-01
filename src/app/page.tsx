@@ -19,6 +19,7 @@ import { Button } from '@/components/ui/Button'
 import { services } from '@/data/services'
 import { locations } from '@/data/locations'
 import { getAllCarBrands } from '@/data/car-brands'
+import { products } from '@/data/products'
 import {
   BUSINESS_NAME,
   BUSINESS_TAGLINE,
@@ -573,6 +574,50 @@ export default async function HomePage() {
                 <ArrowRight className="ml-2 h-4 w-4" aria-hidden="true" />
               </Link>
             </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* ── 2b. Security Products ───────────────────────────────────────────── */}
+      <section
+        aria-labelledby="products-heading"
+        className="py-12 sm:py-14 bg-muted/30 border-b border-border"
+      >
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="mb-6 flex items-end justify-between gap-4">
+            <div>
+              <h2
+                id="products-heading"
+                className="font-heading text-2xl font-bold tracking-tight text-foreground sm:text-3xl"
+              >
+                Locks &amp; Security Products — Supply &amp; Install
+              </h2>
+              <p className="mt-1.5 text-sm text-muted-foreground max-w-2xl">
+                We supply and fit all major lock and security hardware at your Dubai location — deadbolts, smart locks, safes, access control and more.
+              </p>
+            </div>
+            <Link
+              href="/products"
+              className="flex shrink-0 items-center gap-1.5 text-sm font-semibold text-brand-gold hover:text-brand-gold-dark transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring rounded"
+            >
+              All Products
+              <ArrowRight className="h-4 w-4" aria-hidden="true" />
+            </Link>
+          </div>
+          <div className="grid gap-2.5 grid-cols-2 sm:grid-cols-4 lg:grid-cols-8">
+            {products.map((product) => (
+              <Link
+                key={product.slug}
+                href={`/products/${product.slug}`}
+                className="group flex flex-col items-center gap-2 rounded-xl border border-border bg-card p-3.5 text-center shadow-sm transition-all hover:border-brand-gold/40 hover:bg-brand-gold/5 hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+                aria-label={`${product.title} — supply and installation Dubai`}
+              >
+                <span className="text-2xl" aria-hidden="true">{product.icon}</span>
+                <span className="text-xs font-medium text-foreground group-hover:text-brand-gold transition-colors leading-tight">
+                  {product.title}
+                </span>
+              </Link>
+            ))}
           </div>
         </div>
       </section>
