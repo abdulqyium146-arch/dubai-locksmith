@@ -12,6 +12,7 @@ import { BreadcrumbNav } from '@/components/sections/BreadcrumbNav'
 import { TrustBar } from '@/components/sections/TrustBar'
 import { JsonLd } from '@/components/schema/JsonLd'
 import { WebPageSchema } from '@/components/schema/WebPageSchema'
+import { buildItemListSchema } from '@/lib/seo'
 import { Button } from '@/components/ui/Button'
 
 import { locations } from '@/data/locations'
@@ -160,6 +161,11 @@ export default function LocationsPage() {
         ]}
       />
       <LocationsHubSchema />
+      <JsonLd data={buildItemListSchema(
+        'Dubai Locksmith Service Areas — 24 Locations',
+        'Mobile locksmith and key maker service across 24 Dubai areas — Lock repair service dispatches to your location 24/7.',
+        locations.map((l) => ({ name: l.name, url: `${SITE_URL}/locations/${l.slug}` }))
+      )} />
 
       {/* ── 1. Hero ──────────────────────────────────────────────────────────── */}
       <section
