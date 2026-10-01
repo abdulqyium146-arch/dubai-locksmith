@@ -11,6 +11,7 @@ import {
   CheckCircle2,
   AlertTriangle,
   ChevronRight,
+  MapPin,
 } from 'lucide-react'
 
 import { BreadcrumbNav } from '@/components/sections/BreadcrumbNav'
@@ -27,6 +28,7 @@ import { Button } from '@/components/ui/Button'
 
 import { carBrands, getCarBrandBySlug, getAllCarBrandSlugs } from '@/data/car-brands'
 import { services } from '@/data/services'
+import { locations } from '@/data/locations'
 import { parseWithLinks } from '@/lib/link-parser'
 import {
   BUSINESS_NAME,
@@ -59,7 +61,10 @@ export async function generateMetadata({
   return {
     title: { absolute: brand.metaTitle },
     description: brand.metaDescription,
-    alternates: { canonical: canonicalUrl },
+    alternates: {
+      canonical: canonicalUrl,
+      languages: { en: canonicalUrl, 'x-default': canonicalUrl },
+    },
     openGraph: {
       type: 'website',
       locale: 'en_AE',
@@ -414,6 +419,48 @@ export default async function CarBrandPage({
             >
               View all brands →
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* ── 8. Dubai Areas ───────────────────────────────────────────────────── */}
+      <section aria-labelledby="areas-heading" className="bg-background py-14 sm:py-16">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="mb-8 flex items-end justify-between gap-4">
+            <div>
+              <h2
+                id="areas-heading"
+                className="font-heading text-2xl font-bold tracking-tight text-foreground sm:text-3xl"
+              >
+                {brand.name} Key Service — Dubai Areas We Cover
+              </h2>
+              <p className="mt-2 text-sm text-muted-foreground">
+                Our mobile technician comes to you anywhere in Dubai — select your area for local
+                response times.
+              </p>
+            </div>
+            <Link
+              href="/locations"
+              className="flex shrink-0 items-center gap-1.5 text-sm font-semibold text-brand-gold hover:text-brand-gold-dark transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring rounded"
+            >
+              All Areas
+              <ChevronRight className="h-4 w-4" aria-hidden="true" />
+            </Link>
+          </div>
+          <div className="grid gap-2.5 grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6">
+            {locations.map((location) => (
+              <Link
+                key={location.slug}
+                href={`/locations/${location.slug}`}
+                className="group flex items-center gap-2 rounded-lg border border-border bg-card px-3 py-2.5 text-sm transition-all hover:border-brand-gold/40 hover:bg-brand-gold/5 hover:text-brand-gold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+                aria-label={`${brand.name} key service in ${location.name}`}
+              >
+                <MapPin className="h-3.5 w-3.5 shrink-0 text-brand-gold" aria-hidden="true" />
+                <span className="font-medium text-foreground group-hover:text-brand-gold transition-colors leading-tight text-xs sm:text-sm">
+                  {location.name}
+                </span>
+              </Link>
+            ))}
           </div>
         </div>
       </section>
