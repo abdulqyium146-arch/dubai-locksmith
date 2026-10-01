@@ -27,6 +27,7 @@ import { CtaSection } from '@/components/sections/CtaSection'
 import { ServiceCard } from '@/components/sections/ServiceCard'
 import { ServiceSchema } from '@/components/schema/ServiceSchema'
 import { WebPageSchema } from '@/components/schema/WebPageSchema'
+import { HowToSchema } from '@/components/schema/HowToSchema'
 import { Badge } from '@/components/ui/Badge'
 import { Button } from '@/components/ui/Button'
 
@@ -34,6 +35,7 @@ import { services, getServiceBySlug, getAllServiceSlugs } from '@/data/services'
 import { locations } from '@/data/locations'
 import { products } from '@/data/products'
 import { parseWithLinks } from '@/lib/link-parser'
+import { getCarBrandSlug } from '@/lib/seo'
 import {
   BUSINESS_NAME,
   PHONE_DISPLAY,
@@ -192,6 +194,7 @@ export default async function ServicePage({
     <>
       {/* Schemas */}
       <ServiceSchema service={service} />
+      <HowToSchema service={service} />
       <WebPageSchema
         pageUrl={servicePageUrl}
         pageId={`service-${service.slug}`}
@@ -587,14 +590,25 @@ export default async function ServicePage({
               className="flex flex-wrap gap-2.5"
               aria-label="Supported car brands"
             >
-              {service.supportedBrands.map((brand) => (
-                <span
-                  key={brand}
-                  className="inline-flex items-center rounded-full border border-border bg-muted px-4 py-1.5 text-sm font-medium text-foreground hover:border-brand-gold/40 hover:bg-brand-gold/5 transition-colors"
-                >
-                  {brand}
-                </span>
-              ))}
+              {service.supportedBrands.map((brand) => {
+                const brandSlug = getCarBrandSlug(brand)
+                return brandSlug ? (
+                  <Link
+                    key={brand}
+                    href={`/car-brands/${brandSlug}`}
+                    className="inline-flex items-center rounded-full border border-border bg-muted px-4 py-1.5 text-sm font-medium text-foreground hover:border-brand-gold/40 hover:bg-brand-gold/5 hover:text-brand-gold transition-colors"
+                  >
+                    {brand}
+                  </Link>
+                ) : (
+                  <span
+                    key={brand}
+                    className="inline-flex items-center rounded-full border border-border bg-muted px-4 py-1.5 text-sm font-medium text-foreground"
+                  >
+                    {brand}
+                  </span>
+                )
+              })}
             </div>
           </div>
         </section>

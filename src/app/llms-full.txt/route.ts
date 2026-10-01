@@ -39,7 +39,7 @@ function build(): string {
         b.directAnswerOpener,
         ``,
         `- **Models**: ${b.popularModelsUAE.join(', ')}`,
-        `- **Key systems**: ${b.keySystems.map((k) => k.name).join(', ')}`,
+        `- **Key systems**: ${b.keySystems.join(', ')}`,
         priceLines ? `\n**Pricing:**\n${priceLines}` : '',
         faqBlock ? `\n**FAQs:**\n\n${faqBlock}` : '',
       ]

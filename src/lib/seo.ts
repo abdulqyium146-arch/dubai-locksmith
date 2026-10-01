@@ -5,6 +5,7 @@
 import { services } from '@/data/services'
 import { locations } from '@/data/locations'
 import { products } from '@/data/products'
+import { carBrands } from '@/data/car-brands'
 import type { Service } from '@/types'
 
 // ── Related Services ──────────────────────────────────────────────────────────
@@ -122,6 +123,23 @@ const PRODUCT_TO_SERVICES: Record<string, string[]> = {
 export function getServicesForProduct(productSlug: string) {
   const slugs = PRODUCT_TO_SERVICES[productSlug] ?? ['lock-repair', 'lock-change']
   return services.filter((s) => slugs.includes(s.slug)).slice(0, 2)
+}
+
+// ── Car Brand ↔ Service links ─────────────────────────────────────────────────
+
+/**
+ * Returns car brands that declare this service as related (via relatedServiceSlugs).
+ * Used to add linked brand chips on automotive service pages.
+ */
+export function getCarBrandsForService(serviceSlug: string, limit = 6) {
+  return carBrands
+    .filter((b) => b.relatedServiceSlugs.includes(serviceSlug))
+    .slice(0, limit)
+}
+
+/** Returns the car-brands page slug for a given brand display name, or null if no page exists. */
+export function getCarBrandSlug(brandName: string): string | null {
+  return carBrands.find((b) => b.name.toLowerCase() === brandName.toLowerCase())?.slug ?? null
 }
 
 // ── Structured Data Helpers ───────────────────────────────────────────────────
