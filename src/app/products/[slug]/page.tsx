@@ -348,7 +348,7 @@ export default async function ProductPage({
           </h2>
           <div className="mt-6 space-y-4">
             {product.description.split('\n\n').map((paragraph, i) => (
-              <p key={i} className="text-base leading-relaxed text-muted-foreground">
+              <p key={i} className={`text-base leading-relaxed text-muted-foreground${i === 0 ? ' direct-answer' : ''}`}>
                 {parseWithLinks(paragraph)}
               </p>
             ))}

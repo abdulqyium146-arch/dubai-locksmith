@@ -153,7 +153,7 @@ export default async function CarBrandPage({
 
             {/* Direct Answer Opener */}
             <div className="mt-5 rounded-xl border-l-4 border-brand-gold bg-white/10 p-5 backdrop-blur-sm">
-              <p className="text-base leading-relaxed text-white/90">
+              <p className="direct-answer text-base leading-relaxed text-white/90">
                 {parseWithLinks(brand.directAnswerOpener)}
               </p>
             </div>
@@ -199,7 +199,7 @@ export default async function CarBrandPage({
               </h2>
               <div className="space-y-4 text-sm text-muted-foreground leading-relaxed">
                 {introParas.map((para, i) => (
-                  <p key={i}>{parseWithLinks(para)}</p>
+                  <p key={i} className={i === 0 ? 'direct-answer' : undefined}>{parseWithLinks(para)}</p>
                 ))}
               </div>
               <p className="mt-5 pt-4 border-t border-border text-sm text-muted-foreground">

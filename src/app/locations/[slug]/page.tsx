@@ -404,7 +404,7 @@ export default async function LocationPage({
                 <p className="text-sm font-medium text-brand-gold mb-1 uppercase tracking-wide">
                   Quick Answer
                 </p>
-                <p className="text-base leading-relaxed text-white/90">
+                <p className="direct-answer text-base leading-relaxed text-white/90">
                   {parseWithLinks(location.directAnswerOpener)}
                 </p>
               </div>
@@ -862,7 +862,7 @@ export default async function LocationPage({
           </h2>
           <div className="space-y-4">
             {location.description.split('\n\n').map((paragraph, i) => (
-              <p key={i} className="text-base leading-relaxed text-muted-foreground">
+              <p key={i} className={`text-base leading-relaxed text-muted-foreground${i === 0 ? ' direct-answer' : ''}`}>
                 {parseWithLinks(paragraph)}
               </p>
             ))}
