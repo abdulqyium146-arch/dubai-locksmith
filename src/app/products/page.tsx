@@ -10,6 +10,7 @@ import { BreadcrumbNav } from '@/components/sections/BreadcrumbNav'
 import { CtaSection } from '@/components/sections/CtaSection'
 import { TrustBar } from '@/components/sections/TrustBar'
 import { Button } from '@/components/ui/Button'
+import { WebPageSchema } from '@/components/schema/WebPageSchema'
 
 import {
   LOCK_PRODUCTS,
@@ -153,6 +154,17 @@ function ProductCard({ product }: { product: Product }) {
 export default function ProductsPage() {
   return (
     <>
+      <WebPageSchema
+        pageUrl={`${SITE_URL}/products`}
+        pageId="products-hub"
+        name="Security Products Dubai — Locks, Safes & Hardware"
+        description="Locks, smart locks, safes supplied and installed in Dubai. Deadbolts, fingerprint locks, commercial hardware. Same-day installation."
+        breadcrumbs={[
+          { name: 'Home', url: SITE_URL },
+          { name: 'Products', url: `${SITE_URL}/products` },
+        ]}
+      />
+
       {/* ── Hero ──────────────────────────────────────────────────────────────── */}
       <section
         aria-label="Products page header"

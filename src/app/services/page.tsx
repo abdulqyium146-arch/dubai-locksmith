@@ -11,6 +11,7 @@ import { CtaSection } from '@/components/sections/CtaSection'
 import { BreadcrumbNav } from '@/components/sections/BreadcrumbNav'
 import { TrustBar } from '@/components/sections/TrustBar'
 import { Button } from '@/components/ui/Button'
+import { WebPageSchema } from '@/components/schema/WebPageSchema'
 
 import {
   services,
@@ -113,6 +114,17 @@ const CATEGORIES: CategorySection[] = [
 export default function ServicesPage() {
   return (
     <>
+      <WebPageSchema
+        pageUrl={`${SITE_URL}/services`}
+        pageId="services-hub"
+        name="Locksmith Services Dubai — 32+ Car, Home & Commercial"
+        description="32+ locksmith services in Dubai — car key cutting, lock repair, emergency unlock, smart locks, access control. Mobile dispatch 24/7."
+        breadcrumbs={[
+          { name: 'Home', url: SITE_URL },
+          { name: 'Services', url: `${SITE_URL}/services` },
+        ]}
+      />
+
       {/* ── Page Header ─────────────────────────────────────────────────────── */}
       <section
         aria-label="Services page header"

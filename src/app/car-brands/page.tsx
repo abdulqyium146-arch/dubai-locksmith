@@ -10,6 +10,7 @@ import { CtaSection } from '@/components/sections/CtaSection'
 import { BreadcrumbNav } from '@/components/sections/BreadcrumbNav'
 import { TrustBar } from '@/components/sections/TrustBar'
 import { CarBrandHubItemListSchema } from '@/components/schema/CarBrandSchema'
+import { WebPageSchema } from '@/components/schema/WebPageSchema'
 
 import { getAllCarBrands } from '@/data/car-brands'
 import {
@@ -56,6 +57,16 @@ export default function CarBrandsPage() {
 
   return (
     <>
+      <WebPageSchema
+        pageUrl={`${SITE_URL}/car-brands`}
+        pageId="car-brands-hub"
+        name="Car Key Programming Dubai — 50+ Brands"
+        description="Car key cutting & programming for 50+ brands in Dubai — Toyota, BMW, Nissan, Mercedes, Land Rover, Hyundai. Mobile on-site service 24/7."
+        breadcrumbs={[
+          { name: 'Home', url: SITE_URL },
+          { name: 'Car Brands', url: `${SITE_URL}/car-brands` },
+        ]}
+      />
       <CarBrandHubItemListSchema brands={brands} />
 
       {/* ── Hero ─────────────────────────────────────────────────────────────── */}
