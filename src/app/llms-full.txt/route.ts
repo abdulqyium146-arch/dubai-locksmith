@@ -16,10 +16,38 @@ import {
 import { services } from '@/data/services'
 import { locations } from '@/data/locations'
 import { products } from '@/data/products'
+import { getAllCarBrands } from '@/data/car-brands'
 
 export const dynamic = 'force-static'
 
 function build(): string {
+  const brands = getAllCarBrands()
+
+  const carBrandBlocks = brands
+    .map((b) => {
+      const priceLines = b.priceRangeAED.length > 0
+        ? b.priceRangeAED.map((p) => `- ${p.service}: AED ${p.min}–${p.max}`).join('\n')
+        : ''
+      const faqBlock = b.faqs && b.faqs.length > 0
+        ? b.faqs.map((f) => `  **Q: ${f.question}**\n  A: ${f.answer}`).join('\n\n')
+        : ''
+
+      return [
+        `### ${b.name} Key Programming Dubai`,
+        `URL: ${SITE_URL}/car-brands/${b.slug}`,
+        ``,
+        b.directAnswerOpener,
+        ``,
+        `- **Models**: ${b.popularModelsUAE.join(', ')}`,
+        `- **Key systems**: ${b.keySystems.map((k) => k.name).join(', ')}`,
+        priceLines ? `\n**Pricing:**\n${priceLines}` : '',
+        faqBlock ? `\n**FAQs:**\n\n${faqBlock}` : '',
+      ]
+        .filter(Boolean)
+        .join('\n')
+    })
+    .join('\n\n---\n\n')
+
   const serviceBlocks = services
     .map((s) => {
       const pricingLine = s.pricing
@@ -174,6 +202,12 @@ ${BUSINESS_NAME} is a professional locksmith and key shop located at D90, Al Bad
 ## Supported Car Brands (Key Programming)
 
 Toyota, Nissan, Honda, Mitsubishi, Mazda, BMW, Mercedes-Benz, Audi, Volkswagen, Ford, Chevrolet, GMC, Jeep, Chrysler, Dodge, Hyundai, Kia, Lexus, Infiniti, Land Rover, Range Rover, Jaguar, Volvo, Subaru, Porsche, Ferrari, Lamborghini, Bentley, Rolls-Royce, Tesla, Rivian, Peugeot, Renault, Citroën, Fiat, Alfa Romeo, Seat, Skoda, Opel, Suzuki, Isuzu, Daihatsu, Acura, Genesis, Cadillac, Lincoln, Buick
+
+---
+
+## Car Brand Key Programming — Full Details
+
+${carBrandBlocks}
 
 ---
 
