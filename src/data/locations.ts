@@ -497,7 +497,7 @@ export const locations: Location[] = [
     name: 'Dubai Hills Estate',
     metaTitle: 'Car Key Service Dubai Hills Estate | Lock repair service',
     metaDescription:
-      'Mobile automotive locksmith in Dubai Hills Estate. Key programming, emergency unlock and battery replacement for villas and apartments — +971 52 642 6161.',
+      'Mobile automotive locksmith in Dubai Hills Estate. Key programming, emergency unlock and battery replacement for villas & apartments — +971 52 642 6161.',
     directAnswerOpener:
       'Lock repair service reaches Dubai Hills Estate in 30–45 minutes from our Al Bada\'a base. We serve the villa communities, mid-rise apartments and Dubai Hills Mall precinct with car key duplication, smart key programming, emergency unlock and car battery replacement. Premium vehicle brands common in Dubai Hills are fully covered.',
     description:
@@ -1018,7 +1018,7 @@ export const locations: Location[] = [
     name: 'Discovery Gardens',
     metaTitle: 'Car Key Service Discovery Gardens Dubai | Lock repair service',
     metaDescription:
-      'Mobile car key locksmith in Discovery Gardens and Jebel Ali Village Dubai. Emergency unlock, key duplication and key programming. 24/7 — +971 52 642 6161.',
+      'Mobile car key locksmith in Discovery Gardens & Jebel Ali Village Dubai. Emergency unlock, key duplication and key programming. 24/7 — +971 52 642 6161.',
     directAnswerOpener:
       "Lock repair service serves Discovery Gardens and Jebel Ali Village with mobile automotive locksmith services available 24/7. Located 35–50 minutes from our Al Bada'a base, these large affordable communities are within our regular service area. Car key duplication, emergency unlock and smart key programming available for all vehicles.",
     description:

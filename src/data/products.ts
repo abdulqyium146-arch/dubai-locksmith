@@ -68,7 +68,7 @@ export const products: Product[] = [
     category: 'locks',
     metaTitle: 'High Security Locks Dubai | Anti-Pick & Restricted Key | Lock repair service',
     metaDescription:
-      'High security locks for Dubai villas and offices. Anti-pick, anti-drill, anti-bump cylinders with restricted key profiles. From AED 400 — +971 52 642 6161.',
+      'High-security locks for Dubai villas and offices. Anti-pick, anti-drill, anti-bump cylinders with restricted key profiles. AED 400 — +971 52 642 6161.',
     description:
       'Standard pin-tumbler locks can be picked, bumped or drilled by a skilled intruder in seconds. High security locks add multiple layers of mechanical resistance — security pins that defeat picking, hardened steel inserts that defeat drilling, and patented key profiles that cannot be duplicated without authorisation. Lock repair service supplies and installs high security lock cylinders and complete locksets for Dubai residences and commercial premises requiring maximum mechanical security.\n\nOur high security range includes brands with grade certifications for pick resistance, bump resistance and cylinder attack resistance. Restricted key systems prevent unauthorised key copies being cut at any locksmith or key cutting shop without a documented authorisation card — ensuring your key hierarchy remains under your control.',
     features: [
