@@ -68,7 +68,7 @@ export function ServiceSchema({ service }: ServiceSchemaProps) {
       },
     },
     serviceType: service.title,
-    category: 'Automotive Locksmith',
+    category: service.category === 'automotive' ? 'Automotive Locksmith' : service.category === 'commercial' ? 'Commercial Locksmith' : 'Residential Locksmith',
     ...(service.emergency && {
       serviceOutput: {
         '@type': 'Thing',

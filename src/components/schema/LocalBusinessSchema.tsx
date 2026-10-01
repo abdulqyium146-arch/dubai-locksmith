@@ -3,6 +3,7 @@
 // Production-grade JSON-LD for maximum Google entity understanding
 // ─────────────────────────────────────────────────────────────────────────────
 import { JsonLd } from './JsonLd'
+import { services } from '@/data/services'
 import {
   BUSINESS_NAME,
   BUSINESS_TAGLINE,
@@ -22,21 +23,7 @@ import {
   SERVICE_HOURS,
 } from '@/lib/constants'
 
-// All 12 services with pricing — gives Google a complete offer catalog
-const OFFER_CATALOG_ITEMS = [
-  { name: 'Key Duplication & Key Cutting', url: `${SITE_URL}/services/car-key-duplication`, minPrice: '50', maxPrice: '350' },
-  { name: 'Car Key Replacement', url: `${SITE_URL}/services/car-key-replacement`, minPrice: '300', maxPrice: '900' },
-  { name: 'Remote & Smart Key Programming', url: `${SITE_URL}/services/remote-smart-key-programming`, minPrice: '400', maxPrice: '900' },
-  { name: 'Transponder Key Programming', url: `${SITE_URL}/services/transponder-keys`, minPrice: '350', maxPrice: '700' },
-  { name: 'Emergency Car Unlock', url: `${SITE_URL}/services/emergency-car-unlock`, minPrice: '200', maxPrice: '500' },
-  { name: 'Lost & Broken Car Key Service', url: `${SITE_URL}/services/lost-broken-car-keys`, minPrice: '200', maxPrice: '700' },
-  { name: 'Flip Key Replacement', url: `${SITE_URL}/services/flip-keys`, minPrice: '250', maxPrice: '550' },
-  { name: 'Smart Door Lock Installation', url: `${SITE_URL}/services/smart-door-locks`, minPrice: '350', maxPrice: '1200' },
-  { name: 'Safe Box Opening & Service', url: `${SITE_URL}/services/safe-box-services`, minPrice: '200', maxPrice: '800' },
-  { name: 'Parking Remote Duplication', url: `${SITE_URL}/services/parking-remotes`, minPrice: '150', maxPrice: '450' },
-  { name: 'Car Battery Replacement', url: `${SITE_URL}/services/car-battery-replacement`, minPrice: '250', maxPrice: '600' },
-  { name: 'Rubber Stamp Making', url: `${SITE_URL}/services/rubber-stamps`, minPrice: '50', maxPrice: '200' },
-]
+// All services — generated from data module so catalog stays in sync
 
 // Dubai areas served — mirrors GMB service area targeting exactly (24+ areas)
 const DUBAI_AREAS = [
@@ -111,27 +98,27 @@ export function LocalBusinessSchema() {
         },
       },
     },
-    // Complete offer catalog — all 12 services with prices and URLs
+    // Complete offer catalog — all 32 services with prices and URLs
     hasOfferCatalog: {
       '@type': 'OfferCatalog',
-      name: 'Dubai Locksmith Services',
-      itemListElement: OFFER_CATALOG_ITEMS.map((item, i) => ({
+      name: 'Dubai Locksmith & Key Services',
+      itemListElement: services.map((svc, i) => ({
         '@type': 'ListItem',
         position: i + 1,
         item: {
           '@type': 'Offer',
           itemOffered: {
             '@type': 'Service',
-            name: item.name,
-            url: item.url,
+            name: svc.title,
+            url: `${SITE_URL}/services/${svc.slug}`,
             provider: { '@id': `${SITE_URL}/#lock-repair-service` },
           },
-          priceCurrency: 'AED',
+          priceCurrency: svc.pricing.currency,
           priceSpecification: {
             '@type': 'PriceSpecification',
-            minPrice: item.minPrice,
-            maxPrice: item.maxPrice,
-            priceCurrency: 'AED',
+            minPrice: String(svc.pricing.min),
+            maxPrice: String(svc.pricing.max),
+            priceCurrency: svc.pricing.currency,
           },
           areaServed: { '@type': 'City', name: 'Dubai, UAE' },
           availability: 'https://schema.org/InStock',
