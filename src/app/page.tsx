@@ -18,6 +18,7 @@ import { Button } from '@/components/ui/Button'
 
 import { services } from '@/data/services'
 import { locations } from '@/data/locations'
+import { getAllCarBrands } from '@/data/car-brands'
 import {
   BUSINESS_NAME,
   BUSINESS_TAGLINE,
@@ -1279,23 +1280,30 @@ export default async function HomePage() {
                 Our technicians carry professional key-cutting machines, OBD programming equipment and a comprehensive stock of key blanks for 50+ vehicle brands. We cover every type of locksmith service — from a basic spare key to full smart key programming for the latest European luxury vehicles — all performed at your location.
               </p>
 
-              {/* Brand tags */}
+              {/* Brand tags — linked to car brand pages */}
               <div className="mt-6">
                 <p className="text-sm font-semibold text-white/50 mb-3 uppercase tracking-wide">
                   Supported Makes Include
                 </p>
                 <div className="flex flex-wrap gap-2">
-                  {['Toyota', 'Nissan', 'BMW', 'Mercedes-Benz', 'Audi', 'Land Rover', 'Ford', 'GMC', 'Hyundai', 'Lexus', 'Porsche', 'Tesla'].map((brand) => (
-                    <span
-                      key={brand}
-                      className="rounded-full border border-white/15 bg-white/10 px-3 py-1 text-xs font-medium text-white/80"
+                  {getAllCarBrands().map((brand) => (
+                    <Link
+                      key={brand.slug}
+                      href={`/car-brands/${brand.slug}`}
+                      className="rounded-full border border-white/15 bg-white/10 px-3 py-1 text-xs font-medium text-white/80 transition-colors hover:border-brand-gold/50 hover:bg-brand-gold/15 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
                     >
-                      {brand}
-                    </span>
+                      {brand.name}
+                    </Link>
                   ))}
-                  <span className="rounded-full border border-white/15 bg-white/10 px-3 py-1 text-xs font-medium text-white/80">
-                    + 40 more
-                  </span>
+                </div>
+                <div className="mt-4">
+                  <Link
+                    href="/car-brands"
+                    className="inline-flex items-center gap-1.5 text-sm font-semibold text-brand-gold hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring rounded"
+                  >
+                    View all car brands we cover
+                    <ArrowRight className="h-4 w-4" aria-hidden="true" />
+                  </Link>
                 </div>
               </div>
 
