@@ -199,7 +199,7 @@ export default function LocationsPage() {
               <p className="text-sm font-medium text-brand-gold mb-1 uppercase tracking-wide">
                 Coverage Summary
               </p>
-              <p className="text-base leading-relaxed text-white/90">
+              <p className="direct-answer text-base leading-relaxed text-white/90">
                 Lock repair service (D90, Al Bada&apos;a, Dubai) is a professional mobile locksmith
                 covering 24+ areas across the emirate. We reach most central Dubai locations in
                 20–35 minutes and outer areas in 40–60 minutes. All services — car key duplication,

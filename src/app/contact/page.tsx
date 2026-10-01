@@ -173,7 +173,7 @@ export default function ContactPage() {
               Contact{' '}
               <span className="text-gold-gradient">Lock repair service</span>
             </h1>
-            <p className="mt-4 text-lg leading-relaxed text-white/75">
+            <p className="direct-answer mt-4 text-lg leading-relaxed text-white/75">
               Open daily 24/7, 7 days a week. Call or WhatsApp now
               for an instant quote — we dispatch quickly across all Dubai areas.
             </p>

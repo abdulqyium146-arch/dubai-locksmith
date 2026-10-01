@@ -211,7 +211,7 @@ export default function AboutPage() {
               About{' '}
               <span className="text-gold-gradient">Lock repair service</span>
             </h1>
-            <p className="mt-5 text-lg leading-relaxed text-white/75 max-w-2xl">
+            <p className="direct-answer mt-5 text-lg leading-relaxed text-white/75 max-w-2xl">
               Lock repair service is a professional locksmith based at D90, Al Bada&apos;a, Dubai —
               serving all Dubai areas daily from 7 AM to 11:30 PM. Rated 4.7&#9733; on Google.
             </p>
