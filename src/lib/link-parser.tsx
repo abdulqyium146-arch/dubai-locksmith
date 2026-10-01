@@ -133,6 +133,18 @@ export const PROSE_LINK_DEFS: LinkDef[] = [
     terms: ['rekeying service', 'rekey service', 'lock rekeying'],
     href: '/services/lock-change',
   },
+  {
+    terms: ['door key duplication', 'spare door key', 'Yale key duplication', 'padlock key duplication', 'mortise key copy'],
+    href: '/services/key-duplication',
+  },
+  {
+    terms: ['safe opening without drilling', 'forgotten safe combination', 'open safe without combination', 'locked out of safe'],
+    href: '/services/safe-opening',
+  },
+  {
+    terms: ['rubber stamp making Dubai', 'custom rubber stamp Dubai', 'rubber stamp Dubai'],
+    href: '/services/rubber-stamps',
+  },
   // ── Products ──────────────────────────────────────────────────────────────
   {
     terms: ['mortise lock set', 'mortise lock installation', 'mortise lock'],
@@ -217,6 +229,22 @@ export const PROSE_LINK_DEFS: LinkDef[] = [
   {
     terms: ['panic bar supply', 'push bar supply', 'panic bar'],
     href: '/products/panic-bars',
+  },
+  {
+    terms: ['glass door lock installation', 'glass door lock'],
+    href: '/products/glass-door-locks',
+  },
+  {
+    terms: ['commercial lock installation', 'commercial grade lock', 'commercial locks'],
+    href: '/products/commercial-locks',
+  },
+  {
+    terms: ['commercial magnetic lock', 'commercial mag lock'],
+    href: '/products/commercial-magnetic-locks',
+  },
+  {
+    terms: ['automatic door operator', 'door operator installation', 'door operator'],
+    href: '/products/door-operators',
   },
   // ── Key service pages ─────────────────────────────────────────────────────
   {
