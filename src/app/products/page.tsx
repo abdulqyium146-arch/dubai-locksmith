@@ -28,6 +28,7 @@ import {
   DEFAULT_OG_IMAGE,
 } from '@/lib/constants'
 import { formatPriceRange } from '@/lib/utils'
+import { parseWithLinks } from '@/lib/link-parser'
 
 // ── Metadata ──────────────────────────────────────────────────────────────────
 
@@ -238,7 +239,7 @@ export default function ProductsPage() {
                   </h2>
                 </div>
                 <p className="max-w-2xl text-sm text-muted-foreground">
-                  {cat.description}
+                  {parseWithLinks(cat.description)}
                 </p>
               </div>
               <div className="shrink-0">

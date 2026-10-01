@@ -26,6 +26,7 @@ import {
   SITE_URL,
   DEFAULT_OG_IMAGE,
 } from '@/lib/constants'
+import { parseWithLinks } from '@/lib/link-parser'
 import type { Service } from '@/types'
 
 // ── Metadata ──────────────────────────────────────────────────────────────────
@@ -200,7 +201,7 @@ export default function ServicesPage() {
                 </h2>
               </div>
               <p className="mt-1 max-w-2xl text-sm text-muted-foreground">
-                {cat.description}
+                {parseWithLinks(cat.description)}
               </p>
             </div>
 

@@ -19,6 +19,7 @@ import { JsonLd } from '@/components/schema/JsonLd'
 import { Button } from '@/components/ui/Button'
 
 import { locations } from '@/data/locations'
+import { parseWithLinks } from '@/lib/link-parser'
 import {
   BUSINESS_NAME,
   PHONE_DISPLAY,
@@ -414,7 +415,7 @@ export default function ContactPage() {
                 <div>
                   <h3 className="font-semibold text-foreground text-sm">{title}</h3>
                   <p className="mt-1 text-sm text-muted-foreground leading-relaxed">
-                    {description}
+                    {parseWithLinks(description)}
                   </p>
                 </div>
               </div>

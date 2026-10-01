@@ -471,10 +471,7 @@ export default function AboutPage() {
                 We Cover All of Dubai
               </h2>
               <p className="mt-5 text-base leading-relaxed text-muted-foreground">
-                Our mobile service covers all Dubai municipalities and free zones. From our
-                Al Bada&apos;a base we reach most central Dubai areas in 20–35 minutes, and
-                outlying communities such as Silicon Oasis, International City and Motor City
-                in 40–60 minutes. We do not charge extra for distance within Dubai city limits.
+                {parseWithLinks("Our mobile service covers all Dubai municipalities and free zones. From our Al Bada’a base we reach most central Dubai areas in 20–35 minutes, and outlying communities such as Silicon Oasis, International City and Motor City in 40–60 minutes. We do not charge extra for distance within Dubai city limits.")}
               </p>
               <p className="mt-4 text-base leading-relaxed text-muted-foreground">
                 Our primary and fastest coverage is within the Dubai emirate boundary — call us
