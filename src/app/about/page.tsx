@@ -67,6 +67,20 @@ const aboutPageSchema = {
   name: `About ${BUSINESS_NAME}`,
   url: `${SITE_URL}/about`,
   description: `${BUSINESS_NAME} is a professional locksmith based at D90, Al Bada'a, Dubai. We provide lock repair, car key duplication, and emergency locksmith services across all Dubai areas. Open daily 24/7.`,
+  inLanguage: 'en',
+  isPartOf: { '@id': `${SITE_URL}/#website` },
+  about: { '@id': `${SITE_URL}/#lock-repair-service` },
+  speakable: {
+    '@type': 'SpeakableSpecification',
+    cssSelector: ['h1', '.direct-answer', '.page-description'],
+  },
+  breadcrumb: {
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_URL },
+      { '@type': 'ListItem', position: 2, name: 'About', item: `${SITE_URL}/about` },
+    ],
+  },
   mainEntity: {
     '@type': 'Locksmith',
     '@id': `${SITE_URL}/#lock-repair-service`,

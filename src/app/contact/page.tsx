@@ -72,6 +72,20 @@ const contactPageSchema = {
   name: `Contact ${BUSINESS_NAME}`,
   url: `${SITE_URL}/contact`,
   description: `Contact page for ${BUSINESS_NAME} — Dubai's professional locksmith at D90, Al Bada'a. Open daily 24/7.`,
+  inLanguage: 'en',
+  isPartOf: { '@id': `${SITE_URL}/#website` },
+  about: { '@id': `${SITE_URL}/#lock-repair-service` },
+  speakable: {
+    '@type': 'SpeakableSpecification',
+    cssSelector: ['h1', '.direct-answer', '.page-description'],
+  },
+  breadcrumb: {
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_URL },
+      { '@type': 'ListItem', position: 2, name: 'Contact', item: `${SITE_URL}/contact` },
+    ],
+  },
   mainEntity: {
     '@type': 'Locksmith',
     '@id': `${SITE_URL}/#lock-repair-service`,

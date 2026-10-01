@@ -11,6 +11,7 @@ import { CtaSection } from '@/components/sections/CtaSection'
 import { BreadcrumbNav } from '@/components/sections/BreadcrumbNav'
 import { TrustBar } from '@/components/sections/TrustBar'
 import { JsonLd } from '@/components/schema/JsonLd'
+import { WebPageSchema } from '@/components/schema/WebPageSchema'
 import { Button } from '@/components/ui/Button'
 
 import { locations } from '@/data/locations'
@@ -147,6 +148,16 @@ export default function LocationsPage() {
   return (
     <>
       {/* Schemas */}
+      <WebPageSchema
+        pageUrl={`${SITE_URL}/locations`}
+        pageId="locations-hub"
+        name="Locksmith Service Areas Dubai — 24 Locations"
+        description="Mobile locksmith in Dubai — 24 areas including Marina, Downtown, Business Bay, Al Barsha, JVC, Palm Jumeirah. 32+ services. 24/7."
+        breadcrumbs={[
+          { name: 'Home', url: SITE_URL },
+          { name: 'Service Areas', url: `${SITE_URL}/locations` },
+        ]}
+      />
       <LocationsHubSchema />
 
       {/* ── 1. Hero ──────────────────────────────────────────────────────────── */}
