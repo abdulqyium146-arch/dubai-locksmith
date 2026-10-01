@@ -289,6 +289,51 @@ export const PROSE_LINK_DEFS: LinkDef[] = [
   { terms: ['Bur Dubai'], href: '/locations/bur-dubai' },
   { terms: ['Discovery Gardens'], href: '/locations/discovery-gardens' },
   { terms: ['Falconcity of Wonders', 'Falconcity'], href: '/locations/falconcity-of-wonders' },
+  // ── Car Brand Key Service Pages ───────────────────────────────────────────
+  {
+    terms: ['Toyota key replacement', 'Toyota car key', 'Toyota smart key', 'Toyota Land Cruiser key'],
+    href: '/car-brands/toyota',
+  },
+  {
+    terms: ['Nissan key replacement', 'Nissan car key', 'Nissan smart key', 'Nissan Patrol key'],
+    href: '/car-brands/nissan',
+  },
+  {
+    terms: ['BMW key replacement', 'BMW car key', 'BMW smart key'],
+    href: '/car-brands/bmw',
+  },
+  {
+    terms: ['Mercedes-Benz key replacement', 'Mercedes-Benz car key', 'Mercedes-Benz smart key'],
+    href: '/car-brands/mercedes-benz',
+  },
+  {
+    terms: ['Land Rover key replacement', 'Land Rover car key', 'Range Rover key replacement', 'Range Rover key'],
+    href: '/car-brands/land-rover',
+  },
+  {
+    terms: ['Lexus key replacement', 'Lexus car key', 'Lexus smart key'],
+    href: '/car-brands/lexus',
+  },
+  {
+    terms: ['Honda key replacement', 'Honda car key', 'Honda smart key'],
+    href: '/car-brands/honda',
+  },
+  {
+    terms: ['Audi key replacement', 'Audi car key', 'Audi smart key'],
+    href: '/car-brands/audi',
+  },
+  {
+    terms: ['Hyundai key replacement', 'Hyundai car key', 'Hyundai smart key'],
+    href: '/car-brands/hyundai',
+  },
+  {
+    terms: ['Kia key replacement', 'Kia car key', 'Kia smart key'],
+    href: '/car-brands/kia',
+  },
+  {
+    terms: ['Porsche key replacement', 'Porsche car key'],
+    href: '/car-brands/porsche',
+  },
   // ── External authority ────────────────────────────────────────────────────
   {
     terms: ['Roads and Transport Authority', 'Dubai RTA'],
