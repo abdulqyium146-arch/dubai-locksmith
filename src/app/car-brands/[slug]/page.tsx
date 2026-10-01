@@ -154,7 +154,7 @@ export default async function CarBrandPage({
             {/* Direct Answer Opener */}
             <div className="mt-5 rounded-xl border-l-4 border-brand-gold bg-white/10 p-5 backdrop-blur-sm">
               <p className="text-base leading-relaxed text-white/90">
-                {brand.directAnswerOpener}
+                {parseWithLinks(brand.directAnswerOpener)}
               </p>
             </div>
 
