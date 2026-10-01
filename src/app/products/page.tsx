@@ -11,8 +11,11 @@ import { CtaSection } from '@/components/sections/CtaSection'
 import { TrustBar } from '@/components/sections/TrustBar'
 import { Button } from '@/components/ui/Button'
 import { WebPageSchema } from '@/components/schema/WebPageSchema'
+import { JsonLd } from '@/components/schema/JsonLd'
+import { buildItemListSchema } from '@/lib/seo'
 
 import {
+  products,
   LOCK_PRODUCTS,
   ELECTRONIC_LOCK_PRODUCTS,
   SAFE_PRODUCTS,
@@ -164,6 +167,11 @@ export default function ProductsPage() {
           { name: 'Products', url: `${SITE_URL}/products` },
         ]}
       />
+      <JsonLd data={buildItemListSchema(
+        'Security Products Dubai — Locks, Safes & Hardware',
+        'Locks, smart locks, safes, and security hardware supplied and installed in Dubai by Lock repair service.',
+        products.map((p) => ({ name: p.title, url: `${SITE_URL}/products/${p.slug}` }))
+      )} />
 
       {/* ── Hero ──────────────────────────────────────────────────────────────── */}
       <section

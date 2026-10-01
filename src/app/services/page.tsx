@@ -12,6 +12,8 @@ import { BreadcrumbNav } from '@/components/sections/BreadcrumbNav'
 import { TrustBar } from '@/components/sections/TrustBar'
 import { Button } from '@/components/ui/Button'
 import { WebPageSchema } from '@/components/schema/WebPageSchema'
+import { JsonLd } from '@/components/schema/JsonLd'
+import { buildItemListSchema } from '@/lib/seo'
 
 import {
   services,
@@ -124,6 +126,11 @@ export default function ServicesPage() {
           { name: 'Services', url: `${SITE_URL}/services` },
         ]}
       />
+      <JsonLd data={buildItemListSchema(
+        'Locksmith Services Dubai — Complete Service List',
+        '32+ locksmith services in Dubai by Lock repair service — car key programming, lock repair, emergency unlock, smart locks, and access control.',
+        services.map((s) => ({ name: s.title, url: `${SITE_URL}/services/${s.slug}` }))
+      )} />
 
       {/* ── Page Header ─────────────────────────────────────────────────────── */}
       <section
