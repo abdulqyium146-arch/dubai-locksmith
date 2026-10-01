@@ -22,6 +22,7 @@ import {
   CarBrandFaqSchema,
   CarBrandBreadcrumbSchema,
 } from '@/components/schema/CarBrandSchema'
+import { WebPageSchema } from '@/components/schema/WebPageSchema'
 import { Button } from '@/components/ui/Button'
 
 import { carBrands, getCarBrandBySlug, getAllCarBrandSlugs } from '@/data/car-brands'
@@ -132,6 +133,17 @@ export default async function CarBrandPage({
       <CarBrandServiceSchema brand={brand} />
       <CarBrandFaqSchema brand={brand} />
       <CarBrandBreadcrumbSchema brand={brand} />
+      <WebPageSchema
+        pageUrl={`${SITE_URL}/car-brands/${brand.slug}`}
+        pageId={`car-brand-${brand.slug}`}
+        name={brand.metaTitle}
+        description={brand.directAnswerOpener}
+        breadcrumbs={[
+          { name: 'Home', url: SITE_URL },
+          { name: 'Car Brands', url: `${SITE_URL}/car-brands` },
+          { name: brand.name, url: `${SITE_URL}/car-brands/${brand.slug}` },
+        ]}
+      />
 
       {/* ── 1. Hero ───────────────────────────────────────────────────────────── */}
       <section
